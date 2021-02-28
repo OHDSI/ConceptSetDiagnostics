@@ -1,0 +1,26 @@
+﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,rc,dc,drc,dbc
+45769862,Kidney lesion,SNOMED,Condition,S,Not included - parent,4863,3,156213467,22
+4169252,Internal injury of abdominal organ,SNOMED,Condition,S,Not included - parent,361010,17,7923068,22
+37116613,Injury of urinary organ,SNOMED,Condition,S,Not included - parent,26261,11,1986805,19
+4134922,Laceration of kidney,SNOMED,Condition,S,Not included - descendant,130774,13,266728,14
+442102,Hematoma of kidney without rupture of capsule AND without open wound into abdominal cavity,SNOMED,Condition,S,Not included - recommended via source,175988,14,175988,14
+4321555,Contusion of kidney,SNOMED,Condition,S,Not included - descendant,133074,13,133074,13
+194200,Laceration of kidney without open wound into abdominal cavity,SNOMED,Condition,S,Not included - recommended via source,118108,14,118108,14
+194200,Laceration of kidney without open wound into abdominal cavity,SNOMED,Condition,S,Not included - descendant,118108,14,118108,14
+444408,Laceration of kidney with open wound into abdominal cavity,SNOMED,Condition,S,Not included - descendant,200,2,17846,13
+196852,Kidney laceration with open wound into cavity,SNOMED,Condition,S,Not included - descendant,17646,13,17646,13
+196852,Kidney laceration with open wound into cavity,SNOMED,Condition,S,Not included - recommended via source,17646,13,17646,13
+199195,Complete disruption of kidney parenchyma without open wound into cavity,SNOMED,Condition,S,Not included - descendant,16426,13,16426,13
+199195,Complete disruption of kidney parenchyma without open wound into cavity,SNOMED,Condition,S,Not included - recommended via source,16426,13,16426,13
+442533,"Kidney hematoma without rupture of capsule, with open wound into cavity",SNOMED,Condition,S,Not included - recommended via source,5958,13,5958,13
+200253,Complete disruption of kidney parenchyma with open wound into cavity,SNOMED,Condition,S,Not included - recommended via source,5687,12,5687,12
+4153992,Avulsion of kidney,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4126426,Traumatic anuria - crush syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686421,Contusion of right kidney,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36716454,Traumatic loss of kidney,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3180947,Complete disruption of kidney parenchyma,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+42537219,Partial traumatic rupture of ureteropelvic junction,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686420,Laceration of left kidney,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+197711,Hematoma of kidney without rupture of capsule AND with open wound into abdominal cavity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686422,Contusion of left kidney,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686419,Laceration of right kidney,SNOMED,Condition,S,Not included - descendant,0,0,0,0

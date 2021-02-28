@@ -1,0 +1,2 @@
+﻿conceptId,isExcluded,includeDescendants,includeMapped,conceptName,vocabularyId,standardConcept,invalidReason,conceptCode,conceptClassId,domainId,rc,dbc,drc,ddbc
+375806,FALSE,TRUE,FALSE,Idiopathic peripheral neuropathy,SNOMED,S,V,22722001,Clinical Finding,Condition,33185257,16,42784651,20

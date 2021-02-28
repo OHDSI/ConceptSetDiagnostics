@@ -1,0 +1,92 @@
+﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,rc,dc,drc,dbc
+317302,Sinus node dysfunction,SNOMED,Condition,S,Not included - descendant,22059662,15,32985253,21
+4091901,Aberrant premature complexes,SNOMED,Condition,S,Not included - descendant,778754,17,13611189,21
+4261842,Sick sinus syndrome,SNOMED,Condition,S,Not included - descendant,10881150,19,10918169,19
+441872,Supraventricular premature beats,SNOMED,Condition,S,Not included - descendant,4402751,14,4403282,14
+4115173,Atrial premature complex,SNOMED,Condition,S,Not included - descendant,3258983,19,3335924,21
+314664,Long QT syndrome,SNOMED,Condition,S,Not included - descendant,2393061,14,2394801,15
+313224,Anomalous atrioventricular excitation,SNOMED,Condition,S,Not included - descendant,1208667,16,1208667,16
+4088351,Junctional premature complex,SNOMED,Condition,S,Not included - descendant,64051,18,64051,18
+4171193,Idioventricular rhythm,SNOMED,Condition,S,Not included - descendant,382,2,20218,5
+4008580,Ventricular bigeminy,SNOMED,Condition,S,Not included - descendant,18652,5,18652,5
+4038688,AV junctional rhythm,SNOMED,Condition,S,Not included - descendant,2600,3,15191,4
+4210313,Sinus arrest,SNOMED,Condition,S,Not included - descendant,5590,2,6190,2
+4099778,Unifocal PVCs,SNOMED,Condition,S,Not included - descendant,5536,2,5536,2
+4216773,Asystole,SNOMED,Condition,S,Not included - descendant,4091,3,4091,3
+4303408,Brugada syndrome,SNOMED,Condition,S,Not included - descendant,2865,4,2865,4
+4088985,Multiple premature ventricular complexes,SNOMED,Condition,S,Not included - descendant,2372,2,2372,2
+4256374,Cardiorespiratory arrest,SNOMED,Condition,S,Not included - descendant,1797,3,2097,3
+4023336,Multifocal PVCs,SNOMED,Condition,S,Not included - descendant,1773,2,1773,2
+4088504,Atrial bigeminy,SNOMED,Condition,S,Not included - descendant,1592,2,1592,2
+40479232,Congenital long QT syndrome,SNOMED,Condition,S,Not included - descendant,361,3,1440,4
+4088505,Ventricular trigeminy,SNOMED,Condition,S,Not included - descendant,1387,2,1387,2
+4175473,Atrioventricular dissociation,SNOMED,Condition,S,Not included - descendant,1113,2,1113,2
+43021298,Long QT syndrome with genetic marker,SNOMED,Condition,S,Not included - descendant,279,2,1079,3
+4094188,Arrhythmogenic right ventricular cardiomyopathy,SNOMED,Condition,S,Not included - descendant,743,2,743,2
+4089460,Multiple atrial premature complexes,SNOMED,Condition,S,Not included - descendant,704,2,704,2
+4247537,Accelerated idioventricular rhythm,SNOMED,Condition,S,Not included - descendant,584,2,584,2
+4108828,Ventricular pre-excitation,SNOMED,Condition,S,Not included - descendant,564,3,564,3
+4006208,Parasystole,SNOMED,Condition,S,Not included - descendant,200,2,500,2
+4166380,Junctional escape beats,SNOMED,Condition,S,Not included - descendant,499,3,499,3
+4188347,Stokes-Adams syndrome,SNOMED,Condition,S,Not included - descendant,391,3,391,3
+4078058,Holt-Oram syndrome,SNOMED,Condition,S,Not included - descendant,382,2,382,2
+4089461,Run of atrial premature complexes,SNOMED,Condition,S,Not included - descendant,325,2,325,2
+4161597,Jervell and Lange-Nielsen syndrome,SNOMED,Condition,S,Not included - descendant,300,3,300,3
+40479264,Acquired long QT syndrome,SNOMED,Condition,S,Not included - descendant,200,2,300,3
+4091902,Supraventricular bigeminy,SNOMED,Condition,S,Not included - descendant,289,2,289,2
+4088506,Ventricular quadrigeminy,SNOMED,Condition,S,Not included - descendant,250,2,250,2
+4091903,Atrial trigeminy,SNOMED,Condition,S,Not included - descendant,221,2,221,2
+4091904,Run of ventricular premature complexes,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4224848,Andersen Tawil syndrome,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+42872924,Atrial standstill,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4049219,Romano-Ward syndrome,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4119603,Familial sick sinus syndrome,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4088350,Slow ventricular response,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4030583,Pacemaker twiddler's syndrome,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4028322,Sinoatrial arrest with nodal/ventricular escape,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4089464,Paired ventricular premature complexes,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4121615,Concealed accessory pathway,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4243143,Interpolated PVCs,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+44783658,Cardiorespiratory arrest with successful resuscitation,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4218242,Ventricular escape rhythm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4271464,Multifocal premature beats,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4244893,Ventricular parasystole,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4088986,Atrial escape complex,SNOMED,Condition,S,Not included - descendant,166,1,166,1
+4088210,Sinus arrest with junctional escape,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+44784236,Short QT syndrome,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4124704,Postoperative sinus node dysfunction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36714606,Timothy syndrome type 2,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36714539,"Ventricular extrasystoles with syncope, perodactyly and Robin sequence syndrome",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4088352,Sinus arrest with atrial escape,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4128968,Circulatory arrest,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4102252,Asymptomatic sinoatrial node dysfunction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4092011,Aberrantly conducted complex,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36715370,Heart-hand syndrome type 2,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4327066,Ventricular escape beat,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4088987,Atrial parasystole,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37396235,Long QT syndrome caused by drug,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4148028,Electromechanical dissociation with successful resuscitation,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4088507,Ventricular escape complex,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4029303,Fusion beats,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37017187,Intraoperative cardiorespiratory arrest,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4262389,Tic-tac rhythm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4091446,Sinus arrest with ventricular escape,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37312140,Acquired Brugada syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4120087,Unidirectional retrograde accessory pathway,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37117768,Long thumb brachydactyly syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+321588,Heart disease,SNOMED,Condition,S,Not included - parent,0,0,0,0
+3188998,Chronotropic incompetence,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+36675005,"Extrasystoles, short stature, hyperpigmentation, microcephaly syndrome",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44784235,Cardiac channelopathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+46284985,HHS - holiday heart syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4089463,Multiple ventricular interpolated complexes,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36676642,"X-linked intellectual disability, cardiomegaly, congestive heart failure syndrome",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715042,Chronic atrial and intestinal dysrhythmia,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44783199,Timothy syndrome type 1,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4110550,Neonatal cardiorespiratory arrest,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4088502,AV junctional (nodal) arrest,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36674897,Sinoatrial node dysfunction and deafness,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36717434,Heart-hand syndrome type 3,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4092010,Ventricular interpolated complexes,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37398927,Naxos disease,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44784368,Postoperative cardiopulmonary failure,SNOMED,Condition,S,Not included - descendant,0,0,0,0

@@ -1,0 +1,78 @@
+﻿conceptId,isExcluded,includeDescendants,includeMapped,conceptName,vocabularyId,standardConcept,invalidReason,conceptCode,conceptClassId,domainId,rc,dbc,drc,ddbc
+315763,FALSE,TRUE,FALSE,"Hodgkin's disease, nodular sclerosis of lymph nodes of multiple sites",SNOMED,S,V,188572001,Clinical Finding,Condition,518997,14,518997,14
+374919,FALSE,TRUE,FALSE,Multiple sclerosis,SNOMED,S,V,24700007,Clinical Finding,Condition,62433440,22,62454626,22
+706570,FALSE,TRUE,FALSE,Multiple sclerosis action plan,LOINC,S,V,LP173762-8,Doc Kind,Meas Value,0,0,0,0
+761978,FALSE,TRUE,FALSE,Cognitive impairment due to multiple sclerosis,SNOMED,S,V,25470001000004105,Clinical Finding,Condition,0,0,0,0
+765565,FALSE,TRUE,FALSE,Functional quadriplegia due to multiple sclerosis,SNOMED,S,V,24800001000004103,Clinical Finding,Condition,0,0,0,0
+1002771,FALSE,TRUE,FALSE,Multiple sclerosis action plan | {Setting} | Document ontology,LOINC,C,V,LP416838-3,LOINC Hierarchy,Observation,0,0,0,0
+1011248,FALSE,TRUE,FALSE,Functional assessment of multiple sclerosis questionnaire - version 4,LOINC,N,V,LP148776-0,LOINC Component,Observation,0,0,0,0
+1032659,FALSE,TRUE,FALSE,Multiple sclerosis,LOINC,N,V,LP75152-6,LOINC Component,Observation,0,0,0,0
+1034029,FALSE,TRUE,FALSE,Multiple sclerosis in last 7 days,LOINC,N,V,LP90031-3,LOINC Component,Observation,0,0,0,0
+1034704,FALSE,TRUE,FALSE,Huntington's disease Multiple sclerosis in last 7 days,LOINC,N,V,LP98280-8,LOINC Component,Observation,0,0,0,0
+1175146,FALSE,TRUE,FALSE,Aquaporin 4 water channel Ab [Presence] in Cerebral spinal fluid by Immunofluorescence,LOINC,S,V,90817-8,Lab Test,Measurement,0,0,0,0
+1175453,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Presence] in Cerebral spinal fluid by Cell binding assay immunofluorescent assay,LOINC,S,V,90818-6,Lab Test,Measurement,0,0,0,0
+1176507,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Titer] in Cerebral spinal fluid by Cell binding assay immunofluorescent assay,LOINC,S,V,90819-4,Lab Test,Measurement,0,0,0,0
+2110801,FALSE,TRUE,FALSE,"Chemodenervation of muscle(s); extremity(s) and/or trunk muscle(s) (eg, for dystonia, cerebral palsy, multiple sclerosis) (Deprecated)",CPT4,S,V,64614,CPT4,Procedure,0,0,0,0
+3044429,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Titer] in Serum or Plasma by Immunofluorescence,LOINC,S,V,44794-6,Lab Test,Measurement,0,0,0,0
+3045574,FALSE,TRUE,FALSE,Multiple sclerosis [Minimum Data Set],LOINC,S,V,45658-2,Survey,Observation,0,0,0,0
+3046426,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Presence] in Serum or Plasma,LOINC,S,V,43638-6,Lab Test,Measurement,0,0,0,0
+3046703,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Units/volume] in Serum or Plasma by Immunofluorescence,LOINC,S,V,43752-5,Lab Test,Measurement,0,0,0,0
+3049741,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Presence] in Cerebral spinal fluid,LOINC,S,V,46718-3,Lab Test,Measurement,0,0,0,0
+3088334,FALSE,TRUE,FALSE,Other drugs used for the treatment of multiple sclerosis,Nebraska Lexicon,N,U,134519007,Pharma/Biol Product,Drug,0,0,0,0
+3196243,FALSE,TRUE,FALSE,Multiple sclerosis clinic,Nebraska Lexicon,N,V,702885009,Location,Place of Service,0,0,0,0
+4051235,FALSE,TRUE,FALSE,FH: Multiple sclerosis,SNOMED,S,V,160337009,Context-dependent,Observation,0,0,0,0
+4169156,FALSE,TRUE,FALSE,Kurtzke multiple sclerosis rating scale,SNOMED,S,V,273554001,Staging / Scales,Measurement,0,0,0,0
+4207585,FALSE,TRUE,FALSE,Behavior related to multiple sclerosis self management,SNOMED,S,V,439729002,Observable Entity,Observation,0,0,0,0
+4261073,FALSE,TRUE,FALSE,Knowledge level about multiple sclerosis management,SNOMED,S,V,440637009,Observable Entity,Observation,0,0,0,0
+4342668,FALSE,TRUE,FALSE,Multiple Sclerosis,NDFRT,N,V,N0000002052,Ind / CI,Drug,0,0,0,0
+4346535,FALSE,TRUE,FALSE,"Multiple Sclerosis, Relapsing-Remitting",NDFRT,N,V,N0000004164,Ind / CI,Drug,0,0,0,0
+4347688,FALSE,TRUE,FALSE,"Multiple Sclerosis, Chronic Progressive",NDFRT,N,V,N0000004163,Ind / CI,Drug,0,0,0,0
+36203859,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Titer] in Cerebral spinal fluid by Flow cytometry (FC),LOINC,S,V,86240-9,Lab Test,Measurement,0,0,0,0
+36203860,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Titer] in Serum or Plasma by Flow cytometry (FC),LOINC,S,V,86241-7,Lab Test,Measurement,0,0,0,0
+36207192,FALSE,TRUE,FALSE,Multiple sclerosis action plan | {Setting},LOINC,N,D,LP261067-5,LOINC Hierarchy,Measurement,0,0,0,0
+36210483,FALSE,TRUE,FALSE,Neurologic conditions- multiple sclerosis,LOINC,N,D,LA27367-4,Answer,Meas Value,0,0,0,0
+36210713,FALSE,TRUE,FALSE,Multiple sclerosis (MS),LOINC,S,V,LA27531-5,Answer,Meas Value,0,0,0,0
+36305792,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence,LOINC,S,V,88056-7,Lab Test,Measurement,0,0,0,0
+36310731,FALSE,TRUE,FALSE,Neuro: Multiple Sclerosis,LOINC,S,V,LA25762-8,Answer,Meas Value,0,0,0,0
+36517647,FALSE,TRUE,FALSE,"Hodgkin lymphoma, nodular sclerosis, cellular phase of lymph nodes of multiple regions",ICDO3,S,V,9664/3-C77.8,ICDO Condition,Condition,0,0,0,0
+36522346,FALSE,TRUE,FALSE,"Hodgkin lymphoma, nodular sclerosis, NOS, of lymph nodes of multiple regions",ICDO3,S,V,9663/3-C77.8,ICDO Condition,Condition,0,0,0,0
+36525402,FALSE,TRUE,FALSE,"Hodgkin lymphoma, nodular sclerosis, grade 2 of lymph nodes of multiple regions",ICDO3,S,V,9667/3-C77.8,ICDO Condition,Condition,0,0,0,0
+36528560,FALSE,TRUE,FALSE,"Hodgkin lymphoma, nodular sclerosis, grade 1 of lymph nodes of multiple regions",ICDO3,S,V,9665/3-C77.8,ICDO Condition,Condition,0,0,0,0
+36660431,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Presence] in Serum by Cell binding assay immunofluorescent assay,LOINC,S,V,95272-1,Lab Test,Measurement,0,0,0,0
+36660608,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Titer] in Serum by Cell binding assay immunofluorescent assay,LOINC,S,V,95273-9,Lab Test,Measurement,0,0,0,0
+37028961,FALSE,TRUE,FALSE,Multiple sclerosis panel | Serum and CSF | Chemistry Panels,LOINC,C,V,LP386996-5,LOINC Hierarchy,Measurement,0,0,0,0
+37074663,FALSE,TRUE,FALSE,Multiple sclerosis panel,LOINC,N,V,LP91532-9,LOINC Component,Observation,0,0,0,0
+38000297,FALSE,TRUE,FALSE,Multiple Sclerosis and Cerebellar Ataxia,DRG,N,D,013,DRG,Observation,0,0,0,0
+38000931,FALSE,TRUE,FALSE,Multiple sclerosis & cerebellar ataxia w MCC,DRG,S,V,058,MS-DRG,Observation,0,0,0,0
+38000932,FALSE,TRUE,FALSE,Multiple sclerosis & cerebellar ataxia w CC,DRG,S,V,059,MS-DRG,Observation,0,0,0,0
+38000933,FALSE,TRUE,FALSE,Multiple sclerosis & cerebellar ataxia w/o CC/MCC,DRG,S,V,060,MS-DRG,Observation,0,0,0,0
+40298404,FALSE,TRUE,FALSE,Other drugs used for the treatment of multiple sclerosis,SNOMED,N,D,134519007,Pharma/Biol Product,Observation,0,0,0,0
+40757943,FALSE,TRUE,FALSE,Multiple sclerosis in last 7 days [MDSv3],LOINC,S,V,54812-3,Survey,Observation,0,0,0,0
+40761214,FALSE,TRUE,FALSE,Huntington's disease Multiple sclerosis in last 7 days [MDSv3],LOINC,S,V,58113-2,Survey,Observation,0,0,0,0
+40763878,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Presence] in Serum or Plasma by Immune stain,LOINC,S,V,61117-8,Lab Test,Measurement,0,0,0,0
+40764191,FALSE,TRUE,FALSE,Aquaporin 4 water channel Ab [Units/volume] in Serum or Plasma by Immunoassay,LOINC,S,V,61430-5,Lab Test,Measurement,0,0,0,0
+40766170,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Presence] in Serum or Plasma by Immunofluorescence,LOINC,S,V,63439-4,Lab Test,Measurement,0,0,0,0
+40771131,FALSE,TRUE,FALSE,Aquaporin 4 water channel IgG Ab [Units/volume] in Serum or Plasma by Immunoassay,LOINC,S,V,68548-7,Lab Test,Measurement,0,0,0,0
+42870051,FALSE,TRUE,FALSE,Functional Assessment of multiple sclerosis questionnaire - version 4 (FAMS) [FACIT],LOINC,S,V,71107-7,Survey,Observation,0,0,0,0
+44784474,FALSE,TRUE,FALSE,Dementia associated with multiple sclerosis,SNOMED,S,V,698626001,Clinical Finding,Condition,0,0,0,0
+44787344,FALSE,TRUE,FALSE,Multiple sclerosis action plan,LOINC,N,V,LP173738-8,LOINC Component,Observation,0,0,0,0
+44788297,FALSE,TRUE,FALSE,Specialised services for patients with multiple sclerosis - enhanced services administration,SNOMED,S,V,166411000000100,Procedure,Observation,0,0,0,0
+44788732,FALSE,TRUE,FALSE,Multiple sclerosis review,SNOMED,S,V,198491000000106,Procedure,Observation,0,0,0,0
+44792913,FALSE,TRUE,FALSE,Management of multiple sclerosis in onset phase,SNOMED,S,V,367561000000107,Procedure,Observation,0,0,0,0
+44792914,FALSE,TRUE,FALSE,Management of multiple sclerosis in early disease phase,SNOMED,S,V,367591000000101,Procedure,Observation,0,0,0,0
+44792924,FALSE,TRUE,FALSE,Management of multiple sclerosis in stable disability phase,SNOMED,S,V,367621000000103,Procedure,Observation,0,0,0,0
+44792925,FALSE,TRUE,FALSE,Management of multiple sclerosis in progressive disability phase,SNOMED,S,V,367651000000108,Procedure,Observation,0,0,0,0
+44792926,FALSE,TRUE,FALSE,Management of multiple sclerosis in palliative phase,SNOMED,S,V,367681000000102,Procedure,Observation,0,0,0,0
+44802651,FALSE,TRUE,FALSE,Multiple sclerosis review declined,SNOMED,S,V,515931000000104,Context-dependent,Observation,0,0,0,0
+44804671,FALSE,TRUE,FALSE,Multiple sclerosis monitoring administration,SNOMED,N,V,758981000000100,Record Artifact,Type Concept,0,0,0,0
+44804672,FALSE,TRUE,FALSE,Multiple sclerosis monitoring invitation,SNOMED,S,V,759021000000107,Procedure,Observation,0,0,0,0
+44805424,FALSE,TRUE,FALSE,Referral to community multiple sclerosis team,SNOMED,S,V,785851000000104,Procedure,Observation,0,0,0,0
+44805688,FALSE,TRUE,FALSE,Management of multiple sclerosis,SNOMED,S,V,765791000000101,Procedure,Observation,0,0,0,0
+44806364,FALSE,TRUE,FALSE,Multiple sclerosis care plan agreed,SNOMED,S,V,811881000000109,Clinical Finding,Observation,0,0,0,0
+45522946,FALSE,TRUE,FALSE,Multiple sclerosis monitoring administration,Read,N,V,9mD..00,Read,Type Concept,0,0,0,0
+45763881,FALSE,TRUE,FALSE,Suspected multiple sclerosis,SNOMED,S,V,700409000,Context-dependent,Observation,0,0,0,0
+45765015,FALSE,TRUE,FALSE,Multiple sclerosis data web-based application software,SNOMED,S,V,701839009,Physical Object,Device,0,0,0,0
+45765847,FALSE,TRUE,FALSE,Multiple sclerosis clinic,SNOMED,N,V,702885009,Location,Place of Service,0,0,0,0
+45879277,FALSE,TRUE,FALSE,Multiple sclerosis - MS,LOINC,S,V,LA17769-3,Answer,Meas Value,0,0,0,0
+45882744,FALSE,TRUE,FALSE,"Grade 3: moderate multiple osteophytes, definite narrowing of joints space, some sclerosis and possible deformity of bone contour",LOINC,S,V,LA15323-1,Answer,Meas Value,0,0,0,0
+45883445,FALSE,TRUE,FALSE,Multiple Sclerosis,LOINC,S,V,LA14298-6,Answer,Meas Value,0,0,0,0

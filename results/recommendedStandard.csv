@@ -1,0 +1,1534 @@
+﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,recordCount,databaseCount,descendantRecordCount,descendantDatabaseCount
+4178680,Degenerative disorder of musculoskeletal system,SNOMED,Condition,S,Not included - parent,1511,3,1325410060,22
+4134294,Acute inflammatory disease,SNOMED,Condition,S,Not included - parent,200,2,1228348342,22
+4042503,Disorder of upper extremity,SNOMED,Condition,S,Not included - parent,734,4,1215654853,22
+4157453,Disorder of joint of spine,SNOMED,Condition,S,Not included - parent,326647,15,1062175971,22
+4134443,Disorder of knee,SNOMED,Condition,S,Not included - recommended via source,1622282,14,583754090,22
+4160062,Disorder characterized by pain,SNOMED,Condition,S,Not included - parent,1568,2,578393619,22
+4227449,Spondylosis,SNOMED,Condition,S,Not included - descendant,9348487,19,535443400,22
+4324765,Arthropathy of knee joint,SNOMED,Condition,S,Not included - parent,92990521,14,533871430,22
+4324765,Arthropathy of knee joint,SNOMED,Condition,S,Not included - recommended via source,92990521,14,533871430,22
+4176946,Inflammatory disorder of musculoskeletal system,SNOMED,Condition,S,Not included - parent,200,2,522399170,22
+4181064,Inflammatory disorder of extremity,SNOMED,Condition,S,Not included - parent,8501,7,490225697,21
+444208,Chronic inflammatory disorder,SNOMED,Condition,S,Not included - parent,200,2,450435182,22
+195906,Disorder of lumbar spine,SNOMED,Condition,S,Not included - parent,19005872,15,427506307,22
+45766714,Inflammatory dermatosis,SNOMED,Condition,S,Not included - parent,41771908,17,400227826,21
+133298,Musculoskeletal disorder of the neck,SNOMED,Condition,S,Not included - parent,3283316,14,384817391,22
+4182007,Inflamed joint,SNOMED,Condition,S,Not included - parent,485,2,326067251,22
+80497,Disorder of cervical spine,SNOMED,Condition,S,Not included - parent,13328611,16,300139022,22
+80816,Degeneration of intervertebral disc,SNOMED,Condition,S,Not included - descendant,132492508,20,287454982,21
+140214,Eruption,SNOMED,Condition,S,Not included - parent,87939767,21,242293470,22
+444206,Arthropathy of pelvis,SNOMED,Condition,S,Not included - parent,9987611,14,240614441,22
+444206,Arthropathy of pelvis,SNOMED,Condition,S,Not included - recommended via source,9987611,14,240614441,22
+434621,Autoimmune disease,SNOMED,Condition,S,Not included - parent,1405063,15,225039443,22
+40482662,Disorder of joint of ankle and/or foot,SNOMED,Condition,S,Not included - recommended via source,11860423,14,220566261,21
+40482662,Disorder of joint of ankle and/or foot,SNOMED,Condition,S,Not included - parent,11860423,14,220566261,21
+72618,Disorder of skeletal muscle,SNOMED,Condition,S,Not included - parent,3519814,16,216732925,22
+4079750,Osteoarthritis of knee,SNOMED,Condition,S,Not included - descendant,175801660,20,204786388,21
+4079750,Osteoarthritis of knee,SNOMED,Condition,S,Not included - recommended via source,175801660,20,204786388,21
+4079750,Osteoarthritis of knee,SNOMED,Condition,S,Not included - recommended via standard,175801660,20,204786388,21
+4143463,Localized osteoarthrosis,SNOMED,Condition,S,Not included - descendant,250811,3,181508257,17
+4143463,Localized osteoarthrosis,SNOMED,Condition,S,Not included - recommended via standard,250811,3,181508257,17
+379019,Conjunctivitis,SNOMED,Condition,S,Not included - parent,40357562,21,142307775,21
+4024558,Disorder associated with menstruation AND/OR menopause,SNOMED,Condition,S,Not included - parent,35218,3,141857533,21
+72993,"Localized, primary osteoarthritis",SNOMED,Condition,S,Not included - recommended via standard,62141892,16,135995684,16
+72993,"Localized, primary osteoarthritis",SNOMED,Condition,S,Not included - descendant,62141892,16,135995684,16
+72993,"Localized, primary osteoarthritis",SNOMED,Condition,S,Not included - recommended via source,62141892,16,135995684,16
+40484571,Disorder of joint of shoulder region,SNOMED,Condition,S,Not included - parent,2605209,14,135187909,21
+40484571,Disorder of joint of shoulder region,SNOMED,Condition,S,Not included - recommended via source,2605209,14,135187909,21
+4028074,Disorder of wrist,SNOMED,Condition,S,Not included - parent,162642,13,134081304,21
+443795,Disorder of thoracic spine,SNOMED,Condition,S,Not included - parent,11523873,12,123321075,21
+4177851,Disorder of hip joint,SNOMED,Condition,S,Not included - parent,4659067,14,109463715,22
+437779,Streptococcal infectious disease,SNOMED,Condition,S,Not included - parent,3369600,19,100788788,21
+138519,Spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,9998048,14,92355289,14
+4048684,Lumbosacral spondylosis,SNOMED,Condition,S,Not included - descendant,1822586,15,86858995,16
+80813,Lumbosacral spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,82356941,14,82357241,14
+75897,Polyarthropathy,SNOMED,Condition,S,Not included - parent,10320802,19,81607506,21
+75897,Polyarthropathy,SNOMED,Condition,S,Not included - recommended via source,10320802,19,81607506,21
+314131,Degeneration of cervical intervertebral disc,SNOMED,Condition,S,Not included - descendant,77934545,21,80050948,21
+440674,Gout,SNOMED,Condition,S,Not included - parent,60668732,20,73804672,21
+4181217,Sequelae of disorders classified by disorder-system,SNOMED,Condition,S,Not included - parent,1668,8,70954892,21
+443769,Degeneration of lumbar intervertebral disc,SNOMED,Condition,S,Not included - descendant,51617313,15,68460047,15
+4328821,Disorder of glenohumeral joint,SNOMED,Condition,S,Not included - parent,3221,3,66483841,21
+4114506,Infection - suppurative,SNOMED,Condition,S,Not included - parent,200,2,65777522,21
+40483794,Degenerative joint disease of pelvis,SNOMED,Condition,S,Not included - descendant,16969268,14,62545050,22
+40483794,Degenerative joint disease of pelvis,SNOMED,Condition,S,Not included - recommended via standard,16969268,14,62545050,22
+40483794,Degenerative joint disease of pelvis,SNOMED,Condition,S,Not included - recommended via source,16969268,14,62545050,22
+140168,Psoriasis,SNOMED,Condition,S,Not included - parent,38101123,21,60582622,21
+80494,Arthropathy associated with another disorder,SNOMED,Condition,S,Not included - parent,139175,18,59853078,21
+80494,Arthropathy associated with another disorder,SNOMED,Condition,S,Not included - recommended via source,139175,18,59853078,21
+4308802,Cervical spondylosis,SNOMED,Condition,S,Not included - descendant,3464891,15,59724543,16
+443582,Arthropathy of joint of hand,SNOMED,Condition,S,Not included - recommended via source,5713648,16,59045655,21
+443582,Arthropathy of joint of hand,SNOMED,Condition,S,Not included - parent,5713648,16,59045655,21
+4323893,Arthropathy of elbow,SNOMED,Condition,S,Not included - recommended via source,930787,14,57603528,22
+4323893,Arthropathy of elbow,SNOMED,Condition,S,Not included - parent,930787,14,57603528,22
+141941,Cervical spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,56259352,14,56259552,14
+255334,Collagen disease,SNOMED,Condition,S,Not included - parent,3688055,16,54298064,21
+4147779,Osteoarthritis of multiple joints,SNOMED,Condition,S,Not included - descendant,90731,3,49042049,17
+4147779,Osteoarthritis of multiple joints,SNOMED,Condition,S,Not included - recommended via standard,90731,3,49042049,17
+72990,Localized osteoarthrosis uncertain if primary OR secondary,SNOMED,Condition,S,Not included - recommended via standard,41165702,14,41165702,14
+72990,Localized osteoarthrosis uncertain if primary OR secondary,SNOMED,Condition,S,Not included - recommended via source,41165702,14,41165702,14
+72990,Localized osteoarthrosis uncertain if primary OR secondary,SNOMED,Condition,S,Not included - descendant,41165702,14,41165702,14
+435459,Staphylococcal infectious disease,SNOMED,Condition,S,Not included - parent,5004380,21,41108342,21
+75617,Degenerative joint disease involving multiple joints,SNOMED,Condition,S,Not included - recommended via standard,40790634,17,40790634,17
+75617,Degenerative joint disease involving multiple joints,SNOMED,Condition,S,Not included - descendant,40790634,17,40790634,17
+75617,Degenerative joint disease involving multiple joints,SNOMED,Condition,S,Not included - recommended via source,40790634,17,40790634,17
+4208390,Inflammation of sacroiliac joint,SNOMED,Condition,S,Not included - descendant,14251211,18,39543992,21
+72405,Degenerative joint disease of shoulder region,SNOMED,Condition,S,Not included - recommended via source,11014171,16,38837845,16
+72405,Degenerative joint disease of shoulder region,SNOMED,Condition,S,Not included - descendant,11014171,16,38837845,16
+72405,Degenerative joint disease of shoulder region,SNOMED,Condition,S,Not included - recommended via standard,11014171,16,38837845,16
+77639,Diffuse cervicobrachial syndrome,SNOMED,Condition,S,Not included - descendant,35522824,19,35522824,19
+438531,Chondromalacia,SNOMED,Condition,S,Not included - descendant,4442408,21,35500150,21
+4346975,Lumbar spondylosis,SNOMED,Condition,S,Not included - descendant,33840051,16,33840051,16
+4168183,Synovitis,SNOMED,Condition,S,Not included - descendant,43447,5,32616591,21
+4079749,Osteoarthritis of hip,SNOMED,Condition,S,Not included - descendant,31001851,20,31343914,22
+4079749,Osteoarthritis of hip,SNOMED,Condition,S,Not included - recommended via source,31001851,20,31343914,22
+4079749,Osteoarthritis of hip,SNOMED,Condition,S,Not included - recommended via standard,31001851,20,31343914,22
+4323193,Disorder of wrist joint,SNOMED,Condition,S,Not included - parent,2158325,14,30499267,21
+4323193,Disorder of wrist joint,SNOMED,Condition,S,Not included - recommended via source,2158325,14,30499267,21
+257628,Systemic lupus erythematosus,SNOMED,Condition,S,Not included - recommended via source,27861388,20,29664541,21
+4035439,Idiopathic osteoarthritis,SNOMED,Condition,S,Not included - recommended via source,28244002,13,28244002,13
+4035439,Idiopathic osteoarthritis,SNOMED,Condition,S,Not included - descendant,28244002,13,28244002,13
+4035439,Idiopathic osteoarthritis,SNOMED,Condition,S,Not included - recommended via standard,28244002,13,28244002,13
+73840,"Localized, primary osteoarthritis of the shoulder region",SNOMED,Condition,S,Not included - recommended via source,27687036,14,27687036,14
+73840,"Localized, primary osteoarthritis of the shoulder region",SNOMED,Condition,S,Not included - descendant,27687036,14,27687036,14
+73840,"Localized, primary osteoarthritis of the shoulder region",SNOMED,Condition,S,Not included - recommended via standard,27687036,14,27687036,14
+81378,Chondromalacia of patella,SNOMED,Condition,S,Not included - descendant,27562198,21,27577334,21
+78227,Degenerative joint disease of hand,SNOMED,Condition,S,Not included - recommended via standard,6487983,15,27239445,21
+78227,Degenerative joint disease of hand,SNOMED,Condition,S,Not included - descendant,6487983,15,27239445,21
+78227,Degenerative joint disease of hand,SNOMED,Condition,S,Not included - recommended via source,6487983,15,27239445,21
+4184090,Elbow joint inflamed,SNOMED,Condition,S,Not included - parent,229,2,27055157,21
+81379,Lateral epicondylitis,SNOMED,Condition,S,Not included - descendant,26640744,21,26663838,21
+4027557,Chronic metabolic disorder,SNOMED,Condition,S,Not included - parent,200,2,26231505,17
+74728,Synovitis and tenosynovitis,SNOMED,Condition,S,Not included - descendant,22243803,20,23953248,20
+4219481,Degenerative joint disease of ankle AND/OR foot,SNOMED,Condition,S,Not included - descendant,7075462,14,20137205,16
+4219481,Degenerative joint disease of ankle AND/OR foot,SNOMED,Condition,S,Not included - recommended via source,7075462,14,20137205,16
+4219481,Degenerative joint disease of ankle AND/OR foot,SNOMED,Condition,S,Not included - recommended via standard,7075462,14,20137205,16
+73562,Solitary sacroiliitis,SNOMED,Condition,S,Not included - descendant,18213113,16,18213113,16
+19041503,acetaminophen 500 MG Oral Tablet [Tylenol],RxNorm,Drug,S,Not included - recommended via source,17468652,12,17469801,13
+4147761,Hyperuricemia,SNOMED,Condition,S,Not included - parent,136874,4,17007646,19
+74132,Degeneration of lumbosacral intervertebral disc,SNOMED,Condition,S,Not included - descendant,16842234,14,16842234,14
+432251,Disease caused by parasite,SNOMED,Condition,S,Not included - parent,304079,17,14651100,22
+434123,Primary localized osteoarthrosis of pelvic region,SNOMED,Condition,S,Not included - recommended via source,14211583,14,14211583,14
+434123,Primary localized osteoarthrosis of pelvic region,SNOMED,Condition,S,Not included - descendant,14211583,14,14211583,14
+434123,Primary localized osteoarthrosis of pelvic region,SNOMED,Condition,S,Not included - recommended via standard,14211583,14,14211583,14
+81931,Psoriasis with arthropathy,SNOMED,Condition,S,Not included - parent,13628936,21,13859438,21
+75036,"Localized, primary osteoarthritis of the hand",SNOMED,Condition,S,Not included - recommended via source,13476925,14,13476925,14
+75036,"Localized, primary osteoarthritis of the hand",SNOMED,Condition,S,Not included - recommended via standard,13476925,14,13476925,14
+75036,"Localized, primary osteoarthritis of the hand",SNOMED,Condition,S,Not included - descendant,13476925,14,13476925,14
+4013263,Rheumatoid factor positive,SNOMED,Condition,S,Not included - parent,48250,3,13284694,18
+78505,"Localized, primary osteoarthritis of the ankle and/or foot",SNOMED,Condition,S,Not included - descendant,12940961,14,12941061,14
+78505,"Localized, primary osteoarthritis of the ankle and/or foot",SNOMED,Condition,S,Not included - recommended via standard,12940961,14,12941061,14
+78505,"Localized, primary osteoarthritis of the ankle and/or foot",SNOMED,Condition,S,Not included - recommended via source,12940961,14,12941061,14
+4184091,Knee joint inflamed,SNOMED,Condition,S,Not included - parent,1584,2,12117358,21
+4224742,Non-IgE-mediated allergic disorder,SNOMED,Condition,S,Not included - parent,100,1,11999287,20
+4102128,Infected hand,SNOMED,Condition,S,Not included - parent,3597,3,11153854,21
+4189855,Chronic arthropathy,SNOMED,Condition,S,Not included - parent,607,3,11116560,21
+4096347,Gouty arthropathy,SNOMED,Condition,S,Not included - descendant,11094316,14,11094316,14
+198520,Lumbar spondylosis with myelopathy,SNOMED,Condition,S,Not included - descendant,10744406,14,10744406,14
+4106283,Acute arthropathy,SNOMED,Condition,S,Not included - parent,3558,2,10740308,21
+74130,Thoracic spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,10657252,14,10657452,14
+4302686,Thoracic spondylosis,SNOMED,Condition,S,Not included - descendant,643761,15,10504646,16
+4180167,Infectious disorder of joint,SNOMED,Condition,S,Not included - parent,1222,8,10063104,22
+4184089,Shoulder joint inflamed,SNOMED,Condition,S,Not included - parent,890,3,9749249,14
+140020,Viral exanthem,SNOMED,Condition,S,Not included - parent,6952573,17,9465989,22
+442775,Degeneration of thoracic intervertebral disc,SNOMED,Condition,S,Not included - descendant,5217832,14,8566582,15
+76194,Osteoarthrosis involving multiple sites but not designated as generalized,SNOMED,Condition,S,Not included - recommended via standard,8139571,14,8139571,14
+76194,Osteoarthrosis involving multiple sites but not designated as generalized,SNOMED,Condition,S,Not included - recommended via source,8139571,14,8139571,14
+76194,Osteoarthrosis involving multiple sites but not designated as generalized,SNOMED,Condition,S,Not included - descendant,8139571,14,8139571,14
+46235366,Rheumatoid arthritis disease activity panel - Serum or Plasma by VectraDA,LOINC,Measurement,S,Not included - recommended via standard,14928,1,7972185,10
+433000,Patellar tendonitis,SNOMED,Condition,S,Not included - descendant,7613353,20,7613553,20
+195862,Urethritis,SNOMED,Condition,S,Not included - parent,4877092,21,6889270,21
+4009619,Bursitis of knee,SNOMED,Condition,S,Not included - descendant,2082284,19,6788143,21
+36716891,Axial spondyloarthritis,SNOMED,Condition,S,Not included - descendant,100,1,6048268,21
+437082,Ankylosing spondylitis,SNOMED,Condition,S,Not included - descendant,6021817,21,6047968,21
+316501,Vascular disease of the skin,SNOMED,Condition,S,Not included - parent,430315,15,5896864,21
+40481943,Secondary osteoarthritis,SNOMED,Condition,S,Not included - recommended via standard,161472,12,5751158,18
+40481943,Secondary osteoarthritis,SNOMED,Condition,S,Not included - recommended via source,161472,12,5751158,18
+40481943,Secondary osteoarthritis,SNOMED,Condition,S,Not included - descendant,161472,12,5751158,18
+4014120,Rheumatoid factor negative,SNOMED,Condition,S,Not included - parent,200,2,5619719,20
+4242103,Osteoarthrosis of the carpometacarpal joint of the thumb,SNOMED,Condition,S,Not included - recommended via source,5345905,19,5346424,19
+4242103,Osteoarthrosis of the carpometacarpal joint of the thumb,SNOMED,Condition,S,Not included - recommended via standard,5345905,19,5346424,19
+4242103,Osteoarthrosis of the carpometacarpal joint of the thumb,SNOMED,Condition,S,Not included - descendant,5345905,19,5346424,19
+4035441,Osteoarthritis of wrist,SNOMED,Condition,S,Not included - recommended via standard,1517928,15,5206414,19
+4035441,Osteoarthritis of wrist,SNOMED,Condition,S,Not included - descendant,1517928,15,5206414,19
+4035441,Osteoarthritis of wrist,SNOMED,Condition,S,Not included - recommended via source,1517928,15,5206414,19
+762207,Adhesive capsulitis of left shoulder,SNOMED,Condition,S,Not included - descendant,4397154,11,4397154,11
+80802,"Localized, secondary osteoarthritis",SNOMED,Condition,S,Not included - descendant,1430546,16,4096060,16
+80802,"Localized, secondary osteoarthritis",SNOMED,Condition,S,Not included - recommended via source,1430546,16,4096060,16
+80802,"Localized, secondary osteoarthritis",SNOMED,Condition,S,Not included - recommended via standard,1430546,16,4096060,16
+4321075,Osteochondritis,SNOMED,Condition,S,Not included - descendant,865,2,4008646,19
+762206,Adhesive capsulitis of right shoulder,SNOMED,Condition,S,Not included - descendant,3998352,11,3998352,11
+440328,Pneumococcal infectious disease,SNOMED,Condition,S,Not included - parent,266153,19,3958033,20
+441103,Juvenile osteochondritis,SNOMED,Condition,S,Not included - descendant,2407774,19,3929414,19
+4270887,Erythroderma,SNOMED,Condition,S,Not included - parent,71329,18,3795198,21
+37119234,Disorder of musculoskeletal system following procedure,SNOMED,Condition,S,Not included - parent,8861,8,3414177,19
+4197476,"Localized, primary osteoarthritis of the wrist",SNOMED,Condition,S,Not included - recommended via source,3407680,14,3407680,14
+4197476,"Localized, primary osteoarthritis of the wrist",SNOMED,Condition,S,Not included - descendant,3407680,14,3407680,14
+4197476,"Localized, primary osteoarthritis of the wrist",SNOMED,Condition,S,Not included - recommended via standard,3407680,14,3407680,14
+4076026,Localized chondromalacia,SNOMED,Condition,S,Not included - descendant,3374143,13,3374143,13
+40242522,8 HR acetaminophen 650 MG Extended Release Oral Tablet,RxNorm,Drug,S,Not included - recommended via source,2325937,10,3313855,10
+74723,Arthropathy associated with a neurological disorder,SNOMED,Condition,S,Not included - recommended via source,1694120,16,3172250,18
+4068617,Lumbosacral spondylosis with radiculopathy,SNOMED,Condition,S,Not included - descendant,2676741,13,2677162,13
+40482869,Inflammation of bursa of patella,SNOMED,Condition,S,Not included - descendant,6419,2,2660553,21
+133294,Prepatellar bursitis,SNOMED,Condition,S,Not included - descendant,2643293,21,2645687,21
+4193873,Bacterial musculoskeletal infection,SNOMED,Condition,S,Not included - parent,100,1,2594025,22
+4182008,Hand joint inflamed,SNOMED,Condition,S,Not included - parent,587,2,2366336,17
+36714927,Sequelae of infectious disease,SNOMED,Condition,S,Not included - parent,228929,16,2362483,20
+433417,Gonorrhea,SNOMED,Condition,S,Not included - parent,767336,21,2136497,21
+4183031,Degeneration of cervicothoracic intervertebral disc,SNOMED,Condition,S,Not included - descendant,2116003,13,2116003,13
+76777,Arthropathy associated with infection,SNOMED,Condition,S,Not included - parent,739153,14,2113050,21
+76777,Arthropathy associated with infection,SNOMED,Condition,S,Not included - recommended via source,739153,14,2113050,21
+44783376,Monoarthritis,SNOMED,Condition,S,Not included - descendant,1723695,20,2091438,20
+44783376,Monoarthritis,SNOMED,Condition,S,Not included - recommended via source,1723695,20,2091438,20
+44783376,Monoarthritis,SNOMED,Condition,S,Not included - recommended via standard,1723695,20,2091438,20
+19049909,potassium iodide,RxNorm,Drug,S,Not included - recommended via source,27117,6,2011135,15
+4178949,Sequelae of inflammatory diseases,SNOMED,Condition,S,Not included - parent,100,1,1991056,21
+4046205,Discitis,SNOMED,Condition,S,Not included - descendant,715215,21,1938717,21
+442792,Pes anserinus bursitis,SNOMED,Condition,S,Not included - descendant,25891,6,1851956,15
+4002147,Pes anserinus tendinitis and bursitis,SNOMED,Condition,S,Not included - descendant,1822905,12,1822905,12
+4274404,Calcification of joint,SNOMED,Condition,S,Not included - parent,413,2,1803215,20
+4274404,Calcification of joint,SNOMED,Condition,S,Not included - descendant,413,2,1803215,20
+4083695,Osteoarthritis of elbow,SNOMED,Condition,S,Not included - recommended via source,564440,15,1683679,15
+4083695,Osteoarthritis of elbow,SNOMED,Condition,S,Not included - recommended via standard,564440,15,1683679,15
+4083695,Osteoarthritis of elbow,SNOMED,Condition,S,Not included - descendant,564440,15,1683679,15
+4144996,Generalized osteoarthritis of the hand,SNOMED,Condition,S,Not included - recommended via standard,1515270,13,1515270,13
+4144996,Generalized osteoarthritis of the hand,SNOMED,Condition,S,Not included - descendant,1515270,13,1515270,13
+4144996,Generalized osteoarthritis of the hand,SNOMED,Condition,S,Not included - recommended via source,1515270,13,1515270,13
+44783205,Post traumatic osteoarthritis,SNOMED,Condition,S,Not included - descendant,1491245,15,1491245,15
+44783205,Post traumatic osteoarthritis,SNOMED,Condition,S,Not included - recommended via source,1491245,15,1491245,15
+44783205,Post traumatic osteoarthritis,SNOMED,Condition,S,Not included - recommended via standard,1491245,15,1491245,15
+443284,Synovitis/tenosynovitis - hand,SNOMED,Condition,S,Not included - descendant,1468309,13,1468309,13
+4117700,Juvenile osteochondritis - leg/foot,SNOMED,Condition,S,Not included - descendant,1390353,12,1390353,12
+4189458,Traumatic arthropathy of lower extremity,SNOMED,Condition,S,Not included - recommended via standard,803,2,1383252,18
+4189458,Traumatic arthropathy of lower extremity,SNOMED,Condition,S,Not included - descendant,803,2,1383252,18
+75620,Traumatic arthropathy of the ankle and/or foot,SNOMED,Condition,S,Not included - recommended via source,1287093,14,1298541,14
+75620,Traumatic arthropathy of the ankle and/or foot,SNOMED,Condition,S,Not included - descendant,1287093,14,1298541,14
+75620,Traumatic arthropathy of the ankle and/or foot,SNOMED,Condition,S,Not included - recommended via standard,1287093,14,1298541,14
+2101879,"Osteoarthritis symptoms and functional status assessed (may include the use of a standardized scale or the completion of an assessment questionnaire, such as the SF-36, AAOS Hip & Knee Questionnaire) (OA) [Instructions: Report when osteoarthritis is ad...",CPT4,Observation,S,Not included - recommended via standard,1245881,9,1255201,10
+434449,Degeneration of thoracolumbar intervertebral disc,SNOMED,Condition,S,Not included - descendant,1232247,14,1232247,14
+80183,"Localized, secondary osteoarthritis of the ankle and/or foot",SNOMED,Condition,S,Not included - recommended via standard,1220255,14,1220255,14
+80183,"Localized, secondary osteoarthritis of the ankle and/or foot",SNOMED,Condition,S,Not included - recommended via source,1220255,14,1220255,14
+80183,"Localized, secondary osteoarthritis of the ankle and/or foot",SNOMED,Condition,S,Not included - descendant,1220255,14,1220255,14
+4162433,Traumatic arthropathy of upper extremity,SNOMED,Condition,S,Not included - descendant,355,2,1210925,17
+4197477,"Localized, primary osteoarthritis of elbow",SNOMED,Condition,S,Not included - recommended via standard,1098538,14,1098538,14
+4197477,"Localized, primary osteoarthritis of elbow",SNOMED,Condition,S,Not included - descendant,1098538,14,1098538,14
+4197477,"Localized, primary osteoarthritis of elbow",SNOMED,Condition,S,Not included - recommended via source,1098538,14,1098538,14
+81930,Transient arthropathy,SNOMED,Condition,S,Not included - parent,77278,13,1085647,20
+4035431,Shoulder synovitis,SNOMED,Condition,S,Not included - descendant,3988,2,1055848,13
+4118007,Synovitis/tenosynovitis - shoulder,SNOMED,Condition,S,Not included - descendant,1051860,13,1051860,13
+40479260,Chondrocalcinosis of knee joint,SNOMED,Condition,S,Not included - descendant,1044962,14,1046295,14
+37110375,Peripheral spondyloarthritis,SNOMED,Condition,S,Not included - descendant,200,2,1030700,21
+37110375,Peripheral spondyloarthritis,SNOMED,Condition,S,Not included - parent,200,2,1030700,21
+79119,Thoracic spondylosis with myelopathy,SNOMED,Condition,S,Not included - descendant,1017287,14,1017587,14
+4103372,Primary localized osteoarthrosis of multiple sites,SNOMED,Condition,S,Not included - recommended via source,900369,13,900369,13
+4103372,Primary localized osteoarthrosis of multiple sites,SNOMED,Condition,S,Not included - descendant,900369,13,900369,13
+4103372,Primary localized osteoarthrosis of multiple sites,SNOMED,Condition,S,Not included - recommended via standard,900369,13,900369,13
+4185031,Wrist joint inflamed,SNOMED,Condition,S,Not included - parent,1837,3,876318,19
+4114604,Traumatic arthropathy-knee,SNOMED,Condition,S,Not included - recommended via standard,866566,14,866812,14
+4114604,Traumatic arthropathy-knee,SNOMED,Condition,S,Not included - recommended via source,866566,14,866812,14
+77631,"Localized, secondary osteoarthritis of the shoulder region",SNOMED,Condition,S,Not included - recommended via standard,820688,14,820688,14
+77631,"Localized, secondary osteoarthritis of the shoulder region",SNOMED,Condition,S,Not included - recommended via source,820688,14,820688,14
+77631,"Localized, secondary osteoarthritis of the shoulder region",SNOMED,Condition,S,Not included - descendant,820688,14,820688,14
+4185034,Hip joint inflamed,SNOMED,Condition,S,Not included - parent,206,2,819760,15
+4185036,Lumbar spine joint inflamed,SNOMED,Condition,S,Not included - parent,100,1,772134,15
+4207188,Viral cardiovascular infection,SNOMED,Condition,S,Not included - parent,100,1,748575,21
+4067311,Lumbar discitis,SNOMED,Condition,S,Not included - descendant,748144,14,748144,14
+80488,Arthropathy associated with a hypersensitivity reaction,SNOMED,Condition,S,Not included - parent,13348,14,700115,15
+80488,Arthropathy associated with a hypersensitivity reaction,SNOMED,Condition,S,Not included - descendant,13348,14,700115,15
+72708,Traumatic arthropathy of the shoulder region,SNOMED,Condition,S,Not included - recommended via source,398640,14,654703,14
+72708,Traumatic arthropathy of the shoulder region,SNOMED,Condition,S,Not included - recommended via standard,398640,14,654703,14
+72708,Traumatic arthropathy of the shoulder region,SNOMED,Condition,S,Not included - descendant,398640,14,654703,14
+711452,benzoate,RxNorm,Drug,S,Not included - recommended via source,4916,6,594227,18
+46270470,Primary chronic gout without tophus of ankle and/or foot,SNOMED,Condition,S,Not included - descendant,550307,13,550307,13
+4002792,Transient synovitis,SNOMED,Condition,S,Not included - descendant,439487,19,530478,19
+4116450,Secondary multiple arthrosis,SNOMED,Condition,S,Not included - descendant,516431,18,516431,18
+4116450,Secondary multiple arthrosis,SNOMED,Condition,S,Not included - recommended via source,516431,18,516431,18
+4273323,Rubella,SNOMED,Condition,S,Not included - parent,104151,18,488900,21
+4145796,FH: Musculoskeletal disease,SNOMED,Observation,S,Not included - recommended via source,2461,4,444745,12
+4265764,Polyarthritis associated with another disorder,SNOMED,Condition,S,Not included - descendant,200,2,440722,15
+4265764,Polyarthritis associated with another disorder,SNOMED,Condition,S,Not included - parent,200,2,440722,15
+4343920,Endemic osteoarthritis,SNOMED,Condition,S,Not included - recommended via standard,67706,4,432852,17
+4343920,Endemic osteoarthritis,SNOMED,Condition,S,Not included - descendant,67706,4,432852,17
+4207189,Viral musculoskeletal infection,SNOMED,Condition,S,Not included - parent,100,1,424910,19
+76196,Palindromic rheumatism,SNOMED,Condition,S,Not included - descendant,278749,20,408518,20
+4220761,Undifferentiated inflammatory arthritis,SNOMED,Condition,S,Not included - descendant,5429,2,401890,8
+4220761,Undifferentiated inflammatory arthritis,SNOMED,Condition,S,Not included - recommended via standard,5429,2,401890,8
+4218311,Undifferentiated inflammatory polyarthritis,SNOMED,Condition,S,Not included - recommended via standard,393592,8,393592,8
+4218311,Undifferentiated inflammatory polyarthritis,SNOMED,Condition,S,Not included - descendant,393592,8,393592,8
+77348,Arthropathy associated with viral disease,SNOMED,Condition,S,Not included - parent,53282,13,387257,15
+74722,Secondary localized osteoarthrosis of pelvic region,SNOMED,Condition,S,Not included - recommended via source,385573,16,385573,16
+74722,Secondary localized osteoarthrosis of pelvic region,SNOMED,Condition,S,Not included - recommended via standard,385573,16,385573,16
+74722,Secondary localized osteoarthrosis of pelvic region,SNOMED,Condition,S,Not included - descendant,385573,16,385573,16
+4116451,Erosive osteoarthrosis,SNOMED,Condition,S,Not included - recommended via standard,372907,18,372907,18
+4116451,Erosive osteoarthrosis,SNOMED,Condition,S,Not included - descendant,372907,18,372907,18
+4116451,Erosive osteoarthrosis,SNOMED,Condition,S,Not included - recommended via source,372907,18,372907,18
+72401,Kashin-Bek disease,SNOMED,Condition,S,Not included - descendant,256533,16,365146,16
+436621,Meningococcal infectious disease,SNOMED,Condition,S,Not included - parent,222614,20,356613,20
+36716519,Sequela of infection caused by bacterium,SNOMED,Condition,S,Not included - parent,100,1,312909,19
+375260,Polyneuropathy in collagen vascular disease,SNOMED,Condition,S,Not included - parent,158371,16,312609,16
+943117,trolamine salicylate 100 MG/ML Topical Cream,RxNorm,Drug,S,Not included - recommended via source,121272,11,285134,12
+81659,Traumatic arthropathy of the pelvic region and thigh,SNOMED,Condition,S,Not included - descendant,195301,14,279109,18
+81659,Traumatic arthropathy of the pelvic region and thigh,SNOMED,Condition,S,Not included - recommended via standard,195301,14,279109,18
+81659,Traumatic arthropathy of the pelvic region and thigh,SNOMED,Condition,S,Not included - recommended via source,195301,14,279109,18
+4068616,Thoracic spondylosis with radiculopathy,SNOMED,Condition,S,Not included - descendant,276284,14,276484,14
+4261026,Still's disease with juvenile onset and/or adult onset,SNOMED,Condition,S,Not included - parent,949,3,273943,19
+4261026,Still's disease with juvenile onset and/or adult onset,SNOMED,Condition,S,Not included - descendant,949,3,273943,19
+46273178,Osteoarthritis of hip due to dysplasia,SNOMED,Condition,S,Not included - descendant,272908,15,272908,15
+46273178,Osteoarthritis of hip due to dysplasia,SNOMED,Condition,S,Not included - recommended via standard,272908,15,272908,15
+46273178,Osteoarthritis of hip due to dysplasia,SNOMED,Condition,S,Not included - recommended via source,272908,15,272908,15
+4114600,Traumatic arthropathy of shoulder,SNOMED,Condition,S,Not included - descendant,207840,13,255863,13
+4114600,Traumatic arthropathy of shoulder,SNOMED,Condition,S,Not included - recommended via standard,207840,13,255863,13
+4114600,Traumatic arthropathy of shoulder,SNOMED,Condition,S,Not included - recommended via source,207840,13,255863,13
+81937,Traumatic arthropathy of the hand,SNOMED,Condition,S,Not included - recommended via source,246254,14,247821,17
+81937,Traumatic arthropathy of the hand,SNOMED,Condition,S,Not included - recommended via standard,246254,14,247821,17
+81937,Traumatic arthropathy of the hand,SNOMED,Condition,S,Not included - descendant,246254,14,247821,17
+79904,"Localized, secondary osteoarthritis of the hand",SNOMED,Condition,S,Not included - recommended via standard,238177,15,238177,15
+79904,"Localized, secondary osteoarthritis of the hand",SNOMED,Condition,S,Not included - descendant,238177,15,238177,15
+79904,"Localized, secondary osteoarthritis of the hand",SNOMED,Condition,S,Not included - recommended via source,238177,15,238177,15
+37117135,Infective arthritis of right knee,SNOMED,Condition,S,Not included - recommended via standard,234445,10,234545,10
+37117135,Infective arthritis of right knee,SNOMED,Condition,S,Not included - descendant,234445,10,234545,10
+4116594,Traumatic arthropathy-wrist,SNOMED,Condition,S,Not included - descendant,226034,14,226034,14
+4116594,Traumatic arthropathy-wrist,SNOMED,Condition,S,Not included - recommended via source,226034,14,226034,14
+4116594,Traumatic arthropathy-wrist,SNOMED,Condition,S,Not included - recommended via standard,226034,14,226034,14
+4068628,Thoracic discitis,SNOMED,Condition,S,Not included - descendant,209610,13,209610,13
+4182010,Cervical spine joint inflamed,SNOMED,Condition,S,Not included - parent,100,1,207343,15
+37108588,Arthritis of left knee caused by bacteria,SNOMED,Condition,S,Not included - recommended via standard,185335,10,185335,10
+37108588,Arthritis of left knee caused by bacteria,SNOMED,Condition,S,Not included - descendant,185335,10,185335,10
+37108588,Arthritis of left knee caused by bacteria,SNOMED,Condition,S,Not included - recommended via source,185335,10,185335,10
+438673,Tuberculosis of bones and/or joints,SNOMED,Condition,S,Not included - parent,22000,19,183917,20
+4179092,Acute polyarthritis,SNOMED,Condition,S,Not included - parent,267,1,181799,14
+4179092,Acute polyarthritis,SNOMED,Condition,S,Not included - descendant,267,1,181799,14
+42708129,8 HR acetaminophen 650 MG Extended Release Oral Tablet [Tylenol],RxNorm,Drug,S,Not included - recommended via source,171074,10,171074,10
+940093,capsaicin 1 MG/ML Topical Cream,RxNorm,Drug,S,Not included - recommended via source,86543,10,171020,10
+44782455,Monoarthritis of knee,SNOMED,Condition,S,Not included - descendant,166570,13,166570,13
+44782455,Monoarthritis of knee,SNOMED,Condition,S,Not included - recommended via source,166570,13,166570,13
+44782455,Monoarthritis of knee,SNOMED,Condition,S,Not included - recommended via standard,166570,13,166570,13
+442334,Synovitis AND/OR tenosynovitis associated with another disease,SNOMED,Condition,S,Not included - descendant,165102,13,165102,13
+4080443,Skeletal Lyme disease,SNOMED,Condition,S,Not included - parent,100,1,164729,15
+2104099,"Radical excision of bursa, synovia of wrist, or forearm tendon sheaths (eg, tenosynovitis, fungus, Tbc, or other granulomas, rheumatoid arthritis); flexors",CPT4,Procedure,S,Not included - recommended via standard,162197,13,162197,13
+4067539,Cervical discitis,SNOMED,Condition,S,Not included - descendant,155309,13,155309,13
+939902,capsaicin 0.75 MG/ML Topical Cream,RxNorm,Drug,S,Not included - recommended via source,153512,12,153512,12
+36713111,Osteoarthritis of right knee joint,SNOMED,Condition,S,Not included - recommended via standard,136008,3,151012,3
+36713111,Osteoarthritis of right knee joint,SNOMED,Condition,S,Not included - descendant,136008,3,151012,3
+435038,Crystal arthropathy of wrist,SNOMED,Condition,S,Not included - recommended via source,17138,13,145908,17
+435038,Crystal arthropathy of wrist,SNOMED,Condition,S,Not included - descendant,17138,13,145908,17
+435038,Crystal arthropathy of wrist,SNOMED,Condition,S,Not included - recommended via standard,17138,13,145908,17
+437629,Chondrocalcinosis due to dicalcium phosphate crystals,SNOMED,Condition,S,Not included - descendant,123019,13,145393,13
+435626,Tibial collateral ligament bursitis,SNOMED,Condition,S,Not included - descendant,144287,18,144287,18
+4173078,Complication due to immunization,SNOMED,Condition,S,Not included - parent,126670,18,142147,19
+36717036,Osteoarthritis of left knee joint,SNOMED,Condition,S,Not included - recommended via standard,126451,2,133490,2
+36717036,Osteoarthritis of left knee joint,SNOMED,Condition,S,Not included - descendant,126451,2,133490,2
+4115379,"Localized, primary osteoarthritis of the pelvic region and thigh",SNOMED,Condition,S,Not included - recommended via standard,130600,3,130600,3
+4115379,"Localized, primary osteoarthritis of the pelvic region and thigh",SNOMED,Condition,S,Not included - descendant,130600,3,130600,3
+40479241,Chondrocalcinosis of wrist joint,SNOMED,Condition,S,Not included - descendant,130261,14,130461,14
+4175623,Periarthritis,SNOMED,Condition,S,Not included - descendant,390,2,129601,16
+4009506,Periarthritis of wrist,SNOMED,Condition,S,Not included - recommended via standard,128770,16,128770,16
+4009506,Periarthritis of wrist,SNOMED,Condition,S,Not included - descendant,128770,16,128770,16
+4009506,Periarthritis of wrist,SNOMED,Condition,S,Not included - recommended via source,128770,16,128770,16
+4145018,Juvenile osteochondritis of the arm and hand,SNOMED,Condition,S,Not included - descendant,128501,14,128701,14
+40484577,Assessment of rheumatoid arthritis,SNOMED,Procedure,S,Not included - recommended via standard,116598,2,127457,2
+4014121,Rheumatoid arthritis latex test,SNOMED,Measurement,S,Not included - recommended via standard,122735,2,122735,2
+439901,Chondrocalcinosis due to pyrophosphate crystals,SNOMED,Condition,S,Not included - descendant,82153,15,121679,15
+4062737,Arthritis screening,SNOMED,Procedure,S,Not included - recommended via standard,14046,2,114098,12
+42628608,"Autoimmune (rheumatoid arthritis), analysis of 12 biomarkers using immunoassays, utilizing serum, prognostic algorithm reported as a disease activity score",CPT4,Observation,S,Not included - recommended via standard,113426,9,113426,9
+4344166,Adult onset Still's disease,SNOMED,Condition,S,Not included - descendant,110947,18,110947,18
+4120327,Infective discitis,SNOMED,Condition,S,Not included - descendant,586,3,110239,16
+4223530,Spondylitis,SNOMED,Condition,S,Not included - parent,3056,4,109784,14
+4067312,Infection of intervertebral disc - pyogenic,SNOMED,Condition,S,Not included - descendant,109653,16,109653,16
+4343935,Giant cell arteritis with polymyalgia rheumatica,SNOMED,Condition,S,Not included - recommended via standard,107156,16,107156,16
+4343935,Giant cell arteritis with polymyalgia rheumatica,SNOMED,Condition,S,Not included - descendant,107156,16,107156,16
+4343935,Giant cell arteritis with polymyalgia rheumatica,SNOMED,Condition,S,Not included - recommended via source,107156,16,107156,16
+4216873,Relapsing polychondritis,SNOMED,Condition,S,Not included - descendant,105283,17,105483,17
+72991,Traumatic arthropathy of multiple sites,SNOMED,Condition,S,Not included - descendant,104804,14,104804,14
+72991,Traumatic arthropathy of multiple sites,SNOMED,Condition,S,Not included - recommended via source,104804,14,104804,14
+72991,Traumatic arthropathy of multiple sites,SNOMED,Condition,S,Not included - recommended via standard,104804,14,104804,14
+4064383,Rheumatoid arthritis screening,SNOMED,Procedure,S,Not included - recommended via standard,100052,12,100052,12
+4064383,Rheumatoid arthritis screening,SNOMED,Procedure,S,Not included - recommended via source,100052,12,100052,12
+2108722,Patient not receiving first-time biologic disease modifying anti-rheumatic drug therapy for rheumatoid arthritis (RA),CPT4,Observation,S,Not included - recommended via standard,94177,8,94177,8
+4002793,Synovitis of hip,SNOMED,Condition,S,Not included - descendant,1692,2,92683,13
+4199407,Transient synovitis of hip,SNOMED,Condition,S,Not included - descendant,90991,13,90991,13
+4271003,Rheumatoid vasculitis,SNOMED,Condition,S,Not included - recommended via source,87027,17,87127,17
+4115163,Synovitis/tenosynovitis - multiple joints,SNOMED,Condition,S,Not included - descendant,86309,13,86309,13
+4116928,Traumatic arthropathy-hip,SNOMED,Condition,S,Not included - recommended via source,79790,12,83708,16
+4116928,Traumatic arthropathy-hip,SNOMED,Condition,S,Not included - descendant,79790,12,83708,16
+4116928,Traumatic arthropathy-hip,SNOMED,Condition,S,Not included - recommended via standard,79790,12,83708,16
+40485405,Chondrocalcinosis of joint of hand,SNOMED,Condition,S,Not included - descendant,72203,14,82264,14
+4116926,Traumatic arthropathy-elbow,SNOMED,Condition,S,Not included - recommended via standard,81534,14,81534,14
+4116926,Traumatic arthropathy-elbow,SNOMED,Condition,S,Not included - descendant,81534,14,81534,14
+4116926,Traumatic arthropathy-elbow,SNOMED,Condition,S,Not included - recommended via source,81534,14,81534,14
+74444,Crystal arthropathy of knee,SNOMED,Condition,S,Not included - descendant,81031,13,81276,13
+74444,Crystal arthropathy of knee,SNOMED,Condition,S,Not included - recommended via standard,81031,13,81276,13
+74444,Crystal arthropathy of knee,SNOMED,Condition,S,Not included - recommended via source,81031,13,81276,13
+44789342,Rheumatoid arthritis test,SNOMED,Measurement,S,Not included - recommended via standard,78188,2,78188,2
+4250767,Chronic tophaceous gout,SNOMED,Condition,S,Not included - descendant,17785,11,77582,12
+4160051,Osteoarthritis of glenohumeral joint,SNOMED,Condition,S,Not included - recommended via standard,33534,3,77334,13
+4160051,Osteoarthritis of glenohumeral joint,SNOMED,Condition,S,Not included - descendant,33534,3,77334,13
+78506,Kashin-Beck disease of multiple sites,SNOMED,Condition,S,Not included - descendant,77313,13,77313,13
+73301,Synovitis/tenosynovitis - wrist,SNOMED,Condition,S,Not included - descendant,70978,13,70978,13
+46270472,Primary chronic gout without tophus of knee,SNOMED,Condition,S,Not included - descendant,67718,12,67718,12
+4003476,Kienbock's disease of adults,SNOMED,Condition,S,Not included - descendant,66361,18,66361,18
+46270453,Gout of ankle and/or foot caused by drug,SNOMED,Condition,S,Not included - descendant,59107,13,62633,13
+2104100,"Radical excision of bursa, synovia of wrist, or forearm tendon sheaths (eg, tenosynovitis, fungus, Tbc, or other granulomas, rheumatoid arthritis); extensors, with or without transposition of dorsal retinaculum",CPT4,Procedure,S,Not included - recommended via standard,61602,13,61602,13
+2107558,"Rheumatoid arthritis (RA) disease activity, low (RA)",CPT4,Observation,S,Not included - recommended via standard,60940,8,60940,8
+4067532,Neuropathic spondylopathy,SNOMED,Condition,S,Not included - descendant,59830,4,59830,4
+40489492,Inflammation of joint of foot,SNOMED,Condition,S,Not included - descendant,9238,3,58449,4
+4175848,Monoarthritis of hip joint,SNOMED,Condition,S,Not included - descendant,58310,13,58310,13
+4175848,Monoarthritis of hip joint,SNOMED,Condition,S,Not included - recommended via source,58310,13,58310,13
+4175848,Monoarthritis of hip joint,SNOMED,Condition,S,Not included - recommended via standard,58310,13,58310,13
+4202790,Osteoarthritis of foot joint,SNOMED,Condition,S,Not included - recommended via standard,31639,4,55676,4
+4202790,Osteoarthritis of foot joint,SNOMED,Condition,S,Not included - descendant,31639,4,55676,4
+81945,Palindromic rheumatism of multiple sites,SNOMED,Condition,S,Not included - descendant,53131,14,53131,14
+4122179,Synovitis/tenosynovitis - knee,SNOMED,Condition,S,Not included - descendant,51661,12,51661,12
+44782456,Monoarthritis of joint of shoulder region,SNOMED,Condition,S,Not included - recommended via standard,49736,11,49736,11
+44782456,Monoarthritis of joint of shoulder region,SNOMED,Condition,S,Not included - recommended via source,49736,11,49736,11
+44782456,Monoarthritis of joint of shoulder region,SNOMED,Condition,S,Not included - descendant,49736,11,49736,11
+4217388,Rotator cuff tear arthropathy,SNOMED,Condition,S,Not included - descendant,48023,3,48023,3
+4224167,Lipoid dermatoarthritis,SNOMED,Condition,S,Not included - recommended via standard,47827,14,47827,14
+4224167,Lipoid dermatoarthritis,SNOMED,Condition,S,Not included - descendant,47827,14,47827,14
+4224167,Lipoid dermatoarthritis,SNOMED,Condition,S,Not included - recommended via source,47827,14,47827,14
+79102,Arthropathy associated with a hematological disorder,SNOMED,Condition,S,Not included - parent,28712,15,47578,15
+40483814,Chondrocalcinosis of joint of pelvis,SNOMED,Condition,S,Not included - descendant,19985,14,47365,14
+75900,Fibular collateral ligament bursitis,SNOMED,Condition,S,Not included - descendant,47328,13,47328,13
+4323882,Arthritis of acromioclavicular joint,SNOMED,Condition,S,Not included - recommended via standard,47122,4,47322,4
+4323882,Arthritis of acromioclavicular joint,SNOMED,Condition,S,Not included - descendant,47122,4,47322,4
+46270429,Chronic tophaceous gout due to renal impairment,SNOMED,Condition,S,Not included - descendant,6427,12,47150,12
+141209,Localized Salmonella infection,SNOMED,Condition,S,Not included - parent,15652,18,47069,18
+44784341,Monoarthritis of ankle and/or foot,SNOMED,Condition,S,Not included - descendant,43657,12,43657,12
+44784341,Monoarthritis of ankle and/or foot,SNOMED,Condition,S,Not included - recommended via standard,43657,12,43657,12
+44784341,Monoarthritis of ankle and/or foot,SNOMED,Condition,S,Not included - recommended via source,43657,12,43657,12
+40479259,Chondrocalcinosis of joint of ankle AND/OR foot,SNOMED,Condition,S,Not included - descendant,37970,13,42821,13
+72709,Crystal arthropathy of multiple sites,SNOMED,Condition,S,Not included - recommended via source,41728,14,41728,14
+72709,Crystal arthropathy of multiple sites,SNOMED,Condition,S,Not included - descendant,41728,14,41728,14
+72709,Crystal arthropathy of multiple sites,SNOMED,Condition,S,Not included - recommended via standard,41728,14,41728,14
+2212097,"Arthritis panel This panel must include the following: Uric acid, blood, chemical (84550) Sedimentation rate, erythrocyte, non-automated (85651) Fluorescent noninfectious agent, screen, each antibody (86255) Rheumatoid factor, qualitative ... (Deprecated)",CPT4,Procedure,S,Not included - recommended via standard,40039,9,40039,9
+45766909,Chronic synovitis,SNOMED,Condition,S,Not included - descendant,200,2,39763,15
+40479244,Chondrocalcinosis of shoulder region,SNOMED,Condition,S,Not included - descendant,34229,13,39366,13
+4083696,Osteoarthritis of ankle,SNOMED,Condition,S,Not included - descendant,27994,5,38985,5
+4083696,Osteoarthritis of ankle,SNOMED,Condition,S,Not included - recommended via standard,27994,5,38985,5
+2107572,"Disease prognosis for rheumatoid arthritis assessed, good prognosis documented (RA)",CPT4,Observation,S,Not included - recommended via standard,38582,8,38582,8
+42899909,Pulsatilla vulgaris extract,RxNorm,Drug,S,Not included - recommended via source,29311,1,38058,2
+42869846,Knee injury and Osteoarthritis Outcome Score [KOOS],LOINC,Observation,S,Not included - recommended via standard,22071,1,37080,1
+46270471,Primary chronic gout without tophus of hand,SNOMED,Condition,S,Not included - descendant,35314,12,35314,12
+4115521,"Post-traumatic gonarthrosis, bilateral",SNOMED,Condition,S,Not included - descendant,34970,8,34970,8
+76500,Crystal arthropathy of hand,SNOMED,Condition,S,Not included - recommended via standard,19081,13,34955,13
+76500,Crystal arthropathy of hand,SNOMED,Condition,S,Not included - recommended via source,19081,13,34955,13
+76500,Crystal arthropathy of hand,SNOMED,Condition,S,Not included - descendant,19081,13,34955,13
+4083683,Synovitis of knee,SNOMED,Condition,S,Not included - descendant,34893,3,34893,3
+4065483,Reactive arthropathy of knee,SNOMED,Condition,S,Not included - descendant,34794,13,34794,13
+4097458,Monoarticular joint involvement,SNOMED,Condition,S,Not included - parent,100,1,33117,13
+4262578,Sarcoid arthropathy,SNOMED,Condition,S,Not included - descendant,32594,12,33049,12
+2107561,"Disease prognosis for rheumatoid arthritis assessed, poor prognosis documented (RA)",CPT4,Observation,S,Not included - recommended via standard,32387,8,32387,8
+37116425,Infection of musculoskeletal system caused by Neisseria gonorrhoeae,SNOMED,Condition,S,Not included - parent,595,4,32094,18
+2107559,"Rheumatoid arthritis (RA) disease activity, moderate (RA)",CPT4,Observation,S,Not included - recommended via standard,31484,9,31484,9
+38001324,Septic arthritis w/o CC/MCC,DRG,Observation,S,Not included - recommended via standard,30135,1,30135,1
+36714940,Arthritis of lumbosacral spine,SNOMED,Condition,S,Not included - descendant,23081,2,30026,2
+36714940,Arthritis of lumbosacral spine,SNOMED,Condition,S,Not included - recommended via source,23081,2,30026,2
+36714940,Arthritis of lumbosacral spine,SNOMED,Condition,S,Not included - recommended via standard,23081,2,30026,2
+4077228,H/O: arthritis,SNOMED,Observation,S,Not included - recommended via standard,24324,2,28718,3
+4343918,Osteoarthritis of finger joint,SNOMED,Condition,S,Not included - recommended via standard,27322,5,28182,5
+4343918,Osteoarthritis of finger joint,SNOMED,Condition,S,Not included - descendant,27322,5,28182,5
+4101425,Gouty tophus of hand,SNOMED,Condition,S,Not included - descendant,27578,12,27578,12
+40479662,Chondrocalcinosis of hip joint,SNOMED,Condition,S,Not included - descendant,27080,12,27380,12
+46270467,Gout of knee due to renal impairment,SNOMED,Condition,S,Not included - descendant,24082,11,26732,11
+4035440,Osteoarthritis of acromioclavicular joint,SNOMED,Condition,S,Not included - descendant,26324,3,26424,3
+4035440,Osteoarthritis of acromioclavicular joint,SNOMED,Condition,S,Not included - recommended via standard,26324,3,26424,3
+4176008,Arthritis of joint of toe,SNOMED,Condition,S,Not included - recommended via standard,9875,2,26279,3
+4176008,Arthritis of joint of toe,SNOMED,Condition,S,Not included - descendant,9875,2,26279,3
+44784338,Monoarthritis of hand,SNOMED,Condition,S,Not included - recommended via source,26092,12,26092,12
+44784338,Monoarthritis of hand,SNOMED,Condition,S,Not included - recommended via standard,26092,12,26092,12
+44784338,Monoarthritis of hand,SNOMED,Condition,S,Not included - descendant,26092,12,26092,12
+74445,Crystal arthropathy of shoulder region,SNOMED,Condition,S,Not included - recommended via source,16272,13,25643,13
+74445,Crystal arthropathy of shoulder region,SNOMED,Condition,S,Not included - recommended via standard,16272,13,25643,13
+74445,Crystal arthropathy of shoulder region,SNOMED,Condition,S,Not included - descendant,16272,13,25643,13
+38001322,Septic arthritis w MCC,DRG,Observation,S,Not included - recommended via standard,25306,1,25306,1
+73287,Crystal arthropathy of ankle AND/OR foot,SNOMED,Condition,S,Not included - recommended via source,25218,13,25218,13
+73287,Crystal arthropathy of ankle AND/OR foot,SNOMED,Condition,S,Not included - recommended via standard,25218,13,25218,13
+73287,Crystal arthropathy of ankle AND/OR foot,SNOMED,Condition,S,Not included - descendant,25218,13,25218,13
+4083681,Juvenile ankylosing spondylitis,SNOMED,Condition,S,Not included - descendant,25191,17,25191,17
+2617898,All quality actions for the applicable measures in the rheumatoid arthritis (ra) measures group have been performed for this patient,HCPCS,Observation,S,Not included - recommended via standard,24861,7,24861,7
+73568,Palindromic rheumatism of shoulder region,SNOMED,Condition,S,Not included - descendant,23678,13,23678,13
+46270465,Gout of hand due to renal impairment,SNOMED,Condition,S,Not included - descendant,18520,11,23479,11
+2108721,Patient receiving first-time biologic disease modifying anti-rheumatic drug therapy for rheumatoid arthritis (RA),CPT4,Observation,S,Not included - recommended via standard,23431,8,23431,8
+37119224,Arthritis of right elbow,SNOMED,Condition,S,Not included - descendant,310,1,23295,3
+2617889,I intend to report the rheumatoid arthritis (ra) measures group,HCPCS,Observation,S,Not included - recommended via standard,22998,7,22998,7
+37109275,Lateral epicondylitis of right humerus,SNOMED,Condition,S,Not included - descendant,22607,3,22607,3
+4115164,Synovitis/tenosynovitis - elbow,SNOMED,Condition,S,Not included - descendant,21417,12,21417,12
+4287383,Chronic crepitant synovitis of wrist,SNOMED,Condition,S,Not included - descendant,21249,12,21249,12
+4025957,Degenerative polyarthritis,SNOMED,Condition,S,Not included - recommended via standard,21113,2,21113,2
+4025957,Degenerative polyarthritis,SNOMED,Condition,S,Not included - descendant,21113,2,21113,2
+73291,Palindromic rheumatism of ankle and/or foot,SNOMED,Condition,S,Not included - descendant,19458,14,19458,14
+36713110,Osteoarthritis of right hip joint,SNOMED,Condition,S,Not included - recommended via standard,18924,4,19224,4
+36713110,Osteoarthritis of right hip joint,SNOMED,Condition,S,Not included - descendant,18924,4,19224,4
+77641,Palindromic rheumatism of hand,SNOMED,Condition,S,Not included - descendant,18337,13,18337,13
+4002155,Chronic crepitant synovitis of hand and wrist,SNOMED,Condition,S,Not included - descendant,18314,14,18314,14
+46270475,Primary chronic gout without tophus of wrist,SNOMED,Condition,S,Not included - descendant,18073,11,18073,11
+3015878,XR Hand - bilateral Arthritis,LOINC,Measurement,S,Not included - recommended via standard,17813,1,17813,1
+46270425,Chronic tophaceous gout of multiple sites due to renal impairment,SNOMED,Condition,S,Not included - descendant,17519,12,17519,12
+432394,"Chondrocalcinosis due to pyrophosphate crystals, of multiple sites",SNOMED,Condition,S,Not included - descendant,16910,13,16910,13
+44784339,Monoarthritis of wrist,SNOMED,Condition,S,Not included - descendant,16857,12,16857,12
+44784339,Monoarthritis of wrist,SNOMED,Condition,S,Not included - recommended via standard,16857,12,16857,12
+44784339,Monoarthritis of wrist,SNOMED,Condition,S,Not included - recommended via source,16857,12,16857,12
+38001323,Septic arthritis w CC,DRG,Observation,S,Not included - recommended via standard,16097,1,16097,1
+4114428,Arthropathy associated with dermatological disorder,SNOMED,Condition,S,Not included - descendant,15960,13,15960,13
+40479661,Chondrocalcinosis of elbow joint,SNOMED,Condition,S,Not included - descendant,15716,13,15916,13
+4065482,Reactive arthropathy of hip,SNOMED,Condition,S,Not included - descendant,15782,13,15782,13
+4067054,Reactive arthropathy of shoulder,SNOMED,Condition,S,Not included - descendant,15641,13,15641,13
+4179065,Gouty arthritis of toe,SNOMED,Condition,S,Not included - descendant,5832,3,15619,3
+4179065,Gouty arthritis of toe,SNOMED,Condition,S,Not included - recommended via standard,5832,3,15619,3
+4060067,H/O: osteoarthritis,SNOMED,Observation,S,Not included - recommended via standard,15551,2,15551,2
+4205084,Charcot's joint of foot,SNOMED,Condition,S,Not included - descendant,14229,4,15492,4
+36713109,Osteoarthritis of left hip joint,SNOMED,Condition,S,Not included - descendant,15031,2,15331,3
+36713109,Osteoarthritis of left hip joint,SNOMED,Condition,S,Not included - recommended via standard,15031,2,15331,3
+80495,Palindromic rheumatism of pelvic region and thigh,SNOMED,Condition,S,Not included - descendant,15165,13,15165,13
+46273638,Primary chronic gout without tophus of elbow,SNOMED,Condition,S,Not included - descendant,13361,12,13361,12
+4116144,Arthropathy associated with respiratory disorder,SNOMED,Condition,S,Not included - descendant,13300,13,13300,13
+42872530,Patellofemoral osteoarthritis,SNOMED,Condition,S,Not included - recommended via standard,9922,4,13142,4
+42872530,Patellofemoral osteoarthritis,SNOMED,Condition,S,Not included - descendant,9922,4,13142,4
+46270450,Chronic tophaceous gout caused by drug,SNOMED,Condition,S,Not included - descendant,2848,10,12647,11
+4240648,Arthritis of temporomandibular joint,SNOMED,Condition,S,Not included - descendant,11872,3,12472,3
+4240648,Arthritis of temporomandibular joint,SNOMED,Condition,S,Not included - recommended via standard,11872,3,12472,3
+4044350,Post-bacterial arthropathy,SNOMED,Condition,S,Not included - parent,100,1,12241,12
+36717013,Chondromalacia of right patella,SNOMED,Condition,S,Not included - descendant,11606,1,11606,1
+46270413,Gout of wrist due to renal impairment,SNOMED,Condition,S,Not included - descendant,10066,11,11572,11
+42900058,Toxicodendron pubescens leaf extract,RxNorm,Drug,S,Not included - recommended via source,2615,1,11401,2
+4114605,Traumatic arthropathy-ankle,SNOMED,Condition,S,Not included - recommended via standard,11048,2,11048,2
+4114605,Traumatic arthropathy-ankle,SNOMED,Condition,S,Not included - descendant,11048,2,11048,2
+4122178,Synovitis/tenosynovitis - hip,SNOMED,Condition,S,Not included - descendant,10771,12,10771,12
+46270416,Chronic tophaceous gout of ankle due to renal impairment,SNOMED,Condition,S,Not included - descendant,10726,10,10726,10
+46235364,Rheumatoid arthritis disease activity score Calculated by VectraDA,LOINC,Measurement,S,Not included - recommended via standard,10451,1,10451,1
+73122,Tuberculosis of knee,SNOMED,Condition,S,Not included - descendant,10288,12,10288,12
+4281849,Podagra,SNOMED,Condition,S,Not included - descendant,9587,3,9787,3
+79107,"Chondrocalcinosis-pyrophosphate crystals, of the hand",SNOMED,Condition,S,Not included - descendant,9761,13,9761,13
+909512,menthol 0.08 MG/MG / methyl salicylate 0.3 MG/MG Topical Ointment,RxNorm,Drug,S,Not included - recommended via source,9653,3,9753,4
+2108437,Osteoarthritis assessed (OA) Includes assessment of all the following components: Osteoarthritis symptoms and functional status assessed (1006F) Use of anti-inflammatory or over-the-counter (OTC) analgesic medications assessed (1007F) Initial examinati...,CPT4,Procedure,S,Not included - recommended via standard,9320,9,9320,9
+4241576,Congenital syphilitic osteochondritis,SNOMED,Condition,S,Not included - descendant,9275,12,9275,12
+4051701,FH: Osteoarthritis,SNOMED,Observation,S,Not included - recommended via standard,9132,3,9132,3
+4083694,Osteoarthritis of spinal facet joint,SNOMED,Condition,S,Not included - recommended via standard,5500,2,9094,2
+4083694,Osteoarthritis of spinal facet joint,SNOMED,Condition,S,Not included - descendant,5500,2,9094,2
+36713103,Osteoarthritis of joint of right shoulder region,SNOMED,Condition,S,Not included - recommended via standard,8851,2,8951,2
+36713103,Osteoarthritis of joint of right shoulder region,SNOMED,Condition,S,Not included - descendant,8851,2,8951,2
+4343919,Osteoarthritis of toe joint,SNOMED,Condition,S,Not included - recommended via standard,6305,3,8891,3
+4343919,Osteoarthritis of toe joint,SNOMED,Condition,S,Not included - descendant,6305,3,8891,3
+4068237,Pyogenic arthritis of ankle,SNOMED,Condition,S,Not included - recommended via standard,8667,4,8667,4
+4068237,Pyogenic arthritis of ankle,SNOMED,Condition,S,Not included - descendant,8667,4,8667,4
+2107560,"Rheumatoid arthritis (RA) disease activity, high (RA)",CPT4,Observation,S,Not included - recommended via standard,8556,8,8556,8
+46270457,Gout of knee caused by drug,SNOMED,Condition,S,Not included - descendant,7605,12,8525,12
+75037,Kashin-Beck disease of the ankle and/or foot,SNOMED,Condition,S,Not included - descendant,8315,12,8315,12
+46270464,Gout of elbow due to renal impairment,SNOMED,Condition,S,Not included - descendant,6301,11,8164,12
+78672,Tuberculosis of hip,SNOMED,Condition,S,Not included - descendant,8132,13,8132,13
+77073,Kashin-Beck disease of the hand,SNOMED,Condition,S,Not included - descendant,7849,12,7849,12
+36713099,Osteoarthritis of joint of left shoulder region,SNOMED,Condition,S,Not included - descendant,7657,2,7757,2
+36713099,Osteoarthritis of joint of left shoulder region,SNOMED,Condition,S,Not included - recommended via standard,7657,2,7757,2
+4166443,FH: Arthritis,SNOMED,Observation,S,Not included - recommended via standard,3882,3,7591,3
+4166443,FH: Arthritis,SNOMED,Observation,S,Not included - recommended via source,3882,3,7591,3
+72985,Arthropathy of the ankle and/or foot associated with helminthiasis,SNOMED,Condition,S,Not included - descendant,7582,11,7582,11
+46235743,Rheumatoid arthritis disease activity score confidence interval by VectraDA,LOINC,Measurement,S,Not included - recommended via standard,7417,1,7417,1
+46270455,Gout of hand caused by drug,SNOMED,Condition,S,Not included - descendant,5940,11,7276,12
+77953,Crystal arthropathy of hip,SNOMED,Condition,S,Not included - recommended via standard,7020,13,7020,13
+77953,Crystal arthropathy of hip,SNOMED,Condition,S,Not included - descendant,7020,13,7020,13
+77953,Crystal arthropathy of hip,SNOMED,Condition,S,Not included - recommended via source,7020,13,7020,13
+439678,Kashin-Beck disease of the shoulder region,SNOMED,Condition,S,Not included - descendant,6998,11,6998,11
+4180469,Sacral arthritis,SNOMED,Condition,S,Not included - recommended via standard,6945,2,6945,2
+4180469,Sacral arthritis,SNOMED,Condition,S,Not included - descendant,6945,2,6945,2
+72399,Arthropathy in Behcet's syndrome of multiple sites,SNOMED,Condition,S,Not included - recommended via source,6933,13,6933,13
+72399,Arthropathy in Behcet's syndrome of multiple sites,SNOMED,Condition,S,Not included - descendant,6933,13,6933,13
+72399,Arthropathy in Behcet's syndrome of multiple sites,SNOMED,Condition,S,Not included - recommended via standard,6933,13,6933,13
+440170,"Chondrocalcinosis due to dicalcium phosphate crystals, of multiple sites",SNOMED,Condition,S,Not included - descendant,6537,13,6537,13
+73554,Kashin-Beck disease of the pelvic region and thigh,SNOMED,Condition,S,Not included - descendant,6491,12,6491,12
+45763782,Primary osteoarthritis of ankle,SNOMED,Condition,S,Not included - recommended via standard,6465,2,6465,2
+45763782,Primary osteoarthritis of ankle,SNOMED,Condition,S,Not included - descendant,6465,2,6465,2
+44784340,Monoarthritis of elbow,SNOMED,Condition,S,Not included - recommended via source,6221,11,6221,11
+44784340,Monoarthritis of elbow,SNOMED,Condition,S,Not included - descendant,6221,11,6221,11
+44784340,Monoarthritis of elbow,SNOMED,Condition,S,Not included - recommended via standard,6221,11,6221,11
+439350,Post-dysenteric reactive arthropathy of the pelvic region and thigh,SNOMED,Condition,S,Not included - recommended via standard,6197,12,6197,12
+439350,Post-dysenteric reactive arthropathy of the pelvic region and thigh,SNOMED,Condition,S,Not included - descendant,6197,12,6197,12
+4083698,Osteoarthritis of subtalar joint,SNOMED,Condition,S,Not included - recommended via standard,5370,3,6123,3
+4083698,Osteoarthritis of subtalar joint,SNOMED,Condition,S,Not included - descendant,5370,3,6123,3
+4269880,Rheumatoid arteritis,SNOMED,Condition,S,Not included - descendant,6114,3,6114,3
+80797,"Chondrocalcinosis due to dicalcium phosphate crystals, of the hand",SNOMED,Condition,S,Not included - descendant,6113,12,6113,12
+40485935,Assessment using rheumatoid arthritis work instability scale,SNOMED,Procedure,S,Not included - recommended via standard,6070,1,6070,1
+4166049,Infrapatellar bursitis,SNOMED,Condition,S,Not included - descendant,4394,4,6056,4
+44802283,Assessment of rheumatoid arthritis using disease activity score 28 joint count,SNOMED,Procedure,S,Not included - recommended via standard,5431,1,5431,1
+44802282,Assessment of rheumatoid arthritis using disease activity score - original,SNOMED,Procedure,S,Not included - recommended via standard,5428,1,5428,1
+4066958,Post-dysenteric reactive arthropathy of multiple sites,SNOMED,Condition,S,Not included - recommended via standard,5421,11,5421,11
+4066958,Post-dysenteric reactive arthropathy of multiple sites,SNOMED,Condition,S,Not included - descendant,5421,11,5421,11
+4065479,Reactive arthropathy of wrist,SNOMED,Condition,S,Not included - descendant,5376,13,5376,13
+4067301,Reactive arthropathy of ankle,SNOMED,Condition,S,Not included - descendant,5317,11,5317,11
+76499,"Chondrocalcinosis due to pyrophosphate crystals, of the shoulder region",SNOMED,Condition,S,Not included - descendant,4937,13,4937,13
+45765978,Osteoarthritis of midfoot,SNOMED,Condition,S,Not included - recommended via standard,4355,2,4868,2
+45765978,Osteoarthritis of midfoot,SNOMED,Condition,S,Not included - descendant,4355,2,4868,2
+46270420,Chronic tophaceous gout of hand due to renal impairment,SNOMED,Condition,S,Not included - descendant,4859,11,4859,11
+46273523,Primary chronic gout without tophus of shoulder,SNOMED,Condition,S,Not included - descendant,4831,11,4831,11
+46270461,Gout of wrist caused by drug,SNOMED,Condition,S,Not included - descendant,3911,12,4811,12
+72984,Post-dysenteric reactive arthropathy of the shoulder region,SNOMED,Condition,S,Not included - descendant,4760,12,4760,12
+72984,Post-dysenteric reactive arthropathy of the shoulder region,SNOMED,Condition,S,Not included - recommended via standard,4760,12,4760,12
+77353,"Chondrocalcinosis due to pyrophosphate crystals, of the ankle and foot",SNOMED,Condition,S,Not included - descendant,4751,13,4751,13
+42537576,Osteoarthritis of joint of left ankle and/or foot,SNOMED,Condition,S,Not included - descendant,147,1,4604,2
+46270412,Gout of shoulder due to renal impairment,SNOMED,Condition,S,Not included - descendant,3957,10,4557,11
+77632,"Chondrocalcinosis due to dicalcium phosphate crystals, of the shoulder region",SNOMED,Condition,S,Not included - descendant,4434,12,4434,12
+4058299,H/O: rheumatoid arthritis,SNOMED,Observation,S,Not included - recommended via standard,4394,3,4394,3
+4174268,Subacute arthritis,SNOMED,Condition,S,Not included - descendant,4090,3,4390,3
+4174268,Subacute arthritis,SNOMED,Condition,S,Not included - recommended via standard,4090,3,4390,3
+36713101,Osteoarthritis of joint of right ankle and/or foot,SNOMED,Condition,S,Not included - descendant,756,2,4286,2
+36713101,Osteoarthritis of joint of right ankle and/or foot,SNOMED,Condition,S,Not included - recommended via standard,756,2,4286,2
+46270454,Gout of elbow caused by drug,SNOMED,Condition,S,Not included - descendant,3171,11,4242,12
+73550,Crystal arthropathy of elbow,SNOMED,Condition,S,Not included - recommended via source,4062,12,4062,12
+73550,Crystal arthropathy of elbow,SNOMED,Condition,S,Not included - recommended via standard,4062,12,4062,12
+73550,Crystal arthropathy of elbow,SNOMED,Condition,S,Not included - descendant,4062,12,4062,12
+4116769,"Post-traumatic coxarthrosis, bilateral",SNOMED,Condition,S,Not included - descendant,3918,7,3918,7
+4067299,Reactive arthropathy of elbow,SNOMED,Condition,S,Not included - descendant,3646,12,3646,12
+77633,"Chondrocalcinosis due to dicalcium phosphate crystals, of the ankle and foot",SNOMED,Condition,S,Not included - descendant,3639,12,3639,12
+2102817,"Initial examination of the involved joint(s) (includes visual inspection, palpation, range of motion) (OA) [Instructions: Report only for initial osteoarthritis visit or for visits for new joint involvement]",CPT4,Observation,S,Not included - recommended via standard,3630,6,3630,6
+74120,Arthropathy of the shoulder region associated with helminthiasis,SNOMED,Condition,S,Not included - descendant,3559,11,3559,11
+42535491,Chondromalacia of left patella,SNOMED,Condition,S,Not included - descendant,3530,2,3530,2
+37017534,Osteoarthritis of lumbar spinal facet joint,SNOMED,Condition,S,Not included - descendant,3362,2,3362,2
+37017534,Osteoarthritis of lumbar spinal facet joint,SNOMED,Condition,S,Not included - recommended via standard,3362,2,3362,2
+4050930,FH: Rheumatoid arthritis,SNOMED,Observation,S,Not included - recommended via standard,3236,3,3236,3
+4167092,Arthritis/arthrosis,SNOMED,Condition,S,Not included - recommended via standard,3197,2,3197,2
+37108610,Arthritis of first carpometacarpal joint of left hand,SNOMED,Condition,S,Not included - descendant,2657,1,3138,1
+37108610,Arthritis of first carpometacarpal joint of left hand,SNOMED,Condition,S,Not included - recommended via standard,2657,1,3138,1
+46270435,Chronic tophaceous gout of ankle and/or foot caused by drug,SNOMED,Condition,S,Not included - descendant,3120,11,3120,11
+37117101,Bursitis of right knee,SNOMED,Condition,S,Not included - descendant,512,1,3096,2
+433844,"Chondrocalcinosis due to pyrophosphate crystals, of the pelvic region and thigh",SNOMED,Condition,S,Not included - descendant,2922,12,2922,12
+4114444,Flare of rheumatoid arthritis,SNOMED,Condition,S,Not included - recommended via standard,2920,3,2920,3
+4114444,Flare of rheumatoid arthritis,SNOMED,Condition,S,Not included - descendant,2920,3,2920,3
+37108652,Bursitis of left knee,SNOMED,Condition,S,Not included - descendant,573,1,2902,2
+37108613,Arthritis of left foot,SNOMED,Condition,S,Not included - descendant,1374,1,2681,2
+37108613,Arthritis of left foot,SNOMED,Condition,S,Not included - recommended via standard,1374,1,2681,2
+4116143,Arthropathy in Crohn's disease,SNOMED,Condition,S,Not included - descendant,1849,4,2671,4
+81373,Post-dysenteric reactive arthropathy of the ankle and/or foot,SNOMED,Condition,S,Not included - recommended via standard,2628,12,2628,12
+81373,Post-dysenteric reactive arthropathy of the ankle and/or foot,SNOMED,Condition,S,Not included - descendant,2628,12,2628,12
+46273541,Gout of vertebra due to renal impairment,SNOMED,Condition,S,Not included - descendant,980,9,2602,9
+46270466,Gout of hip due to renal impairment,SNOMED,Condition,S,Not included - descendant,1694,9,2594,9
+4179378,Rheumatoid arthritis of foot,SNOMED,Condition,S,Not included - descendant,2373,2,2573,2
+4179378,Rheumatoid arthritis of foot,SNOMED,Condition,S,Not included - recommended via standard,2373,2,2573,2
+4083684,Undifferentiated inflammatory oligoarthritis,SNOMED,Condition,S,Not included - descendant,1432,2,2569,2
+4083684,Undifferentiated inflammatory oligoarthritis,SNOMED,Condition,S,Not included - recommended via standard,1432,2,2569,2
+36712697,Osteoarthritis of left foot,SNOMED,Condition,S,Not included - descendant,1787,1,2531,1
+36712697,Osteoarthritis of left foot,SNOMED,Condition,S,Not included - recommended via standard,1787,1,2531,1
+46270459,Gout of shoulder caused by drug,SNOMED,Condition,S,Not included - descendant,2109,10,2509,10
+36712696,Osteoarthritis of right foot,SNOMED,Condition,S,Not included - recommended via standard,1668,1,2498,1
+36712696,Osteoarthritis of right foot,SNOMED,Condition,S,Not included - descendant,1668,1,2498,1
+37108611,Arthritis of first carpometacarpal joint of right hand,SNOMED,Condition,S,Not included - descendant,2006,1,2487,1
+37108611,Arthritis of first carpometacarpal joint of right hand,SNOMED,Condition,S,Not included - recommended via standard,2006,1,2487,1
+4035442,Osteoarthritis of first metatarsophalangeal joint,SNOMED,Condition,S,Not included - descendant,1865,2,2486,2
+4035442,Osteoarthritis of first metatarsophalangeal joint,SNOMED,Condition,S,Not included - recommended via standard,1865,2,2486,2
+37117139,Arthritis of right foot,SNOMED,Condition,S,Not included - recommended via standard,1234,1,2486,1
+37117139,Arthritis of right foot,SNOMED,Condition,S,Not included - descendant,1234,1,2486,1
+46270456,Gout of hip caused by drug,SNOMED,Condition,S,Not included - descendant,1368,9,2484,9
+46270424,Chronic tophaceous gout of knee due to renal impairment,SNOMED,Condition,S,Not included - descendant,2450,11,2450,11
+46273639,Primary chronic gout without tophus of hip,SNOMED,Condition,S,Not included - descendant,2441,10,2441,10
+3019773,XR Hand Arthritis,LOINC,Measurement,S,Not included - recommended via standard,2326,2,2326,2
+37108614,Arthritis of right ankle,SNOMED,Condition,S,Not included - descendant,1440,1,2307,1
+37108614,Arthritis of right ankle,SNOMED,Condition,S,Not included - recommended via standard,1440,1,2307,1
+4117097,Generalized arthritis,SNOMED,Condition,S,Not included - recommended via standard,2240,3,2240,3
+4117097,Generalized arthritis,SNOMED,Condition,S,Not included - descendant,2240,3,2240,3
+36713102,Osteoarthritis of joint of right hand,SNOMED,Condition,S,Not included - recommended via standard,1675,2,2194,2
+36713102,Osteoarthritis of joint of right hand,SNOMED,Condition,S,Not included - descendant,1675,2,2194,2
+37108612,Arthritis of left ankle,SNOMED,Condition,S,Not included - descendant,1260,1,2163,1
+37108612,Arthritis of left ankle,SNOMED,Condition,S,Not included - recommended via standard,1260,1,2163,1
+4143345,Liposynovitis prepatellaris,SNOMED,Condition,S,Not included - descendant,2094,2,2094,2
+4114911,Gouty arthritis of the hand,SNOMED,Condition,S,Not included - descendant,2026,3,2026,3
+4114911,Gouty arthritis of the hand,SNOMED,Condition,S,Not included - recommended via standard,2026,3,2026,3
+76778,Arthropathy in Behcet's syndrome of the pelvic region and thigh,SNOMED,Condition,S,Not included - descendant,2007,12,2007,12
+76778,Arthropathy in Behcet's syndrome of the pelvic region and thigh,SNOMED,Condition,S,Not included - recommended via standard,2007,12,2007,12
+76778,Arthropathy in Behcet's syndrome of the pelvic region and thigh,SNOMED,Condition,S,Not included - recommended via source,2007,12,2007,12
+4066603,Lumbosacral spondylosis with myelopathy,SNOMED,Condition,S,Not included - descendant,1806,2,2006,2
+75619,Post-dysenteric reactive arthropathy of the hand,SNOMED,Condition,S,Not included - recommended via standard,1952,12,1952,12
+75619,Post-dysenteric reactive arthropathy of the hand,SNOMED,Condition,S,Not included - descendant,1952,12,1952,12
+36717301,Osteoarthritis of joint of left ankle,SNOMED,Condition,S,Not included - descendant,1626,2,1926,2
+36717301,Osteoarthritis of joint of left ankle,SNOMED,Condition,S,Not included - recommended via standard,1626,2,1926,2
+37108770,Osteoarthritis of left patellofemoral joint,SNOMED,Condition,S,Not included - recommended via standard,1481,1,1898,1
+37108770,Osteoarthritis of left patellofemoral joint,SNOMED,Condition,S,Not included - descendant,1481,1,1898,1
+4116445,Rheumatoid arthritis of ankle,SNOMED,Condition,S,Not included - recommended via standard,1814,3,1814,3
+4116445,Rheumatoid arthritis of ankle,SNOMED,Condition,S,Not included - descendant,1814,3,1814,3
+4045508,Rheumatoid arthritis nuclear antibody assay,SNOMED,Measurement,S,Not included - recommended via standard,1811,1,1811,1
+4344512,Suprapatellar bursitis,SNOMED,Condition,S,Not included - descendant,1592,3,1792,3
+74720,Arthropathy in Behcet's syndrome of the ankle and/or foot,SNOMED,Condition,S,Not included - recommended via source,1670,12,1770,12
+74720,Arthropathy in Behcet's syndrome of the ankle and/or foot,SNOMED,Condition,S,Not included - descendant,1670,12,1770,12
+74720,Arthropathy in Behcet's syndrome of the ankle and/or foot,SNOMED,Condition,S,Not included - recommended via standard,1670,12,1770,12
+46270418,Chronic tophaceous gout of elbow due to renal impairment,SNOMED,Condition,S,Not included - descendant,1763,10,1763,10
+4030552,Rheumatic joint disease,SNOMED,Condition,S,Not included - descendant,1263,3,1763,3
+4178931,Degenerative tear of triangular fibrocartilage complex of wrist,SNOMED,Condition,S,Not included - descendant,1455,2,1741,2
+37117087,Osteoarthritis of right patellofemoral joint,SNOMED,Condition,S,Not included - descendant,1322,1,1739,1
+37117087,Osteoarthritis of right patellofemoral joint,SNOMED,Condition,S,Not included - recommended via standard,1322,1,1739,1
+36713098,Osteoarthritis of joint of left hand,SNOMED,Condition,S,Not included - recommended via standard,1218,2,1737,2
+36713098,Osteoarthritis of joint of left hand,SNOMED,Condition,S,Not included - descendant,1218,2,1737,2
+45757270,Sporotrichosis arthritis,SNOMED,Condition,S,Not included - descendant,1705,9,1705,9
+45757270,Sporotrichosis arthritis,SNOMED,Condition,S,Not included - recommended via standard,1705,9,1705,9
+45757270,Sporotrichosis arthritis,SNOMED,Condition,S,Not included - recommended via source,1705,9,1705,9
+37108651,Pes anserinus bursitis of right knee,SNOMED,Condition,S,Not included - descendant,1543,1,1697,1
+45763783,Secondary osteoarthritis of ankle,SNOMED,Condition,S,Not included - recommended via standard,1045,2,1668,2
+45763783,Secondary osteoarthritis of ankle,SNOMED,Condition,S,Not included - descendant,1045,2,1668,2
+433281,"Chondrocalcinosis due to dicalcium phosphate crystals, of the pelvic region and thigh",SNOMED,Condition,S,Not included - descendant,1651,12,1651,12
+37109064,Arthritis of facet joint of cervical spine,SNOMED,Condition,S,Not included - descendant,1451,1,1651,2
+37109064,Arthritis of facet joint of cervical spine,SNOMED,Condition,S,Not included - recommended via standard,1451,1,1651,2
+4181453,Kashin-Beck disease of spine,SNOMED,Condition,S,Not included - descendant,1647,11,1647,11
+81656,Arthropathy in Behcet's syndrome of the shoulder region,SNOMED,Condition,S,Not included - descendant,1641,12,1641,12
+81656,Arthropathy in Behcet's syndrome of the shoulder region,SNOMED,Condition,S,Not included - recommended via standard,1641,12,1641,12
+81656,Arthropathy in Behcet's syndrome of the shoulder region,SNOMED,Condition,S,Not included - recommended via source,1641,12,1641,12
+37108653,Pes anserinus bursitis of left knee,SNOMED,Condition,S,Not included - descendant,1463,1,1617,1
+4200420,Spinal arthritis deformans,SNOMED,Condition,S,Not included - descendant,1612,2,1612,2
+4200420,Spinal arthritis deformans,SNOMED,Condition,S,Not included - recommended via standard,1612,2,1612,2
+81100,Arthropathy in Behcet's syndrome of the hand,SNOMED,Condition,S,Not included - recommended via source,1600,12,1600,12
+81100,Arthropathy in Behcet's syndrome of the hand,SNOMED,Condition,S,Not included - descendant,1600,12,1600,12
+81100,Arthropathy in Behcet's syndrome of the hand,SNOMED,Condition,S,Not included - recommended via standard,1600,12,1600,12
+4009504,Migratory polyarthritis,SNOMED,Condition,S,Not included - descendant,1579,3,1579,3
+4009504,Migratory polyarthritis,SNOMED,Condition,S,Not included - recommended via standard,1579,3,1579,3
+36713104,Osteoarthritis of joint of right wrist,SNOMED,Condition,S,Not included - recommended via standard,1293,2,1562,2
+36713104,Osteoarthritis of joint of right wrist,SNOMED,Condition,S,Not included - descendant,1293,2,1562,2
+4094226,Acute infective arthritis,SNOMED,Condition,S,Not included - descendant,200,2,1539,2
+46270444,Chronic tophaceous gout of multiple sites caused by drug,SNOMED,Condition,S,Not included - descendant,1536,10,1536,10
+4116007,Gouty arthritis of the shoulder region,SNOMED,Condition,S,Not included - recommended via standard,1524,10,1524,10
+4116007,Gouty arthritis of the shoulder region,SNOMED,Condition,S,Not included - descendant,1524,10,1524,10
+42708621,aspirin 1000 MG / caffeine 65 MG Oral Powder [BC Arthritis],RxNorm,Drug,S,Not included - recommended via source,1501,3,1501,3
+42708621,aspirin 1000 MG / caffeine 65 MG Oral Powder [BC Arthritis],RxNorm,Drug,S,Not included - recommended via standard,1501,3,1501,3
+4274658,Subpatellar bursitis,SNOMED,Condition,S,Not included - descendant,1262,2,1462,2
+4181963,Degeneration of internal semilunar cartilage,SNOMED,Condition,S,Not included - descendant,1395,2,1395,2
+4115522,"Post-traumatic arthrosis of first carpometacarpal joints, bilateral",SNOMED,Condition,S,Not included - descendant,1367,6,1367,6
+4327181,Interphalangeal osteoarthritis,SNOMED,Condition,S,Not included - recommended via standard,606,2,1366,3
+4327181,Interphalangeal osteoarthritis,SNOMED,Condition,S,Not included - descendant,606,2,1366,3
+36713100,Osteoarthritis of joint of left wrist,SNOMED,Condition,S,Not included - descendant,1103,2,1320,2
+36713100,Osteoarthritis of joint of left wrist,SNOMED,Condition,S,Not included - recommended via standard,1103,2,1320,2
+40235630,camphor 110 MG/ML / menthol 110 MG/ML Topical Cream,RxNorm,Drug,S,Not included - recommended via source,1317,6,1317,6
+46270431,Chronic tophaceous gout of wrist due to renal impairment,SNOMED,Condition,S,Not included - descendant,1306,9,1306,9
+4344390,Intervertebral disk calcification,SNOMED,Condition,S,Not included - descendant,800,8,1300,9
+46270438,Chronic tophaceous gout of hand caused by drug,SNOMED,Condition,S,Not included - descendant,1236,10,1236,10
+37108607,Arthritis of right wrist,SNOMED,Condition,S,Not included - recommended via standard,1033,1,1233,1
+37108607,Arthritis of right wrist,SNOMED,Condition,S,Not included - descendant,1033,1,1233,1
+72400,Arthropathy of the pelvic region and thigh associated with helminthiasis,SNOMED,Condition,S,Not included - descendant,1183,11,1183,11
+4079737,Synovitis of elbow,SNOMED,Condition,S,Not included - descendant,1182,2,1182,2
+37108602,Arthritis of left glenohumeral joint,SNOMED,Condition,S,Not included - recommended via standard,1082,1,1182,1
+37108602,Arthritis of left glenohumeral joint,SNOMED,Condition,S,Not included - descendant,1082,1,1182,1
+4233223,Juvenile osteochondrosis of head of metacarpals,SNOMED,Condition,S,Not included - descendant,1174,10,1174,10
+4132811,"Juvenile idiopathic arthritis, oligoarthritis",SNOMED,Condition,S,Not included - recommended via standard,672,2,1137,2
+4132811,"Juvenile idiopathic arthritis, oligoarthritis",SNOMED,Condition,S,Not included - descendant,672,2,1137,2
+46270474,Primary chronic gout without tophus of vertebra,SNOMED,Condition,S,Not included - descendant,1099,9,1099,9
+37395590,Rheumatoid lung disease with rheumatoid arthritis,SNOMED,Condition,S,Not included - recommended via standard,1097,5,1097,5
+37395590,Rheumatoid lung disease with rheumatoid arthritis,SNOMED,Condition,S,Not included - descendant,1097,5,1097,5
+37395590,Rheumatoid lung disease with rheumatoid arthritis,SNOMED,Condition,S,Not included - recommended via source,1097,5,1097,5
+4302891,Stickler syndrome,SNOMED,Condition,S,Not included - descendant,1074,2,1074,2
+46270436,Chronic tophaceous gout of elbow caused by drug,SNOMED,Condition,S,Not included - descendant,1071,10,1071,10
+4079742,Pyrophosphate arthritis,SNOMED,Condition,S,Not included - descendant,964,2,1064,2
+4079742,Pyrophosphate arthritis,SNOMED,Condition,S,Not included - recommended via standard,964,2,1064,2
+45767598,Charcot arthropathy of forefoot,SNOMED,Condition,S,Not included - descendant,1063,2,1063,2
+80801,Arthropathy of the hand associated with helminthiasis,SNOMED,Condition,S,Not included - descendant,1062,10,1062,10
+4301698,Osteochondritis of the talus,SNOMED,Condition,S,Not included - descendant,1062,2,1062,2
+40483306,Remitting seronegative symmetrical synovitis with pitting edema,SNOMED,Condition,S,Not included - descendant,1057,3,1057,3
+37108605,Arthritis of left elbow,SNOMED,Condition,S,Not included - descendant,253,1,1040,3
+4077425,Acute bacterial arthritis,SNOMED,Condition,S,Not included - descendant,356,2,1039,2
+37109101,Osteoarthritis of joint right ankle,SNOMED,Condition,S,Not included - descendant,832,1,1032,1
+37109101,Osteoarthritis of joint right ankle,SNOMED,Condition,S,Not included - recommended via standard,832,1,1032,1
+40760096,Rheumatoid arthritis nuclear Ab [Titer] in Serum by Immunofluorescence,LOINC,Measurement,S,Not included - recommended via standard,1028,4,1028,4
+46270460,Gout of vertebra caused by drug,SNOMED,Condition,S,Not included - descendant,820,8,1020,8
+46270440,Chronic tophaceous gout of hip caused by drug,SNOMED,Condition,S,Not included - descendant,1016,7,1016,7
+4079974,Parvo virus arthritis,SNOMED,Condition,S,Not included - recommended via standard,1008,2,1008,2
+4079974,Parvo virus arthritis,SNOMED,Condition,S,Not included - descendant,1008,2,1008,2
+4116009,Gouty arthritis of multiple sites,SNOMED,Condition,S,Not included - descendant,995,2,995,2
+4116009,Gouty arthritis of multiple sites,SNOMED,Condition,S,Not included - recommended via standard,995,2,995,2
+40487917,Heterotopic ossification of joint,SNOMED,Condition,S,Not included - descendant,100,1,979,2
+4232793,Mumps arthritis,SNOMED,Condition,S,Not included - recommended via source,950,8,950,8
+4232793,Mumps arthritis,SNOMED,Condition,S,Not included - descendant,950,8,950,8
+4232793,Mumps arthritis,SNOMED,Condition,S,Not included - recommended via standard,950,8,950,8
+46270428,Chronic gout of vertebra without tophus due to renal impairment,SNOMED,Condition,S,Not included - descendant,922,9,922,9
+37108883,Degenerative rupture of medial meniscus of left knee,SNOMED,Condition,S,Not included - descendant,819,1,919,1
+4079733,Juvenile psoriatic arthritis,SNOMED,Condition,S,Not included - descendant,418,3,918,5
+37108751,Arthritis of finger of right hand,SNOMED,Condition,S,Not included - descendant,533,1,892,1
+37108751,Arthritis of finger of right hand,SNOMED,Condition,S,Not included - recommended via standard,533,1,892,1
+4145016,Juvenile osteochondritis of the hip and pelvis,SNOMED,Condition,S,Not included - descendant,787,4,887,4
+37108650,Patellar bursitis of right knee,SNOMED,Condition,S,Not included - descendant,387,1,887,2
+4158412,Acute suppurative arthritis,SNOMED,Condition,S,Not included - descendant,200,2,883,2
+37110374,Ossification of spinal ligament,SNOMED,Condition,S,Not included - descendant,100,1,879,2
+37108884,Degenerative rupture of medial meniscus of right knee,SNOMED,Condition,S,Not included - descendant,775,1,875,1
+37108606,Arthritis of left wrist,SNOMED,Condition,S,Not included - descendant,746,1,846,1
+37108606,Arthritis of left wrist,SNOMED,Condition,S,Not included - recommended via standard,746,1,846,1
+4173164,Osteochondritis of metatarsal,SNOMED,Condition,S,Not included - descendant,100,1,826,2
+4257971,Chronic arthritis of juvenile onset,SNOMED,Condition,S,Not included - recommended via standard,825,8,825,8
+4257971,Chronic arthritis of juvenile onset,SNOMED,Condition,S,Not included - descendant,825,8,825,8
+46270442,Chronic tophaceous gout of knee caused by drug,SNOMED,Condition,S,Not included - descendant,820,8,820,8
+46270452,Chronic tophaceous gout of wrist caused by drug,SNOMED,Condition,S,Not included - descendant,800,8,800,8
+46270422,Chronic tophaceous gout of hip due to renal impairment,SNOMED,Condition,S,Not included - descendant,800,8,800,8
+4004615,Iselin's disease,SNOMED,Condition,S,Not included - descendant,726,2,726,2
+36717302,Osteoarthritis of joint of right elbow,SNOMED,Condition,S,Not included - descendant,423,2,723,2
+42539290,Patellar bursitis of left knee,SNOMED,Condition,S,Not included - descendant,212,1,712,2
+37108750,Arthritis of finger of left hand,SNOMED,Condition,S,Not included - descendant,347,1,706,1
+2617600,Clinician documented that symptomatic osteoarthritis patient was not an eligible candidate for annual assessment of function and pain measure,HCPCS,Observation,S,Not included - recommended via standard,700,7,700,7
+46273508,Chronic tophaceous gout of vertebra due to renal impairment,SNOMED,Condition,S,Not included - descendant,700,7,700,7
+42899791,Rhododendron aureum leaf extract,RxNorm,Drug,S,Not included - recommended via source,100,1,700,2
+4154437,Intercritical gout,SNOMED,Condition,S,Not included - descendant,689,2,689,2
+4160643,Acute suppurative arthritis due to bacteria,SNOMED,Condition,S,Not included - recommended via standard,683,2,683,2
+4160643,Acute suppurative arthritis due to bacteria,SNOMED,Condition,S,Not included - descendant,683,2,683,2
+4236035,Ossification of posterior longitudinal ligament,SNOMED,Condition,S,Not included - descendant,479,2,679,2
+3015914,Rheumatoid arthritis nuclear Ab [Units/volume] in Serum,LOINC,Measurement,S,Not included - recommended via standard,663,3,663,3
+4346972,Osteoarthritis of distal interphalangeal joint,SNOMED,Condition,S,Not included - recommended via standard,660,2,660,2
+4035741,Ankylosing spondylitis with multisystem involvement,SNOMED,Condition,S,Not included - descendant,660,2,660,2
+4346972,Osteoarthritis of distal interphalangeal joint,SNOMED,Condition,S,Not included - descendant,660,2,660,2
+4245526,SAPHO syndrome,SNOMED,Condition,S,Not included - descendant,644,3,644,3
+4150309,"Localized, secondary osteoarthritis of the pelvic region and thigh",SNOMED,Condition,S,Not included - recommended via standard,620,2,620,2
+4150309,"Localized, secondary osteoarthritis of the pelvic region and thigh",SNOMED,Condition,S,Not included - descendant,620,2,620,2
+2617599,Patients diagnosed with symptomatic osteoarthritis with documented annual assessment of function and pain,HCPCS,Observation,S,Not included - recommended via standard,600,6,600,6
+46273507,Chronic tophaceous gout of shoulder due to renal impairment,SNOMED,Condition,S,Not included - descendant,600,6,600,6
+37108603,Arthritis of right glenohumeral joint,SNOMED,Condition,S,Not included - descendant,489,1,589,1
+37108597,Chondrocalcinosis of joint of right knee,SNOMED,Condition,S,Not included - descendant,575,1,575,1
+4095202,Symmetrical arthritis,SNOMED,Condition,S,Not included - recommended via standard,558,2,558,2
+4095202,Symmetrical arthritis,SNOMED,Condition,S,Not included - descendant,558,2,558,2
+4253902,"Juvenile idiopathic arthritis, enthesitis related arthritis",SNOMED,Condition,S,Not included - descendant,524,2,524,2
+4253902,"Juvenile idiopathic arthritis, enthesitis related arthritis",SNOMED,Condition,S,Not included - recommended via standard,524,2,524,2
+45763784,Osteoarthritis of ankle secondary to trauma,SNOMED,Condition,S,Not included - recommended via standard,523,2,523,2
+45763784,Osteoarthritis of ankle secondary to trauma,SNOMED,Condition,S,Not included - descendant,523,2,523,2
+37108598,Chondrocalcinosis of joint of left knee,SNOMED,Condition,S,Not included - descendant,513,1,513,1
+4047780,Post-streptococcal reactive arthritis,SNOMED,Condition,S,Not included - recommended via standard,510,2,510,2
+4047780,Post-streptococcal reactive arthritis,SNOMED,Condition,S,Not included - descendant,510,2,510,2
+4003507,Degenerative arthritis of temporomandibular joint,SNOMED,Condition,S,Not included - descendant,503,2,503,2
+4003507,Degenerative arthritis of temporomandibular joint,SNOMED,Condition,S,Not included - recommended via standard,503,2,503,2
+762267,Lateral epicondylitis of left humerus,SNOMED,Condition,S,Not included - descendant,487,2,487,2
+4215655,Tibial plateau chondromalacia,SNOMED,Condition,S,Not included - descendant,482,3,482,3
+37117138,Arthritis of bilateral first carpometacarpal joints,SNOMED,Condition,S,Not included - descendant,481,1,481,1
+37109063,Arthritis of facet joint of lumbar spine,SNOMED,Condition,S,Not included - descendant,276,1,476,2
+37108616,Bilateral arthritis of feet,SNOMED,Condition,S,Not included - descendant,172,1,472,1
+4263646,Sarcoid arthritis,SNOMED,Condition,S,Not included - descendant,455,3,455,3
+4002683,Acute calcific periarthritis,SNOMED,Condition,S,Not included - descendant,441,1,441,1
+4157481,Fungal arthritis,SNOMED,Condition,S,Not included - descendant,435,4,435,4
+4157481,Fungal arthritis,SNOMED,Condition,S,Not included - recommended via standard,435,4,435,4
+4344030,Popliteal bursitis,SNOMED,Condition,S,Not included - descendant,435,2,435,2
+4147654,Juvenile osteochondrosis of capitulum of humerus,SNOMED,Condition,S,Not included - descendant,425,4,425,4
+36716986,Arthritis co-occurrent and due to Crohn's disease,SNOMED,Condition,S,Not included - descendant,422,2,422,2
+42534871,Synovitis of right ankle joint,SNOMED,Condition,S,Not included - descendant,422,1,422,1
+762329,Osteoarthritis of first carpometacarpal joint of left hand,SNOMED,Condition,S,Not included - descendant,100,1,419,2
+762330,Osteoarthritis of first carpometacarpal joint of right hand,SNOMED,Condition,S,Not included - descendant,100,1,419,2
+37108771,Bilateral patellofemoral joint osteoarthritis,SNOMED,Condition,S,Not included - descendant,417,1,417,1
+4173925,Post-infective polyarthritis,SNOMED,Condition,S,Not included - descendant,414,2,414,2
+45765981,Osteoarthritis of midfoot secondary to inflammatory arthritis,SNOMED,Condition,S,Not included - descendant,413,1,413,1
+40483789,Inflammation of pubic symphysis,SNOMED,Condition,S,Not included - descendant,412,3,412,3
+46273653,Chronic gout of ankle and/or foot without tophus caused by drug,SNOMED,Condition,S,Not included - descendant,406,2,406,2
+4079734,Juvenile psoriatic arthritis with psoriasis,SNOMED,Condition,S,Not included - descendant,400,4,400,4
+4079734,Juvenile psoriatic arthritis with psoriasis,SNOMED,Condition,S,Not included - recommended via standard,400,4,400,4
+46270446,Chronic tophaceous gout of shoulder caused by drug,SNOMED,Condition,S,Not included - descendant,400,4,400,4
+4115377,Juvenile arthritis in Crohn disease,SNOMED,Condition,S,Not included - descendant,400,4,400,4
+4115377,Juvenile arthritis in Crohn disease,SNOMED,Condition,S,Not included - recommended via standard,400,4,400,4
+4029600,Arthritis secondary to amyloidosis,SNOMED,Condition,S,Not included - descendant,300,3,400,4
+4322886,Arthritis of midtarsal joint,SNOMED,Condition,S,Not included - descendant,200,2,400,2
+45757777,Medial epicondyle apophysitis due to overuse,SNOMED,Condition,S,Not included - descendant,200,2,400,2
+762781,Infectious synovitis,SNOMED,Condition,S,Not included - descendant,100,1,400,2
+42534843,Gouty arthritis of left foot,SNOMED,Condition,S,Not included - descendant,100,1,400,1
+42539217,Synovitis of left ankle joint,SNOMED,Condition,S,Not included - descendant,395,1,395,1
+4132809,Juvenile seropositive polyarthritis,SNOMED,Condition,S,Not included - descendant,392,2,392,2
+4288479,Pyogenic arthritis of foot,SNOMED,Condition,S,Not included - descendant,280,2,380,2
+4114602,Traumatic arthropathy of distal radioulnar joint,SNOMED,Condition,S,Not included - descendant,378,2,378,2
+40489491,Infective arthritis of interphalangeal joint of toe,SNOMED,Condition,S,Not included - descendant,377,2,377,2
+37108997,Arthritis of right subtalar joint,SNOMED,Condition,S,Not included - descendant,272,1,372,1
+37108919,Osteoarthritis of right subtalar joint,SNOMED,Condition,S,Not included - descendant,336,1,336,1
+37108996,Arthritis of left subtalar joint,SNOMED,Condition,S,Not included - descendant,235,1,335,1
+4116439,Rheumatoid arthritis of cervical spine,SNOMED,Condition,S,Not included - descendant,322,2,322,2
+36713091,Bilateral osteoarthritis of first carpometacarpal joint,SNOMED,Condition,S,Not included - descendant,319,1,319,1
+4200987,Extra-articular rheumatoid process,SNOMED,Condition,S,Not included - descendant,118,1,318,2
+37108918,Osteoarthritis of left subtalar joint,SNOMED,Condition,S,Not included - descendant,317,1,317,1
+4116442,Rheumatoid arthritis of metacarpophalangeal joint,SNOMED,Condition,S,Not included - descendant,308,2,308,2
+4264472,Pellegrini-Stieda syndrome,SNOMED,Condition,S,Not included - descendant,308,2,308,2
+37117422,Arthritis of left ankle due to trauma,SNOMED,Condition,S,Not included - descendant,308,1,308,1
+4083685,Undifferentiated inflammatory monoarthritis,SNOMED,Condition,S,Not included - descendant,300,3,300,3
+4103516,Rheumatoid carditis,SNOMED,Condition,S,Not included - descendant,300,3,300,3
+37108618,Arthritis of right sacroiliac joint,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+42535499,Osteoarthritis of joint of left elbow,SNOMED,Condition,S,Not included - descendant,100,1,300,2
+45763809,Osteoarthritis of talonavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,300,1
+37108592,Gouty arthritis of right foot,SNOMED,Condition,S,Not included - descendant,100,1,300,1
+37117136,Osteoarthritis of first metatarsophalangeal joint of right foot,SNOMED,Condition,S,Not included - descendant,194,1,294,1
+4132812,"Juvenile idiopathic arthritis, persistent oligoarthritis",SNOMED,Condition,S,Not included - descendant,265,2,265,2
+4110738,Osteoarthritis deformans,SNOMED,Condition,S,Not included - descendant,264,2,264,2
+37108609,Bilateral arthritis of finger of hand,SNOMED,Condition,S,Not included - descendant,259,1,259,1
+37108714,Seropositive rheumatoid arthritis of multiple joints,SNOMED,Condition,S,Not included - descendant,252,1,252,1
+4035434,Chondrocalcinosis due to pyrophosphate crystals of the knee,SNOMED,Condition,S,Not included - descendant,245,2,245,2
+37109098,Arthritis of right ankle due to trauma,SNOMED,Condition,S,Not included - descendant,245,1,245,1
+4325687,Osteochondritis of tibial tubercle,SNOMED,Condition,S,Not included - descendant,243,2,243,2
+4302975,Acute serous synovitis,SNOMED,Condition,S,Not included - descendant,234,2,234,2
+37018720,Osteoarthritis of facet joint of thoracic spine,SNOMED,Condition,S,Not included - descendant,232,2,232,2
+37117137,Osteoarthritis of first metatarsophalangeal joint of left foot,SNOMED,Condition,S,Not included - descendant,127,1,227,1
+4115050,Rheumatoid arthritis of distal radioulnar joint,SNOMED,Condition,S,Not included - descendant,221,2,221,2
+4344031,Semimembranosus bursitis,SNOMED,Condition,S,Not included - descendant,215,2,215,2
+37108998,Degenerative rupture of lateral meniscus of right knee,SNOMED,Condition,S,Not included - descendant,209,1,209,1
+37108593,Gouty arthritis of right great toe,SNOMED,Condition,S,Not included - descendant,108,1,208,1
+4323570,Secondary localized osteoarthrosis of multiple sites,SNOMED,Condition,S,Not included - descendant,201,2,201,2
+4084782,Inflammatory discitis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+443116,Cervical posterior longitudinal ligament ossification,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4001007,Traumatic arthritis of the temporomandibular joint,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4008978,Arthritis due to Pseudomonas,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4029605,Periarticular calcification,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4033630,Arthritis of temporomandibular joint as part of polyarthritis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4035429,Juvenile reactive arthritis triad,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4067300,Reactive arthropathy of tibiofibular joint,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4068629,Calcification of thoracic disc,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4068712,Calcification of lumbar disc,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4079735,Juvenile spondyloarthropathy,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4079739,"Chronic infantile neurological, cutaneous and articular syndrome",SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4082041,Lyme erosive synovitis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4097463,Small and large joint arthritis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4102767,Proliferative synovitis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4114429,Post-infective arthropathy in syphilis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4114447,Juvenile arthritis in ulcerative colitis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4114912,Gouty arthritis of the pelvic region and thigh,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4116925,Traumatic arthropathy of acromioclavicular joint,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4116927,Traumatic arthropathy of proximal interphalangeal joint of finger,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4139522,Bursitis of finger,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4146474,Cricoarytenoid joint arthritis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4162539,Rheumatoid pneumoconiosis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4177078,Traumatic arthropathy of the spine,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4216531,Acute rheumatic arthritis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4243205,Subacute rheumatic arthritis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4257972,"Juvenile idiopathic arthritis, undifferentiated arthritis",SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4261027,"Juvenile idiopathic arthritis, extended oligoarthritis",SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4280587,Osteochondritis of the carpal lunate,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4296152,Pericarditis secondary to rheumatoid arthritis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4311391,Uveitis-rheumatoid arthritis syndrome,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4313022,Chondrocalcinosis due to calcium hydroxyapatite crystals,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4328019,Bacterial arthritis of sacroiliac joint,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4344156,Otto's pelvis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4344382,Juvenile osteochondritis of the arm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+37017494,Non-radiographic axial spondyloarthritis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+37399301,Advanced collapse of scapholunate joint due to osteoarthritis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+40479848,Seronegative arthritis of joint of spine,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+40486203,Infective arthritis of proximal interphalangeal joint of finger,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+44783555,Calcified stylohyoid ligament,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+46270417,Chronic gout of ankle without tophus due to renal impairment,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+46270432,Chronic gout of wrist without tophus due to renal impairment,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+46270448,Chronic tophaceous gout of vertebra caused by drug,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+46273215,Bacterial arthritis of facet joint of thoracic spine,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+46273216,Bacterial arthritis of facet joint of lumbar spine,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+46273622,Bacterial arthritis of facet joint of cervical spine,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+46273648,Chronic gout of knee without tophus due to renal impairment,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+762306,Prepatellar bursitis of left knee,SNOMED,Condition,S,Not included - descendant,100,1,200,2
+765137,Prepatellar bursitis of right knee,SNOMED,Condition,S,Not included - descendant,100,1,200,2
+37108617,Arthritis of left sacroiliac joint,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+42537918,Infrapatellar bursitis of right knee,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+37108594,Gouty arthritis of left great toe,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+42539214,Osteoarthritis of left sacroiliac joint,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+42537917,Infrapatellar bursitis of left knee,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+42535133,Bilateral gouty arthritis of feet,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+42534860,Osteoarthritis of right sacroiliac joint,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+37108615,Bilateral arthritis of ankle,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+4173669,Osteoarthritis of metacarpophalangeal joint,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+37108999,Degenerative rupture of lateral meniscus of left knee,SNOMED,Condition,S,Not included - descendant,179,1,179,1
+762283,Medial epicondylitis of right humerus,SNOMED,Condition,S,Not included - descendant,178,1,178,1
+37108985,Degenerative rupture of triangular fibrocartilage of right wrist,SNOMED,Condition,S,Not included - descendant,169,1,169,1
+37108876,Bilateral pes anserinus bursitis,SNOMED,Condition,S,Not included - descendant,154,1,154,1
+37017608,Lumbosacral spondylosis with root compression,SNOMED,Condition,S,Not included - descendant,121,1,121,1
+4195770,Idiopathic polyarthritis,SNOMED,Condition,S,Not included - descendant,120,1,120,1
+37108986,Degenerative rupture of triangular fibrocartilage of left wrist,SNOMED,Condition,S,Not included - descendant,117,1,117,1
+45763637,Charcot arthropathy of joint of ankle,SNOMED,Condition,S,Not included - descendant,101,1,101,1
+4063690,Reactive arthropathy of proximal interphalangeal joint of finger,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4178758,Miner's knee,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4246882,Mycoplasma arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4176016,Arthropathy in Behcet's syndrome of the ankle,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4173757,Post-infective arthritis of joint of foot,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4163680,Chronic infective arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4156057,Gonococcal arthritis dermatitis syndrome,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4147867,Degenerative lesion of articular cartilage of knee,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4147418,Seropositive erosive rheumatoid arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4128233,Beta-2 microglobulin arthropathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4121541,Tuberculous synovitis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4116933,Traumatic arthropathy of 1st metatarsophalangeal joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4116931,Traumatic arthropathy of talonavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4116930,Traumatic arthropathy of subtalar joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4116929,Traumatic arthropathy of sacroiliac joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4116446,Rheumatoid arthritis of subtalar joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4116149,Rheumatoid arthritis of acromioclavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4116148,Rheumatoid arthritis of sternoclavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4115535,Traumatic arthropathy of tibiofibular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4289292,Adult osteochondritis of spine,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4114607,Traumatic arthropathy of interphalangeal joint of toe,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4114601,Traumatic arthropathy of sternoclavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4114441,Rheumatoid arthritis of first metatarsophalangeal joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46273196,Bacterial arthritis of atlantoaxial joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4114440,Rheumatoid arthritis of distal interphalangeal joint of finger,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4097462,Large joint arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4094745,Small joint arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4323203,Allergic arthritis of spine,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4094744,Asymmetrical arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4083680,Juvenile psoriatic arthritis without psoriasis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4083558,Late onset polyarticular juvenile chronic arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4083557,Late onset pauciarticular chronic arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4083344,Gouty tophus of prepatellar bursa,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4328796,Osteochondritis of proximal tibia,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4083342,Traumatic synovitis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4079732,Early onset pauciarticular chronic arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4079729,Post-dysenteric reactive arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4070038,Arthritis due to E. coli,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4069207,Calcification of cervical disc,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4068611,Multiple-level thoracic spondylosis with myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4068610,Two-level thoracic spondylosis with myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4344147,Hip juvenile osteochondropathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4068609,Single-level thoracic spondylosis with myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46273655,Chronic gout of wrist without tophus caused by drug,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4344383,Osteochondritis of the femoral head,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4068605,Two-level cervical spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4068477,Two-level lumbosacral spondylosis with radiculopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4068476,Single-level lumbosacral spondylosis with radiculopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4068475,Multiple-level thoracic spondylosis with radiculopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4068474,Two-level thoracic spondylosis with radiculopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4068473,Multiple-level lumbosacral spondylosis with myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4346973,Osteoarthritis of proximal interphalangeal joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4068381,Multiple-level lumbosacral spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4347407,Silicone synovitis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4067531,Multiple-level lumbosacral spondylosis with radiculopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36684455,Osteoarthritis of bilateral hip joints,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4067527,Multiple-level cervical spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4067057,Reactive arthropathy of sacroiliac joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4067055,Reactive arthropathy of acromioclavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4066606,Cervical spondylosis with vascular compression,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4066604,Single-level lumbosacral spondylosis with myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4066602,Two-level lumbosacral spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4066601,Single-level lumbosacral spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4066600,Multiple-level thoracic spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4066599,Single-level thoracic spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4179528,Rheumatic arthritis of temporomandibular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4063688,Reactive arthropathy of sternoclavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4049245,Relapsing polychondritis of larynx,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4041516,Subacute infective arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4035756,Osteoarthritis of metacarpophalangeal joint of finger,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36715572,Chronic primary gouty arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4035745,Arthritis secondary to non-hematological malignancy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4035743,Seronegative arthritis secondary to inflammatory bowel disease,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4035614,Ankylosing spondylitis with organ / system involvement,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4035612,Early onset polyarticular juvenile chronic arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4035435,Idiopathic pyrophosphate arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4035428,Juvenile reactive arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37016155,Chondrocalcinosis of hip joint due to disorder of calcium metabolism,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4035427,Rheumatoid arthritis with multisystem involvement,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4034672,Acute infective polyarthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37017569,Congenital calcium pyrophosphate dihydrate crystal deposition disease,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37018671,Chondrocalcinosis of hand due to disorder of calcium metabolism,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108584,Arthritis of left shoulder caused by bacteria,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108587,Arthritis of right knee caused by bacteria,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4033368,Mouth and genital ulcers with inflamed cartilage syndrome,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4009091,Juvenile osteochondrosis of acetabulum,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4001987,Juvenile osteochondrosis of head of humerus,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108590,Rheumatoid arthritis of left knee,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108590,Rheumatoid arthritis of left knee,SNOMED,Condition,S,Not included - recommended via source,100,1,100,1
+37108591,Rheumatoid arthritis of right knee,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108591,Rheumatoid arthritis of right knee,SNOMED,Condition,S,Not included - recommended via source,100,1,100,1
+37108595,Chondrocalcinosis of joint of right wrist,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108596,Chondrocalcinosis of joint of left wrist,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4001490,Infectious arthritis of temporomandibular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4001474,Plant thorn synovitis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108600,Osteoarthritis of right sternoclavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108601,Osteoarthritis of right foot due to trauma,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108604,Arthritis of right sternoclavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108608,Bilateral arthritis of wrist,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108885,Bilateral prepatellar bursitis of knees,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108902,Osteoarthritis of right temporomandibular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108903,Osteoarthritis of left temporomandibular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108920,Bilateral osteoarthritis of first metatarsophalangeal joint of feet,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108939,Medial epicondyle apophysitis of right elbow due to overuse,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37109099,Osteoarthritis of left ankle due to trauma,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37109100,Osteoarthritis of right ankle due to trauma,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37110004,"Pyogenic arthritis, pyoderma gangrenosum, acne syndrome",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37110373,Intervertebral disc degeneration of cervical spine without prolapsed disc,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37117081,Bilateral arthritis of sacroiliac joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37117421,Rheumatoid arthritis in remission,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37395586,Osteoarthritis of hip co-occurrent and due to dysplasia,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37395593,Viral arthritis co-occurrent with hepatitis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40481591,Tendinitis of metatarsophalangeal joint of second toe,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+759878,Osteoarthritis of right acromioclavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40489947,Infective arthritis of distal interphalangeal joint of finger,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534822,Arthritis of right wrist caused by bacteria,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534830,Infective arthritis of right hip,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534834,Rheumatoid arthritis of left hand,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534834,Rheumatoid arthritis of left hand,SNOMED,Condition,S,Not included - recommended via source,100,1,100,1
+42534835,Rheumatoid arthritis of left hip,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534835,Rheumatoid arthritis of left hip,SNOMED,Condition,S,Not included - recommended via source,100,1,100,1
+42534836,Rheumatoid arthritis of right hand,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534836,Rheumatoid arthritis of right hand,SNOMED,Condition,S,Not included - recommended via source,100,1,100,1
+42534837,Rheumatoid arthritis of right hip,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534837,Rheumatoid arthritis of right hip,SNOMED,Condition,S,Not included - recommended via source,100,1,100,1
+42534839,Deformity of left hand co-occurrent and due to rheumatoid arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534840,Deformity of right foot co-occurrent and due to rheumatoid arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534841,Deformity of left foot co-occurrent and due to rheumatoid arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534844,Chondrocalcinosis of right shoulder,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534845,Chondrocalcinosis of right elbow,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534846,Chondrocalcinosis of left elbow,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534847,Chondrocalcinosis of right hand,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534848,Chondrocalcinosis of left hand,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534849,Chondrocalcinosis of right hip,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534850,Chondrocalcinosis of left hip,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534851,Chondrocalcinosis of left ankle,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534853,Arthritis of right foot due to trauma,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534854,Arthritis of left foot due to trauma,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534855,Osteoarthritis of left sternoclavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534856,Osteoarthritis of midtarsal joint of right foot,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534857,Osteoarthritis of midtarsal joint of left foot,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534859,Osteoarthritis of left foot due to trauma,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534861,Bilateral arthritis of glenohumeral joints,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534862,Arthritis of left sternoclavicular joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534863,Bilateral arthritis of elbows,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534864,Arthritis of right midtarsal joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534880,Suprapatellar bursitis of right knee,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534881,Subpatellar bursitis of right knee,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534882,Suprapatellar bursitis of left knee,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42534883,Subpatellar bursitis of left knee,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535061,Bilateral degenerative rupture of medial meniscus of knee,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535069,Bilateral osteoarthritis of sacroiliac joints,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535125,Arthritis of right finger due to trauma,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535127,Bilateral gouty arthritis of great toes,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535134,Bilateral arthritis of subtalar joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535174,Chondromalacia of left hip,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535175,Chondromalacia of right hip,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535176,Bilateral chondromalacia of ankles,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535177,Polyarticular juvenile idiopathic arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536657,Rheumatoid arthritis without erosion,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536659,Wear of articular bearing surface of joint prosthesis of hip,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536660,Prolapse of cervical intervertebral disc with degeneration,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536661,Degeneration of thoracic intervertebral disc without prolapse,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536662,Prolapse of thoracic intervertebral disc with degeneration,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536663,Degeneration of thoracic intervertebral disc and osteophyte,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536664,Degeneration of lumbar intervertebral disc without prolapse,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536665,Degeneration of lumbar intervertebral disc and osteophyte of lumbar vertebra,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539033,Oligoosteoarthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539035,Prolapse of lumbar intervertebral disc with degeneration,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539199,Arthritis of finger of left hand due to trauma,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539209,Gouty tophus of right elbow,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539212,Chondrocalcinosis of left shoulder,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539248,Medial epicondyle apophysitis of left elbow due to overuse,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539261,Bilateral gouty arthritis of ankles,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539281,Ossification of anterior longitudinal ligament of spine,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539287,Arthritis of right hand caused by bacteria,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539289,Arthritis of left midtarsal joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539491,Degeneration of cervical intervertebral disc and osteophyte of cervical vertebra,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539550,Erosion of joint surface co-occurrent and due to rheumatoid arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+44783868,"Granulomatous inflammatory arthritis, dermatitis and uveitis, familial",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+765773,Polyarthritis associated with hemochromatosis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+765424,Tendonitis of left patellar tendon,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+765044,Reactive arthritis of spine,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+765024,Pyogenic bacterial arthritis of hand,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+764920,Pyogenic bacterial arthritis of hip,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+764311,Arthritis of first metatarsophalangeal joint of left foot,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762916,Calcium oxalate deposition disease,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762775,Intervertebral disc desiccation,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762486,Localized osteoarthritis of wrist,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45763802,Subtalar osteoarthritis secondary to inflammatory arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45763804,Osteoarthritis of ankle secondary to inflammatory arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45763810,Primary talonavicular osteoarthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45763815,Talonavicular osteoarthritis secondary to inflammatory arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45763817,Primary osteoarthritis of first metatarsophalangeal joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45763819,Osteoarthritis of first metatarsophalangeal joint secondary to inflammatory arthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45763905,Charcot arthropathy of midfoot,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762301,Tendonitis of right patellar tendon,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45765979,Primary osteoarthritis of midfoot,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762282,Medial epicondylitis of left humerus,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45771098,Charcot arthropathy of hindfoot,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+761982,Pyogenic bacterial arthritis of wrist,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+761944,Pyogenic bacterial arthritis of foot,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+761892,Pyogenic bacterial arthritis of knee,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+759808,Pyogenic bacterial arthritis of shoulder,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46270419,Chronic gout of elbow without tophus due to renal impairment,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46270421,Chronic gout of hand without tophus due to renal impairment,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46270423,Chronic gout of hip without tophus due to renal impairment,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46270439,Chronic gout of hand without tophus caused by drug,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46270441,Chronic gout of hip without tophus caused by drug,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46270443,Chronic gout of knee without tophus caused by drug,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+760570,Osteoarthritis of bilateral elbows,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4215588,Opera glass deformity of hands,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4209089,"Localized, primary osteoarthritis of toe",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4201372,Acute degenerative joint disease of shoulder region,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4201074,Bacterial arthritis of patellofemoral joint,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4192894,Exacerbation of osteoarthritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4185211,Martin du Pan-Rutishauer disease,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4083554,Post-tuberculous reactive arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4001006,Infectious arthritis of temporomandibular joint due to internal joint prosthesis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4000052,Yaws of joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+760722,Bacterial arthritis of vertebral column,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4083688,Monosodium urate arthritis and periarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4083689,Intra-articular steroid-induced arthritis and periarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4084265,Arthritis due to bleeding disorder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4084779,Arthritis secondary to hematological malignancy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4132926,Pain finding at anatomical site,SNOMED,Condition,S,Not included - parent,0,0,0,0
+4188412,Suppurative arthritis due to bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762771,Granulomatous synovitis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4262787,Haemophilus influenzae arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762720,Arthritis due to alkaptonuria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4097769,Starch synovitis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+46273193,Bacterial arthritis due to Haemophilus influenzae type b,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4114442,Rheumatoid arthritis of interphalangeal joint of toe,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759892,Bilateral arthritis of knees,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762333,Monoarthritis of joint of ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4145017,Osteochondritis of pelvis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759884,Arthritis of joint of right shoulder region,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4114603,Traumatic arthropathy of metacarpophalangeal joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37111354,Sporadic Blau syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37111597,Familial chondromalacia patellae,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37116459,Postinfective arthropathy caused by fungus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37116460,Parasitic postinfectious arthropathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37116461,Viral postinfective arthropathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4162277,Suppurative arthritis due to fungus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4114606,Traumatic arthropathy of lesser metatarsophalangeal joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4115051,Rheumatoid arthritis of tibiofibular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45763792,Primary calcaneocuboid osteoarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37203942,Aneurysm osteoarthritis syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37203959,Ankylosing spondylitis co-occurrent with anterior uveitis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204148,Juvenile rheumatoid arthritis of left knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204149,Juvenile rheumatoid arthritis of right knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37205058,Spondyloarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37205177,Synovitis of ankle joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37205178,Synovitis of joint of foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207517,"Juvenile idiopathic arthritis, persistent monoarthritis",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207760,Calcium deposit in bursa of left knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207762,Calcium deposit in bursa of right knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207779,Familial calcium pyrophosphate deposition of left knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207780,Familial calcium pyrophosphate deposition of left wrist,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207781,Familial calcium pyrophosphate deposition of right knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207782,Familial calcium pyrophosphate deposition of right wrist,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207804,Seropositive rheumatoid arthritis of left hip,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207805,Seropositive rheumatoid arthritis of left knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207806,Seropositive rheumatoid arthritis of right hip,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207807,Seropositive rheumatoid arthritis of right knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207808,Seronegative rheumatoid arthritis of left hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207809,Seronegative rheumatoid arthritis of multiple sites,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207810,Seronegative rheumatoid arthritis of right hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207828,Arthritis of left ankle caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207829,Arthritis of left hip caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207830,Arthritis of left wrist caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207831,Arthritis of right ankle caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207832,Arthritis of right hip caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207833,Arthritis of right wrist caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37208261,Arthritis of right knee caused by Streptococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37208262,Arthritis of left knee caused by Streptococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37208263,Arthritis of left sacroiliac joint caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37208264,Arthritis of right sacroiliac joint caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37208265,Bilateral osteoarthritis of sternoclavicular joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209320,Bilateral osteoarthritis of temporomandibular joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209321,Bilateral rheumatoid arthritis of feet,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209322,Bilateral rheumatoid arthritis of knees,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209323,Bilateral rheumatoid arthritis of hands,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209324,Arthritis of bilateral hips caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209325,Arthritis of bilateral knee joints caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209326,Arthritis of bilateral shoulders caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209327,Arthritis of bilateral sacroiliac joints caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209328,Seronegative rheumatoid arthritis of bilateral hands,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209329,Seropositive rheumatoid arthritis of bilateral hands,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209473,Chondromalacia of joint of left elbow,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209474,Chondromalacia of joint of right elbow,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209475,Chondromalacia of joint of left wrist,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209476,Chondromalacia of joint of right ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209477,Chondromalacia of joint of left ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209478,Chondromalacia of joint of right wrist,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209479,Juvenile rheumatoid arthritis of bilateral knees,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37309677,Arthritis of facet joint of thoracic spine,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37309742,Bilateral adult Kienbocks disease of lunate,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37309743,Bilateral infective arthritis of knees,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37309744,Bilateral arthritis of wrists caused by Bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37309745,Bilateral arthritis of knees caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310481,Infective arthritis of right foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310482,Infective arthritis of left foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310483,Infective arthritis of right hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310484,Infective arthritis of left hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310485,Infective arthritis of right wrist,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310486,Infective arthritis of left wrist,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310487,Infective arthritis of right elbow,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310488,Infective arthritis of left elbow,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310489,Arthritis of left shoulder caused by Streptococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310490,Arthritis of right shoulder caused by Streptococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310642,Osteoarthritis of right hip joint due to dysplasia,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310643,Osteoarthritis of left hip joint due to dysplasia,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310644,Arthritis of right shoulder caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310645,Arthritis of right knee caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310646,Arthritis of right elbow caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310647,Arthritis of left shoulder caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310648,Arthritis of left knee caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310649,Arthritis of left elbow caused by Staphylococcus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310672,Arthritis of right knee caused by Streptococcus pneumoniae,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310673,Arthritis of left knee caused by Streptococcus pneumoniae,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37311774,Blau syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37311898,Osteoarthritis of wrist and hand due to and following trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37311899,Osteoarthritis of knee due to and following trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37311900,Osteoarthritis of hip due to and following trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37395567,Reactive arthritis co-occurrent and due to nonspecific urethritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45763793,Osteoarthritis of calcaneocuboid joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45763794,Secondary calcaneocuboid osteoarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759880,Osteoarthritis of bilateral glenohumeral joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40399768,Reactive arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40399768,Reactive arthritis,SNOMED,Condition,S,Not included - parent,0,0,0,0
+45763799,Calcaneocuboid osteoarthritis secondary to trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3190444,Calcification of hand joint,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+3187685,Cystic fibrosis related arthropathy,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+759879,Osteoarthritis of right glenohumeral joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40480709,Inflammation of joint due to Streptococcus suis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45763800,Primary subtalar osteoarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3186591,Osteoarthritis of sacroiliac joint,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+3186103,Pyogenic arthritis of sacroiliac joint,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+3180642,Group B streptococcal prepatellar bursitis,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+3180503,Scapholunate advanced collapse,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+3179701,Septic arthritis of right wrist,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+40482896,Villous arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3173697,Stylohyoid tendonitis,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+3169209,Septic arthritis of left acromioclavicular joint,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+40483793,Crystal arthropathy of pelvis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3168431,Chronic polyarthritis,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+45763801,Secondary osteoarthritis of subtalar joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759882,Osteoarthritis of left glenohumeral joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759891,Arthritis of left knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40489948,Infective arthritis of first metatarsophalangeal joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40493024,Infective arthritis of metatarsophalangeal joint of lesser toe,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45763803,Calcaneocuboid osteoarthritis secondary to inflammatory arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534821,Arthritis of left elbow caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759890,Arthritis of right hip,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534823,Arthritis of left wrist caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534824,Arthritis of left hand caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534825,Arthritis of right ankle caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534826,Arthritis of left ankle caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534827,Infective arthritis of left shoulder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534828,Infective arthritis of right shoulder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534829,Infective arthritis of left hip,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+46271147,Bacterial arthritis of costotransverse joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534831,Infective arthritis of left ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534832,Infective arthritis of right ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759889,Arthritis of left hip,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45763812,Talonavicular osteoarthritis secondary to trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759888,Inflammation of joint of right hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45763816,Secondary osteoarthritis of first metatarsophalangeal joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759887,Inflammation of joint of left hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759886,Inflammation of joints of bilateral shoulder regions,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4179536,Rheumatoid arthritis of temporomandibular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45765622,Osteochondrosis of head of second metatarsal,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534838,Deformity of right hand co-occurrent and due to rheumatoid arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45765918,Retrodiscitis of temporomandibular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45765977,Secondary osteoarthritis of midfoot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759885,Arthritis of bilateral acromioclavicular joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4115534,Traumatic arthropathy of distal interphalangeal joint of finger,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4172431,Chronic infective polyarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4220033,Ochronotic arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45765980,Osteoarthritis of midfoot secondary to trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45766463,Asymptomatic calcium pyrophosphate deposition disease,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762219,Chronic tophaceous gout of right wrist due to renal impairment,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762180,Juvenile idiopathic arthritis of right hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762178,Juvenile idiopathic arthritis of left hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4254769,Polyarthritis due to Erysipelothrix rhusiopathiae,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45773205,Osteoarthritis of subtalar joint secondary to trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45773206,Secondary talonavicular osteoarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45773207,Osteoarthritis of first metatarsophalangeal joint secondary to trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4116152,Rheumatoid arthritis of talonavicular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4221664,Circinate vulvovaginitis co-occurrent with reactive arthritis triad,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761965,Pyogenic bacterial arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761946,Pyogenic bacterial arthritis of pelvis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761945,Pyogenic bacterial polyarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4223486,Nail dystrophy co-occurrent with reactive arthritis triad,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4183249,Thoracic spine inflamed,SNOMED,Condition,S,Not included - parent,0,0,0,0
+4179506,Climacteric arthritis of spine,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761833,Tuberculosis of left knee joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534954,Infective polyarthritis caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42534954,Infective polyarthritis caused by bacteria,SNOMED,Condition,S,Not included - parent,0,0,0,0
+4176931,Arthropathy in Behcet's syndrome of the spine,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761485,Chondromalacia of left knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535119,Bilateral gouty tophus of elbows,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535124,Bilateral chondrocalcinosis of wrists,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4177081,Sequelae of gastrointestinal disorders,SNOMED,Condition,S,Not included - parent,0,0,0,0
+761407,Chondrocalcinosis of bilateral knee joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535128,Bilateral osteoarthritis of feet due to trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4116153,Rheumatoid arthritis of lesser metatarsophalangeal joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4245641,Chlamydial polyarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535135,Bilateral chondrocalcinosis of ankles,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535150,Acute polyarticular juvenile idiopathic arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761361,Arthritis of first metatarsophalangeal joint of right foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761360,Adult Kienbocks disease of left lunate,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+46270427,Chronic gout of shoulder without tophus due to renal impairment,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761359,Adult Kienbocks disease of right lunate,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535205,Tophus of left elbow co-occurrent and due to gout,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759883,Arthritis of joint of left shoulder region,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761358,Capsulitis of right ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761357,Capsulitis of metatarsophalangeal joint of right foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+443205,Gonococcal synovitis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761356,Capsulitis of left ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761355,Capsulitis of metatarsophalangeal joint of left foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+46270437,Chronic gout of elbow without tophus caused by drug,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761354,Synovitis of joint of left knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4243832,Subacute infective polyarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536890,Wear of cartilage of joint caused by hemiarthroplasty,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4116443,Rheumatoid arthritis of proximal interphalangeal joint of finger,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4116444,Rheumatoid arthritis of sacroiliac joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4266181,Fibroblastic rheumatism,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761353,Synovitis of joint of right knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42539034,Wear of articular bearing surface of joint prosthesis of knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4228290,Infective arthritis associated with AIDS,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761185,Bilateral tendonitis of patellar tendon,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4181063,Inflammation of specific body organs,SNOMED,Condition,S,Not included - parent,0,0,0,0
+761176,Chondromalacia of bilateral patellas,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42539213,Chondrocalcinosis of right ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4122761,Oral lesion co-occurrent with reactive arthritis triad,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761175,Bilateral medial epicondylitis of elbows,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+46270447,Chronic gout of shoulder without tophus caused by drug,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42539266,Bilateral gouty arthritis of knees,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+73553,Arthropathy,SNOMED,Condition,S,Not included - parent,0,0,0,0
+46270449,Chronic gout of vertebra without tophus caused by drug,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761174,Lateral epicondylitis of bilateral humerus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42539396,Arthritis of right elbow caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761173,Bilateral adhesive capsulitis of shoulders,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761120,Bilateral inflammation of sacroiliac joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42898360,Arnica montana root extract,RxNorm,Drug,S,Not included - recommended via source,0,0,0,0
+42898489,Bryonia alba root extract,RxNorm,Drug,S,Not included - recommended via source,0,0,0,0
+4125661,Sarcoid dactylitis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42904014,Solanum dulcamara top extract,RxNorm,Drug,S,Not included - recommended via source,0,0,0,0
+44783204,Post infectious osteoarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44783347,Inflammation of stylomandibular ligament,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+46273991,Arthritis of lower limb due to parasitic infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44783578,Gouty arthritis of temporomandibular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761084,Degenerative joint disease of thumb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765813,Pyogenic bacterial arthritis of patella,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+760994,Capsulitis of ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+760993,Capsulitis of tarsus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765259,Arthritis of right knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765258,Bilateral arthritis of hip,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765257,Inflammation of joint of both hands,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765256,Osteoarthritis of bilateral acromioclavicular joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44808844,Osteoarthritis of sternoclavicular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811608,Acute pyrophosphate crystal arthropathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811610,Chikungunya arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811614,Pseudo-neuropathic pyrophosphate arthropathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811656,Reactive arthritis after campylobacter infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811657,Reactive arthritis after chlamydia trachomatis infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811658,Reactive arthritis after clostridium difficile infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811659,Reactive arthritis after escherichia coli infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811660,Reactive arthritis after salmonella infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811661,Reactive arthritis after shigella infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811662,Reactive arthritis after ureaplasma urealyticum infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811663,Reactive arthritis after yersinia infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811664,Nonspecific polyarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44814062,Chronic pyrophosphate crystal arthropathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44814063,Paraneoplastic arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765219,Juvenile osteochondritis of left foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4343921,Malemud disease,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4078395,Lymphocytic plasmacytic synovitis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4126944,Circinate balanitis co-occurrent with reactive arthritis triad,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765074,Arthritis of right acromioclavicular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765073,Arthritis of left acromioclavicular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+760901,Osteoarthritis of finger joint of right hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4344148,Osteochondritis of the distal ulna,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+193460,Disorder of lower extremity,SNOMED,Condition,S,Not included - parent,0,0,0,0
+4068604,Single-level cervical spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4345589,Juvenile osteochondritis of the hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4345590,Pelvis juvenile osteochondropathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4068382,Two-level lumbosacral spondylosis with myelopathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4067554,Reactive arthropathy of lesser metatarsophalangeal joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+19071803,Matricaria recutita extract,RxNorm,Drug,S,Not included - recommended via source,0,0,0,0
+4067528,Two-level thoracic spondylosis without myelopathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35609009,Rheumatoid arthritis of left shoulder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35609009,Rheumatoid arthritis of left shoulder,SNOMED,Condition,S,Not included - recommended via source,0,0,0,0
+35609010,Rheumatoid arthritis of right shoulder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35609010,Rheumatoid arthritis of right shoulder,SNOMED,Condition,S,Not included - recommended via source,0,0,0,0
+35609013,Chondrocalcinosis of right foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35609014,Chondrocalcinosis of left foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615108,Bilateral osteoarthritis of midtarsal joints of feet,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615111,Bilateral degenerative rupture of lateral meniscus of knees,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615129,Bilateral chronic tophaceous gout of elbows,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615130,Bilateral chronic tophaceous gout of hands,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615133,Hydroxyapatite deposition disease of left shoulder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615134,Hydroxyapatite deposition disease of right shoulder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36674393,Interstitial granulomatous dermatitis with arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36675057,"Immune dysregulation, inflammatory bowel disease, arthritis, recurrent infection syndrome",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36683391,Rheumatoid arthritis of joint of spine,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684452,Bilateral osteoarthritis of feet,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684453,Bilateral osteoarthritis of ankles,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684454,Bilateral osteoarthritis of knees,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684456,Bilateral osteoarthritis of finger of hands,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684457,Osteoarthritis of joint of bilateral hands,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684458,Bilateral wrist osteoarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684459,Bilateral shoulder osteoarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684526,Gouty arthritis of left ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684527,Arthritis of left elbow due to gout,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684528,Gouty arthritis of left hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684529,Gouty arthritis of left knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684530,Arthritis of left wrist due to gout,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684531,Gouty arthritis of right ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684532,Arthritis of right elbow due to gout,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684533,Gouty arthritis of right hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684534,Gouty arthritis of right knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684535,Arthritis of right wrist due to gout,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684539,Monoarthritis of joint of left ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684540,Monoarthritis of joint of left hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684541,Monoarthritis of left knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684542,Monoarthritis of joint of right ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684543,Monoarthritis of joint of right hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684544,Monoarthritis of right knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684585,Spondylosis of cervicothoracic spine,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684586,Spondylosis of thoracolumbar spine,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684997,Rheumatoid factor positive rheumatoid arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36684998,Rheumatoid factor positive rheumatoid arthritis of the shoulder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685015,Arthritis of right foot caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685016,Arthritis of left foot caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685017,Rheumatoid arthritis of left ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685018,Rheumatoid arthritis of left elbow,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685019,Rheumatoid arthritis of left foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685020,Rheumatoid arthritis of left wrist,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685020,Rheumatoid arthritis of left wrist,SNOMED,Condition,S,Not included - recommended via source,0,0,0,0
+36685021,Rheumatoid arthritis of right ankle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685022,Rheumatoid arthritis of right elbow,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685022,Rheumatoid arthritis of right elbow,SNOMED,Condition,S,Not included - recommended via source,0,0,0,0
+36685023,Rheumatoid arthritis of right foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685024,Rheumatoid arthritis of right wrist,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685024,Rheumatoid arthritis of right wrist,SNOMED,Condition,S,Not included - recommended via source,0,0,0,0
+36685025,Bilateral arthritis of sternoclavicular joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685026,Chronic tophaceous gout of right foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685027,Chronic tophaceous gout of left foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686982,Tendinitis of metatarsophalangeal joint of second toe of left foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686983,Tendinitis of metatarsophalangeal joint of second toe of right foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686994,Bilateral patellar bursitis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686995,Bilateral bursitis of knees,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686999,Rheumatoid arthritis of bilateral temporomandibular joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687000,Rheumatoid arthritis of right temporomandibular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687001,Rheumatoid arthritis of left temporomandibular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687002,Rheumatoid arthritis of bilateral elbows,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687003,Rheumatoid arthritis of bilateral hips,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687004,Bilateral capsulitis of metatarsophalangeal joint of feet,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687005,Rheumatoid arthritis of bilateral ankles,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687006,Rheumatoid arthritis of bilateral wrists,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687007,Bilateral arthritis of first metatarsophalangeal joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687023,Bilateral chondrocalcinosis of hands,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687024,Bilateral chondrocalcinosis of shoulders,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687025,Chondrocalcinosis of bilateral hips,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687158,Capsulitis of right temporomandibular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687159,Capsulitis of left temporomandibular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687160,Capsulitis of bilateral temporomandibular joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687161,Arthritis of right temporomandibular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687162,Arthritis of left temporomandibular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687163,Bilateral temporomandibular joint arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687180,Chondrocalcinosis of bilateral feet,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687187,Suprapatellar bursitis of bilateral knees,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687192,Chondromalacia of left shoulder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687193,Chondromalacia of right shoulder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4067200,Sexually acquired reactive arthropathy of the hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4067056,Reactive arthropathy of distal radioulnar joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4066956,Sexually acquired reactive arthropathy of the ankle and/or foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4066955,Sexually acquired reactive arthropathy of the pelvic region and thigh,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4066954,Sexually acquired reactive arthropathy of the shoulder region,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4066607,Single-level thoracic spondylosis with radiculopathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4065485,Reactive arthropathy of talonavicular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4065484,Reactive arthropathy of subtalar joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4065481,Reactive arthropathy of distal interphalangeal joint of finger,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4065480,Reactive arthropathy of metacarpophalangeal joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4065105,Reactive arthropathy of interphalangeal joint of toe,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4065104,Reactive arthropathy of 1st metatarsophalangeal joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4063592,Seronegative arthritis secondary to Whipple's disease,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4060449,On examination - ankylosing spondylitis chest deformity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36713669,Hereditary arterial and articular multiple calcification syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4079736,Juvenile arthritis of inflammatory bowel disease,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715561,Infection causing spondyloarthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4079743,Secondary pyrophosphate arthritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4079842,Osteochondritis of metacarpal,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4035748,Pyrophosphate tophus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36717146,Dermatoosteolysis Kirghizian type,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37017284,Infective arthritis co-occurrent with human immunodeficiency virus infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+759881,Osteoarthritis of left acromioclavicular joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4343917,Arthritis caused by spirochaetale infection,SNOMED,Condition,S,Not included - parent,0,0,0,0
+760900,Osteoarthritis of finger joint of left hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37018679,Chondrocalcinosis of elbow due to disorder of calcium metabolism,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4034035,Arthritis of temporomandibular joint due to internal joint prosthesis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37108583,Arthritis of right shoulder caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765006,Tuberculosis of right knee joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37108585,Arthritis of right hip caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37108586,Arthritis of left hip caused by bacteria,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764931,Villous arthropathy of multiple joints,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764930,Spondylosis due to another disorder,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+760786,Closed subluxation left patellofemoral joint following trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37108589,Infective arthritis of left knee,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764919,Pyogenic bacterial arthritis of elbow,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+760785,Closed subluxation right patellofemoral joint following trauma,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764076,Villous arthritis of hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4343917,Arthritis caused by spirochaetale infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+46273200,Bacterial arthritis of costovertebral joint,SNOMED,Condition,S,Not included - descendant,0,0,0,0

@@ -1,0 +1,4 @@
+﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,rc,dc,drc,dbc
+141253,Disorder of thyroid gland,SNOMED,Condition,S,Not included - parent,21542838,20,715074104,22
+4130012,Hashitoxicosis - transient,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4178818,Inflammation of specific body systems,SNOMED,Condition,S,Not included - parent,0,0,0,0

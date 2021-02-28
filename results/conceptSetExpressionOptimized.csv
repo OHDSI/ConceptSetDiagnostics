@@ -1,0 +1,254 @@
+﻿conceptId,conceptName,excluded,removed,vocabularyId,standardConcept,invalidReason,conceptCode,conceptClassId,domainId,rc,dbc,drc,ddbc
+80180,Osteoarthritis,0,0,SNOMED,S,V,396275006,Clinical Finding,Condition,153561800,16,1257389013,22
+4344441,Osteoarthritis,0,0,SNOMED,S,V,396275006,Clinical Finding,Condition,153561800,16,1257389013,22
+45695552,Arthritis,0,0,SNOMED,S,V,3723001,Clinical Finding,Condition,5244367,20,326043865,22
+45884702,Arthritis,0,0,SNOMED,S,V,3723001,Clinical Finding,Condition,5244367,20,326043865,22
+4291025,Arthritis,0,0,SNOMED,S,V,3723001,Clinical Finding,Condition,5244367,20,326043865,22
+45640549,Arthritis,0,0,SNOMED,S,V,3723001,Clinical Finding,Condition,5244367,20,326043865,22
+40778508,Arthritis,0,0,SNOMED,S,V,3723001,Clinical Finding,Condition,5244367,20,326043865,22
+4257751,Arthritis,0,0,SNOMED,S,V,3723001,Clinical Finding,Condition,5244367,20,326043865,22
+255348,Polymyalgia rheumatica,0,0,SNOMED,S,V,65323003,Clinical Finding,Condition,11410947,21,11518103,21
+4098611,Hyperuricemia without signs of inflammatory arthritis and tophaceous disease,0,0,SNOMED,S,V,190920002,Clinical Finding,Condition,7860782,19,7860782,19
+74124,Traumatic arthropathy,0,0,SNOMED,S,V,58188004,Clinical Finding,Condition,342548,19,4763245,19
+1177286,Juvenile rheumatoid arthritis,0,0,SNOMED,S,V,410795001,Clinical Finding,Condition,1105110,20,3799829,21
+4107913,Myopathy due to rheumatoid arthritis,0,0,SNOMED,S,V,193250002,Clinical Finding,Condition,539403,12,539403,12
+3079362,Pyogenic arthritis of the pelvic region and thigh,0,0,SNOMED,S,V,267880006,Clinical Finding,Condition,418702,14,418702,14
+4102493,Polyneuropathy in rheumatoid arthritis,0,0,SNOMED,S,V,193180002,Clinical Finding,Condition,153938,12,153938,12
+72994,Jaccoud's syndrome,0,0,SNOMED,S,V,84801008,Clinical Finding,Condition,143704,18,143704,18
+72398,Arthropathy in Behcet's syndrome,0,0,SNOMED,S,V,62918002,Clinical Finding,Condition,14843,13,28794,13
+4214869,Hemophilic arthropathy,0,0,SNOMED,S,V,80813006,Clinical Finding,Condition,18666,14,18666,14
+3083083,[V]Personal history of arthritis,0,0,SNOMED,N,U,400191000000102,Context-dependent,Observation,0,0,0,0
+3083083,[V]Personal history of arthritis,0,0,Read,N,V,ZV13400,Read,Observation,0,0,0,0
+3083083,[V]Personal history of arthritis,0,0,SNOMED,N,D,315771001,Context-dependent,Observation,0,0,0,0
+40523899,[V]Personal history of arthritis,0,0,SNOMED,N,U,400191000000102,Context-dependent,Observation,0,0,0,0
+40523899,[V]Personal history of arthritis,0,0,Read,N,V,ZV13400,Read,Observation,0,0,0,0
+40523899,[V]Personal history of arthritis,0,0,SNOMED,N,D,315771001,Context-dependent,Observation,0,0,0,0
+40520999,[V]Screening for rheumatoid arthritis,0,0,SNOMED,N,D,316692001,Context-dependent,Observation,0,0,0,0
+40520999,[V]Screening for rheumatoid arthritis,0,0,SNOMED,N,U,480151000000106,Context-dependent,Observation,0,0,0,0
+3057996,[V]Screening for rheumatoid arthritis,0,0,SNOMED,N,D,316692001,Context-dependent,Observation,0,0,0,0
+3057996,[V]Screening for rheumatoid arthritis,0,0,SNOMED,N,U,480151000000106,Context-dependent,Observation,0,0,0,0
+3081050,[X]Arthritis and polyarthritis due to other specified bacterial agents,0,0,SNOMED,N,U,462911000000107,Clinical Finding,Condition,0,0,0,0
+3081050,[X]Arthritis and polyarthritis due to other specified bacterial agents,0,0,SNOMED,N,D,203723009,Clinical Finding,Condition,0,0,0,0
+3081050,[X]Arthritis and polyarthritis due to other specified bacterial agents,0,0,Read,N,V,Nyu0100,Read,Condition,0,0,0,0
+40401301,[X]Arthritis and polyarthritis due to other specified bacterial agents,0,0,SNOMED,N,U,462911000000107,Clinical Finding,Condition,0,0,0,0
+40401301,[X]Arthritis and polyarthritis due to other specified bacterial agents,0,0,SNOMED,N,D,203723009,Clinical Finding,Condition,0,0,0,0
+40401301,[X]Arthritis and polyarthritis due to other specified bacterial agents,0,0,Read,N,V,Nyu0100,Read,Condition,0,0,0,0
+40401302,[X]Arthritis in other infectious and parasitic diseases classified elsewhere,0,0,SNOMED,N,D,203724003,Clinical Finding,Condition,0,0,0,0
+40401302,[X]Arthritis in other infectious and parasitic diseases classified elsewhere,0,0,SNOMED,N,U,437941000000103,Clinical Finding,Condition,0,0,0,0
+40401302,[X]Arthritis in other infectious and parasitic diseases classified elsewhere,0,0,Read,N,V,Nyu0200,Read,Condition,0,0,0,0
+3071979,[X]Arthritis in other infectious and parasitic diseases classified elsewhere,0,0,SNOMED,N,D,203724003,Clinical Finding,Condition,0,0,0,0
+3071979,[X]Arthritis in other infectious and parasitic diseases classified elsewhere,0,0,SNOMED,N,U,437941000000103,Clinical Finding,Condition,0,0,0,0
+3071979,[X]Arthritis in other infectious and parasitic diseases classified elsewhere,0,0,Read,N,V,Nyu0200,Read,Condition,0,0,0,0
+40401315,[X]Juvenile arthritis in other diseases classified elsewhere,0,0,Read,N,V,Nyu1600,Read,Condition,0,0,0,0
+40401315,[X]Juvenile arthritis in other diseases classified elsewhere,0,0,SNOMED,N,D,203736009,Clinical Finding,Condition,0,0,0,0
+40401315,[X]Juvenile arthritis in other diseases classified elsewhere,0,0,SNOMED,N,U,464921000000107,Clinical Finding,Condition,0,0,0,0
+3062980,[X]Juvenile arthritis in other diseases classified elsewhere,0,0,Read,N,V,Nyu1600,Read,Condition,0,0,0,0
+3062980,[X]Juvenile arthritis in other diseases classified elsewhere,0,0,SNOMED,N,D,203736009,Clinical Finding,Condition,0,0,0,0
+3062980,[X]Juvenile arthritis in other diseases classified elsewhere,0,0,SNOMED,N,U,464921000000107,Clinical Finding,Condition,0,0,0,0
+3078404,[X]Other juvenile arthritis,0,0,SNOMED,N,D,203735008,Clinical Finding,Condition,0,0,0,0
+3078404,[X]Other juvenile arthritis,0,0,SNOMED,N,U,478451000000109,Clinical Finding,Condition,0,0,0,0
+3078404,[X]Other juvenile arthritis,0,0,Read,N,V,Nyu1500,Read,Condition,0,0,0,0
+40401314,[X]Other juvenile arthritis,0,0,SNOMED,N,D,203735008,Clinical Finding,Condition,0,0,0,0
+40401314,[X]Other juvenile arthritis,0,0,SNOMED,N,U,478451000000109,Clinical Finding,Condition,0,0,0,0
+40401314,[X]Other juvenile arthritis,0,0,Read,N,V,Nyu1500,Read,Condition,0,0,0,0
+3074107,[X]Other seropositive rheumatoid arthritis,0,0,SNOMED,N,D,203730003,Clinical Finding,Condition,0,0,0,0
+3074107,[X]Other seropositive rheumatoid arthritis,0,0,SNOMED,N,U,408751000000108,Clinical Finding,Condition,0,0,0,0
+3074107,[X]Other seropositive rheumatoid arthritis,0,0,Read,N,V,Nyu1100,Read,Condition,0,0,0,0
+40401308,[X]Other seropositive rheumatoid arthritis,0,0,SNOMED,N,D,203730003,Clinical Finding,Condition,0,0,0,0
+40401308,[X]Other seropositive rheumatoid arthritis,0,0,SNOMED,N,U,408751000000108,Clinical Finding,Condition,0,0,0,0
+40401308,[X]Other seropositive rheumatoid arthritis,0,0,Read,N,V,Nyu1100,Read,Condition,0,0,0,0
+40401321,[X]Other specified arthritis,0,0,Read,N,V,Nyu1B00,Read,Condition,0,0,0,0
+40401321,[X]Other specified arthritis,0,0,SNOMED,N,U,463331000000107,Clinical Finding,Condition,0,0,0,0
+40401321,[X]Other specified arthritis,0,0,SNOMED,N,D,203741001,Clinical Finding,Condition,0,0,0,0
+3079739,[X]Other specified arthritis,0,0,Read,N,V,Nyu1B00,Read,Condition,0,0,0,0
+3079739,[X]Other specified arthritis,0,0,SNOMED,N,U,463331000000107,Clinical Finding,Condition,0,0,0,0
+3079739,[X]Other specified arthritis,0,0,SNOMED,N,D,203741001,Clinical Finding,Condition,0,0,0,0
+40401311,[X]Other specified rheumatoid arthritis,0,0,SNOMED,N,U,425481000000106,Clinical Finding,Condition,0,0,0,0
+40401311,[X]Other specified rheumatoid arthritis,0,0,SNOMED,N,D,203732006,Clinical Finding,Condition,0,0,0,0
+40401311,[X]Other specified rheumatoid arthritis,0,0,Read,N,V,Nyu1200,Read,Condition,0,0,0,0
+3071107,[X]Other specified rheumatoid arthritis,0,0,SNOMED,N,U,425481000000106,Clinical Finding,Condition,0,0,0,0
+3071107,[X]Other specified rheumatoid arthritis,0,0,SNOMED,N,D,203732006,Clinical Finding,Condition,0,0,0,0
+3071107,[X]Other specified rheumatoid arthritis,0,0,Read,N,V,Nyu1200,Read,Condition,0,0,0,0
+3054511,[X]Other streptococcal arthritis and polyarthritis,0,0,Read,N,V,Nyu0000,Read,Condition,0,0,0,0
+3054511,[X]Other streptococcal arthritis and polyarthritis,0,0,SNOMED,N,D,203722004,Clinical Finding,Condition,0,0,0,0
+3054511,[X]Other streptococcal arthritis and polyarthritis,0,0,SNOMED,N,U,478731000000105,Clinical Finding,Condition,0,0,0,0
+40401300,[X]Other streptococcal arthritis and polyarthritis,0,0,Read,N,V,Nyu0000,Read,Condition,0,0,0,0
+40401300,[X]Other streptococcal arthritis and polyarthritis,0,0,SNOMED,N,D,203722004,Clinical Finding,Condition,0,0,0,0
+40401300,[X]Other streptococcal arthritis and polyarthritis,0,0,SNOMED,N,U,478731000000105,Clinical Finding,Condition,0,0,0,0
+3059351,[X]Rheumatoid arthritis with involvement of other organs or systems,0,0,Read,N,V,Nyu1000,Read,Condition,0,0,0,0
+3059351,[X]Rheumatoid arthritis with involvement of other organs or systems,0,0,SNOMED,N,U,425091000000101,Clinical Finding,Condition,0,0,0,0
+3059351,[X]Rheumatoid arthritis with involvement of other organs or systems,0,0,SNOMED,N,D,203729008,Clinical Finding,Condition,0,0,0,0
+40401307,[X]Rheumatoid arthritis with involvement of other organs or systems,0,0,Read,N,V,Nyu1000,Read,Condition,0,0,0,0
+40401307,[X]Rheumatoid arthritis with involvement of other organs or systems,0,0,SNOMED,N,U,425091000000101,Clinical Finding,Condition,0,0,0,0
+40401307,[X]Rheumatoid arthritis with involvement of other organs or systems,0,0,SNOMED,N,D,203729008,Clinical Finding,Condition,0,0,0,0
+40401326,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,D,201811002,Clinical Finding,Condition,0,0,0,0
+40401326,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,D,203746006,Clinical Finding,Condition,0,0,0,0
+40401326,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,U,414821000000101,Clinical Finding,Condition,0,0,0,0
+40401326,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,Read,N,V,Nyu1G00,Read,Condition,0,0,0,0
+3063485,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,D,201811002,Clinical Finding,Condition,0,0,0,0
+3063485,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,D,203746006,Clinical Finding,Condition,0,0,0,0
+3063485,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,U,414821000000101,Clinical Finding,Condition,0,0,0,0
+3063485,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,Read,N,V,Nyu1G00,Read,Condition,0,0,0,0
+3083070,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,D,201811002,Clinical Finding,Condition,0,0,0,0
+3083070,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,D,203746006,Clinical Finding,Condition,0,0,0,0
+3083070,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,U,414821000000101,Clinical Finding,Condition,0,0,0,0
+3083070,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,Read,N,V,Nyu1G00,Read,Condition,0,0,0,0
+40400237,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,D,201811002,Clinical Finding,Condition,0,0,0,0
+40400237,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,D,203746006,Clinical Finding,Condition,0,0,0,0
+40400237,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,SNOMED,N,U,414821000000101,Clinical Finding,Condition,0,0,0,0
+40400237,"[X]Seropositive rheumatoid arthritis, unspecified",0,0,Read,N,V,Nyu1G00,Read,Condition,0,0,0,0
+36674930,Acute gout,0,0,SNOMED,S,V,770924008,Clinical Finding,Condition,0,0,0,0
+2617898,All quality actions for the applicable measures in the rheumatoid arthritis (ra) measures group have been performed for this patient,0,0,HCPCS,S,V,G8499,HCPCS,Observation,0,0,0,0
+4211939,Anterior uveitis in juvenile idiopathic arthritis,0,0,SNOMED,S,V,416666007,Clinical Finding,Condition,0,0,0,0
+45695552,Arthritis,0,0,Read,N,V,N06z.11,Read,Condition,0,0,0,0
+45695552,Arthritis,0,0,SNOMED,N,U,372091005,Clinical Finding,Condition,0,0,0,0
+45695552,Arthritis,0,0,SNOMED,N,U,202059001,Clinical Finding,Condition,0,0,0,0
+45884702,Arthritis,0,0,Read,N,V,N06z.11,Read,Condition,0,0,0,0
+45884702,Arthritis,0,0,SNOMED,N,U,372091005,Clinical Finding,Condition,0,0,0,0
+45884702,Arthritis,0,0,SNOMED,N,U,202059001,Clinical Finding,Condition,0,0,0,0
+4291025,Arthritis,0,0,Read,N,V,N06z.11,Read,Condition,0,0,0,0
+4291025,Arthritis,0,0,SNOMED,N,U,372091005,Clinical Finding,Condition,0,0,0,0
+4291025,Arthritis,0,0,SNOMED,N,U,202059001,Clinical Finding,Condition,0,0,0,0
+45640549,Arthritis,0,0,Read,N,V,N06z.11,Read,Condition,0,0,0,0
+45640549,Arthritis,0,0,SNOMED,N,U,372091005,Clinical Finding,Condition,0,0,0,0
+45640549,Arthritis,0,0,SNOMED,N,U,202059001,Clinical Finding,Condition,0,0,0,0
+40778508,Arthritis,0,0,Read,N,V,N06z.11,Read,Condition,0,0,0,0
+40778508,Arthritis,0,0,SNOMED,N,U,372091005,Clinical Finding,Condition,0,0,0,0
+40778508,Arthritis,0,0,SNOMED,N,U,202059001,Clinical Finding,Condition,0,0,0,0
+4257751,Arthritis,0,0,Read,N,V,N06z.11,Read,Condition,0,0,0,0
+4257751,Arthritis,0,0,SNOMED,N,U,372091005,Clinical Finding,Condition,0,0,0,0
+4257751,Arthritis,0,0,SNOMED,N,U,202059001,Clinical Finding,Condition,0,0,0,0
+42539708,Arthritis clinical management plan,0,0,SNOMED,N,U,720697007,Qualifier Value,Observation,0,0,0,0
+3206103,Arthritis clinical management plan,0,0,SNOMED,N,U,720697007,Qualifier Value,Observation,0,0,0,0
+3162880,Arthritis clinical management plan,0,0,SNOMED,N,U,720697007,Qualifier Value,Observation,0,0,0,0
+36715181,Arthritis clinical management plan,0,0,SNOMED,N,U,720697007,Qualifier Value,Observation,0,0,0,0
+40352979,Arthritis due to bacterial infection,0,0,SNOMED,N,U,156460008,Clinical Finding,Condition,0,0,0,0
+40352979,Arthritis due to bacterial infection,0,0,SNOMED,N,D,267877005,Clinical Finding,Condition,0,0,0,0
+3054749,Arthritis due to bacterial infection,0,0,SNOMED,N,U,156460008,Clinical Finding,Condition,0,0,0,0
+3054749,Arthritis due to bacterial infection,0,0,SNOMED,N,D,267877005,Clinical Finding,Condition,0,0,0,0
+3061351,Arthritis foundation pain reliever 500mg tablet,0,0,SNOMED,N,D,388827002,Pharma/Biol Product,Observation,0,0,0,0
+40560470,Arthritis foundation pain reliever 500mg tablet,0,0,SNOMED,N,D,388827002,Pharma/Biol Product,Observation,0,0,0,0
+40493200,Arthritis hand function test score,0,0,SNOMED,S,V,445890008,Observable Entity,Observation,0,0,0,0
+4136926,Arthritis impact measurement scale,0,0,Read,N,D,ZR1U.00,Read,Observation,0,0,0,0
+40487897,Arthritis impact measurement scale score,0,0,SNOMED,S,V,446478005,Observable Entity,Observation,0,0,0,0
+4077650,Arthritis monitoring,0,0,SNOMED,S,V,275920008,Procedure,Observation,0,0,0,0
+4077650,Arthritis monitoring,0,0,Read,N,V,66H..11,Read,Observation,0,0,0,0
+4167092,Arthritis/arthrosis,0,0,SNOMED,S,V,274135002,Clinical Finding,Condition,0,0,0,0
+4167092,Arthritis/arthrosis,0,0,SNOMED,N,U,268051001,Clinical Finding,Condition,0,0,0,0
+4101240,Arthropathy associated with acromegaly,0,0,SNOMED,S,V,27713005,Clinical Finding,Condition,0,0,0,0
+42628608,"Autoimmune (rheumatoid arthritis), analysis of 12 biomarkers using immunoassays, utilizing serum, prognostic algorithm reported as a disease activity score",0,0,CPT4,S,V,81490,CPT4,Observation,0,0,0,0
+4278677,Avian viral arthritis,0,0,SNOMED,N,D,65977005,Clinical Finding,Condition,0,0,0,0
+3084050,Avian viral arthritis,0,0,SNOMED,N,D,65977005,Clinical Finding,Condition,0,0,0,0
+4044086,Caprine arthritis-encephalitis,0,0,SNOMED,N,D,16721009,Clinical Finding,Condition,0,0,0,0
+4262573,Caprine arthritis-encephalitis virus,0,0,SNOMED,S,V,36117003,Organism,Observation,0,0,0,0
+3072579,Caprine arthritis - encephalitis - ovine progressive pneumonia antibody test kit,0,0,SNOMED,N,D,5428009,Substance,Observation,0,0,0,0
+4184290,Caprine arthritis - encephalitis - ovine progressive pneumonia antibody test kit,0,0,SNOMED,N,D,5428009,Substance,Observation,0,0,0,0
+40485445,Caprine arthritis encephalitis virus antibody,0,0,SNOMED,S,V,444186004,Substance,Observation,0,0,0,0
+37028571,Caprine arthritis encephalitis virus DNA,0,0,SNOMED,N,U,708217007,Substance,Observation,0,0,0,0
+4301037,Conjunctivitis due to reactive arthritis triad,0,0,SNOMED,S,V,403437002,Clinical Finding,Condition,0,0,0,0
+926913,Continuous/focused services: for reporting services by clinicians whose expertise is needed for the ongoing management of a chronic disease or a condition that needs to be managed and followed with no planned endpoint to the relationship; reporting cli...,0,0,CPT4,S,V,X2,CPT4 Modifier,Observation,0,0,0,0
+926913,Continuous/focused services: for reporting services by clinicians whose expertise is needed for the ongoing management of a chronic disease or a condition that needs to be managed and followed with no planned endpoint to the relationship; reporting cli...,0,0,HCPCS,S,V,X2,HCPCS Modifier,Observation,0,0,0,0
+937705,Continuous/focused services: for reporting services by clinicians whose expertise is needed for the ongoing management of a chronic disease or a condition that needs to be managed and followed with no planned endpoint to the relationship; reporting cli...,0,0,CPT4,S,V,X2,CPT4 Modifier,Observation,0,0,0,0
+937705,Continuous/focused services: for reporting services by clinicians whose expertise is needed for the ongoing management of a chronic disease or a condition that needs to be managed and followed with no planned endpoint to the relationship; reporting cli...,0,0,HCPCS,S,V,X2,HCPCS Modifier,Observation,0,0,0,0
+4297650,Cutaneous atrophy due to rheumatoid arthritis,0,0,SNOMED,S,V,402431009,Clinical Finding,Condition,0,0,0,0
+4334806,Deformity of foot due to rheumatoid arthritis,0,0,SNOMED,S,V,433228003,Clinical Finding,Condition,0,0,0,0
+46273442,Deformity of hand due to rheumatoid arthritis,0,0,SNOMED,S,V,96531000119109,Clinical Finding,Condition,0,0,0,0
+4330635,Deformity of wrist due to rheumatoid arthritis,0,0,SNOMED,S,V,431707004,Clinical Finding,Condition,0,0,0,0
+44790163,Delivery of rehabilitation for rheumatoid arthritis,0,0,Read,N,V,7P20300,Read,Observation,0,0,0,0
+44790163,Delivery of rehabilitation for rheumatoid arthritis,0,0,SNOMED,S,V,231041000000107,Procedure,Observation,0,0,0,0
+4028118,Diffuse interstitial rheumatoid disease of lung,0,0,SNOMED,S,V,10713006,Clinical Finding,Condition,0,0,0,0
+4060405,Dilated cardiomyopathy secondary to rheumatoid arthritis,0,0,SNOMED,S,V,21430002,Clinical Finding,Condition,0,0,0,0
+40484633,Disease activity score in rheumatoid arthritis using C-reactive protein,0,0,SNOMED,S,V,444060007,Observable Entity,Observation,0,0,0,0
+40481959,Disease activity score in rheumatoid arthritis using C-reactive protein,0,0,SNOMED,S,V,444060007,Observable Entity,Observation,0,0,0,0
+44807351,Exception reporting - rheumatoid arthritis quality indicators,0,0,SNOMED,S,V,805941000000105,Clinical Finding,Observation,0,0,0,0
+4166443,FH: Arthritis,0,0,SNOMED,N,U,160412003,Context-dependent,Observation,0,0,0,0
+4166443,FH: Arthritis,0,0,Read,N,V,12I..11,Read,Observation,0,0,0,0
+4166443,FH: Arthritis,0,0,SNOMED,N,U,137807004,Context-dependent,Observation,0,0,0,0
+4166443,FH: Arthritis,0,0,SNOMED,S,V,275134007,Context-dependent,Observation,0,0,0,0
+40401693,Foot arthritis NOS,0,0,SNOMED,N,U,239711009,Clinical Finding,Condition,0,0,0,0
+40401693,Foot arthritis NOS,0,0,Read,N,V,N06z712,Read,Condition,0,0,0,0
+40401693,Foot arthritis NOS,0,0,SNOMED,N,D,202068004,Clinical Finding,Condition,0,0,0,0
+40357627,H/O: [musculoskeletal disease] or [arthritis] or [orthopedic problem],0,0,SNOMED,N,D,267148007,Context-dependent,Observation,0,0,0,0
+3068170,H/O: [musculoskeletal disease] or [arthritis] or [orthopedic problem],0,0,SNOMED,N,D,267148007,Context-dependent,Observation,0,0,0,0
+3075390,H/O: [musculoskeletal disease] or [arthritis] or [orthopedic problem],0,0,SNOMED,N,D,267148007,Context-dependent,Observation,0,0,0,0
+4077228,H/O: arthritis,0,0,Read,N,V,14G..11,Read,Observation,0,0,0,0
+4077228,H/O: arthritis,0,0,SNOMED,S,V,275554004,Context-dependent,Observation,0,0,0,0
+40302155,H/O: musculoskeletal disease,0,0,SNOMED,N,D,138834003,Context-dependent,Observation,0,0,0,0
+40333249,H/O: orthopaedic disorder,0,0,SNOMED,N,D,161566004,Context-dependent,Observation,0,0,0,0
+4214869,Hemophilic arthropathy,0,0,SNOMED,N,U,202045008,Clinical Finding,Condition,0,0,0,0
+40401691,Hip arthritis NOS,0,0,Read,N,V,N06z511,Read,Condition,0,0,0,0
+40401691,Hip arthritis NOS,0,0,SNOMED,N,U,239714001,Clinical Finding,Condition,0,0,0,0
+40401691,Hip arthritis NOS,0,0,SNOMED,N,D,202066000,Clinical Finding,Condition,0,0,0,0
+40405515,Hip pyogenic arthritis,0,0,SNOMED,N,D,201463002,Clinical Finding,Condition,0,0,0,0
+40405515,Hip pyogenic arthritis,0,0,SNOMED,N,U,156466002,Clinical Finding,Condition,0,0,0,0
+40405515,Hip pyogenic arthritis,0,0,Read,N,V,N010511,Read,Condition,0,0,0,0
+4098611,Hyperuricemia without signs of inflammatory arthritis and tophaceous disease,0,0,ICD10CM,N,V,E79.0,4-char billing code,Condition,0,0,0,0
+2617889,I intend to report the rheumatoid arthritis (ra) measures group,0,0,HCPCS,S,V,G8490,HCPCS,Observation,0,0,0,0
+4132495,Iritis in psoriatic arthritis,0,0,SNOMED,S,V,410482007,Clinical Finding,Condition,0,0,0,0
+4028995,Joint-ill,0,0,SNOMED,N,D,13750006,Clinical Finding,Condition,0,0,0,0
+1177286,Juvenile rheumatoid arthritis,0,0,SNOMED,N,U,239801005,Clinical Finding,Condition,0,0,0,0
+1177286,Juvenile rheumatoid arthritis,0,0,SNOMED,N,U,201808003,Clinical Finding,Condition,0,0,0,0
+1177286,Juvenile rheumatoid arthritis,0,0,ICD10,N,V,M08.0,ICD10 code,Condition,0,0,0,0
+1177286,Juvenile rheumatoid arthritis,0,0,Read,N,V,N045500,Read,Condition,0,0,0,0
+4209218,Knowledge level about arthritis management,0,0,SNOMED,S,V,440505002,Observable Entity,Observation,0,0,0,0
+3066337,Murine mycoplasmal arthritis,0,0,SNOMED,N,D,23104004,Clinical Finding,Condition,0,0,0,0
+4045972,Murine mycoplasmal arthritis,0,0,SNOMED,N,D,23104004,Clinical Finding,Condition,0,0,0,0
+4240303,Mycoplasmal arthritis AND polyserositis in swine,0,0,SNOMED,N,D,91591005,Clinical Finding,Condition,0,0,0,0
+4107913,Myopathy due to rheumatoid arthritis,0,0,Read,N,V,F396400,Read,Condition,0,0,0,0
+45876549,Other arthritis,0,0,ICD10,N,V,M13,ICD10 Hierarchy,Condition,0,0,0,0
+45876549,Other arthritis,0,0,ICD10CM,N,V,M13,3-char nonbill code,Condition,0,0,0,0
+2108722,Patient not receiving first-time biologic disease modifying anti-rheumatic drug therapy for rheumatoid arthritis (RA),0,0,CPT4,S,V,4196F,CPT4,Observation,0,0,0,0
+2108721,Patient receiving first-time biologic disease modifying anti-rheumatic drug therapy for rheumatoid arthritis (RA),0,0,CPT4,S,V,4195F,CPT4,Observation,0,0,0,0
+255348,Polymyalgia rheumatica,0,0,SNOMED,N,U,267988003,Clinical Finding,Condition,0,0,0,0
+255348,Polymyalgia rheumatica,0,0,SNOMED,N,U,156656001,Clinical Finding,Condition,0,0,0,0
+4102493,Polyneuropathy in rheumatoid arthritis,0,0,Read,N,V,F371200,Read,Condition,0,0,0,0
+4150308,Post-genitourinary infection reactive arthritis,0,0,SNOMED,S,V,267883008,Clinical Finding,Condition,0,0,0,0
+4167025,Pseudoparalysis due to generalized arthritis,0,0,SNOMED,S,V,418073009,Clinical Finding,Condition,0,0,0,0
+37394647,Psoriatic Arthritis Impact of Disease 9 questionnaire score,0,0,SNOMED,S,V,1036471000000109,Observable Entity,Observation,0,0,0,0
+40405513,Pyogenic arthritis of the forearm,0,0,SNOMED,N,D,201461000,Clinical Finding,Condition,0,0,0,0
+40405513,Pyogenic arthritis of the forearm,0,0,SNOMED,N,U,42095008,Clinical Finding,Condition,0,0,0,0
+40405513,Pyogenic arthritis of the forearm,0,0,Read,N,V,N010300,Read,Condition,0,0,0,0
+40405513,Pyogenic arthritis of the forearm,0,0,SNOMED,N,U,267879008,Clinical Finding,Condition,0,0,0,0
+3079362,Pyogenic arthritis of the pelvic region and thigh,0,0,Read,N,V,N010500,Read,Condition,0,0,0,0
+40405511,Pyogenic arthritis of: [upper arm] or [elbow],0,0,SNOMED,N,D,201460004,Clinical Finding,Condition,0,0,0,0
+3083360,Pyogenic arthritis of: [upper arm] or [elbow],0,0,SNOMED,N,D,201460004,Clinical Finding,Condition,0,0,0,0
+37208976,QOF (Quality and Outcomes Framework) rheumatoid arthritis quality indicator-related care invitation,0,0,SNOMED,S,V,1110961000000108,Procedure,Observation,0,0,0,0
+40482696,Rheumatoid arthritis disease activity score using C-reactive protein,0,0,SNOMED,S,V,442277000,Observable Entity,Observation,0,0,0,0
+37395507,Rheumatoid Arthritis Impact of Disease questionnaire score,0,0,SNOMED,S,V,1048311000000106,Observable Entity,Observation,0,0,0,0
+37398793,Rheumatoid arthritis latex test,0,0,SNOMED,S,V,1029271000000101,Observable Entity,Observation,0,0,0,0
+4014121,Rheumatoid arthritis latex test,0,0,SNOMED,S,V,1029271000000101,Observable Entity,Observation,0,0,0,0
+4078299,Rheumatoid arthritis monitoring,0,0,SNOMED,S,V,275902004,Procedure,Observation,0,0,0,0
+44811073,Rheumatoid arthritis monitoring invitation,0,0,Read,N,V,9mM..00,Read,Observation,0,0,0,0
+44811073,Rheumatoid arthritis monitoring invitation,0,0,SNOMED,S,V,882321000000105,Procedure,Observation,0,0,0,0
+4037972,Rheumatoid arthritis nuclear antibody,0,0,SNOMED,S,V,117216004,Substance,Observation,0,0,0,0
+4255274,Rheumatoid arthritis particle agglutination test,0,0,Read,N,V,43b9.00,Read,Observation,0,0,0,0
+4255274,Rheumatoid arthritis particle agglutination test,0,0,SNOMED,S,V,1010071000000108,Observable Entity,Observation,0,0,0,0
+37392902,Rheumatoid arthritis particle agglutination test,0,0,Read,N,V,43b9.00,Read,Observation,0,0,0,0
+37392902,Rheumatoid arthritis particle agglutination test,0,0,SNOMED,S,V,1010071000000108,Observable Entity,Observation,0,0,0,0
+37393424,Rheumatoid arthritis screening test,0,0,Read,N,V,43c6.00,Read,Observation,0,0,0,0
+37393424,Rheumatoid arthritis screening test,0,0,SNOMED,S,V,1016811000000108,Observable Entity,Observation,0,0,0,0
+4048842,Rheumatoid arthritis virus,0,0,SNOMED,S,V,12396006,Organism,Observation,0,0,0,0
+40486001,Rheumatoid arthritis work instability scale score,0,0,SNOMED,S,V,446043004,Observable Entity,Observation,0,0,0,0
+35622723,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part A: Fixed Scale - Disability total score,0,0,SNOMED,S,V,764895009,Observable Entity,Observation,0,0,0,0
+35622722,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part A: Fixed Scale - Footwear total score,0,0,SNOMED,S,V,764894008,Observable Entity,Observation,0,0,0,0
+35622729,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part A: Fixed Scale - Impairment total score,0,0,SNOMED,S,V,764901007,Observable Entity,Observation,0,0,0,0
+35622726,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part B: Patient Preference Scale - Effect on family life domain total score,0,0,SNOMED,S,V,764898006,Observable Entity,Observation,0,0,0,0
+35622731,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part B: Patient Preference Scale - Experiences with footwear domain total score,0,0,SNOMED,S,V,764903005,Observable Entity,Observation,0,0,0,0
+35622727,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part B: Patient Preference Scale - External factors that affect foot symptoms domain total score,0,0,SNOMED,S,V,764899003,Observable Entity,Observation,0,0,0,0
+35622735,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part B: Patient Preference Scale - Foot and Ankle Symptoms domain total score,0,0,SNOMED,S,V,764906002,Observable Entity,Observation,0,0,0,0
+35622725,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part B: Patient Preference Scale - Impact on career domain total score,0,0,SNOMED,S,V,764897001,Observable Entity,Observation,0,0,0,0
+35622730,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part B: Patient Preference Scale - Impact on everyday functioning domain total score,0,0,SNOMED,S,V,764902000,Observable Entity,Observation,0,0,0,0
+35622732,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part B: Patient Preference Scale - Impact on social life domain total score,0,0,SNOMED,S,V,764904004,Observable Entity,Observation,0,0,0,0
+35622733,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part B: Patient Preference Scale - Personal adaptation domain total score,0,0,SNOMED,S,V,764905003,Observable Entity,Observation,0,0,0,0
+35622724,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part B: Patient Preference Scale - Personal feelings domain total score,0,0,SNOMED,S,V,764896005,Observable Entity,Observation,0,0,0,0
+35622728,Salford Rheumatoid Arthritis Foot Evaluation Instrument Part B: Patient Preference Scale - Visual impact domain total score,0,0,SNOMED,S,V,764900008,Observable Entity,Observation,0,0,0,0
+38000540,Septic Arthritis,0,0,DRG,N,D,242,DRG,Observation,0,0,0,0
+38001323,Septic arthritis w CC,0,0,DRG,S,V,549,MS-DRG,Observation,0,0,0,0
+38001322,Septic arthritis w MCC,0,0,DRG,S,V,548,MS-DRG,Observation,0,0,0,0
+38001324,Septic arthritis w/o CC/MCC,0,0,DRG,S,V,550,MS-DRG,Observation,0,0,0,0
+37204811,Sexually acquired reactive arthritis,0,0,SNOMED,S,V,783711009,Clinical Finding,Condition,0,0,0,0
+40482280,Swollen joint count for rheumatoid arthritis assessment,0,0,SNOMED,S,V,442194005,Observable Entity,Observation,0,0,0,0
+40483630,Tender joint count for rheumatoid arthritis assessment,0,0,SNOMED,S,V,442521001,Observable Entity,Observation,0,0,0,0
+40611787,Tuberculosis of joint,0,0,SNOMED,N,D,63712002,Clinical Finding,Condition,0,0,0,0
+40611787,Tuberculosis of joint,0,0,SNOMED,N,U,367488007,Clinical Finding,Condition,0,0,0,0
+4128400,Urethritis due to reactive arthritis triad,0,0,SNOMED,S,V,236690002,Clinical Finding,Condition,0,0,0,0

@@ -1,0 +1,7 @@
+﻿conceptId,conceptName,domainId,vocabularyId,standardConcept,rc,dc,drc,dbc,sourceConceptId,sourceConceptName,sourceVocabularyId,sourceConceptCode,sourceRecordCount,sourceDatabaseCount
+442102,Hematoma of kidney without rupture of capsule AND without open wound into abdominal cavity,Condition,SNOMED,S,175988,14,175988,14,44832810,"Injury to kidney without mention of open wound into cavity, hematoma without rupture of capsule",ICD9CM,866.01,175899,14
+194200,Laceration of kidney without open wound into abdominal cavity,Condition,SNOMED,S,118108,14,118108,14,44832811,"Injury to kidney without mention of open wound into cavity, laceration",ICD9CM,866.02,118070,14
+196852,Kidney laceration with open wound into cavity,Condition,SNOMED,S,17646,13,17646,13,44827077,"Injury to kidney with open wound into cavity, laceration",ICD9CM,866.12,17643,13
+199195,Complete disruption of kidney parenchyma without open wound into cavity,Condition,SNOMED,S,16426,13,16426,13,44823553,"Injury to kidney without mention of open wound into cavity, complete disruption of kidney parenchyma",ICD9CM,866.03,16419,13
+442533,"Kidney hematoma without rupture of capsule, with open wound into cavity",Condition,SNOMED,S,5958,13,5958,13,44828258,"Injury to kidney with open wound into cavity, hematoma without rupture of capsule",ICD9CM,866.11,5954,13
+200253,Complete disruption of kidney parenchyma with open wound into cavity,Condition,SNOMED,S,5687,12,5687,12,44834034,"Injury to kidney with open wound into cavity, complete disruption of kidney parenchyma",ICD9CM,866.13,5674,12

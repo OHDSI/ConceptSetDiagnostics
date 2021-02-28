@@ -1,0 +1,32 @@
+﻿conceptId,isExcluded,includeDescendants,includeMapped,conceptName,vocabularyId,standardConcept,invalidReason,conceptCode,conceptClassId,domainId,rc,dbc,drc,ddbc
+46270012,FALSE,TRUE,FALSE,Family history of Hashimoto thyroiditis,SNOMED,S,V,118651000119105,Context-dependent,Observation,0,0,0,0
+4348503,FALSE,TRUE,FALSE,Thyroiditis,NDFRT,N,V,N0000002944,Ind / CI,Drug,0,0,0,0
+40766091,FALSE,TRUE,FALSE,Thyroglobulin Ab [Units/volume] in Body fluid by Immunoassay,LOINC,S,V,63359-4,Lab Test,Measurement,0,0,0,0
+45757058,FALSE,TRUE,FALSE,Hypothyroidism due to thyroiditis,SNOMED,S,V,102871000119101,Clinical Finding,Condition,0,0,0,0
+3181836,FALSE,TRUE,FALSE,History of thyroiditis,Nebraska Lexicon,S,V,5270001000004108,Context-dependent,Observation,0,0,0,0
+40389540,FALSE,TRUE,FALSE,[X]Other chronic thyroiditis,SNOMED,N,D,191041003,Clinical Finding,Condition,0,0,0,0
+3076566,FALSE,TRUE,FALSE,[X]Other chronic thyroiditis,Nebraska Lexicon,N,D,191041003,Clinical Finding,Condition,0,0,0,0
+40759656,FALSE,TRUE,FALSE,Thyroglobulin Ab [Units/volume] in Serum or Plasma by Immunoassay,LOINC,S,V,56536-6,Lab Test,Measurement,0,0,0,0
+40766092,FALSE,TRUE,FALSE,Thyroglobulin Ab [Units/volume] in Cerebral spinal fluid by Immunoassay,LOINC,S,V,63360-2,Lab Test,Measurement,0,0,0,0
+4192649,FALSE,TRUE,FALSE,Hypothyroidism due to fibrous invasive thyroiditis,SNOMED,S,V,39444001,Clinical Finding,Condition,0,0,0,0
+4348504,FALSE,TRUE,FALSE,"Thyroiditis, Suppurative",NDFRT,N,V,N0000002947,Ind / CI,Drug,0,0,0,0
+3024857,FALSE,TRUE,FALSE,Thyroglobulin Ab [Presence] in Serum,LOINC,S,V,15210-8,Lab Test,Measurement,0,0,0,0
+3012085,FALSE,TRUE,FALSE,Thyroglobulin Ab [Titer] in Serum by Latex agglutination,LOINC,S,V,5381-9,Lab Test,Measurement,0,0,0,0
+3052732,FALSE,TRUE,FALSE,Thyroglobulin Ab [Titer] in Serum by Immunofluorescence,LOINC,S,V,38504-7,Lab Test,Measurement,0,0,0,0
+3040051,FALSE,TRUE,FALSE,Thyroglobulin Ab [Units/volume] in Lymph node fine needle aspirate,LOINC,S,V,53921-3,Lab Test,Measurement,0,0,0,0
+3025547,FALSE,TRUE,FALSE,Thyroglobulin Ab [Units/volume] in Serum or Plasma,LOINC,S,V,8098-6,Lab Test,Measurement,0,0,0,0
+4344082,FALSE,TRUE,FALSE,"Thyroiditis, Autoimmune",NDFRT,N,V,N0000002945,Ind / CI,Drug,0,0,0,0
+42529565,FALSE,TRUE,FALSE,Thyroglobulin IgG Ab [Units/volume] in Serum or Plasma by Immunoassay,LOINC,S,V,83117-2,Lab Test,Measurement,0,0,0,0
+3006219,FALSE,TRUE,FALSE,Thyroglobulin IgM Ab [Units/volume] in Serum,LOINC,S,V,17705-5,Lab Test,Measurement,0,0,0,0
+3021200,FALSE,TRUE,FALSE,Thyroglobulin Ab [Units/volume] in Serum by Radioimmunoassay (RIA),LOINC,S,V,5380-1,Lab Test,Measurement,0,0,0,0
+133444,FALSE,TRUE,FALSE,Thyroiditis,SNOMED,S,V,82119001,Clinical Finding,Condition,2734351,21,21880313,21
+45882998,FALSE,TRUE,FALSE,Hashimoto thyroiditis,LOINC,S,V,LA17785-9,Answer,Meas Value,0,0,0,0
+4257796,FALSE,TRUE,FALSE,Postpartum Thyroiditis,NDFRT,N,V,N0000171680,Ind / CI,Drug,0,0,0,0
+4344968,FALSE,TRUE,FALSE,"Thyroiditis, Subacute",NDFRT,N,V,N0000002946,Ind / CI,Drug,0,0,0,0
+4309027,FALSE,TRUE,FALSE,Idiopathic atrophic hypothyroidism,SNOMED,S,V,83664006,Clinical Finding,Condition,0,0,0,0
+37016109,FALSE,TRUE,FALSE,Goiter due to thyroiditis,SNOMED,S,V,106451000119106,Clinical Finding,Condition,0,0,0,0
+40759754,FALSE,TRUE,FALSE,Thyroglobulin IgG Ab [Units/volume] in Serum,LOINC,S,V,56635-6,Lab Test,Measurement,0,0,0,0
+4258032,FALSE,TRUE,FALSE,Hashimoto Disease,NDFRT,N,V,N0000171681,Ind / CI,Drug,0,0,0,0
+3050633,FALSE,TRUE,FALSE,Thyroglobulin Ab [Units/volume] in Tissue fine needle aspirate,LOINC,S,V,53919-7,Lab Test,Measurement,0,0,0,0
+36310154,FALSE,TRUE,FALSE,"Thyroid disorder (e.g., hypothyroidism, hyperthyroidism, and Hashimoto's thyroiditis)",LOINC,S,V,LA27854-1,Answer,Meas Value,0,0,0,0
+4099336,FALSE,TRUE,FALSE,Autoimmune parathyroiditis,SNOMED,S,V,190454008,Clinical Finding,Condition,0,0,0,0

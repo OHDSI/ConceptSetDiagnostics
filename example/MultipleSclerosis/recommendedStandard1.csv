@@ -1,0 +1,5 @@
+﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,rc,dc,drc,dbc
+440371,Disorder of immune function,SNOMED,Condition,S,Not included - parent,3574395,19,1478779330,22
+4190307,Inflammatory disease of the central nervous system,SNOMED,Condition,S,Not included - parent,967291,16,77293000,22
+375801,Demyelinating disease of central nervous system,SNOMED,Condition,S,Not included - parent,2122623,20,65647402,22
+44811462,Uhthoff phenomenon,SNOMED,Condition,S,Not included - descendant,0,0,0,0

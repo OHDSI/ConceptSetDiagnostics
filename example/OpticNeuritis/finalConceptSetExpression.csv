@@ -1,0 +1,7 @@
+﻿conceptId,isExcluded,includeDescendants,includeMapped,conceptName,vocabularyId,standardConcept,invalidReason,conceptCode,conceptClassId,domainId,rc,dbc,drc,ddbc
+4266258,FALSE,TRUE,FALSE,Optic Neuritis,NDFRT,N,V,N0000002228,Ind / CI,Drug,0,0,0,0
+374954,FALSE,TRUE,FALSE,Optic neuritis,SNOMED,S,V,66760008,Clinical Finding,Condition,2212772,21,3163406,21
+40323318,FALSE,TRUE,FALSE,Optic neuritis &/or retrobulbar neuritis,SNOMED,N,D,155189007,Clinical Finding,Condition,0,0,0,0
+37108802,FALSE,TRUE,FALSE,History of optic neuritis,SNOMED,S,V,13016271000119104,Context-dependent,Observation,0,0,0,0
+3080845,FALSE,TRUE,FALSE,Optic neuritis &/or retrobulbar neuritis,Nebraska Lexicon,N,D,155189007,Clinical Finding,Condition,0,0,0,0
+37017186,FALSE,TRUE,FALSE,Optic perineuritis,SNOMED,S,V,713417000,Clinical Finding,Condition,0,0,0,0

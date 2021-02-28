@@ -1,0 +1,256 @@
+﻿conceptId,isExcluded,includeDescendants,includeMapped,conceptName,vocabularyId,standardConcept,invalidReason,conceptCode,conceptClassId,domainId,rc,dbc,drc,ddbc
+4202837,FALSE,TRUE,FALSE,Unilateral paralysis of tongue,SNOMED,S,V,52787007,Clinical Finding,Observation,0,0,0,0
+4270644,FALSE,TRUE,FALSE,Cricket paralysis virus,SNOMED,S,V,63268005,Organism,Observation,0,0,0,0
+45880559,FALSE,TRUE,FALSE,pseudo paralysis,LOINC,S,V,LA21230-0,Answer,Meas Value,0,0,0,0
+2111113,FALSE,TRUE,FALSE,"Repair of blepharoptosis; (tarso) levator resection or advancement, internal approach",CPT4,S,V,67903,CPT4,Procedure,0,0,0,0
+40318855,FALSE,TRUE,FALSE,[D]Transient limb paralysis NOS,SNOMED,N,D,158207000,Context-dependent,Observation,0,0,0,0
+1032419,FALSE,TRUE,FALSE,Hemiplegia or hemiparesis,LOINC,N,V,LP74920-7,LOINC Component,Observation,0,0,0,0
+4243934,FALSE,TRUE,FALSE,Paralysis of tongue,SNOMED,S,V,38228000,Clinical Finding,Condition,0,0,0,0
+4347445,FALSE,TRUE,FALSE,Pseudobulbar Palsy,NDFRT,N,V,N0000004207,Ind / CI,Drug,0,0,0,0
+1034026,FALSE,TRUE,FALSE,Hemiplegia/hemiparesis in last 7 days,LOINC,N,V,LP90028-9,LOINC Component,Observation,0,0,0,0
+381572,FALSE,TRUE,FALSE,Abducens nerve palsy,SNOMED,S,V,398760006,Clinical Finding,Condition,1055572,20,1056302,20
+195240,FALSE,TRUE,FALSE,Monoplegia of lower limb,SNOMED,S,V,80420005,Clinical Finding,Condition,407033,20,1125383,20
+4346777,FALSE,TRUE,FALSE,Mobius Syndrome,NDFRT,N,V,N0000004114,Ind / CI,Drug,0,0,0,0
+43531639,FALSE,TRUE,FALSE,Paralytic syndrome on one side of the body,SNOMED,S,V,609557004,Clinical Finding,Condition,1393,7,68927113,22
+45877106,FALSE,TRUE,FALSE,Myasthenia Gravis,LOINC,S,V,LA15158-1,Answer,Meas Value,0,0,0,0
+36680604,FALSE,TRUE,FALSE,COL4A1-related familial vascular leukoencephalopathy,SNOMED,S,V,778060000,Clinical Finding,Condition,0,0,0,0
+4038582,FALSE,TRUE,FALSE,O/E - no paralysis,SNOMED,S,V,163599009,Context-dependent,Observation,0,0,0,0
+4012214,FALSE,TRUE,FALSE,Paralysis present,SNOMED,S,V,162241004,Clinical Finding,Observation,0,0,0,0
+2103680,FALSE,TRUE,FALSE,"Scapulopexy (eg, Sprengels deformity or for paralysis)",CPT4,S,V,23400,CPT4,Procedure,0,0,0,0
+1007805,FALSE,TRUE,FALSE,"Have you ever had any sudden episode of paralysis or weakness on one side of your body, including your face, arm, or leg which lasted at least 24 hours",LOINC,N,V,LP120720-0,LOINC Component,Observation,0,0,0,0
+376901,FALSE,TRUE,FALSE,"Acute paralytic poliomyelitis, bulbar",SNOMED,S,V,64764001,Clinical Finding,Condition,48719,13,58119,13
+4248158,FALSE,TRUE,FALSE,Poisoning by triorthocresyl phosphate,SNOMED,S,V,7287001,Clinical Finding,Condition,0,0,0,0
+76685,FALSE,TRUE,FALSE,Myasthenia gravis,SNOMED,S,V,91637004,Clinical Finding,Condition,3380320,22,7052766,22
+4267495,FALSE,TRUE,FALSE,Ophthalmoplegia,NDFRT,N,V,N0000002223,Ind / CI,Drug,0,0,0,0
+4079484,FALSE,TRUE,FALSE,Exercises for paralysis,SNOMED,S,V,183291002,Procedure,Observation,0,0,0,0
+2111111,FALSE,TRUE,FALSE,"Repair of blepharoptosis; frontalis muscle technique with suture or other material (eg, banked fascia)",CPT4,S,V,67901,CPT4,Procedure,0,0,0,0
+4028042,FALSE,TRUE,FALSE,Taboparesis,SNOMED,S,V,13310005,Clinical Finding,Condition,0,0,0,0
+43530612,FALSE,TRUE,FALSE,Paralytic syndrome of all four limbs as sequela of stroke,SNOMED,S,V,103761000119107,Clinical Finding,Condition,0,0,0,0
+4230185,FALSE,TRUE,FALSE,Complete unilateral paralysis,SNOMED,S,V,88715005,Clinical Finding,Observation,0,0,0,0
+378439,FALSE,TRUE,FALSE,Fourth nerve palsy,SNOMED,S,V,20610004,Clinical Finding,Condition,660564,20,681851,20
+4346775,FALSE,TRUE,FALSE,"Myasthenic Syndromes, Congenital",NDFRT,N,V,N0000004099,Ind / CI,Drug,0,0,0,0
+4228218,FALSE,TRUE,FALSE,Hysterical paralysis,SNOMED,S,V,88984006,Clinical Finding,Condition,0,0,0,0
+375263,FALSE,TRUE,FALSE,Cycloplegia,SNOMED,S,V,68158006,Clinical Finding,Condition,239368,13,248583,13
+4048496,FALSE,TRUE,FALSE,Congenital laryngeal adductor palsy,SNOMED,S,V,232443006,Clinical Finding,Condition,0,0,0,0
+4189235,FALSE,TRUE,FALSE,Third cranial nerve weakness,SNOMED,S,V,388980004,Clinical Finding,Condition,295157,17,710268,20
+4218201,FALSE,TRUE,FALSE,Infantile paralysis,SNOMED,S,V,397928009,Clinical Finding,Condition,0,0,0,0
+4163132,FALSE,TRUE,FALSE,Chastek paralysis,SNOMED,S,V,399041003,Clinical Finding,Condition,0,0,0,0
+4342577,FALSE,TRUE,FALSE,Marek Disease,NDFRT,N,V,N0000001944,Ind / CI,Drug,0,0,0,0
+4202652,FALSE,TRUE,FALSE,Heredofamilial brachial plexus paralysis syndrome,SNOMED,S,V,53857003,Clinical Finding,Condition,0,0,0,0
+4194210,FALSE,TRUE,FALSE,Monoparesis,SNOMED,S,V,79520009,Clinical Finding,Condition,0,0,0,0
+4087081,FALSE,TRUE,FALSE,Rucksack paralysis,SNOMED,S,V,24408004,Clinical Finding,Condition,0,0,0,0
+4345282,FALSE,TRUE,FALSE,Facial Paralysis,NDFRT,N,V,N0000001197,Ind / CI,Drug,0,0,0,0
+40768431,FALSE,TRUE,FALSE,"Have you ever had any sudden episode of paralysis or weakness on one side of your body, including your face, arm, or leg which lasted at least 24 hours [PhenX]",LOINC,S,V,65742-9,Clinical Observation,Observation,0,0,0,0
+4288861,FALSE,TRUE,FALSE,Paralysis of colon,SNOMED,S,V,69098002,Clinical Finding,Condition,0,0,0,0
+36676496,FALSE,TRUE,FALSE,Distal arthrogryposis type 5D,SNOMED,S,V,773396009,Clinical Finding,Condition,0,0,0,0
+1007807,FALSE,TRUE,FALSE,While you were having paralysis or weakness did any of these things occur,LOINC,N,V,LP120722-6,LOINC Component,Observation,0,0,0,0
+4104844,FALSE,TRUE,FALSE,Cervical sympathetic paralysis,SNOMED,S,V,192915005,Clinical Finding,Condition,0,0,0,0
+37075424,FALSE,TRUE,FALSE,Short myasthenia gravis panel | Serum | Serology Panels,LOINC,C,V,LP404124-2,LOINC Hierarchy,Measurement,0,0,0,0
+37042414,FALSE,TRUE,FALSE,Myasthenia grav eval adult rflx panel,LOINC,N,V,LP70984-7,LOINC Component,Observation,0,0,0,0
+37038758,FALSE,TRUE,FALSE,Thymoma and myasthenia gravis antibody panel,LOINC,N,V,LP268117-1,LOINC Component,Observation,0,0,0,0
+43530984,FALSE,TRUE,FALSE,Femoral nerve paralysis,SNOMED,S,V,609531002,Clinical Finding,Condition,0,0,0,0
+4139780,FALSE,TRUE,FALSE,Crutch paralysis,SNOMED,S,V,32739008,Clinical Finding,Condition,157922,12,157922,12
+3021157,FALSE,TRUE,FALSE,CACNA1S gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal,LOINC,S,V,21641-6,Lab Test,Measurement,0,0,0,0
+4034093,FALSE,TRUE,FALSE,Partial bilateral paralysis,SNOMED,S,V,23728006,Clinical Finding,Condition,0,0,0,0
+4031719,FALSE,TRUE,FALSE,"Paralysis of vagus, spinal accessory and hypoglossal nerves",SNOMED,S,V,129614001,Clinical Finding,Condition,0,0,0,0
+4346461,FALSE,TRUE,FALSE,"Paralysis, Hyperkalemic Periodic",NDFRT,N,V,N0000004155,Ind / CI,Drug,0,0,0,0
+4344089,FALSE,TRUE,FALSE,Paraplegia,NDFRT,N,V,N0000002316,Ind / CI,Drug,0,0,0,0
+192357,FALSE,TRUE,FALSE,Paralytic ileus,SNOMED,S,V,55525008,Clinical Finding,Condition,8499464,19,8499564,19
+3021383,FALSE,TRUE,FALSE,CACNA1S gene p.Arg1239Gly [Presence] in Blood or Tissue by Molecular genetics method,LOINC,S,V,21642-4,Lab Test,Measurement,0,0,0,0
+2313706,FALSE,TRUE,FALSE,"Facial nerve function studies (eg, electroneuronography)",CPT4,S,V,92516,CPT4,Procedure,0,0,0,0
+2111110,FALSE,TRUE,FALSE,"Repair of brow ptosis (supraciliary, mid-forehead or coronal approach)",CPT4,S,V,67900,CPT4,Procedure,0,0,0,0
+36310687,FALSE,TRUE,FALSE,"ElectroPhys: Neuromuscular Junction Disorders (e.g., Myasthenia Gravis & Lambert Eaton Syndrome)",LOINC,S,V,LA22258-0,Answer,Meas Value,0,0,0,0
+4267603,FALSE,TRUE,FALSE,Paresis,NDFRT,N,V,N0000002325,Ind / CI,Drug,0,0,0,0
+44783384,FALSE,TRUE,FALSE,Paralysis tick antivenom,SNOMED,N,V,699473006,Substance,Drug,0,0,0,0
+3038994,FALSE,TRUE,FALSE,MT-ATP6 gene m.8993T>G [Presence] in Blood or Tissue by Molecular genetics method,LOINC,S,V,40341-0,Lab Test,Measurement,0,0,0,0
+4177506,FALSE,TRUE,FALSE,Vagus nerve palate paralysis,SNOMED,S,V,50639002,Clinical Finding,Condition,0,0,0,0
+37205047,FALSE,TRUE,FALSE,Nerve palsy,SNOMED,S,V,784289008,Clinical Finding,Condition,0,0,0,0
+4242834,FALSE,TRUE,FALSE,Parinaud's syndrome,SNOMED,S,V,37991008,Clinical Finding,Condition,0,0,0,0
+261047,FALSE,TRUE,FALSE,Unilateral partial vocal cord paralysis,SNOMED,S,V,195842003,Clinical Finding,Observation,0,0,0,0
+42734679,FALSE,TRUE,FALSE,Tensilon test for myasthenia gravis; with electromyographic recording (Deprecated),CPT4,S,V,95858,CPT4,Procedure,0,0,0,0
+195847,FALSE,TRUE,FALSE,Gastroparesis syndrome,SNOMED,S,V,235675006,Clinical Finding,Condition,13324628,17,13351249,17
+4253668,FALSE,TRUE,FALSE,Tick paralysis,SNOMED,S,V,74225001,Clinical Finding,Condition,0,0,0,0
+4347115,FALSE,TRUE,FALSE,"Paralyses, Familial Periodic",NDFRT,N,V,N0000002305,Ind / CI,Drug,0,0,0,0
+4270614,FALSE,TRUE,FALSE,Amyotonia congenita,SNOMED,S,V,63135006,Clinical Finding,Condition,0,0,0,0
+4087793,FALSE,TRUE,FALSE,Myostatic paralysis,SNOMED,S,V,246782008,Clinical Finding,Condition,0,0,0,0
+4031798,FALSE,TRUE,FALSE,"Neurogenic muscle weakness, ataxia and retinitis pigmentosa",SNOMED,S,V,237984008,Clinical Finding,Condition,0,0,0,0
+379012,FALSE,TRUE,FALSE,Monoplegia of upper limb,SNOMED,S,V,41764006,Clinical Finding,Condition,229715,20,1219286,20
+1008506,FALSE,TRUE,FALSE,Muscle atrophy or weakness,LOINC,N,V,LP128771-5,LOINC Component,Observation,0,0,0,0
+4311957,FALSE,TRUE,FALSE,Cholinergic crisis,SNOMED,S,V,8563000,Clinical Finding,Condition,0,0,0,0
+36210710,FALSE,TRUE,FALSE,Hemiplegia or hemiparesis,LOINC,S,V,LA27523-2,Answer,Meas Value,0,0,0,0
+37042982,FALSE,TRUE,FALSE,Thymoma and myasthenia gravis antibody panel | Serum | Serology Panels,LOINC,C,V,LP404129-1,LOINC Hierarchy,Measurement,0,0,0,0
+4267776,FALSE,TRUE,FALSE,"Myasthenia Gravis, Autoimmune, Experimental",NDFRT,N,V,N0000004166,Ind / CI,Drug,0,0,0,0
+4346454,FALSE,TRUE,FALSE,Paraparesis,NDFRT,N,V,N0000004116,Ind / CI,Drug,0,0,0,0
+4043747,FALSE,TRUE,FALSE,Spastic cerebral palsy,SNOMED,S,V,230773005,Clinical Finding,Condition,6657,4,11772550,20
+4239173,FALSE,TRUE,FALSE,Cerebral paresis with homolateral ataxia,SNOMED,S,V,68107009,Clinical Finding,Condition,0,0,0,0
+4080826,FALSE,TRUE,FALSE,Divergence paralysis,SNOMED,S,V,246717005,Clinical Finding,Condition,0,0,0,0
+45877843,FALSE,TRUE,FALSE,"Partial gaze palsy; gaze is abnormal in one or both eyes, but forced deviation or total gaze paresis is not present",LOINC,S,V,LA18446-7,Answer,Meas Value,0,0,0,0
+1007806,FALSE,TRUE,FALSE,Things occurring with paralysis or weakness,LOINC,N,V,LP120721-8,LOINC Component,Observation,0,0,0,0
+4132103,FALSE,TRUE,FALSE,Unilateral paresis,SNOMED,S,V,127377003,Clinical Finding,Observation,0,0,0,0
+37069369,FALSE,TRUE,FALSE,Short myasthenia gravis panel,LOINC,N,V,LP94636-5,LOINC Component,Observation,0,0,0,0
+40351980,FALSE,TRUE,FALSE,Divers palsy,SNOMED,N,D,269425003,Clinical Finding,Condition,0,0,0,0
+3003086,FALSE,TRUE,FALSE,CACNA1S gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal,LOINC,S,V,21645-7,Lab Test,Measurement,0,0,0,0
+4268199,FALSE,TRUE,FALSE,"Myasthenia Gravis, Neonatal",NDFRT,N,V,N0000004229,Ind / CI,Drug,0,0,0,0
+4048495,FALSE,TRUE,FALSE,Congenital laryngeal abductor palsy,SNOMED,S,V,232442001,Clinical Finding,Condition,0,0,0,0
+1007699,FALSE,TRUE,FALSE,"Do you ever experience periods of muscle weakness, loss of muscle strength or limp muscles in any part of your body, such as the legs or face, when you are angry",LOINC,N,V,LP120278-9,LOINC Component,Observation,0,0,0,0
+2111116,FALSE,TRUE,FALSE,"Repair of blepharoptosis; conjunctivo-tarso-Muller's muscle-levator resection (eg, Fasanella-Servat type)",CPT4,S,V,67908,CPT4,Procedure,0,0,0,0
+765474,FALSE,TRUE,FALSE,Paralysis of left musculocutaneous nerve,SNOMED,S,V,292611000119107,Clinical Finding,Condition,0,0,0,0
+4063206,FALSE,TRUE,FALSE,O/E -cranial nerve 3-paralysis,SNOMED,S,V,164092003,Clinical Finding,Condition,0,0,0,0
+40768316,FALSE,TRUE,FALSE,"Do you ever experience periods of muscle weakness, loss of muscle strength or limp muscles in any part of your body, such as the legs or face, when you hear or tell a joke [PhenX]",LOINC,S,V,65624-9,Clinical Observation,Observation,0,0,0,0
+40395430,FALSE,TRUE,FALSE,Paralysis of vocal cords &/or larynx,SNOMED,N,U,195840006,Clinical Finding,Condition,0,0,0,0
+4092151,FALSE,TRUE,FALSE,Degree of paralysis,SNOMED,S,V,280942002,Attribute,Observation,0,0,0,0
+4184466,FALSE,TRUE,FALSE,Juvenile paralysis agitans of Hunt,SNOMED,S,V,43647007,Clinical Finding,Condition,0,0,0,0
+4173242,FALSE,TRUE,FALSE,Triparesis,SNOMED,S,V,48163001,Clinical Finding,Condition,0,0,0,0
+4196570,FALSE,TRUE,FALSE,Inferior rectus underaction,SNOMED,S,V,313161005,Clinical Finding,Condition,0,0,0,0
+4160436,FALSE,TRUE,FALSE,Common peroneal nerve paralysis,SNOMED,S,V,399088004,Clinical Finding,Condition,0,0,0,0
+4282298,FALSE,TRUE,FALSE,Ixodes rubicundus,SNOMED,S,V,66248008,Organism,Observation,0,0,0,0
+4029795,FALSE,TRUE,FALSE,Reticuloendothelial blockade,SNOMED,S,V,13897001,Clinical Finding,Condition,0,0,0,0
+4198623,FALSE,TRUE,FALSE,Intermediate syndrome,SNOMED,S,V,432991000,Clinical Finding,Condition,0,0,0,0
+37116570,FALSE,TRUE,FALSE,Parasympathoparetic pupil,SNOMED,S,V,733320001,Clinical Finding,Condition,0,0,0,0
+4345730,FALSE,TRUE,FALSE,"Paraparesis, Tropical Spastic",NDFRT,N,V,N0000003276,Ind / CI,Drug,0,0,0,0
+45879379,FALSE,TRUE,FALSE,Complete paralysis of one or both sides (absence of facial movement in the upper and lower face),LOINC,S,V,LA18455-8,Answer,Meas Value,0,0,0,0
+4165573,FALSE,TRUE,FALSE,Sweeney,SNOMED,N,D,4109002,Clinical Finding,Condition,0,0,0,0
+764537,FALSE,TRUE,FALSE,Facial reanimation,SNOMED,S,V,456321000124101,Procedure,Procedure,0,0,0,0
+4300753,FALSE,TRUE,FALSE,Immunologic tolerance,SNOMED,S,V,77472006,Observable Entity,Observation,0,0,0,0
+436684,FALSE,TRUE,FALSE,Progressive bulbar palsy,SNOMED,S,V,54304004,Clinical Finding,Condition,120477,15,120477,15
+43530611,FALSE,TRUE,FALSE,Paralytic syndrome of both lower limbs as sequela of stroke,SNOMED,S,V,102831000119104,Clinical Finding,Condition,0,0,0,0
+4268062,FALSE,TRUE,FALSE,Oculomotor Nerve Diseases,NDFRT,N,V,N0000003338,Ind / CI,Drug,0,0,0,0
+375536,FALSE,TRUE,FALSE,Organic writer's cramp,SNOMED,S,V,52008007,Clinical Finding,Condition,57891,14,57891,14
+4339031,FALSE,TRUE,FALSE,Horizontal gaze palsy,SNOMED,S,V,232115006,Clinical Finding,Condition,0,0,0,0
+3049017,FALSE,TRUE,FALSE,MT-ATP6 gene targeted mutation analysis in Blood or Tissue by Molecular genetics method,LOINC,S,V,38405-7,Lab Test,Measurement,0,0,0,0
+4337583,FALSE,TRUE,FALSE,Operation in laryngeal paralysis,SNOMED,S,V,232550007,Procedure,Procedure,0,0,0,0
+442774,FALSE,TRUE,FALSE,Intermittent claudication,SNOMED,S,V,63491006,Clinical Finding,Condition,333078,14,391623,14
+4344088,FALSE,TRUE,FALSE,"Paralysis, Obstetric",NDFRT,N,V,N0000002306,Ind / CI,Drug,0,0,0,0
+4213749,FALSE,TRUE,FALSE,Myasthenia gravis panel measurement,SNOMED,S,V,80681001,Procedure,Measurement,0,0,0,0
+4172528,FALSE,TRUE,FALSE,Pelagic paralysis,SNOMED,S,V,277190002,Clinical Finding,Condition,0,0,0,0
+4095248,FALSE,TRUE,FALSE,acute canine polyradiculoneuropathy,SNOMED,N,D,26251000,Clinical Finding,Condition,0,0,0,0
+3079595,FALSE,TRUE,FALSE,Avian curly toe paralysis,Nebraska Lexicon,N,D,63230008,Clinical Finding,Condition,0,0,0,0
+3188623,FALSE,TRUE,FALSE,CVA with associated bilateral paralysis,Nebraska Lexicon,S,V,5560001000004105,Clinical Finding,Condition,0,0,0,0
+37019108,FALSE,TRUE,FALSE,Human T-cell lymphotropic virus 1-associated myelopathy,SNOMED,S,V,714279000,Clinical Finding,Condition,43454,12,43454,12
+36306205,FALSE,TRUE,FALSE,Titin Ab [Units/volume] in Serum by Line blot,LOINC,S,V,88740-6,Lab Test,Measurement,0,0,0,0
+3083780,FALSE,TRUE,FALSE,[D]Transient limb paralysis NOS,Nebraska Lexicon,N,D,206831004,Context-dependent,Observation,0,0,0,0
+3076724,FALSE,TRUE,FALSE,Infectious bulbar paralysis,Nebraska Lexicon,N,D,6462002,Clinical Finding,Condition,0,0,0,0
+4277456,FALSE,TRUE,FALSE,Diplegia,SNOMED,S,V,6481005,Clinical Finding,Condition,348,2,142754,17
+3187113,FALSE,TRUE,FALSE,CVA with associated paralysis of dominant side,Nebraska Lexicon,S,V,5540001000004100,Clinical Finding,Condition,0,0,0,0
+40225654,FALSE,TRUE,FALSE,Delayed Emergence from Anesthesia,NDFRT,N,V,N0000181157,Ind / CI,Drug,0,0,0,0
+40768314,FALSE,TRUE,FALSE,"Do you ever experience periods of muscle weakness, loss of muscle strength or limp muscles in any part of your body, such as the legs or face, when you laugh [PhenX]",LOINC,S,V,65622-3,Clinical Observation,Observation,0,0,0,0
+3183806,FALSE,TRUE,FALSE,Postviral gastroparesis,Nebraska Lexicon,S,V,22690001000004102,Clinical Finding,Condition,0,0,0,0
+40757940,FALSE,TRUE,FALSE,Hemiplegia/hemiparesis in last 7 days [MDSv3],LOINC,S,V,54809-9,Survey,Observation,0,0,0,0
+4131651,FALSE,TRUE,FALSE,Nuclear facial nerve paralysis,SNOMED,S,V,26554009,Clinical Finding,Condition,0,0,0,0
+4143470,FALSE,TRUE,FALSE,Edrophonium chloride test for myasthenia gravis,SNOMED,S,V,33981001,Procedure,Procedure,0,0,0,0
+4064216,FALSE,TRUE,FALSE,O/E -cranial nerve 4-paralysis,SNOMED,S,V,164095001,Clinical Finding,Condition,0,0,0,0
+36210480,FALSE,TRUE,FALSE,Stroke- no paresis,LOINC,N,D,LA27361-7,Answer,Meas Value,0,0,0,0
+4318844,FALSE,TRUE,FALSE,Detrusor muscle paresis,SNOMED,S,V,95585001,Clinical Finding,Condition,0,0,0,0
+40768432,FALSE,TRUE,FALSE,Things occurring with paralysis or weakness [PhenX],LOINC,S,V,65743-7,Clinical Observation,Observation,0,0,0,0
+4103073,FALSE,TRUE,FALSE,Porcine enteroviral encephalomyelitis,SNOMED,N,D,28815008,Clinical Finding,Condition,0,0,0,0
+4062847,FALSE,TRUE,FALSE,O/E -cranial 7 -paralysis -LMN,SNOMED,S,V,164107001,Clinical Finding,Condition,0,0,0,0
+37396501,FALSE,TRUE,FALSE,Worster Drought syndrome,SNOMED,S,V,716335003,Clinical Finding,Condition,0,0,0,0
+3044157,FALSE,TRUE,FALSE,Hemiplegia or hemiparesis [Minimum Data Set],LOINC,S,V,45657-4,Survey,Observation,0,0,0,0
+2111112,FALSE,TRUE,FALSE,Repair of blepharoptosis; frontalis muscle technique with autologous fascial sling (includes obtaining fascia),CPT4,S,V,67902,CPT4,Procedure,0,0,0,0
+4148062,FALSE,TRUE,FALSE,Paresis of extraocular muscles,SNOMED,S,V,35158001,Clinical Finding,Condition,0,0,0,0
+4063211,FALSE,TRUE,FALSE,O/E-cranial nerve 12 paralysis,SNOMED,S,V,164122006,Clinical Finding,Condition,0,0,0,0
+435238,FALSE,TRUE,FALSE,Sleep paralysis,SNOMED,S,V,277180005,Clinical Finding,Condition,3051,2,68349,14
+37311922,FALSE,TRUE,FALSE,Leaden paralysis,SNOMED,S,V,788976000,Clinical Finding,Condition,0,0,0,0
+1014459,FALSE,TRUE,FALSE,Paralysis,LOINC,N,V,LP202888-6,LOINC Component,Observation,0,0,0,0
+73184,FALSE,TRUE,FALSE,Familial periodic paralysis,SNOMED,S,V,267607008,Clinical Finding,Condition,0,0,0,0
+4081615,FALSE,TRUE,FALSE,Paraparesis,SNOMED,S,V,1845001,Clinical Finding,Condition,0,0,0,0
+4346433,FALSE,TRUE,FALSE,Sleep Paralysis,NDFRT,N,V,N0000004027,Ind / CI,Drug,0,0,0,0
+40769329,FALSE,TRUE,FALSE,History of Muscle atrophy or weakness [PhenX],LOINC,S,V,66669-3,Clinical Observation,Observation,0,0,0,0
+4102093,FALSE,TRUE,FALSE,Obturator nerve paralysis,SNOMED,S,V,252794008,Clinical Finding,Condition,0,0,0,0
+45880595,FALSE,TRUE,FALSE,"Minor paralysis (flattened nasolabial fold, asymmetry on smiling)",LOINC,S,V,LA18453-3,Answer,Meas Value,0,0,0,0
+444419,FALSE,TRUE,FALSE,Tetraparesis,SNOMED,S,V,91327001,Clinical Finding,Condition,0,0,0,0
+4267635,FALSE,TRUE,FALSE,Gastroparesis,NDFRT,N,V,N0000003835,Ind / CI,Drug,0,0,0,0
+4350261,FALSE,TRUE,FALSE,"Paraparesis, Spastic",NDFRT,N,V,N0000004117,Ind / CI,Drug,0,0,0,0
+4231407,FALSE,TRUE,FALSE,Parturient paresis,SNOMED,S,V,405256006,Clinical Finding,Condition,0,0,0,0
+4267040,FALSE,TRUE,FALSE,Vocal Cord Paralysis,NDFRT,N,V,N0000003139,Ind / CI,Drug,0,0,0,0
+4241576,FALSE,TRUE,FALSE,Congenital syphilitic osteochondritis,SNOMED,S,V,58392004,Clinical Finding,Condition,9275,12,9275,12
+4062578,FALSE,TRUE,FALSE,O/E -cranial nerve 5-paralysis,SNOMED,S,V,164104008,Clinical Finding,Condition,0,0,0,0
+4234721,FALSE,TRUE,FALSE,Paraplegia-paraparesis rehabilitation,SNOMED,S,V,90196004,Procedure,Procedure,0,0,0,0
+4064218,FALSE,TRUE,FALSE,O/E -cranial nerve 6-paralysis,SNOMED,S,V,164098004,Clinical Finding,Condition,0,0,0,0
+4032342,FALSE,TRUE,FALSE,Paralysis of palate,SNOMED,S,V,129583005,Clinical Finding,Condition,0,0,0,0
+4300080,FALSE,TRUE,FALSE,Complete unilateral paresis,SNOMED,S,V,77291009,Clinical Finding,Observation,0,0,0,0
+4276185,FALSE,TRUE,FALSE,Pseudorabies,SNOMED,N,D,6462002,Clinical Finding,Condition,0,0,0,0
+4045732,FALSE,TRUE,FALSE,Myopathy in myasthenia gravis,SNOMED,S,V,230687001,Clinical Finding,Condition,0,0,0,0
+4266290,FALSE,TRUE,FALSE,Myasthenia Gravis,NDFRT,N,V,N0000002070,Ind / CI,Drug,0,0,0,0
+762807,FALSE,TRUE,FALSE,History of hemorrhagic stroke with residual hemiparesis,SNOMED,S,V,432191000124101,Context-dependent,Observation,0,0,0,0
+4267604,FALSE,TRUE,FALSE,Parkinson Disease,NDFRT,N,V,N0000002327,Ind / CI,Drug,0,0,0,0
+4200538,FALSE,TRUE,FALSE,Pupillary paralysis,SNOMED,S,V,5310008,Clinical Finding,Condition,0,0,0,0
+37070668,FALSE,TRUE,FALSE,Myasthenia grav eval adult rflx panel | Serum | Serology Panels,LOINC,C,V,LP404113-5,LOINC Hierarchy,Measurement,0,0,0,0
+4318400,FALSE,TRUE,FALSE,Respiratory tract paralysis,SNOMED,S,V,95430002,Clinical Finding,Condition,0,0,0,0
+37206120,FALSE,TRUE,FALSE,"Palmoplantar keratoderma, spastic paralysis syndrome",SNOMED,S,V,785725008,Clinical Finding,Condition,0,0,0,0
+4346672,FALSE,TRUE,FALSE,Muscle Weakness,NDFRT,N,V,N0000003878,Ind / CI,Drug,0,0,0,0
+4300531,FALSE,TRUE,FALSE,Erb-Duchenne paralysis,SNOMED,S,V,78141002,Clinical Finding,Condition,1723,4,111838,18
+4215375,FALSE,TRUE,FALSE,Marek disease,SNOMED,N,D,41615007,Clinical Finding,Condition,0,0,0,0
+4275753,FALSE,TRUE,FALSE,Drug-induced myasthenia,SNOMED,S,V,65242001,Clinical Finding,Condition,0,0,0,0
+4159154,FALSE,TRUE,FALSE,Paralysis from birth trauma,SNOMED,S,V,371129000,Clinical Finding,Condition,100,1,115706,17
+4139136,FALSE,TRUE,FALSE,Nothnagel's syndrome,SNOMED,S,V,32680009,Clinical Finding,Condition,0,0,0,0
+440377,FALSE,TRUE,FALSE,Paralysis,SNOMED,S,V,44695005,Clinical Finding,Condition,2078833,16,13944225,22
+40400057,FALSE,TRUE,FALSE,[D]Transient limb paralysis NOS,SNOMED,N,D,206831004,Context-dependent,Observation,0,0,0,0
+3082507,FALSE,TRUE,FALSE,Suprascapular paralysis,Nebraska Lexicon,N,D,4109002,Clinical Finding,Condition,0,0,0,0
+765130,FALSE,TRUE,FALSE,Family history of myasthenia gravis,SNOMED,S,V,3570001000004106,Context-dependent,Observation,0,0,0,0
+4240594,FALSE,TRUE,FALSE,Cerebral paralysis with homolateral ataxia,SNOMED,S,V,59103002,Clinical Finding,Condition,0,0,0,0
+374041,FALSE,TRUE,FALSE,External ophthalmoplegia,SNOMED,S,V,19373007,Clinical Finding,Condition,61383,14,328612,20
+45880849,FALSE,TRUE,FALSE,Partial paralysis (total or near-total paralysis of lower face),LOINC,S,V,LA18454-1,Answer,Meas Value,0,0,0,0
+4278082,FALSE,TRUE,FALSE,Supranuclear paralysis,SNOMED,S,V,66010009,Clinical Finding,Condition,0,0,0,0
+4337446,FALSE,TRUE,FALSE,Acute mastoiditis with facial paralysis,SNOMED,S,V,232269003,Clinical Finding,Condition,0,0,0,0
+4266407,FALSE,TRUE,FALSE,Paralysis,NDFRT,N,V,N0000002303,Ind / CI,Drug,0,0,0,0
+4224848,FALSE,TRUE,FALSE,Andersen Tawil syndrome,SNOMED,S,V,422348008,Clinical Finding,Condition,0,0,0,0
+45883630,FALSE,TRUE,FALSE,Paralysis,LOINC,S,V,LA17344-5,Answer,Meas Value,0,0,0,0
+3005146,FALSE,TRUE,FALSE,CACNA1S gene p.Arg1239His [Presence] in Blood or Tissue by Molecular genetics method,LOINC,S,V,21643-2,Lab Test,Measurement,0,0,0,0
+3000223,FALSE,TRUE,FALSE,CACNA1S gene p.Arg528His [Presence] in Blood or Tissue by Molecular genetics method,LOINC,S,V,21644-0,Lab Test,Measurement,0,0,0,0
+4257618,FALSE,TRUE,FALSE,Andersen Syndrome,NDFRT,N,V,N0000171668,Ind / CI,Drug,0,0,0,0
+4104204,FALSE,TRUE,FALSE,Complete bilateral paralysis,SNOMED,S,V,29188005,Clinical Finding,Condition,200,2,34484161,22
+40789537,FALSE,TRUE,FALSE,Myasthenia gravis treatment,LOINC,C,V,LP31479-6,LOINC Hierarchy,Measurement,0,0,0,0
+3013246,FALSE,TRUE,FALSE,MT-ATP6 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal,LOINC,S,V,21704-2,Lab Test,Measurement,0,0,0,0
+4164770,FALSE,TRUE,FALSE,Guillain-Barré syndrome,SNOMED,S,V,40956001,Clinical Finding,Condition,1190028,19,1190528,19
+4137853,FALSE,TRUE,FALSE,Contracture of gastrocnemius muscle due to paralysis,SNOMED,S,V,425491009,Clinical Finding,Condition,0,0,0,0
+4045740,FALSE,TRUE,FALSE,Lacunar ataxic hemiparesis,SNOMED,S,V,230702001,Clinical Finding,Condition,0,0,0,0
+4062583,FALSE,TRUE,FALSE,O/E - cranials 9+10 paralysis,SNOMED,S,V,164116002,Clinical Finding,Condition,0,0,0,0
+378158,FALSE,TRUE,FALSE,Convergence palsy,SNOMED,S,V,194132009,Clinical Finding,Condition,0,0,0,0
+4268601,FALSE,TRUE,FALSE,Curled toe paralysis,SNOMED,N,D,63230008,Clinical Finding,Condition,0,0,0,0
+4234100,FALSE,TRUE,FALSE,Downer cow syndrome,SNOMED,N,D,90119005,Clinical Finding,Condition,0,0,0,0
+4221837,FALSE,TRUE,FALSE,Klumpke-Déjerine paralysis,SNOMED,S,V,83886009,Clinical Finding,Condition,200,2,2493,13
+1007700,FALSE,TRUE,FALSE,"Do you ever experience periods of muscle weakness, loss of muscle strength or limp muscles in any part of your body, such as the legs or face, when you hear or tell a joke",LOINC,N,V,LP120279-7,LOINC Component,Observation,0,0,0,0
+3060936,FALSE,TRUE,FALSE,[D]Transient limb paralysis NOS,Nebraska Lexicon,N,D,158207000,Context-dependent,Observation,0,0,0,0
+436011,FALSE,TRUE,FALSE,Bends,SNOMED,S,V,89684003,Clinical Finding,Condition,36313,18,36413,18
+4346532,FALSE,TRUE,FALSE,Hypokalemic Periodic Paralysis,NDFRT,N,V,N0000004156,Ind / CI,Drug,0,0,0,0
+196736,FALSE,TRUE,FALSE,Paralysis of bladder,SNOMED,S,V,398029001,Clinical Finding,Condition,46492,13,46492,13
+4345243,FALSE,TRUE,FALSE,Tick Paralysis,NDFRT,N,V,N0000002952,Ind / CI,Drug,0,0,0,0
+4063210,FALSE,TRUE,FALSE,O/E-cranial nerve 11 paralysis,SNOMED,S,V,164119009,Clinical Finding,Condition,0,0,0,0
+3033373,FALSE,TRUE,FALSE,MT-ATP6 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal,LOINC,S,V,22069-9,Lab Test,Measurement,0,0,0,0
+42528594,FALSE,TRUE,FALSE,Titin Ab [Presence] in Serum by Line blot,LOINC,S,V,82449-0,Lab Test,Measurement,0,0,0,0
+4253192,FALSE,TRUE,FALSE,Secondary periodic paralysis,SNOMED,S,V,7409003,Clinical Finding,Condition,0,0,0,0
+4275136,FALSE,TRUE,FALSE,Paralysis of diaphragm,SNOMED,S,V,64228003,Clinical Finding,Condition,0,0,0,0
+4059614,FALSE,TRUE,FALSE,Bladder sphincter paralysis,SNOMED,S,V,197876006,Clinical Finding,Condition,0,0,0,0
+4333912,FALSE,TRUE,FALSE,Abnormal gait due to muscle weakness,SNOMED,S,V,432559006,Clinical Finding,Observation,0,0,0,0
+4216080,FALSE,TRUE,FALSE,Partial unilateral paralysis,SNOMED,S,V,71738007,Clinical Finding,Observation,0,0,0,0
+4032800,FALSE,TRUE,FALSE,Saturday night paralysis,SNOMED,S,V,14786003,Clinical Finding,Condition,0,0,0,0
+37040877,FALSE,TRUE,FALSE,Myasthenia gravis evaluation pediatric panel,LOINC,N,V,LP70983-9,LOINC Component,Observation,0,0,0,0
+37062138,FALSE,TRUE,FALSE,Myasthenia gravis evaluation pediatric panel | Serum | Serology Panels,LOINC,C,V,LP404114-3,LOINC Hierarchy,Measurement,0,0,0,0
+1007698,FALSE,TRUE,FALSE,"Do you ever experience periods of muscle weakness, loss of muscle strength or limp muscles in any part of your body, such as the legs or face, when you laugh",LOINC,N,V,LP120277-1,LOINC Component,Observation,0,0,0,0
+21495004,FALSE,TRUE,FALSE,Paralysis [Type],LOINC,S,V,80326-2,Clinical Observation,Observation,0,0,0,0
+4196572,FALSE,TRUE,FALSE,Inferior oblique underaction,SNOMED,S,V,313163008,Clinical Finding,Condition,0,0,0,0
+40768315,FALSE,TRUE,FALSE,"Do you ever experience periods of muscle weakness, loss of muscle strength or limp muscles in any part of your body, such as the legs or face, when you are angry [PhenX]",LOINC,S,V,65623-1,Clinical Observation,Observation,0,0,0,0
+4171937,FALSE,TRUE,FALSE,Paralysis absent,SNOMED,S,V,274811005,Clinical Finding,Condition,0,0,0,0
+2111115,FALSE,TRUE,FALSE,Repair of blepharoptosis; superior rectus technique with fascial sling (includes obtaining fascia),CPT4,S,V,67906,CPT4,Procedure,0,0,0,0
+42529128,FALSE,TRUE,FALSE,Titin IgG Ab [Presence] in Serum or Plasma by Line blot,LOINC,S,V,83000-0,Lab Test,Measurement,0,0,0,0
+4319469,FALSE,TRUE,FALSE,Congenital flaccid paralysis,SNOMED,S,V,95652003,Clinical Finding,Condition,0,0,0,0
+45887745,FALSE,TRUE,FALSE,Graft for facial nerve paralysis,CPT4,C,V,1003520,CPT4 Hierarchy,Procedure,0,0,0,0
+3064050,FALSE,TRUE,FALSE,Paralysis of vocal cords &/or larynx,Nebraska Lexicon,N,D,195840006,Clinical Finding,Condition,0,0,0,0
+43530667,FALSE,TRUE,FALSE,History of hemorrhagic stroke with hemiparesis,SNOMED,S,V,140701000119108,Context-dependent,Observation,0,0,0,0
+4318979,FALSE,TRUE,FALSE,Unilateral facial paresis,SNOMED,S,V,95667004,Clinical Finding,Observation,0,0,0,0
+4217869,FALSE,TRUE,FALSE,Muscle paralysis,SNOMED,S,V,416660001,Procedure,Procedure,0,0,0,0
+42487983,FALSE,TRUE,FALSE,Paresis of accommodation,KCD7,N,V,H52.51,KCD7 code,Condition,0,0,0,0
+4079019,FALSE,TRUE,FALSE,Phrenic nerve lesion,SNOMED,S,V,277321001,Clinical Finding,Condition,1279,3,3800,14
+4347829,FALSE,TRUE,FALSE,Respiratory Paralysis,NDFRT,N,V,N0000002600,Ind / CI,Drug,0,0,0,0
+40768433,FALSE,TRUE,FALSE,While you were having paralysis or weakness did any of these things occur [PhenX],LOINC,S,V,65744-5,Clinical Observation,Observation,0,0,0,0
+4335605,FALSE,TRUE,FALSE,Pharmacological paralysis of accommodation,SNOMED,S,V,232145009,Clinical Finding,Condition,0,0,0,0
+45881731,FALSE,TRUE,FALSE,Paralysis or weakness,LOINC,S,V,LA16359-4,Answer,Meas Value,0,0,0,0
+4274316,FALSE,TRUE,FALSE,Fugu poisoning,SNOMED,S,V,64815002,Clinical Finding,Condition,0,0,0,0
+45879989,FALSE,TRUE,FALSE,"Forced deviation, or total gaze paresis not overcome by the oculocephalic maneuver",LOINC,S,V,LA18447-5,Answer,Meas Value,0,0,0,0
+79908,FALSE,TRUE,FALSE,Muscle weakness,SNOMED,S,V,26544005,Clinical Finding,Condition,242366852,17,249209818,17
+4350260,FALSE,TRUE,FALSE,Bell Palsy,NDFRT,N,V,N0000004113,Ind / CI,Drug,0,0,0,0
+3185422,FALSE,TRUE,FALSE,Paralysis of nondominant side complicating stroke,Nebraska Lexicon,S,V,5550001000004102,Clinical Finding,Condition,0,0,0,0
+381270,FALSE,TRUE,FALSE,Parkinson's disease,SNOMED,S,V,49049000,Clinical Finding,Condition,58785465,21,58787052,21
+4157607,FALSE,TRUE,FALSE,Paralysis due to lesion of spinal cord,SNOMED,S,V,372310001,Clinical Finding,Condition,200,2,3828982,14
+45765471,FALSE,TRUE,FALSE,Fatty acid hydroxylase associated neurodegeneration,SNOMED,S,V,702419001,Clinical Finding,Condition,0,0,0,0

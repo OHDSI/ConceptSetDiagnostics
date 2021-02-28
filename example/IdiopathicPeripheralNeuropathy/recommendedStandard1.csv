@@ -1,0 +1,13 @@
+﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,rc,dc,drc,dbc
+4301699,Neuropathy,SNOMED,Condition,S,Not included - parent,6813036,17,900922034,22
+4175154,Disorder of the peripheral nervous system,SNOMED,Condition,S,Not included - recommended via source,1953226,16,879780565,22
+4175154,Disorder of the peripheral nervous system,SNOMED,Condition,S,Not included - parent,1953226,16,879780565,22
+4045631,Idiopathic chronic neuropathy,SNOMED,Condition,S,Not included - descendant,967,2,3573414,18
+380394,Idiopathic progressive polyneuropathy,SNOMED,Condition,S,Not included - descendant,3570915,18,3570915,18
+377271,Neuralgic amyotrophy,SNOMED,Condition,S,Not included - descendant,196723,20,196923,20
+4046353,Axonal sensorimotor neuropathy,SNOMED,Condition,S,Not included - descendant,1148,2,1148,2
+4045632,Demyelinating sensorimotor neuropathy,SNOMED,Condition,S,Not included - descendant,284,2,284,2
+4104844,Cervical sympathetic paralysis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+42535118,Right Parsonage Turner syndrome,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4046354,Chronic idiopathic ataxic neuropathy,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539198,Left Parsonage Turner syndrome,SNOMED,Condition,S,Not included - descendant,100,1,100,1

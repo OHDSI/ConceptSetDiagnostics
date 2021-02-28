@@ -1,0 +1,1415 @@
+﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,rc,dc,drc,dbc
+321887,Disorder of artery,SNOMED,Condition,S,Not included - parent,5737069,20,802128018,22
+4114166,Systemic arterial finding,SNOMED,Condition,S,Not included - parent,2687,2,718549736,22
+321052,Peripheral vascular disease,SNOMED,Condition,S,Not included - descendant,115093764,22,155613237,22
+4187240,Disorder of aorta,SNOMED,Condition,S,Not included - descendant,106524,10,70325319,22
+4102928,Obstruction of precerebral artery,SNOMED,Condition,S,Not included - descendant,1829,2,62248807,18
+4153380,Disorder of carotid artery,SNOMED,Condition,S,Not included - descendant,6498530,17,62189519,22
+4288310,Carotid artery obstruction,SNOMED,Condition,S,Not included - descendant,52200994,14,53046493,17
+43021868,Aneurysm of peripheral artery,SNOMED,Condition,S,Not included - descendant,100,1,41899934,22
+4132130,Dilatation of aorta,SNOMED,Condition,S,Not included - descendant,751167,15,41283193,22
+321822,Peripheral vascular disorder due to diabetes mellitus,SNOMED,Condition,S,Not included - descendant,716547,20,40334564,21
+317585,Aortic aneurysm,SNOMED,Condition,S,Not included - descendant,3585575,22,36824849,22
+443729,Peripheral circulatory disorder due to type 2 diabetes mellitus,SNOMED,Condition,S,Not included - descendant,35298934,19,35370087,19
+40491455,Abnormality of abdominal aorta,SNOMED,Condition,S,Not included - descendant,1886,2,26251168,22
+40486130,Dilatation of descending aorta,SNOMED,Condition,S,Not included - descendant,573470,14,25387806,22
+37016191,Abdominal aortic ectasia,SNOMED,Condition,S,Not included - descendant,481549,14,24809987,22
+4140448,Aneurysm of descending aorta,SNOMED,Condition,S,Not included - descendant,2618,3,24332787,22
+198177,Abdominal aortic aneurysm,SNOMED,Condition,S,Not included - descendant,460274,10,24328438,22
+321314,Abdominal aortic aneurysm without rupture,SNOMED,Condition,S,Not included - descendant,22725609,16,22725609,16
+317309,Peripheral arterial occlusive disease,SNOMED,Condition,S,Not included - descendant,3931867,17,18319240,22
+762752,Arteriosclerosis of aorta,SNOMED,Condition,S,Not included - descendant,186,1,17866125,20
+312934,Atherosclerosis of aorta,SNOMED,Condition,S,Not included - descendant,17842544,20,17865739,20
+4209843,Disorder of thoracic aorta,SNOMED,Condition,S,Not included - descendant,2006,3,17451603,22
+36717267,Ectasia of thoracic aorta,SNOMED,Condition,S,Not included - descendant,2554737,14,12027076,21
+4278243,Cerebral arteriosclerosis,SNOMED,Condition,S,Not included - descendant,8584,3,9790294,20
+316437,Cerebral atherosclerosis,SNOMED,Condition,S,Not included - descendant,9781710,20,9781710,20
+443622,Aneurysm of thoracic aorta,SNOMED,Condition,S,Not included - descendant,4265778,19,9394260,21
+443239,Precerebral arterial occlusion,SNOMED,Condition,S,Not included - descendant,748907,14,9289802,18
+314962,Raynaud's disease,SNOMED,Condition,S,Not included - descendant,7493562,22,7493562,22
+439295,Multiple and bilateral precerebral arterial occlusion,SNOMED,Condition,S,Not included - descendant,7345676,14,7345676,14
+314463,Congenital anomaly of aorta,SNOMED,Condition,S,Not included - descendant,434177,20,6279662,21
+4141106,Thrombosis of arteries of the extremities,SNOMED,Condition,S,Not included - descendant,200,2,6160812,20
+195834,Atherosclerosis of renal artery,SNOMED,Condition,S,Not included - descendant,5058964,20,5061198,20
+4237912,"Aneurysm of artery, other than aorta",SNOMED,Condition,S,Not included - descendant,200,2,4299265,19
+441051,Thoracic aortic aneurysm without rupture,SNOMED,Condition,S,Not included - descendant,4227005,15,4227005,15
+4236905,Thrombosis of arteries of lower extremity,SNOMED,Condition,S,Not included - descendant,3053085,14,4042605,15
+4246554,Congenital malposition of aorta,SNOMED,Condition,S,Not included - descendant,100,1,3090696,21
+320739,Dissection of aorta,SNOMED,Condition,S,Not included - descendant,1061219,21,3044009,22
+372924,Cerebral artery occlusion,SNOMED,Condition,S,Not included - descendant,2491786,16,3043866,20
+314965,Embolism and thrombosis of an arm or leg artery,SNOMED,Condition,S,Not included - descendant,1564836,18,2551622,18
+318712,Peripheral circulatory disorder due to type 1 diabetes mellitus,SNOMED,Condition,S,Not included - descendant,2518205,19,2518305,19
+4273708,Overriding aorta,SNOMED,Condition,S,Not included - descendant,200,2,2490977,21
+320835,Tetralogy of Fallot,SNOMED,Condition,S,Not included - descendant,2489249,21,2490777,21
+40484167,Arteriosclerosis of artery of extremity,SNOMED,Condition,S,Not included - descendant,833388,14,2378180,17
+4131908,Peripheral angiopathy due to diabetes mellitus,SNOMED,Condition,S,Not included - descendant,1729625,12,1800878,12
+432933,Aneurysm of artery of lower extremity,SNOMED,Condition,S,Not included - descendant,1619525,16,1634262,16
+321119,Coarctation of aorta,SNOMED,Condition,S,Not included - descendant,1561005,21,1562305,21
+315558,Atherosclerosis of arteries of the extremities,SNOMED,Condition,S,Not included - descendant,476714,6,1544792,17
+436136,Dissection of thoracic aorta,SNOMED,Condition,S,Not included - descendant,1193323,14,1543588,15
+4159164,Disorder of basilar artery,SNOMED,Condition,S,Not included - descendant,193693,12,1517111,22
+196433,Aneurysm of iliac artery,SNOMED,Condition,S,Not included - descendant,1506825,17,1511137,17
+4090039,Penile arterial insufficiency,SNOMED,Condition,S,Not included - descendant,1125991,13,1125991,13
+40483538,Atherosclerosis of bypass graft of limb,SNOMED,Condition,S,Not included - descendant,869902,14,1067502,14
+4043737,Dissection of cervicocerebral artery,SNOMED,Condition,S,Not included - descendant,200,2,1038784,18
+37016888,Dissection of precerebral artery,SNOMED,Condition,S,Not included - descendant,3029,12,1032241,16
+764058,Disorder of artery of upper extremity,SNOMED,Condition,S,Not included - descendant,1097,3,983687,19
+4170620,Aortic thromboembolism,SNOMED,Condition,S,Not included - descendant,123536,18,902103,19
+4117771,Aneurysm of head and neck artery,SNOMED,Condition,S,Not included - descendant,40370,12,886277,19
+444264,Thrombosis of iliac artery,SNOMED,Condition,S,Not included - descendant,316331,15,877620,16
+374371,Stenosis of precerebral artery,SNOMED,Condition,S,Not included - descendant,8922,4,875390,11
+374055,Basilar artery syndrome,SNOMED,Condition,S,Not included - descendant,860367,21,860367,21
+442615,Carotid artery stenosis,SNOMED,Condition,S,Not included - descendant,795873,6,845403,8
+313226,Carotid artery occlusion,SNOMED,Condition,S,Not included - descendant,791385,16,845399,16
+4173464,Rupture of aorta,SNOMED,Condition,S,Not included - descendant,312,2,840016,21
+312343,Ruptured aortic aneurysm,SNOMED,Condition,S,Not included - descendant,92749,20,839204,21
+433195,Transient arterial retinal occlusion,SNOMED,Condition,S,Not included - descendant,805064,18,805064,18
+37109250,Dissection of descending aorta,SNOMED,Condition,S,Not included - descendant,100,1,787273,15
+4256889,Dissection of abdominal aorta,SNOMED,Condition,S,Not included - descendant,439102,14,786176,14
+193793,Aneurysm of visceral artery,SNOMED,Condition,S,Not included - descendant,117497,14,775720,16
+4185117,Vertebral artery obstruction,SNOMED,Condition,S,Not included - descendant,755982,15,770270,18
+4334245,Retinal artery occlusion,SNOMED,Condition,S,Not included - descendant,18562,10,762043,20
+4253808,Congenital atresia of aorta,SNOMED,Condition,S,Not included - descendant,43919,18,746248,19
+437540,Central retinal artery occlusion,SNOMED,Condition,S,Not included - descendant,743481,19,743481,19
+40491477,Abnormality of aortic arch,SNOMED,Condition,S,Not included - descendant,267,2,724547,20
+437544,Arterial retinal branch occlusion,SNOMED,Condition,S,Not included - descendant,723320,14,724390,14
+4062247,Congenital stenosis of aorta,SNOMED,Condition,S,Not included - descendant,265,2,703144,14
+320827,Atresia and stenosis of aorta,SNOMED,Condition,S,Not included - descendant,702129,14,702129,14
+4159140,Thrombotic stroke,SNOMED,Condition,S,Not included - descendant,9369,5,623613,18
+4111711,Cerebellar stroke syndrome,SNOMED,Condition,S,Not included - descendant,613744,16,613744,16
+436996,Thoracoabdominal aortic aneurysm,SNOMED,Condition,S,Not included - descendant,582971,19,613095,19
+441874,Cerebral thrombosis,SNOMED,Condition,S,Not included - descendant,583219,14,583619,14
+4223670,Thrombosis of abdominal aorta,SNOMED,Condition,S,Not included - descendant,512,2,582410,19
+198446,Embolism and thrombosis of the abdominal aorta,SNOMED,Condition,S,Not included - descendant,581598,19,581598,19
+37109512,Dissection of carotid artery,SNOMED,Condition,S,Not included - descendant,560346,12,572069,14
+192657,Embolism of iliac artery,SNOMED,Condition,S,Not included - descendant,300,3,561189,14
+4028073,Disorder of artery of neck,SNOMED,Condition,S,Not included - descendant,41344,5,555187,19
+4100005,Transposition of aorta,SNOMED,Condition,S,Not included - descendant,200,2,553878,14
+316226,Complete transposition of great vessels,SNOMED,Condition,S,Not included - descendant,553678,14,553678,14
+4136335,Thrombosis of arteries of upper extremity,SNOMED,Condition,S,Not included - descendant,550727,14,553071,14
+4178609,Femoral artery thrombosis,SNOMED,Condition,S,Not included - descendant,1606,4,552035,14
+4108376,Embolism and thrombosis of the femoral artery,SNOMED,Condition,S,Not included - descendant,550129,13,550129,13
+195559,Ruptured abdominal aortic aneurysm,SNOMED,Condition,S,Not included - descendant,516063,21,546187,21
+4108742,Ascending aorta abnormality,SNOMED,Condition,S,Not included - descendant,162,1,538719,17
+194393,Celiac artery compression syndrome,SNOMED,Condition,S,Not included - descendant,484037,18,484037,18
+4178399,Common iliac artery thrombosis,SNOMED,Condition,S,Not included - descendant,100,1,459554,14
+4111850,Embolism and/or thrombosis of the common iliac artery,SNOMED,Condition,S,Not included - descendant,459454,14,459454,14
+432346,Dissection of vertebral artery,SNOMED,Condition,S,Not included - descendant,456943,16,457143,16
+44782819,Chronic occlusion of artery of extremity,SNOMED,Condition,S,Not included - descendant,443856,13,443856,13
+433015,Congenital anomaly of aortic arch,SNOMED,Condition,S,Not included - descendant,218156,16,439038,16
+375557,Cerebral embolism,SNOMED,Condition,S,Not included - descendant,383089,15,433608,15
+194385,Aneurysm of renal artery,SNOMED,Condition,S,Not included - descendant,394940,16,395447,16
+376714,Vertebrobasilar artery syndrome,SNOMED,Condition,S,Not included - descendant,389073,14,389073,14
+4120097,Stenosis of thoracic aorta,SNOMED,Condition,S,Not included - descendant,100,1,372863,15
+4147787,Supravalvar aortic stenosis,SNOMED,Condition,S,Not included - descendant,371513,15,372563,15
+433505,Subclavian steal syndrome,SNOMED,Condition,S,Not included - descendant,360114,15,360214,15
+37016882,Dissection of thoracoabdominal aorta,SNOMED,Condition,S,Not included - descendant,347074,14,347074,14
+4337367,Popliteal artery thrombosis,SNOMED,Condition,S,Not included - descendant,1289,2,339651,13
+4110333,Embolism and thrombosis of the popliteal artery,SNOMED,Condition,S,Not included - descendant,338362,13,338362,13
+437308,Basilar artery occlusion,SNOMED,Condition,S,Not included - descendant,335432,16,335532,16
+437847,Partial retinal artery occlusion,SNOMED,Condition,S,Not included - descendant,319357,14,319357,14
+4116717,Injury of artery of lower limb,SNOMED,Condition,S,Not included - descendant,11438,15,313755,18
+4324395,Aortitis,SNOMED,Condition,S,Not included - descendant,16407,14,304059,20
+432890,Microaneurysm of retinal artery,SNOMED,Condition,S,Not included - descendant,302458,14,303409,14
+763014,Middle cerebral artery occlusion,SNOMED,Condition,S,Not included - descendant,100,1,291080,15
+4112023,Occlusion and stenosis of middle cerebral artery,SNOMED,Condition,S,Not included - descendant,290456,15,290680,15
+440740,Takayasu's disease,SNOMED,Condition,S,Not included - descendant,281277,20,281277,20
+4194719,Head and neck arterial thrombosis,SNOMED,Condition,S,Not included - descendant,100,1,270404,13
+4171853,Thrombosis of precerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,270204,13
+434656,Vertebral artery syndrome,SNOMED,Condition,S,Not included - descendant,268702,14,268702,14
+194964,Aneurysm of splenic artery,SNOMED,Condition,S,Not included - descendant,259506,14,259506,14
+443407,Lower limb arterial embolus,SNOMED,Condition,S,Not included - descendant,3412,3,243201,14
+441044,Atheromatous embolus of lower limb,SNOMED,Condition,S,Not included - descendant,239338,14,239338,14
+441875,Thoracic aortic aneurysm which has ruptured,SNOMED,Condition,S,Not included - descendant,199768,18,230392,18
+43531599,Carotid sinus hypersensitivity,SNOMED,Condition,S,Not included - descendant,200,2,225481,14
+436392,Carotid sinus syncope,SNOMED,Condition,S,Not included - descendant,225281,14,225281,14
+4102124,Carotid atherosclerosis,SNOMED,Condition,S,Not included - descendant,210933,3,223248,3
+438778,Aneurysm of artery of upper extremity,SNOMED,Condition,S,Not included - descendant,221272,16,222239,16
+4121629,Carotid artery aneurysm,SNOMED,Condition,S,Not included - descendant,214927,15,222160,15
+439037,Aneurysm of artery of neck,SNOMED,Condition,S,Not included - descendant,220353,14,220553,14
+4181314,Thrombosis of thoracic aorta,SNOMED,Condition,S,Not included - descendant,220,2,197189,14
+432656,Embolism and thrombosis of the thoracic aorta,SNOMED,Condition,S,Not included - descendant,196969,14,196969,14
+4311124,Carotid artery thrombosis,SNOMED,Condition,S,Not included - descendant,195283,13,195698,13
+4213731,Carotid artery embolism,SNOMED,Condition,S,Not included - descendant,190346,13,190346,13
+380747,Cerebral arteritis,SNOMED,Condition,S,Not included - descendant,185112,19,187253,19
+4110155,Injury of artery of upper limb,SNOMED,Condition,S,Not included - descendant,100,1,164225,18
+4109464,Ascending aorta dilatation,SNOMED,Condition,S,Not included - descendant,24229,3,162303,6
+4290976,Temporal arteritis,SNOMED,Condition,S,Not included - descendant,46000,4,153356,17
+433860,Interrupted aortic arch,SNOMED,Condition,S,Not included - descendant,152208,14,153070,14
+40484541,Atherosclerosis of autologous vein bypass graft of limb,SNOMED,Condition,S,Not included - descendant,144408,12,144408,12
+37118664,Injury of femoral artery,SNOMED,Condition,S,Not included - descendant,49878,14,144182,16
+4032003,Anterior spinal artery compression syndrome,SNOMED,Condition,S,Not included - descendant,143443,12,143443,12
+4113801,Injury of artery of head and neck,SNOMED,Condition,S,Not included - descendant,100,1,142000,18
+4118795,Renal artery stenosis,SNOMED,Condition,S,Not included - descendant,117518,5,138413,18
+134380,Erythromelalgia,SNOMED,Condition,S,Not included - descendant,123833,15,124033,15
+4273526,Vertebral artery thrombosis,SNOMED,Condition,S,Not included - descendant,122874,13,123074,13
+40484607,Injury of aorta,SNOMED,Condition,S,Not included - descendant,200,2,118399,18
+201043,Dissection of iliac artery,SNOMED,Condition,S,Not included - descendant,113042,14,113042,14
+4222582,Embolism of precerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,110346,12
+4343935,Giant cell arteritis with polymyalgia rheumatica,SNOMED,Condition,S,Not included - descendant,107156,16,107156,16
+4111717,Occlusion and stenosis of posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,105790,14,105990,14
+315116,Injury of carotid artery,SNOMED,Condition,S,Not included - descendant,59894,18,105769,18
+4179908,Internal iliac artery thrombosis,SNOMED,Condition,S,Not included - descendant,100,1,101535,11
+42539410,Thromboembolus of internal iliac artery,SNOMED,Condition,S,Not included - descendant,101435,11,101435,11
+4112162,Embolism and thrombosis of the anterior tibial artery,SNOMED,Condition,S,Not included - descendant,97295,12,97295,12
+313062,Injury of thoracic aorta,SNOMED,Condition,S,Not included - descendant,92672,18,92672,18
+4138183,Aneurysm of ascending aorta,SNOMED,Condition,S,Not included - descendant,82111,3,84424,3
+4338227,Basilar artery thrombosis,SNOMED,Condition,S,Not included - descendant,74006,13,74206,13
+4151990,Anterior cord syndrome,SNOMED,Condition,S,Not included - descendant,6436,12,73869,14
+4029966,Intracranial aneurysm,SNOMED,Condition,S,Not included - descendant,41577,5,72986,16
+435684,Injury of popliteal artery,SNOMED,Condition,S,Not included - descendant,72368,18,72568,18
+4200875,Type 2 diabetes mellitus with peripheral angiopathy,SNOMED,Condition,S,Not included - descendant,71153,3,71153,3
+75126,Injury of common femoral artery,SNOMED,Condition,S,Not included - descendant,62145,14,62145,14
+4274969,Vertebral artery embolism,SNOMED,Condition,S,Not included - descendant,60591,12,60591,12
+4145159,Hypoplasia of aorta,SNOMED,Condition,S,Not included - descendant,57960,10,59821,13
+4108608,Aortic root dilatation,SNOMED,Condition,S,Not included - descendant,52935,6,55461,6
+4119617,Carotid artery rupture,SNOMED,Condition,S,Not included - descendant,300,3,54350,17
+43531605,Occlusion of cerebral artery with stroke,SNOMED,Condition,S,Not included - descendant,10714,3,54180,9
+4108952,Subarachnoid hemorrhage from carotid siphon and bifurcation,SNOMED,Condition,S,Not included - descendant,53950,17,53950,17
+37110250,Atherosclerosis of artery of lower limb,SNOMED,Condition,S,Not included - descendant,100,1,52522,12
+4110197,Occlusion and stenosis of multiple and bilateral cerebral arteries,SNOMED,Condition,S,Not included - descendant,52087,4,52087,4
+46271459,Atherosclerosis of bypass graft of lower limb,SNOMED,Condition,S,Not included - descendant,200,2,51946,12
+40484551,Atherosclerosis of nonautologous biological bypass graft of limb,SNOMED,Condition,S,Not included - descendant,51646,12,51746,12
+4006294,Basilar artery embolism,SNOMED,Condition,S,Not included - descendant,49555,12,49555,12
+4145607,Injury of radial artery,SNOMED,Condition,S,Not included - descendant,16849,16,48675,16
+432335,Aneurysm of subclavian artery,SNOMED,Condition,S,Not included - descendant,45050,14,45050,14
+4111716,Occlusion and stenosis of anterior cerebral artery,SNOMED,Condition,S,Not included - descendant,44626,14,44726,14
+40489827,Traumatic injury of mesenteric artery,SNOMED,Condition,S,Not included - descendant,2121,3,44392,17
+4045742,Multi-infarct state,SNOMED,Condition,S,Not included - descendant,290,2,43466,9
+379778,Multi-infarct dementia,SNOMED,Condition,S,Not included - descendant,35727,9,43176,9
+200881,Injury of iliac artery,SNOMED,Condition,S,Not included - descendant,41617,14,41617,14
+43020497,Right carotid artery occlusion,SNOMED,Condition,S,Not included - descendant,13221,5,40830,5
+4163372,Congenital dilatation of aorta,SNOMED,Condition,S,Not included - descendant,19342,12,40812,13
+43020496,Left carotid artery occlusion,SNOMED,Condition,S,Not included - descendant,12884,5,40493,5
+4068730,Dextrotransposition of aorta,SNOMED,Condition,S,Not included - descendant,200,2,38005,13
+4009628,Right aortic arch,SNOMED,Condition,S,Not included - descendant,37405,13,37605,13
+4055720,Vascular hemostatic disease,SNOMED,Condition,S,Not included - descendant,213,2,37469,3
+443408,Upper limb arterial embolus,SNOMED,Condition,S,Not included - descendant,1426,3,36785,13
+4153352,Embolic stroke,SNOMED,Condition,S,Not included - descendant,32942,4,36669,4
+4096625,Injury of vertebral artery,SNOMED,Condition,S,Not included - descendant,32211,16,36131,16
+4202511,Senile purpura,SNOMED,Condition,S,Not included - descendant,35890,3,35890,3
+4149044,Injury of ulnar artery,SNOMED,Condition,S,Not included - descendant,7895,14,35483,16
+4317291,Cerebellar artery occlusion,SNOMED,Condition,S,Not included - descendant,687,3,34451,15
+439836,Atheromatous embolus of upper limb,SNOMED,Condition,S,Not included - descendant,33928,13,33928,13
+4112024,Occlusion and stenosis of cerebellar arteries,SNOMED,Condition,S,Not included - descendant,33664,15,33664,15
+73085,Injury of superficial femoral artery,SNOMED,Condition,S,Not included - descendant,32059,14,32159,14
+43020500,Aneurysm of descending thoracic aorta,SNOMED,Condition,S,Not included - descendant,1731,2,31855,18
+4059604,Renal artery hemorrhage,SNOMED,Condition,S,Not included - descendant,200,2,30774,14
+37016889,Dissection of renal artery,SNOMED,Condition,S,Not included - descendant,30574,14,30574,14
+4005907,Injury of brachial artery,SNOMED,Condition,S,Not included - descendant,18198,16,30420,16
+433222,"Thoracoabdominal aortic aneurysm, ruptured",SNOMED,Condition,S,Not included - descendant,30124,18,30124,18
+4145355,Bilateral carotid artery occlusion,SNOMED,Condition,S,Not included - descendant,27609,4,27609,4
+4029497,Cerebral arterial aneurysm,SNOMED,Condition,S,Not included - descendant,22540,4,27548,14
+439190,Injury of internal carotid artery,SNOMED,Condition,S,Not included - descendant,27527,13,27527,13
+4114011,Subclavian artery stenosis,SNOMED,Condition,S,Not included - descendant,25369,3,26971,3
+4014895,Double aortic arch,SNOMED,Condition,S,Not included - descendant,26706,12,26806,12
+4318843,Renal artery embolism,SNOMED,Condition,S,Not included - descendant,346,3,26776,13
+4180026,Vertebral artery aneurysm,SNOMED,Condition,S,Not included - descendant,26405,12,26405,12
+200132,Atheroembolism of renal arteries,SNOMED,Condition,S,Not included - descendant,26230,13,26230,13
+40491866,Traumatic injury of celiac artery,SNOMED,Condition,S,Not included - descendant,2050,10,25945,15
+36715711,Anterior cord syndrome of thoracic spinal cord,SNOMED,Condition,S,Not included - descendant,6298,11,25464,13
+197151,Injury of abdominal aorta,SNOMED,Condition,S,Not included - descendant,25301,17,25301,17
+4180276,Injury of artery of hand,SNOMED,Condition,S,Not included - descendant,100,1,25077,17
+438608,Injury of axillary artery,SNOMED,Condition,S,Not included - descendant,22233,18,24470,18
+195124,Injury of celiac AND/OR mesenteric arteries,SNOMED,Condition,S,Not included - descendant,23895,15,23895,15
+762753,Arteriosclerosis of abdominal aorta,SNOMED,Condition,S,Not included - descendant,100,1,23295,2
+4124834,Abdominal aortic atherosclerosis,SNOMED,Condition,S,Not included - descendant,22995,2,23195,2
+4061539,Congenital aneurysm of aorta,SNOMED,Condition,S,Not included - descendant,20157,13,20970,13
+36715646,Anterior cord syndrome of cervical spinal cord,SNOMED,Condition,S,Not included - descendant,4195,10,20742,11
+192767,Injury of renal artery,SNOMED,Condition,S,Not included - descendant,20489,13,20489,13
+43020498,Left carotid artery stenosis,SNOMED,Condition,S,Not included - descendant,18919,5,20312,5
+43021859,Right carotid artery stenosis,SNOMED,Condition,S,Not included - descendant,17867,6,19260,6
+440572,Injury of posterior tibial artery,SNOMED,Condition,S,Not included - descendant,15444,13,18864,13
+4124836,Peripheral ischemia,SNOMED,Condition,S,Not included - descendant,233,2,17593,5
+4050547,Injury of radial artery at wrist and hand level,SNOMED,Condition,S,Not included - descendant,16409,16,16409,16
+4124841,Aortic bifurcation syndrome,SNOMED,Condition,S,Not included - descendant,16377,12,16377,12
+4052209,Injury of ulnar artery at wrist and hand level,SNOMED,Condition,S,Not included - descendant,15836,16,15836,16
+437152,Injury of anterior tibial artery,SNOMED,Condition,S,Not included - descendant,12558,13,15780,13
+40492312,Laceration of radial artery,SNOMED,Condition,S,Not included - descendant,15317,12,15317,12
+4121637,Vertebral artery rupture,SNOMED,Condition,S,Not included - descendant,100,1,15285,16
+4111708,Subarachnoid hemorrhage from vertebral artery,SNOMED,Condition,S,Not included - descendant,15185,16,15185,16
+37016885,Dissection of artery of lower limb,SNOMED,Condition,S,Not included - descendant,14471,12,14671,12
+439296,Vertebral artery occlusion,SNOMED,Condition,S,Not included - descendant,13882,8,14288,8
+320646,Syphilitic aneurysm of aorta,SNOMED,Condition,S,Not included - descendant,13847,13,13847,13
+43020443,Limb ischemia,SNOMED,Condition,S,Not included - descendant,401,2,13269,5
+4005616,Arteriovenous malformation of precerebral vessels,SNOMED,Condition,S,Not included - descendant,13184,17,13184,17
+4153293,Congenital renal artery stenosis,SNOMED,Condition,S,Not included - descendant,12909,16,12909,16
+443878,Injury of superior mesenteric artery,SNOMED,Condition,S,Not included - descendant,12637,13,12837,13
+37116495,Laceration of brachial artery,SNOMED,Condition,S,Not included - descendant,12122,12,12122,12
+40490930,Laceration of ulnar artery,SNOMED,Condition,S,Not included - descendant,11752,12,11752,12
+380423,Vertebral artery stenosis,SNOMED,Condition,S,Not included - descendant,11186,6,11593,6
+45772779,Dissection of internal carotid artery,SNOMED,Condition,S,Not included - descendant,11523,5,11523,5
+44784609,Injury at T7-T12 level with anterior cord syndrome,SNOMED,Condition,S,Not included - descendant,100,1,11343,12
+40479862,Aneurysm of infrarenal abdominal aorta,SNOMED,Condition,S,Not included - descendant,11208,2,11208,2
+4167993,Aneurysm of popliteal artery,SNOMED,Condition,S,Not included - descendant,10619,3,10963,3
+4231816,Mesenteric artery stenosis,SNOMED,Condition,S,Not included - descendant,10590,3,10590,3
+4119612,Lower limb ischemia,SNOMED,Condition,S,Not included - descendant,3014,4,10090,4
+438881,Closed fracture of C1-C4 level with anterior cord syndrome,SNOMED,Condition,S,Not included - descendant,9867,13,9867,13
+43020493,Atherosclerosis of right carotid artery,SNOMED,Condition,S,Not included - descendant,2946,3,9556,3
+43021851,Atherosclerosis of left carotid artery,SNOMED,Condition,S,Not included - descendant,2759,3,9369,3
+4056453,Injury of superficial palmar arch,SNOMED,Condition,S,Not included - descendant,9196,15,9296,15
+197153,Injury of splenic artery,SNOMED,Condition,S,Not included - descendant,9090,13,9090,13
+436277,Injury of common carotid artery,SNOMED,Condition,S,Not included - descendant,9012,13,9012,13
+4056454,Injury of deep palmar arch,SNOMED,Condition,S,Not included - descendant,8728,14,8828,14
+4251327,Double outlet left ventricle,SNOMED,Condition,S,Not included - descendant,7736,15,7736,15
+4120104,Ruptured cerebral aneurysm,SNOMED,Condition,S,Not included - descendant,1890,3,7598,13
+312462,Closed fracture of T7-T12 level with anterior cord syndrome,SNOMED,Condition,S,Not included - descendant,6967,12,6967,12
+313902,Injury of palmar artery,SNOMED,Condition,S,Not included - descendant,6653,13,6653,13
+37109252,Bilateral atherosclerosis of carotid arteries,SNOMED,Condition,S,Not included - descendant,6610,2,6610,2
+765899,Dissecting aneurysm of cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,6543,4
+194797,Injury of uterine artery,SNOMED,Condition,S,Not included - descendant,6412,13,6412,13
+37016924,Dissection of cerebral artery,SNOMED,Condition,S,Not included - descendant,6343,3,6343,3
+381036,Multiple AND bilateral precerebral artery stenosis,SNOMED,Condition,S,Not included - descendant,6305,3,6305,3
+4078016,Aneurysm of internal carotid artery,SNOMED,Condition,S,Not included - descendant,5051,3,6188,3
+4121624,Internal carotid artery stenosis,SNOMED,Condition,S,Not included - descendant,6044,2,6144,2
+4208944,Iliac artery stenosis,SNOMED,Condition,S,Not included - descendant,5623,3,6023,4
+434961,Occlusion of lower limb artery,SNOMED,Condition,S,Not included - descendant,1286,3,5913,3
+201167,Injury of hepatic artery,SNOMED,Condition,S,Not included - descendant,5731,13,5731,13
+438270,Closed fracture of C5-C7 level with anterior cord syndrome,SNOMED,Condition,S,Not included - descendant,5348,13,5348,13
+4151848,Renal artery stenosis of unknown cause,SNOMED,Condition,S,Not included - descendant,5091,2,5091,2
+437427,Injury of external carotid artery,SNOMED,Condition,S,Not included - descendant,5058,13,5058,13
+4232580,Retinal embolus,SNOMED,Condition,S,Not included - descendant,1320,2,5040,3
+4052218,Injury of peroneal artery,SNOMED,Condition,S,Not included - descendant,4825,16,4825,16
+317712,Injury of intercostal artery,SNOMED,Condition,S,Not included - descendant,4665,13,4665,13
+4296331,Carotid artery insufficiency syndrome,SNOMED,Condition,S,Not included - descendant,4647,2,4647,2
+4234991,Arteriolar nephrosclerosis,SNOMED,Condition,S,Not included - descendant,3778,2,4588,2
+197140,Injury of gastric artery,SNOMED,Condition,S,Not included - descendant,4361,12,4361,12
+4124839,Critical lower limb ischemia,SNOMED,Condition,S,Not included - descendant,4063,3,4263,3
+380943,Rupture of syphilitic cerebral aneurysm,SNOMED,Condition,S,Not included - descendant,4208,12,4208,12
+4291464,Ischemic gangrene,SNOMED,Condition,S,Not included - descendant,4091,2,4091,2
+4116723,Injury of dorsalis pedis artery,SNOMED,Condition,S,Not included - descendant,4081,16,4081,16
+4268045,Arterial anomaly of umbilical cord,SNOMED,Condition,S,Not included - descendant,200,2,4047,2
+4226026,Stenosis of lower limb artery,SNOMED,Condition,S,Not included - descendant,3483,2,3883,4
+4121623,Aortoiliac atherosclerosis,SNOMED,Condition,S,Not included - descendant,3749,3,3749,3
+4005289,Single umbilical artery,SNOMED,Condition,S,Not included - descendant,3747,2,3747,2
+4211509,Cardioembolic stroke,SNOMED,Condition,S,Not included - descendant,3727,3,3727,3
+4153351,Terminal aortic occlusion,SNOMED,Condition,S,Not included - descendant,511,3,3721,6
+377254,"Multi-infarct dementia, uncomplicated",SNOMED,Condition,S,Not included - descendant,3680,2,3680,2
+4232581,Cholesterol retinal embolus,SNOMED,Condition,S,Not included - descendant,2951,3,3620,3
+4233604,"Anterior cervical spinal cord injury, without spinal bone injury, C5-7",SNOMED,Condition,S,Not included - descendant,3614,11,3614,11
+4239400,Aneurysm of femoral artery,SNOMED,Condition,S,Not included - descendant,3067,3,3574,3
+37016886,Dissection of artery of upper extremity,SNOMED,Condition,S,Not included - descendant,3507,12,3507,12
+4194154,Infective aortitis,SNOMED,Condition,S,Not included - descendant,538,2,3496,12
+40492340,Laceration of posterior tibial artery,SNOMED,Condition,S,Not included - descendant,3420,12,3420,12
+4046228,Carotidynia,SNOMED,Condition,S,Not included - descendant,3414,3,3414,3
+199959,Injury of inferior mesenteric artery,SNOMED,Condition,S,Not included - descendant,3300,12,3300,12
+4199183,Iliac artery occlusion,SNOMED,Condition,S,Not included - descendant,2064,2,3273,2
+4108369,Common iliac aneurysm,SNOMED,Condition,S,Not included - descendant,2611,2,3256,3
+36715650,Anterior cord syndrome of cervical spinal cord at C5 level,SNOMED,Condition,S,Not included - descendant,3247,9,3247,9
+4111715,"Occlusion and stenosis of cerebral arteries, not resulting in cerebral infarction",SNOMED,Condition,S,Not included - descendant,3191,7,3191,7
+442263,Basilar artery stenosis,SNOMED,Condition,S,Not included - descendant,3167,6,3167,6
+40486482,Laceration of anterior tibial artery,SNOMED,Condition,S,Not included - descendant,3122,10,3122,10
+36716999,Cerebellar stroke,SNOMED,Condition,S,Not included - descendant,1440,2,3000,3
+315467,Syphilitic aortitis,SNOMED,Condition,S,Not included - descendant,2958,12,2958,12
+4109465,Sinus of Valsalva abnormality,SNOMED,Condition,S,Not included - descendant,200,2,2926,2
+137695,Closed fracture of T1-T6 level with anterior cord syndrome,SNOMED,Condition,S,Not included - descendant,2925,12,2925,12
+4002625,Portal vein-hepatic artery fistula,SNOMED,Condition,S,Not included - descendant,2861,15,2861,15
+4055464,"Anterior thoracic cord injury, without bony injury, T7-12",SNOMED,Condition,S,Not included - descendant,2860,11,2860,11
+43021846,Peripheral arterial insufficiency,SNOMED,Condition,S,Not included - descendant,2779,3,2779,3
+4124837,Upper limb ischemia,SNOMED,Condition,S,Not included - descendant,612,3,2778,4
+36715647,Anterior cord syndrome of cervical spinal cord at C1 level,SNOMED,Condition,S,Not included - descendant,2686,9,2686,9
+4055460,"Anterior thoracic cord injury, without bony injury, T1-6",SNOMED,Condition,S,Not included - descendant,2606,12,2606,12
+36715649,Anterior cord syndrome of cervical spinal cord at C4 level,SNOMED,Condition,S,Not included - descendant,2587,9,2587,9
+4193056,Femoral artery occlusion,SNOMED,Condition,S,Not included - descendant,946,2,2570,3
+40489967,Congenital abnormality of ascending aorta,SNOMED,Condition,S,Not included - descendant,100,1,2563,2
+44784634,Symptomatic carotid artery stenosis,SNOMED,Condition,S,Not included - descendant,2556,2,2556,2
+46273237,Aneurysm of aortic arch,SNOMED,Condition,S,Not included - descendant,2459,2,2459,2
+36715675,Minor laceration of carotid artery,SNOMED,Condition,S,Not included - descendant,2401,11,2401,11
+36715651,Anterior cord syndrome of cervical spinal cord at C6 level,SNOMED,Condition,S,Not included - descendant,2358,10,2358,10
+196851,Injury of primary branch of superior mesenteric artery,SNOMED,Condition,S,Not included - descendant,2039,12,2239,12
+40492455,Dilatation of aortic sinus of Valsalva,SNOMED,Condition,S,Not included - descendant,215,2,2226,2
+43531607,Cerebral infarction due to stenosis of carotid artery,SNOMED,Condition,S,Not included - descendant,2198,2,2198,2
+195118,Injury of hypogastric artery,SNOMED,Condition,S,Not included - descendant,2192,12,2192,12
+4306357,Rheumatoid aortitis,SNOMED,Condition,S,Not included - descendant,2179,2,2179,2
+44811347,Thrombosis of internal jugular vein,SNOMED,Condition,S,Not included - descendant,2148,5,2148,5
+36715676,Minor laceration of vertebral artery,SNOMED,Condition,S,Not included - descendant,2141,10,2141,10
+37116494,Laceration of axillary artery,SNOMED,Condition,S,Not included - descendant,2137,10,2137,10
+36717342,Anterior cord syndrome of cervical spinal cord at C3 level,SNOMED,Condition,S,Not included - descendant,2056,9,2056,9
+4139577,Ischemic hand,SNOMED,Condition,S,Not included - descendant,332,2,1966,3
+4146311,Leriche's syndrome,SNOMED,Condition,S,Not included - descendant,1901,4,1901,4
+36716590,Major laceration of carotid artery,SNOMED,Condition,S,Not included - descendant,1877,9,1877,9
+4184953,Congenital hypoplasia of aorta,SNOMED,Condition,S,Not included - descendant,890,4,1861,5
+4119141,Atherosclerotic renal artery stenosis,SNOMED,Condition,S,Not included - descendant,1826,3,1826,3
+443864,Multi-infarct dementia with depression,SNOMED,Condition,S,Not included - descendant,1790,3,1790,3
+36717575,Major laceration of vertebral artery,SNOMED,Condition,S,Not included - descendant,1779,10,1779,10
+4208808,Femoral false aneurysm,SNOMED,Condition,S,Not included - descendant,1446,3,1734,3
+4199887,Ischemic foot,SNOMED,Condition,S,Not included - descendant,530,3,1677,3
+36715652,Anterior cord syndrome of cervical spinal cord at C7 level,SNOMED,Condition,S,Not included - descendant,1635,10,1635,10
+4139579,Ischemic finger,SNOMED,Condition,S,Not included - descendant,1634,3,1634,3
+4006293,Aneurysm of celiac artery,SNOMED,Condition,S,Not included - descendant,1607,2,1607,2
+4353836,Aortic root congenital abnormality,SNOMED,Condition,S,Not included - descendant,200,2,1561,2
+37117790,Insufficiency of mesenteric artery,SNOMED,Condition,S,Not included - descendant,1552,2,1552,2
+4301259,Posterior inferior cerebellar artery syndrome,SNOMED,Condition,S,Not included - descendant,1460,2,1460,2
+75096,Open fracture of T7-T12 level with anterior cord syndrome,SNOMED,Condition,S,Not included - descendant,1416,12,1416,12
+762149,Bilateral carotid artery stenosis,SNOMED,Condition,S,Not included - descendant,1393,1,1393,1
+4199413,Dissection of proximal aorta,SNOMED,Condition,S,Not included - descendant,364,3,1391,3
+4139578,Ischemic toe,SNOMED,Condition,S,Not included - descendant,1336,3,1336,3
+4124840,Stenosis of abdominal aorta,SNOMED,Condition,S,Not included - descendant,1315,3,1315,3
+443790,Multi-infarct dementia with delusions,SNOMED,Condition,S,Not included - descendant,1281,3,1281,3
+36715648,Anterior cord syndrome of cervical spinal cord at C2 level,SNOMED,Condition,S,Not included - descendant,1278,9,1278,9
+437725,Injury of branch of celiac axis,SNOMED,Condition,S,Not included - descendant,1263,12,1263,12
+438271,Open fracture of C5-C7 level with anterior cord syndrome,SNOMED,Condition,S,Not included - descendant,1262,12,1262,12
+198599,Injury of ovarian artery,SNOMED,Condition,S,Not included - descendant,1242,12,1242,12
+141143,Open fracture of T1-T6 level with anterior cord syndrome,SNOMED,Condition,S,Not included - descendant,1222,12,1222,12
+4124851,Steal syndrome of upper limb,SNOMED,Condition,S,Not included - descendant,344,2,1209,3
+4348039,Thrombosis of mesenteric artery,SNOMED,Condition,S,Not included - descendant,649,2,1185,2
+4124853,Vibration syndrome,SNOMED,Condition,S,Not included - descendant,300,3,1168,9
+40484912,Atherosclerosis of nonautologous bypass graft of limb,SNOMED,Condition,S,Not included - descendant,1146,2,1146,2
+440540,Open fracture of C1-C4 level with anterior cord syndrome,SNOMED,Condition,S,Not included - descendant,1136,11,1136,11
+4195972,Superficial femoral artery occlusion,SNOMED,Condition,S,Not included - descendant,1130,3,1130,3
+4070931,Aplasia of aorta,SNOMED,Condition,S,Not included - descendant,1104,9,1104,9
+4244196,Congenital malposition of subclavian artery,SNOMED,Condition,S,Not included - descendant,794,2,1094,2
+36715712,Anterior cord syndrome of thoracic spinal cord at T1 level,SNOMED,Condition,S,Not included - descendant,1070,9,1070,9
+4280209,Vascular ring of aorta,SNOMED,Condition,S,Not included - descendant,430,2,1030,2
+40482465,Congenital dilation of ascending aorta,SNOMED,Condition,S,Not included - descendant,100,1,1013,2
+37109249,Dissection of aortic arch,SNOMED,Condition,S,Not included - descendant,806,2,1006,2
+4048790,Syphilitic cerebral arteritis,SNOMED,Condition,S,Not included - descendant,1003,7,1003,7
+4121632,Dissection of distal aorta,SNOMED,Condition,S,Not included - descendant,997,4,997,4
+4193057,Popliteal artery occlusion,SNOMED,Condition,S,Not included - descendant,994,3,994,3
+4189462,Occlusive stroke,SNOMED,Condition,S,Not included - descendant,958,2,958,2
+4048789,Cerebral arteritis in systemic vasculitis,SNOMED,Condition,S,Not included - descendant,100,1,938,3
+36717256,Occlusion of aortoiliac artery,SNOMED,Condition,S,Not included - descendant,909,1,909,1
+4028375,Aortic fistula,SNOMED,Condition,S,Not included - descendant,200,2,900,2
+4245636,Congenital hypoplasia of aortic arch,SNOMED,Condition,S,Not included - descendant,871,2,871,2
+4121643,Vibration white finger,SNOMED,Condition,S,Not included - descendant,868,8,868,8
+4124850,Steal syndrome of hand,SNOMED,Condition,S,Not included - descendant,865,3,865,3
+4110202,Internal iliac aneurysm,SNOMED,Condition,S,Not included - descendant,556,2,856,2
+4101478,Microaneurysm of retinal artery due to diabetes mellitus,SNOMED,Condition,S,Not included - descendant,851,2,851,2
+4318863,Systemic lupus erythematosus encephalitis,SNOMED,Condition,S,Not included - descendant,838,3,838,3
+4117933,Femoral popliteal occlusion,SNOMED,Condition,S,Not included - descendant,200,2,824,3
+4058643,Ruptured sinus of Valsalva,SNOMED,Condition,S,Not included - descendant,200,2,800,2
+4108747,Thoracic aortic coarctation,SNOMED,Condition,S,Not included - descendant,200,2,800,2
+42535335,Stenosis of left subclavian artery,SNOMED,Condition,S,Not included - descendant,795,1,795,1
+4175205,Berry aneurysm,SNOMED,Condition,S,Not included - descendant,480,4,780,4
+4324704,Congenital supravalvular aortic stenosis,SNOMED,Condition,S,Not included - descendant,750,2,750,2
+4116977,Ischemia of feet,SNOMED,Condition,S,Not included - descendant,747,2,747,2
+4096157,Thrombosis of retinal artery,SNOMED,Condition,S,Not included - descendant,633,4,733,4
+4276505,Aneurysm of superior mesenteric artery,SNOMED,Condition,S,Not included - descendant,515,2,715,2
+36717278,Aneurysm of right carotid artery,SNOMED,Condition,S,Not included - descendant,359,1,713,1
+4113290,Congenital aneurysm of ascending aorta,SNOMED,Condition,S,Not included - descendant,302,2,713,2
+36712987,Stenosis of right subclavian artery,SNOMED,Condition,S,Not included - descendant,707,1,707,1
+36715653,Anterior cord syndrome of cervical spinal cord at C8 level,SNOMED,Condition,S,Not included - descendant,700,7,700,7
+4316367,Thrombosis of renal artery,SNOMED,Condition,S,Not included - descendant,582,2,682,2
+4249605,Spasm of cerebral arteries,SNOMED,Condition,S,Not included - descendant,669,2,669,2
+4119616,Type I dissection of thoracic aorta,SNOMED,Condition,S,Not included - descendant,666,2,666,2
+762755,Arteriosclerosis of carotid artery,SNOMED,Condition,S,Not included - descendant,657,1,657,1
+4201411,Carotid cavernous fistula,SNOMED,Condition,S,Not included - descendant,354,2,654,2
+36712954,Aneurysm of left carotid artery,SNOMED,Condition,S,Not included - descendant,286,1,642,1
+4030663,Renal artery occlusion,SNOMED,Condition,S,Not included - descendant,633,2,633,2
+4137550,Occlusion of femoropopliteal bypass graft,SNOMED,Condition,S,Not included - descendant,624,2,624,2
+36716985,Congenital dilatation of aortic root,SNOMED,Condition,S,Not included - descendant,200,2,611,2
+4179907,Brachial artery thrombosis,SNOMED,Condition,S,Not included - descendant,407,3,607,3
+37016883,Chronic dissection of thoracic aorta,SNOMED,Condition,S,Not included - descendant,503,2,603,2
+43531581,Arterial thoracic outlet syndrome,SNOMED,Condition,S,Not included - descendant,200,2,603,2
+4143889,Rupture iliac artery,SNOMED,Condition,S,Not included - descendant,200,2,600,3
+4243901,Congenital anomaly of carotid artery,SNOMED,Condition,S,Not included - descendant,200,2,600,2
+4108746,Vascular ring with right aortic arch,SNOMED,Condition,S,Not included - descendant,100,1,600,2
+4175570,Subclavian artery thrombosis,SNOMED,Condition,S,Not included - descendant,579,2,579,2
+44782551,Embolism of middle cerebral artery,SNOMED,Condition,S,Not included - descendant,364,2,564,2
+43020662,Interruption of aortic arch between subclavian artery and common carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,562,2
+4318983,Arteriosclerotic retinopathy,SNOMED,Condition,S,Not included - descendant,554,2,554,2
+4139534,Bilateral renal artery stenosis,SNOMED,Condition,S,Not included - descendant,552,2,552,2
+4093607,Aneurysm of hepatic artery,SNOMED,Condition,S,Not included - descendant,548,2,548,2
+4025854,Superior mesenteric artery thrombosis,SNOMED,Condition,S,Not included - descendant,536,2,536,2
+4152172,Congenital abnormality of thoracic aorta and pulmonary arteries,SNOMED,Condition,S,Not included - descendant,100,1,533,2
+37398919,Familial abdominal aortic aneurysm,SNOMED,Condition,S,Not included - descendant,515,2,515,2
+4121627,Brachial artery embolus,SNOMED,Condition,S,Not included - descendant,303,2,503,2
+37109918,Coarctation of aortic arch,SNOMED,Condition,S,Not included - descendant,100,1,500,2
+46270319,Abscess of aorta,SNOMED,Condition,S,Not included - descendant,100,1,500,2
+444091,Multi-infarct dementia with delirium,SNOMED,Condition,S,Not included - descendant,498,2,498,2
+4268756,Benign arteriolar nephrosclerosis,SNOMED,Condition,S,Not included - descendant,476,2,476,2
+4101619,Tetralogy of Fallot with pulmonary atresia,SNOMED,Condition,S,Not included - descendant,375,2,475,2
+4101620,Ventricular septal defect in Fallot's tetralogy,SNOMED,Condition,S,Not included - descendant,468,3,468,3
+46273240,Pseudoaneurysm of artery of upper extremity,SNOMED,Condition,S,Not included - descendant,265,2,465,2
+4113296,Interrupted aortic arch between left subclavian and left common carotid artery,SNOMED,Condition,S,Not included - descendant,462,2,462,2
+4234089,Subcortical leukoencephalopathy,SNOMED,Condition,S,Not included - descendant,439,3,439,3
+36713329,Occlusion of left branch retinal artery,SNOMED,Condition,S,Not included - descendant,436,2,436,2
+36713330,Occlusion of right branch retinal artery,SNOMED,Condition,S,Not included - descendant,434,2,434,2
+4140616,Thrombosis of ulnar artery,SNOMED,Condition,S,Not included - descendant,330,2,430,2
+4174013,Axillary artery embolus,SNOMED,Condition,S,Not included - descendant,200,2,428,2
+43020491,Aneurysm of intracranial portion of internal carotid artery,SNOMED,Condition,S,Not included - descendant,227,2,427,2
+4127997,Acquired renal artery stenosis,SNOMED,Condition,S,Not included - descendant,417,2,417,2
+37016887,Dissection of mesenteric artery,SNOMED,Condition,S,Not included - descendant,413,2,413,2
+4183844,Congenital aneurysm of sinus of Valsalva,SNOMED,Condition,S,Not included - descendant,411,2,411,2
+36712955,Atherosclerosis of bilateral renal arteries,SNOMED,Condition,S,Not included - descendant,408,1,408,1
+4141975,Occlusion of superior mesenteric artery,SNOMED,Condition,S,Not included - descendant,407,2,407,2
+443745,Injury of subclavian artery,SNOMED,Condition,S,Not included - descendant,406,4,406,4
+4184983,Arterial thoracic outlet syndrome due to cervical rib,SNOMED,Condition,S,Not included - descendant,403,2,403,2
+4174016,Celiac artery thrombosis,SNOMED,Condition,S,Not included - descendant,200,2,400,3
+4239793,Aortointestinal fistula,SNOMED,Condition,S,Not included - descendant,200,2,400,2
+4182186,Embolus of circle of Willis,SNOMED,Condition,S,Not included - descendant,200,2,400,2
+4108748,Abdominal aortic coarctation,SNOMED,Condition,S,Not included - descendant,200,2,400,2
+4329498,Occlusion of artery of upper extremity,SNOMED,Condition,S,Not included - descendant,200,2,400,2
+37110246,Congenital anomaly of descending thoracic aorta,SNOMED,Condition,S,Not included - descendant,100,1,400,2
+4318842,Renal vasculitis,SNOMED,Condition,S,Not included - descendant,390,2,390,2
+4108367,Brachial artery aneurysm,SNOMED,Condition,S,Not included - descendant,372,2,372,2
+4317292,Cerebellar artery thrombosis,SNOMED,Condition,S,Not included - descendant,370,2,370,2
+4235591,Capillary fragility abnormality,SNOMED,Condition,S,Not included - descendant,366,2,366,2
+4124844,Type II dissection of thoracic aorta,SNOMED,Condition,S,Not included - descendant,361,2,361,2
+36713332,Cholesterol retinal embolus of right eye,SNOMED,Condition,S,Not included - descendant,360,2,360,2
+36712953,Aneurysm of left internal carotid artery,SNOMED,Condition,S,Not included - descendant,256,1,356,1
+36712952,Aneurysm of right internal carotid artery,SNOMED,Condition,S,Not included - descendant,254,1,354,1
+4142261,Aneurysm of suprarenal aorta,SNOMED,Condition,S,Not included - descendant,349,2,349,2
+4120102,Popliteal entrapment syndrome,SNOMED,Condition,S,Not included - descendant,348,3,348,3
+4216685,Malignant arteriolar nephrosclerosis,SNOMED,Condition,S,Not included - descendant,334,2,334,2
+4226129,Hepatic artery stenosis,SNOMED,Condition,S,Not included - descendant,330,3,330,3
+4143389,Enlarging abdominal aortic aneurysm,SNOMED,Condition,S,Not included - descendant,325,2,325,2
+4253510,Erythrocyanosis,SNOMED,Condition,S,Not included - descendant,319,3,319,3
+36712805,Pain at rest of left lower limb co-occurrent and due to atherosclerosis,SNOMED,Condition,S,Not included - descendant,313,1,313,1
+36713331,Cholesterol retinal embolus of left eye,SNOMED,Condition,S,Not included - descendant,309,2,309,2
+40480686,Hypothenar hammer syndrome,SNOMED,Condition,S,Not included - descendant,302,2,302,2
+4108375,Embolism and thrombosis of the radial artery,SNOMED,Condition,S,Not included - descendant,300,3,300,3
+4243358,Congenital aneurysm of anterior communicating artery,SNOMED,Condition,S,Not included - descendant,300,3,300,3
+4208072,Common femoral artery stenosis,SNOMED,Condition,S,Not included - descendant,300,3,300,3
+42536875,Injury of plantar artery of foot,SNOMED,Condition,S,Not included - descendant,300,3,300,3
+4143989,Ruptured aneurysm of common iliac artery,SNOMED,Condition,S,Not included - descendant,300,3,300,3
+44782775,Peripheral vascular disease associated with another disorder,SNOMED,Condition,S,Not included - descendant,300,3,300,3
+4033404,Anomalous origin of right subclavian artery,SNOMED,Condition,S,Not included - descendant,300,3,300,3
+4183995,Congenital anomaly of cerebral artery,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+42873065,Vascular ring with right aortic arch and left arterial ligament,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+4316065,Retroesophageal subclavian artery,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+4227091,Abscess of aortic root,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+4155082,Disorder of intra-aortic pulsation balloon,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+4120101,Aortic bifurcation thrombosis,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+45767657,Thrombosis of middle cerebral artery,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+4094649,Aortic left ventricular tunnel,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+4289307,Mechanical purpura,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+4173167,Mesenteric embolus,SNOMED,Condition,S,Not included - descendant,200,2,300,2
+40486602,Obstruction of aortic arch,SNOMED,Condition,S,Not included - descendant,100,1,300,2
+4179906,Celiac artery embolus,SNOMED,Condition,S,Not included - descendant,100,1,300,2
+43531619,Acquired caroticocavernous sinus fistula,SNOMED,Condition,S,Not included - descendant,100,1,300,1
+40486634,Obstruction of ascending aorta,SNOMED,Condition,S,Not included - descendant,100,1,300,1
+4110200,Radial artery aneurysm,SNOMED,Condition,S,Not included - descendant,295,2,295,2
+42537642,Aneurysm of basilar artery,SNOMED,Condition,S,Not included - descendant,191,1,291,2
+4257822,Post-catheterization femoral pseudoaneurysm,SNOMED,Condition,S,Not included - descendant,288,2,288,2
+4101618,Tetralogy of Fallot with pulmonary stenosis,SNOMED,Condition,S,Not included - descendant,285,2,285,2
+4137553,Thrombosis of femoropopliteal bypass graft,SNOMED,Condition,S,Not included - descendant,284,2,284,2
+4090244,Retinal macroaneurysm,SNOMED,Condition,S,Not included - descendant,276,2,276,2
+4299117,Vasomotor acroparesthesia,SNOMED,Condition,S,Not included - descendant,268,2,268,2
+4174015,Popliteal artery embolus,SNOMED,Condition,S,Not included - descendant,251,2,251,2
+4251932,Kommerell's diverticulum,SNOMED,Condition,S,Not included - descendant,249,2,249,2
+4231826,Upper limb artery stenosis,SNOMED,Condition,S,Not included - descendant,247,2,247,2
+42536636,Acute occlusion of artery of lower limb,SNOMED,Condition,S,Not included - descendant,100,1,239,1
+4055855,Scalenus anticus syndrome,SNOMED,Condition,S,Not included - descendant,234,2,234,2
+4108751,Major aortopulmonary collateral artery,SNOMED,Condition,S,Not included - descendant,233,2,233,2
+4108381,Embolism and thrombosis of the axillary artery,SNOMED,Condition,S,Not included - descendant,228,2,228,2
+4136543,Transection of aorta,SNOMED,Condition,S,Not included - descendant,226,2,226,2
+4323058,Aneurysm of superficial temporal artery,SNOMED,Condition,S,Not included - descendant,218,2,218,2
+4137209,Thrombosis of internal carotid artery,SNOMED,Condition,S,Not included - descendant,215,2,215,2
+36712956,Aneurysm of right common iliac artery,SNOMED,Condition,S,Not included - descendant,212,1,212,1
+4195973,Common femoral artery occlusion,SNOMED,Condition,S,Not included - descendant,211,2,211,2
+42535457,Occlusion of left vertebral artery,SNOMED,Condition,S,Not included - descendant,106,1,206,1
+4163292,Tetralogy of Fallot with absent pulmonary valve,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4246316,Aneurysm of external carotid artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+40489419,Aneurysm of aortic sinus of Valsalva without rupture,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4111727,External iliac aneurysm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4112161,Embolism and thrombosis of the brachial artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4108743,Right descending aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4212101,Aneurysm of pancreaticoduodenal artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+40491480,Aneurysm of aortic sinus of Valsalva with rupture to right atrium,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4347063,Idiopathic aortitis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+40482911,Aortic sinus of Valsalva aneurysm from left coronary sinus,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4121633,Dissection of femoral artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4113291,Cervical aortic arch,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4110201,Ulnar artery aneurysm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4111707,Ruptured berry aneurysm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4068829,Persistent aortic arch convolutions,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4137555,Thrombosis of aortic bifurcation bypass graft,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4067211,Aorto-esophageal fistula,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4079431,Ruptured aneurysm of middle cerebral artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4237180,Pontine artery occlusion,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4194886,External iliac artery occlusion,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4187938,Multiple renal arteries,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+193907,Superior mesenteric artery trunk injury,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4112154,Leaking abdominal aortic aneurysm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4336004,Branch macular artery occlusion,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+37110252,Dissection of ascending aorta and aortic arch,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+36715882,Vasculitis of mesenteric artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4078315,Top of basilar syndrome,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4121625,Common iliac artery stenosis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4124838,Critical upper limb ischemia,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4327503,Stricture of aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4193055,Inflammatory abdominal aortic aneurysm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4079430,Ruptured aneurysm of anterior cerebral artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+40488004,Aberrant origin of left subclavian artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4031930,Aneurysm of common carotid artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+37017075,Nontraumatic ruptured cerebral aneurysm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4237181,Pontine artery thrombosis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+43022064,Atherosclerosis of aortoiliac bypass graft,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4142292,Thrombosis of renal artery bypass graft,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4235766,Duodenoaortic fistula,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4244959,Congenital dilatation of aortic arch,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4111848,Embolism and thrombosis of the posterior tibial artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+36716757,Perinatal arterial ischemic stroke,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4128904,Traumatic rupture of aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4054892,Celiac or mesenteric artery injury,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4218956,Postductal coarctation of aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4208071,Critical ischemia of foot,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4146012,Trash foot,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4348319,Acute mesenteric arterial occlusion,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4082162,Ruptured aneurysm of posterior inferior cerebellar artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4198453,False aneurysm of hepatic artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4144981,Aneurysm of gastroduodenal artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4246955,Congenital stenosis of carotid artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4119614,Femoral artery embolus,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4223098,Hepatic artery thrombosis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4168060,Gardner-Diamond syndrome,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+36717625,Penetrating ulcer of aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4009654,Arterial thrombosis of spinal cord,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4108377,Embolism and thrombosis of the dorsalis pedis artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+37395562,Multi-infarct dementia due to atherosclerosis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+437147,Injury of internal mammary artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4201941,Recurrent abdominal aortic aneurysm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4111852,Embolism and thrombosis of the celiac artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+40489292,Thromboembolus of precerebral artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4128218,Acquired renal artery aneurysm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4030379,Preductal coarctation of aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4175569,Common femoral artery thrombosis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4142291,Occlusion of aortic bifurcation bypass graft,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4263648,Dermite ocre of Favre,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4032493,Multiple AND bilateral precerebral artery thrombosis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4079433,Ruptured aneurysm of anterior communicating artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4247959,Congenital retinal aneurysm,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4112165,Embolism and thrombosis of the splenic artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4121626,External iliac artery stenosis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4246951,Congenital stenosis of aortic arch,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4109477,Interrupted aortic arch distal to left subclavian artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4142981,Aneurysm of supraceliac aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4033350,Secondary cutaneous vasculitis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4210025,Vascular compression of esophagus by aberrant right subclavian artery arising from descending aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+42873055,Coarctation of infrarenal abdominal aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4320938,Pseudocoarctation of aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4262102,Medionecrosis of aorta,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+40482912,Aortic sinus of Valsalva aneurysm from right coronary sinus,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4109466,Sinus of Valsalva aneurysm with rupture,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4197396,Hepatic artery embolism,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4322723,False aneurysm of distal brachial artery,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4178400,External iliac artery thrombosis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4010874,Retinal arteritis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4119999,Chronic peri-aortitis,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+762628,Posterior cerebral artery embolism,SNOMED,Condition,S,Not included - descendant,100,1,200,2
+40493454,Obstruction of aortic outflow,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+4109347,Localized supravalvar aortic stenosis,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+42535143,Atherosclerosis of left iliac artery,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+42539276,Occlusion of right middle cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+4143890,Rupture popliteal artery,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+42536635,Acute aortoiliac occlusion,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+36713015,Atherosclerosis of right iliac artery,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+42536634,Acute occlusion of artery of upper limb,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+42535456,Occlusion of right vertebral artery,SNOMED,Condition,S,Not included - descendant,100,1,200,1
+45766110,Asymptomatic occlusion of anterior cerebral artery,SNOMED,Condition,S,Not included - descendant,187,1,187,1
+36717012,Aneurysm of right femoral artery,SNOMED,Condition,S,Not included - descendant,172,1,172,1
+36713013,Occlusion of right femoral artery,SNOMED,Condition,S,Not included - descendant,169,1,169,1
+36712807,Pain at rest of right lower limb co-occurrent and due to atherosclerosis,SNOMED,Condition,S,Not included - descendant,163,1,163,1
+761930,Asymptomatic carotid artery stenosis,SNOMED,Condition,S,Not included - descendant,153,1,153,1
+37109921,Acute occlusion of artery of lower limb co-occurrent and due to thromboembolus,SNOMED,Condition,S,Not included - descendant,139,1,139,1
+36712962,Aneurysm of left femoral artery,SNOMED,Condition,S,Not included - descendant,135,1,135,1
+36712957,Aneurysm of left common iliac artery,SNOMED,Condition,S,Not included - descendant,133,1,133,1
+36712961,Aneurysm of left popliteal artery,SNOMED,Condition,S,Not included - descendant,132,1,132,1
+765907,Occlusion and stenosis of middle cerebral artery with infarction,SNOMED,Condition,S,Not included - descendant,124,1,124,1
+36713012,Occlusion of left femoral artery,SNOMED,Condition,S,Not included - descendant,114,1,114,1
+36712960,Aneurysm of right popliteal artery,SNOMED,Condition,S,Not included - descendant,112,1,112,1
+36712809,Aneurysm of right renal artery,SNOMED,Condition,S,Not included - descendant,107,1,107,1
+42535836,Stenosis of left vertebral artery,SNOMED,Condition,S,Not included - descendant,107,1,107,1
+4112155,Anterior tibial aneurysm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4322809,Aneurysm of gastroepiploic artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4070297,Pentalogy of Fallot,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535874,Thrombosis of left middle cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4124843,Common femoral aneurysm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536825,Laceration of deep palmar arch,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+764734,Pseudoaneurysm of vertebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539787,Occlusion of right posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762701,Basilar artery occlusion without infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535106,Acquired right carotid cavernous fistula,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40491456,Aneurysm of aortic sinus of Valsalva with rupture to left atrium,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4055025,Superior mesenteric artery embolus,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4108380,Embolism and thrombosis of the subclavian artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4070929,Anomalous origin of the aortic arch,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37016147,Occlusion of renal artery due to embolism,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4194897,Multiple AND bilateral precerebral artery obstruction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4108750,Interrupted aortic arch between left common carotid and brachiocephalic artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536824,Laceration of superficial palmar arch,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+763093,Carotid artery stenosis without infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4301023,Secondary erythromelalgia,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4294425,Purpura due to prolonged vomiting and/or coughing,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43020504,Shone complex,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4055594,"Closed injury, anterior tibial artery",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40488007,Aneurysm of aortic sinus of Valsalva with protrusion into right atrium,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4109316,Ascending aortic atresia,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4031045,Anterior choroidal artery syndrome,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4110331,Embolism and thrombosis of the ulnar artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4108364,Extremity artery atheroma,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4055590,"Open injury, superficial femoral artery",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4109469,Right aortic arch and right descending aorta,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4244961,Congenital dilatation of carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535512,Cerebrovascular accident due to thrombus of right carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4229401,Platelet-fibrin retinal embolus,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4175579,Suprarenal artery aneurysm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36712959,Aneurysm of left internal iliac artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45766073,Occlusion of internal auditory artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4111847,Peripheral artery spasm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+764102,Abdominal aortic aneurysm greater than 5.5 centimeters in male,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539417,Thrombosis of right carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43021718,Acquired complete obstruction of aortic arch,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4137219,Chronic nontraumatic dissection of thoracic aorta,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36713094,Peripheral angiopathy due to type 1 diabetes mellitus,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37116421,Acute occlusion of artery of upper limb caused by thromboembolus,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37119077,Asymptomatic stenosis of intracranial artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535107,Acquired left carotid cavernous fistula,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40488394,Aneurysm of aortic sinus of Valsalva with protrusion into left ventricle,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43021317,Vascular ring with right aortic arch and left arterial duct from anomalous retroesophageal left subclavian artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43021316,Vascular ring with right aortic arch and left arterial ligament with anomalous retroesophageal left subclavian artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4245436,Congenital dilatation of subclavian artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539014,Embolus of right posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539166,Cerebrovascular accident due to thrombus of left carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762707,Occlusion and stenosis of posterior cerebral artery without infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762583,Dissecting aneurysm of middle cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4109470,Right aortic arch and left descending aorta,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46272559,Inflammation of fetal umbilical artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40487099,Double aortic arch with right arch dominant,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42538818,Occlusion of right middle cerebral artery by embolus,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535096,Thrombosis of right vertebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4264734,Thromboembolism of renal arteries,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4152613,Dynamic aortic outflow tract obstruction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37110240,Asymptomatic stenosis of extracranial artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535511,Cerebrovascular accident due to thrombus of basilar artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4064193,O/E - retinal microaneurysms,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42536842,Laceration of popliteal artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4108370,Posterior tibial aneurysm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36712958,Aneurysm of right internal iliac artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40491479,Aneurysm of aortic sinus of Valsalva with rupture to pulmonary artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40490430,Aneurysm of aortic sinus of Valsalva with rupture to pericardial cavity,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4347064,Giant cell arteritis without polymyalgia rheumatica,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762341,Occlusion of right anterior cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+764722,Thrombosis of posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45766088,Asymptomatic occlusion of extracranial carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4002631,Congenital stricture of cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4095428,Injury of anterior spinal artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108913,Dissection of left vertebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40488006,Aneurysm of aortic sinus of Valsalva with protrusion into pulmonary artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45766128,Familial cerebral saccular aneurysm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762756,Arteriosclerosis of renal artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535097,Thrombosis of left vertebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4144633,Thrombosis of axillofemoral bypass graft,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36712950,Aneurysm of intracranial portion of right internal carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4244374,Ruptured sinus of Valsalva into left ventricle,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4146010,Infected femoropopliteal graft,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37117127,Dissection of external carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4115229,Digital arterial thrombosis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43020423,Posterior tibial artery insufficiency,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37110251,Non-atherosclerotic chronic arterial occlusive disease,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43020490,Aneurysm of extracranial portion of internal carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4120105,Superficial femoral aneurysm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4050546,"Open injury, brachial artery",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43021429,Anomalous common origin of brachiocephalic artery and left common carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36713014,Atherosclerosis of bilateral iliac arteries,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535094,Subclavian steal syndrome of right subclavian artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40491454,Abnormal course of aortic arch and descending aorta,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4187858,Annular abscess of aortic root,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535092,Dilatation of aortic root co-occurrent and due to Marfan syndrome,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4263089,Stasis purpura,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4041678,Intracranial arterial septic embolism,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43021633,Congenital atresia of aortic arch,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4055473,"Closed injury, axillary artery",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4109319,Left aortic arch and right descending aorta,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40486227,Residual coarctation of aorta,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535113,Cerebrovascular accident due to thrombus of right middle cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+764100,Abdominal aortic aneurysm 3.0 to 5.5 centimeters in male,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4055477,"Open injury, radial artery",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4245320,Congenital absence of carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45766108,Asymptomatic occlusion of posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762754,Arteriosclerosis of thoracic aorta,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4132551,Injury of middle colic artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42538671,Tetralogy of Fallot with pulmonary atresia and systemic-to-pulmonary collateral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37116422,Acute occlusion of artery of upper limb caused by thrombus,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762700,Carotid artery occlusion without infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4259004,Congenital hypoplasia of umbilical artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762926,Occlusion of internal carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42537643,Dissection of basilar artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4079021,Ruptured internal carotid-anterior communicating artery zone aneurysm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+763095,Posterior inferior cerebellar artery occlusion with infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4311006,Dural carotid cavernous fistula,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37109922,Acute occlusion of aortoiliac artery due to thrombosis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40486131,Dilatation of aortic sinutubular junction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40479593,Nonischemic priapism,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43021721,Acquired luminal obstruction of aortic arch between subclavian artery and common carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+765609,Vertebral artery stenosis without infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535098,Bilateral vertebral artery occlusion,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4139417,Rupture femoral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762585,Dissecting aneurysm of anterior cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42538826,Stenosis of left cerebellar artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539411,Stenosis of right vertebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4216555,Injury of suprarenal arteries,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+765495,Occlusion and stenosis of middle cerebral artery without infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37110254,External iliac artery endofibrosis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4213638,Aneurysm of axillary artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4120112,Cerebral steal syndrome,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4301022,Primary erythromelalgia,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4009154,Atheroma of cerebral arteries,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+763004,Vertebral artery stenosis with infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45766199,Cerebral arteritis due to infectious disease,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45766070,Embolism of internal auditory artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46271460,Atherosclerosis of nonautologous biological bypass graft of lower limb,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40488026,Aneurysm of aortic sinus of Valsalva with protrusion into left atrium,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40483311,Isolation of left subclavian artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4125330,Inadequate aortic balloon augmentation,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40492418,Laceration of digital artery of hand,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+763003,Vertebral artery occlusion with infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535735,Combined occlusion by thrombus of retinal artery and retinal vein,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+46271462,Atherosclerosis of autologous bypass graft of lower limb,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4050550,"Open injury, digital artery",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37108910,Dissection of left carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37017533,Transplant renal artery stenosis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4343937,Secondary aortitis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539472,Embolus of left middle cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+765606,Internal carotid artery stenosis with infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4146009,Infected femorofemoral crossover graft,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4308138,Aneurysm of spinal artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42873064,Vascular ring with right aortic arch and left patent arterial duct,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4124847,Thoracic aorta perforation,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36712951,Aneurysm of intracranial portion of left internal carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43020555,Middle aortic syndrome,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4109463,Diffuse supravalvar aortic stenosis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4209546,Aberrant retro-esophageal subclavian artery causing dysphagia,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40482910,Aortic sinus of Valsalva aneurysm from noncoronary sinus,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+762936,Occlusion and stenosis of posterior cerebral artery with infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4143225,Ruptured aneurysm of internal iliac artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4031690,Aortocaval fistula,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535114,Cerebrovascular accident due to thrombus of left middle cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4198274,Juxtarenal aortic aneurysm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+764099,Abdominal aortic aneurysm 3.0 to 5.0 centimeters in female,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4139574,Infected iliofemoral graft,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4020435,Mechanical complication of carotid artery bypass,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4045751,Cerebral arteritis in giant cell arteritis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4246643,Congenital stenosis of subclavian artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42873062,Coarctation of aorta between subclavian artery and common carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4148535,Stenosis of retinal artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42535509,Occlusion of left middle cerebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+42539416,Thrombosis of left carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36712808,Aneurysm of left renal artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4282908,Hyaline necrosis of aorta,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4210434,Ruptured popliteal artery aneurysm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+765774,Occlusion and stenosis of anterior cerebral artery without infarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40488337,Perforation of femoral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4082161,Ruptured aneurysm of basilar artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4195971,Common iliac artery occlusion,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4245812,Congenital absence of subclavian artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4242222,Multiple AND bilateral precerebral artery embolism,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4079434,Ruptured aneurysm of posterior communicating artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+45771319,Asymptomatic occlusion of intracranial carotid artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4044280,Congenital hypoplasia of ascending aorta,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40491994,Aortico-left ventricular tunnel with aneurysm of intracardiac septal wall and aneurysm of extracardiac aortic wall,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4126111,Congenital renal artery aneurysm,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+764707,Ruptured aneurysm of intracranial artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4046445,Anterior spinal artery thrombosis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43021949,Abscess at site of aortic coarctation,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4108733,Anomalies of the aorta excluding coarction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4120098,Superficial femoral artery stenosis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4147300,Injury of ileocolic artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4035176,Origin of innominate artery from left side of aortic arch,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4055593,"Closed injury, popliteal artery",SNOMED,Condition,S,Not included - descendant,100,1,100,1
+40488014,Localized supravalvar aortic stenosis at sinutubular junction,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4112796,Injury of deep plantar artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37117075,Dissection of right vertebral artery,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+43021052,Systemic to pulmonary collateral artery from descending thoracic aorta,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4179910,Superficial femoral artery thrombosis,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4020603,Mechanical complication of intra-aortic balloon,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764705,Thrombosis of anterior inferior cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4050554,"Closed injury, common femoral artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4144150,Thrombosis of posterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536639,Perforation of thoracoabdominal aorta co-occurrent and due to aneurysm of thoracoabdominal aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021453,Anomalous origin of arterial ligament from left carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42873063,Coarctation of aorta between left common carotid artery and right common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021723,Right aortic arch branching pattern,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762342,Occlusion of left anterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40486080,Double aortic arch with left arch dominant and coarctation of right arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204826,Fibromuscular dysplasia of wall of carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021180,Systemic to pulmonary collateral artery from right carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021439,Abnormality of arterial ligament,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4108745,Vascular ring with left aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686441,Injury of left axillary artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615088,Embolism of artery of left lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4143892,Rupture axillary artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37110064,"Moyamoya angiopathy, short stature, facial dysmorphism, hypergonadotropic hypogonadism syndrome",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021188,Systemic to pulmonary collateral artery from right renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40491956,Common arterial trunk with obstruction of aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615017,Aneurysm of left common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4103131,Dextraposition of aorta in Fallot's tetralogy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764505,Occlusive thrombus of left vertebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021449,Anomalous origin of arterial ligament from left brachiocephalic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3184417,Stenosis of right carotid artery,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+40487985,Vascular ring with right aortic arch and right patent arterial duct with absent left pulmonary artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3188677,Cerebral ischemia complicating stroke,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+761858,Pain at rest of right lower limb co-occurrent and due to atherosclerosis of bypass graft,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3188959,Femoral artery foreign body,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+765274,Arterial thoracic outlet syndrome of right subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715717,Anterior cord syndrome of thoracic spinal cord at T6 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761804,Stenosis of artery of right upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37110247,Congenital anomaly of abdominal aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4120107,Dissection of anterior spinal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761207,Aneurysm of right external iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021569,Anomalous separate origins of internal carotid arteries and external carotid arteries from single aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761824,Thrombosis of bilateral popliteal arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021444,Anomalous origin of arterial ligament,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615022,Aneurysm of right subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021447,Anomalous origin of arterial ligament from distal descending aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615087,Stenosis of artery of right lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36674753,Microaneurysm of left retinal artery due to diabetes mellitus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615091,Embolism of right popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3198350,Poorly controlled type I diabetes with circulatory disorder,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+35622782,Familial thoracic aortic aneurysm and aortic dissection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761825,Claudication of bilateral upper limbs co-occurrent and due to atherosclerosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762351,Ruptured acquired aneurysm of cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487154,Double aortic arch with left arch dominant and right arch patent,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765664,Anterior choroidal artery occlusion with infarction,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615036,Ischemia of right arm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021972,Systemic to pulmonary collateral artery from left renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44808832,Occlusion of anterior tibial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615062,Thrombosis of right iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615157,Dissection of right subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761212,Aneurysm of left radial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761814,Atheroembolism of left upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40490418,Vascular ring with left aortic arch and retroesophageal right descending aorta and right arterial duct arising from aortic diverticulum and aberrant right subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207895,Occlusion of right central retinal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762343,Occlusion of bilateral posterior cerebral arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3186920,Celiac artery obstruction,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+764501,Occlusive embolus of left anterior cerebral,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3185619,Abnormality of basilar artery summit,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+44808833,Occlusion of posterior tibial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3187416,Intramural hematoma of aorta,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+765284,Thrombosis of right ulnar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761786,Fibromuscular hyperplasia of left carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715718,Anterior cord syndrome of thoracic spinal cord at T8 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761823,Thrombosis of artery of bilateral lower limbs,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615090,Embolism of left popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615014,Aneurysm of extracranial portion of right internal carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487507,Double aortic arch with left arch dominant and atresia of right arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715715,Anterior cord syndrome of thoracic spinal cord at T4 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4193302,Post-radiological embolism of upper limb artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37109920,Acute occlusion of aortoiliac artery co-occurrent and due to thromboembolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36717474,Anterior cord syndrome of thoracic spinal cord at T7 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764447,Occlusion of left posterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310084,Laceration of left popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615124,Thrombosis of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42539183,Spontaneous hemorrhage of subarachnoid space from right posterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535422,Spontaneous hemorrhage of subarachnoid space from left posterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765079,Stenosis of right renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761829,Claudication of left upper limb co-occurrent and due to atherosclerosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4234866,Congenital absence of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761813,Thrombosis of left ulnar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37208182,Aortic arch atherosclerosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021450,Anomalous origin of arterial ligament from right subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4110161,Injury of digital artery of hand,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615100,Thrombosis of left common femoral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4052214,"Open injury, common femoral artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764026,Peripheral vascular disease of foot with loss of protective sensation and deformity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109342,Tubular hypoplasia of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209511,Dissection of right femoral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3173780,Atherosclerotic peripheral vascular disease with gangrene,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+35615071,Pain of left upper limb co-occurrent and due to ischemia,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204827,Bilateral fibromuscular dysplasia of wall of carotid arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4313304,Retinal endarteritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40482076,Isolation of left common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762584,Dissecting aneurysm of posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4301024,Stellate pseudoscar in senile purpura,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765404,Stenosis of middle cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45768711,Descending aorta anterior and same side as azygos vein with absent inferior vena cava,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761740,Congenital stenosis of right renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44808746,Occlusion of ulnar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42539514,Occlusion of right cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615023,Aneurysm of left subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3176693,Left axillary artery thrombus,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+35615086,Stenosis of artery of left lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615019,Atherosclerosis of artery of left upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40481092,Polyarteritis of kidney,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4110205,Inferior mesenteric aneurysm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4139576,Infected femorodistal graft,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4120292,Intra-aortic balloon thrombosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4134159,Transection of vertebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715758,Anterior cord syndrome of lumbar spinal cord at L2 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487151,Double aortic arch with right arch dominant and left arch patent,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+763094,Anterior inferior cerebellar artery occlusion with infarction,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021716,Congenital luminal atresia of aortic arch between subclavian artery and common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487118,Aortico-left ventricular tunnel with intracardiac aneurysm of septal portion,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+46286442,Isolated aortitis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4055474,"Open injury, axillary artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37312368,Bilateral stenosis of vertebral arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3176691,Right subclavian artery occlusion,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+43021636,Atresia of aortic arch with fibrous cord between left common carotid artery and right common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4120954,Intra-aortic balloon rupture,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021448,Anomalous origin of arterial ligament from right brachiocephalic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44784293,Postoperative thromboembolism of precerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37312001,Contusion of superficial palmar arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3184979,Right internal carotid occlusion,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+3176312,Left middle cerebral artery stroke,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+4011981,Open spinal dislocation with anterior lumbar cord lesion,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536843,Laceration of peroneal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535880,Spontaneous rupture of right posterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40490969,Aortic arch hypoplasia distal to subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715761,Anterior cord syndrome of lumbar spinal cord at L5 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487984,Vascular ring with right aortic arch and right arterial ligament with absent left pulmonary artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536241,Embolus of right cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4113295,Postductal aortic stenosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36716136,Juvenile temporal arteritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615032,Bilateral dissection of iliac arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35624516,Double aortic arch with dominant left arch and hypoplasia of right arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761789,Cerebrovascular accident due to thrombus of right cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3168064,Right renal artery disruption,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+3174149,Brachial artery laceration,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+40487505,Descending aorta anterior and same side as azygos vein with azygos continuity of inferior caval vein,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686412,Laceration of left renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021445,Anomalous origin of arterial ligament from aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109317,Ascending aorta absent,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40490523,Vascular ring with left aortic arch and retrotracheal right patent arterial duct,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536193,Ruptured aneurysm of left posterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4088222,Listerial cerebral arteritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4143891,Rupture subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37312597,Rheumatic aortitis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+760869,Bilateral atherosclerosis of arteries of lower limbs,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42537641,Post-procedural aortic aneurysm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762630,Anterior inferior cerebellar artery embolism,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764499,Occlusive embolus of left carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4146080,Ruptured sinus of Valsalva into right ventricle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762095,Spontaneous hemorrhage of subarachnoid space from left middle cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615106,Occlusion of right popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+760985,Stenosis of cavernous portion of right internal carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35624518,Double aortic arch with dominant right arch and hypoplasia of left arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535829,Thromboembolus of external iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021319,Vascular ring with right aortic arch and left arterial duct from anomalous retroesophageal brachiocephalic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3182055,Teratoma of aorta,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+4134941,Transection of carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4229400,Calcific retinal embolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615026,Aneurysm of artery of right upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40488998,Vascular ring with left aortic arch to right descending aorta and right patent arterial duct,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4110204,Dorsalis pedis aneurysm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615025,Aneurysm of left brachial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4120111,Steal syndrome of lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761750,Embolism of splenic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40483310,Isolation of right common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3181089,Traumatic aortic disruption,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+761464,Ischemia of right lower extremity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4236727,Traumatic aortocaval fistula,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36680605,Familial cervical artery dissection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3182866,Infected aortic endograft,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+4178398,Suprarenal artery embolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764504,Occlusive thrombus of left cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4101013,Solitary aortic trunk with pulmonary atresia,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761210,Aneurysm of left superficial temporal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45766085,Ruptured aneurysm of vertebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765226,Atherosclerosis of autologous bypass graft of right lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204667,Aneurysm of posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4182191,Crural artery thrombosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209510,Dissection of left femoral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4052217,"Closed injury, deep plantar artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44811348,Thrombosis of external jugular vein,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686479,Injury of right subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715720,Anterior cord syndrome of thoracic spinal cord at T10 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615107,Occlusion of left popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021456,Anomalous origin of right arterial ligament from left aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761412,Thrombosis of bilateral internal carotid arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021452,Anomalous origin of arterial ligament from right carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615020,Atherosclerosis of right renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3174092,Right basal ganglia embolic stroke,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+4174014,Inferior mesenteric artery embolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765775,Multiple AND bilateral precerebral artery stenosis without infarction,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40490948,Vascular ring with left aortic arch and right arterial duct arising from aberrant retroesophageal innominate artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021598,Anomalous origin of arterial ligament from unknown site,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536349,Occlusion of left cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615156,Dissection of left subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615015,Aneurysm of extracranial portion of left internal carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35622247,"Aortic arch anomaly, facial dysmorphism, intellectual disability syndrome",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42539142,Common arterial trunk with pulmonary dominance and interrupted aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487537,Vascular ring with retrotracheal right pulmonary artery from ascending aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4228297,Nontraumatic dissection of thoracic aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40492975,Vascular ring with left aortic arch and right arterial duct ligament arising from retroesophageal aortic diverticulum with aberrant right subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765028,Dissection of splenic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4079432,Ruptured aneurysm of posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35611566,Bilateral lower limb atherosclerosis pain at rest co-occurrent and due to atherosclerosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685005,Bilateral microaneurysm of retinal arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+760871,Atherosclerosis of arteries of right lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021720,Acquired luminal obstruction of aortic arch distal to subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4299127,Erythrocyanosis with nodules,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40490951,Vascular ring with left aortic arch and right patent arterial duct,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4180025,Profunda femoris aneurysm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761128,Aneurysm of left iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3173008,Thrombus of aortic wall,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+40488440,Abnormality of thoracoabdominal aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3171752,Left carotid artery laceration,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+37204002,Bilateral stenosis of carotid arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4052210,"Open injury, palmar artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42873054,Coarctation of suprarenal abdominal aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021059,Infective endarteritis at site of aortopulmonary window,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204668,Aneurysm of middle cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021715,Congenital luminal atresia of aortic arch distal to subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762629,Cerebellar artery embolism,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764498,Occlusive embolus of basilar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615028,Bilateral atherosclerosis of lower limbs with gangrene,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4143921,Ruptured sinus of Valsalva into right atrium,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42538820,Occlusion of right cerebellar artery by embolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4079120,Ruptured internal carotid bifurcation aneurysm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764445,Occlusion of anterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4207618,Head and neck arterial embolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37309672,Intramural hematoma of thoracic aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487972,Recoarctation of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686411,Laceration of right renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4214822,Segmental retinal periarteritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204825,Fibromuscular dysplasia of wall of renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761853,Atherosclerosis of bypass graft of left lower limb with gangrene,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43530636,Spontaneous caroticocavernous sinus fistula,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715722,Anterior cord syndrome of thoracic spinal cord at T12 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310024,Laceration of right popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536240,Embolus of left cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4134942,Transection of anterior spinal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3182789,Atherosclerosis of superior mesenteric artery,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+761816,Stenosis of artery of bilateral lower limbs,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37312530,Limb pain at rest due to atherosclerosis of artery of lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021635,Atresia of aortic arch with fibrous cord between subclavian artery and common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021455,Anomalous origin of right arterial ligament from right aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487010,Double aortic arch with right arch dominant and coarctation of left arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42538819,Occlusion of left middle cerebral artery by embolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4007949,Arteriopathic granular atrophy of cerebral cortex,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4143588,Occlusion of renal artery bypass graft,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4139575,Infected iliopopliteal graft,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021904,Interruption of aortic arch between left common carotid artery and right common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021318,Vascular ring with right aortic arch and left arterial duct from retroesophageal diverticulum of aorta and anomalous left subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4011476,Mesenteric-portal fistula,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40490950,Vascular ring with left aortic arch and right arterial ligament,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+763035,Vertebral artery occlusion without infarction,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761745,Arterial thoracic outlet syndrome of left subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42538980,Stenosis of right cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3183076,Right branch retinal artery occlusion,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+35615021,Atherosclerosis of left renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209533,Dissection of celiac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4055597,"Open injury, posterior tibial artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021717,Congenital luminal atresia of aortic arch between left common carotid artery and right common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536772,Laceration of intercostal blood vessel,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4193054,Ruptured suprarenal aortic aneurysm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204745,Congenital aneurysm of precerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37110248,Compression of trachea and esophagus co-occurrent and due to congenital anomaly of aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42538981,Occlusion of left posterior cerebral artery by embolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45766200,Primary cerebral arteritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761431,Atherosclerosis of nonautologous biological bypass graft of right lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021575,Congenital hypoplasia of descending aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209660,Stenosis of celiac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761438,Macroaneurysm of retina of right eye,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3173537,Arterial microemboli of left hand,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+40488435,Vascular ring with left aortic arch and right arterial duct arising from aberrant retroesophageal right subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43022040,Atresia of aortic arch with fibrous cord,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37309967,Laceration of deep volar arch of right radial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4052208,"Closed injury, ulnar artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4274820,Retinal artery spasm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686408,Injury of right renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40486552,Persisting fifth aortic arch with double barrell arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686517,Injury of right popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4055595,"Closed injury, posterior tibial artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686454,Laceration of right superficial palmar arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4108749,Postductal hypoplasia of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4050548,"Open injury, ulnar artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021446,Anomalous origin of arterial ligament from ascending aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761465,Ischemia of bilateral lower limbs,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761432,Atherosclerosis of autologous bypass graft of left lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4132550,Injury of right colic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37109597,Fallot complex with intellectual disability and growth delay syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615073,Right upper limb pain co-occurrent and due to ischemia,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35627150,Vasculitis with glomerulonephritis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021441,Anomalous insertion of arterial ligament into distal left pulmonary artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715716,Anterior cord syndrome of thoracic spinal cord at T5 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761429,Atherosclerosis of nonautologous biological bypass graft of left lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4181456,Cystic adventitial disease of popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37312002,Contusion of deep palmar arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42539161,Occlusion of left cerebellar artery by embolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3174271,Right middle cerebral artery stroke,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+4055479,"Closed injury, digital artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40488970,Malalignment of aortic sinus in relation to pulmonary sinus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3176677,Venous varix of jugular vein,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+36686480,Injury of left subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615083,Embolism of artery of left upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3169251,Ischemic stroke of basal ganglia,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+35615094,Thrombosis of artery of left lower extremity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3189490,Celiac artery dissection,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+4050549,"Closed injury, palmar artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4139416,Perforation iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4144028,Infected axillofemoral graft,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021454,Right arterial ligament,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44808747,Occlusion of dorsalis pedis artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686409,Injury of left renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021053,Systemic to pulmonary collateral artery from abdominal aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761411,Thrombosis of left internal carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761430,Atherosclerosis of bypass graft of right lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40489394,Vascular ring with malrotation and dextroversion of heart and hypoplasia of right lung and left arterial duct,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3184775,Cerebral infarct complicating carotid stenosis,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+43021634,Atresia of aortic arch with fibrous cord distal to subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021443,Anomalous insertion of arterial ligament into right pulmonary artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686438,Laceration of right brachial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615058,Dissection of right renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615096,Thrombosis of right popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615116,Bilateral lower limb atherosclerosis of non-biological bypass graft,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761436,Dissection of right iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536338,Occlusion of left pontine artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3172779,Transection of femoral artery,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+42536243,Embolus of right middle cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021430,Anomalous origin of left common carotid artery from brachiocephalic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615076,Occlusion of distal artery of left upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761428,Stenosis of left renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40491457,Aneurysm of aortic sinus of Valsalva with rupture to left ventricle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45766109,Asymptomatic occlusion of basilar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765301,Claudication of right upper limb co-occurrent and due to atherosclerosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4146011,Aortocolonic fistula,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204661,Multiple aneurysms of cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44813802,Thrombosis of stent of renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615099,Thrombosis of right common femoral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44807043,Leaking thoracic aortic aneurysm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37109923,Acute occlusion of artery of lower limb due to thrombosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615075,Occlusion of distal artery of right upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4111853,Embolism and thrombosis of hepatic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764497,Occlusive embolus of right vertebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35607996,Retinal arterial macroaneurysm with supravalvular pulmonic stenosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42538998,Thrombosis of right middle cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44813823,Occlusion of radial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37108912,Bilateral vertebral artery dissection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40488003,Aortic left ventricular tunnel with right coronary artery from tunnel,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761743,Atheroembolism of bilateral renal arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37310623,Bilateral occlusion of central retinal arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765081,Macroaneurysm of retina of left eye,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+763009,Multiple and bilateral precerebral arterial occlusion with infarction,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615054,Bilateral subclavian artery stenosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43531717,Anterior choroidal artery thrombosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764446,Occlusion of right posterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35624151,Neuhauser anomaly,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761826,Atherosclerosis of bypass graft of right lower limb with intermittent claudication,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761211,Aneurysm of right radial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40490968,Aortic arch hypoplasia between subclavian and common carotid arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762345,Left vertebral artery thrombosis with stroke,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109324,Preductal aortic stenosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109320,Aortic arch centrally descending,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37309659,Spontaneous hemorrhage of subarachnoid space from anterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686518,Injury of left popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615089,Embolism of artery of right lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535420,Spontaneous hemorrhage of subarachnoid space from basilar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686410,Laceration of splenic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615093,Thrombosis of artery of right lower extremity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4139419,Rupture brachial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761463,Ischemia of left lower extremity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536638,Perforation of abdominal aorta co-occurrent and due to aneurysm of abdominal aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4050555,"Closed injury, superficial femoral artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4144948,Aortojejunal fistula,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4245437,Congenital duplication of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204671,Aneurysm of internal carotid-posterior communicating artery zone,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109326,Postductal interruption of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40483313,Isolation of right subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764496,Occlusive embolus of left vertebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021320,Vascular ring with right aortic arch and left arterial duct from retroesophageal diverticulum of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761208,Aneurysm of left external iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4056439,Closed injury of subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761433,Atherosclerosis of autologous bypass graft of bilateral lower limbs,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715760,Anterior cord syndrome of lumbar spinal cord at L4 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761742,Atheroembolism of right renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37312367,Bilateral occlusion of pontine arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021221,Anomalous origin of arterial ligament from retroesophageal aortic diverticulum,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109318,Aortic tunnel,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761805,Stenosis of artery of left upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109476,Juxtaductal aortic coarctation,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765080,Atherosclerosis of bypass graft of left lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4120955,Intra-aortic balloon infection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021442,Anomalous insertion of arterial ligament into pulmonary trunk,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36716127,Isotretinoin-like syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685007,Microaneurysm of right retinal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4113294,Preductal interruption of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+760870,Atherosclerosis of arteries of left lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536337,Occlusion of right pontine artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35624311,"Pulmonary valve agenesis, tetralogy of Fallot, absence of ductus arteriosus syndrome",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021451,Anomalous origin of arterial ligament from left subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40488395,Aneurysm of aortic sinus of Valsalva with protrusion into pericardial cavity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762627,Anterior cerebral artery embolism,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536874,Laceration of dorsalis pedis artery of foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021431,Vascular ring with mirror image branching of right aortic arch and left arterial ligament,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761793,Left posterior cerebral artery thrombosis with stroke,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109474,Isolation of subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715759,Anterior cord syndrome of lumbar spinal cord at L3 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021719,Acquired luminal obstruction of aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021440,Anomalous insertion of arterial ligament,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021597,Anomalous origin of arterial ligament from aortic diverticulum,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615057,Dissection of left renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3177089,Transection of left external iliac artery,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+765282,Fibromuscular hyperplasia of right carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3184799,CNS infarction due to occlusion or vertebral artery,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+36686448,Laceration of right femoral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109468,Disorder of aortic arch and descending aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37309671,Intramural hematoma of abdominal aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36716125,Agenesis of internal carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4056440,"Open injury, subclavian artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4056573,"Closed injury, dorsalis pedis artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204670,Aneurysm of internal carotid-anterior communicating artery zone,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109325,Preductal hypoplasia of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021315,Vascular ring with right aortic arch and left arterial ligament between left subclavian artery and left common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42537640,Post-procedural false aortic aneurysm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40488997,Vascular ring with left aortic arch to right descending aorta and right arterial ligament,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536192,Ruptured aneurysm of right posterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761749,Embolism of right iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761792,Cerebrovascular accident due to thrombus of right posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40488436,Vascular ring with left aortic arch and right arterial duct arising from retroesophageal aortic diverticulum,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40490949,Vascular ring with left aortic arch and right arterial duct arising from retroesophageal aortic diverticulum and aberrant right subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536876,Laceration of plantar artery of foot,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+44808745,Occlusion of brachial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615082,Embolism of artery of right upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686455,Laceration of left superficial palmar arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764506,Occlusive thrombus of left posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204809,Cerebral aneurysm due to dissection of cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3182194,Right internal carotid artery aneurysm,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+4120108,Anterior spinal artery rupture,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761437,Macroaneurysm of retina of bilateral eyes,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4143893,Rupture ulna artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4247465,Congenital malposition of carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615061,Thrombosis of left iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686440,Injury of right axillary artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209564,Aneurysm of left vertebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4137551,Occlusion of femorofemoral crossover bypass graft,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40490484,Muscular subvalvar atresia of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762708,Multiple AND bilateral precerebral artery stenosis with infarction,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715719,Anterior cord syndrome of thoracic spinal cord at T9 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764500,Occlusive embolus of right carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4070195,Congenital stricture of retinal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3192767,Poorly controlled type II diabetes with circulatory disease,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+4050678,"Open injury, deep plantar artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761467,Ischemia of left upper extremity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35608022,Encircling double aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4108744,Double aortic arch with both patent,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4109467,Aorta to right ventricle tunnel,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4316064,Retroesophageal aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715713,Anterior cord syndrome of thoracic spinal cord at T2 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4139418,Rupture posterior tibial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021576,Congenital hypoplasia of abdominal aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615095,Thrombosis of left popliteal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42710025,Adductor canal syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764362,Occlusion of superior cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36686439,Laceration of left brachial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765488,Superior cerebellar artery embolism,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761791,Left cerebellar artery thrombosis with stroke,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764502,Occlusive embolus of right anterior cerebral,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535879,Spontaneous rupture of left posterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36685006,Microaneurysm of left retinal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35611568,Aneurysm of artery of right lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4144930,Rupture anterior tibial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487009,Double aortic arch with right arch dominant and atresia of left arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204744,Congenital aneurysm of cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4116060,Bregeat's syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40488000,Vascular ring due to aberrant subclavian artery and bilateral arterial ducts,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40493183,Traumatic rupture of gastroepiploic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4082163,Ruptured internal carotid-posterior communicating artery zone aneurysm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715757,Anterior cord syndrome of lumbar spinal cord,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37309673,Intramural hematoma of aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761822,Atheroembolism of right lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487098,Double aortic arch with left arch dominant,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615018,Atherosclerosis of artery of right upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761201,Aneurysm of right iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4178766,Rouleaux formation in retinal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761744,Atheroembolism of left renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761741,Congenital stenosis of left renal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40491993,Aortico-left ventricular tunnel of simple type,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+45766111,Asymptomatic occlusion of middle cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615080,Thrombosis of artery of right upper extremity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4338905,Cilioretinal artery occlusion,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37209563,Aneurysm of right vertebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4317953,Retroesophageal carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761748,Embolism of left iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35611567,Aneurysm of artery of left lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40480273,Superior cerebellar artery syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761434,Atherosclerosis of bypass graft of bilateral lower limbs,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37312133,Arteriosclerosis of artery of upper extremity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4174012,Subclavian artery embolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37108909,Bilateral carotid artery dissection,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3188894,Precerebral artery occlusion w/infarct,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+37209668,Atherosclerosis of superior mesenteric artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615024,Aneurysm of right brachial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615081,Thrombosis of artery of left upper extremity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43020661,Interruption of aortic arch distal to subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764101,Abdominal aortic aneurysm greater than 5.0 centimeters in female,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204669,Aneurysm of posterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764725,Thrombosis of posterior inferior cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4179909,Profunda femoris artery thrombosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4055476,"Closed injury, radial artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4050674,"Open injury, popliteal artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615098,Thrombosis of right femoral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+765300,Atheroembolism of left lower limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42538828,Occlusion of right posterior cerebral artery by embolus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4050682,"Open injury, dorsalis pedis artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4189522,Syphilitic aortic incompetence,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37108911,Dissection of right carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40488008,Aneurysm of aortic sinus of Valsalva with protrusion into right ventricle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37207955,Occlusion of left central retinal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4108869,Isolation of common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761854,Gangrene of right lower limb co-occurrent and due to atherosclerosis of bypass graft,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762631,Posterior inferior cerebellar artery embolism,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4257829,Congenital anomaly of aortic arch AND/OR descending aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36717479,Anterior cord syndrome of lumbar spinal cord at L1 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021577,Congenital hypoplasia of thoracoabdominal aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715714,Anterior cord syndrome of thoracic spinal cord at T3 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40492532,Aortico-left ventricular tunnel with extracardiac aneurysm of aortic wall,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37208181,Vertebral artery atherosclerosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021722,Acquired luminal obstruction of aortic arch between left common carotid artery and right common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204665,Aneurysm of posterior inferior cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204666,Aneurysm of anterior communicating artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761466,Ischemia of bilateral upper limbs,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3171253,Thrombus of right radial artery,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+761815,Atheroembolism of right upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615063,Thrombosis of bilateral iliac arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764703,Thrombosis of superior cerebellar artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761410,Thrombosis of right internal carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021950,Infective endarteritis at site of aortic coarctation,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021596,Anomalous origin of arterial ligament from right aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36715721,Anterior cord syndrome of thoracic spinal cord at T11 level,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4208809,Post-radiological embolism of lower limb artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536637,Perforation of thoracic aorta co-occurrent and due to aneurysm of thoracic aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535421,Spontaneous hemorrhage of subarachnoid space from intracranial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4055596,"Open injury, anterior tibial artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40488005,Abnormal course of aortic arch,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43020499,Dextrotransposition of the great arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36674752,Microaneurysm of right retinal artery due to diabetes mellitus,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764701,Thrombosis of anterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3181694,Atherosclerosis of celiac artery,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+761435,Dissection of left iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4133718,Injury of inferior pancreaticoduodenal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761055,Aneurysm of bilateral subclavian arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615027,Aneurysm of artery of left upper limb,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+764887,Embolism of abdominal aorta,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615064,Thrombosis of splenic artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4144931,Rupture radial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4052207,"Closed injury, brachial artery",SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37312134,Arteriosclerosis of artery of lower extremity,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3188439,Left cavernous carotid aneurysm,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+762053,Stenosis of right iliac artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4193301,Post-radiological femoral false aneurysm,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761209,Aneurysm of right superficial temporal artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+762096,Non-traumatic hemorrhage of subarachnoid space from right middle cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42535510,Occlusion of left posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36687136,Steal syndrome of left subclavian artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487966,Shelf-like supravalvar aortic stenosis,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204664,Aneurysm of anterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761827,Atherosclerosis of bypass graft of left lower limb with intermittent claudication,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761023,Periaortic mass,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4017520,Open spinal subluxation with anterior cervical cord lesion,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4226134,Traumatic aorto-enteric fistula,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487097,Double aortic arch with balanced arches,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40487651,Double aortic arch with right arch dominant and atresia of left arch and left ligament to diverticulum,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761828,Atherosclerosis of bypass graft of bilateral lower limbs with intermittent claudication,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+763267,Recurrent artery of Huebner occlusion with infarction,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204663,Aneurysm of internal carotid bifurcation,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761812,Thrombosis of artery of bilateral upper limbs,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3180211,Axillary artery laceration,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+37309966,Laceration of deep volar arch of left radial artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615097,Thrombosis of left femoral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+43021181,Systemic to pulmonary collateral artery from left carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615092,Bilateral atheroembolism of lower limbs,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+761206,Atherosclerosis of artery of bilateral upper limbs,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+37204812,Acquired aneurysm of cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4147995,Middle meningeal hemorrhage following injury,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+42536242,Embolus of left posterior cerebral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+35615016,Aneurysm of right common carotid artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+36713669,Hereditary arterial and articular multiple calcification syndrome,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+40491481,Aneurysm of aortic sinus of Valsalva with rupture to right ventricle,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3175775,Susac's syndrome,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+3184873,Hair tourniquet,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+40486184,Aortic arch hypoplasia between carotid arteries,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4137554,Thrombosis of femorofemoral crossover bypass graft,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3175723,Carotid sinus syndrome with bradycardia,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+36686449,Laceration of left femoral artery,SNOMED,Condition,S,Not included - descendant,0,0,0,0

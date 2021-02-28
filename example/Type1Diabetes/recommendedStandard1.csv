@@ -1,0 +1,10 @@
+﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,rc,dc,drc,dbc
+201820,Diabetes mellitus,SNOMED,Condition,S,Not included - parent,23196665,18,1487191054,22
+380097,Macular edema due to diabetes mellitus,SNOMED,Condition,S,Not included - recommended via source,8727283,14,13616831,14
+376114,Severe nonproliferative retinopathy due to diabetes mellitus,SNOMED,Condition,S,Not included - recommended via source,602109,14,1921293,14
+45757079,Pre-existing diabetes mellitus in mother complicating childbirth,SNOMED,Condition,S,Not included - recommended via source,179404,12,179404,12
+4338896,Traction retinal detachment involving macula,SNOMED,Condition,S,Not included - recommended via source,111245,12,111245,12
+36714116,Hypoglycemic coma due to type 2 diabetes mellitus,SNOMED,Condition,S,Not included - recommended via standard,101509,13,101509,13
+4338897,Combined traction and rhegmatogenous retinal detachment,SNOMED,Condition,S,Not included - recommended via source,21168,12,21168,12
+4145827,Latent autoimmune diabetes mellitus in adult,SNOMED,Condition,S,Not included - descendant,15991,3,15991,3
+36717215,"Intellectual disability, craniofacial dysmorphism, hypogonadism, diabetes mellitus syndrome",SNOMED,Condition,S,Not included - descendant,0,0,0,0

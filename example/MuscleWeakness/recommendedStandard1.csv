@@ -1,0 +1,23 @@
+﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,rc,dc,drc,dbc
+4093200,Shoulder girdle weakness,SNOMED,Condition,S,Not included - descendant,38453,3,38453,3
+4093199,"Facial weakness, lower motor neurone",SNOMED,Condition,S,Not included - descendant,34434,2,34434,2
+4012382,Weakness present,SNOMED,Condition,S,Not included - descendant,16386,2,18942,2
+4097163,Weakness of back,SNOMED,Condition,S,Not included - descendant,11811,2,11811,2
+4102126,Quadriceps weakness,SNOMED,Condition,S,Not included - descendant,11794,3,11794,3
+4012213,Abdominal weakness,SNOMED,Condition,S,Not included - descendant,2556,2,2556,2
+4093681,Weakness of distal arms and legs,SNOMED,Condition,S,Not included - descendant,1884,3,1884,3
+4093680,Pelvic girdle weakness,SNOMED,Condition,S,Not included - descendant,580,2,580,2
+4093198,Lower facial weakness,SNOMED,Condition,S,Not included - descendant,311,2,311,2
+4061398,O/E - muscle power reduced,SNOMED,Condition,S,Not included - descendant,246,2,246,2
+4092725,"Facial weakness, upper motor neurone",SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4072318,Weak teeth clenching,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4179290,Upper facial weakness,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+43531595,Weakness of extremities as sequela of stroke,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4093676,Weak eye closure,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4092710,Weakness of sternomastoid,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4273634,Weak mouth closure,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+36684988,McArdle's sign,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+3198828,Increased weakness when ambulating,Nebraska Lexicon,Observation,S,Not included - descendant,0,0,0,0
+3186568,Weakness of the shoulder,Nebraska Lexicon,Condition,S,Not included - descendant,0,0,0,0
+35622370,Oculopharyngodistal myopathy,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4154799,Finding of power of skeletal muscle,SNOMED,Condition,S,Not included - parent,0,0,0,0

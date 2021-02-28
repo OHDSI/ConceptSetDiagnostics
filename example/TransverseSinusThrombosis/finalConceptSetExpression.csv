@@ -1,0 +1,3 @@
+﻿conceptId,isExcluded,includeDescendants,includeMapped,conceptName,vocabularyId,standardConcept,invalidReason,conceptCode,conceptClassId,domainId,rc,dbc,drc,ddbc
+4350251,FALSE,TRUE,FALSE,Lateral Sinus Thrombosis,NDFRT,N,V,N0000004060,Ind / CI,Drug,0,0,0,0
+4102202,FALSE,TRUE,FALSE,Cerebral venous sinus thrombosis,SNOMED,S,,192759008,Clinical Finding,Condition,4166,3,135078,19
