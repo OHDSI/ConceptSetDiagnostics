@@ -19,6 +19,16 @@ optimizeConceptSetExpression <-
     conceptSetExpressionTable <-
       getConceptSetDataFrameFromExpression(conceptSetExpression =
         conceptSetExpression)
+    
+    conceptSetExpressionTable <-
+      tidyr::replace_na(
+        data = conceptSetExpressionTable,
+        replace = list(
+          isExcluded = FALSE,
+          includeDescendants = FALSE,
+          includeMapped = FALSE
+        )
+      )
     conceptSetConceptIdsExcluded <- conceptSetExpressionTable %>%
       dplyr::filter(.data$isExcluded == TRUE) %>%
       dplyr::pull(.data$conceptId)
@@ -107,7 +117,7 @@ optimizeConceptSetExpression <-
     }
     
     data <-
-      renderTranslateQuerySql(
+      DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = retrieveSql,
         snakeCaseToCamelCase = TRUE

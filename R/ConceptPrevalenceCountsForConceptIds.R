@@ -7,7 +7,7 @@ getConceptPrevalenceCountsForConceptIds <- function(dataSource = .GlobalEnv,
           where concept_id in (@concept_list);"
   if (length(conceptIdsList) > 0) {
     data <-
-      renderTranslateQuerySql(
+      DatabaseConnector::renderTranslateQuerySql(
         connection = dataSource$connection,
         concept_list = conceptIdsList,
         sql = sql, 

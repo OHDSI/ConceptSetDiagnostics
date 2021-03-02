@@ -1,3 +1,4 @@
+#' @export
 getConceptSetDetailsFromCohortDefinition <-
   function(cohortDefinitionExpression) {
     if ("expression" %in% names(cohortDefinitionExpression)) {
@@ -11,21 +12,18 @@ getConceptSetDetailsFromCohortDefinition <-
       return(dplyr::tibble())
     }
     
-    conceptSetExpression <- expression$ConceptSets %>%
-      dplyr::bind_rows() %>%
-      dplyr::mutate(json = RJSONIO::toJSON(x = .data$expression,
-                                           pretty = TRUE))
-    
+    conceptSetExpression <- list()
     conceptSetExpressionDetails <- list()
-    i <- 0
-    for (id in conceptSetExpression$id) {
-      i <- i + 1
-      conceptSetExpressionDetails[[i]] <-
-        getConceptSetDataFrameFromConceptSetExpression(conceptSetExpression = 
-                                                         conceptSetExpression[i, ]$expression$items) %>%
-        dplyr::mutate(id = conceptSetExpression[i,]$id) %>%
-        dplyr::relocate(.data$id) %>% 
-        dplyr::arrange(.data$id)
+    for (i in (1:length(expression$ConceptSets))) {
+      conceptSetExpression[[i]] <- list(id = expression$ConceptSets[[i]]$id,
+                                        name = expression$ConceptSets[[i]]$name, 
+                                        expression = expression$ConceptSets[[i]]$expression, 
+                                        json = RJSONIO::toJSON(expression$ConceptSets[[i]]$expression$items, 
+                                                               pretty = TRUE, 
+                                                               digits = 23))
+      conceptSetExpressionDetails[[i]] <- dplyr::tibble(id = expression$ConceptSets[[i]]$id,
+                                                        getConceptSetDataFrameFromExpression(conceptSetExpression =
+                                                                                               expression$ConceptSets[[i]]$expression))
     }
     conceptSetExpressionDetails <-
       dplyr::bind_rows(conceptSetExpressionDetails)

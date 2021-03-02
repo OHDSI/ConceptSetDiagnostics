@@ -14,7 +14,7 @@ descendantConcepts <-
       }
       sql <- SqlRender::render(sql = sql)
       data <-
-        renderTranslateQuerySql(
+        DatabaseConnector::renderTranslateQuerySql(
           connection = dataSource$connection,
           vocabulary_database_schema = dataSource$vocabularyDatabaseSchema,
           conceptsIdsToGetDescendants = descendantConceptId,
