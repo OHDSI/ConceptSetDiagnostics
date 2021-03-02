@@ -14,14 +14,23 @@ getConceptSetDataFrameFromExpression <-
       if ('isExcluded' %in% colnames(conceptSetExpressionDetails)) {
         conceptSetExpressionDetails <- conceptSetExpressionDetails %>%
           dplyr::rename(is_excluded = .data$isExcluded)
+      } else {
+        conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
+          dplyr::mutate(is_excluded = FALSE)
       }
       if ('includeDescendants' %in% colnames(conceptSetExpressionDetails)) {
         conceptSetExpressionDetails <- conceptSetExpressionDetails %>%
           dplyr::rename(include_descendants = .data$includeDescendants)
+      } else {
+        conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
+          dplyr::mutate(include_descendants = FALSE)
       }
       if ('includeMapped' %in% colnames(conceptSetExpressionDetails)) {
         conceptSetExpressionDetails <- conceptSetExpressionDetails %>%
           dplyr::rename(include_mapped = .data$includeMapped)
+      } else {
+        conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
+          dplyr::mutate(include_mapped = FALSE)
       }
       colnames(conceptSetExpressionDetails) <-
         SqlRender::snakeCaseToCamelCase(colnames(conceptSetExpressionDetails))
