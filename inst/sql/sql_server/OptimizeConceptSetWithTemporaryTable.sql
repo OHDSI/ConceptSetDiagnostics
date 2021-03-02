@@ -37,7 +37,7 @@ INTO #not_excl_non_std
 FROM @vocabulary_database_schema.concept_relationship cr
 INNER JOIN #not_excluded ON concept_id = concept_id_1
 	AND relationship_id = 'Maps to'
-WHERE ISNULL(standard_concept,'') = ''
+WHERE ISNULL(standard_concept,'') = 'S'
 	AND ISNULL(cr.invalid_reason,'') = '';
 
 
