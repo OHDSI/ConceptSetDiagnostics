@@ -124,7 +124,7 @@ AS (
 		cast(1 as int) removed
 	FROM conceptSetsExcluded
 	WHERE (subsumed_concept_id != original_concept_id and
-	subsumed_concept_id IS NULL)  or
+	subsumed_concept_id IS NOT NULL)  or
 	subsumed_concept_id IS NULL
 	)
 SELECT *

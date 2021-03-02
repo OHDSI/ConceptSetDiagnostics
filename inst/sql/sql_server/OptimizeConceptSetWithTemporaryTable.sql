@@ -165,7 +165,7 @@ FROM (
 		cast(1 AS INT) removed
 	FROM #concepts_excluded
 	WHERE (subsumed_concept_id != original_concept_id and
-	subsumed_concept_id IS NULL) or
+	subsumed_concept_id IS NOT NULL) or
 	subsumed_concept_id IS NULL
 	) rmv;
 
