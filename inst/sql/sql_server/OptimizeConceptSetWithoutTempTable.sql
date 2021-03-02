@@ -93,7 +93,7 @@ AS (
 		cast(0 as int) excluded,
 		cast(0 as int) removed
 	FROM conceptSetsIncluded
-	WHERE subsumed_concept_id IS NULL	
+	WHERE subsumed_concept_id = original_concept_id
 	union	
 	SELECT original_concept_id concept_id,
 		original_concept_name concept_name,
@@ -101,7 +101,7 @@ AS (
 		cast(1 as int) excluded,
 		cast(0 as int) removed
 	FROM conceptSetsExcluded
-	WHERE subsumed_concept_id IS NULL
+	WHERE subsumed_concept_id = original_concept_id
 	),
 conceptSetRemoved
 AS (
@@ -111,7 +111,7 @@ AS (
 		cast(0 as int) excluded,
 		cast(1 as int) removed
 	FROM conceptSetsIncluded
-	WHERE subsumed_concept_id IS NOT NULL
+	WHERE subsumed_concept_id != original_concept_id
 	union
 	SELECT DISTINCT subsumed_concept_id concept_id,
 		subsumed_concept_name concept_name,
@@ -119,7 +119,7 @@ AS (
 		cast(1 as int) excluded,
 		cast(1 as int) removed
 	FROM conceptSetsExcluded
-	WHERE subsumed_concept_id IS NOT NULL
+	WHERE subsumed_concept_id != original_concept_id
 	)
 SELECT *
 FROM conceptSetOptimized
