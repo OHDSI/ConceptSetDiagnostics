@@ -8,8 +8,8 @@ IF OBJECT_ID('tempdb..#not_excluded', 'U') IS NOT NULL
 	DROP TABLE #not_excluded;
 -- Concepts that are part of the concept set definition that are "EXCLUDED = N, DECENDANTS = Y or N"
 SELECT DISTINCT concept_id,
-	ISNULL(standard_concept,'N') as standard_concept,
-	ISNULL(invalid_reason,'V') as invalid_reason
+	standard_concept,
+	invalid_reason
 INTO #not_excluded
 FROM @vocabulary_database_schema.concept
 WHERE concept_id IN (@conceptSetConceptIdsNotExcluded);
@@ -37,8 +37,8 @@ INTO #not_excl_non_std
 FROM @vocabulary_database_schema.concept_relationship cr
 INNER JOIN #not_excluded ON concept_id = concept_id_1
 	AND relationship_id = 'Maps to'
-WHERE ISNULL(standard_concept,'N') IS NULL
-	AND cr.invalid_reason IS NULL;
+WHERE ISNULL(standard_concept,'') = ''
+	AND ISNULL(cr.invalid_reason,'') = '';
 
 
 
@@ -46,8 +46,8 @@ IF OBJECT_ID('tempdb..#excluded', 'U') IS NOT NULL
 	DROP TABLE #excluded;
 -- Concepts that are part of the concept set definition that are "EXCLUDED = Y, DECENDANTS = Y or N"
 SELECT DISTINCT concept_id,
-	ISNULL(standard_concept,'N') as standard_concept,
-	ISNULL(invalid_reason,'V') as invalid_reason
+	standard_concept,
+	invalid_reason
 INTO #excluded
 FROM @vocabulary_database_schema.concept
 WHERE concept_id IN (@conceptSetConceptIdsExcluded);

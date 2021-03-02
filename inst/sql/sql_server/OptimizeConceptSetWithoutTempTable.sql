@@ -7,8 +7,8 @@ WITH conceptSetConceptsNotExcluded
 AS (
 	-- Concepts that are part of the concept set definition that are "EXCLUDED = N, DECENDANTS = Y or N"
 	SELECT DISTINCT concept_id,
-		ISNULL(standard_concept,'N') as standard_concept,
-		ISNULL(invalid_reason,'V') as invalid_reason
+		standard_concept,
+		invalid_reason
 	FROM @vocabulary_database_schema.concept
 	WHERE concept_id IN (@conceptSetConceptIdsNotExcluded)
 	),
@@ -28,15 +28,15 @@ AS (
 	FROM @vocabulary_database_schema.concept_relationship cr
 	INNER JOIN conceptSetConceptsNotExcluded ON concept_id = concept_id_1
 		AND relationship_id = 'Maps to'
-	WHERE ISNULL(standard_concept,'N') = 'S'
-		AND cr.invalid_reason IS NULL
+	WHERE ISNULL(standard_concept,'') = ''
+		AND ISNULL(cr.invalid_reason,'') = ''
 	), 
 conceptSetConceptsExcluded
 AS (
 	-- Concepts that are part of the concept set definition that are "EXCLUDED = Y, DECENDANTS = Y or N"
 	SELECT DISTINCT concept_id,
-		ISNULL(standard_concept,'N') as standard_concept,
-		ISNULL(invalid_reason,'V') as invalid_reason
+		standard_concept,
+		invalid_reason
 	FROM @vocabulary_database_schema.concept
 	WHERE concept_id IN (@conceptSetConceptIdsExcluded)
 	),
