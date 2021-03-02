@@ -124,7 +124,8 @@ FROM (
 		cast(0 AS INT) excluded,
 		cast(0 AS INT) removed
 	FROM #concepts_included
-	WHERE subsumed_concept_id = original_concept_id
+	WHERE subsumed_concept_id = original_concept_id or
+	subsumed_concept_id IS NULL
 	UNION
 	SELECT original_concept_id concept_id,
 		original_concept_name concept_name,
@@ -132,7 +133,8 @@ FROM (
 		cast(1 AS INT) excluded,
 		cast(0 AS INT) removed
 	FROM #concepts_excluded
-	WHERE subsumed_concept_id = original_concept_id
+	WHERE subsumed_concept_id = original_concept_id or
+	subsumed_concept_id IS NULL
 	) opt;
 	
 	
@@ -152,7 +154,9 @@ FROM (
 		cast(0 AS INT) excluded,
 		cast(1 AS INT) removed
 	FROM #concepts_included
-	WHERE subsumed_concept_id != original_concept_id
+	WHERE (subsumed_concept_id != original_concept_id and
+	subsumed_concept_id IS NOT NULL) or
+	subsumed_concept_id IS NULL
 	UNION
 	SELECT DISTINCT subsumed_concept_id concept_id,
 		subsumed_concept_name concept_name,
@@ -160,7 +164,9 @@ FROM (
 		cast(1 AS INT) excluded,
 		cast(1 AS INT) removed
 	FROM #concepts_excluded
-	WHERE subsumed_concept_id != original_concept_id
+	WHERE (subsumed_concept_id != original_concept_id and
+	subsumed_concept_id IS NULL) or
+	subsumed_concept_id IS NULL
 	) rmv;
 
 
