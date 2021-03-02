@@ -129,6 +129,8 @@ AS (
 	)
 SELECT *
 FROM conceptSetOptimized
+WHERE concept_id IS NOT NULL
 UNION
 SELECT *
-FROM conceptSetRemoved;
+FROM conceptSetRemoved
+WHERE concept_id IS NOT NULL;

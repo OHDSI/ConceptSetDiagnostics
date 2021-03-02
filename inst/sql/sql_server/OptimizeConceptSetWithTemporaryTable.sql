@@ -189,7 +189,8 @@ FROM (
 		excluded,
 		removed
 	FROM #concepts_removed
-	) f;
+	) f
+WHERE concept_id IS NOT NULL;
 
 
 
