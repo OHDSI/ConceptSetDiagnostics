@@ -6,8 +6,13 @@ getConceptSetDataFrameFromExpression <-
     } else {
       items <- conceptSetExpression
     }
-    conceptSetExpressionDetails <- items %>%
-      purrr::map_df(.f = purrr::flatten)
+    items2 <- list()
+    for (i in (1:length(items))) {
+      items2[[i]] <- purrr::flatten_dfr(.x = purrr::map_depth(items[[i]],
+                                                              .depth = 2, 
+                                                              ~ifelse(is.null(.x), NA, .x) ))
+    }
+    conceptSetExpressionDetails <- dplyr::bind_rows(items2)
     
     # ensure case is uniform
     if ('concept_id' %in% tolower(colnames(conceptSetExpressionDetails))) {
@@ -56,5 +61,19 @@ getConceptSetDataFrameFromExpression <-
           includeMapped = FALSE
         )
       )
+    
+    if ('standardConceptCaption' %in% colnames(conceptSetExpressionDetails) &&
+        !'standardConcept' %in% colnames(conceptSetExpressionDetails)) {
+      conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
+        dplyr::mutate(standardConcept = dplyr::case_when(.data$standardConceptCaption == 'Standard' ~ 'S',
+                                       .data$standardConceptCaption == 'Classification' ~ 'C'))
+    }
+    if ('standardConcept' %in% tolower(colnames(conceptSetExpressionDetails)) &&
+        !'standardConceptCaption' %in% tolower(colnames(conceptSetExpressionDetails))) {
+      conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
+        dplyr::mutate(dplyr::case_when(.data$standardConcept == 'S' ~ 'Standard',
+                                       .data$standardConcept == 'C' ~ 'Classification',
+                                       TRUE ~ 'Non-Standard'))
+    }
     return(conceptSetExpressionDetails)
   }
