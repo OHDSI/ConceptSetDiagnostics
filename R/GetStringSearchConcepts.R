@@ -54,8 +54,11 @@ getStringSearchConcepts <-
     conceptSetExpressionFromConceptTable <-
       getConceptSetExpressionFromConceptTable(conceptTable = data,
                                               selectAllDescendants = TRUE)
-    conceptSetExpressionTable <- 
-      getConceptSetDataFrameFromExpression(conceptSetExpression = conceptSetExpressionFromConceptTable) %>% 
-      dplyr::left_join(y = data, by = 'conceptId')
+    if (length(conceptSetExpressionFromConceptTable) > 0) {
+      conceptSetExpressionTable <- 
+        getConceptSetDataFrameFromExpression(conceptSetExpression = conceptSetExpressionFromConceptTable) %>% 
+        dplyr::left_join(y = data, by = 'conceptId')
+    }
+
     return(conceptSetExpressionTable)
   }

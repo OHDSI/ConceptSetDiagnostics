@@ -1,11 +1,15 @@
 #' @export
 getConceptSetDataFrameFromExpression <-
   function(conceptSetExpression) {
+    
+    if (length(conceptSetExpression) == 0) {return(NULL)}
+    
     if ("items" %in% names(conceptSetExpression)) {
       items <- conceptSetExpression$items
     } else {
       items <- conceptSetExpression
     }
+    
     items2 <- list()
     for (i in (1:length(items))) {
       items2[[i]] <- purrr::flatten_dfr(.x = purrr::map_depth(items[[i]],

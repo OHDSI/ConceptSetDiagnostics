@@ -51,8 +51,6 @@ getConceptSetExpressionFromConceptTable <-
         conceptSetExpression$items[[i]]$includeMapped <-
           conceptTable$INCLUDE_MAPPED[i]
       }
-    } else {
-      conceptSetExpression <- dplyr::tibble()
     }
     return(conceptSetExpression)
   }
