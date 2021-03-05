@@ -36,19 +36,23 @@ getConceptSetExpressionFromConceptTable <-
     
     conceptSetExpression <- list()
     conceptSetExpression$items <- list()
-    for (i in (1:nrow(conceptTable))) {
-      conceptSetExpression$items[[i]] <- list()
-      conceptSetExpression$items[[i]]$concept <-
-        conceptTable[i, ] %>%
-        dplyr::select(-.data$INCLUDE_DESCENDANTS,
-                      -.data$INCLUDE_MAPPED,
-                      -.data$IS_EXCLUDED) %>%
-        as.list()
+    if (nrow(conceptTable) > 0) {
+      for (i in (1:nrow(conceptTable))) {
+        conceptSetExpression$items[[i]] <- list()
+        conceptSetExpression$items[[i]]$concept <-
+          conceptTable[i,] %>%
+          dplyr::select(-.data$INCLUDE_DESCENDANTS,
+                        -.data$INCLUDE_MAPPED,
+                        -.data$IS_EXCLUDED) %>%
+          as.list()
         conceptTable$IS_EXCLUDED[i]
-      conceptSetExpression$items[[i]]$includeDescendants <-
-        conceptTable$INCLUDE_DESCENDANTS[i]
-      conceptSetExpression$items[[i]]$includeMapped <-
-        conceptTable$INCLUDE_MAPPED[i]
+        conceptSetExpression$items[[i]]$includeDescendants <-
+          conceptTable$INCLUDE_DESCENDANTS[i]
+        conceptSetExpression$items[[i]]$includeMapped <-
+          conceptTable$INCLUDE_MAPPED[i]
+      }
+    } else {
+      conceptSetExpression <- dplyr::tibble()
     }
     return(conceptSetExpression)
   }
