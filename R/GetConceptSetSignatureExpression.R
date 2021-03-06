@@ -14,9 +14,11 @@ getConceptSetSignatureExpression <- function(connection, conceptSetExpression) {
       dplyr::inner_join(retained, by = c('conceptId', 'isExcluded'))
   }
   
+  expressionDataFrame <- expressionDataFrame %>% 
+    dplyr::arrange(.data$conceptId)
+    
   # strip all meta information
   conceptSetExpression <- getConceptSetExpressionFromConceptTable(conceptTable = expressionDataFrame,
-                                                                  purgeVocabularyDetails = TRUE) %>% 
-    dplyr::arrange(.data$conceptId)
+                                                                  purgeVocabularyDetails = TRUE)
   return(conceptSetExpression)
 }

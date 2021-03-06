@@ -1,6 +1,9 @@
 #' @export
 getConceptSetDataFrameFromExpression <-
-  function(conceptSetExpression) {
+  function(conceptSetExpression,
+           updateVocabularyFields = FALSE,
+           connection = NULL,
+           vocabularyDatabaseSchema = 'vocabulary') {
     
     if (length(conceptSetExpression) == 0) {return(NULL)}
     
@@ -66,6 +69,40 @@ getConceptSetDataFrameFromExpression <-
         )
       )
     
+    colnames <- colnames(conceptSetExpressionDetails)
+    if (updateVocabularyFields) {
+      if (!is.null(connection)) {
+        details <- getConceptIdDetails(connection = connection, 
+                                       vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+                                       conceptIds = conceptSetExpressionDetails$conceptId %>% unique()) %>% 
+          dplyr::select(.data$conceptId, 
+                        .data$conceptName, 
+                        .data$vocabularyId,
+                        .data$standardConcept, 
+                        .data$invalidReason,
+                        .data$conceptCode,
+                        .data$conceptClassId,
+                        .data$domainId)
+        conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
+          dplyr::select(.data$conceptId, 
+                        .data$includeDescendants,
+                        .data$includeMapped,
+                        .data$isExcluded) %>% 
+          dplyr::left_join(y = details, by = 'conceptId')
+        conceptSetExpressionDetails <- tidyr::replace_na(data = conceptSetExpressionDetails, 
+                                                         replace = list(invalidReason = 'V')) %>% 
+          dplyr::mutate(invalidReasonCaption = dplyr::case_when(invalidReason == 'V' ~ 'Valid',
+                                                                invalidReason == 'D' ~ 'Deleted',
+                                                                invalidReason == 'U' ~ 'Updated',
+                                                                TRUE ~ 'Valid')) %>% 
+          dplyr::mutate(standardConceptCaption = dplyr::case_when(standardConcept == 'S' ~ 'Standard',
+                                                                  standardConcept == 'C' ~ 'Classification',
+                                                                  TRUE ~ 'Non-standard'))
+      } else {
+        warning("No connection provided. Vocabulary will not be updated. Continuing.")
+      }
+    }
+    
     if ('standardConceptCaption' %in% colnames(conceptSetExpressionDetails) &&
         !'standardConcept' %in% colnames(conceptSetExpressionDetails)) {
       conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
@@ -79,5 +116,6 @@ getConceptSetDataFrameFromExpression <-
                                        .data$standardConcept == 'C' ~ 'Classification',
                                        TRUE ~ 'Non-Standard'))
     }
+    
     return(conceptSetExpressionDetails)
   }

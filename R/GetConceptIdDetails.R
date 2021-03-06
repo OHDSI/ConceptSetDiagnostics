@@ -4,6 +4,10 @@ getConceptIdDetails <-
   function(connection = NULL,
            vocabularyDatabaseSchema = 'vocabulary',
            conceptIds) {
+    if (is.null(vocabularyDatabaseSchema)) {
+      writeLines('Vocabulary database schema not provided. Defaulting to "vocabulary" databaseschema.')
+      vocabularyDatabaseSchema <- 'vocabulary'
+    }
     sql <- "SELECT c.CONCEPT_ID,
             	c.CONCEPT_NAME,
             	c.VOCABULARY_ID,
