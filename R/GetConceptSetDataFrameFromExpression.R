@@ -117,5 +117,10 @@ getConceptSetDataFrameFromExpression <-
                                        TRUE ~ 'Non-Standard'))
     }
     
+    conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
+      dplyr::relocate(dplyr::all_of(c('includeDescendants','includeMapped','isExcluded')), 
+                      .after = dplyr::last_col()) %>% 
+      dplyr::relocate('conceptId')
+    
     return(conceptSetExpressionDetails)
   }
