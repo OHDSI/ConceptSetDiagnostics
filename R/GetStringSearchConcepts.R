@@ -40,8 +40,8 @@ getStringSearchConcepts <-
       return(paste(stringSplit, collapse = " & "))
     }
     
-    searchStringTsv <- stringForTsvSearch(searchString)
-    searchStringReverseTsv <- stringForTsvSearch(searchStringReverse)
+    searchStringTsv <- if (searchString != '') {stringForTsvSearch(searchString)} else {searchString}
+    searchStringReverseTsv <- if (searchStringReverse != '') {stringForTsvSearch(searchStringReverse)} else {searchStringReverse}
     
     pathToSql <- system.file("sql/sql_server", 
                              "SearchVocabularyForConcepts.sql", 
