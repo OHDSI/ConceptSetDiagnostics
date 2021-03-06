@@ -18,17 +18,15 @@ optimizeConceptSetExpression <-
     
     conceptSetExpressionTable <-
       getConceptSetDataFrameFromExpression(conceptSetExpression =
-        conceptSetExpression)
+                                             conceptSetExpression)
     
-    conceptSetExpressionTable <-
-      tidyr::replace_na(
-        data = conceptSetExpressionTable,
-        replace = list(
-          isExcluded = FALSE,
-          includeDescendants = FALSE,
-          includeMapped = FALSE
-        )
-      )
+    if (nrow(conceptSetExpressionTable) <= 1) { # no optimization necessary
+      return(conceptSetExpressionTable %>% 
+               dplyr::mutate(excluded = as.integer(.data$isExcluded),
+                             removed = 0) %>% 
+               dplyr::select(.data$conceptId, .data$excluded, .data$removed))
+    }
+    
     conceptSetConceptIdsExcluded <- conceptSetExpressionTable %>%
       dplyr::filter(.data$isExcluded == TRUE) %>%
       dplyr::pull(.data$conceptId)
@@ -78,14 +76,16 @@ optimizeConceptSetExpression <-
     
     #switch between sql with or without temp table based on
     #number of concept ids to optimize
-    if (length(unique(
+    numberOfConceptIds <- length(unique(
       c(
         conceptSetConceptIdsExcluded,
         conceptSetConceptIdsDescendantsExcluded,
         conceptSetConceptIdsNotExcluded,
         conceptSetConceptIdsDescendantsNotExcluded
       )
-    )) > 100) {
+    ))
+    
+    if (numberOfConceptIds > 100) {
       sql <- sqlWithTemporaryTable
     } else {
       sql <- sqlWithoutTemporaryTable
@@ -100,14 +100,7 @@ optimizeConceptSetExpression <-
       conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
     )
     
-    if (length(unique(
-      c(
-        conceptSetConceptIdsExcluded,
-        conceptSetConceptIdsDescendantsExcluded,
-        conceptSetConceptIdsNotExcluded,
-        conceptSetConceptIdsDescendantsNotExcluded
-      )
-    )) > 100) {
+    if (numberOfConceptIds > 100) {
       DatabaseConnector::renderTranslateExecuteSql(connection = connection,
                                                    sql = sql)
       retrieveSql <-
@@ -126,5 +119,4 @@ optimizeConceptSetExpression <-
       dplyr::tibble() %>% 
       dplyr::filter(.data$conceptId != 0)
     return(data)
-    
   }
