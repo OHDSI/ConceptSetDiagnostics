@@ -1,13 +1,10 @@
 # Concept search using string
 #' @export
 getConceptIdDetails <-
-  function(connection = NULL,
+  function(connection,
            vocabularyDatabaseSchema = 'vocabulary',
-           conceptIds) {
-    if (is.null(vocabularyDatabaseSchema)) {
-      writeLines('Vocabulary database schema not provided. Defaulting to "vocabulary" databaseschema.')
-      vocabularyDatabaseSchema <- 'vocabulary'
-    }
+           conceptIds,
+           dbms = 'postgresql') {
     sql <- "SELECT c.CONCEPT_ID,
             	c.CONCEPT_NAME,
             	c.VOCABULARY_ID,
@@ -25,12 +22,17 @@ getConceptIdDetails <-
             WHERE c.CONCEPT_ID IN (@concept_id_list)
             ORDER BY ISNULL(universe.DRC, 0) DESC;"
     
+    sql <- SqlRender::renderSql(
+      sql = sql,
+      vocabulary_database_schema = vocabularyDatabaseSchema,
+      concept_id_list = conceptIds
+    )
+    sql <- SqlRender::translate(sql = sql,
+                                targetDialect = dbms)
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = sql,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        concept_id_list = conceptIds, 
         snakeCaseToCamelCase = TRUE
       ) %>%
       dplyr::tibble()

@@ -1,23 +1,26 @@
 # given a list of standard conceptIds, get recommended concepts.
 #' @export
-recommendedStandard <-
+getRecommendationStandard <-
   function(connection,
            conceptList,
+           dbms = 'postgresql',
            vocabularyDatabaseSchema = 'vocabulary') {
     # Filtering strings to letters, numbers and spaces only to avoid SQL injection:
     conceptList <-  gsub("[^a-zA-Z0-9 ,]", " ", conceptList)
     
-    pathToSql <- system.file("sql/sql_server",
-                             "RecommendedStandard.sql",
-                             package = 'ConceptSetDiagnostics')
-    sql <- SqlRender::readSql(sourceFile = pathToSql)
+    sql <-
+      SqlRender::loadRenderTranslateSql(
+        sqlFilename = "RecommendedStandard.sql",
+        packageName = "ConceptSetDiagnostics",
+        dbms = dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        source_list = conceptList[[1]]
+      )
     
     data <-
-      DatabaseConnector::renderTranslateQuerySql(
+      DatabaseConnector::querySql(
         connection = connection,
         sql = sql,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        source_list = conceptList[[1]],
         snakeCaseToCamelCase = TRUE
       ) %>%
       dplyr::tibble() %>%

@@ -1,6 +1,8 @@
 #' @export
 getConceptSetExpressionFromConceptTable <-
-  function(conceptTable, selectAllDescendants = FALSE, purgeVocabularyDetails = FALSE) {
+  function(conceptTable,
+           selectAllDescendants = FALSE,
+           purgeVocabularyDetails = FALSE) {
     if (!'includeMapped' %in% colnames(conceptTable)) {
       conceptTable$includeMapped <- FALSE
     }
@@ -19,20 +21,23 @@ getConceptSetExpressionFromConceptTable <-
       }
     }
     if (purgeVocabularyDetails) {
-      conceptTable <- conceptTable %>% 
-        dplyr::mutate(conceptName = "",
-                      standardConcept = "",
-                      standardConceptCaption = "",
-                      invalidReason = "",
-                      invalidReasonCaption = "",
-                      conceptCode = "",
-                      domainId = "",
-                      vocabularyId = "",
-                      conceptClassId = "")
+      conceptTable <- conceptTable %>%
+        dplyr::mutate(
+          conceptName = "",
+          standardConcept = "",
+          standardConceptCaption = "",
+          invalidReason = "",
+          invalidReasonCaption = "",
+          conceptCode = "",
+          domainId = "",
+          vocabularyId = "",
+          conceptClassId = ""
+        )
     }
     # note: r dataframe objects are always expected to have variables in camel case.
     # so the case conversion below should always be valid, if convention is followed
-    colnames(conceptTable) <- toupper(SqlRender::camelCaseToSnakeCase(colnames(conceptTable)))
+    colnames(conceptTable) <-
+      toupper(SqlRender::camelCaseToSnakeCase(colnames(conceptTable)))
     
     conceptSetExpression <- list()
     conceptSetExpression$items <- list()
@@ -40,7 +45,7 @@ getConceptSetExpressionFromConceptTable <-
       for (i in (1:nrow(conceptTable))) {
         conceptSetExpression$items[[i]] <- list()
         conceptSetExpression$items[[i]]$concept <-
-          conceptTable[i,] %>%
+          conceptTable[i, ] %>%
           dplyr::select(-.data$INCLUDE_DESCENDANTS,
                         -.data$INCLUDE_MAPPED,
                         -.data$IS_EXCLUDED) %>%

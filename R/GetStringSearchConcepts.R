@@ -2,10 +2,11 @@
 
 #' @export
 getStringSearchConcepts <-
-  function(connection = NULL,
+  function(connection,
            searchString,
            fullTextSearch = FALSE,
-           vocabularyDatabaseSchema = 'vocabulary') {
+           vocabularyDatabaseSchema = 'vocabulary',
+           dbms = 'postgresql') {
     # Note this function is designed for postgres with TSV enabled.
     # Filtering strings to letters, numbers and spaces only to avoid SQL injection
     # also making search string of lower case - to make search uniform.
@@ -43,23 +44,25 @@ getStringSearchConcepts <-
     searchStringTsv <- if (searchString != '') {stringForTsvSearch(searchString)} else {searchString}
     searchStringReverseTsv <- if (searchStringReverse != '') {stringForTsvSearch(searchStringReverse)} else {searchStringReverse}
     
-    pathToSql <- system.file("sql/sql_server", 
-                             "SearchVocabularyForConcepts.sql", 
-                             package = 'ConceptSetDiagnostics')
-    sql <- SqlRender::readSql(sourceFile = pathToSql)
-    
     if (!fullTextSearch) {
       searchString <- ""
     }
     
-    data <-
-      DatabaseConnector::renderTranslateQuerySql(
-        connection = connection,
-        sql = sql,
+    sql <-
+      SqlRender::loadRenderTranslateSql(
+        sqlFilename = "SearchVocabularyForConcepts.sql",
+        packageName = "ConceptSetDiagnostics",
+        dbms = dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         search_string_tsv = searchStringTsv, 
         search_string_reverse_tsv = searchStringReverseTsv, 
-        search_string = searchString, 
+        search_string = searchString
+      )
+    
+    data <-
+      DatabaseConnector::querySql(
+        connection = connection,
+        sql = sql,
         snakeCaseToCamelCase = TRUE
       ) %>%
       dplyr::tibble()

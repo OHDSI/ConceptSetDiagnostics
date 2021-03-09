@@ -7,6 +7,7 @@ performDesignDiagnosticsOnConceptTable <-
            vocabularyIdForRecommender = c('SNOMED', 'ICD'),
            exportResults = TRUE,
            locationForResults,
+           dbms = 'postgresql',
            blackList = c(0),
            iteration = 1) {
     result <- list()
@@ -18,6 +19,7 @@ performDesignDiagnosticsOnConceptTable <-
     result$conceptSetExpressionTableOptimized <-
       optimizeConceptSetExpression(
         connection = connection,
+        dbms = dbms,
         conceptSetExpression = result$conceptSetExpression,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       ) %>%
@@ -34,6 +36,7 @@ performDesignDiagnosticsOnConceptTable <-
     recommendation <-
       ConceptSetDiagnostics::getRecommendationForConceptTable(
         connection = connection,
+        dbms = dbms,
         conceptSetExpressionTable = result$conceptSetExpressionTable,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         vocabularyIdForRecommender = vocabularyIdForRecommender

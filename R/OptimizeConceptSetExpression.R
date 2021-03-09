@@ -1,20 +1,10 @@
 # given a concept set expression, get optimized concept set expression
 #' @export
 optimizeConceptSetExpression <-
-  function(conceptSetExpression,
-           connection,
+  function(connection,
+           conceptSetExpression,
+           dbms = 'postgresql',
            vocabularyDatabaseSchema = 'vocabulary') {
-    pathToSql <- system.file("sql/sql_server",
-                             "optimizeConceptSetWithTemporaryTable.sql",
-                             package = 'ConceptSetDiagnostics')
-    sqlWithTemporaryTable <-
-      SqlRender::readSql(sourceFile = pathToSql)
-    
-    pathToSql <- system.file("sql/sql_server",
-                             "optimizeConceptSetWithoutTempTable.sql",
-                             package = 'ConceptSetDiagnostics')
-    sqlWithoutTemporaryTable <-
-      SqlRender::readSql(sourceFile = pathToSql)
     
     conceptSetExpressionTable <-
       getConceptSetDataFrameFromExpression(conceptSetExpression =
@@ -85,32 +75,44 @@ optimizeConceptSetExpression <-
       )
     ))
     
+    sqlWithTemporaryTable <-
+      SqlRender::loadRenderTranslateSql(
+        sqlFilename = "optimizeConceptSetWithTemporaryTable.sql",
+        packageName = "ConceptSetDiagnostics",
+        dbms = dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
+        conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
+        conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
+        conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
+      )
+    
+    sqlWithoutTemporaryTable <-
+      SqlRender::loadRenderTranslateSql(
+        sqlFilename = "optimizeConceptSetWithTemporaryTable.sql",
+        packageName = "ConceptSetDiagnostics",
+        dbms = dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
+        conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
+        conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
+        conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
+      )
+    
+    
     if (numberOfConceptIds > 100) {
       sql <- sqlWithTemporaryTable
-    } else {
-      sql <- sqlWithoutTemporaryTable
-    }
-    
-    sql <- SqlRender::render(
-      sql = sql,
-      vocabulary_database_schema = vocabularyDatabaseSchema,
-      conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
-      conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
-      conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
-      conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
-    )
-    
-    if (numberOfConceptIds > 100) {
       DatabaseConnector::renderTranslateExecuteSql(connection = connection,
                                                    sql = sql)
       retrieveSql <-
-        SqlRender::render(sql = "SELECT * FROM #optimized_set;")
+        SqlRender::translate(sql = "SELECT * FROM #optimized_set;", targetDialect = dbms)
     } else {
+      sql <- sqlWithoutTemporaryTable
       retrieveSql <- sql
     }
     
     data <-
-      DatabaseConnector::renderTranslateQuerySql(
+      DatabaseConnector::querySql(
         connection = connection,
         sql = retrieveSql,
         snakeCaseToCamelCase = TRUE
@@ -118,5 +120,6 @@ optimizeConceptSetExpression <-
       dplyr::arrange(1) %>%
       dplyr::tibble() %>% 
       dplyr::filter(.data$conceptId != 0)
+    
     return(data)
   }
