@@ -1,11 +1,11 @@
 # Given a concept set expression, get the resolved concepts
 #' @export
 resolveConceptSetExpression <- function(connection,
-                                        dbms = 'postgres',
                                         conceptSetExpression) {
   # convert concept set expression R object (list) to data frame
   conceptSetExpressionTable <-
-    getConceptSetDataFrameFromExpression(conceptSetExpression =
+    getConceptSetDataFrameFromExpression(connection = connection,
+                                         conceptSetExpression =
                                            conceptSetExpression)
   
   # get all descendant concept ids (as dataframe) for concepts that have
@@ -13,7 +13,6 @@ resolveConceptSetExpression <- function(connection,
   descendantConcepts <-
     getDescendantConcepts(
       connection = connection,
-      dbms = dbms,
       descendantConceptId = conceptSetExpressionTable %>%
         dplyr::filter(.data$includeDescendants == TRUE) %>%
         dplyr::pull(.data$conceptId)

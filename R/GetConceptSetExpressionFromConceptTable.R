@@ -45,7 +45,7 @@ getConceptSetExpressionFromConceptTable <-
       for (i in (1:nrow(conceptTable))) {
         conceptSetExpression$items[[i]] <- list()
         conceptSetExpression$items[[i]]$concept <-
-          conceptTable[i, ] %>%
+          conceptTable[i,] %>%
           dplyr::select(-.data$INCLUDE_DESCENDANTS,
                         -.data$INCLUDE_MAPPED,
                         -.data$IS_EXCLUDED) %>%

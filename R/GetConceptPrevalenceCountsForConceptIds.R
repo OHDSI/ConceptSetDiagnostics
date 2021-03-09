@@ -1,8 +1,7 @@
 #' @export
 getConceptPrevalenceCountsForConceptIds <- function(connection,
                                                     conceptIdsList,
-                                                    conceptPrevalenceSchema = 'concept_prevalence',
-                                                    dbms = 'postgresql') {
+                                                    conceptPrevalenceSchema = 'concept_prevalence') {
   sql <- "select *
           from @concept_prevalence.cp_master
           where concept_id in (@concept_list);"
@@ -11,11 +10,9 @@ getConceptPrevalenceCountsForConceptIds <- function(connection,
     concept_list = conceptIdsList,
     concept_prevalence = conceptPrevalenceSchema
   )
-  sql <- SqlRender::translate(sql = sql,
-                              targetDialect = dbms)
   if (length(conceptIdsList) > 0) {
     data <-
-      DatabaseConnector::querySql(
+      renderTranslateQuerySql(
         connection = connection,
         sql = sql,
         snakeCaseToCamelCase = TRUE

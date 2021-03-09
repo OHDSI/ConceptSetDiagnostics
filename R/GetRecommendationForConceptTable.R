@@ -2,7 +2,6 @@
 getRecommendationForConceptTable <-
   function(connection,
            conceptSetExpressionTable,
-           dbms = 'postgresql',
            vocabularyDatabaseSchema = 'vocabulary',
            vocabularyIdForRecommender = c('SNOMED', 'ICD')) {
     searchVocabularyId <-

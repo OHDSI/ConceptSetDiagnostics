@@ -7,7 +7,6 @@ performDesignDiagnosticsOnConceptTable <-
            vocabularyIdForRecommender = c('SNOMED', 'ICD'),
            exportResults = TRUE,
            locationForResults,
-           dbms = 'postgresql',
            blackList = c(0),
            iteration = 1) {
     result <- list()
@@ -19,7 +18,6 @@ performDesignDiagnosticsOnConceptTable <-
     result$conceptSetExpressionTableOptimized <-
       optimizeConceptSetExpression(
         connection = connection,
-        dbms = dbms,
         conceptSetExpression = result$conceptSetExpression,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       ) %>%
@@ -36,17 +34,16 @@ performDesignDiagnosticsOnConceptTable <-
     recommendation <-
       getRecommendationForConceptTable(
         connection = connection,
-        dbms = dbms,
         conceptSetExpressionTable = result$conceptSetExpressionTable,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         vocabularyIdForRecommender = vocabularyIdForRecommender
       )
     result$recommendedStandard <-
       recommendation$recommendedStandard %>%
-      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionTable$conceptId) %>% 
+      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionTable$conceptId) %>%
       dplyr::filter(!.data$conceptId %in% blackList)
     result$recommendedSource <- recommendation$recommendedSource %>%
-      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionTable$conceptId) %>% 
+      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionTable$conceptId) %>%
       dplyr::filter(!.data$conceptId %in% blackList)
     
     
@@ -76,10 +73,14 @@ performDesignDiagnosticsOnConceptTable <-
             locationForResults
           )
         )
-        unlink(x = file.path(
-          locationForResults,
-          paste0("recommendedStandard", iteration, ".csv")
-        ), recursive = TRUE, force = TRUE)
+        unlink(
+          x = file.path(
+            locationForResults,
+            paste0("recommendedStandard", iteration, ".csv")
+          ),
+          recursive = TRUE,
+          force = TRUE
+        )
       }
       if (nrow(result$recommendedSource) > 0) {
         readr::write_excel_csv(
@@ -106,10 +107,14 @@ performDesignDiagnosticsOnConceptTable <-
             locationForResults
           )
         )
-        unlink(x = file.path(
-          locationForResults,
-          paste0("recommendedSource", iteration, ".csv")
-        ), recursive = TRUE, force = TRUE)
+        unlink(
+          x = file.path(
+            locationForResults,
+            paste0("recommendedSource", iteration, ".csv")
+          ),
+          recursive = TRUE,
+          force = TRUE
+        )
       }
     }
     return(result)

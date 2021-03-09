@@ -3,9 +3,7 @@ getConceptSetDataFrameFromExpression <-
   function(connection,
            conceptSetExpression,
            updateVocabularyFields = FALSE,
-           vocabularyDatabaseSchema = 'vocabulary',
-           dbms = 'posstgresql') {
-    
+           vocabularyDatabaseSchema = 'vocabulary') {
     if (length(conceptSetExpression) == 0) {
       return(NULL)
     }

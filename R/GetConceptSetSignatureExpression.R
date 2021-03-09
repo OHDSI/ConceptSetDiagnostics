@@ -3,7 +3,8 @@
 getConceptSetSignatureExpression <-
   function(connection, conceptSetExpression) {
     expressionDataFrame <-
-      getConceptSetDataFrameFromExpression(conceptSetExpression = conceptSetExpression)
+      getConceptSetDataFrameFromExpression(connection = connection,
+                                           conceptSetExpression = conceptSetExpression)
     optimizedExpression <-
       optimizeConceptSetExpression(connection = connection,
                                    conceptSetExpression = conceptSetExpression)

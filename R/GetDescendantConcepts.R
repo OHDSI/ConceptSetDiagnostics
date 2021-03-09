@@ -3,8 +3,7 @@
 getDescendantConcepts <-
   function(connection,
            descendantConceptId,
-           vocabularyDatabaseSchema = 'vocabulary',
-           dbms = 'postgresql') {
+           vocabularyDatabaseSchema = 'vocabulary') {
     if (any(
       is.null(descendantConceptId),
       is.na(descendantConceptId),
@@ -16,13 +15,12 @@ getDescendantConcepts <-
       SqlRender::loadRenderTranslateSql(
         sqlFilename = "GetDescendantConcepts.sql",
         packageName = "ConceptSetDiagnostics",
-        dbms = dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         conceptsIdsToGetDescendants = descendantConceptId
       )
     
     data <-
-      DatabaseConnector::querySql(
+      renderTranslateQuerySql(
         connection = connection,
         sql = sql,
         snakeCaseToCamelCase = TRUE

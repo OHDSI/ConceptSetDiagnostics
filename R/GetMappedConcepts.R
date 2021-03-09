@@ -3,8 +3,7 @@
 getMappedConcepts <-
   function(connection,
            mappedConceptId,
-           vocabularyDatabaseSchema = 'vocabulary',
-           dbms = 'postgresql') {
+           vocabularyDatabaseSchema = 'vocabulary') {
     if (any(is.null(mappedConceptId),
             is.na(mappedConceptId),
             length(mappedConceptId) == 0)) {
@@ -14,12 +13,11 @@ getMappedConcepts <-
       SqlRender::loadRenderTranslateSql(
         sqlFilename = "GetMappedSourcecodes.sql",
         packageName = "ConceptSetDiagnostics",
-        dbms = dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         conceptsIdsToGetMapped = mappedConceptId
       )
     data <-
-      DatabaseConnector::querySql(
+      renderTranslateQuerySql(
         connection = connection,
         sql = sql,
         snakeCaseToCamelCase = TRUE

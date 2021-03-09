@@ -3,8 +3,7 @@
 getConceptIdDetails <-
   function(connection,
            vocabularyDatabaseSchema = 'vocabulary',
-           conceptIds,
-           dbms = 'postgresql') {
+           conceptIds) {
     sql <- "SELECT c.CONCEPT_ID,
             	c.CONCEPT_NAME,
             	c.VOCABULARY_ID,
@@ -27,10 +26,9 @@ getConceptIdDetails <-
       vocabulary_database_schema = vocabularyDatabaseSchema,
       concept_id_list = conceptIds
     )
-    sql <- SqlRender::translate(sql = sql,
-                                targetDialect = dbms)
+    
     data <-
-      DatabaseConnector::renderTranslateQuerySql(
+      renderTranslateQuerySql(
         connection = connection,
         sql = sql,
         snakeCaseToCamelCase = TRUE

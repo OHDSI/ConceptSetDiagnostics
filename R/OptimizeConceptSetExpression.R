@@ -3,18 +3,22 @@
 optimizeConceptSetExpression <-
   function(connection,
            conceptSetExpression,
-           dbms = 'postgresql',
            vocabularyDatabaseSchema = 'vocabulary') {
-    
     conceptSetExpressionTable <-
-      getConceptSetDataFrameFromExpression(conceptSetExpression =
+      getConceptSetDataFrameFromExpression(connection = connection,
+                                           conceptSetExpression =
                                              conceptSetExpression)
     
-    if (nrow(conceptSetExpressionTable) <= 1) { # no optimization necessary
-      return(conceptSetExpressionTable %>% 
-               dplyr::mutate(excluded = as.integer(.data$isExcluded),
-                             removed = 0) %>% 
-               dplyr::select(.data$conceptId, .data$excluded, .data$removed))
+    if (nrow(conceptSetExpressionTable) <= 1) {
+      # no optimization necessary
+      return(
+        conceptSetExpressionTable %>%
+          dplyr::mutate(
+            excluded = as.integer(.data$isExcluded),
+            removed = 0
+          ) %>%
+          dplyr::select(.data$conceptId, .data$excluded, .data$removed)
+      )
     }
     
     conceptSetConceptIdsExcluded <- conceptSetExpressionTable %>%
@@ -102,10 +106,10 @@ optimizeConceptSetExpression <-
     
     if (numberOfConceptIds > 100) {
       sql <- sqlWithTemporaryTable
-      DatabaseConnector::renderTranslateExecuteSql(connection = connection,
-                                                   sql = sql)
+      renderTranslateExecuteSql(connection = connection,
+                                sql = sql)
       retrieveSql <-
-        SqlRender::translate(sql = "SELECT * FROM #optimized_set;", targetDialect = dbms)
+        SqlRender::translate(sql = "SELECT * FROM #optimized_set;", targetDialect = "postgresql")
     } else {
       sql <- sqlWithoutTemporaryTable
       retrieveSql <- sql
@@ -118,7 +122,7 @@ optimizeConceptSetExpression <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       dplyr::arrange(1) %>%
-      dplyr::tibble() %>% 
+      dplyr::tibble() %>%
       dplyr::filter(.data$conceptId != 0)
     
     return(data)
