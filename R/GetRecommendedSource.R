@@ -18,7 +18,7 @@ getRecommendedSource <-
       )
     
     data <-
-      DatabaseConnector::query(
+      DatabaseConnector::querySql(
         connection = connection,
         sql = sql,
         snakeCaseToCamelCase = TRUE

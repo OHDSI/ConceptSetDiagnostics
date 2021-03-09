@@ -1,6 +1,6 @@
 # given a list of standard conceptIds, get recommended concepts.
 #' @export
-getRecommendationStandard <-
+getRecommendedStandard <-
   function(connection,
            conceptList,
            dbms = 'postgresql',

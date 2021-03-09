@@ -2,6 +2,7 @@
 getRecommendationForConceptTable <-
   function(connection,
            conceptSetExpressionTable,
+           dbms = 'postgresql',
            vocabularyDatabaseSchema = 'vocabulary',
            vocabularyIdForRecommender = c('SNOMED', 'ICD')) {
     searchVocabularyId <-
@@ -14,11 +15,13 @@ getRecommendationForConceptTable <-
       dplyr::pull(.data$conceptId) %>%
       unique()
     recommendedStandard <-
-      getRecommendationStandard(connection = connection,
-                                conceptList = forRecommendation)
+      getRecommendedStandard(connection = connection,
+                             dbms = dbms,
+                             conceptList = forRecommendation)
     recommendedSource <-
-      getRecommendationSource(connection = connection,
-                              conceptList = forRecommendation)
+      getRecommendedSource(connection = connection,
+                           dbms = dbms,
+                           conceptList = forRecommendation)
     
     data <- list()
     data$recommendedStandard <- recommendedStandard

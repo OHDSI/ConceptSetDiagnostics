@@ -34,7 +34,7 @@ performDesignDiagnosticsOnConceptTable <-
     
     #################################
     recommendation <-
-      ConceptSetDiagnostics::getRecommendationForConceptTable(
+      getRecommendationForConceptTable(
         connection = connection,
         dbms = dbms,
         conceptSetExpressionTable = result$conceptSetExpressionTable,
