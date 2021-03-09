@@ -81,7 +81,7 @@ optimizeConceptSetExpression <-
     
     sqlWithTemporaryTable <-
       SqlRender::loadRenderTranslateSql(
-        sqlFilename = "optimizeConceptSetWithTemporaryTable.sql",
+        sqlFilename = "OptimizeConceptSetWithTemporaryTable.sql",
         packageName = "ConceptSetDiagnostics",
         dbms = dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema,
