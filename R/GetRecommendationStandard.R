@@ -3,6 +3,7 @@
 getRecommendedStandard <-
   function(connection,
            conceptList,
+           dbms = 'postgresql',
            vocabularyDatabaseSchema = 'vocabulary') {
     # Filtering strings to letters, numbers and spaces only to avoid SQL injection:
     conceptList <-  gsub("[^a-zA-Z0-9 ,]", " ", conceptList)

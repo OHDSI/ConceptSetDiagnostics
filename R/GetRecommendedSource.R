@@ -3,6 +3,7 @@
 getRecommendedSource <-
   function(connection,
            conceptList,
+           dbms = 'postgresql',
            vocabularyDatabaseSchema = 'vocabulary') {
     # Filtering strings to letters, numbers and spaces only to avoid SQL injection:
     conceptList <-  gsub("[^a-zA-Z0-9 ,]", " ", conceptList)
@@ -11,12 +12,13 @@ getRecommendedSource <-
       SqlRender::loadRenderTranslateSql(
         sqlFilename = "RecommendationSource.sql",
         packageName = "ConceptSetDiagnostics",
+        dbms = dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         source_list = conceptList[[1]]
       )
     
     data <-
-      DatabaseConnector::querySql(
+      renderTranslateQuerySql(
         connection = connection,
         sql = sql,
         snakeCaseToCamelCase = TRUE

@@ -21,12 +21,11 @@ getConceptIdDetails <-
             WHERE c.CONCEPT_ID IN (@concept_id_list)
             ORDER BY ISNULL(universe.DRC, 0) DESC;"
     
-    sql <- SqlRender::renderSql(
+    sql <- SqlRender::render(
       sql = sql,
       vocabulary_database_schema = vocabularyDatabaseSchema,
       concept_id_list = conceptIds
     )
-    
     data <-
       renderTranslateQuerySql(
         connection = connection,
