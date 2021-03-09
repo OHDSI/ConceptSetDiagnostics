@@ -116,7 +116,7 @@ optimizeConceptSetExpression <-
     }
     
     data <-
-      DatabaseConnector::querySql(
+      renderTranslateQuerySql(
         connection = connection,
         sql = retrieveSql,
         snakeCaseToCamelCase = TRUE
