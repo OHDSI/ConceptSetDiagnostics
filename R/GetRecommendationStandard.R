@@ -25,7 +25,7 @@ getRecommendedStandard <-
       ) %>%
       dplyr::tibble() %>%
       dplyr::filter(!.data$conceptId %in% conceptList) %>%
-      dplyr:::arrange(dplyr::desc(.data$descendantRecordCount)) %>%
+      dplyr::arrange(dplyr::desc(.data$descendantRecordCount)) %>%
       dplyr::rename(
         rc = recordCount,
         dc = databaseCount,

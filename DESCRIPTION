@@ -10,9 +10,16 @@ Depends:
     dplyr
 Imports:
 	SqlRender,
+	dplyr,
+	DatabaseConnector,
 	Andromeda,
 	ROhdsiWebApi,
-	purrr
+	purrr,
+	RJSONIO,
+	readr,
+	stringi,
+	stringr,
+	tidyr
 Suggests:
 License: Apache License 2.0
 RoxygenNote: 7.1.1
