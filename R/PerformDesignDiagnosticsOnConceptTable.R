@@ -32,7 +32,7 @@ performDesignDiagnosticsOnConceptTable <-
     
     #################################
     recommendation <-
-      ConceptSetDiagnostics::getRecommendationForConceptTable(
+      getRecommendationForConceptTable(
         connection = connection,
         conceptSetExpressionTable = result$conceptSetExpressionTable,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
@@ -40,10 +40,10 @@ performDesignDiagnosticsOnConceptTable <-
       )
     result$recommendedStandard <-
       recommendation$recommendedStandard %>%
-      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionTable$conceptId) %>% 
+      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionTable$conceptId) %>%
       dplyr::filter(!.data$conceptId %in% blackList)
     result$recommendedSource <- recommendation$recommendedSource %>%
-      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionTable$conceptId) %>% 
+      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionTable$conceptId) %>%
       dplyr::filter(!.data$conceptId %in% blackList)
     
     
@@ -73,10 +73,14 @@ performDesignDiagnosticsOnConceptTable <-
             locationForResults
           )
         )
-        unlink(x = file.path(
-          locationForResults,
-          paste0("recommendedStandard", iteration, ".csv")
-        ), recursive = TRUE, force = TRUE)
+        unlink(
+          x = file.path(
+            locationForResults,
+            paste0("recommendedStandard", iteration, ".csv")
+          ),
+          recursive = TRUE,
+          force = TRUE
+        )
       }
       if (nrow(result$recommendedSource) > 0) {
         readr::write_excel_csv(
@@ -103,10 +107,14 @@ performDesignDiagnosticsOnConceptTable <-
             locationForResults
           )
         )
-        unlink(x = file.path(
-          locationForResults,
-          paste0("recommendedSource", iteration, ".csv")
-        ), recursive = TRUE, force = TRUE)
+        unlink(
+          x = file.path(
+            locationForResults,
+            paste0("recommendedSource", iteration, ".csv")
+          ),
+          recursive = TRUE,
+          force = TRUE
+        )
       }
     }
     return(result)

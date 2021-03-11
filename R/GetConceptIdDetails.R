@@ -1,7 +1,7 @@
 # Concept search using string
 #' @export
 getConceptIdDetails <-
-  function(connection = NULL,
+  function(connection,
            vocabularyDatabaseSchema = 'vocabulary',
            conceptIds) {
     sql <- "SELECT c.CONCEPT_ID,
@@ -21,12 +21,15 @@ getConceptIdDetails <-
             WHERE c.CONCEPT_ID IN (@concept_id_list)
             ORDER BY ISNULL(universe.DRC, 0) DESC;"
     
+    sql <- SqlRender::render(
+      sql = sql,
+      vocabulary_database_schema = vocabularyDatabaseSchema,
+      concept_id_list = conceptIds
+    )
     data <-
-      DatabaseConnector::renderTranslateQuerySql(
+      renderTranslateQuerySql(
         connection = connection,
         sql = sql,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        concept_id_list = conceptIds, 
         snakeCaseToCamelCase = TRUE
       ) %>%
       dplyr::tibble()

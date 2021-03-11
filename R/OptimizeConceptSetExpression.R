@@ -1,24 +1,26 @@
 # given a concept set expression, get optimized concept set expression
 #' @export
 optimizeConceptSetExpression <-
-  function(conceptSetExpression,
-           connection,
+  function(connection,
+           conceptSetExpression,
            vocabularyDatabaseSchema = 'vocabulary') {
-    pathToSql <- system.file("sql/sql_server",
-                             "optimizeConceptSetWithTemporaryTable.sql",
-                             package = 'ConceptSetDiagnostics')
-    sqlWithTemporaryTable <-
-      SqlRender::readSql(sourceFile = pathToSql)
-    
-    pathToSql <- system.file("sql/sql_server",
-                             "optimizeConceptSetWithoutTempTable.sql",
-                             package = 'ConceptSetDiagnostics')
-    sqlWithoutTemporaryTable <-
-      SqlRender::readSql(sourceFile = pathToSql)
-    
     conceptSetExpressionTable <-
-      getConceptSetDataFrameFromExpression(conceptSetExpression =
-        conceptSetExpression)
+      getConceptSetDataFrameFromExpression(connection = connection,
+                                           conceptSetExpression =
+                                             conceptSetExpression)
+    
+    if (nrow(conceptSetExpressionTable) <= 1) {
+      # no optimization necessary
+      return(
+        conceptSetExpressionTable %>%
+          dplyr::mutate(
+            excluded = as.integer(.data$isExcluded),
+            removed = 0
+          ) %>%
+          dplyr::select(.data$conceptId, .data$excluded, .data$removed)
+      )
+    }
+    
     conceptSetConceptIdsExcluded <- conceptSetExpressionTable %>%
       dplyr::filter(.data$isExcluded == TRUE) %>%
       dplyr::pull(.data$conceptId)
@@ -68,41 +70,48 @@ optimizeConceptSetExpression <-
     
     #switch between sql with or without temp table based on
     #number of concept ids to optimize
-    if (length(unique(
+    numberOfConceptIds <- length(unique(
       c(
         conceptSetConceptIdsExcluded,
         conceptSetConceptIdsDescendantsExcluded,
         conceptSetConceptIdsNotExcluded,
         conceptSetConceptIdsDescendantsNotExcluded
       )
-    )) > 100) {
+    ))
+    
+    sqlWithTemporaryTable <-
+      SqlRender::loadRenderTranslateSql(
+        sqlFilename = "OptimizeConceptSetWithTemporaryTable.sql",
+        packageName = "ConceptSetDiagnostics",
+        dbms = dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
+        conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
+        conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
+        conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
+      )
+    
+    sqlWithoutTemporaryTable <-
+      SqlRender::loadRenderTranslateSql(
+        sqlFilename = "OptimizeConceptSetWithoutTempTable.sql",
+        packageName = "ConceptSetDiagnostics",
+        dbms = dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
+        conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
+        conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
+        conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
+      )
+    
+    
+    if (numberOfConceptIds > 100) {
       sql <- sqlWithTemporaryTable
+      renderTranslateExecuteSql(connection = connection,
+                                sql = sql)
+      retrieveSql <-
+        SqlRender::translate(sql = "SELECT * FROM #optimized_set;", targetDialect = "postgresql")
     } else {
       sql <- sqlWithoutTemporaryTable
-    }
-    
-    sql <- SqlRender::render(
-      sql = sql,
-      vocabulary_database_schema = vocabularyDatabaseSchema,
-      conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
-      conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
-      conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
-      conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
-    )
-    
-    if (length(unique(
-      c(
-        conceptSetConceptIdsExcluded,
-        conceptSetConceptIdsDescendantsExcluded,
-        conceptSetConceptIdsNotExcluded,
-        conceptSetConceptIdsDescendantsNotExcluded
-      )
-    )) > 100) {
-      DatabaseConnector::renderTranslateExecuteSql(connection = connection,
-                                                   sql = sql)
-      retrieveSql <-
-        SqlRender::render(sql = "SELECT * FROM #optimized_set;")
-    } else {
       retrieveSql <- sql
     }
     
@@ -113,8 +122,8 @@ optimizeConceptSetExpression <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       dplyr::arrange(1) %>%
-      dplyr::tibble() %>% 
+      dplyr::tibble() %>%
       dplyr::filter(.data$conceptId != 0)
-    return(data)
     
+    return(data)
   }
