@@ -1,0 +1,1247 @@
+﻿conceptId,isExcluded,includeDescendants,includeMapped,conceptName,vocabularyId,standardConcept,invalidReason,conceptCode,conceptClassId,domainId,rc,dbc,drc,ddbc
+45624458,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL LOPERAMIDE HCL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,e16bdadf-5780-4602-bf71-7ff5a3a55959,OTC Drug,Drug,0,0,0,0
+1370397,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,bd58d6e9-628c-4c6b-b44c-da95e0417ba7,OTC Drug,Drug,0,0,0,0
+36513454,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",NDC,N,D,55714242000,11-digit NDC,Drug,0,0,0,0
+4190190,FALSE,TRUE,FALSE,Diarrhea-associated hemolytic uremic syndrome,SNOMED,S,V,373421000,Clinical Finding,Condition,0,0,0,0
+37495114,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,f3d5566e-5746-4778-a884-de0c3720b68b,OTC Drug,Drug,0,0,0,0
+37600292,FALSE,TRUE,FALSE,"ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,8e954f86-bc15-45e2-9274-ca5d8a7c9687,OTC Drug,Drug,0,0,0,0
+42869183,FALSE,TRUE,FALSE,Functional Assessment of Chronic Illness Therapy-Diarrhea Questionnaire - version 4 (FACIT-D),LOINC,S,V,70715-8,Survey,Observation,0,0,0,0
+46337929,FALSE,TRUE,FALSE,"DIARRHEA SYMPTOM FORMULA - aloe socotrina, chamomilla, cinchona officinalis, colocynthis, croton tiglium, cuprum arsenicosum, gelsemium sempervirens, ipecacuanha, nux vomica, phosphoricum acidum, podophyllum peltatum, veratrum album liquid",NDC,N,V,57955702001,11-digit NDC,Drug,0,0,0,0
+42819014,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [circle k anti-diarrheal],SPL,C,V,a5851ed2-545e-4545-9d8f-aa65f3959f19,OTC Drug,Drug,0,0,0,0
+42646111,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,ec0e08ac-f0b3-4c6e-a940-99b139faef8f,OTC Drug,Drug,0,0,0,0
+35106033,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,5847ba25-e369-468f-8eb2-c1242dda37b0,OTC Drug,Drug,0,0,0,0
+45269496,FALSE,TRUE,FALSE,RHEUM OFFICINALE ROOT 30 [hp_C]/mL PELLET [Diarrhea],NDC,N,V,064117175,9-digit NDC,Drug,0,0,0,0
+44520782,FALSE,TRUE,FALSE,DIARRHEA RELIEF,DPD,N,D,OMOP105188,Brand Name,Drug,0,0,0,0
+44778027,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,60bc8f05-f35e-45e0-ba3b-c82a87d60f5b,OTC Drug,Drug,0,0,0,0
+45684734,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,be8f1c7d-fd4e-48d4-80b0-1d92a2ba6a70,OTC Drug,Drug,0,0,0,0
+44121611,FALSE,TRUE,FALSE,Loperamide Oral Tablet [Diarrhea Relief],RxNorm Extension,S,V,OMOP1116242,Branded Drug Form,Drug,0,0,0,0
+37024374,FALSE,TRUE,FALSE,Bovine diarrhea virus 2 Ab,LOINC,N,V,LP37392-5,LOINC Component,Observation,0,0,0,0
+4047170,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhoea - respiratory syncytial virus vaccine,SNOMED,N,D,12226003,Pharma/Biol Product,Observation,0,0,0,0
+44149958,FALSE,TRUE,FALSE,Anti-Diarrheal,DPD,N,V,DPD117891,Brand Name,Drug,0,0,0,0
+736155,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,440fb3ce-4106-4169-b187-cfbfdd2f42c1,OTC Drug,Drug,0,0,0,0
+1751711,FALSE,TRUE,FALSE,PEPTO DIARRHEA - bismuth subsalicylate suspension,SPL,C,V,8517edac-fda7-7a49-e053-2a91aa0a24cd,OTC Drug,Drug,0,0,0,0
+3080366,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - haemophilus somnus - campylobacter fetus - leptospira canicola- grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,Nebraska Lexicon,N,D,25524009,Pharma/Biol Product,Drug,0,0,0,0
+45679341,FALSE,TRUE,FALSE,mercuric sulfate 30[hp_C]/mL ORAL PELLET [burning diarrhea],SPL,C,V,c1996908-9dbf-433d-936e-747518762d11,OTC Drug,Drug,0,0,0,0
+21601355,FALSE,TRUE,FALSE,Rota virus diarrhea vaccines,ATC,C,V,J07BH,ATC 4th,Drug,0,0,0,0
+45884747,FALSE,TRUE,FALSE,Diarrhea,LOINC,S,V,LA15424-7,Answer,Meas Value,0,0,0,0
+42813537,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,62d7e2d4-a142-5faf-e053-2a91aa0a8e58,OTC Drug,Drug,0,0,0,0
+770778,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,8aada54f-59db-4244-9046-1f2a8952fc5a,OTC Drug,Drug,0,0,0,0
+1565548,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal loperamide hcl, 2 mg caplets]",SPL,C,V,f7b837ac-25c0-43ec-9ec3-8f6850e34317,OTC Drug,Drug,0,0,0,0
+3078596,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea vaccine - haemophilus somnus - leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,Nebraska Lexicon,N,D,72288002,Pharma/Biol Product,Drug,0,0,0,0
+45671603,FALSE,TRUE,FALSE,"CARE ONE ANTI DIARRHEAL LOPERAMIDE HYDROCHLORIDE - loperamide hydrochloride tablet, film coated",SPL,C,V,639f7cc2-9fe4-43c3-a2bb-04bb528d74af,OTC Drug,Drug,0,0,0,0
+4203635,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus,SNOMED,S,V,526005,Organism,Observation,0,0,0,0
+36307348,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus S1 gene | Isolate,LOINC,N,D,LP264873-3,LOINC Hierarchy,Measurement,0,0,0,0
+46338334,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",NDC,N,V,55714226100,11-digit NDC,Drug,0,0,0,0
+45797405,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [kirkland signature anti diarrheal]",SPL,C,V,bae0264d-a8cf-4519-832c-d825a0c17463,OTC Drug,Drug,0,0,0,0
+37058909,FALSE,TRUE,FALSE,Bovine diarrhea virus | Serum | Microbiology,LOINC,C,V,LP379207-6,LOINC Hierarchy,Measurement,0,0,0,0
+46297613,FALSE,TRUE,FALSE,INDIGESTION DIARRHEA - nutmeg pellet,SPL,C,V,61590779-7650-4686-903e-ac36170701c5,OTC Drug,Drug,0,0,0,0
+799423,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,7a4256cf-5d28-4558-9de6-c16f9c9ec809,OTC Drug,Drug,0,0,0,0
+45234617,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [sunmark anti diarrheal]",NDC,N,V,049348529,9-digit NDC,Drug,0,0,0,0
+46352010,FALSE,TRUE,FALSE,"DIARRHEA - aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, mag. carb., phosphorus, podoph. pelt., rheum, sulphur, tabacum,",NDC,N,V,55714151100,11-digit NDC,Drug,0,0,0,0
+45645427,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,a89682f7-41f2-47cb-ae49-995a6216abd7,OTC Drug,Drug,0,0,0,0
+44370556,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,2ba4b28f-8e04-4f69-ac53-6c15bac414ae,OTC Drug,Drug,0,0,0,0
+37292073,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,b30cede1-cc4e-4e2d-8a78-80ddfd22573e,OTC Drug,Drug,0,0,0,0
+1393312,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,f518c120-dfe2-4c46-be3a-42a91664ba4f,OTC Drug,Drug,0,0,0,0
+45371317,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,055315520,9-digit NDC,Drug,0,0,0,0
+1764575,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,8ec6e3e6-c6c4-6ace-e053-2a95a90acce3,OTC Drug,Drug,0,0,0,0
+45047122,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,050804520,9-digit NDC,Drug,0,0,0,0
+42662554,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [anti diarrheal plus anti gas]",SPL,C,V,5837d9fd-2844-42a6-86b3-91fa1b9bad7f,OTC Drug,Drug,0,0,0,0
+44815900,FALSE,TRUE,FALSE,pectin 8 MG/ML [Sentry Anti-Diarrhea],RxNorm,S,V,1495180,Branded Drug Comp,Drug,0,0,0,0
+45624369,FALSE,TRUE,FALSE,"UP AND UP ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,ddb70e85-168e-451a-ac04-f6a46721a557,OTC Drug,Drug,0,0,0,0
+37603209,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [up and up anti diarrheal anti gas]",SPL,C,V,c9caed2e-aa04-4684-96fa-3b6291d4188c,OTC Drug,Drug,0,0,0,0
+37495014,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [leader anti diarrheal],SPL,C,V,b7201fd5-52c2-477c-8200-10b5904f6a87,OTC Drug,Drug,0,0,0,0
+42808080,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [7 select anti diarrheal]",SPL,C,V,128cf85a-714a-419d-a006-f4fe12eb5e04,OTC Drug,Drug,0,0,0,0
+4280391,FALSE,TRUE,FALSE,INVESTIGATIONAL ANTI-DIARRHEAL DRUGS,VA Class,N,V,IN840,VA Class,Drug,0,0,0,0
+45692262,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [dg health anti diarrheal]",SPL,C,V,19c83731-db14-477b-9e1b-e7b58dd0a38b,OTC Drug,Drug,0,0,0,0
+36207841,FALSE,TRUE,FALSE,Bovine diarrhea virus | Tissue and Smears,LOINC,N,D,LP256926-9,LOINC Hierarchy,Measurement,0,0,0,0
+44393622,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [kirkland signature anti diarrheal]",SPL,C,V,84a1565b-89de-4843-814f-4b60a736ba60,OTC Drug,Drug,0,0,0,0
+45319836,FALSE,TRUE,FALSE,Loperamides 2 mg/1 TABLET [Anti-Diarrheal],NDC,N,V,041163375,9-digit NDC,Drug,0,0,0,0
+40000699,FALSE,TRUE,FALSE,Loperamide 0.2 MG/ML Oral Solution [Anti-Diarrheal],RxNorm,N,D,211624,Branded Drug,Drug,0,0,0,0
+37410721,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,3ee4a13b-5d2e-49df-830a-b2f3068fd27c,OTC Drug,Drug,0,0,0,0
+35507111,FALSE,TRUE,FALSE,"ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,35cff261-932e-4b2e-ab21-80969c27fa92,OTC Drug,Drug,0,0,0,0
+46311683,FALSE,TRUE,FALSE,"DIARRHEA - aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, mag. carb., phosphorus, podoph. pelt., rheum, sulphur, tabacum,",SPL,C,V,cce1cc64-1f12-638a-12c0-c221428ef35b,OTC Drug,Drug,0,0,0,0
+35106141,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,7f65f816-66b2-41b2-b06a-184666784852,OTC Drug,Drug,0,0,0,0
+4208250,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,SNOMED,N,D,54979001,Pharma/Biol Product,Observation,0,0,0,0
+1764970,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [health mart anti diarrheal]",SPL,C,V,c5183d1e-8c29-4705-8482-3c4bb526a85a,OTC Drug,Drug,0,0,0,0
+736177,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,1a8f6a42-e74f-4725-b12e-b85c2d015191,OTC Drug,Drug,0,0,0,0
+42866073,FALSE,TRUE,FALSE,"DIARRHEA - nux vomica, podophyllum peltatum, veratrum album spray",SPL,C,V,3a4e8aa0-285f-44b0-8495-24d3ed48dfbd,Animal Drug,Drug,0,0,0,0
+42883692,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,9cd5d4c5-54d5-1688-e053-2a95a90a2a97,OTC Drug,Drug,0,0,0,0
+46327861,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [kirkland signature anti diarrheal]",SPL,C,V,b67d3c4f-c6e6-4298-87c4-7f585a5b53b5,OTC Drug,Drug,0,0,0,0
+1565593,FALSE,TRUE,FALSE,magnesium cation 30[hp_C]/mL ORAL PELLET [diarrhea dyspepsia],SPL,C,V,fec63468-4320-4a63-8167-7c06807a833f,OTC Drug,Drug,0,0,0,0
+3001678,FALSE,TRUE,FALSE,Diarrhea [HIV-SSC],LOINC,S,V,28379-6,Survey,Observation,0,0,0,0
+591428,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,70418ef4-d06d-4e4e-98bc-89d4468ef8bf,OTC Drug,Drug,0,0,0,0
+37602656,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,1fd5bf1d-e90e-47d4-9179-8b698531a738,OTC Drug,Drug,0,0,0,0
+46343108,FALSE,TRUE,FALSE,DRY COUGH DIARRHEA - sodium cation pellet,NDC,N,V,64117011801,11-digit NDC,Drug,0,0,0,0
+37043314,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | Serum | Microbiology,LOINC,C,V,LP379215-9,LOINC Hierarchy,Measurement,0,0,0,0
+36513470,FALSE,TRUE,FALSE,"DIARRHEA - GAS - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium,",NDC,N,D,55714428101,11-digit NDC,Drug,0,0,0,0
+36513394,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,ff458f99-a21d-4129-823a-e78c5c8ff847,OTC Drug,Drug,0,0,0,0
+45702499,FALSE,TRUE,FALSE,"EQUATE ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,f02b9ca5-2bf7-41b0-95e5-4f69a4b0f726,OTC Drug,Drug,0,0,0,0
+37067644,FALSE,TRUE,FALSE,PEDV S INDEL strain S gene,LOINC,N,V,LP247770-3,LOINC Component,Observation,0,0,0,0
+36000030,FALSE,TRUE,FALSE,DIARRHEA - podophyllum peltatum root pellet,SPL,C,V,900a8840-fc50-491c-b927-f5b8694130ca,OTC Drug,Drug,0,0,0,0
+45337831,FALSE,TRUE,FALSE,ARSENIC TRIOXIDE - CUPRIC ARSENITE - VERATRUM ALBUM ROOT 6; 6; 6 [hp_C]/28g; [hp_C]/28g; [hp_C]/28g PELLET [Diarrhea],NDC,N,V,068428002,9-digit NDC,Drug,0,0,0,0
+1719529,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [leader anti-diarrheal]",SPL,C,V,3a10a673-c891-423e-a5b8-6d8ae1c5ba6c,OTC Drug,Drug,0,0,0,0
+37494518,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,a14befb9-4402-5be2-e053-2a95a90aea3f,OTC Drug,Drug,0,0,0,0
+42810188,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,48b4c2ce-d8c8-4519-860a-dfe871fc437d,OTC Drug,Drug,0,0,0,0
+36471109,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [dg health anti diarrheal]",SPL,C,V,5ca2a2fc-1689-4021-ab2c-d6341de404fa,OTC Drug,Drug,0,0,0,0
+44352283,FALSE,TRUE,FALSE,"DIARRHEA RELIEF - aloe socotrina, chamomilla, cinchona officinalis, colocynthis, croton tiglium, cuprum arsenicosum, gelsemium sempervirens, ipecacuanha, nux vomica, phosphoricum acidum, podophyllum peltatum, veratrum album liquid",SPL,C,V,6343af72-5945-423a-8571-9ca49fb069eb,OTC Drug,Drug,0,0,0,0
+35904015,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,ab26f040-8329-40e6-b123-91b5080af417,OTC Drug,Drug,0,0,0,0
+44452498,FALSE,TRUE,FALSE,"DIARRHEA RELIEF - aloe socotrina, chamomilla, cinchona officinalis, colocynthis, croton tiglium, cuprum arsenicosum, gelsemium sempervirens, ipecacuanha, nux vomica, phosphoricum acidum, podophyllum peltatum, veratrum album liquid",NDC,N,V,57955502002,11-digit NDC,Drug,0,0,0,0
+36107735,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [topcare anti diarrheal]",SPL,C,V,6c4a1be2-711e-42ac-a9cd-6fc199ef8519,OTC Drug,Drug,0,0,0,0
+45691158,FALSE,TRUE,FALSE,"aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, colli... 3[hp_X]/mL / 15[hp_X]/mL ORAL LIQUID [diarrhea]",SPL,C,V,e59064e0-9029-05c9-5a1c-9dd351c83670,OTC Drug,Drug,0,0,0,0
+46346760,FALSE,TRUE,FALSE,COLIC DIARRHEA - araneus diadematus pellet,NDC,N,V,64117030501,11-digit NDC,Drug,0,0,0,0
+40000753,FALSE,TRUE,FALSE,Loperamide Oral Solution [Anti-Diarrheal],RxNorm,N,D,364681,Branded Drug Form,Drug,0,0,0,0
+44366786,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,1525cd5b-5f36-4a89-95c1-d6b211ff49c4,OTC Drug,Drug,0,0,0,0
+4230795,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - hemophilus somnus - leptospira canicola - grippotyphosa - hardjo - icterohemorrhagiae - pomona bacterin,SNOMED,N,D,88979000,Pharma/Biol Product,Observation,0,0,0,0
+19119021,FALSE,TRUE,FALSE,attapulgite 40 MG/ML [Diarrhea and Cramp],RxNorm,S,V,570212,Branded Drug Comp,Drug,0,0,0,0
+44860083,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,055910520,9-digit NDC,Drug,0,0,0,0
+46243778,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [up and up anti diarrheal],SPL,C,V,cec1e3e0-9d96-4aea-ab2a-e2c911c85fb8,OTC Drug,Drug,0,0,0,0
+46312865,FALSE,TRUE,FALSE,"BHI DIARRHEA - aloe, activated charcoal, citrullus colocynthis fruit pulp, cupric acetate, ferrum phosphoricum, podophyllum, potentilla erecta root, and veratrum album root tablet",SPL,C,V,6e58f888-429a-4497-8fe5-4ccd829fcb28,OTC Drug,Drug,0,0,0,0
+44402956,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,d2f9ece0-36f9-4271-9e35-1b2ef9d2697d,OTC Drug,Drug,0,0,0,0
+44978744,FALSE,TRUE,FALSE,Loperamide HCl 1 mg/5mL SOLUTION [SUNMARK ANTI DIARRHEAL],NDC,N,V,049348277,9-digit NDC,Drug,0,0,0,0
+44363372,FALSE,TRUE,FALSE,DG HEALTH ANTI DIARRHEAL - loperamide hcl suspension,SPL,C,V,bd8c0b27-ecd9-462a-8cff-4505069d459b,OTC Drug,Drug,0,0,0,0
+36210051,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus | XXX,LOINC,N,D,LP260024-7,LOINC Hierarchy,Measurement,0,0,0,0
+44368210,FALSE,TRUE,FALSE,arsenic trioxide - cupric arsenite - veratrum album root 6[hp_C]/28g ORAL PELLET [diarrhea],SPL,C,V,20cb31bf-7275-4b77-bf64-4967c272af4f,OTC Drug,Drug,0,0,0,0
+45644260,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL CAPSULE [anti-diarrheal],SPL,C,V,72f7b056-28c8-4324-8322-693bb56c7f96,OTC Drug,Drug,0,0,0,0
+46305852,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl tablet,SPL,C,V,ab80a1a9-59d7-40e9-b2ee-5af7b81a4851,OTC Drug,Drug,0,0,0,0
+44395011,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,8fc69b8e-642a-49cd-b3fe-257fbe3a00fb,OTC Drug,Drug,0,0,0,0
+36697951,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, COATED [anti-diarrheal]",SPL,C,V,aef1637a-caed-477d-8255-aff1358b1849,OTC Drug,Drug,0,0,0,0
+46315320,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,04beeb8a-e97d-4829-ad80-a960752af181,OTC Drug,Drug,0,0,0,0
+37074803,FALSE,TRUE,FALSE,PEDV prototype and S INDEL strain S gene panel,LOINC,N,V,LP247809-9,LOINC Component,Observation,0,0,0,0
+44375392,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [good sense anti diarrheal]",SPL,C,V,3ede7f4c-6d0a-4619-857d-cd5755e0764c,OTC Drug,Drug,0,0,0,0
+36000881,FALSE,TRUE,FALSE,croton oil 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,880923c6-fc40-4649-9c14-8be2a638054a,OTC Drug,Drug,0,0,0,0
+37068158,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus neutralizing antibody | Serum | Microbiology,LOINC,C,V,LP379483-3,LOINC Hierarchy,Measurement,0,0,0,0
+45764486,FALSE,TRUE,FALSE,Anti-diarrhea mucosal barrier,SNOMED,S,V,701180004,Physical Object,Device,0,0,0,0
+45658047,FALSE,TRUE,FALSE,GOOD NEIGHBOR PHARMACY ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,e6f5d456-c674-4b93-80b4-2a57e23bf8ed,OTC Drug,Drug,0,0,0,0
+1010914,FALSE,TRUE,FALSE,I have to limit my physical activity because of diarrhea in the past 7 days,LOINC,N,V,LP146912-3,LOINC Component,Observation,0,0,0,0
+37053387,FALSE,TRUE,FALSE,Bovine diarrhea virus RNA | XXX | Microbiology,LOINC,C,V,LP379221-7,LOINC Hierarchy,Measurement,0,0,0,0
+44371401,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,2f58ad84-f1ff-42d2-9f77-9649c6f6f7d4,OTC Drug,Drug,0,0,0,0
+42662821,FALSE,TRUE,FALSE,"aesculus hippocastanum, juglans regia, valeriana officinalis, aconitum napellus, argentum nitricum, ... 6[hp_X]/mL / 15[hp_X]/mL ORAL LIQUID [diarrhea]",SPL,C,V,9d732596-4e9d-55b4-e053-2995a90af5ba,OTC Drug,Drug,0,0,0,0
+40485515,FALSE,TRUE,FALSE,Bovine viral diarrhea virus 2 antibody,SNOMED,N,D,444250005,Substance,Observation,0,0,0,0
+42867029,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,a13adccc-158d-156d-e053-2995a90aea8b,OTC Drug,Drug,0,0,0,0
+36697578,FALSE,TRUE,FALSE,"pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cin... 6[hp_X]/mL / 15[hp_X]/mL / 30[hp_X]/mL ORAL LIQUID [diarrhea]",SPL,C,V,92ed2e44-e7fd-dca0-e053-2a95a90a58e7,OTC Drug,Drug,0,0,0,0
+36199711,FALSE,TRUE,FALSE,"UP AND UP ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,ef75085c-95df-4901-9c97-069fcfc3eef7,OTC Drug,Drug,0,0,0,0
+45632378,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,4a528336-6dd8-445a-aaf3-2f87c1199059,OTC Drug,Drug,0,0,0,0
+44371808,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,31609d95-13e8-4ba5-94e4-762f586471a3,OTC Drug,Drug,0,0,0,0
+36463704,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,1fd40fe4-b4a7-4748-8abc-50686384df3d,OTC Drug,Drug,0,0,0,0
+44364850,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,048a452e-d902-4f36-b68c-281f621abb1f,OTC Drug,Drug,0,0,0,0
+35506869,FALSE,TRUE,FALSE,"DG HEALTH ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,09798231-39cd-49b2-9be5-ea51e52f0a6d,OTC Drug,Drug,0,0,0,0
+36161733,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,3500a061-bc5e-442f-98a8-1fabf658e62e,OTC Drug,Drug,0,0,0,0
+44339932,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,3bffdfee-242f-433a-b248-94eaf10ba485,OTC Drug,Drug,0,0,0,0
+46310875,FALSE,TRUE,FALSE,DIARRHEA - ceanothus americanus leaf pellet,SPL,C,V,b7425235-a3e7-43fb-ad09-98761deeeff6,OTC Drug,Drug,0,0,0,0
+46294468,FALSE,TRUE,FALSE,"DIARRHEA AND GAS - thuja occidentalis, sulphur, argentum nitricum, colocynthis, mercurius corrosivus, arsenicum album, nux vomica, podophyllum peltatum, veratrum album liquid",SPL,C,V,973df652-7d9b-4d95-9d10-f2179a0e98c9,Animal Drug,Drug,0,0,0,0
+4137130,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - leptospira grippotyphosa - hardjo - pomona bacterin,SNOMED,N,D,32426005,Pharma/Biol Product,Observation,0,0,0,0
+36696119,FALSE,TRUE,FALSE,"GOOD NEIGHBOR PHARMACY ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,5dae1247-3ec0-495e-b3f2-1c1555141617,OTC Drug,Drug,0,0,0,0
+46338052,FALSE,TRUE,FALSE,DIARRHEA DYSPEPSIA - magnesium cation pellet,NDC,N,V,64117015902,11-digit NDC,Drug,0,0,0,0
+46340025,FALSE,TRUE,FALSE,INDIGESTION DIARRHEA - nutmeg pellet,NDC,N,V,64117016802,11-digit NDC,Drug,0,0,0,0
+45286701,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 TABLET [Anti Diarrheal],NDC,N,V,068196375,9-digit NDC,Drug,0,0,0,0
+4021696,FALSE,TRUE,FALSE,"Bovine diarrhea virus, type 2",SNOMED,S,V,115646008,Organism,Observation,0,0,0,0
+45303574,FALSE,TRUE,FALSE,MAGNESIUM CATION 30 [hp_C]/mL PELLET [Diarrhea Dyspepsia],NDC,N,V,064117159,9-digit NDC,Drug,0,0,0,0
+35517583,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [lil drug store anti-diarrheal],SPL,C,V,e9bd497b-0f75-44ea-ba15-037f3fbe34e7,OTC Drug,Drug,0,0,0,0
+40228427,FALSE,TRUE,FALSE,loperamide hydrochloride 0.2 MG/ML [Anti-Diarrhea],RxNorm,S,V,1036874,Branded Drug Comp,Drug,0,0,0,0
+45896305,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,93bcf8ac-fcb4-4485-ba53-0474eeab377f,OTC Drug,Drug,0,0,0,0
+36158393,FALSE,TRUE,FALSE,LEADER ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,c27e6fbd-8822-4784-9d24-497ae78e54f4,OTC Drug,Drug,0,0,0,0
+45626596,FALSE,TRUE,FALSE,"HEALTH MART ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,436db35b-1363-428d-986f-e63ce139344f,OTC Drug,Drug,0,0,0,0
+36661038,FALSE,TRUE,FALSE,Bovine diarrhea virus subtype | XXX | Microbiology,LOINC,C,V,LP419162-5,LOINC Hierarchy,Measurement,0,0,0,0
+36152449,FALSE,TRUE,FALSE,7 SELECT ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,50165012-4800-4326-9a68-cafc95db7915,OTC Drug,Drug,0,0,0,0
+42813381,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,6287725b-7845-9aad-e053-2a91aa0ae0da,OTC Drug,Drug,0,0,0,0
+36475867,FALSE,TRUE,FALSE,loperamide hydrochloride 1mg/7.5mL ORAL SUSPENSION [careone diarrhea control],SPL,C,V,c9c8ccd3-7f60-4cc3-a3b6-7e0db252b3eb,OTC Drug,Drug,0,0,0,0
+35509952,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,205af075-ae9f-46bc-985e-3ae4f7dfe6fc,OTC Drug,Drug,0,0,0,0
+1561850,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,ff164c27-602f-45ea-aee5-d6a60ca7f3fa,OTC Drug,Drug,0,0,0,0
+45659995,FALSE,TRUE,FALSE,SMART SENSE ANTI DIARRHEAL - loperamide hydrochloride solution,SPL,C,V,46303345-ce31-4d6c-9363-e611fa81ec19,OTC Drug,Drug,0,0,0,0
+37296897,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,ffa4fdd6-4814-482e-99fc-829acf439616,OTC Drug,Drug,0,0,0,0
+37603148,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,a4125352-a09b-4ef4-8e5e-fa895cc03c60,OTC Drug,Drug,0,0,0,0
+4218091,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - respiratory syncytial virus vaccine - leptospira pomona bacterin,SNOMED,N,D,81671005,Pharma/Biol Product,Observation,0,0,0,0
+45661192,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,7f32a501-7cd9-4f3e-962b-e175d38f5326,OTC Drug,Drug,0,0,0,0
+3070220,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - pasteurella haemolytica - multocida bacterin,Nebraska Lexicon,N,D,37343003,Pharma/Biol Product,Drug,0,0,0,0
+46295816,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,54f77846-d443-45e1-b847-52226d1d876e,OTC Drug,Drug,0,0,0,0
+36206197,FALSE,TRUE,FALSE,Bovine diarrhea virus 2 | Tissue and Smears,LOINC,N,D,LP256929-3,LOINC Hierarchy,Measurement,0,0,0,0
+45633001,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,68467222-c8b4-4029-a180-59a57d0090d3,OTC Drug,Drug,0,0,0,0
+44407475,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,fa02b9a4-4ffa-491f-99d4-c1389ef1b66a,OTC Drug,Drug,0,0,0,0
+36464140,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [dg health anti diarrheal],SPL,C,V,5cfbae67-942a-41d1-b8d5-b13c70de173d,OTC Drug,Drug,0,0,0,0
+35506896,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,0dd97bfb-67ce-472f-9b23-15f613bb3135,OTC Drug,Drug,0,0,0,0
+36174682,FALSE,TRUE,FALSE,loperamide hydrochloride 1mg/7.5mL ORAL SUSPENSION [careone diarrhea control],SPL,C,V,e776679a-5990-44d7-a085-65736d1bbfdb,OTC Drug,Drug,0,0,0,0
+45685358,FALSE,TRUE,FALSE,KAOPECTATE REGULAR STRENGTH VANILLA FLAVOR ANTI DIARRHEAL - bismuth subsalicylate liquid,SPL,C,V,db9c4b93-d5f2-4237-973e-75535024b9f5,OTC Drug,Drug,0,0,0,0
+44911117,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [smart sense anti diarrheal]",NDC,N,V,049738700,9-digit NDC,Drug,0,0,0,0
+42643123,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [anti diarrheal anti gas]",SPL,C,V,64e9990d-e12a-4d3c-ab7f-dc6e6793e884,OTC Drug,Drug,0,0,0,0
+37493879,FALSE,TRUE,FALSE,"FAMILY WELLNESS ANTI DIARRHEAL PLUS MULTI SYMPTOM RELIEF - loperamide hydrochloride, simethicone tablet",SPL,C,V,824c3052-4f61-409f-999b-9b84c5dd73f9,OTC Drug,Drug,0,0,0,0
+44373412,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,374e7b74-8eba-48e2-abaf-9fd6031fea2f,OTC Drug,Drug,0,0,0,0
+45642622,FALSE,TRUE,FALSE,benzoic acid 30[hp_C]/mL ORAL PELLET [rheumatism diarrhea],SPL,C,V,24d51928-1f7f-466c-9585-5ab40c6ee909,OTC Drug,Drug,0,0,0,0
+1184914,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [careone diarrhea control]",SPL,C,V,dfcbb976-d2e0-4ee9-b071-f7d09d40df84,OTC Drug,Drug,0,0,0,0
+4238745,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 - respiratory syncytial virus vaccine - hemophilus somnus bacterin,SNOMED,N,D,91275008,Pharma/Biol Product,Observation,0,0,0,0
+37505755,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [signature care anti diarrheal],SPL,C,V,9d47bcef-ac34-445c-9e4d-3c091e5715a8,OTC Drug,Drug,0,0,0,0
+42646094,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [signature care anti diarrheal anti gas]",SPL,C,V,e5aa407a-79cf-4651-aec3-adb68d5c3b65,OTC Drug,Drug,0,0,0,0
+1720535,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,c69bebf7-4d35-41a5-8e3e-7832cd529e34,OTC Drug,Drug,0,0,0,0
+46304671,FALSE,TRUE,FALSE,BILIOUSNESS DIARRHEA - iron pellet,SPL,C,V,761ac0e2-6305-4caf-b072-501e1910790b,OTC Drug,Drug,0,0,0,0
+582587,FALSE,TRUE,FALSE,bismuth subsalicylate 525mg/30mL ORAL SUSPENSION [pepto diarrhea],SPL,C,V,8517f38b-b901-84f2-e053-2991aa0abab0,OTC Drug,Drug,0,0,0,0
+46311113,FALSE,TRUE,FALSE,SORE THROAT DIARRHEA - mercuric cation pellet,SPL,C,V,4675e40a-bbf8-4b63-b3c0-faff7b4b32be,OTC Drug,Drug,0,0,0,0
+4012367,FALSE,TRUE,FALSE,Spurious diarrhea - overflow,SNOMED,S,V,162106006,Clinical Finding,Condition,0,0,0,0
+45633406,FALSE,TRUE,FALSE,Anti Diarrheal,SPL,N,V,7c7262cc-b99b-4d4f-91a5-0dee14293f73,SPL,Drug,0,0,0,0
+37600475,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,41626c34-7187-425e-81ff-0360e270cbdd,OTC Drug,Drug,0,0,0,0
+44347202,FALSE,TRUE,FALSE,CAREONE DIARRHEA CONTROL - loperamide hcl suspension,SPL,C,V,b5b64564-cca1-4ca8-9606-c0e370315cb5,OTC Drug,Drug,0,0,0,0
+37057911,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus Ab/Positive control,LOINC,N,V,LP286863-8,LOINC Component,Observation,0,0,0,0
+45665337,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,40204b82-b7c6-447a-89b0-3571bfa83ff7,OTC Drug,Drug,0,0,0,0
+46319846,FALSE,TRUE,FALSE,"DIARRHEA AND GAS - thuja occidentalis, sulphur, argentum nitricum, colocynthis, mercurius corrosivus, arsenicum album, nux vomica, podophyllum peltatum, veratrum album liquid",SPL,C,V,11e168be-1cfd-4822-8911-e0dcbad41641,Animal Drug,Drug,0,0,0,0
+40780469,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | Bld-Ser-Plas,LOINC,N,D,LP46455-9,LOINC Hierarchy,Measurement,0,0,0,0
+45235282,FALSE,TRUE,FALSE,ALOE 30 [hp_C]/mL PELLET [Diarrhea],NDC,N,V,064117504,9-digit NDC,Drug,0,0,0,0
+46360048,FALSE,TRUE,FALSE,SORE THROAT DIARRHEA - helianthemum canadense pellet,NDC,N,V,64117022101,11-digit NDC,Drug,0,0,0,0
+796024,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,621b01b8-6b29-4664-b803-1e34af999489,OTC Drug,Drug,0,0,0,0
+45696644,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [sunmark anti diarrheal]",SPL,C,V,e374d313-79db-44ee-9a15-f87daae0f7f1,OTC Drug,Drug,0,0,0,0
+45689155,FALSE,TRUE,FALSE,loperamides 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,8a82683c-447b-44f9-a5b7-d97f6d728f8e,OTC Drug,Drug,0,0,0,0
+45621038,FALSE,TRUE,FALSE,cupric arsenite 30[hp_C]/mL ORAL PELLET [diarrhea vomiting],SPL,C,V,3dee264e-ed45-46d4-ba56-f0266122a355,OTC Drug,Drug,0,0,0,0
+46333565,FALSE,TRUE,FALSE,DIARRHEA - capsella bursa-pastoris pellet,NDC,N,V,64117029002,11-digit NDC,Drug,0,0,0,0
+46341538,FALSE,TRUE,FALSE,DIARRHEA - capsella bursa-pastoris pellet,NDC,N,V,64117029001,11-digit NDC,Drug,0,0,0,0
+42803797,FALSE,TRUE,FALSE,"COMBINATION REMEDY 14 - DIARRHEA - aloe socotrina, bryonia alba, chamomilla q, colocynthis, ipecacuanha 6x, nux vomica, phosphoricum acidum, veratrum album solution/ drops",SPL,C,V,5e48c421-c827-7852-e053-2a91aa0a2376,OTC Drug,Drug,0,0,0,0
+3064825,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea vaccine - haemophilus somnus pasteurella haemolytica - multocida bacterin,Nebraska Lexicon,N,D,36190000,Pharma/Biol Product,Drug,0,0,0,0
+45675579,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL CAPSULE [anti diarrheal],SPL,C,V,183747d0-1d3e-4721-9f24-a5baa0456f85,OTC Drug,Drug,0,0,0,0
+45303352,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 CAPSULE [Anti-Diarrheal],NDC,N,V,055319375,9-digit NDC,Drug,0,0,0,0
+46303796,FALSE,TRUE,FALSE,DIARRHEA COLIC - gamboge pellet,SPL,C,V,2c248e69-ac28-4373-867c-8ee5a76b447e,OTC Drug,Drug,0,0,0,0
+46289715,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",SPL,C,V,2bde4f94-f82e-5676-c3f9-ef75bb5344e8,OTC Drug,Drug,0,0,0,0
+37295902,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,70117087-99ef-4983-aa59-59b725c67fac,OTC Drug,Drug,0,0,0,0
+45650050,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,7f55717d-cc55-4892-965d-4e8adaa861e6,OTC Drug,Drug,0,0,0,0
+46351627,FALSE,TRUE,FALSE,INDIGESTION DIARRHEA - nutmeg pellet,NDC,N,V,64117016801,11-digit NDC,Drug,0,0,0,0
+37295888,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,674b17ad-ae7c-42f5-9b8f-b7d9ee9f8a7a,OTC Drug,Drug,0,0,0,0
+46345655,FALSE,TRUE,FALSE,RHEUMATISM DIARRHEA - benzoic acid pellet,NDC,N,V,64117011502,11-digit NDC,Drug,0,0,0,0
+40382309,FALSE,TRUE,FALSE,Viral gastroenteritis,SNOMED,N,D,186166004,Clinical Finding,Condition,0,0,0,0
+44364897,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,0501e919-e938-4581-9aef-bfe8c2e20f5b,OTC Drug,Drug,0,0,0,0
+46242095,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,8a7d09f0-7940-4e85-9945-406e148a2f12,OTC Drug,Drug,0,0,0,0
+37034947,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus | XXX | Microbiology,LOINC,C,V,LP379481-7,LOINC Hierarchy,Measurement,0,0,0,0
+37072090,FALSE,TRUE,FALSE,Bovine diarrhea virus 1 Ab,LOINC,N,V,LP37391-7,LOINC Component,Observation,0,0,0,0
+36208743,FALSE,TRUE,FALSE,Bovine diarrhea virus | Milk,LOINC,N,D,LP257124-0,LOINC Hierarchy,Measurement,0,0,0,0
+44978713,FALSE,TRUE,FALSE,"Loperamide HCl 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,046122207,9-digit NDC,Drug,0,0,0,0
+4322650,FALSE,TRUE,FALSE,Bovine virus diarrhea - respiratory syncytial virus vaccine,SNOMED,N,D,71078005,Pharma/Biol Product,Observation,0,0,0,0
+736617,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,52655d77-e2e4-4fda-a7b7-ab07118d8498,OTC Drug,Drug,0,0,0,0
+46350089,FALSE,TRUE,FALSE,"DIARRHEA - aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, mag. carb., phosphorus, podoph. pelt., rheum, sulphur, tabacum,",NDC,N,V,55714171101,11-digit NDC,Drug,0,0,0,0
+45797637,FALSE,TRUE,FALSE,"bismuth subsalicylate 35mg/mL / 17.47mg/mL ORAL LIQUID [kaopectate extra strength peppermint flavor anti diarrheal, kaopectate regular strength peppermint flavor anti diarrheal]",SPL,C,V,bce6edb4-156e-46ae-8a93-ebee267f355c,OTC Drug,Drug,0,0,0,0
+44398192,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,aadd07ac-5535-4c96-91b7-d48bfb927327,OTC Drug,Drug,0,0,0,0
+4012192,FALSE,TRUE,FALSE,Diarrhea not present,SNOMED,S,V,162104009,Clinical Finding,Observation,0,0,0,0
+45286259,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,055312520,9-digit NDC,Drug,0,0,0,0
+40776106,FALSE,TRUE,FALSE,Bovine diarrhea virus 2,LOINC,N,V,LP18830-7,LOINC Component,Observation,0,0,0,0
+46345943,FALSE,TRUE,FALSE,"DIARRHEA - aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, mag. carb., phosphorus, podoph. pelt., rheum, sulphur, tabacum,",NDC,N,V,55714171100,11-digit NDC,Drug,0,0,0,0
+45705884,FALSE,TRUE,FALSE,"pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cin... 3[hp_X]/mL / 15[hp_X]/mL / 30[hp_X]/mL ORAL LIQUID [diarrhea]",SPL,C,V,8b4a6e20-7eb5-fb4b-9fcd-0b92df8698c8,OTC Drug,Drug,0,0,0,0
+45218056,FALSE,TRUE,FALSE,MERCURIC CATION 30 [hp_C]/mL PELLET [Sore Throat Diarrhea],NDC,N,V,064117164,9-digit NDC,Drug,0,0,0,0
+45624232,FALSE,TRUE,FALSE,araneus diadematus 30[hp_C]/1 ORAL PELLET [colic diarrhea],SPL,C,V,d7939359-30c2-4d81-86f7-1c7db18e6c59,OTC Drug,Drug,0,0,0,0
+35106286,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,a4a88861-e2c0-4431-a8dd-5be731bb14ec,OTC Drug,Drug,0,0,0,0
+46359812,FALSE,TRUE,FALSE,DIARRHEA - aloe pellet,NDC,N,V,64117050401,11-digit NDC,Drug,0,0,0,0
+46319136,FALSE,TRUE,FALSE,LIL DRUG STORE ANTI-DIARRHEAL - loperamide hydrochloride tablet,SPL,C,V,97d018d0-a355-43f8-89f3-4ce21fa16fde,OTC Drug,Drug,0,0,0,0
+4168167,FALSE,TRUE,FALSE,Alteration in bowel elimination: diarrhea,SNOMED,S,V,48541000,Clinical Finding,Condition,0,0,0,0
+45622520,FALSE,TRUE,FALSE,"GOOD NEIGHBOR PHARMACY ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,8753a5ef-f87b-438a-a3a4-53827e946476,OTC Drug,Drug,0,0,0,0
+37409661,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,49049c95-b19c-4ff0-a1bd-bc7b4193e875,OTC Drug,Drug,0,0,0,0
+45659905,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [leader anti diarrheal]",SPL,C,V,424e360e-c596-4476-b0f9-ccaf1d34bded,OTC Drug,Drug,0,0,0,0
+1393259,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [health mart anti diarrheal],SPL,C,V,e4d99016-3df6-48bd-8623-3025b2588fab,OTC Drug,Drug,0,0,0,0
+37412052,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,c97d5e3e-ef1a-486d-8504-8bdcb022e41e,OTC Drug,Drug,0,0,0,0
+45635583,FALSE,TRUE,FALSE,STOMACH RELIEF ANTI DIARRHEAL - loperamide hydrochloride tablet,SPL,C,V,de26457a-55a6-4fad-96d9-04697e157c09,OTC Drug,Drug,0,0,0,0
+37025788,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus | Tissue and Smears | Microbiology,LOINC,C,V,LP379480-9,LOINC Hierarchy,Measurement,0,0,0,0
+45639003,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL CAPSULE [anti diarrheal],SPL,C,V,8116d1c5-0cee-4a98-a1be-0aeee11b7c51,OTC Drug,Drug,0,0,0,0
+45353863,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [rx act anti diarrheal]",NDC,N,V,037808224,9-digit NDC,Drug,0,0,0,0
+4251433,FALSE,TRUE,FALSE,Bovine coronoviral diarrhoea,SNOMED,N,D,407373009,Clinical Finding,Condition,0,0,0,0
+771452,FALSE,TRUE,FALSE,"bismuth subsalicylate 35mg/mL / 17.47mg/mL ORAL LIQUID [kaopectate extra strength peppermint flavor anti diarrheal, kaopectate regular strength peppermint flavor anti diarrheal]",SPL,C,V,b0f257d5-8eb5-4ea9-bf54-1009266767aa,OTC Drug,Drug,0,0,0,0
+44778000,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,3ea49be2-1744-4d14-bc43-09d35fd4b3c7,OTC Drug,Drug,0,0,0,0
+42801443,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hcl tablet, coated",SPL,C,V,aca3742c-2a82-4e91-8aaf-2fce08487e56,OTC Drug,Drug,0,0,0,0
+1526482,FALSE,TRUE,FALSE,"EQUALINE ANTI DIARRHEAL PLUS ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,2ce0b37e-6dc4-423f-a1d6-a2cb623946d5,OTC Drug,Drug,0,0,0,0
+36473949,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,72dabe27-acfa-43fa-9c30-9c0e542ee594,OTC Drug,Drug,0,0,0,0
+35907285,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,532e8ec4-0bc9-4aaa-a4a9-a58477952d1e,OTC Drug,Drug,0,0,0,0
+46328162,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL CAPSULE [anti diarrheal],SPL,C,V,c468be11-5571-421e-b033-84abe984e23c,OTC Drug,Drug,0,0,0,0
+4172429,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 - respiratory syncytial virus vaccine - leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,SNOMED,N,D,49750008,Pharma/Biol Product,Observation,0,0,0,0
+35105919,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,307db4e8-7557-4463-9f8b-888ed6aab9bb,OTC Drug,Drug,0,0,0,0
+4039203,FALSE,TRUE,FALSE,Bovine diarrhea virus antigen assay,SNOMED,N,D,117947002,Procedure,Procedure,0,0,0,0
+46349820,FALSE,TRUE,FALSE,"DIARRHEA - aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, mag. carb., phosphorus, podoph. pelt., rheum, sulphur, tabacum,",NDC,N,V,55714151101,11-digit NDC,Drug,0,0,0,0
+45114927,FALSE,TRUE,FALSE,"Loperamide HCl 2 mg/1 TABLET, FILM COATED [anti diarrheal]",NDC,N,V,037012224,9-digit NDC,Drug,0,0,0,0
+42818676,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,9ce570f1-debe-4ede-a6c6-234d1e0afe9c,OTC Drug,Drug,0,0,0,0
+42812347,FALSE,TRUE,FALSE,"aloe socotrina, bryonia alba, chamomilla q, colocynthis, ipecacuanha 6x, nux vomica, phosphoricum ac... 1[hp_X]/mL / 3[hp_X]/mL / 6[hp_X]/mL ORAL SOLUTION/ DROPS [combination remedy 14 - diarrhea]",SPL,C,V,612d2bd5-63e2-fcbc-e053-2a91aa0a6112,OTC Drug,Drug,0,0,0,0
+80141,FALSE,TRUE,FALSE,Functional diarrhea,SNOMED,S,V,47812002,Clinical Finding,Condition,3810819,19,3810819,19
+36984009,FALSE,TRUE,FALSE,"bismuth subsalicylate 35mg/mL / 17.47mg/mL ORAL LIQUID [kaopectate extra strength peppermint flavor anti diarrheal, kaopectate regular strength peppermint flavor anti diarrheal]",SPL,C,V,307b9529-c02f-4358-bbde-4c607f82df7e,OTC Drug,Drug,0,0,0,0
+37602552,FALSE,TRUE,FALSE,HEB DIARRHEA RELIEF VANILLA FLAVOR - bismuth subsalicylate suspension,SPL,C,V,b70d4176-8bc1-4863-82df-90ae8391e4a2,OTC Drug,Drug,0,0,0,0
+44389368,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,61b4ad60-461b-41ff-a8de-1ec99a3106c3,OTC Drug,Drug,0,0,0,0
+46315282,FALSE,TRUE,FALSE,SORE THROAT DIARRHEA - helianthemum canadense pellet,SPL,C,V,765c78ea-7612-4264-a7c4-7517391e2a0c,OTC Drug,Drug,0,0,0,0
+37031744,FALSE,TRUE,FALSE,Bovine diarrhea virus 2 Ab | Serum | Microbiology,LOINC,C,V,LP379210-0,LOINC Hierarchy,Measurement,0,0,0,0
+36475005,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [up and up anti diarrheal]",SPL,C,V,a21cae61-3861-4123-be10-ccd93a98aea3,OTC Drug,Drug,0,0,0,0
+4210986,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - haemophilus somnus bacterin,SNOMED,N,D,57161006,Pharma/Biol Product,Observation,0,0,0,0
+44382282,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [medex anti-diarrheal relief],SPL,C,V,4f8fcfb8-a198-4ccf-e054-00144ff8d46c,OTC Drug,Drug,0,0,0,0
+45794255,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [rx act anti diarrheal]",SPL,C,V,9be9bd2e-cecf-46c7-a6db-ecd5b52f26ea,OTC Drug,Drug,0,0,0,0
+36241568,FALSE,TRUE,FALSE,Maalox Anti-Diarrheal Pill,RxNorm,C,V,1184969,Branded Dose Group,Drug,0,0,0,0
+44350484,FALSE,TRUE,FALSE,CAREONE DIARRHEA CONTROL - loperamide hydrochloride suspension,SPL,C,V,95ba9c92-77f5-4344-a4f3-78eda9ebc823,OTC Drug,Drug,0,0,0,0
+42870368,FALSE,TRUE,FALSE,Campylobacter sp DNA.diarrheagenic [Presence] in Stool by NAA with probe detection,LOINC,S,V,71429-5,Lab Test,Measurement,0,0,0,0
+37074335,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus S1 gene | Isolate | Microbiology,LOINC,C,V,LP379490-8,LOINC Hierarchy,Measurement,0,0,0,0
+45626359,FALSE,TRUE,FALSE,nutmeg 30[hp_C]/mL ORAL PELLET [indigestion diarrhea],SPL,C,V,38b92836-5f72-4f5d-9883-e938302bad23,OTC Drug,Drug,0,0,0,0
+37203865,FALSE,TRUE,FALSE,Diarrheagenic Campylobacter DNA,SNOMED,S,V,784049009,Substance,Observation,0,0,0,0
+44015982,FALSE,TRUE,FALSE,Diarrhea Relief Gels,RxNorm Extension,N,D,OMOP1010613,Brand Name,Drug,0,0,0,0
+36207842,FALSE,TRUE,FALSE,Bovine diarrhea virus | XXX,LOINC,N,D,LP257125-7,LOINC Hierarchy,Measurement,0,0,0,0
+44927705,FALSE,TRUE,FALSE,Loperamide HCl 1 mg/5mL SOLUTION [Leader Anti Diarrheal],NDC,N,V,037205377,9-digit NDC,Drug,0,0,0,0
+775253,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [smart sense anti diarrheal]",SPL,C,V,abd3c045-f1ae-4e36-96bc-32a6ded4eee2,OTC Drug,Drug,0,0,0,0
+45635134,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl tablet,SPL,C,V,ca42762d-34be-4b55-b59f-c3b537d790b0,OTC Drug,Drug,0,0,0,0
+46303891,FALSE,TRUE,FALSE,DIARRHEA - aloe pellet,SPL,C,V,28ccdcb9-550c-4f3a-ad8f-6195f84aa7d5,OTC Drug,Drug,0,0,0,0
+36512394,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,6c374a15-52c0-4370-87cb-e120cca32589,OTC Drug,Drug,0,0,0,0
+774384,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,98f6c4fb-3497-4194-88c5-d9dce5a56cb9,OTC Drug,Drug,0,0,0,0
+44859478,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal Loperamide HCl]",NDC,N,V,036800520,9-digit NDC,Drug,0,0,0,0
+36247354,FALSE,TRUE,FALSE,Sentry Anti-Diarrhea Oral Liquid Product,RxNorm,C,V,1495182,Branded Dose Group,Drug,0,0,0,0
+796572,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [careone diarrhea and gas control]",SPL,C,V,f7168b23-3563-4bb4-b7e8-1ee3aadb6c43,OTC Drug,Drug,0,0,0,0
+772899,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,91843b17-3c04-482c-a2ba-143193be1595,OTC Drug,Drug,0,0,0,0
+1751595,FALSE,TRUE,FALSE,PEPTO-BISMOL DIARRHEA - bismuth subsalicylate tablet,SPL,C,V,84ef6f9a-ba4e-66b1-e053-2991aa0a0c34,OTC Drug,Drug,0,0,0,0
+45803185,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,f43b3f3d-731f-4011-87f2-5c1e4f3e648a,OTC Drug,Drug,0,0,0,0
+758588,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,d3a6ce79-18c0-412d-b2b7-0efa4b1465ad,OTC Drug,Drug,0,0,0,0
+4017685,FALSE,TRUE,FALSE,"Bovine diarrhea virus, type 1",SNOMED,S,V,115645007,Organism,Observation,0,0,0,0
+45678594,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL LOPERAMIDE HCL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,a0892b29-fa8f-45bb-a653-b05b29bec247,OTC Drug,Drug,0,0,0,0
+45648891,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,4a3d928e-1926-4f40-a877-2765f37df953,OTC Drug,Drug,0,0,0,0
+45218059,FALSE,TRUE,FALSE,GAMBOGE 30 [hp_C]/mL PELLET [DIARRHEA COLIC],NDC,N,V,064117232,9-digit NDC,Drug,0,0,0,0
+35600565,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [anti diarrheal anti gas]",SPL,C,V,9a0fb0d2-fcf8-432c-909f-bde0d8b30f56,OTC Drug,Drug,0,0,0,0
+4304974,FALSE,TRUE,FALSE,Bovine diarrhea virus 2 antibody assay,SNOMED,N,D,117978003,Procedure,Procedure,0,0,0,0
+37290893,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,191d2af5-c668-48fa-8c9c-7b0e4bfd5031,OTC Drug,Drug,0,0,0,0
+4195261,FALSE,TRUE,FALSE,Epidemic diarrheal disease of infant mouse,SNOMED,N,D,79800001,Clinical Finding,Condition,0,0,0,0
+45081953,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 CAPSULE [Anti Diarrheal],NDC,N,V,070253375,9-digit NDC,Drug,0,0,0,0
+45650684,FALSE,TRUE,FALSE,"GOOD SENSE ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,9c1d811d-f8d0-418c-aaf7-7b6477deea20,OTC Drug,Drug,0,0,0,0
+44378777,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,4817ff2a-4e60-46e2-ab31-3b9543a1e1ae,OTC Drug,Drug,0,0,0,0
+36160537,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,16ac77b4-6a58-44e8-8d66-83999f4b99e4,OTC Drug,Drug,0,0,0,0
+46317393,FALSE,TRUE,FALSE,VOMITING DIARRHEA - aethusa cynapium pellet,SPL,C,V,680bcbdf-ca2e-411f-aa96-34e339f9da17,OTC Drug,Drug,0,0,0,0
+36512117,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,15293b92-a00b-468c-83be-a17fbefaec53,OTC Drug,Drug,0,0,0,0
+4196223,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhoea vaccine - leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,SNOMED,N,D,44282007,Pharma/Biol Product,Observation,0,0,0,0
+44961401,FALSE,TRUE,FALSE,Loperamide HCl 1 mg/5mL SOLUTION [Anti Diarrheal],NDC,N,V,021695978,9-digit NDC,Drug,0,0,0,0
+36000158,FALSE,TRUE,FALSE,"EQUATE ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,88fc0fd0-6183-43be-83bc-8eb8bb761604,OTC Drug,Drug,0,0,0,0
+45682310,FALSE,TRUE,FALSE,Anti-Diarrheal,SPL,N,V,4d1dc5af-f995-4a6b-a9b5-b21cc030571a,SPL,Drug,0,0,0,0
+37296724,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,b3e168e8-3cff-4605-b005-3d9a4583177b,OTC Drug,Drug,0,0,0,0
+45746044,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,96b31daa-2cc2-9bee-e053-2995a90a523e,OTC Drug,Drug,0,0,0,0
+4242382,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - campylobacter fetus - leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,SNOMED,N,D,3813003,Pharma/Biol Product,Observation,0,0,0,0
+4207049,FALSE,TRUE,FALSE,Bovine viral diarrhea,SNOMED,N,D,56304002,Clinical Finding,Condition,0,0,0,0
+40319131,FALSE,TRUE,FALSE,Viral gastroenteritis,SNOMED,N,U,154277007,Clinical Finding,Condition,0,0,0,0
+4087401,FALSE,TRUE,FALSE,Equine monocytic neorickettsiasis,SNOMED,N,D,24466002,Clinical Finding,Condition,0,0,0,0
+44355114,FALSE,TRUE,FALSE,WHP BE GONE DIARRHEA TM - arsenic trioxide - cupric arsenite - veratrum album root pellet,SPL,C,V,24f85823-7068-4686-a16b-f537bf20d654,OTC Drug,Drug,0,0,0,0
+37069668,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | Stool | Microbiology,LOINC,C,V,LP379216-7,LOINC Hierarchy,Measurement,0,0,0,0
+45640894,FALSE,TRUE,FALSE,"cinchona officinalis, bryonia, chamomilla, colocynthis, ipecacuanha, belladonna 8[hp_X]/1 ORAL TABLET, CHEWABLE [diarrhea real relief]",SPL,C,V,d791f9a2-d862-4f8f-873e-6e6fe8f679b0,OTC Drug,Drug,0,0,0,0
+45683184,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,76645bfa-7095-4d36-a263-af71851f6eb1,OTC Drug,Drug,0,0,0,0
+37404838,FALSE,TRUE,FALSE,ANTI-DIARRHEAL MAXIMUM STRENGTH - bismuth subsalicylate tablet,SPL,C,V,ef63ce58-f70e-429d-a154-c0a561511c04,OTC Drug,Drug,0,0,0,0
+37406131,FALSE,TRUE,FALSE,loperamide hydrochloride 1mg/7.5mL ORAL SUSPENSION [careone diarrhea control],SPL,C,V,ab98e470-5785-4aaf-8aef-91d8d18ccccc,OTC Drug,Drug,0,0,0,0
+37290854,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,0614a6d6-0397-41d2-9eae-599eb5f5f027,OTC Drug,Drug,0,0,0,0
+42819527,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [core values anti diarrheal]",SPL,C,V,b2f66637-0b8a-4f96-82f7-a08d7aa50504,OTC Drug,Drug,0,0,0,0
+36983925,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL LIQUID [kaopectate regular strength vanilla flavor anti diarrheal],SPL,C,V,2418125c-a041-4922-a53a-8f2695bf1704,OTC Drug,Drug,0,0,0,0
+4341827,FALSE,TRUE,FALSE,Dysentery,NDFRT,N,V,N0000001016,Ind / CI,Drug,0,0,0,0
+37034376,FALSE,TRUE,FALSE,Bovine diarrhea virus 2 Ag,LOINC,N,V,LP37393-3,LOINC Component,Observation,0,0,0,0
+36172673,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,b3ab7644-010c-4d75-b90d-e44323c39582,OTC Drug,Drug,0,0,0,0
+1010918,FALSE,TRUE,FALSE,My problem with diarrhea keeps - wakes - me up at night in the past 7 days,LOINC,N,V,LP146916-4,LOINC Component,Observation,0,0,0,0
+45675362,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,0ecca2cd-c971-47b2-a2ac-ae7842dd4264,OTC Drug,Drug,0,0,0,0
+45641647,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl tablet,SPL,C,V,f93a1f1f-2233-4338-9643-1ba48bd000bc,OTC Drug,Drug,0,0,0,0
+36664166,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,cf97bb2f-e21b-40ea-b182-8d376f89fd7a,OTC Drug,Drug,0,0,0,0
+42662560,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [leader anti diarrheal],SPL,C,V,59e7acd1-eebd-4793-ad23-806651b8db0b,OTC Drug,Drug,0,0,0,0
+45655790,FALSE,TRUE,FALSE,"SIMPLY RIGHT ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,7ffcd567-c98f-411d-ac45-5781008367e1,OTC Drug,Drug,0,0,0,0
+44362237,FALSE,TRUE,FALSE,"CORE VALUES ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,5ad6eec5-ee66-4936-9859-8ba45ecae587,OTC Drug,Drug,0,0,0,0
+45792987,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,8ecbfd81-fe45-49b4-b835-a32192de8f53,OTC Drug,Drug,0,0,0,0
+42886764,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,9cee17ca-bd12-3d40-e053-2995a90ac8fe,OTC Drug,Drug,0,0,0,0
+37077178,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus gene sequence and phylogenetic analysis,LOINC,N,V,LP248434-5,LOINC Component,Observation,0,0,0,0
+36470085,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,447399b2-27e4-4104-9d1b-2ab41ed11731,OTC Drug,Drug,0,0,0,0
+45620947,FALSE,TRUE,FALSE,aethusa cynapium 30[hp_C]/mL ORAL PELLET [vomiting diarrhea],SPL,C,V,3a0658f7-b48f-4f24-a33b-9b9d379aa2db,OTC Drug,Drug,0,0,0,0
+590974,FALSE,TRUE,FALSE,"LEADER ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,1f634af8-2609-4869-a47c-385c16cbd0fe,OTC Drug,Drug,0,0,0,0
+45883732,FALSE,TRUE,FALSE,Have diarrhea,LOINC,S,V,LA15887-5,Answer,Meas Value,0,0,0,0
+37055258,FALSE,TRUE,FALSE,Bovine diarrhea virus RNA | Tissue and Smears | Microbiology,LOINC,C,V,LP379220-9,LOINC Hierarchy,Measurement,0,0,0,0
+42652073,FALSE,TRUE,FALSE,"aethusa cynapium, arsenic trioxide, oyster shell calicum carbonate, crude, matricaria chamomilla, ci... 30[hp_C]/mL ORAL LIQUID [diarrhea cp]",SPL,C,V,3e201843-7bf8-46a8-bbbd-39e91961b4bf,OTC Drug,Drug,0,0,0,0
+46333504,FALSE,TRUE,FALSE,"DIARRHEA - GAS - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium,",NDC,N,D,55714432901,11-digit NDC,Drug,0,0,0,0
+1393243,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [sunmark anti diarrheal],SPL,C,V,dbcf3599-0d9e-426e-9482-bb2257cdc035,OTC Drug,Drug,0,0,0,0
+44337788,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,e7f47c58-bd52-48c6-8c7d-76d4aaa7eaf7,OTC Drug,Drug,0,0,0,0
+45683396,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,808820e9-5bc6-493d-a872-cab67324cd9b,OTC Drug,Drug,0,0,0,0
+35510254,FALSE,TRUE,FALSE,iron 30[hp_C]/mL ORAL PELLET [biliousness diarrhea],SPL,C,V,2e8122fe-53ff-4567-b4b9-f5a2e905c49a,OTC Drug,Drug,0,0,0,0
+46329263,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,f17c7834-947f-4bd8-bca3-ffea0f04bb78,OTC Drug,Drug,0,0,0,0
+1752536,FALSE,TRUE,FALSE,helianthemum canadense 30[hp_C]/mL ORAL PELLET [sore throat diarrhea],SPL,C,V,c2c8a74e-33a9-4dfb-8f11-ac0d29eeab29,OTC Drug,Drug,0,0,0,0
+36206539,FALSE,TRUE,FALSE,Bovine diarrhea virus | Stool,LOINC,N,D,LP256928-5,LOINC Hierarchy,Measurement,0,0,0,0
+44403143,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,d47b813b-0857-4bfa-a8e2-d6bcadf5aef6,OTC Drug,Drug,0,0,0,0
+35515403,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,88a5e11d-c394-4912-ad1a-775f8e38a6ff,OTC Drug,Drug,0,0,0,0
+36475473,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [topcare anti diarrheal]",SPL,C,V,b77b745d-0dd0-43b8-aa3d-7a8b364d9b5b,OTC Drug,Drug,0,0,0,0
+36003959,FALSE,TRUE,FALSE,"FAMILY WELLNESS ANTI DIARRHEAL PLUS ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,fa632948-8783-4374-8cf3-432cbff66638,OTC Drug,Drug,0,0,0,0
+45779735,FALSE,TRUE,FALSE,"pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cin... 3[hp_X]/g / 15[hp_X]/g / 30[hp_X]/g ORAL PELLET [diarrhea]",SPL,C,V,10213dda-f751-bf0f-458c-e0181f1745cb,OTC Drug,Drug,0,0,0,0
+42514824,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,0e474cbb-2862-4e71-86d5-b015733952f0,OTC Drug,Drug,0,0,0,0
+45686352,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [topcare anti diarrheal]",SPL,C,V,089d6922-8355-4bec-b453-c09d7c0a028f,OTC Drug,Drug,0,0,0,0
+46362506,FALSE,TRUE,FALSE,DIARRHEA VOMITING - cupric arsenite pellet,NDC,N,V,64117022202,11-digit NDC,Drug,0,0,0,0
+37406241,FALSE,TRUE,FALSE,bismuth subsalicylate 525mg/1 ORAL TABLET [anti-diarrheal maximum strength],SPL,C,V,e6c76f37-5f75-4b60-9f54-f798f6a93a77,OTC Drug,Drug,0,0,0,0
+4237205,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - pasteurella hemolytica bacterin,SNOMED,N,D,9145001,Pharma/Biol Product,Observation,0,0,0,0
+44407054,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,f692197e-8cf8-4b8e-814b-ff5d78b982a7,OTC Drug,Drug,0,0,0,0
+736569,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,3e44edf6-99ec-4ee4-82c0-3f0fe9c7e95a,OTC Drug,Drug,0,0,0,0
+36159498,FALSE,TRUE,FALSE,LEADER ANTI DIARRHEAL - loperamide hcl suspension,SPL,C,V,f845fad8-6b3c-4c7e-94bc-d4f99f69e4f0,OTC Drug,Drug,0,0,0,0
+42645447,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,46c613c3-a058-4049-8bed-4fa7aed50dd2,OTC Drug,Drug,0,0,0,0
+45659131,FALSE,TRUE,FALSE,"KIRKLAND SIGNATURE ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,1c8b2577-c570-4e72-aaad-f6ecb69f3aa3,OTC Drug,Drug,0,0,0,0
+45663322,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,e34f5bbc-e43c-a69e-e94d-ebc319518204,OTC Drug,Drug,0,0,0,0
+35508696,FALSE,TRUE,FALSE,"HEALTH MART ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,a6b659ec-9380-4d24-b97f-962b3fe317c5,OTC Drug,Drug,0,0,0,0
+35907415,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,7ab5522e-c361-4357-bcee-bccb8c2c6ca6,OTC Drug,Drug,0,0,0,0
+40768854,FALSE,TRUE,FALSE,"Have you had antacids, laxatives, or anti-diarrheals since eating or drinking anything but plain water [PhenX]",LOINC,S,V,66172-8,Clinical Observation,Observation,0,0,0,0
+4036539,FALSE,TRUE,FALSE,Bovine diarrhea virus 2 antigen assay,SNOMED,N,D,117946006,Procedure,Procedure,0,0,0,0
+45683044,FALSE,TRUE,FALSE,"EQUALINE ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,6fb03f13-437a-4287-8dd3-23461873fbae,OTC Drug,Drug,0,0,0,0
+45662824,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL LOPERAMIDE HCL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,cb9356ff-bb08-4166-a792-3805fd673f9e,OTC Drug,Drug,0,0,0,0
+36469216,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,1c5e21e5-f802-4ad2-81ed-f25e7c5d54ed,OTC Drug,Drug,0,0,0,0
+46362946,FALSE,TRUE,FALSE,COLIC DIARRHEA - ipomoea purga root pellet,NDC,N,V,64117024202,11-digit NDC,Drug,0,0,0,0
+45661552,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,8f7fea50-70cf-4f9f-a655-30371e5b9d9f,OTC Drug,Drug,0,0,0,0
+44140261,FALSE,TRUE,FALSE,Diarrhea Relief Gels,DPD,N,V,DPD121057,Brand Name,Drug,0,0,0,0
+44646237,FALSE,TRUE,FALSE,Diarrhea Relief Liquid Gels [Drug],DPD,N,V,2451433,Drug Product,Drug,0,0,0,0
+37600386,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [careone diarrhea control],SPL,C,V,114e6b4a-fbf2-4e1b-84f1-115902de9526,OTC Drug,Drug,0,0,0,0
+45745499,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,8270be82-b349-405f-982d-c51bfac9f39e,OTC Drug,Drug,0,0,0,0
+4103285,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhoea - parainfluenza 3 vaccine - haemophilus somnus - campylobacter foetus - leptospira canicola- grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,SNOMED,N,D,25524009,Pharma/Biol Product,Observation,0,0,0,0
+45073708,FALSE,TRUE,FALSE,"cinchona officinalis, bryonia, chamomilla, colocynthis, ipecacuanha, belladonna 8[hp_X]/1 ORAL TABLET, CHEWABLE [diarrhea real relief]",NDC,N,V,605126018,9-digit NDC,Drug,0,0,0,0
+3068681,FALSE,TRUE,FALSE,Bovine diarrhea virus ribonucleic acid assay,Nebraska Lexicon,N,D,118025002,Procedure,Procedure,0,0,0,0
+46240302,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,3f628722-7fbe-4a19-8aac-ed91639a5088,OTC Drug,Drug,0,0,0,0
+36513196,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,bd293050-94a7-411f-8859-bad9ae6899be,OTC Drug,Drug,0,0,0,0
+42818373,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,9524b648-5c01-4313-bfa3-315041f924ce,OTC Drug,Drug,0,0,0,0
+45670889,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,44773392-eac8-48b3-ae46-b27f5fe55d8d,OTC Drug,Drug,0,0,0,0
+45234353,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [Anti Diarrheal]",NDC,N,V,030142998,9-digit NDC,Drug,0,0,0,0
+44666205,FALSE,TRUE,FALSE,LOPERAMIDE HYDROCHLORIDE ORAL TABLET [DIARRHEA RELIEF],DPD,N,D,OMOP175022,Branded Drug Form,Drug,0,0,0,0
+36221827,FALSE,TRUE,FALSE,Anti-Diarrhea Oral Product,RxNorm,C,V,1166013,Branded Dose Group,Drug,0,0,0,0
+40247295,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,f71384f9-4865-4b88-963b-d81e578fb6d7,OTC Drug,Drug,0,0,0,0
+44815899,FALSE,TRUE,FALSE,Sentry Anti-Diarrhea,RxNorm,N,V,1495179,Brand Name,Drug,0,0,0,0
+44364014,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,3750cc6e-ff29-4463-b71e-1260216abc64,OTC Drug,Drug,0,0,0,0
+44962182,FALSE,TRUE,FALSE,Loperamides 2 mg/1 TABLET [Anti-Diarrheal],NDC,N,V,059779375,9-digit NDC,Drug,0,0,0,0
+40787099,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | Stool,LOINC,N,D,LP46456-7,LOINC Hierarchy,Measurement,0,0,0,0
+45652129,FALSE,TRUE,FALSE,"BERKLEY AND JENSEN ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,dc29a8e9-f916-49d2-b9a6-d2b4537d7b58,OTC Drug,Drug,0,0,0,0
+44394699,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,8d63ddc9-2c17-4b33-9a66-756924fc3888,OTC Drug,Drug,0,0,0,0
+44356287,FALSE,TRUE,FALSE,LEADER ANTI DIARRHEAL - loperamide hcl suspension,SPL,C,V,78f0d543-3ce4-4cc8-868e-6ef3b84855cc,OTC Drug,Drug,0,0,0,0
+45680454,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL CAPSULE [anti-diarrheal],SPL,C,V,f4d95dd5-c95f-48c7-b779-dbe9a3814938,OTC Drug,Drug,0,0,0,0
+37067004,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | Blood | Microbiology,LOINC,C,V,LP379213-4,LOINC Hierarchy,Measurement,0,0,0,0
+44390662,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,6c6a52fc-86bf-4c04-9199-23e11cbe8899,OTC Drug,Drug,0,0,0,0
+36159503,FALSE,TRUE,FALSE,SIGNATURE CARE ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,f8c48a55-5626-438a-a80a-cf74b51b2598,OTC Drug,Drug,0,0,0,0
+3063773,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - haemophilus somnus - leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,Nebraska Lexicon,N,D,88979000,Pharma/Biol Product,Drug,0,0,0,0
+796036,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,68feb272-21b5-4a8a-879c-705f600b5276,OTC Drug,Drug,0,0,0,0
+42808510,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [harris teeter anti diarrheal]",SPL,C,V,1e1d8f8e-d0af-4421-b3ed-0a8f93e976cd,OTC Drug,Drug,0,0,0,0
+1010915,FALSE,TRUE,FALSE,I have to limit my sexual activity because of diarrhea in the past 7 days,LOINC,N,V,LP146913-1,LOINC Component,Observation,0,0,0,0
+42643178,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [up and up anti diarrheal]",SPL,C,V,848b0dac-7084-41b6-88fe-3a6f44a9a3d8,OTC Drug,Drug,0,0,0,0
+37295827,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,5102fbb7-4a0b-4c91-9740-96facffa23fa,OTC Drug,Drug,0,0,0,0
+4254217,FALSE,TRUE,FALSE,Diarrhea care assessment,SNOMED,S,V,408873001,Procedure,Procedure,0,0,0,0
+46343959,FALSE,TRUE,FALSE,"DIARRHEA COMPLEX - aloe socotrina, arsenicum album, bryonia, collinsonia canadensis, colocynthis, croton tiglium, cuprum aceticum, echinacea angustifolia, mercurius sub. corros, rheum officinale, sulfur, veratrum album liquid",NDC,N,V,52731701502,11-digit NDC,Drug,0,0,0,0
+36107535,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,3a7cd410-52f8-4b69-a544-c8328a6bb4ee,OTC Drug,Drug,0,0,0,0
+45680815,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,057c724e-f03e-4120-8cd1-ae58104e1c21,OTC Drug,Drug,0,0,0,0
+46322256,FALSE,TRUE,FALSE,DIARRHEA DYSPEPSIA - magnesium cation pellet,SPL,C,V,c40554e2-202d-4dbc-bc84-d5507afdb56e,OTC Drug,Drug,0,0,0,0
+584384,FALSE,TRUE,FALSE,bismuth subsalicylate 525mg/30mL ORAL SUSPENSION [pepto diarrhea],NDC,N,V,370000538,9-digit NDC,Drug,0,0,0,0
+43050798,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [good sense anti diarrheal]",SPL,C,V,a4f86bef-7df5-4209-bfc3-065a1c5bb297,OTC Drug,Drug,0,0,0,0
+45787985,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,5f41699e-bf81-4a3b-8c34-01bea763081a,OTC Drug,Drug,0,0,0,0
+4057196,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhoea vaccine - haemophilus somnus leptospira pomona bacterin,SNOMED,N,D,21254009,Pharma/Biol Product,Observation,0,0,0,0
+45640653,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL CAPSULE [anti diarrheal],SPL,C,V,ccdd1aec-6d5c-40c7-8e82-24aeaa1493a5,OTC Drug,Drug,0,0,0,0
+45643339,FALSE,TRUE,FALSE,"GOOD NEIGHBOR PHARMACY ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,48078785-0384-4ca5-bd95-a8b3602084ae,OTC Drug,Drug,0,0,0,0
+42810029,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,44b61063-d157-4ece-9f47-360372d16d1f,OTC Drug,Drug,0,0,0,0
+40184745,FALSE,TRUE,FALSE,loperamide hydrochloride 2 MG [Pepto Diarrhea Control],RxNorm,S,V,978022,Branded Drug Comp,Drug,0,0,0,0
+45677468,FALSE,TRUE,FALSE,Anti Diarrheal,SPL,N,V,6ed00cc5-1d1a-422e-8751-169eb7947cf9,SPL,Drug,0,0,0,0
+1565429,FALSE,TRUE,FALSE,sodium cation 30[hp_C]/mL ORAL PELLET [dry cough diarrhea],SPL,C,V,defe97c6-4faf-4259-9172-6cc025412a19,OTC Drug,Drug,0,0,0,0
+35509513,FALSE,TRUE,FALSE,ipomoea purga root 30[hp_C]/mL ORAL PELLET [colic diarrhea],SPL,C,V,0da55b6c-314a-49d8-a463-dea7c70c67aa,OTC Drug,Drug,0,0,0,0
+46297687,FALSE,TRUE,FALSE,"DIARRHEA RESPONSE - aloe socotrina, chamomilla, cinchona officinalis, colocynthis, colostrum, croton tiglium, cuprum arsenicosum, gelsemium sempervirens, ipecacuanha, nux vomica, phosphoricum acidum, podophyllum peltatum, veratrum album liquid",SPL,C,V,e1fb4ac9-801d-4cb1-acec-01da476ca7bc,OTC Drug,Drug,0,0,0,0
+198334,FALSE,TRUE,FALSE,Enteric campylobacteriosis,SNOMED,S,V,18081009,Clinical Finding,Condition,333324,21,333741,21
+36494184,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL LIQUID [kaopectate vanilla anti-diarrheal],NDC,N,V,535920400,9-digit NDC,Drug,0,0,0,0
+42653588,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,c9d25787-40d4-4e3e-814b-f44cbcafe742,OTC Drug,Drug,0,0,0,0
+36221828,FALSE,TRUE,FALSE,Anti-Diarrhea Pill,RxNorm,C,V,1166014,Branded Dose Group,Drug,0,0,0,0
+2515544,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [berkley and jensen anti diarrheal]",SPL,C,V,3570b028-b4aa-498f-8ed4-2c3a7f2bd974,OTC Drug,Drug,0,0,0,0
+45745806,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [handy solutions anti-diarrheal],SPL,C,V,9689ecd4-3d34-1fe9-e053-2a95a90a9c4e,OTC Drug,Drug,0,0,0,0
+4340791,FALSE,TRUE,FALSE,Human immunodeficiency virus enteropathy,SNOMED,S,V,235726002,Clinical Finding,Condition,0,0,0,0
+45149750,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [simply right anti diarrheal]",NDC,N,V,068196224,9-digit NDC,Drug,0,0,0,0
+35517044,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,d2aac746-aa65-4f37-8912-bc52cb219241,OTC Drug,Drug,0,0,0,0
+35507058,FALSE,TRUE,FALSE,"GOOD SENSE ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,2cda08a8-3f5e-430c-84a3-d29b97d647af,OTC Drug,Drug,0,0,0,0
+4159967,FALSE,TRUE,FALSE,Diarrhea-negative hemolytic uremic syndrome,SNOMED,S,V,373422007,Clinical Finding,Condition,0,0,0,0
+46363487,FALSE,TRUE,FALSE,"DIARRHEA RESPONSE - aloe socotrina, chamomilla, cinchona officinalis, colocynthis, colostrum, croton tiglium, cuprum arsenicosum, gelsemium sempervirens, ipecacuanha, nux vomica, phosphoricum acidum, podophyllum peltatum, veratrum album liquid",NDC,N,V,58066702207,11-digit NDC,Drug,0,0,0,0
+42885810,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,9cee17ca-bd11-3d40-e053-2995a90ac8fe,OTC Drug,Drug,0,0,0,0
+46288246,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",SPL,C,V,c0d1d114-7e8c-b7ed-f421-ba8d3c305a9e,OTC Drug,Drug,0,0,0,0
+36661847,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag/Positive control,LOINC,N,V,LP418400-0,LOINC Component,Observation,0,0,0,0
+37292181,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,e5e33dca-0cde-455f-a748-b6f67b85a82a,OTC Drug,Drug,0,0,0,0
+37412100,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,dc5cf758-b7bb-4b74-9984-6e7d166e5272,OTC Drug,Drug,0,0,0,0
+36170735,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,833b1071-65ef-4854-92ec-84e513aec5cc,OTC Drug,Drug,0,0,0,0
+40116420,FALSE,TRUE,FALSE,Loperamide 0.2 MG/ML [Anti-Diarrheal],RxNorm,N,D,571981,Branded Drug Comp,Drug,0,0,0,0
+46241523,FALSE,TRUE,FALSE,"HARRIS TEETER ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,72691958-4c71-4d31-8be4-5702870745b3,OTC Drug,Drug,0,0,0,0
+773277,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [careone diarrhea control]",SPL,C,V,0da6dfbb-2e1f-436a-9218-63076f1419fa,OTC Drug,Drug,0,0,0,0
+45337199,FALSE,TRUE,FALSE,Loperamide HCl ORAL 20050503 CAPSULE [Anti Diarrheal] ## FDA,NDC,N,V,050844753,9-digit NDC,Drug,0,0,0,0
+37037890,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus whole genome | Isolate | Microbiology,LOINC,C,V,LP379485-8,LOINC Hierarchy,Measurement,0,0,0,0
+37505703,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,91255e06-1aed-4353-9b1b-c217f3f03ebe,OTC Drug,Drug,0,0,0,0
+40796898,FALSE,TRUE,FALSE,Bovine diarrhea virus RNA | Bld-Ser-Plas,LOINC,N,D,LP46452-6,LOINC Hierarchy,Measurement,0,0,0,0
+44778853,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [good sense anti diarrheal]",SPL,C,V,67915401-9e4e-4a29-9e97-a69f7402237a,OTC Drug,Drug,0,0,0,0
+35507435,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,54c72fd0-d214-4d46-8afa-b9e9647ab734,OTC Drug,Drug,0,0,0,0
+44041321,FALSE,TRUE,FALSE,Loperamide 2 MG [Diarrhea Relief],RxNorm Extension,S,V,OMOP1035952,Branded Drug Comp,Drug,0,0,0,0
+46362719,FALSE,TRUE,FALSE,"DIARRHEA - aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, mag. carb., phosphorus, podoph. pelt., rheum, sulphur, tabacum,",NDC,N,V,55714151102,11-digit NDC,Drug,0,0,0,0
+45660964,FALSE,TRUE,FALSE,magnesium cation 30[hp_C]/mL ORAL PELLET [diarrhea dyspepsia],SPL,C,V,74b9dd35-fbbc-4fc2-b760-f14700abc19d,OTC Drug,Drug,0,0,0,0
+36153249,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,1d41bfed-a8f3-410c-afba-b5d88a2681bf,OTC Drug,Drug,0,0,0,0
+42660455,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,9c33b708-e21b-2c9d-e053-2a95a90ab458,OTC Drug,Drug,0,0,0,0
+44842818,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 CAPSULE [Anti Diarrheal],NDC,N,V,055301375,9-digit NDC,Drug,0,0,0,0
+45354683,FALSE,TRUE,FALSE,PSEUDOGNAPHALIUM OBTUSIFOLIUM 30 [hp_C]/mL PELLET [Vomiting Diarrhea],NDC,N,V,064117145,9-digit NDC,Drug,0,0,0,0
+37602630,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,146feb85-9590-4353-8d58-786406ed8860,OTC Drug,Drug,0,0,0,0
+4301078,FALSE,TRUE,FALSE,Diarrhea care,SNOMED,S,V,386260000,Procedure,Observation,0,0,0,0
+971850,FALSE,TRUE,FALSE,"loperamide hcl tablets, 2 mg 2mg/1 ORAL TABLET [anti-diarrheal]",SPL,C,V,92e28866-e1d4-4a20-bf59-8c52431d0bda,OTC Drug,Drug,0,0,0,0
+46290554,FALSE,TRUE,FALSE,COLIC DIARRHEA - ipomoea purga root pellet,SPL,C,V,a574c8eb-d4fa-43b8-aa66-d1e0d40658a5,OTC Drug,Drug,0,0,0,0
+46359288,FALSE,TRUE,FALSE,DYSMENORRHEA DIARRHEA - lilium lancifolium bulb pellet,NDC,N,V,64117084202,11-digit NDC,Drug,0,0,0,0
+37315208,FALSE,TRUE,FALSE,"DIARRHEA - nux vomica, podophyllum peltatum, veratrum album spray",NDC,N,V,72595000201,11-digit NDC,Drug,0,0,0,0
+44385473,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,568c1122-ac15-4229-9b87-f6db4a1f4105,OTC Drug,Drug,0,0,0,0
+36108527,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,960acd09-ec6f-4f64-8383-96f3931fc72f,OTC Drug,Drug,0,0,0,0
+42867250,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [health mart anti diarrheal],SPL,C,V,ebd21472-49a1-4634-9e8f-eea4b3aa2112,OTC Drug,Drug,0,0,0,0
+37062847,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus IgG | Serum | Microbiology,LOINC,C,V,LP379482-5,LOINC Hierarchy,Measurement,0,0,0,0
+37296846,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,ea09ab6e-e7d7-419d-a1d9-d81704d83190,OTC Drug,Drug,0,0,0,0
+1564287,FALSE,TRUE,FALSE,gamboge 30[hp_C]/mL ORAL PELLET [diarrhea colic],SPL,C,V,3e323803-3e2a-46b3-be29-bc2c354564f0,OTC Drug,Drug,0,0,0,0
+40776380,FALSE,TRUE,FALSE,Bovine diarrhea virus Ab,LOINC,N,V,LP37388-3,LOINC Component,Observation,0,0,0,0
+42506377,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,8f1ee652-a4f7-4e5b-874f-46aa641cd43f,OTC Drug,Drug,0,0,0,0
+44911522,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Loperamide HCl Anti-Diarrheal]",NDC,N,V,059726520,9-digit NDC,Drug,0,0,0,0
+40777197,FALSE,TRUE,FALSE,Bovine diarrhea virus Ab | Milk,LOINC,N,D,LP47314-7,LOINC Hierarchy,Measurement,0,0,0,0
+35511721,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,6e60ecda-f2d3-4678-b707-c31fa2e5bb74,OTC Drug,Drug,0,0,0,0
+45683924,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,984f0b01-cc7b-4ca1-9299-fd031cbc94bf,OTC Drug,Drug,0,0,0,0
+46289330,FALSE,TRUE,FALSE,"DIARRHEA - aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, mag. carb., phosphorus, podoph. pelt., rheum, sulphur, tabacum,",SPL,C,V,32543f0f-a40b-bf42-86e4-e20a67a621c7,OTC Drug,Drug,0,0,0,0
+42808034,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [up and up anti diarrheal],SPL,C,V,11433034-23e8-4a88-8c59-d3a133be3766,OTC Drug,Drug,0,0,0,0
+45672950,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [equate anti diarrheal]",SPL,C,V,a11b114e-8d44-40ac-950e-c5551966e646,OTC Drug,Drug,0,0,0,0
+45792069,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,85f54157-2661-46e8-8a83-9670dbe58d6d,OTC Drug,Drug,0,0,0,0
+37051678,FALSE,TRUE,FALSE,Bovine diarrhea virus 2 Ag | Tissue and Smears | Microbiology,LOINC,C,V,LP379209-2,LOINC Hierarchy,Measurement,0,0,0,0
+35107263,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,cc7b2769-044d-449a-84eb-c67158378dad,OTC Drug,Drug,0,0,0,0
+45632808,FALSE,TRUE,FALSE,loperamides 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,5eb97dee-4c71-451b-9405-2dd6c59c6e5f,OTC Drug,Drug,0,0,0,0
+44346514,FALSE,TRUE,FALSE,"LEADER ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,9079a59b-a158-4e77-a104-547959f7ba78,OTC Drug,Drug,0,0,0,0
+45701628,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,c9204557-33e9-4efb-90cd-902e2ff06d27,OTC Drug,Drug,0,0,0,0
+1008101,FALSE,TRUE,FALSE,"Have you had antacids, laxatives, or anti-diarrheals since eating or drinking anything but plain water",LOINC,N,V,LP124914-5,LOINC Component,Observation,0,0,0,0
+45663481,FALSE,TRUE,FALSE,mercuric cation 30[hp_C]/mL ORAL PELLET [sore throat diarrhea],SPL,C,V,eb8bf9e9-e665-45be-a048-f100a793554d,OTC Drug,Drug,0,0,0,0
+583373,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,b9828318-014b-464c-be91-68a1ee16adcf,OTC Drug,Drug,0,0,0,0
+44395243,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,91bc6400-f1fe-4af0-bc98-f2765b42b9e9,OTC Drug,Drug,0,0,0,0
+36168657,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,72bb2bbb-50dc-429f-a59f-67cbb36d22df,OTC Drug,Drug,0,0,0,0
+44996039,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [rexall anti diarrheal]",NDC,N,V,055910700,9-digit NDC,Drug,0,0,0,0
+35107225,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [topcare anti diarrheal anti gas]",SPL,C,V,ba2a0aa0-71d6-4c2a-906e-4ac90526a116,OTC Drug,Drug,0,0,0,0
+46360794,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",NDC,N,V,55714226102,11-digit NDC,Drug,0,0,0,0
+36466115,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,dd3a4b1b-ed11-4cbd-9a52-9c48567f6f17,OTC Drug,Drug,0,0,0,0
+36472165,FALSE,TRUE,FALSE,"aloe socotrina, bryonia alba, chamomilla q, colocynthis, ipecacuanha 6x, nux vomica, phosphoricum ac... 3[hp_X]/mL / 6[hp_X]/mL / 1[arb'U]/mL ORAL SOLUTION/ DROPS [combination remedy 14 - diarrhea]",SPL,C,V,5e48c421-c828-7852-e053-2a91aa0a2376,OTC Drug,Drug,0,0,0,0
+36209517,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus,LOINC,N,V,LP182479-8,LOINC Component,Observation,0,0,0,0
+45624231,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,d7904841-2352-42f4-8bc1-9426140ff45c,OTC Drug,Drug,0,0,0,0
+1582310,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,94cb6254-90bc-4436-8137-0240a735c919,OTC Drug,Drug,0,0,0,0
+42817146,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [careone diarrhea control]",SPL,C,V,7487795e-c61b-4a47-9b44-e6b362658e1f,OTC Drug,Drug,0,0,0,0
+42883700,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,9cd673e4-4b23-28d8-e053-2995a90ac314,OTC Drug,Drug,0,0,0,0
+970742,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,c03a9389-8b33-4ade-8ba0-8f303e161a08,OTC Drug,Drug,0,0,0,0
+43050904,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,c18e6f58-fab7-4116-a2b4-cee758c4be2a,OTC Drug,Drug,0,0,0,0
+36490831,FALSE,TRUE,FALSE,WHP BE GONE DIARRHEA TM - arsenic trioxide - cupric arsenite - veratrum album root pellet,NDC,N,V,68428074514,11-digit NDC,Drug,0,0,0,0
+36001014,FALSE,TRUE,FALSE,rheum officinale root 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,c73b1e9d-ba98-42f6-bbaf-ce95e4749acd,OTC Drug,Drug,0,0,0,0
+45699056,FALSE,TRUE,FALSE,"CARE ONE ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,52bcbc35-0b39-4f63-9583-038caced2976,OTC Drug,Drug,0,0,0,0
+36917925,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,d22055ff-2485-4aa4-995c-3907e61c9482,OTC Drug,Drug,0,0,0,0
+36171201,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [leader anti diarrheal]",SPL,C,V,8ee0fce4-a397-4ecb-8427-8426ae2cb036,OTC Drug,Drug,0,0,0,0
+46302297,FALSE,TRUE,FALSE,DIARRHEA - croton oil pellet,SPL,C,V,ca1cbae5-37d4-45eb-9c05-6812ffbe4d68,OTC Drug,Drug,0,0,0,0
+1766874,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,5aebd036-73d8-42b8-8137-8e62d59550c1,OTC Drug,Drug,0,0,0,0
+19072042,FALSE,TRUE,FALSE,Maalox Anti-Diarrheal,RxNorm,N,V,218153,Brand Name,Drug,0,0,0,0
+45746234,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,b1b81d98-19dd-475f-bf36-e275baee67c4,OTC Drug,Drug,0,0,0,0
+45651491,FALSE,TRUE,FALSE,"SMART SENSE ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,c12c6c3a-40bc-4d9d-810e-5a1fae0e088b,OTC Drug,Drug,0,0,0,0
+45801709,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [smart sense anti diarrheal]",SPL,C,V,e5a1da0e-9981-43d7-b23d-a3b9b6aad9d9,OTC Drug,Drug,0,0,0,0
+45619731,FALSE,TRUE,FALSE,loperamides 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,02ac8d85-40da-497e-b1d4-94c028d7fe7c,OTC Drug,Drug,0,0,0,0
+42808697,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,225c9370-a58d-4acc-967a-fe8b652ffc78,OTC Drug,Drug,0,0,0,0
+4036112,FALSE,TRUE,FALSE,Hyperalimentation formula for severe diarrhea,SNOMED,S,V,15362005,Clinical Finding,Observation,0,0,0,0
+45115492,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [dg health anti diarrheal]",NDC,N,V,055910224,9-digit NDC,Drug,0,0,0,0
+42820700,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [smart sense anti diarrheal],SPL,C,V,d13f069f-a78c-48c6-947e-d1e2499d1bf3,OTC Drug,Drug,0,0,0,0
+45631275,FALSE,TRUE,FALSE,"aloe socotrina, antimonium cruda, arsenicum album, belladonna, bryonia album, chamomilla, colocynthi... 3[hp_C]/1 / 4[hp_C]/1 ORAL TABLET [homeopathic diarrhea formula]",SPL,C,V,1958acdd-61d7-4040-849f-225303a70bc1,OTC Drug,Drug,0,0,0,0
+4219486,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - leptospira pomona bacterin,SNOMED,N,D,82325009,Pharma/Biol Product,Observation,0,0,0,0
+42808659,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [stomach relief anti diarrheal],SPL,C,V,21a6698d-3c80-4dfa-98d9-afd5546822b4,OTC Drug,Drug,0,0,0,0
+36307444,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus whole genome | Isolate,LOINC,N,D,LP262583-0,LOINC Hierarchy,Measurement,0,0,0,0
+19077049,FALSE,TRUE,FALSE,Pepto Diarrhea Control,RxNorm,N,V,219157,Brand Name,Drug,0,0,0,0
+4340935,FALSE,TRUE,FALSE,Hollow visceral neuropathy,SNOMED,S,V,235832002,Clinical Finding,Condition,0,0,0,0
+45799887,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL CAPSULE [anti diarrheal],SPL,C,V,d38c08ac-730f-4426-b830-4c94e0efc154,OTC Drug,Drug,0,0,0,0
+44911678,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,063941520,9-digit NDC,Drug,0,0,0,0
+46307625,FALSE,TRUE,FALSE,"DIARRHEA COMPLEX - aloe socotrina, arsenicum album, bryonia, collinsonia canadensis, colocynthis, croton tiglium, cuprum aceticum, echinacea angustifolia, mercurius sub. corros, rheum officinale, sulfur, veratrum album liquid",SPL,C,V,42fe5052-89c4-4966-9b3c-abaa013ac880,OTC Drug,Drug,0,0,0,0
+45268878,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [Equate anti diarrheal]",NDC,N,V,049035224,9-digit NDC,Drug,0,0,0,0
+36000374,FALSE,TRUE,FALSE,ceanothus americanus leaf 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,3f557a74-1366-477f-92df-46eafa97f1a2,OTC Drug,Drug,0,0,0,0
+36002893,FALSE,TRUE,FALSE,QC ANTI DIARRHEAL VANILLA REGULAR FLAVOR - bismuth subsalicylate suspension,SPL,C,V,02737763-eb98-401d-942c-186c401a2d31,OTC Drug,Drug,0,0,0,0
+42515513,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [shoprite anti diarrheal]",SPL,C,V,95e62708-5239-4769-bf86-bf8c129a7f62,OTC Drug,Drug,0,0,0,0
+46358918,FALSE,TRUE,FALSE,DIARRHEA VOMITING - veratrum album root pellet,NDC,N,V,64117099501,11-digit NDC,Drug,0,0,0,0
+44571345,FALSE,TRUE,FALSE,ATTAPULGITE 630 MG TAB [FOWLERS DIARRHEA],DPD,N,D,887196,Branded Drug,Drug,0,0,0,0
+40788986,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | Tissue and Smears,LOINC,N,D,LP132297-5,LOINC Hierarchy,Measurement,0,0,0,0
+46353845,FALSE,TRUE,FALSE,"DIARRHEA - aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, mag. carb., phosphorus, podoph. pelt., rheum, sulphur, tabacum,",NDC,N,V,55714171102,11-digit NDC,Drug,0,0,0,0
+37067822,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | Nose | Microbiology,LOINC,C,V,LP379214-2,LOINC Hierarchy,Measurement,0,0,0,0
+46326526,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,8092a273-cb56-4ab7-9f53-b9146523318f,OTC Drug,Drug,0,0,0,0
+45895911,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [equate anti diarrheal]",SPL,C,V,7c539531-a337-43b9-b1e3-c0524e457a6d,OTC Drug,Drug,0,0,0,0
+46355170,FALSE,TRUE,FALSE,DIARRHEA VOMITING - veratrum album root pellet,NDC,N,V,64117099502,11-digit NDC,Drug,0,0,0,0
+36984441,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,73e4454f-4e83-4f47-b0d6-7d179e71e733,OTC Drug,Drug,0,0,0,0
+35302629,FALSE,TRUE,FALSE,"ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,9c7db942-c8cb-493a-a96f-452b8dfebfc6,OTC Drug,Drug,0,0,0,0
+1565581,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,fd1c3b4f-545c-4603-8ae2-f9bcc4d867fd,OTC Drug,Drug,0,0,0,0
+42807677,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,0721acaa-eb8a-48fb-a77b-c618ecffdec7,OTC Drug,Drug,0,0,0,0
+42516483,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,fadf2879-5f64-40ab-be3d-04ff58b89fdd,OTC Drug,Drug,0,0,0,0
+35529711,FALSE,TRUE,FALSE,"ANTI DIARRHEAL AND ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,065699b5-217e-432f-a253-cea2d3f62233,OTC Drug,Drug,0,0,0,0
+45778144,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [loperamide hcl anti-diarrheal]",SPL,C,V,04e150ab-3fbc-41d8-9b1a-192277724723,OTC Drug,Drug,0,0,0,0
+1764973,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,c5a33717-a276-48d3-84ea-33e44b93e677,OTC Drug,Drug,0,0,0,0
+40790427,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | XXX,LOINC,N,D,LP47317-0,LOINC Hierarchy,Measurement,0,0,0,0
+4142055,FALSE,TRUE,FALSE,Pseudodiarrhea,SNOMED,S,V,34231006,Clinical Finding,Condition,0,0,0,0
+46348825,FALSE,TRUE,FALSE,SORE THROAT DIARRHEA - mercuric cation pellet,NDC,N,V,64117016402,11-digit NDC,Drug,0,0,0,0
+45098707,FALSE,TRUE,FALSE,CEANOTHUS AMERICANUS LEAF 30 [hp_C]/mL PELLET [Diarrhea],NDC,N,V,064117129,9-digit NDC,Drug,0,0,0,0
+45687153,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [up and up anti diarrheal],SPL,C,V,2de5f58b-89a2-4a6e-9193-31e69154f1e8,OTC Drug,Drug,0,0,0,0
+44368038,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,1f48b026-f49a-471f-a17c-acc5f6a87f81,OTC Drug,Drug,0,0,0,0
+45683765,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,9172603c-3c9c-4ad4-8db8-46b26dbba781,OTC Drug,Drug,0,0,0,0
+2515609,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,42f35d4c-efa6-4f3a-b4fa-5b7880a91ede,OTC Drug,Drug,0,0,0,0
+44362752,FALSE,TRUE,FALSE,HEALTHY ACCENTS ANTI DIARRHEAL - loperamide hcl suspension,SPL,C,V,7e7b73bb-37ef-435b-97b3-7bad2ee161d0,OTC Drug,Drug,0,0,0,0
+44518758,FALSE,TRUE,FALSE,ANTI-DIARRHEAL,DPD,N,D,OMOP98767,Brand Name,Drug,0,0,0,0
+45671763,FALSE,TRUE,FALSE,rx act anti diarrheal,SPL,N,V,6b0d7f9c-bd4c-4310-b7b1-b44aab5aa747,SPL,Drug,0,0,0,0
+40246956,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [leader anti diarrheal]",SPL,C,V,bf5d37b2-5af1-45a8-834e-7903784fb314,OTC Drug,Drug,0,0,0,0
+36108868,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [harris teeter anti diarrheal]",SPL,C,V,ecb35a56-3338-45eb-af1b-03c8f59b6cf8,OTC Drug,Drug,0,0,0,0
+42886457,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [sunmark anti diarrheal],SPL,C,V,97bf2d1d-e4dd-4ae9-a328-711c184cd2c0,OTC Drug,Drug,0,0,0,0
+773386,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,1d0686d6-27ae-42fd-8e25-7e86275d94da,OTC Drug,Drug,0,0,0,0
+46362332,FALSE,TRUE,FALSE,DIARRHEA - arsenic trioxide - cupric arsenite - veratrum album root pellet,NDC,N,V,68428000214,11-digit NDC,Drug,0,0,0,0
+1764244,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,04da69c0-4b4c-4d37-a2d5-c3dec6a15895,OTC Drug,Drug,0,0,0,0
+45687633,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,4339d964-1997-4c0e-973e-aa69b123b33d,OTC Drug,Drug,0,0,0,0
+1032218,FALSE,TRUE,FALSE,Diarrhea,LOINC,N,V,LP74729-2,LOINC Component,Observation,0,0,0,0
+4098647,FALSE,TRUE,FALSE,Bovine virus diarrhoea vaccine - leptospira pomona bacterin,SNOMED,N,D,25098006,Pharma/Biol Product,Observation,0,0,0,0
+36152465,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,50814751-8bee-4768-bf6c-e9da3400090b,OTC Drug,Drug,0,0,0,0
+45234165,FALSE,TRUE,FALSE,Loperamide Hydrochloride 2 mg/1 TABLET [Up and Up anti diarrheal],NDC,N,V,011673224,9-digit NDC,Drug,0,0,0,0
+45063914,FALSE,TRUE,FALSE,"Loperamide HCl 2 mg/1 TABLET, FILM COATED [care one anti diarrheal]",NDC,N,V,041520960,9-digit NDC,Drug,0,0,0,0
+42809442,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [rexall anti diarrheal]",SPL,C,V,34a80dcb-f444-4f97-8cbc-d0dd136a3c2f,OTC Drug,Drug,0,0,0,0
+45696963,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,f16e07f3-0efb-4451-adbb-e427f9abc7ae,OTC Drug,Drug,0,0,0,0
+36172312,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,ab055cbb-885d-40fc-83c8-b6a53b379684,OTC Drug,Drug,0,0,0,0
+46349454,FALSE,TRUE,FALSE,COLIC DIARRHEA - ipomoea purga root pellet,NDC,N,V,64117024201,11-digit NDC,Drug,0,0,0,0
+35303208,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [anti diarrheal anti gas]",SPL,C,V,5790333e-1b49-4a72-a57b-7d29ede2c0ed,OTC Drug,Drug,0,0,0,0
+45677189,FALSE,TRUE,FALSE,"LEADER ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,62130b84-acaf-47a3-8125-c8392cd9265b,OTC Drug,Drug,0,0,0,0
+36499213,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,f0216036-7cdf-40d3-b2e5-33aca919d769,OTC Drug,Drug,0,0,0,0
+46311046,FALSE,TRUE,FALSE,DYSMENORRHEA DIARRHEA - lilium lancifolium bulb pellet,SPL,C,V,d82c805c-2361-4265-8103-5b845e618bed,OTC Drug,Drug,0,0,0,0
+46354261,FALSE,TRUE,FALSE,DIARRHEA - quercus robur nut pellet,NDC,N,V,64117017202,11-digit NDC,Drug,0,0,0,0
+45370832,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,041520520,9-digit NDC,Drug,0,0,0,0
+44337455,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hcl capsule, liquid filled",SPL,C,V,eecad263-4014-46e2-abde-a78fff025859,OTC Drug,Drug,0,0,0,0
+45784359,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,3c9e9499-d749-4a61-bb2b-b30c54b899b9,OTC Drug,Drug,0,0,0,0
+45627641,FALSE,TRUE,FALSE,gold trichloride 30[hp_C]/mL ORAL PELLET [slow digestion diarrhea],SPL,C,V,7465805c-dac0-48db-81b4-605905424276,OTC Drug,Drug,0,0,0,0
+1751592,FALSE,TRUE,FALSE,PEPTO-BISMOL DIARRHEA - bismuth subsalicylate tablet,SPL,C,V,84ef11ab-2707-4d42-e053-2991aa0a96bd,OTC Drug,Drug,0,0,0,0
+37290864,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,0d366d92-cec7-4c46-936b-2742475ea032,OTC Drug,Drug,0,0,0,0
+1186764,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,62980841-62a3-4232-ab9f-fff49f3acf80,OTC Drug,Drug,0,0,0,0
+1582201,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,802fda2e-f66c-4435-b571-78e65efc8c3d,OTC Drug,Drug,0,0,0,0
+37410746,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,4a3a1c96-4b0f-45ea-b2cc-1e60e707e077,OTC Drug,Drug,0,0,0,0
+37037137,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus Ab/Positive control | Serum | Microbiology,LOINC,C,V,LP379493-2,LOINC Hierarchy,Measurement,0,0,0,0
+45303577,FALSE,TRUE,FALSE,IPOMOEA PURGA ROOT 30 [hp_C]/mL PELLET [COLIC DIARRHEA],NDC,N,V,064117242,9-digit NDC,Drug,0,0,0,0
+45029937,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [anti diarrheal]",NDC,N,V,041250224,9-digit NDC,Drug,0,0,0,0
+46340262,FALSE,TRUE,FALSE,SORE THROAT DIARRHEA - mercuric cation pellet,NDC,N,V,64117016401,11-digit NDC,Drug,0,0,0,0
+45784366,FALSE,TRUE,FALSE,GOOD SENSE ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,3cb25c6f-fee6-461f-8f8f-56d9123faec3,OTC Drug,Drug,0,0,0,0
+45629114,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl tablet,SPL,C,V,b480916e-6383-468d-9e3e-499efea92522,OTC Drug,Drug,0,0,0,0
+35509041,FALSE,TRUE,FALSE,"ANTI DIARRHEAL PLUS ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,e2c9a752-618a-4e34-89a5-671aab4013ac,OTC Drug,Drug,0,0,0,0
+44612200,FALSE,TRUE,FALSE,ATTAPULGITE SUSP [FOWLERS DIARRHEA],DPD,N,D,1901508,Branded Drug Form,Drug,0,0,0,0
+45779519,FALSE,TRUE,FALSE,"aloe socotrina, chamomilla, cinchona officinalis, colocynthis, colostrum, croton tiglium, cuprum ars... 10[hp_X]/59.2mL ORAL LIQUID [diarrhea response]",SPL,C,V,0ddfb6a6-e5f0-472a-a4a1-789fbb71ea36,OTC Drug,Drug,0,0,0,0
+40246671,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,939b804b-54b8-4cd5-aa21-737ac2c63294,OTC Drug,Drug,0,0,0,0
+42811129,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,5e1fd033-3c8a-430a-be91-b7d0e807b5b8,OTC Drug,Drug,0,0,0,0
+45792818,FALSE,TRUE,FALSE,"cinchona officinalis, bryonia, chamomilla, colocynthis, ipecacuanha, belladonna 8[hp_X]/1 ORAL TABLET, CHEWABLE [diarrhea]",SPL,C,V,8d2c838d-23ec-4429-8311-f4d71ea8f9d3,OTC Drug,Drug,0,0,0,0
+45097773,FALSE,TRUE,FALSE,Loperamide HCl 1 mg/5mL SOLUTION [Good Neighbor Pharmacy Anti Diarrheal],NDC,N,V,024385377,9-digit NDC,Drug,0,0,0,0
+36204654,FALSE,TRUE,FALSE,Bovine diarrhea virus 1 | Bld-Ser-Plas,LOINC,N,D,LP256646-3,LOINC Hierarchy,Measurement,0,0,0,0
+3054887,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - haemophilus somnus bacterin,Nebraska Lexicon,N,D,57161006,Pharma/Biol Product,Drug,0,0,0,0
+45701145,FALSE,TRUE,FALSE,RX ACT ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,b2168682-c019-4b7f-83a9-42e995b28ded,OTC Drug,Drug,0,0,0,0
+35508344,FALSE,TRUE,FALSE,"TOPCARE ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,7ada1c47-8d4f-4742-9b6d-aa2766119532,OTC Drug,Drug,0,0,0,0
+42507055,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [7 select anti diarrheal],SPL,C,V,90d49ea7-83c7-4faf-8a24-548cad1e8159,OTC Drug,Drug,0,0,0,0
+44402943,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,d2e0d4bc-267e-42db-bdb0-ed4909edf36f,OTC Drug,Drug,0,0,0,0
+37600051,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - bismuth subsalicylate tablet,SPL,C,V,079901b3-393b-44f0-85c9-2d8911f2a42a,OTC Drug,Drug,0,0,0,0
+45269301,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 TABLET [Anti-Diarrheal],NDC,N,V,057896381,9-digit NDC,Drug,0,0,0,0
+42507573,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,a3d76812-4130-4578-a272-e165f67d9238,OTC Drug,Drug,0,0,0,0
+45235448,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [berkley and jensen anti diarrheal]",NDC,N,V,068391224,9-digit NDC,Drug,0,0,0,0
+2517503,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,bc4cad96-03cd-4e5e-b82f-f8a579d911a8,OTC Drug,Drug,0,0,0,0
+46336383,FALSE,TRUE,FALSE,BURNING DIARRHEA - mercuric sulfate pellet,NDC,N,V,64117026301,11-digit NDC,Drug,0,0,0,0
+46328213,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,c69509fd-b684-403c-a04e-115f03e273aa,OTC Drug,Drug,0,0,0,0
+37410535,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,70a7f827-f5be-454f-99bf-a7fd1037694e,OTC Drug,Drug,0,0,0,0
+45217262,FALSE,TRUE,FALSE,Loperamide HCl 1 mg/5mL SOLUTION [rx act anti diarrheal],NDC,N,V,037808377,9-digit NDC,Drug,0,0,0,0
+44373624,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [dg health anti diarrheal]",SPL,C,V,383687c2-8f3f-4c2f-b4d8-91908f8e45be,OTC Drug,Drug,0,0,0,0
+46358510,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",NDC,N,V,55714226000,11-digit NDC,Drug,0,0,0,0
+46238832,FALSE,TRUE,FALSE,"aloe, citrullus colocynthis, croton tiglium, lycopodium clavatum, magnesium sulfate heptahydrate, ph... 5[hp_X]/1 / 6[hp_X]/1 ORAL TABLET, ORALLY DISINTEGRATING [diarrhea relief]",SPL,C,V,13f6865e-8410-4c7b-e054-00144ff88e88,OTC Drug,Drug,0,0,0,0
+45791866,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [circle k anti-diarrheal],SPL,C,V,83f542a5-78c0-4048-8b62-5477dd54e28e,OTC Drug,Drug,0,0,0,0
+44342958,FALSE,TRUE,FALSE,SMART SENSE ANTI DIARRHEAL - loperamide hcl suspension,SPL,C,V,29e99474-f650-4b31-a567-cacc3c147570,OTC Drug,Drug,0,0,0,0
+36485214,FALSE,TRUE,FALSE,"DIARRHEA AND GAS - thuja occidentalis, sulphur, argentum nitricum, colocynthis, mercurius corrosivus, arsenicum album, nux vomica, podophyllum peltatum, veratrum album liquid",NDC,N,D,86035000801,11-digit NDC,Drug,0,0,0,0
+46318437,FALSE,TRUE,FALSE,"DIARRHEA RELIEF - aloe socotrina, chamomilla, cinchona officinalis, colocynthis, croton tigium, cuprum arsenicosum, gelsemium sempervirens, ipecacuanha, nux vomica, phosphoricum acidum, podophyllum peltatum, veratrum album liquid",SPL,C,V,6d47455d-b2cc-4499-a740-10e97b0a23cb,OTC Drug,Drug,0,0,0,0
+775390,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,bf051525-08b9-4a2e-b4df-5e87129f03a4,OTC Drug,Drug,0,0,0,0
+42866646,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,9ca49da1-4a33-4b38-838f-f297ebc45eb4,OTC Drug,Drug,0,0,0,0
+1526766,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [equaline anti diarrheal plus anti gas]",SPL,C,V,0e2037a0-3863-4c1f-952e-c65390453c8a,OTC Drug,Drug,0,0,0,0
+1752027,FALSE,TRUE,FALSE,mercuric cation 30[hp_C]/mL ORAL PELLET [sore throat diarrhea],SPL,C,V,7f47cb6a-9382-49cc-ac18-4617af0279c6,OTC Drug,Drug,0,0,0,0
+40797004,FALSE,TRUE,FALSE,Bovine diarrhea virus RNA | XXX,LOINC,N,D,LP47318-8,LOINC Hierarchy,Measurement,0,0,0,0
+4036677,FALSE,TRUE,FALSE,Bovine diarrhea virus RNA assay,SNOMED,N,D,118025002,Procedure,Procedure,0,0,0,0
+40699226,FALSE,TRUE,FALSE,Diarrhea Relief,dm+d,N,V,OMOP4700540,Brand Name,Drug,0,0,0,0
+36156955,FALSE,TRUE,FALSE,HEALTH MART ANTI DIARRHEAL - loperamide hcl suspension,SPL,C,V,8171406e-3970-42bd-8857-fd6642173341,OTC Drug,Drug,0,0,0,0
+45656447,FALSE,TRUE,FALSE,KAOPECTATE REGULAR STRENGTH PEPPERMINT FLAVOR ANTI DIARRHEAL - bismuth subsalicylate liquid,SPL,C,V,9e64b4bf-94f1-4d80-a635-c445b1494a0a,OTC Drug,Drug,0,0,0,0
+45669822,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,120f0d03-59f7-4d26-acad-1e3a91eaed74,OTC Drug,Drug,0,0,0,0
+45115493,FALSE,TRUE,FALSE,Loperamide HCl 1 mg/5mL SOLUTION [rexall anti diarrheal],NDC,N,V,055910377,9-digit NDC,Drug,0,0,0,0
+37056408,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | XXX | Microbiology,LOINC,C,V,LP379218-3,LOINC Hierarchy,Measurement,0,0,0,0
+4320786,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 - respiratory syncytial virus vaccine - campylobacter fetus leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,SNOMED,N,D,70051003,Pharma/Biol Product,Observation,0,0,0,0
+35511615,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,6a5ffd1a-2daa-470a-a26f-1ce7b17ff7ab,OTC Drug,Drug,0,0,0,0
+44624900,FALSE,TRUE,FALSE,LOPERAMIDE HYDROCHLORIDE 2 MG [ANTI-DIARRHEAL],DPD,N,D,OMOP189485,Branded Drug Comp,Drug,0,0,0,0
+1527045,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,61ec15ff-c84a-4759-9076-1d0ad82410a6,OTC Drug,Drug,0,0,0,0
+42645369,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [anti diarrheal anti gas]",SPL,C,V,1b383101-2017-49bf-b093-fdff535b5bfd,OTC Drug,Drug,0,0,0,0
+37296782,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,c9fd4336-1a6f-4d1e-a570-f47f3a9154ac,OTC Drug,Drug,0,0,0,0
+42643238,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,9cda8574-f0a8-47df-8522-f9e7220c4a0d,OTC Drug,Drug,0,0,0,0
+40772107,FALSE,TRUE,FALSE,"Bothered by constipation, loose stools, or diarrhea in last 4 weeks [Reported.PHQ]",LOINC,S,V,69681-5,Survey,Observation,0,0,0,0
+45767109,FALSE,TRUE,FALSE,At risk of diarrhea,SNOMED,S,V,704419000,Clinical Finding,Condition,0,0,0,0
+44365182,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,07610eca-5576-45b1-b6d6-fd3e51bf6352,OTC Drug,Drug,0,0,0,0
+44404516,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,e0b57c34-a330-4b4b-8cf8-8fc55bd49e1c,OTC Drug,Drug,0,0,0,0
+44945461,FALSE,TRUE,FALSE,"Loperamide HCl 2 mg/1 TABLET, FILM COATED [anti diarrheal]",NDC,N,V,059779960,9-digit NDC,Drug,0,0,0,0
+1392618,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [sunmark anti diarrheal]",SPL,C,V,4c3d3d69-69da-4c4f-8332-9d87bc9e1e6c,OTC Drug,Drug,0,0,0,0
+1010326,FALSE,TRUE,FALSE,"Bothered by constipation, loose stools, or diarrhea in last 4 weeks",LOINC,N,V,LP140499-7,LOINC Component,Observation,0,0,0,0
+44962325,FALSE,TRUE,FALSE,NUTMEG 30 [hp_C]/mL PELLET [Indigestion Diarrhea],NDC,N,V,064117168,9-digit NDC,Drug,0,0,0,0
+36697892,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [core values anti diarrheal]",SPL,C,V,a053e552-85c8-46a3-bd65-b51f24eccc4e,OTC Drug,Drug,0,0,0,0
+4083116,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhoea - parainfluenza 3 - respiratory syncytial virus vaccine - pasteurella haemolytica bacterin,SNOMED,N,D,24148003,Pharma/Biol Product,Observation,0,0,0,0
+37043167,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus neutralizing antibody,LOINC,N,V,LP249854-3,LOINC Component,Observation,0,0,0,0
+36210050,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus gene sequence and phylogenetic analysis | XXX,LOINC,N,D,LP260658-2,LOINC Hierarchy,Measurement,0,0,0,0
+44860046,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [healthy accents anti diarrheal]",NDC,N,V,055316224,9-digit NDC,Drug,0,0,0,0
+37412075,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,d4081178-1be7-4bcd-bc9b-6a1c334ef22a,OTC Drug,Drug,0,0,0,0
+36152548,FALSE,TRUE,FALSE,"DIARRHEA CP - aethusa cynapium, arsenic trioxide, oyster shell calicum carbonate, crude, matricaria chamomilla, citrullus colocynthis fruit pulp, iron, lycopodium clavatum spore, mercurius solobilis, phosphorus, podophyllum, anemone pulsatilla, delphinium",SPL,C,V,06f51c41-1e76-4201-937a-cbaaf6a477af,OTC Drug,Drug,0,0,0,0
+40000760,FALSE,TRUE,FALSE,Loperamide Oral Tablet [Anti-Diarrheal],RxNorm,N,D,368407,Branded Drug Form,Drug,0,0,0,0
+35502927,FALSE,TRUE,FALSE,"GOOD SENSE ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,fcfd0b64-6876-4e6f-8a7b-ca1da9e03f00,OTC Drug,Drug,0,0,0,0
+45165858,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 CAPSULE [Anti-Diarrheal],NDC,N,V,021130375,9-digit NDC,Drug,0,0,0,0
+36513392,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,fecfbc74-028e-4f2e-bd73-01ef03e18e63,OTC Drug,Drug,0,0,0,0
+42645360,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [dg health anti diarrheal anti gas]",SPL,C,V,14a75e26-632e-4434-ad3f-108ba460fdaa,OTC Drug,Drug,0,0,0,0
+45252345,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 CAPSULE [Anti-Diarrheal],NDC,N,V,064092105,9-digit NDC,Drug,0,0,0,0
+1027741,FALSE,TRUE,FALSE,Bovine virus diarrhea virus Ag,LOINC,N,D,LP37410-5,LOINC Component,Observation,0,0,0,0
+44528088,FALSE,TRUE,FALSE,FOWLERS DIARRHEA,DPD,N,D,OMOP107973,Brand Name,Drug,0,0,0,0
+44404238,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,de49316a-cd3e-4a21-9c7b-8ad17544c78b,OTC Drug,Drug,0,0,0,0
+44153247,FALSE,TRUE,FALSE,Diarrhea Relief,DPD,N,V,DPD121056,Brand Name,Drug,0,0,0,0
+36164782,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [kirkland signature anti diarrheal]",SPL,C,V,6af778fc-df1d-4979-b7bf-d34fb2e04a96,OTC Drug,Drug,0,0,0,0
+36168852,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [leader anti-diarrheal]",SPL,C,V,73295afc-d46b-46dc-bbf7-4c01d9ac0066,OTC Drug,Drug,0,0,0,0
+1008102,FALSE,TRUE,FALSE,"When did you have antacids, laxatives, or anti-diarrheals",LOINC,N,V,LP124915-2,LOINC Component,Observation,0,0,0,0
+44015981,FALSE,TRUE,FALSE,Diarrhea Relief,RxNorm Extension,N,V,OMOP1010612,Brand Name,Drug,0,0,0,0
+45782079,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,26b52d44-069e-d3df-3cc9-e598b8ea2f8a,OTC Drug,Drug,0,0,0,0
+45630056,FALSE,TRUE,FALSE,"SHOPRITE ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,df259d4a-9f49-457b-a0ab-ed30506f3a2f,OTC Drug,Drug,0,0,0,0
+37602673,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [good sense anti diarrheal anti gas]",SPL,C,V,2969e412-6861-4d8e-bc16-b48bebf9ecec,OTC Drug,Drug,0,0,0,0
+36173105,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,bdf8c926-16fd-4d6e-be81-04925bfe9e15,OTC Drug,Drug,0,0,0,0
+45268602,FALSE,TRUE,FALSE,"Loperamide HCl 2 mg/1 TABLET, FILM COATED [anti diarrheal]",NDC,N,V,030142960,9-digit NDC,Drug,0,0,0,0
+36499075,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,adb99ab5-5b9c-43f4-97e9-b7b087fbf2a9,OTC Drug,Drug,0,0,0,0
+36107361,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,0dd27e99-9b26-49ff-b2aa-0d2b97c2d887,OTC Drug,Drug,0,0,0,0
+4094755,FALSE,TRUE,FALSE,Bovine mucosal disease virus,SNOMED,S,V,25018007,Organism,Observation,0,0,0,0
+4263946,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea vaccine - haemophilus somnus pasteurella haemolytica - multocida bacterin,SNOMED,N,D,36190000,Pharma/Biol Product,Observation,0,0,0,0
+42662502,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [careone diarrhea control],SPL,C,V,3cbd17c0-6e94-4d97-aafa-4da2ca0ea4ec,OTC Drug,Drug,0,0,0,0
+42810905,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [good neighbor pharmacy anti diarrheal]",SPL,C,V,59d48384-db8d-4c92-9f30-0c44ef70db0c,OTC Drug,Drug,0,0,0,0
+45682835,FALSE,TRUE,FALSE,ipomoea purga root 30[hp_C]/mL ORAL PELLET [colic diarrhea],SPL,C,V,65a07785-7fe7-41fc-9fac-75debe7cf7e1,OTC Drug,Drug,0,0,0,0
+45638328,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [stomach relief anti diarrheal],SPL,C,V,5fb1e4e8-81a7-4644-ba6e-ab3197e045b3,OTC Drug,Drug,0,0,0,0
+45640824,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,d4ad9b12-1cd0-47dc-9532-f37ff61c0cd9,OTC Drug,Drug,0,0,0,0
+1565085,FALSE,TRUE,FALSE,veratrum album root 30[hp_C]/mL ORAL PELLET [diarrhea vomiting],SPL,C,V,8b806d2e-190d-4947-af04-891e05385950,OTC Drug,Drug,0,0,0,0
+1016500,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus IgA,LOINC,N,V,LP248605-0,LOINC Component,Observation,0,0,0,0
+45686278,FALSE,TRUE,FALSE,rheum officinale root 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,0424b91c-e4ac-442d-b48a-9ed563c7fa07,OTC Drug,Drug,0,0,0,0
+46328652,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,d911a273-1d50-411b-8f31-a49600641a97,OTC Drug,Drug,0,0,0,0
+45200293,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,049035520,9-digit NDC,Drug,0,0,0,0
+972123,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [topcare anti diarrheal anti gas]",SPL,C,V,e81cdcea-2672-4a02-afed-db828211ef8b,OTC Drug,Drug,0,0,0,0
+44395386,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,92ed3c1e-4659-468d-9daf-3da0213eeb0a,OTC Drug,Drug,0,0,0,0
+45650510,FALSE,TRUE,FALSE,REXALL ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,93c7ccf0-ad2c-45b1-b7b6-07d58712970c,OTC Drug,Drug,0,0,0,0
+42821523,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,e6c55916-a52d-4d53-af2e-a1ab36aedb7a,OTC Drug,Drug,0,0,0,0
+46240326,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [berkley and jensen anti diarrheal]",SPL,C,V,40620db9-b37f-4a8e-b8d7-d50ca6627230,OTC Drug,Drug,0,0,0,0
+37602679,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [anti diarrheal plus anti gas]",SPL,C,V,2bab764d-c750-4e1f-a6ad-e31dbee4d9e4,OTC Drug,Drug,0,0,0,0
+44347463,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl tablet,SPL,C,V,4c08b812-378d-4707-8603-0c0776958dff,OTC Drug,Drug,0,0,0,0
+591028,FALSE,TRUE,FALSE,"ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,c2fdc112-9244-4a3f-ba12-00b418f344bd,OTC Drug,Drug,0,0,0,0
+35107303,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,dc6742a3-2510-41fc-8717-1deeb40ea30d,OTC Drug,Drug,0,0,0,0
+42645520,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [family wellness anti diarrheal plus anti gas]",SPL,C,V,693fa4ab-6806-4108-b961-f033f2710dab,OTC Drug,Drug,0,0,0,0
+37602737,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [equate anti diarrheal anti gas]",SPL,C,V,4f3e811b-ba57-4514-b069-5c84728a491b,OTC Drug,Drug,0,0,0,0
+45081479,FALSE,TRUE,FALSE,"Loperamide HCl 2 mg/1 TABLET, FILM COATED [family wellness anti diarrheal]",NDC,N,V,055319224,9-digit NDC,Drug,0,0,0,0
+46244399,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,e8670e16-5413-4136-bab9-e30c1b758717,OTC Drug,Drug,0,0,0,0
+45617592,FALSE,TRUE,FALSE,"Immunodysregulation, Polyendocrinopathy, and Enteropathy, X-Linked",MeSH,N,D,C562780,Suppl Concept,Condition,0,0,0,0
+40793590,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | Nose,LOINC,N,D,LP46453-4,LOINC Hierarchy,Measurement,0,0,0,0
+1722969,FALSE,TRUE,FALSE,nutmeg 30[hp_C]/mL ORAL PELLET [indigestion diarrhea],SPL,C,V,df4148aa-a8db-4702-bcd9-7fca1995aa52,OTC Drug,Drug,0,0,0,0
+36475206,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [lil drug store anti-diarrheal soft gelatin]",SPL,C,V,aa9e0196-7f91-4b68-b5f0-0afb33bc6865,OTC Drug,Drug,0,0,0,0
+774136,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [harmon face values anti diarrheal]",SPL,C,V,820e1386-ac98-45d2-b6d0-af7beaf454cd,OTC Drug,Drug,0,0,0,0
+46356071,FALSE,TRUE,FALSE,"DIARRHEA REAL RELIEF - cinchona officinalis, bryonia, chamomilla, colocynthis, ipecacuanha, belladonna tablet, chewable",NDC,N,V,60512601803,11-digit NDC,Drug,0,0,0,0
+37041342,FALSE,TRUE,FALSE,PEDV prototype strain S gene,LOINC,N,V,LP247769-5,LOINC Component,Observation,0,0,0,0
+45337674,FALSE,TRUE,FALSE,CROTON OIL 30 [hp_C]/mL PELLET [Diarrhea],NDC,N,V,064117138,9-digit NDC,Drug,0,0,0,0
+42886135,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,2eeead0a-edf6-4352-b26a-eb0a2f80b595,OTC Drug,Drug,0,0,0,0
+2516179,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,99873f81-f6aa-5ad4-e053-2a95a90ab176,OTC Drug,Drug,0,0,0,0
+45788281,FALSE,TRUE,FALSE,"pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cin... 3[hp_X]/mL / 15[hp_X]/mL / 30[hp_X]/mL ORAL LIQUID [diarrhea]",SPL,C,V,61febc3a-7ba9-6691-2b5b-89f1f8d10c15,OTC Drug,Drug,0,0,0,0
+42810725,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,559a6af4-2dba-46b1-b90a-5eeeb6ba191b,OTC Drug,Drug,0,0,0,0
+45790874,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,7a3ad12b-0c8e-4877-a737-d17e970941bc,OTC Drug,Drug,0,0,0,0
+37507913,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,e6496e38-7959-470c-9a9e-babd4382a64a,OTC Drug,Drug,0,0,0,0
+45895852,FALSE,TRUE,FALSE,"aloe, activated charcoal, citrullus colocynthis fruit pulp, cupric acetate, ferrum phosphoricum, pod... 4[hp_X]/1 / 5[hp_X]/1 / 6[hp_X]/1 / 10[hp_X]/1 / 12[hp_X]/1 ORAL TABLET [bhi diarrhea]",SPL,C,V,77af8b4b-36d6-43c4-a759-b4c1333fa992,OTC Drug,Drug,0,0,0,0
+36469666,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [smart sense anti diarrheal]",SPL,C,V,30b73cf9-a06c-436d-bcea-a4c89ff72ddc,OTC Drug,Drug,0,0,0,0
+42808570,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [sunmark anti diarrheal]",SPL,C,V,1faa923e-5e03-4d4e-87e9-457aa784b044,OTC Drug,Drug,0,0,0,0
+45661651,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,9434cefe-6b13-47c4-b2f7-b8d566c5a4ff,OTC Drug,Drug,0,0,0,0
+44403360,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,d670f665-d053-498c-91ab-11b589fb37c5,OTC Drug,Drug,0,0,0,0
+4217639,FALSE,TRUE,FALSE,Nebraska calf diarrhea virus,SNOMED,S,V,72490004,Organism,Observation,0,0,0,0
+46334115,FALSE,TRUE,FALSE,VOMITING DIARRHEA - aethusa cynapium pellet,NDC,N,V,64117010201,11-digit NDC,Drug,0,0,0,0
+1393161,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [sunmark anti diarrheal],SPL,C,V,b831efc6-1038-46e4-906a-2592f723bbb4,OTC Drug,Drug,0,0,0,0
+46300933,FALSE,TRUE,FALSE,"HOMEOPATHIC DIARRHEA FORMULA - aloe socotrina, antimonium cruda, arsenicum album, belladonna, bryonia album, chamomilla, colocynthis, podophyllum peltatum, veratrum album tablet",SPL,C,V,27de2b4b-af3f-410c-96a2-d302480a974d,OTC Drug,Drug,0,0,0,0
+40786840,FALSE,TRUE,FALSE,Bovine diarrhea virus 1 Ab | Bld-Ser-Plas,LOINC,N,D,LP44098-9,LOINC Hierarchy,Measurement,0,0,0,0
+37116642,FALSE,TRUE,FALSE,Prion protein systemic amyloidosis,SNOMED,S,V,733422008,Clinical Finding,Condition,0,0,0,0
+795922,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,1c3a15a2-b9b0-469a-b613-b26be82ab29d,OTC Drug,Drug,0,0,0,0
+36000414,FALSE,TRUE,FALSE,quercus robur nut 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,4ccc5406-0f21-4c4e-b386-12e206d50174,OTC Drug,Drug,0,0,0,0
+45657938,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL LIQUID [kaopectate regular strength vanilla flavor anti diarrheal],SPL,C,V,e23185a6-9adb-4fbf-93a6-946cfc655419,OTC Drug,Drug,0,0,0,0
+44379479,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,4945e21e-cc22-4b60-97c9-42ec5b970945,OTC Drug,Drug,0,0,0,0
+46317122,FALSE,TRUE,FALSE,"DIARRHEA REAL RELIEF - cinchona officinalis, bryonia, chamomilla, colocynthis, ipecacuanha, belladonna tablet, chewable",SPL,C,V,096c7830-9bf0-456c-9401-83cc287a02e0,OTC Drug,Drug,0,0,0,0
+46352985,FALSE,TRUE,FALSE,VOMITING DIARRHEA - pseudognaphalium obtusifolium pellet,NDC,N,V,64117014501,11-digit NDC,Drug,0,0,0,0
+583260,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [up and up anti diarrheal anti gas]",SPL,C,V,90ad0bb2-90d3-47bc-a78a-a6dee1c4608a,OTC Drug,Drug,0,0,0,0
+1752292,FALSE,TRUE,FALSE,bismuth subsalicylate 525mg/1 ORAL TABLET [pepto-bismol diarrhea],SPL,C,V,84ef94a8-7aad-1397-e053-2a91aa0a18c3,OTC Drug,Drug,0,0,0,0
+45336869,FALSE,TRUE,FALSE,"Loperamide HCl 2 mg/1 TABLET, FILM COATED [Leader Anti Diarrheal]",NDC,N,V,037205370,9-digit NDC,Drug,0,0,0,0
+46356453,FALSE,TRUE,FALSE,SORE THROAT DIARRHEA - helianthemum canadense pellet,NDC,N,V,64117022102,11-digit NDC,Drug,0,0,0,0
+46314931,FALSE,TRUE,FALSE,DRY COUGH DIARRHEA - sodium cation pellet,SPL,C,V,33e57fee-b346-4ecf-beaa-9c022f0e55cd,OTC Drug,Drug,0,0,0,0
+45370529,FALSE,TRUE,FALSE,Loperamide HCl 1 mg/5mL SOLUTION [Up and Up anti diarrheal],NDC,N,V,011673377,9-digit NDC,Drug,0,0,0,0
+36206217,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus | Bld-Ser-Plas,LOINC,N,D,LP260663-2,LOINC Hierarchy,Measurement,0,0,0,0
+40787100,FALSE,TRUE,FALSE,Bovine diarrhea virus | Bld-Ser-Plas,LOINC,N,D,LP46457-5,LOINC Hierarchy,Measurement,0,0,0,0
+35507286,FALSE,TRUE,FALSE,"SIGNATURE CARE ANTI DIARRHEAL ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,53829e72-d22c-434d-a108-1972081a6efb,OTC Drug,Drug,0,0,0,0
+40242222,FALSE,TRUE,FALSE,Loperamide Oral Solution [Rx-Act Anti-Diarrheal],RxNorm,N,D,1117377,Branded Drug Form,Drug,0,0,0,0
+796023,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [rexall anti diarrheal]",SPL,C,V,613a84c1-3d31-4933-806c-4b49e72be343,OTC Drug,Drug,0,0,0,0
+46359428,FALSE,TRUE,FALSE,DYSMENORRHEA DIARRHEA - lilium lancifolium bulb pellet,NDC,N,V,64117084201,11-digit NDC,Drug,0,0,0,0
+37056628,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag | Tissue and Smears | Microbiology,LOINC,C,V,LP379217-5,LOINC Hierarchy,Measurement,0,0,0,0
+36696508,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,089aef9a-3c0c-4fe2-99eb-c0518bd15c3c,OTC Drug,Drug,0,0,0,0
+771507,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL LIQUID [kaopectate regular strength vanilla flavor anti diarrheal],SPL,C,V,bd5a1bc8-353e-43f3-8de2-ad43b33d67f4,OTC Drug,Drug,0,0,0,0
+35907068,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,0817b89e-bfa4-42a8-8d23-cb9294cb4e65,OTC Drug,Drug,0,0,0,0
+37410741,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,4862b1da-05ff-4170-8db2-23236c788153,OTC Drug,Drug,0,0,0,0
+582320,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [lil drug store anti-diarrheal soft gelatin]",SPL,C,V,52bcb425-d6ac-453c-94aa-49c3301c41ba,OTC Drug,Drug,0,0,0,0
+46337755,FALSE,TRUE,FALSE,VOMITING DIARRHEA - aethusa cynapium pellet,NDC,N,V,64117010202,11-digit NDC,Drug,0,0,0,0
+45745003,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,ee8a6bdf-847e-4b88-8aea-6d3daa669994,OTC Drug,Drug,0,0,0,0
+46357169,FALSE,TRUE,FALSE,"DIARRHEA COMPLEX - aloe socotrina, arsenicum album, bryonia, collinsonia canadensis, colocynthis, croton tiglium, cuprum aceticum, echinacea angustifolia, mercurius sub. corros, rheum officinale, sulfur, veratrum album liquid",NDC,N,V,52731701501,11-digit NDC,Drug,0,0,0,0
+46355603,FALSE,TRUE,FALSE,"DIARRHEA AND GAS - thuja occidentalis, sulphur, argentum nitricum, colocynthis, mercurius corrosivus, arsenicum album, nux vomica, podophyllum peltatum, veratrum album liquid",NDC,N,D,45717000701,11-digit NDC,Drug,0,0,0,0
+46299434,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hcl capsule, liquid filled",SPL,C,V,caa1c137-6213-47ba-9a1b-55265fa4b08f,OTC Drug,Drug,0,0,0,0
+36173970,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,d533e8a4-30bc-493d-8214-0214a4274afb,OTC Drug,Drug,0,0,0,0
+1370822,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL LOPERAMIDE HCL, 2 MG CAPLETS - loperamide hcl tablet",SPL,C,V,e3d4f789-d41c-4965-975b-5af743d7b8e3,OTC Drug,Drug,0,0,0,0
+37292119,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,c5fcd1f5-4514-499c-86e1-d4df266c8ec5,OTC Drug,Drug,0,0,0,0
+3062137,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 - respiratory syncytial virus vaccine - haemophilus somnus bacterin,Nebraska Lexicon,N,D,91275008,Pharma/Biol Product,Drug,0,0,0,0
+45217221,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [topcare anti diarrheal]",NDC,N,V,036800224,9-digit NDC,Drug,0,0,0,0
+35303934,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL SUSPENSION [cvs health anti-diarrheal vanilla],SPL,C,V,d5eb0876-d8a5-413f-8686-e821d7e2ab27,OTC Drug,Drug,0,0,0,0
+46349082,FALSE,TRUE,FALSE,DIARRHEA - croton oil pellet,NDC,N,V,64117013801,11-digit NDC,Drug,0,0,0,0
+37063039,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus RNA,LOINC,N,V,LP182480-6,LOINC Component,Observation,0,0,0,0
+44945590,FALSE,TRUE,FALSE,GOLD TRICHLORIDE 30 [hp_C]/mL PELLET [Slow Digestion Diarrhea],NDC,N,V,064117113,9-digit NDC,Drug,0,0,0,0
+196523,FALSE,TRUE,FALSE,Diarrhea,SNOMED,S,V,62315008,Clinical Finding,Condition,148800423,17,156916434,22
+36242183,FALSE,TRUE,FALSE,Pepto Diarrhea Control Pill,RxNorm,C,V,1185218,Branded Dose Group,Drug,0,0,0,0
+46324737,FALSE,TRUE,FALSE,loperamides 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,33ea4e7d-24a0-452d-b8a5-01cd3b54c444,OTC Drug,Drug,0,0,0,0
+46323082,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,109b8b6b-d5d6-4f50-a446-6cc7b464f553,OTC Drug,Drug,0,0,0,0
+45638217,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,5a88b591-4994-4476-8293-2a0d6be31328,OTC Drug,Drug,0,0,0,0
+1719829,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,8642614a-9e12-4e6a-85bd-3fad3128d19e,OTC Drug,Drug,0,0,0,0
+42659961,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,27dc547f-e6e8-4ea5-b11b-b3c68ca8da36,OTC Drug,Drug,0,0,0,0
+44396851,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,9f5afda1-b112-4d15-9d53-df8d3e8839a4,OTC Drug,Drug,0,0,0,0
+36175258,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,f5e039e8-07ab-49e2-a70e-4306e8ec3828,OTC Drug,Drug,0,0,0,0
+19049121,FALSE,TRUE,FALSE,Anti-Diarrheal,RxNorm,N,D,215316,Brand Name,Drug,0,0,0,0
+45654174,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,389f807b-f399-4863-aa27-0995e4544b88,OTC Drug,Drug,0,0,0,0
+46337584,FALSE,TRUE,FALSE,"DIARRHEA - GAS - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium,",NDC,N,D,55714432900,11-digit NDC,Drug,0,0,0,0
+42662204,FALSE,TRUE,FALSE,"DIARRHEA - aesculus hippocastanum, juglans regia, valeriana officinalis, aconitum napellus, argentum nitricum, arsenicum album, baptisia tinctoria, bryonia, carbo vegetabilis, chamomilla, cinchona officinalis, collinsonia canadensis, colocynthis, elateriu",SPL,C,V,9d7322da-c2fb-0fc3-e053-2a95a90ac70b,OTC Drug,Drug,0,0,0,0
+4090429,FALSE,TRUE,FALSE,Sensation as if diarrhea will start,SNOMED,S,V,247340001,Clinical Finding,Condition,0,0,0,0
+46307520,FALSE,TRUE,FALSE,"DIARRHEA RELIEF - aloe, citrullus colocynthis, croton tiglium, lycopodium clavatum, magnesium sulfate heptahydrate, phosphoric acid, thuja occidentalis tablet, orally disintegrating",SPL,C,V,13f6865e-841e-4c7b-e054-00144ff88e88,OTC Drug,Drug,0,0,0,0
+36468769,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, COATED [anti-diarrheal]",SPL,C,V,075be768-af7e-4008-b377-ee8b302dc230,OTC Drug,Drug,0,0,0,0
+35509314,FALSE,TRUE,FALSE,mercuric sulfate 30[hp_C]/mL ORAL PELLET [burning diarrhea],SPL,C,V,04277969-b9dc-4121-b8bd-4925420abf2e,OTC Drug,Drug,0,0,0,0
+37295709,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,1e47740f-79bb-46e8-96d6-ab541f35c1f2,OTC Drug,Drug,0,0,0,0
+45704909,FALSE,TRUE,FALSE,croton oil 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,5a68655c-1239-42a2-a471-a4d801ad601e,OTC Drug,Drug,0,0,0,0
+45687078,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl capsule,SPL,C,V,2ac8398c-e01b-4703-8011-7fd262f5ac71,OTC Drug,Drug,0,0,0,0
+46355672,FALSE,TRUE,FALSE,BURNING DIARRHEA - mercuric sulfate pellet,NDC,N,V,64117026302,11-digit NDC,Drug,0,0,0,0
+45661819,FALSE,TRUE,FALSE,LEADER ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,9b7fdde3-34a0-4a44-95db-1f5d3bc51d27,OTC Drug,Drug,0,0,0,0
+4341814,FALSE,TRUE,FALSE,Diarrhea,NDFRT,N,V,N0000000963,Ind / CI,Drug,0,0,0,0
+44520783,FALSE,TRUE,FALSE,DIARRHEA RELIEFS,DPD,N,D,OMOP105189,Brand Name,Drug,0,0,0,0
+45661419,FALSE,TRUE,FALSE,Anti-Diarrheal,SPL,N,V,89570c09-e0ff-4a01-a629-e34a3e5a5baa,SPL,Drug,0,0,0,0
+773833,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,57c76643-cb09-400d-845e-401c1a0c171c,OTC Drug,Drug,0,0,0,0
+4237463,FALSE,TRUE,FALSE,Diarrhea care management,SNOMED,S,V,408874007,Procedure,Procedure,0,0,0,0
+45676486,FALSE,TRUE,FALSE,sodium cation 30[hp_C]/mL ORAL PELLET [dry cough diarrhea],SPL,C,V,414258a1-b325-493b-9f44-218e8b8609e1,OTC Drug,Drug,0,0,0,0
+37030593,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus Ab.IgA/Positive control | XXX | Microbiology,LOINC,C,V,LP379491-6,LOINC Hierarchy,Measurement,0,0,0,0
+4291638,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhoea - parainfluenza 3 vaccine - pasteurella haemolytica - multocida bacterin,SNOMED,N,D,37343003,Pharma/Biol Product,Observation,0,0,0,0
+1720453,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [family wellness anti diarrheal]",SPL,C,V,afa49af5-3858-4fae-a877-d38c9e2e93c3,OTC Drug,Drug,0,0,0,0
+36163702,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [topcare anti diarrheal]",SPL,C,V,613d9bc6-6227-4eae-8a45-ec8938f34df8,OTC Drug,Drug,0,0,0,0
+42886304,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [harris teeter anti diarrheal],SPL,C,V,65147624-7635-4752-9891-b612f2a26e27,OTC Drug,Drug,0,0,0,0
+36207840,FALSE,TRUE,FALSE,Bovine diarrhea virus | Nose,LOINC,N,D,LP256927-7,LOINC Hierarchy,Measurement,0,0,0,0
+45791690,FALSE,TRUE,FALSE,"aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, colli... 3[hp_X]/g / 15[hp_X]/g ORAL PELLET [diarrhea]",SPL,C,V,8215a2cb-ba70-0174-8c66-8aa5088698ee,OTC Drug,Drug,0,0,0,0
+1719382,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [equate anti diarrheal]",SPL,C,V,10d4f1af-89a8-4b29-94a4-18498aad029e,OTC Drug,Drug,0,0,0,0
+44877373,FALSE,TRUE,FALSE,MERCURIC SULFATE 30 [hp_C]/mL PELLET [BURNING DIARRHEA],NDC,N,V,064117263,9-digit NDC,Drug,0,0,0,0
+45695820,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,be0d3adc-77bb-47ad-bd8c-771139667340,OTC Drug,Drug,0,0,0,0
+40241807,FALSE,TRUE,FALSE,Rx-Act Anti-Diarrheal,RxNorm,N,D,1117375,Brand Name,Drug,0,0,0,0
+45876777,FALSE,TRUE,FALSE,Have diarrhea or stomach aches,LOINC,S,V,LA15869-3,Answer,Meas Value,0,0,0,0
+42642979,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,151f75b0-6158-4c55-a537-72049fc3c3e9,OTC Drug,Drug,0,0,0,0
+45678136,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,8d3ccda2-3886-4ff7-ad10-6440fc4da6bf,OTC Drug,Drug,0,0,0,0
+45320010,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,049348752,9-digit NDC,Drug,0,0,0,0
+4306759,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea vaccine,SNOMED,N,D,83516005,Pharma/Biol Product,Observation,0,0,0,0
+37054177,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus IgG,LOINC,N,V,LP248606-8,LOINC Component,Observation,0,0,0,0
+46354851,FALSE,TRUE,FALSE,RHEUMATISM DIARRHEA - benzoic acid pellet,NDC,N,V,64117011501,11-digit NDC,Drug,0,0,0,0
+36162052,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,3bd929b0-5cf9-49e5-a8b0-88456e952f39,OTC Drug,Drug,0,0,0,0
+1010910,FALSE,TRUE,FALSE,Functional assessment of chronic illness therapy - diarrhea questionnaire - version 4,LOINC,N,V,LP146908-1,LOINC Component,Observation,0,0,0,0
+46353499,FALSE,TRUE,FALSE,"BHI DIARRHEA - aloe, activated charcoal, citrullus colocynthis fruit pulp, cupric acetate, ferrum phosphoricum, podophyllum, potentilla erecta root, and veratrum album root tablet",NDC,N,V,62795102102,11-digit NDC,Drug,0,0,0,0
+44390784,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [smart sense anti diarrheal]",SPL,C,V,6d6430be-88c4-4f7f-bfe2-41537784e9ce,OTC Drug,Drug,0,0,0,0
+37065103,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus Ab.IgG/Positive control,LOINC,N,V,LP286862-0,LOINC Component,Observation,0,0,0,0
+37055106,FALSE,TRUE,FALSE,Bovine diarrhea virus Ab | Serum | Microbiology,LOINC,C,V,LP379212-6,LOINC Hierarchy,Measurement,0,0,0,0
+42516474,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,f8592e90-9900-40a2-ac34-badb645c2b2d,OTC Drug,Drug,0,0,0,0
+37602384,FALSE,TRUE,FALSE,PREMIER VALUE DIARRHEA RELIEF VANILLA FLAVOR - bismuth subsalicylate suspension,SPL,C,V,1c6e464c-d5c6-4658-a0d8-bba87369a0c3,OTC Drug,Drug,0,0,0,0
+44374217,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,3ad7e731-b7ac-49e1-947b-316b2f8e224b,OTC Drug,Drug,0,0,0,0
+45666958,FALSE,TRUE,FALSE,lilium lancifolium bulb 30[hp_C]/mL ORAL PELLET [dysmenorrhea diarrhea],SPL,C,V,8e193738-73a1-479a-aca5-3c2d78045001,OTC Drug,Drug,0,0,0,0
+44353847,FALSE,TRUE,FALSE,CVS HEALTH ANTI-DIARRHEAL VANILLA - bismuth subsalicylate suspension,SPL,C,V,ce1ed357-228b-452c-9bd4-6b0d20f41c1d,OTC Drug,Drug,0,0,0,0
+44351942,FALSE,TRUE,FALSE,UP AND UP ANTI DIARRHEAL - loperamide hcl suspension,SPL,C,V,2f5a9854-e1da-4835-9ca4-556a84428e2f,OTC Drug,Drug,0,0,0,0
+1581055,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [loperamide hcl anti-diarrheal]",SPL,C,V,15d75a8b-e896-4c3e-a5df-a32200babce0,OTC Drug,Drug,0,0,0,0
+36495423,FALSE,TRUE,FALSE,"aloe socotrina, bryonia alba, chamomilla q, colocynthis, ipecacuanha 6x, nux vomica, phosphoricum ac... 3[hp_X]/mL / 6[hp_X]/mL / 1[arb'U]/mL ORAL SOLUTION/ DROPS [combination remedy 14 - diarrhea]",NDC,N,V,690084014,9-digit NDC,Drug,0,0,0,0
+45682939,FALSE,TRUE,FALSE,capsella bursa-pastoris 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,6ab1a037-f60c-4986-a0a9-91447c48ba0a,OTC Drug,Drug,0,0,0,0
+36513455,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",NDC,N,D,55714242002,11-digit NDC,Drug,0,0,0,0
+46347328,FALSE,TRUE,FALSE,VOMITING DIARRHEA - pseudognaphalium obtusifolium pellet,NDC,N,V,64117014502,11-digit NDC,Drug,0,0,0,0
+1016658,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus Ab,LOINC,N,V,LP249855-0,LOINC Component,Observation,0,0,0,0
+37313799,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,133a6a7a-547a-40dc-84af-349668631286,OTC Drug,Drug,0,0,0,0
+45626380,FALSE,TRUE,FALSE,veratrum album root 30[hp_C]/mL ORAL PELLET [diarrhea vomiting],SPL,C,V,39d63b53-8eb8-42e5-ad74-fcce11c910f0,OTC Drug,Drug,0,0,0,0
+36469489,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL LIQUID [kaopectate vanilla anti-diarrheal],SPL,C,V,29b3e671-afa0-2c71-e054-00144ff8d46c,OTC Drug,Drug,0,0,0,0
+46290183,FALSE,TRUE,FALSE,DIARRHEA - capsella bursa-pastoris pellet,SPL,C,V,0da43630-c63b-40b4-a1b1-163dc6688b39,OTC Drug,Drug,0,0,0,0
+36221826,FALSE,TRUE,FALSE,Anti-Diarrhea Oral Liquid Product,RxNorm,C,V,1166012,Branded Dose Group,Drug,0,0,0,0
+45690961,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,dcebde46-a36c-4b00-a07f-90eaf07871c4,OTC Drug,Drug,0,0,0,0
+21060324,FALSE,TRUE,FALSE,Loperamide Oral Capsule [Diarrhea Relief],RxNorm Extension,S,V,OMOP394708,Branded Drug Form,Drug,0,0,0,0
+45701210,FALSE,TRUE,FALSE,SUNMARK ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,b5132a26-dc9f-4495-97fa-9225b87e1c8a,OTC Drug,Drug,0,0,0,0
+40796658,FALSE,TRUE,FALSE,Bovine diarrhea virus 2 Ab | Bld-Ser-Plas,LOINC,N,D,LP44099-7,LOINC Hierarchy,Measurement,0,0,0,0
+45680555,FALSE,TRUE,FALSE,arsenic trioxide - cupric arsenite - veratrum album root 6[hp_C]/28g ORAL PELLET [diarrhea],SPL,C,V,fa04cb05-e71a-4f29-a133-bdb57d23820c,OTC Drug,Drug,0,0,0,0
+37042121,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus S1 gene,LOINC,N,V,LP263475-8,LOINC Component,Observation,0,0,0,0
+1560999,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,ff5dcb48-318c-4f2a-8df2-73ff6dd2a49e,OTC Drug,Drug,0,0,0,0
+46294285,FALSE,TRUE,FALSE,"DIARRHEA RELIEF - china, bryonia alba, chamomilla, colocynthis, ipeca, belladonna, potentilla anserina pellet",SPL,C,V,62d4b636-3144-4f41-8f30-a7d8ccf367e7,OTC Drug,Drug,0,0,0,0
+36222737,FALSE,TRUE,FALSE,Diarrhea and Cramp Oral Liquid Product,RxNorm,C,V,1166338,Branded Dose Group,Drug,0,0,0,0
+46240916,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,5931a921-70a1-45bd-a665-195edcae8a74,OTC Drug,Drug,0,0,0,0
+42819305,FALSE,TRUE,FALSE,"aloe, activated charcoal, citrullus colocynthis fruit pulp, cupric acetate, ferrum phosphoricum, pod... 4[hp_X]/1 / 5[hp_X]/1 / 6[hp_X]/1 / 10[hp_X]/1 / 12[hp_X]/1 ORAL TABLET [bhi diarrhea]",SPL,C,V,ad0fe8a1-c499-49c6-aa0d-096fa4a86117,OTC Drug,Drug,0,0,0,0
+1565100,FALSE,TRUE,FALSE,lilium lancifolium bulb 30[hp_C]/mL ORAL PELLET [dysmenorrhea diarrhea],SPL,C,V,8efcda4c-796f-4e83-956e-15fdf5ecb363,OTC Drug,Drug,0,0,0,0
+46291009,FALSE,TRUE,FALSE,DIARRHEA - arsenic trioxide - cupric arsenite - veratrum album root pellet,SPL,C,V,26e9b5b6-c12a-498d-9a96-65e20e63659e,OTC Drug,Drug,0,0,0,0
+37295890,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,69a35f25-8459-4c3f-8672-aeb92188a97c,OTC Drug,Drug,0,0,0,0
+736430,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,edae1ea7-7a6a-4971-8a21-c2b508e96f4e,OTC Drug,Drug,0,0,0,0
+40242220,FALSE,TRUE,FALSE,Loperamide Hydrochloride 0.2 MG/ML [Rx-Act Anti-Diarrheal],RxNorm,N,D,1117376,Branded Drug Comp,Drug,0,0,0,0
+45218065,FALSE,TRUE,FALSE,VERATRUM ALBUM ROOT 30 [hp_C]/mL PELLET [Diarrhea Vomiting],NDC,N,V,064117995,9-digit NDC,Drug,0,0,0,0
+46359074,FALSE,TRUE,FALSE,"DIARRHEA - GAS - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium,",NDC,N,D,55714432902,11-digit NDC,Drug,0,0,0,0
+4273380,FALSE,TRUE,FALSE,Coronaviral calf diarrhea,SNOMED,N,D,64679001,Clinical Finding,Condition,0,0,0,0
+40247128,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [circle k anti-diarrheal],SPL,C,V,e05e8e9f-ef5c-4c4b-a6b0-5962efb1f719,OTC Drug,Drug,0,0,0,0
+4342029,FALSE,TRUE,FALSE,Bovine Virus Diarrhea-Mucosal Disease,NDFRT,N,V,N0000000598,Ind / CI,Drug,0,0,0,0
+45212640,FALSE,TRUE,FALSE,SIMILAC EXPERT CARE DIARRHEA,NDC,S,V,70074057769,Device,Device,0,0,0,0
+45354685,FALSE,TRUE,FALSE,HELIANTHEMUM CANADENSE 30 [hp_C]/mL PELLET [SORE THROAT DIARRHEA],NDC,N,V,064117221,9-digit NDC,Drug,0,0,0,0
+45673094,FALSE,TRUE,FALSE,iron 30[hp_C]/mL ORAL PELLET [biliousness diarrhea],SPL,C,V,a734b64e-cb12-4d55-93ba-e97e32ab90d8,OTC Drug,Drug,0,0,0,0
+1392391,FALSE,TRUE,FALSE,SUNMARK ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,6302dfd9-24e0-4ec5-ade0-949666a2ab9e,OTC Drug,Drug,0,0,0,0
+35106103,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,71d61560-394b-41f1-9f60-29f5554c9e19,OTC Drug,Drug,0,0,0,0
+40382311,FALSE,TRUE,FALSE,Infantile gastroenteritis,SNOMED,N,D,186168003,Clinical Finding,Condition,0,0,0,0
+737260,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,f8629473-d102-4328-b1bb-9f74bcadd241,OTC Drug,Drug,0,0,0,0
+45030168,FALSE,TRUE,FALSE,Loperamide Hydrochloride 1 mg/5mL SOLUTION [Smart Sense Anti Diarrheal],NDC,N,V,049738377,9-digit NDC,Drug,0,0,0,0
+44370621,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [loperamide hcl anti-diarrheal]",SPL,C,V,2bdd5d0b-5e25-4286-808c-7403e506583f,OTC Drug,Drug,0,0,0,0
+1722915,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,c6a41333-1097-42fb-9165-e799769594aa,OTC Drug,Drug,0,0,0,0
+40788987,FALSE,TRUE,FALSE,Bovine diarrhea virus 2 Ag | Tissue and Smears,LOINC,N,D,LP132299-1,LOINC Hierarchy,Measurement,0,0,0,0
+1010536,FALSE,TRUE,FALSE,I have diarrhea in the past 7 days,LOINC,N,V,LP146158-3,LOINC Component,Observation,0,0,0,0
+44363853,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,a3c7b015-67a1-4e98-805e-861bd093cd91,OTC Drug,Drug,0,0,0,0
+44353438,FALSE,TRUE,FALSE,SIGNATURE CARE ANTI DIARRHEAL - loperamide hcl suspension,SPL,C,V,bfcc6ebf-b9c1-4b96-b36e-1668c6f8bb83,OTC Drug,Drug,0,0,0,0
+45623518,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide tablet,SPL,C,V,b64ab953-e2cc-4253-938e-3f126922ac46,OTC Drug,Drug,0,0,0,0
+36307064,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus | Tissue and Smears,LOINC,N,D,LP264745-3,LOINC Hierarchy,Measurement,0,0,0,0
+1010913,FALSE,TRUE,FALSE,I have to limit my social activity because of diarrhea in the past 7 days,LOINC,N,V,LP146911-5,LOINC Component,Observation,0,0,0,0
+44379777,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,49d727b3-79b2-4fae-e054-00144ff8d46c,OTC Drug,Drug,0,0,0,0
+46300665,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,b81c7709-65ce-46ac-949f-cbb4e3182b19,OTC Drug,Drug,0,0,0,0
+4266555,FALSE,TRUE,FALSE,"Diarrhea, Infantile",NDFRT,N,V,N0000000964,Ind / CI,Drug,0,0,0,0
+40790426,FALSE,TRUE,FALSE,Bovine diarrhea virus Ab | Bld-Ser-Plas,LOINC,N,D,LP47315-4,LOINC Hierarchy,Measurement,0,0,0,0
+44893718,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 TABLET [Anti-Diarrheal],NDC,N,V,037808375,9-digit NDC,Drug,0,0,0,0
+45638580,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,6bb37e85-b24c-4c0b-abdc-f89596396c11,OTC Drug,Drug,0,0,0,0
+46240958,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,5adf2112-32bb-4ecc-986d-f149fb0833c5,OTC Drug,Drug,0,0,0,0
+46335674,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",NDC,N,V,55714801401,11-digit NDC,Drug,0,0,0,0
+36696616,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,22a21125-f085-4724-be06-b05fd004089d,OTC Drug,Drug,0,0,0,0
+36000409,FALSE,TRUE,FALSE,capsella bursa-pastoris 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,4b6b0f85-0687-43e7-887b-7afca3950cc8,OTC Drug,Drug,0,0,0,0
+45630886,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,06a0530b-b06a-466b-b366-82a2a9f7c05c,OTC Drug,Drug,0,0,0,0
+36209518,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus | Tiss,LOINC,N,D,LP260659-0,LOINC Hierarchy,Measurement,0,0,0,0
+45705502,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,769e7182-fa11-4645-8fca-657253f28d9c,OTC Drug,Drug,0,0,0,0
+44633778,FALSE,TRUE,FALSE,LOPERAMIDE HYDROCHLORIDE 2 MG [DIARRHEA RELIEFS],DPD,N,D,OMOP194965,Branded Drug Comp,Drug,0,0,0,0
+36159124,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl tablet,SPL,C,V,3d2d211f-546b-48fe-b47c-d4a254f952a3,OTC Drug,Drug,0,0,0,0
+36170901,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [fad first aid direct anti-diarrheal]",SPL,C,V,87808df7-3a1a-4b4a-b9d9-bee7fbb2e403,OTC Drug,Drug,0,0,0,0
+40772137,FALSE,TRUE,FALSE,"Did you have nausea or an upset stomach, or the feeling that you were going to have diarrhea [Reported.PHQ]",LOINC,S,V,69711-0,Survey,Observation,0,0,0,0
+46363877,FALSE,TRUE,FALSE,SLOW DIGESTION DIARRHEA - gold trichloride pellet,NDC,N,V,64117011302,11-digit NDC,Drug,0,0,0,0
+45790447,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,76635567-82e4-435c-987e-83f77099e04b,OTC Drug,Drug,0,0,0,0
+36170829,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,8595e64d-bb25-4912-a80f-021912aa3799,OTC Drug,Drug,0,0,0,0
+45746292,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,c3851d4b-5def-427a-91c6-0d4cbc23373a,OTC Drug,Drug,0,0,0,0
+4097766,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhoea - parainfluenza 3 vaccine - haemophilus somnus - pasteurella haemolytica - multocida bacterin,SNOMED,N,D,25049002,Pharma/Biol Product,Observation,0,0,0,0
+45166154,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [anti diarrheal]",NDC,N,V,042507224,9-digit NDC,Drug,0,0,0,0
+46328352,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,ccc98fa0-9b9e-4ad8-be1a-a086b4e2fa46,OTC Drug,Drug,0,0,0,0
+46355541,FALSE,TRUE,FALSE,"DIARRHEA RELIEF - aloe, citrullus colocynthis, croton tiglium, lycopodium clavatum, magnesium sulfate heptahydrate, phosphoric acid, thuja occidentalis tablet, orally disintegrating",NDC,N,V,17312002914,11-digit NDC,Drug,0,0,0,0
+44356303,FALSE,TRUE,FALSE,HANDY SOLUTIONS ANTI-DIARRHEAL - loperamide hydrochloride tablet,SPL,C,V,76e32e66-4af5-47a5-83ff-cbba206975d6,OTC Drug,Drug,0,0,0,0
+4295308,FALSE,TRUE,FALSE,"Infantile erythroderma, failure to thrive and diarrhea syndrome",SNOMED,S,V,403526001,Clinical Finding,Condition,0,0,0,0
+37066902,FALSE,TRUE,FALSE,Bovine diarrhea virus RNA | Serum | Microbiology,LOINC,C,V,LP379219-1,LOINC Hierarchy,Measurement,0,0,0,0
+44489369,FALSE,TRUE,FALSE,arsenic trioxide - cupric arsenite - veratrum album root 6[hp_C]/1 ORAL PELLET [whp be gone diarrhea tm],NDC,N,V,684280745,9-digit NDC,Drug,0,0,0,0
+36208742,FALSE,TRUE,FALSE,Bovine diarrhea virus 2 | Bld-Ser-Plas,LOINC,N,D,LP256647-1,LOINC Hierarchy,Measurement,0,0,0,0
+737269,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,fb41cd3c-4ffa-43f3-ac03-355f27fd4412,OTC Drug,Drug,0,0,0,0
+36161630,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,3204bb3d-c0d4-46ec-9e88-ea3f1936e32a,OTC Drug,Drug,0,0,0,0
+46337358,FALSE,TRUE,FALSE,BILIOUSNESS DIARRHEA - iron pellet,NDC,N,V,64117079102,11-digit NDC,Drug,0,0,0,0
+37055738,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus Ab.IgG/Positive control | XXX | Microbiology,LOINC,C,V,LP379492-4,LOINC Hierarchy,Measurement,0,0,0,0
+4039716,FALSE,TRUE,FALSE,Bovine diarrhea virus detection,SNOMED,N,D,118113002,Procedure,Procedure,0,0,0,0
+46355044,FALSE,TRUE,FALSE,"DIARRHEA AND GAS - thuja occidentalis, sulphur, argentum nitricum, colocynthis, mercurius corrosivus, arsenicum album, nux vomica, podophyllum peltatum, veratrum album liquid",NDC,N,D,86035000401,11-digit NDC,Drug,0,0,0,0
+37035300,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus RNA | Isolate | Microbiology,LOINC,C,V,LP379486-6,LOINC Hierarchy,Measurement,0,0,0,0
+46312043,FALSE,TRUE,FALSE,RHEUMATISM DIARRHEA - benzoic acid pellet,SPL,C,V,83f60c28-19f0-443d-9951-07a81acda9f1,OTC Drug,Drug,0,0,0,0
+46352429,FALSE,TRUE,FALSE,DIARRHEA - aloe pellet,NDC,N,V,64117050402,11-digit NDC,Drug,0,0,0,0
+46358264,FALSE,TRUE,FALSE,DIARRHEA - ceanothus americanus leaf pellet,NDC,N,V,64117012902,11-digit NDC,Drug,0,0,0,0
+45269005,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 TABLET [Anti-Diarrheal],NDC,N,V,050844375,9-digit NDC,Drug,0,0,0,0
+37290955,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,33308100-adac-4727-b6c2-3267a4574a84,OTC Drug,Drug,0,0,0,0
+40783065,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag,LOINC,N,V,LP37389-1,LOINC Component,Observation,0,0,0,0
+35111746,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [dg health anti diarrheal]",SPL,C,V,558bbed3-b113-4885-8479-46f5c1837474,OTC Drug,Drug,0,0,0,0
+45800069,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,d5327cb0-8d60-46ca-86d2-ae1d1695f93e,OTC Drug,Drug,0,0,0,0
+37603153,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [health mart anti diarrheal anti gas]",SPL,C,V,a74006a9-1110-45d6-9fec-d9ca0afb4c76,OTC Drug,Drug,0,0,0,0
+44375849,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,40298a3d-737e-40f3-a692-ee917bc5bb12,OTC Drug,Drug,0,0,0,0
+45623679,FALSE,TRUE,FALSE,aloe 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,be7e2420-282c-4274-aff2-cd8c1783220c,OTC Drug,Drug,0,0,0,0
+1564482,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,6a3c744f-1322-4ff2-be1d-9db488dd778b,OTC Drug,Drug,0,0,0,0
+45675491,FALSE,TRUE,FALSE,"REXALL ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,1455b231-5574-46a4-8f59-2fc30b9eae07,OTC Drug,Drug,0,0,0,0
+591293,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,41ff0187-cc25-4ae8-895d-80f163eb4043,OTC Drug,Drug,0,0,0,0
+37603186,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,b724640e-85ad-4a51-96dd-c301055602f6,OTC Drug,Drug,0,0,0,0
+44894490,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,063868748,9-digit NDC,Drug,0,0,0,0
+36006019,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,af5fd068-642e-458f-a557-a1938e5aee8e,OTC Drug,Drug,0,0,0,0
+46350284,FALSE,TRUE,FALSE,"DIARRHEA - cinchona officinalis, bryonia, chamomilla, colocynthis, ipecacuanha, belladonna tablet, chewable",NDC,N,V,59779084606,11-digit NDC,Drug,0,0,0,0
+45632764,FALSE,TRUE,FALSE,"SUNMARK ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,5c1591f8-9291-4062-8ba9-fc9507963d93,OTC Drug,Drug,0,0,0,0
+36003867,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,d6c0245f-010e-4b2b-b45e-a508f728d3b7,OTC Drug,Drug,0,0,0,0
+36475973,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,ced16e24-eec6-4f63-be46-2330e4da8a6b,OTC Drug,Drug,0,0,0,0
+44687611,FALSE,TRUE,FALSE,DIARRHEA AID FOR HAMSTERS,DPD,N,D,517208,Animal Drug,Device,0,0,0,0
+1010917,FALSE,TRUE,FALSE,I have abdominal cramps or discomfort due to my diarrhea in the past 7 days,LOINC,N,V,LP146915-6,LOINC Component,Observation,0,0,0,0
+37291017,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,4f3c9bb7-56e0-4bcc-a897-d001d172b3cb,OTC Drug,Drug,0,0,0,0
+37295858,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,5b8406a3-de93-482c-ad3c-e389a7665f3c,OTC Drug,Drug,0,0,0,0
+3079230,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea vaccine - haemophilus somnus leptospira pomona bacterin,Nebraska Lexicon,N,D,21254009,Pharma/Biol Product,Drug,0,0,0,0
+35111843,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,74a9a53a-b66b-45f3-9100-37c1164a3395,OTC Drug,Drug,0,0,0,0
+40773055,FALSE,TRUE,FALSE,Bovine diarrhea virus RNA,LOINC,N,V,LP37390-9,LOINC Component,Observation,0,0,0,0
+36696405,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hcl tablet, coated",SPL,C,V,952fa976-ac4c-4dfb-b689-12c5242498ac,OTC Drug,Drug,0,0,0,0
+45896802,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,b4c950ed-a966-4378-8dcb-aea921d74817,OTC Drug,Drug,0,0,0,0
+4195450,FALSE,TRUE,FALSE,Bovine virus diarrhoea vaccine,SNOMED,N,D,44534000,Pharma/Biol Product,Observation,0,0,0,0
+45678783,FALSE,TRUE,FALSE,Anti-Diarrheal,SPL,N,V,a975f343-07ca-4e4b-bdb0-439076a11941,SPL,Drug,0,0,0,0
+36476338,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [good neighbor pharmacy anti diarrheal]",SPL,C,V,df611849-3009-4352-b630-b322e6e900a8,OTC Drug,Drug,0,0,0,0
+42881836,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [berkley and jensen anti diarrheal]",SPL,C,V,7d2b014d-6115-433a-91d2-01dc29fa88cd,OTC Drug,Drug,0,0,0,0
+37296733,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,b5c3ceb6-e741-4600-9559-8e3cb2d33686,OTC Drug,Drug,0,0,0,0
+36241566,FALSE,TRUE,FALSE,Maalox Anti-Diarrheal Oral Liquid Product,RxNorm,C,V,1184967,Branded Dose Group,Drug,0,0,0,0
+44648292,FALSE,TRUE,FALSE,ATTAPULGITE TAB [FOWLERS DIARRHEA],DPD,N,D,OMOP161608,Branded Drug Form,Drug,0,0,0,0
+45798548,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL LIQUID [kaopectate regular strength vanilla flavor anti diarrheal],SPL,C,V,c62ce0c1-235d-41f6-8602-60ab30e8843f,OTC Drug,Drug,0,0,0,0
+36660612,FALSE,TRUE,FALSE,Bovine diarrhea virus Ag/Positive control in Unspecified specimen by Immunoassay,LOINC,S,V,94622-8,Lab Test,Measurement,0,0,0,0
+971166,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [good sense anti diarrheal]",SPL,C,V,58b85cfb-00bd-479c-9315-0f87c2194089,OTC Drug,Drug,0,0,0,0
+45665949,FALSE,TRUE,FALSE,helianthemum canadense 30[hp_C]/mL ORAL PELLET [sore throat diarrhea],SPL,C,V,5cacc40e-3d42-4156-a476-6f176ee81f8b,OTC Drug,Drug,0,0,0,0
+42807765,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [lil drug store anti-diarrheal],SPL,C,V,09bcca2a-853e-4a03-83e6-cf2d223863c8,OTC Drug,Drug,0,0,0,0
+4219080,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea vaccine - haemophilus somnus - leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,SNOMED,N,D,72288002,Pharma/Biol Product,Observation,0,0,0,0
+46355995,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",NDC,N,V,55714226002,11-digit NDC,Drug,0,0,0,0
+1184359,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,9b42045c-6651-3296-e053-2995a90ace73,OTC Drug,Drug,0,0,0,0
+1171047,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,e4e5e2b3-afc7-48f9-b9bc-f6e3f367a211,OTC Drug,Drug,0,0,0,0
+46300700,FALSE,TRUE,FALSE,"DIARRHEA - cinchona officinalis, bryonia, chamomilla, colocynthis, ipecacuanha, belladonna tablet, chewable",SPL,C,V,6580a502-58a7-4ce0-9d77-b9759cc0f38c,OTC Drug,Drug,0,0,0,0
+37296730,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,b51dddb0-4847-41a8-8802-86c518962802,OTC Drug,Drug,0,0,0,0
+45132588,FALSE,TRUE,FALSE,CUPRIC ARSENITE 30 [hp_C]/mL PELLET [DIARRHEA VOMITING],NDC,N,V,064117222,9-digit NDC,Drug,0,0,0,0
+46291025,FALSE,TRUE,FALSE,"DIARRHEA - GAS - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium,",SPL,C,V,5b90893b-d588-73f4-94d1-505f50ec3c32,Animal Drug,Drug,0,0,0,0
+1751727,FALSE,TRUE,FALSE,"PEPTO BISMOL DIARRHEA LIQUICAPS - bismuth subsalicylate capsule, liquid filled",SPL,C,V,851997d7-cb82-17bf-e053-2a91aa0ab78b,OTC Drug,Drug,0,0,0,0
+44910758,FALSE,TRUE,FALSE,"Loperamide HCl 2 mg/1 TABLET, FILM COATED [good neighbor pharmacy anti diarrheal]",NDC,N,V,024385386,9-digit NDC,Drug,0,0,0,0
+3057147,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine - haemophilus somnus - pasteurella haemolytica - multocida bacterin,Nebraska Lexicon,N,D,25049002,Pharma/Biol Product,Drug,0,0,0,0
+37030751,FALSE,TRUE,FALSE,Bovine diarrhea virus 1,LOINC,N,V,LP18829-9,LOINC Component,Observation,0,0,0,0
+36222738,FALSE,TRUE,FALSE,Diarrhea and Cramp Oral Product,RxNorm,C,V,1166339,Branded Dose Group,Drug,0,0,0,0
+45784732,FALSE,TRUE,FALSE,"HARMON FACE VALUES ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,40555c92-0968-471c-88ea-b9f0033af11f,OTC Drug,Drug,0,0,0,0
+46346319,FALSE,TRUE,FALSE,DIARRHEA - rheum officinale root pellet,NDC,N,V,64117017502,11-digit NDC,Drug,0,0,0,0
+770693,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,75623949-56c2-4889-a30d-0a0c5a0efccf,OTC Drug,Drug,0,0,0,0
+46329522,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,fce87874-7c3c-4ce3-9571-f995cc7e686c,OTC Drug,Drug,0,0,0,0
+45765466,FALSE,TRUE,FALSE,RAPADILINO syndrome,SNOMED,S,V,702413000,Clinical Finding,Condition,0,0,0,0
+45781853,FALSE,TRUE,FALSE,"china, bryonia alba, chamomilla, colocynthis, ipeca, belladonna, potentilla anserina 1[hp_X]/1 / 3[hp_X]/1 / 4[hp_X]/1 ORAL PELLET [diarrhea relief]",SPL,C,V,24655d36-7d53-4133-9cb4-eed02b8099c5,OTC Drug,Drug,0,0,0,0
+1720544,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [good neighbor pharmacy anti diarrheal]",SPL,C,V,c8f03a7f-1c73-4b35-a2a5-15523cc5b178,OTC Drug,Drug,0,0,0,0
+44962335,FALSE,TRUE,FALSE,IRON 30 [hp_C]/mL PELLET [Biliousness Diarrhea],NDC,N,V,064117791,9-digit NDC,Drug,0,0,0,0
+45662816,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,cb23bb84-14ae-4cfb-b235-6b70e3a4e1e4,OTC Drug,Drug,0,0,0,0
+36000345,FALSE,TRUE,FALSE,podophyllum peltatum root 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,31c74170-3ab9-49ca-a618-d157956e1d0f,OTC Drug,Drug,0,0,0,0
+36163055,FALSE,TRUE,FALSE,"aethusa cynapium, arsenic trioxide, oyster shell calicum carbonate, crude, matricaria chamomilla, ci... 30[hp_C]/mL ORAL LIQUID [diarrhea cp]",SPL,C,V,5471ec2e-3651-4053-9677-56287cc8a540,OTC Drug,Drug,0,0,0,0
+45217271,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [Equaline Anti Diarrheal]",NDC,N,V,041163224,9-digit NDC,Drug,0,0,0,0
+1392565,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [health mart anti diarrheal anti gas]",SPL,C,V,38e2d7be-f0e1-4dd2-a5d3-ebabf6096377,OTC Drug,Drug,0,0,0,0
+45029957,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [Care One anti diarrheal]",NDC,N,V,041520224,9-digit NDC,Drug,0,0,0,0
+42515719,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [kirkland signature anti diarrheal]",SPL,C,V,97b25399-8485-4d1c-967b-e00ab22f3ed8,OTC Drug,Drug,0,0,0,0
+36494183,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL LIQUID [kaopectate peppermint anti-diarrheal],NDC,N,V,535920333,9-digit NDC,Drug,0,0,0,0
+44381875,FALSE,TRUE,FALSE,"aloe socotrina, chamomilla, cinchona officinalis, colocynthis, croton tiglium, cuprum arsenicosum, g... 10[hp_X]/59mL ORAL LIQUID [diarrhea relief]",SPL,C,V,4e9e7593-648a-4599-be31-383695d45715,OTC Drug,Drug,0,0,0,0
+45789831,FALSE,TRUE,FALSE,"7 SELECT ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,706da376-60af-457e-bb87-d238a20ed358,OTC Drug,Drug,0,0,0,0
+37505462,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,59fc48ea-8b62-40b3-95a4-341bca6c6407,OTC Drug,Drug,0,0,0,0
+44358513,FALSE,TRUE,FALSE,MEDEX ANTI-DIARRHEAL RELIEF - loperamide hcl tablet,SPL,C,V,21ea306f-3ef7-0e72-e054-00144ff88e88,OTC Drug,Drug,0,0,0,0
+4171088,FALSE,TRUE,FALSE,Antidiarrhea agent,SNOMED,N,U,419028009,Substance,Drug,0,0,0,0
+45229884,FALSE,TRUE,FALSE,SIMILAC EXPERT CARE DIARRHEA,NDC,S,V,70074057768,Device,Device,0,0,0,0
+36247355,FALSE,TRUE,FALSE,Sentry Anti-Diarrhea Oral Product,RxNorm,C,V,1495183,Branded Dose Group,Drug,0,0,0,0
+36242182,FALSE,TRUE,FALSE,Pepto Diarrhea Control Oral Product,RxNorm,C,V,1185217,Branded Dose Group,Drug,0,0,0,0
+45252349,FALSE,TRUE,FALSE,ARANEUS DIADEMATUS 30 [hp_C]/1 PELLET [COLIC DIARRHEA],NDC,N,V,064117305,9-digit NDC,Drug,0,0,0,0
+45788331,FALSE,TRUE,FALSE,"aloe socotrina, chamomilla, cinchona officinalis, colocynthis, croton tigium, cuprum arsenicosum, ge... 10[hp_X]/59mL ORAL LIQUID [diarrhea relief]",SPL,C,V,625faf31-7d90-4a3a-a673-43a87492b4a9,OTC Drug,Drug,0,0,0,0
+37067912,FALSE,TRUE,FALSE,Bovine diarrhea virus Ab | Milk | Microbiology,LOINC,C,V,LP379211-8,LOINC Hierarchy,Measurement,0,0,0,0
+45651421,FALSE,TRUE,FALSE,quercus robur nut 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,bdcc8441-86e7-4feb-9f6c-fb67d93cdb59,OTC Drug,Drug,0,0,0,0
+46298423,FALSE,TRUE,FALSE,VOMITING DIARRHEA - pseudognaphalium obtusifolium pellet,SPL,C,V,5e81e8e8-9712-4f95-b753-6324bdbc0553,OTC Drug,Drug,0,0,0,0
+37296862,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,f335ee58-190b-42b6-8399-3d5a8937af87,OTC Drug,Drug,0,0,0,0
+46304833,FALSE,TRUE,FALSE,CIRCLE K ANTI-DIARRHEAL - loperamide hydrochloride tablet,SPL,C,V,d8a8b42b-4a42-4b89-843a-b355d5d269cd,OTC Drug,Drug,0,0,0,0
+42662498,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [anti diarrheal anti gas]",SPL,C,V,3af0c45f-5eca-4739-8426-f959a5d9e5e5,OTC Drug,Drug,0,0,0,0
+45685312,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,d9869610-4bd3-4992-bc86-196b69eec387,OTC Drug,Drug,0,0,0,0
+775677,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,e417fd47-84a8-4cbc-9a7c-45ede676bd8e,OTC Drug,Drug,0,0,0,0
+42506795,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [7 select anti diarrheal]",SPL,C,V,5601c77f-154b-4af6-8aaf-b3c7e3439b5e,OTC Drug,Drug,0,0,0,0
+44406700,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [smart sense anti diarrheal],SPL,C,V,f3a97c26-ade7-4226-af73-8b3c9684ade3,OTC Drug,Drug,0,0,0,0
+4244113,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 - respiratory syncytial virus vaccine - leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona - pasteurella haemolytica bacterin,SNOMED,N,D,59028007,Pharma/Biol Product,Observation,0,0,0,0
+36464302,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,77153c33-fa26-467e-9c71-4fd227f9e7ed,OTC Drug,Drug,0,0,0,0
+45668568,FALSE,TRUE,FALSE,"TOPCARE ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,da347b47-d8a5-4cf9-9579-79e6fe57fed5,OTC Drug,Drug,0,0,0,0
+1752289,FALSE,TRUE,FALSE,bismuth subsalicylate 525mg/1 ORAL TABLET [pepto-bismol diarrhea],SPL,C,V,84eefe42-6e2e-f8bb-e053-2a91aa0a8a80,OTC Drug,Drug,0,0,0,0
+36151795,FALSE,TRUE,FALSE,"GOOD SENSE ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,345be8d9-4fc9-40a2-a9f3-775d48beb85b,OTC Drug,Drug,0,0,0,0
+45880166,FALSE,TRUE,FALSE,Medical-diarrhea,LOINC,S,V,LA17549-9,Answer,Meas Value,0,0,0,0
+44381379,FALSE,TRUE,FALSE,arsenic trioxide - cupric arsenite - veratrum album root 6[hp_C]/1 ORAL PELLET [whp be gone diarrhea tm],SPL,C,V,4d71b0fe-d9d2-4c93-82a7-eddc1fa66b05,OTC Drug,Drug,0,0,0,0
+4056799,FALSE,TRUE,FALSE,Bovine virus diarrhea vaccine /leptospira canicola/grippotyphosa/hardjo/icterohemorrhagiae/pomona bacterin,SNOMED,N,D,18263001,Pharma/Biol Product,Observation,0,0,0,0
+44928340,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [anti diarrheal]",NDC,N,V,056062224,9-digit NDC,Drug,0,0,0,0
+45081154,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 CAPSULE [Anti Diarrheal],NDC,N,V,049035375,9-digit NDC,Drug,0,0,0,0
+1767529,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,8dd8fce6-c2bc-4616-ac8c-f763decab8af,OTC Drug,Drug,0,0,0,0
+46334860,FALSE,TRUE,FALSE,DIARRHEA - quercus robur nut pellet,NDC,N,V,64117017201,11-digit NDC,Drug,0,0,0,0
+736505,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,234487c0-5f4c-402c-9d33-162130deaa11,OTC Drug,Drug,0,0,0,0
+46333823,FALSE,TRUE,FALSE,DIARRHEA COLIC - gamboge pellet,NDC,N,V,64117023202,11-digit NDC,Drug,0,0,0,0
+592557,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [leader anti diarrheal]",SPL,C,V,7e94f08a-390b-63dc-e053-2a91aa0a66c7,OTC Drug,Drug,0,0,0,0
+35508941,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,ed28814d-9733-46ff-930f-b148e31f2f51,OTC Drug,Drug,0,0,0,0
+40116429,FALSE,TRUE,FALSE,Loperamide 2 MG [Anti-Diarrheal],RxNorm,N,D,572497,Branded Drug Comp,Drug,0,0,0,0
+45354691,FALSE,TRUE,FALSE,LILIUM LANCIFOLIUM BULB 30 [hp_C]/mL PELLET [Dysmenorrhea Diarrhea],NDC,N,V,064117842,9-digit NDC,Drug,0,0,0,0
+45678334,FALSE,TRUE,FALSE,"aloe socotrina, chamomilla, cinchona officinalis, colocynthis, croton tiglium, cuprum arsenicosum, g... 10[hp_X]/29.6mL ORAL LIQUID [diarrhea symptom formula]",SPL,C,V,96abc10e-b820-4680-ba38-5a3f535f67c8,OTC Drug,Drug,0,0,0,0
+1160561,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,33c032df-06d1-4ae4-886b-01757843e93b,OTC Drug,Drug,0,0,0,0
+36173221,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,c0f9dbcd-ee09-4735-aa3c-ddae3f95f843,OTC Drug,Drug,0,0,0,0
+45286522,FALSE,TRUE,FALSE,QUERCUS ROBUR NUT 30 [hp_C]/mL PELLET [Diarrhea],NDC,N,V,064117172,9-digit NDC,Drug,0,0,0,0
+3020251,FALSE,TRUE,FALSE,Diarrhea [CCC],LOINC,S,V,28089-1,Survey,Observation,0,0,0,0
+46354029,FALSE,TRUE,FALSE,DIARRHEA COLIC - gamboge pellet,NDC,N,V,64117023201,11-digit NDC,Drug,0,0,0,0
+737085,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,9d6e6ba8-ee1c-40cb-9232-450316b53d97,OTC Drug,Drug,0,0,0,0
+1184924,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,e47631c6-5e8d-48ce-a5f3-4482e9a7463c,OTC Drug,Drug,0,0,0,0
+46333508,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",NDC,N,V,55714226101,11-digit NDC,Drug,0,0,0,0
+42866394,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,206eb63e-0631-40ac-966c-7343d7a02cb9,OTC Drug,Drug,0,0,0,0
+45640418,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,c3d5d378-e54b-4c05-9195-a53d456e4e20,OTC Drug,Drug,0,0,0,0
+45013230,FALSE,TRUE,FALSE,"LOPERAMIDE HYDROCHLORIDE 2 mg/1 CAPSULE, LIQUID FILLED [Anti-Diarrheal]",NDC,N,V,059779520,9-digit NDC,Drug,0,0,0,0
+35601066,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,a0d54706-7d52-433b-a485-8d38ac01b466,OTC Drug,Drug,0,0,0,0
+36463677,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,1c2e5a87-d33e-4150-b273-874ade076dfe,OTC Drug,Drug,0,0,0,0
+37600359,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [up and up anti diarrheal],SPL,C,V,003bf08a-73e0-4fd3-a9c0-b613bc027627,OTC Drug,Drug,0,0,0,0
+44663568,FALSE,TRUE,FALSE,LOPERAMIDE HYDROCHLORIDE ORAL CAPSULE [DIARRHEA RELIEFS],DPD,N,D,OMOP139076,Branded Drug Form,Drug,0,0,0,0
+46361252,FALSE,TRUE,FALSE,DIARRHEA DYSPEPSIA - magnesium cation pellet,NDC,N,V,64117015901,11-digit NDC,Drug,0,0,0,0
+40184744,FALSE,TRUE,FALSE,loperamide hydrochloride 2 MG [Maalox Anti-Diarrheal],RxNorm,S,V,978020,Branded Drug Comp,Drug,0,0,0,0
+46297435,FALSE,TRUE,FALSE,COLIC DIARRHEA - araneus diadematus pellet,SPL,C,V,7e552eda-520b-4880-bf03-12827398fb99,OTC Drug,Drug,0,0,0,0
+44348885,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,8dfa908a-86a3-42b2-8ded-1ac26e79ca05,OTC Drug,Drug,0,0,0,0
+42884149,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [up and up anti diarrheal],SPL,C,V,e17b693e-1b2a-45cd-8049-276fb2e17c65,OTC Drug,Drug,0,0,0,0
+36241567,FALSE,TRUE,FALSE,Maalox Anti-Diarrheal Oral Product,RxNorm,C,V,1184968,Branded Dose Group,Drug,0,0,0,0
+46244563,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,ef456ef1-af0b-453c-a435-1647e58fe395,OTC Drug,Drug,0,0,0,0
+36000541,FALSE,TRUE,FALSE,aethusa cynapium 30[hp_C]/mL ORAL PELLET [vomiting diarrhea],SPL,C,V,759952dd-41de-475e-95af-299433bfd175,OTC Drug,Drug,0,0,0,0
+35903940,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,9282c5e5-a030-4ba9-ba7c-da6edb279916,OTC Drug,Drug,0,0,0,0
+45787830,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,5dac576f-4c02-48d7-9680-43b8fb37f139,OTC Drug,Drug,0,0,0,0
+583340,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [good neighbor pharmacy anti diarrheal]",SPL,C,V,ab9c7a0d-a74f-4ff5-b791-bdd68e7892e9,OTC Drug,Drug,0,0,0,0
+45784009,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [lil drug store anti-diarrheal],SPL,C,V,391abeec-6baf-408d-b227-5f8e5ea7d769,OTC Drug,Drug,0,0,0,0
+45695526,FALSE,TRUE,FALSE,"RX ACT ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,b0c477a9-9ef8-4450-8d1d-1881015073d1,OTC Drug,Drug,0,0,0,0
+42817195,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [equate anti diarrheal]",SPL,C,V,761c3704-9a14-42ae-9829-707f6f7c813d,OTC Drug,Drug,0,0,0,0
+46314417,FALSE,TRUE,FALSE,"DIARRHEA SYMPTOM FORMULA - aloe socotrina, chamomilla, cinchona officinalis, colocynthis, croton tiglium, cuprum arsenicosum, gelsemium sempervirens, ipecacuanha, nux vomica, phosphoricum acidum, podophyllum peltatum, veratrum album liquid",SPL,C,V,40ea5d22-6a29-4364-b7e8-6d772bcca984,OTC Drug,Drug,0,0,0,0
+44596957,FALSE,TRUE,FALSE,LOPERAMIDE HYDROCHLORIDE ORAL TABLET [ANTI-DIARRHEAL],DPD,N,D,OMOP151768,Branded Drug Form,Drug,0,0,0,0
+45896601,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,a6a37c81-a02e-40d6-9319-96ced6900322,OTC Drug,Drug,0,0,0,0
+46297615,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,f34c304a-67f0-4b5c-9bed-1041dbaf8147,OTC Drug,Drug,0,0,0,0
+36150687,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,01964f8a-f05c-4f72-9530-e0cffd981ffa,OTC Drug,Drug,0,0,0,0
+36463431,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,1537febf-2816-438b-979a-8c8f16f06de5,OTC Drug,Drug,0,0,0,0
+46238530,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,0eea5e0b-79db-481a-92f9-2aa57651c5b2,OTC Drug,Drug,0,0,0,0
+44340558,FALSE,TRUE,FALSE,"DIARRHEA AND GAS - thuja occidentalis, sulphur, argentum nitricum, colocynthis, mercurius corrosivus, arsenicum album, nux vomica, podophyllum peltatum, veratrum album liquid",SPL,C,V,f1dbae09-c0cd-49f5-83bc-74ee5552a06a,Animal Drug,Drug,0,0,0,0
+1010916,FALSE,TRUE,FALSE,I am embarrassed by having diarrhea in the past 7 days,LOINC,N,V,LP146914-9,LOINC Component,Observation,0,0,0,0
+45639779,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl tablet,SPL,C,V,a55e476a-b821-46bc-bde7-56a7963b8ee5,OTC Drug,Drug,0,0,0,0
+44403425,FALSE,TRUE,FALSE,loperamide 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,d7071df0-3daa-426d-8050-5bb1832d86af,OTC Drug,Drug,0,0,0,0
+36469488,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL LIQUID [kaopectate peppermint anti-diarrheal],SPL,C,V,29b3ab8c-00c3-3e92-e054-00144ff88e88,OTC Drug,Drug,0,0,0,0
+44407124,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,f72e385c-237b-4b30-b9d3-cbb92c096081,OTC Drug,Drug,0,0,0,0
+45879849,FALSE,TRUE,FALSE,Diarrhea/constipation,LOINC,S,V,LA15466-8,Answer,Meas Value,0,0,0,0
+46352131,FALSE,TRUE,FALSE,BILIOUSNESS DIARRHEA - iron pellet,NDC,N,V,64117079101,11-digit NDC,Drug,0,0,0,0
+4304659,FALSE,TRUE,FALSE,Bovine diarrhea virus 1 antibody assay,SNOMED,N,D,117977008,Procedure,Procedure,0,0,0,0
+1392674,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL LIQUID [kaopectate regular strength vanilla flavor anti diarrheal],SPL,C,V,613d11ac-9ee7-4745-adfa-b9c0109314f7,OTC Drug,Drug,0,0,0,0
+37313919,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [anti diarrheal],SPL,C,V,58f8b1cb-5be5-4125-a5aa-a4d8eb50c669,OTC Drug,Drug,0,0,0,0
+590831,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,507acd63-b2b4-465e-bb94-2d66724de20a,OTC Drug,Drug,0,0,0,0
+42810213,FALSE,TRUE,FALSE,bismuth subsalicylate 262mg/15mL ORAL SUSPENSION [cvs health anti-diarrheal vanilla],SPL,C,V,4933d61a-3af0-4e33-9c88-0840dc167ee7,OTC Drug,Drug,0,0,0,0
+46312695,FALSE,TRUE,FALSE,BURNING DIARRHEA - mercuric sulfate pellet,SPL,C,V,36c8b5c0-a52a-4b1c-998a-b7d49da634c5,OTC Drug,Drug,0,0,0,0
+37291043,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,5d12865f-567b-4e55-9da5-cb87cf952dfd,OTC Drug,Drug,0,0,0,0
+44390498,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,6b1161c3-c076-4a70-a7c7-fdec27855649,OTC Drug,Drug,0,0,0,0
+36499135,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [good neighbor pharmacy anti diarrheal]",SPL,C,V,c568787b-be5b-45c3-9d7b-6890b55334f6,OTC Drug,Drug,0,0,0,0
+45642609,FALSE,TRUE,FALSE,ceanothus americanus leaf 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,2438f7f8-1d25-408d-abc4-49fcc0d9f6a1,OTC Drug,Drug,0,0,0,0
+19061843,FALSE,TRUE,FALSE,Diarrhea and Cramp,RxNorm,N,V,216585,Brand Name,Drug,0,0,0,0
+36184018,FALSE,TRUE,FALSE,"DIARRHEA CP - aethusa cynapium, arsenic trioxide, oyster shell calicum carbonate, crude, matricaria chamomilla, citrullus colocynthis fruit pulp, iron, lycopodium clavatum spore, mercurius solobilis, phosphorus, podophyllum, anemone pulsatilla, delphinium",NDC,N,V,43406005901,11-digit NDC,Drug,0,0,0,0
+37292186,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,e99c80a6-6f32-4a92-b0e3-2b60159f2569,OTC Drug,Drug,0,0,0,0
+44367018,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,16f5b062-ac9f-48be-8590-51b9bb412ef8,OTC Drug,Drug,0,0,0,0
+46342403,FALSE,TRUE,FALSE,"DIARRHEA RELIEF - aloe socotrina, chamomilla, cinchona officinalis, colocynthis, croton tigium, cuprum arsenicosum, gelsemium sempervirens, ipecacuanha, nux vomica, phosphoricum acidum, podophyllum peltatum, veratrum album liquid",NDC,N,V,57955002002,11-digit NDC,Drug,0,0,0,0
+44342740,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,18250ace-8fc9-4c26-bad3-f8988398414a,OTC Drug,Drug,0,0,0,0
+40245387,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,524dfa7e-d677-4829-b4ce-b780463c1b43,OTC Drug,Drug,0,0,0,0
+46307526,FALSE,TRUE,FALSE,DIARRHEA - quercus robur nut pellet,SPL,C,V,beba9aef-28d7-4415-a9ca-f726dfcdaf4b,OTC Drug,Drug,0,0,0,0
+45644455,FALSE,TRUE,FALSE,"LOPERAMIDE HCL ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,7b71e593-ed27-43e9-9683-ad8acd8b9d0f,OTC Drug,Drug,0,0,0,0
+45679279,FALSE,TRUE,FALSE,gamboge 30[hp_C]/mL ORAL PELLET [diarrhea colic],SPL,C,V,be99724e-cdca-470a-b4c6-a6fdbfdffda9,OTC Drug,Drug,0,0,0,0
+36660787,FALSE,TRUE,FALSE,Bovine diarrhea virus | XXX | Microbiology,LOINC,C,V,LP418059-4,LOINC Hierarchy,Measurement,0,0,0,0
+37313104,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,a14bd404-cc79-06e0-e053-2a95a90a6841,OTC Drug,Drug,0,0,0,0
+36174582,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,e4d2fa21-5682-4cf0-a483-ffda170fd380,OTC Drug,Drug,0,0,0,0
+44817610,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus RNA | XXX,LOINC,N,D,LP184233-7,LOINC Hierarchy,Measurement,0,0,0,0
+45659844,FALSE,TRUE,FALSE,Anti-Diarrheal,SPL,N,V,3fb582e8-fab7-49dc-84bb-8a885ff34d29,SPL,Drug,0,0,0,0
+4216808,FALSE,TRUE,FALSE,Bovine virus diarrhea vaccine - campylobacter fetus - leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona bacterin,SNOMED,N,D,81382007,Pharma/Biol Product,Observation,0,0,0,0
+1393333,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [health mart anti diarrheal]",SPL,C,V,fc94940f-b981-4721-8bfb-18a533c4f911,OTC Drug,Drug,0,0,0,0
+46320848,FALSE,TRUE,FALSE,DIARRHEA - rheum officinale root pellet,SPL,C,V,26a0aedf-9719-4ac5-9173-efb12b27fc2d,OTC Drug,Drug,0,0,0,0
+1565165,FALSE,TRUE,FALSE,benzoic acid 30[hp_C]/mL ORAL PELLET [rheumatism diarrhea],SPL,C,V,a0cf3dbf-7be7-4cd6-a5d0-8842bf92c645,OTC Drug,Drug,0,0,0,0
+3060506,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 - respiratory syncytial virus vaccine - pasteurella haemolytica bacterin,Nebraska Lexicon,N,D,24148003,Pharma/Biol Product,Drug,0,0,0,0
+582344,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal loperamide hcl, 2 mg caplets]",SPL,C,V,5ac62cd9-b2ba-4af3-aed9-6462c5375f01,OTC Drug,Drug,0,0,0,0
+45626400,FALSE,TRUE,FALSE,UP AND UP ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,3a759463-f622-4f15-a34f-0bf8e3af7942,OTC Drug,Drug,0,0,0,0
+36000996,FALSE,TRUE,FALSE,pseudognaphalium obtusifolium 30[hp_C]/mL ORAL PELLET [vomiting diarrhea],SPL,C,V,c02d746c-576f-4b80-bbbe-68c877efb3d1,OTC Drug,Drug,0,0,0,0
+44356030,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,1514e697-f034-4b81-88a9-5f424d736a6a,OTC Drug,Drug,0,0,0,0
+45642886,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,31f9b652-e9c9-46ed-a46c-22d30ad11004,OTC Drug,Drug,0,0,0,0
+36469414,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [careone diarrhea control],SPL,C,V,2613d6ab-6e0c-43c3-b3b7-0e72b2d74663,OTC Drug,Drug,0,0,0,0
+45803370,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL CAPSULE [anti diarrheal],SPL,C,V,f5fda874-d187-4d1c-ae65-a0a040642034,OTC Drug,Drug,0,0,0,0
+770582,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,5bb1de7d-7a31-43ef-98a2-39a35612da28,OTC Drug,Drug,0,0,0,0
+40789445,FALSE,TRUE,FALSE,Bovine diarrhea virus,LOINC,N,V,LP19590-6,LOINC Component,Observation,0,0,0,0
+37045782,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus Ab.IgA/Positive control,LOINC,N,V,LP286861-2,LOINC Component,Observation,0,0,0,0
+40768855,FALSE,TRUE,FALSE,"When did you have antacids, laxatives, or anti-diarrheals [Date and time] [PhenX]",LOINC,S,V,66173-6,Clinical Observation,Observation,0,0,0,0
+44404058,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,dc81f62b-4533-4ade-8ad6-47fc66ad0aa1,OTC Drug,Drug,0,0,0,0
+46353570,FALSE,TRUE,FALSE,DIARRHEA - croton oil pellet,NDC,N,V,64117013802,11-digit NDC,Drug,0,0,0,0
+4193498,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 vaccine,SNOMED,N,D,79273008,Pharma/Biol Product,Observation,0,0,0,0
+583777,FALSE,TRUE,FALSE,PEPTO DIARRHEA - bismuth subsalicylate suspension,NDC,N,V,37000053804,11-digit NDC,Drug,0,0,0,0
+35929303,FALSE,TRUE,FALSE,Persistent diarrhea lasting longer than two weeks,NAACCR,S,V,kaposi_sarcoma@2890@020,NAACCR Value,Meas Value,0,0,0,0
+4302793,FALSE,TRUE,FALSE,Defecation reflex - spurious diarrhea,SNOMED,S,V,418450005,Clinical Finding,Condition,0,0,0,0
+35509283,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,02d4148f-1593-4b82-8042-06070a377364,OTC Drug,Drug,0,0,0,0
+42887362,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [anti diarrheal],SPL,C,V,f4614ab4-2726-46c8-ade9-38ff514fb724,OTC Drug,Drug,0,0,0,0
+35506871,FALSE,TRUE,FALSE,"ANTI DIARRHEAL AND ANTI GAS - loperamide hydrochloride, simethicone tablet",SPL,C,V,0999243a-c3be-41a6-b327-962e63d8c356,OTC Drug,Drug,0,0,0,0
+1767705,FALSE,TRUE,FALSE,araneus diadematus 30[hp_C]/1 ORAL PELLET [colic diarrhea],SPL,C,V,c7c83259-2d8a-481e-9d72-f0c6af07fc8b,OTC Drug,Drug,0,0,0,0
+45627284,FALSE,TRUE,FALSE,pseudognaphalium obtusifolium 30[hp_C]/mL ORAL PELLET [vomiting diarrhea],SPL,C,V,63bb3ca5-38a6-4498-9c42-0ad4e6867b36,OTC Drug,Drug,0,0,0,0
+46358638,FALSE,TRUE,FALSE,"HOMEOPATHIC DIARRHEA FORMULA - aloe socotrina, antimonium cruda, arsenicum album, belladonna, bryonia album, chamomilla, colocynthis, podophyllum peltatum, veratrum album tablet",NDC,N,V,10578002790,11-digit NDC,Drug,0,0,0,0
+40782349,FALSE,TRUE,FALSE,Bovine diarrhea virus RNA | Tissue and Smears,LOINC,N,D,LP132298-3,LOINC Hierarchy,Measurement,0,0,0,0
+36463079,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,01434d38-2c9d-4222-adb8-cf7b4909cac8,OTC Drug,Drug,0,0,0,0
+45708134,FALSE,TRUE,FALSE,KAOPECTATE REGULAR STRENGTH VANILLA FLAVOR ANTI DIARRHEAL - bismuth subsalicylate liquid,SPL,C,V,f577d526-ec77-4dca-9428-483b4581bf52,OTC Drug,Drug,0,0,0,0
+46334622,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",NDC,N,V,55714226001,11-digit NDC,Drug,0,0,0,0
+44393961,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,878f02c8-0781-450f-b321-76f840060dbf,OTC Drug,Drug,0,0,0,0
+37058703,FALSE,TRUE,FALSE,Bovine diarrhea virus 1 Ab | Serum | Microbiology,LOINC,C,V,LP379208-4,LOINC Hierarchy,Measurement,0,0,0,0
+44105989,FALSE,TRUE,FALSE,Loperamide 2 MG [Anti-Diarrheal],RxNorm Extension,S,V,OMOP1100620,Branded Drug Comp,Drug,0,0,0,0
+1392573,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SUSPENSION [health mart anti diarrheal],SPL,C,V,3a5efbed-ca3e-4f9b-9943-5f4b45f3d6f1,OTC Drug,Drug,0,0,0,0
+35106043,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,5c4de541-6bda-4ce4-ac7a-09546b85d2cc,OTC Drug,Drug,0,0,0,0
+44374823,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [handy solutions anti-diarrheal],SPL,C,V,3d1b65d0-c311-06a7-e054-00144ff88e88,OTC Drug,Drug,0,0,0,0
+45626064,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,2a7e8ac5-05b5-4bec-889f-10e145df9fc9,OTC Drug,Drug,0,0,0,0
+45675781,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hcl capsule, liquid filled",SPL,C,V,229cf301-ca98-4461-a327-a9c50828704b,OTC Drug,Drug,0,0,0,0
+1018439,FALSE,TRUE,FALSE,Bovine virus diarrhea virus,LOINC,N,D,LP268897-8,LOINC Component,Observation,0,0,0,0
+46244214,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,e0ad1661-d12b-4058-9c0f-5a640768c98d,OTC Drug,Drug,0,0,0,0
+46347688,FALSE,TRUE,FALSE,DIARRHEA - ceanothus americanus leaf pellet,NDC,N,V,64117012901,11-digit NDC,Drug,0,0,0,0
+36466375,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,ff7d8b42-695b-4050-802c-bc7a7b688ce9,OTC Drug,Drug,0,0,0,0
+44367167,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,18406018-3ea1-4a1c-9d5a-833181d4bd67,OTC Drug,Drug,0,0,0,0
+45674567,FALSE,TRUE,FALSE,Loperamide HCl Anti-Diarrheal,SPL,N,V,ea8e967e-b620-4492-9fe7-c612d04580c5,SPL,Drug,0,0,0,0
+1356899,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [dg health anti diarrheal]",SPL,C,V,5c546a18-6bf4-4fca-bd5f-48f144eb11c4,OTC Drug,Drug,0,0,0,0
+36159645,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,ff129e3b-6983-4c2f-8c99-dd0e6dc3870f,OTC Drug,Drug,0,0,0,0
+36601217,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,d20c0331-1587-4928-a2c3-36a08723a392,OTC Drug,Drug,0,0,0,0
+4020481,FALSE,TRUE,FALSE,Diarrheagenic Escherichia coli,SNOMED,S,V,116398008,Organism,Observation,0,0,0,0
+36491096,FALSE,TRUE,FALSE,WHP BE GONE DIARRHEA TM - arsenic trioxide - cupric arsenite - veratrum album root pellet,NDC,N,V,68428074529,11-digit NDC,Drug,0,0,0,0
+35529783,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [sunmark anti diarrheal]",SPL,C,V,1236a3c0-a928-465d-98de-c50e3fbc9c0b,OTC Drug,Drug,0,0,0,0
+736427,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,3990279b-45ee-49cf-9ecf-9ce23731b59a,OTC Drug,Drug,0,0,0,0
+44355799,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,7ae72536-f822-4126-bd7e-52404589fe5c,OTC Drug,Drug,0,0,0,0
+40184718,FALSE,TRUE,FALSE,loperamide hydrochloride 0.2 MG/ML [Maalox Anti-Diarrheal],RxNorm,S,V,977995,Branded Drug Comp,Drug,0,0,0,0
+40478944,FALSE,TRUE,FALSE,Bovine viral diarrhea virus 1 antibody,SNOMED,N,D,444319006,Substance,Observation,0,0,0,0
+45643013,FALSE,TRUE,FALSE,"HEALTHY ACCENTS ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,3749411c-423e-4e3b-b017-f8656399f4d3,OTC Drug,Drug,0,0,0,0
+45132585,FALSE,TRUE,FALSE,SODIUM CATION 30 [hp_C]/mL PELLET [Dry Cough Diarrhea],NDC,N,V,064117118,9-digit NDC,Drug,0,0,0,0
+46328006,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,bcd1980f-e12c-4a8c-8238-f0b970a81957,OTC Drug,Drug,0,0,0,0
+36476094,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [health mart anti diarrheal]",SPL,C,V,d46b9303-049e-4496-af37-2e01f8274fd2,OTC Drug,Drug,0,0,0,0
+36474882,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,9d36ffe2-6470-4b73-853a-783a091af916,OTC Drug,Drug,0,0,0,0
+45794841,FALSE,TRUE,FALSE,"LEADER ANTI-DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,a1d831bb-08f8-404e-8e46-ca03a6980c6b,OTC Drug,Drug,0,0,0,0
+46355199,FALSE,TRUE,FALSE,SLOW DIGESTION DIARRHEA - gold trichloride pellet,NDC,N,V,64117011301,11-digit NDC,Drug,0,0,0,0
+45371562,FALSE,TRUE,FALSE,BENZOIC ACID 30 [hp_C]/mL PELLET [Rheumatism Diarrhea],NDC,N,V,064117115,9-digit NDC,Drug,0,0,0,0
+42694306,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,7d275f1a-ec28-49a9-b3bf-222f6d3e88f2,OTC Drug,Drug,0,0,0,0
+40245053,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal loperamide hcl]",SPL,C,V,1a844921-d55f-46c6-b348-01b68c8665d9,OTC Drug,Drug,0,0,0,0
+45662712,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,c6cc4ba7-0e7a-4dd6-a5cf-b7e16e1a6c75,OTC Drug,Drug,0,0,0,0
+1527776,FALSE,TRUE,FALSE,arsenic trioxide - cupric arsenite - veratrum album root 6[hp_C]/28g ORAL PELLET [diarrhea],SPL,C,V,9a673225-27bd-040a-e053-2a95a90a0a98,OTC Drug,Drug,0,0,0,0
+46308040,FALSE,TRUE,FALSE,DIARRHEA VOMITING - veratrum album root pellet,SPL,C,V,3a341ec4-5fb9-4829-95a8-09c5964b9833,OTC Drug,Drug,0,0,0,0
+37070683,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus whole genome,LOINC,N,V,LP249877-4,LOINC Component,Observation,0,0,0,0
+44379105,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,48a962c8-0660-0681-e054-00144ff88e88,OTC Drug,Drug,0,0,0,0
+36152531,FALSE,TRUE,FALSE,HEALTH MART ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,53b5065a-b7af-4827-9e1e-0b4cb6defe60,OTC Drug,Drug,0,0,0,0
+44928799,FALSE,TRUE,FALSE,Loperamide HCl 2 mg/1 CAPSULE [Anti Diarrheal],NDC,N,V,076000375,9-digit NDC,Drug,0,0,0,0
+1184277,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [up and up anti diarrheal]",SPL,C,V,9037236e-6666-4edf-b779-9b5ecb665f21,OTC Drug,Drug,0,0,0,0
+46340530,FALSE,TRUE,FALSE,DIARRHEA - rheum officinale root pellet,NDC,N,V,64117017501,11-digit NDC,Drug,0,0,0,0
+37016247,FALSE,TRUE,FALSE,Hypokalemic alkalosis due to diarrhea,SNOMED,S,V,256571000119105,Clinical Finding,Condition,0,0,0,0
+35511651,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,6bd79bd3-3ec2-4b5b-95e9-bef572958da5,OTC Drug,Drug,0,0,0,0
+45893636,FALSE,TRUE,FALSE,loperamides 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,0793f9a7-2a80-48f8-8363-7df589f415f8,OTC Drug,Drug,0,0,0,0
+44603785,FALSE,TRUE,FALSE,LOPERAMIDE HYDROCHLORIDE 2 MG [DIARRHEA RELIEF],DPD,N,D,OMOP131925,Branded Drug Comp,Drug,0,0,0,0
+3059156,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3 - respiratory syncytial virus vaccine - leptospira canicola - grippotyphosa - hardjo - icterohaemorrhagiae - pomona - pasteurella haemolytica bacterin,Nebraska Lexicon,N,D,59028007,Pharma/Biol Product,Drug,0,0,0,0
+45132452,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [anti diarrheal]",NDC,N,V,059779700,9-digit NDC,Drug,0,0,0,0
+45690952,FALSE,TRUE,FALSE,"FAMILY WELLNESS ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,dca62593-20dd-49df-9100-c32e69acf860,OTC Drug,Drug,0,0,0,0
+44344620,FALSE,TRUE,FALSE,"CAREONE DIARRHEA CONTROL - loperamide hcl tablet, film coated",SPL,C,V,17569b2c-38f9-43bd-87ac-eb82b64866e6,OTC Drug,Drug,0,0,0,0
+36000312,FALSE,TRUE,FALSE,aloe 30[hp_C]/mL ORAL PELLET [diarrhea],SPL,C,V,23b5704f-4155-45ee-9fce-3811b6c9c9b0,OTC Drug,Drug,0,0,0,0
+42868820,FALSE,TRUE,FALSE,I have diarrhea in the past 7 days [FACIT],LOINC,S,V,70349-6,Survey,Observation,0,0,0,0
+45286515,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [kirkland signature anti diarrheal]",NDC,N,V,063981224,9-digit NDC,Drug,0,0,0,0
+45696392,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,d8a55fb6-bb57-42d6-8e20-67fc91f38097,OTC Drug,Drug,0,0,0,0
+46306031,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",SPL,C,V,1babb8ca-7561-9710-7c34-63b017719ac0,OTC Drug,Drug,0,0,0,0
+36470290,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,4cbac3c7-3488-451f-baa2-4471c4f76f7c,OTC Drug,Drug,0,0,0,0
+46238401,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,098b582a-0348-42de-b636-6fa1433a1c5f,OTC Drug,Drug,0,0,0,0
+45217287,FALSE,TRUE,FALSE,Loperamide HCl 1 mg/5mL SOLUTION [anti diarrheal],NDC,N,V,041250377,9-digit NDC,Drug,0,0,0,0
+36151753,FALSE,TRUE,FALSE,"ANTI DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,e5c96703-1487-4943-9b16-fa6a05e6b02e,OTC Drug,Drug,0,0,0,0
+42817549,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,7f9541f3-3ebd-4c5d-8f61-988fac070bf5,OTC Drug,Drug,0,0,0,0
+1393140,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [lil drug store anti-diarrheal],SPL,C,V,b1cf5217-efc0-46bc-bec2-1a43d23d1269,OTC Drug,Drug,0,0,0,0
+4257049,FALSE,TRUE,FALSE,Diarrhea care education,SNOMED,S,V,408875008,Procedure,Procedure,0,0,0,0
+1392236,FALSE,TRUE,FALSE,KAOPECTATE REGULAR STRENGTH VANILLA FLAVOR ANTI DIARRHEAL - bismuth subsalicylate liquid,SPL,C,V,8bfcdbd8-9813-4a70-94e0-f6690f63838a,OTC Drug,Drug,0,0,0,0
+46337069,FALSE,TRUE,FALSE,"DIARRHEA RELIEF - china, bryonia alba, chamomilla, colocynthis, ipeca, belladonna, potentilla anserina pellet",NDC,N,V,60512905501,11-digit NDC,Drug,0,0,0,0
+4145150,FALSE,TRUE,FALSE,Bovine rhinotracheitis - virus diarrhea - parainfluenza 3-respiratory syncytial virus vaccine,SNOMED,N,D,34144006,Pharma/Biol Product,Observation,0,0,0,0
+35105859,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,1a2973a9-b22d-4d80-bdc4-ed165e78bbf1,OTC Drug,Drug,0,0,0,0
+36154270,FALSE,TRUE,FALSE,HARRIS TEETER ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,6a3b1e69-65f4-4f6c-9492-f1b8b08680bf,OTC Drug,Drug,0,0,0,0
+736415,FALSE,TRUE,FALSE,"CAREONE DIARRHEA AND GAS CONTROL - loperamide hydrochloride, simethicone tablet",SPL,C,V,dfa3db5a-cef6-4ed5-b9f1-a20b6d1657b3,OTC Drug,Drug,0,0,0,0
+45642600,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,23c80369-7446-4b30-bb15-0043916b7c7c,OTC Drug,Drug,0,0,0,0
+35515501,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,8c77262a-9310-4fee-8cc5-9082bafb55c9,OTC Drug,Drug,0,0,0,0
+773839,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [up and up anti diarrheal]",SPL,C,V,59473850-bd27-43f3-ad68-70962ed6489f,OTC Drug,Drug,0,0,0,0
+42645522,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [anti diarrheal and anti gas]",SPL,C,V,69c50b26-c5af-4fe3-a9d4-7629556cfd30,OTC Drug,Drug,0,0,0,0
+795920,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,1a8eb4d5-2279-426b-8bdd-34a98f54bdbf,OTC Drug,Drug,0,0,0,0
+36696293,FALSE,TRUE,FALSE,"DIARRHEA - pyrogenium, aconitum nap., arg. nit., arsenicum alb., baptisia, bryonia, carbo veg., chamomilla, cinchona, collinsonia, colocynthis, elaterium, gelsemium, ipecac., iris versicolor, lycopodium, podoph. pelt., raphanus, tabacum, vaccinium, zingib",SPL,C,V,9148cd61-528e-3475-e053-2a95a90a1762,OTC Drug,Drug,0,0,0,0
+45700939,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,a8681492-2480-409a-8fe2-df336baf7ce3,OTC Drug,Drug,0,0,0,0
+3046393,FALSE,TRUE,FALSE,Diarrhea [Minimum Data Set],LOINC,S,V,45622-8,Survey,Observation,0,0,0,0
+45029787,FALSE,TRUE,FALSE,"Loperamide Hydrochloride 2 mg/1 TABLET, FILM COATED [good neighbor pharmacy anti diarrheal]",NDC,N,V,024385554,9-digit NDC,Drug,0,0,0,0
+46341624,FALSE,TRUE,FALSE,DRY COUGH DIARRHEA - sodium cation pellet,NDC,N,V,64117011802,11-digit NDC,Drug,0,0,0,0
+37071329,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus gene sequence and phylogenetic analysis | XXX | Microbiology,LOINC,C,V,LP379484-1,LOINC Hierarchy,Measurement,0,0,0,0
+45696986,FALSE,TRUE,FALSE,ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,f22bd36f-bf30-4ecd-a12b-089a14070f16,OTC Drug,Drug,0,0,0,0
+46299118,FALSE,TRUE,FALSE,DIARRHEA VOMITING - cupric arsenite pellet,SPL,C,V,c452402c-7b35-4d57-84af-ff1b3c9a00a5,OTC Drug,Drug,0,0,0,0
+43050053,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,82ba8480-953b-4eb1-aa2e-40adc8833d66,OTC Drug,Drug,0,0,0,0
+1010354,FALSE,TRUE,FALSE,"Did you have nausea or an upset stomach, or the feeling that you were going to have diarrhea",LOINC,N,V,LP140527-5,LOINC Component,Observation,0,0,0,0
+44402416,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,cea56d99-9f8a-4eb7-9d42-91ef9928cee8,OTC Drug,Drug,0,0,0,0
+770174,FALSE,TRUE,FALSE,ANTI-DIARRHEAL - loperamide hcl tablet,SPL,C,V,1b82f4ce-0cf5-46d1-9894-9f1271b29569,OTC Drug,Drug,0,0,0,0
+45671567,FALSE,TRUE,FALSE,"aloe socotrina, arsenicum album, bryonia, collinsonia canadensis, colocynthis, croton tiglium, cupru... 3[hp_X]/mL / 4[hp_X]/mL / 6[hp_X]/mL / 8[hp_X]/mL ORAL LIQUID [diarrhea complex]",SPL,C,V,61e7dc9b-0c71-4a4c-8ce2-804635196890,OTC Drug,Drug,0,0,0,0
+19049080,FALSE,TRUE,FALSE,Anti-Diarrhea,RxNorm,N,V,215315,Brand Name,Drug,0,0,0,0
+36662222,FALSE,TRUE,FALSE,Bovine diarrhea virus subtype,LOINC,N,V,LP417885-3,LOINC Component,Observation,0,0,0,0
+799242,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [leader anti diarrheal]",SPL,C,V,2ec0737f-b4cf-472e-b610-4fd5a77a7d5a,OTC Drug,Drug,0,0,0,0
+45801211,FALSE,TRUE,FALSE,"FAD FIRST AID DIRECT ANTI-DIARRHEAL - loperamide hcl tablet, film coated",SPL,C,V,e0ac696c-5d90-4abb-ad6e-43e039c29fea,OTC Drug,Drug,0,0,0,0
+42886294,FALSE,TRUE,FALSE,loperamide hcl 1mg/7.5mL ORAL SOLUTION [health mart anti diarrheal],SPL,C,V,5f78c217-4623-44cb-978f-e39ffecd58b6,OTC Drug,Drug,0,0,0,0
+42806038,FALSE,TRUE,FALSE,"LIL DRUG STORE ANTI-DIARRHEAL SOFT GELATIN - loperamide hydrochloride capsule, liquid filled",SPL,C,V,ed0ccb3b-c156-43fa-a746-e7700770f42c,OTC Drug,Drug,0,0,0,0
+796552,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,ec269d9d-d895-4951-a4c1-561a9b589e2f,OTC Drug,Drug,0,0,0,0
+773726,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [leader anti diarrheal]",SPL,C,V,492c8e10-fd1b-4565-b795-13adb72c929a,OTC Drug,Drug,0,0,0,0
+1752437,FALSE,TRUE,FALSE,"bismuth subsalicylate 262mg/1 ORAL CAPSULE, LIQUID FILLED [pepto bismol diarrhea liquicaps]",SPL,C,V,85199baf-bb36-0eb6-e053-2991aa0acb04,OTC Drug,Drug,0,0,0,0
+36208572,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus | Isolate,LOINC,N,D,LP262359-5,LOINC Hierarchy,Measurement,0,0,0,0
+45670900,FALSE,TRUE,FALSE,anti diarrheal,SPL,N,V,44df9c43-9a72-40e3-8bbe-b1d5dd1c3d7d,SPL,Drug,0,0,0,0
+45662808,FALSE,TRUE,FALSE,"DG HEALTH ANTI DIARRHEAL - loperamide hydrochloride tablet, film coated",SPL,C,V,cac9e7e9-fb3a-497e-866d-347530ba4dfd,OTC Drug,Drug,0,0,0,0
+1184303,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,98210b39-145a-4579-8fc2-dc98be8e53fc,OTC Drug,Drug,0,0,0,0
+45659657,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL LOPERAMIDE HCL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,35b950ef-2420-4be8-9968-e70bfe329a90,OTC Drug,Drug,0,0,0,0
+44392828,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,7e2fe4e6-bc61-4a73-b6ba-2775dcec3e3a,OTC Drug,Drug,0,0,0,0
+46328712,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,db819d63-e96f-45e9-88e0-9faa02a5ec99,OTC Drug,Drug,0,0,0,0
+1016820,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus gene,LOINC,N,V,LP255788-4,LOINC Component,Observation,0,0,0,0
+44108516,FALSE,TRUE,FALSE,Loperamide Oral Tablet [Anti-Diarrheal],RxNorm Extension,S,V,OMOP1103147,Branded Drug Form,Drug,0,0,0,0
+44894143,FALSE,TRUE,FALSE,LOPERAMIDE HYDROCHLORIDE 2 mg/1 TABLET [Stomach Relief Anti Diarrheal],NDC,N,V,052904443,9-digit NDC,Drug,0,0,0,0
+28660,FALSE,TRUE,FALSE,"Immune Dysregulation, Polyendocrinopathy, Enteropathy, X-Linked Syndrome",MeSH,N,D,C580192,Suppl Concept,Condition,0,0,0,0
+773285,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,0ea2b6d2-9e61-43a0-b4af-0ef37ca1acc1,OTC Drug,Drug,0,0,0,0
+44669102,FALSE,TRUE,FALSE,ATTAPULGITE 630 MG [FOWLERS DIARRHEA],DPD,N,D,OMOP213708,Branded Drug Comp,Drug,0,0,0,0
+45354680,FALSE,TRUE,FALSE,AETHUSA CYNAPIUM 30 [hp_C]/mL PELLET [Vomiting Diarrhea],NDC,N,V,064117102,9-digit NDC,Drug,0,0,0,0
+775408,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [dg health anti diarrheal]",SPL,C,V,c19ec4cf-215d-4b11-ab3f-90ddf08d9900,OTC Drug,Drug,0,0,0,0
+4322466,FALSE,TRUE,FALSE,Neonatal calf diarrhea,SNOMED,N,D,70506007,Clinical Finding,Condition,0,0,0,0
+771581,FALSE,TRUE,FALSE,"loperamide hcl 2mg/1 ORAL TABLET, FILM COATED [anti diarrheal]",SPL,C,V,d1b96fcd-848b-435f-8ec1-bce15b34dc6c,OTC Drug,Drug,0,0,0,0
+35530406,FALSE,TRUE,FALSE,"loperamide hydrochloride, simethicone 2mg/1 / 125mg/1 ORAL TABLET [anti diarrheal and anti gas]",SPL,C,V,d2627ea5-129a-4119-9924-32c339a97118,OTC Drug,Drug,0,0,0,0
+773474,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [circle k anti-diarrheal],SPL,C,V,28af9d56-7868-4d45-ab00-4dae3a47de40,OTC Drug,Drug,0,0,0,0
+45694719,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,8c8475eb-8ecd-44d8-ad38-4fd86c610e62,OTC Drug,Drug,0,0,0,0
+36512070,FALSE,TRUE,FALSE,loperamide hydrochloride 2mg/1 ORAL TABLET [circle k anti-diarrheal],SPL,C,V,06ff25c2-3de1-42ac-86e7-5c4f7bbb6ba9,OTC Drug,Drug,0,0,0,0
+4008724,FALSE,TRUE,FALSE,Viral gastroenteritis,SNOMED,S,V,111843007,Clinical Finding,Condition,257732,6,534283,21
+46336943,FALSE,TRUE,FALSE,DIARRHEA VOMITING - cupric arsenite pellet,NDC,N,V,64117022201,11-digit NDC,Drug,0,0,0,0
+46306730,FALSE,TRUE,FALSE,SLOW DIGESTION DIARRHEA - gold trichloride pellet,SPL,C,V,372b8172-17ea-450d-8eb3-062faff23e8e,OTC Drug,Drug,0,0,0,0
+42818999,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL TABLET, FILM COATED [berkley and jensen anti diarrheal]",SPL,C,V,a4fe82ca-c90f-4fdb-8262-b4ea871ac901,OTC Drug,Drug,0,0,0,0
+35511653,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,6becb064-c7b3-4b78-acd1-77113fc94698,OTC Drug,Drug,0,0,0,0
+35904113,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,cf29addc-18eb-4528-8173-f513fab82ea8,OTC Drug,Drug,0,0,0,0
+37505681,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,8aa1c248-0eaf-4dc2-9821-ec672906fe8c,OTC Drug,Drug,0,0,0,0
+45354689,FALSE,TRUE,FALSE,CAPSELLA BURSA-PASTORIS 30 [hp_C]/mL PELLET [DIARRHEA],NDC,N,V,064117290,9-digit NDC,Drug,0,0,0,0
+36150867,FALSE,TRUE,FALSE,LIL DRUG STORE ANTI-DIARRHEAL - loperamide hydrochloride tablet,SPL,C,V,fc23b13e-3005-4f23-aec2-b02a0e48ea11,OTC Drug,Drug,0,0,0,0
+44779988,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,bf1e53c1-2923-419e-bb34-9e20f17c5def,OTC Drug,Drug,0,0,0,0
+36158695,FALSE,TRUE,FALSE,"ANTI-DIARRHEAL - loperamide hydrochloride capsule, liquid filled",SPL,C,V,d1fd9a92-9d96-4921-b789-c1f710ee2351,OTC Drug,Drug,0,0,0,0
+45782082,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti-diarrheal],SPL,C,V,26b6cd8e-5fab-48c8-b671-e61d2aefbc8c,OTC Drug,Drug,0,0,0,0
+40228429,FALSE,TRUE,FALSE,loperamide hydrochloride 2 MG [Anti-Diarrhea],RxNorm,S,V,1036888,Branded Drug Comp,Drug,0,0,0,0
+36463794,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [lil drug store anti-diarrheal soft gelatin]",SPL,C,V,2e3ecb0e-c2eb-4b41-bf22-b2c85ef910f6,OTC Drug,Drug,0,0,0,0
+42810622,FALSE,TRUE,FALSE,loperamide hcl 2mg/1 ORAL TABLET [anti diarrheal],SPL,C,V,5345e14e-a69d-4122-85a1-2884b15296b2,OTC Drug,Drug,0,0,0,0
+37023453,FALSE,TRUE,FALSE,Porcine epidemic diarrhea virus RNA | XXX | Microbiology,LOINC,C,V,LP379487-4,LOINC Hierarchy,Measurement,0,0,0,0
+1170795,FALSE,TRUE,FALSE,"loperamide hydrochloride 2mg/1 ORAL CAPSULE, LIQUID FILLED [anti-diarrheal]",SPL,C,V,9fa24089-4e9f-403e-bb6e-1a8783fc5940,OTC Drug,Drug,0,0,0,0
+36152516,FALSE,TRUE,FALSE,SUNMARK ANTI DIARRHEAL - loperamide hcl solution,SPL,C,V,5302d4d1-5c17-4958-9703-89813695c20d,OTC Drug,Drug,0,0,0,0
