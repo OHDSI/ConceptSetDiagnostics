@@ -16,9 +16,17 @@ getConceptSetDataFrameFromExpression <-
     
     items2 <- list()
     for (i in (1:length(items))) {
+      if (purrr::vec_depth(items[[i]]) <= 3) {
       items2[[i]] <- purrr::flatten_dfr(.x = purrr::map_depth(items[[i]],
                                                               .depth = 2,
                                                               ~ ifelse(is.null(.x), NA, .x)))
+      } else {
+        if ('CONCEPT_ID' %in% names(items[[i]][[1]])) {
+        warning(paste0("record in concept set expression with concept id ",
+                (items[[i]][[1]]$CONCEPT_ID),
+                " does not conform with the standard structure in concept set expression"))
+        }
+      }
     }
     conceptSetExpressionDetails <- dplyr::bind_rows(items2)
     
