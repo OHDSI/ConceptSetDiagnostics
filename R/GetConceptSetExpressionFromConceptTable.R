@@ -50,7 +50,8 @@ getConceptSetExpressionFromConceptTable <-
                         -.data$INCLUDE_MAPPED,
                         -.data$IS_EXCLUDED) %>%
           as.list()
-        conceptTable$IS_EXCLUDED[i]
+        conceptSetExpression$items[[i]]$isExcluded <- 
+          conceptTable$IS_EXCLUDED[i]
         conceptSetExpression$items[[i]]$includeDescendants <-
           conceptTable$INCLUDE_DESCENDANTS[i]
         conceptSetExpression$items[[i]]$includeMapped <-
