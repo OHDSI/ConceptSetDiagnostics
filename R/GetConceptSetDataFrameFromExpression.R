@@ -3,6 +3,7 @@ getConceptSetDataFrameFromExpression <-
   function(connection,
            conceptSetExpression,
            updateVocabularyFields = FALSE,
+           recordCount = FALSE,
            vocabularyDatabaseSchema = 'vocabulary') {
     if (length(conceptSetExpression) == 0) {
       return(NULL)
@@ -94,7 +95,11 @@ getConceptSetDataFrameFromExpression <-
             .data$invalidReason,
             .data$conceptCode,
             .data$conceptClassId,
-            .data$domainId
+            .data$domainId,
+            .data$rc,
+            .data$dbc,
+            .data$drc,
+            .data$ddbc
           )
         
         conceptSetExpressionDetails <-
@@ -158,6 +163,20 @@ getConceptSetDataFrameFromExpression <-
       )),
       .after = dplyr::last_col()) %>%
       dplyr::relocate('conceptId')
+    
+    if (!recordCount) {
+      if ('rc' %in% colnames(conceptSetExpressionDetails)) {
+        conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
+          dplyr::select(-.data$rc,
+                        -.data$dbc,
+                        -.data$drc,
+                        -.data$ddbc)
+      }
+    } else {
+      conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
+        dplyr::arrange(.data$drc,
+                       .data$rc)
+    }
     
     return(conceptSetExpressionDetails)
   }
