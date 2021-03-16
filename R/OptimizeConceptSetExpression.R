@@ -26,8 +26,8 @@ optimizeConceptSetExpression <-
       dplyr::pull(.data$conceptId)
     conceptSetConceptIdsDescendantsExcluded <-
       conceptSetExpressionTable %>%
-      dplyr::filter(.data$isExcluded == TRUE &&
-                      .data$includeDescendants == TRUE) %>%
+      dplyr::filter(.data$isExcluded == TRUE) %>% 
+      dplyr::filter(.data$includeDescendants == TRUE) %>%
       dplyr::pull(.data$conceptId)
     conceptSetConceptIdsNotExcluded <-
       conceptSetExpressionTable %>%
@@ -35,8 +35,8 @@ optimizeConceptSetExpression <-
       dplyr::pull(.data$conceptId)
     conceptSetConceptIdsDescendantsNotExcluded <-
       conceptSetExpressionTable %>%
-      dplyr::filter(!.data$isExcluded == TRUE &&
-                      .data$includeDescendants == TRUE) %>%
+      dplyr::filter(!.data$isExcluded == TRUE) %>% 
+      dplyr::filter(.data$includeDescendants == TRUE) %>%
       dplyr::pull(.data$conceptId)
     
     if (any(
