@@ -24,11 +24,14 @@ AS (
 conceptSetConceptsNonStandardMappedNotExcluded
 AS (
 	SELECT cr.concept_id_1 concept_id,
-		cr.concept_id_2 concept_id_non_standard
+		cr.concept_id_2 concept_id_standard,
+	  anc.ancestor_concept_id
 	FROM @vocabulary_database_schema.concept_relationship cr
 	INNER JOIN conceptSetConceptsNotExcluded ON concept_id = concept_id_1
+	LEFT JOIN conceptSetConceptsDescendantsNotExcluded anc
+	ON cr.concept_id_2 = anc.concept_id
 		AND relationship_id = 'Maps to'
-	WHERE ISNULL(standard_concept,'') = 'S'
+	WHERE ISNULL(standard_concept,'') = ''
 		AND ISNULL(cr.invalid_reason,'') = ''
 	), 
 conceptSetConceptsExcluded
@@ -56,9 +59,9 @@ AS (
 		c1.concept_name original_concept_name,
 		b.ancestor_concept_id,
 		c3.concept_name ancestor_concept_name,
-		d.concept_id mapped_concept_id,
+		d.ancestor_concept_id mapped_concept_id,
 		c4.concept_name mapped_concept_name,
-		ISNULL(b.concept_id, d.concept_id) subsumed_concept_id,
+		ISNULL(b.concept_id, d.ancestor_concept_id) subsumed_concept_id,
 		ISNULL(c2.concept_name, c4.concept_name) subsumed_concept_name
 	FROM conceptSetConceptsNotExcluded a
 	LEFT JOIN conceptSetConceptsDescendantsNotExcluded b ON a.concept_id = b.concept_id
@@ -66,7 +69,7 @@ AS (
 	LEFT JOIN @vocabulary_database_schema.concept c1 ON a.concept_id = c1.concept_id
 	LEFT JOIN @vocabulary_database_schema.concept c2 ON b.concept_id = c2.concept_id
 	LEFT JOIN @vocabulary_database_schema.concept c3 ON b.ancestor_concept_id = c3.concept_id
-	LEFT JOIN @vocabulary_database_schema.concept c4 ON d.concept_id = c4.concept_id
+	LEFT JOIN @vocabulary_database_schema.concept c4 ON d.ancestor_concept_id = c4.concept_id
 	),
 conceptSetsExcluded
 AS (
@@ -107,25 +110,23 @@ AS (
 	),
 conceptSetRemoved
 AS (
-	SELECT DISTINCT subsumed_concept_id concept_id,
-		subsumed_concept_name concept_name,
+	SELECT DISTINCT original_concept_id concept_id,
+		original_concept_name concept_name,
 	    invalid_reason,
 		cast(0 as int) excluded,
 		cast(1 as int) removed
 	FROM conceptSetsIncluded
 	WHERE (subsumed_concept_id != original_concept_id and
-	subsumed_concept_id IS NOT NULL) or
-	subsumed_concept_id IS NULL
+	subsumed_concept_id IS NOT NULL)
 	union
-	SELECT DISTINCT subsumed_concept_id concept_id,
-		subsumed_concept_name concept_name,
+	SELECT DISTINCT original_concept_id concept_id,
+		original_concept_name concept_name,
 	    invalid_reason,
 		cast(1 as int) excluded,
 		cast(1 as int) removed
 	FROM conceptSetsExcluded
 	WHERE (subsumed_concept_id != original_concept_id and
-	subsumed_concept_id IS NOT NULL)  or
-	subsumed_concept_id IS NULL
+	subsumed_concept_id IS NOT NULL)
 	)
 SELECT *
 FROM conceptSetOptimized
