@@ -20,7 +20,6 @@ renderTranslateExecuteSql <-
           connection = connection,
           sql = sql,
           ...,
-          snakeCaseToCamelCase = snakeCaseToCamelCase
         ) %>% dplyr::tibble()
       )
     }
