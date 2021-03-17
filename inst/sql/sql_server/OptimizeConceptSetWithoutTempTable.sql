@@ -25,11 +25,18 @@ conceptSetConceptsNonStandardMappedNotExcluded
 AS (
 	SELECT cr.concept_id_1 concept_id,
 		cr.concept_id_2 concept_id_standard,
-	  anc.ancestor_concept_id
+	  allStandard.concept_id available_standard_concept_id
 	FROM @vocabulary_database_schema.concept_relationship cr
 	INNER JOIN conceptSetConceptsNotExcluded ON concept_id = concept_id_1
-	LEFT JOIN conceptSetConceptsDescendantsNotExcluded anc
-	ON cr.concept_id_2 = anc.concept_id
+	LEFT JOIN (
+	  SELECT DISTINCT concept_id 
+	  FROM conceptSetConceptsNotExcluded
+	  WHERE ISNULL(standard_concept,'') = 'S'
+	  UNION
+	  SELECT DISTINCT concept_id
+	  FROM conceptSetConceptsDescendantsNotExcluded
+	) allStandard
+	ON cr.concept_id_2 = allStandard.concept_id
 		AND relationship_id = 'Maps to'
 	WHERE ISNULL(standard_concept,'') = ''
 		AND ISNULL(cr.invalid_reason,'') = ''
@@ -59,9 +66,9 @@ AS (
 		c1.concept_name original_concept_name,
 		b.ancestor_concept_id,
 		c3.concept_name ancestor_concept_name,
-		d.ancestor_concept_id mapped_concept_id,
+		d.available_standard_concept_id mapped_concept_id,
 		c4.concept_name mapped_concept_name,
-		ISNULL(b.concept_id, d.ancestor_concept_id) subsumed_concept_id,
+		ISNULL(b.concept_id, d.available_standard_concept_id) subsumed_concept_id,
 		ISNULL(c2.concept_name, c4.concept_name) subsumed_concept_name
 	FROM conceptSetConceptsNotExcluded a
 	LEFT JOIN conceptSetConceptsDescendantsNotExcluded b ON a.concept_id = b.concept_id
@@ -69,7 +76,7 @@ AS (
 	LEFT JOIN @vocabulary_database_schema.concept c1 ON a.concept_id = c1.concept_id
 	LEFT JOIN @vocabulary_database_schema.concept c2 ON b.concept_id = c2.concept_id
 	LEFT JOIN @vocabulary_database_schema.concept c3 ON b.ancestor_concept_id = c3.concept_id
-	LEFT JOIN @vocabulary_database_schema.concept c4 ON d.ancestor_concept_id = c4.concept_id
+	LEFT JOIN @vocabulary_database_schema.concept c4 ON d.available_standard_concept_id = c4.concept_id
 	),
 conceptSetsExcluded
 AS (

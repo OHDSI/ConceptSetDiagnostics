@@ -33,13 +33,20 @@ IF OBJECT_ID('tempdb..#not_excl_non_std', 'U') IS NOT NULL
 -- Concepts that are part of the concept set definition that are "EXCLUDED = N, DECENDANTS = Y"
 SELECT cr.concept_id_1 concept_id,
 	cr.concept_id_2 concept_id_standard,
-	anc.ancestor_concept_id
+	allStandard.concept_id available_standard_concept_id
 INTO #not_excl_non_std
 FROM @vocabulary_database_schema.concept_relationship cr
 INNER JOIN #not_excluded ON concept_id = concept_id_1
 	AND relationship_id = 'Maps to'
-LEFT JOIN #not_excluded_desc anc
-ON cr.concept_id_2 = anc.concept_id
+LEFT JOIN (
+	  SELECT DISTINCT concept_id 
+	  FROM #not_excluded
+	  WHERE ISNULL(standard_concept,'') = 'S'
+	  UNION
+	  SELECT DISTINCT concept_id
+	  FROM #not_excluded_desc
+	) allStandard
+	ON cr.concept_id_2 = allStandard.concept_id
 WHERE ISNULL(standard_concept,'') = ''
 	AND ISNULL(cr.invalid_reason,'') = '';
 
@@ -77,9 +84,9 @@ SELECT a.concept_id original_concept_id,
 	c1.concept_name original_concept_name,
 	b.ancestor_concept_id,
 	c3.concept_name ancestor_concept_name,
-	d.ancestor_concept_id mapped_concept_id,
+	d.available_standard_concept_id mapped_concept_id,
 	c4.concept_name mapped_concept_name,
-	ISNULL(b.concept_id, d.ancestor_concept_id) subsumed_concept_id,
+	ISNULL(b.concept_id, d.available_standard_concept_id) subsumed_concept_id,
 	ISNULL(c2.concept_name, c4.concept_name) subsumed_concept_name
 INTO #concepts_included
 FROM #not_excluded a
@@ -88,7 +95,7 @@ LEFT JOIN #not_excl_non_std d ON a.concept_id = d.concept_id
 LEFT JOIN @vocabulary_database_schema.concept c1 ON a.concept_id = c1.concept_id
 LEFT JOIN @vocabulary_database_schema.concept c2 ON b.concept_id = c2.concept_id
 LEFT JOIN @vocabulary_database_schema.concept c3 ON b.ancestor_concept_id = c3.concept_id
-LEFT JOIN @vocabulary_database_schema.concept c4 ON d.ancestor_concept_id = c4.concept_id;
+LEFT JOIN @vocabulary_database_schema.concept c4 ON d.available_standard_concept_id = c4.concept_id;
 
 
 
