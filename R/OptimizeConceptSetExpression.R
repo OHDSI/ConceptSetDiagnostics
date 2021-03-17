@@ -102,16 +102,16 @@ optimizeConceptSetExpression <-
       )
     
     
-    if (numberOfConceptIds > 100) {
+    # if (numberOfConceptIds > 100) {
       sql <- sqlWithTemporaryTable
       renderTranslateExecuteSql(connection = connection,
                                 sql = sql)
       retrieveSql <-
         SqlRender::translate(sql = "SELECT * FROM #optimized_set;", targetDialect = "postgresql")
-    } else {
-      sql <- sqlWithoutTemporaryTable
-      retrieveSql <- sql
-    }
+    # } else {
+    #   sql <- sqlWithoutTemporaryTable
+    #   retrieveSql <- sql
+    # }
     
     data <-
       renderTranslateQuerySql(

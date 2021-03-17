@@ -47,6 +47,7 @@ LEFT JOIN (
 	  FROM #not_excluded_desc
 	) allStandard
 	ON cr.concept_id_2 = allStandard.concept_id
+		AND relationship_id = 'Maps to'
 WHERE ISNULL(standard_concept,'') = ''
 	AND ISNULL(cr.invalid_reason,'') = '';
 
