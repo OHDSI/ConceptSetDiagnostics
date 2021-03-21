@@ -39,7 +39,7 @@ conceptSetExpressionTable <- conceptSetExpressionTable1
 designDiagnostic <-
   ConceptSetDiagnostics::performDesignDiagnosticsOnConceptTable(
     connection = connection,
-    conceptSetExpressionTable = conceptSetExpressionTable,
+    conceptSetExpressionDataFrame = conceptSetExpressionTable,
     exportResults = TRUE,
     locationForResults = locationForResults,
     iteration = 1

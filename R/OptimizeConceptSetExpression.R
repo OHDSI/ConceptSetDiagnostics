@@ -34,7 +34,8 @@ optimizeConceptSetExpression <-
       dplyr::select(.data$conceptId, .data$isExcluded)
     
     if (nrow(retained) > 0) {
-      conceptSetExpressionDataFrame <- conceptSetExpressionDataFrame %>%
+      conceptSetExpressionDataFrame <- conceptSetExpression %>% 
+        getConceptSetExpressionDataFrameFromConceptSetExpression() %>%
         dplyr::inner_join(retained, by = c('conceptId', 'isExcluded'))
     }
     
