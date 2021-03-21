@@ -1,0 +1,20 @@
+﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,rc,dc,drc,dbc
+4043371,Inflammatory disorder of digestive tract,SNOMED,Condition,S,Not included - recommended via source,14010263,17,946746910,22
+201618,Disorder of intestine,SNOMED,Condition,S,Not included - recommended via source,43273237,20,857718025,22
+4027880,Disorder of colon,SNOMED,Condition,S,Not included - parent,6103,3,322621719,22
+434008,White blood cell disorder,SNOMED,Condition,S,Not included - recommended via source,7114626,20,125940170,22
+4201402,Inflammation of large intestine,SNOMED,Condition,S,Not included - parent,200,2,92208890,22
+37396146,Gastrointestinal infection,SNOMED,Condition,S,Not included - recommended via source,6250324,13,54761156,22
+193688,Clostridioides difficile infection,SNOMED,Condition,S,Not included - recommended via source,15836272,19,18296986,22
+4311117,Radiation-induced disorder,SNOMED,Condition,S,Not included - recommended via source,184567,13,7496156,21
+4136809,Necrotic enteritis,SNOMED,Condition,S,Not included - recommended via source,55732,15,690214,20
+4323342,Recurrent bacterial infection,SNOMED,Condition,S,Not included - recommended via source,345394,11,672577,19
+37016198,Epiploic appendagitis,SNOMED,Condition,S,Not included - descendant,1201,1,1201,1
+4264020,Inflammatory pseudotumor of colon,SNOMED,Condition,S,Not included - descendant,200,2,200,2
+4024250,Malakoplakia of colon,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+37117749,Parasitic infection of colon caused by Cystoisospora belli,SNOMED,Condition,S,Not included - descendant,100,1,100,1
+4004355,Barium granuloma of colon,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4200644,Tuberculosis of colon,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4094237,Endemic colic,SNOMED,Condition,S,Not included - descendant,0,0,0,0
+4297887,Disorder of digestive organ,SNOMED,Condition,S,Not included - recommended via source,0,0,0,0
+4007450,Foreign body granuloma of colon,SNOMED,Condition,S,Not included - descendant,0,0,0,0

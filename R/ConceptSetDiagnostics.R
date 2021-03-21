@@ -13,17 +13,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# 
 
-# given a concept set expression, return its signature
-#' @export
-getConceptSetSignatureExpression <-
-  function(conceptSetExpression, connection) {
-    conceptSetExpression <-
-      getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = conceptSetExpression) %>%
-      optimizeConceptSetExpression(connection = connection) %>%
-      getConceptSetExpressionDataFrameFromConceptSetExpression() %>%
-      # strip all meta information
-      getConceptSetExpressionFromConceptSetExpressionDataFrame(purgeVocabularyDetails = TRUE)
-    return(conceptSetExpression)
-  }
+#' @keywords internal
+"_PACKAGE"
+
+#' @import DatabaseConnector
+#' @import dplyr
+#' @importFrom rlang .data
+NULL

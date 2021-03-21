@@ -1,18 +1,27 @@
 Package: ConceptSetDiagnostics
 Type: Package
-Title: Concept Set Diagnostic
+Title: Concept Set Diagnostics
 Version: 0.0.1
 Author: Gowtham Rao [aut, cre]
 Maintainer: Gowtham Rao <rao@ohdsi.org>
-Description: A package for design diagnostics
+Description: A package for design diagnostics.
 Depends:
     DatabaseConnector (>= 2.2.0),
     dplyr
 Imports:
-	SqlRender,
 	Andromeda,
+	readr,
+	methods,
 	ROhdsiWebApi,
-	purrr
+	purrr,
+	RJSONIO,
+	rlang,
+	SqlRender,
+	stringi,
+	stringr,
+	tidyr
 Suggests:
-License: Apache License 2.0
+License: Apache License (>= 2)
 RoxygenNote: 7.1.1
+Encoding: UTF-8
+Language: en-US

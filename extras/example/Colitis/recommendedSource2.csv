@@ -1,0 +1,23 @@
+﻿conceptId,conceptName,domainId,vocabularyId,standardConcept,rc,dc,drc,dbc,sourceConceptId,sourceConceptName,sourceVocabularyId,sourceConceptCode,sourceRecordCount,sourceDatabaseCount
+4043371,Inflammatory disorder of digestive tract,Condition,SNOMED,S,14010263,17,946746910,22,44834815,Other and unspecified noninfectious gastroenteritis and colitis,ICD9CM,558.9,53585870,14
+4043371,Inflammatory disorder of digestive tract,Condition,SNOMED,S,14010263,17,946746910,22,35208271,Toxic gastroenteritis and colitis,ICD10CM,K52.1,610039,13
+4043371,Inflammatory disorder of digestive tract,Condition,SNOMED,S,14010263,17,946746910,22,44822030,Gastroenteritis and colitis due to radiation,ICD9CM,558.1,406121,14
+4043371,Inflammatory disorder of digestive tract,Condition,SNOMED,S,14010263,17,946746910,22,35208270,Gastroenteritis and colitis due to radiation,ICD10CM,K52.0,359482,13
+4043371,Inflammatory disorder of digestive tract,Condition,SNOMED,S,14010263,17,946746910,22,44831314,Toxic gastroenteritis and colitis,ICD9CM,558.2,173414,14
+4043371,Inflammatory disorder of digestive tract,Condition,SNOMED,S,14010263,17,946746910,22,44827873,Other and unspecified noninfectious gastroenteritis and colitis,ICD9CM,558,62919,7
+4043371,Inflammatory disorder of digestive tract,Condition,SNOMED,S,14010263,17,946746910,22,44834814,Eosinophilic gastroenteritis and colitis,ICD9CM,558.4,1436,4
+201618,Disorder of intestine,Condition,SNOMED,S,43273237,20,857718025,22,35208274,"Noninfective gastroenteritis and colitis, unspecified",ICD10CM,K52.9,24925762,13
+201618,Disorder of intestine,Condition,SNOMED,S,43273237,20,857718025,22,45581903,Other specified noninfective gastroenteritis and colitis,ICD10CM,K52.89,2177992,13
+201618,Disorder of intestine,Condition,SNOMED,S,43273237,20,857718025,22,35208273,Other specified noninfective gastroenteritis and colitis,ICD10CM,K52.8,834,6
+434008,White blood cell disorder,Condition,SNOMED,S,7114626,20,125940170,22,44834814,Eosinophilic gastroenteritis and colitis,ICD9CM,558.4,1436,4
+37396146,Gastrointestinal infection,Condition,SNOMED,S,6250324,13,54761156,22,35205450,"Infectious gastroenteritis and colitis, unspecified",ICD10CM,A09,3761783,13
+37396146,Gastrointestinal infection,Condition,SNOMED,S,6250324,13,54761156,22,44832036,"Infectious colitis, enteritis, and gastroenteritis",ICD9CM,009.0,2429288,14
+37396146,Gastrointestinal infection,Condition,SNOMED,S,6250324,13,54761156,22,198062,"Infectious colitis, enteritis and gastroenteritis",SNOMED,186156007,72665,5
+193688,Clostridioides difficile infection,Condition,SNOMED,S,15836272,19,18296986,22,35205420,Enterocolitis due to Clostridium difficile,ICD10CM,A04.7,4969747,13
+4311117,Radiation-induced disorder,Condition,SNOMED,S,184567,13,7496156,21,44822030,Gastroenteritis and colitis due to radiation,ICD9CM,558.1,406121,14
+4311117,Radiation-induced disorder,Condition,SNOMED,S,184567,13,7496156,21,35208270,Gastroenteritis and colitis due to radiation,ICD10CM,K52.0,359482,13
+4136809,Necrotic enteritis,Condition,SNOMED,S,55732,15,690214,20,37200642,"Necrotizing enterocolitis, unspecified",ICD10CM,K55.30,44530,12
+4136809,Necrotic enteritis,Condition,SNOMED,S,55732,15,690214,20,37200645,Stage 3 necrotizing enterocolitis,ICD10CM,K55.33,5643,11
+4136809,Necrotic enteritis,Condition,SNOMED,S,55732,15,690214,20,37200644,Stage 2 necrotizing enterocolitis,ICD10CM,K55.32,4304,10
+4136809,Necrotic enteritis,Condition,SNOMED,S,55732,15,690214,20,37200643,Stage 1 necrotizing enterocolitis,ICD10CM,K55.31,2340,10
+4323342,Recurrent bacterial infection,Condition,SNOMED,S,345394,11,672577,19,1326482,"Enterocolitis due to Clostridium difficile, recurrent",ICD10CM,A04.71,688036,11

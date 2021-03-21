@@ -1,49 +1,61 @@
+# Copyright 2020 Observational Health Data Sciences and Informatics
+#
+# This file is part of ConceptSetDiagnostics
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
 # given a concept set table, perform design diagnostics
 #' @export
 performDesignDiagnosticsOnConceptTable <-
-  function(connection,
+  function(conceptSetExpressionDataFrame,
            vocabularyDatabaseSchema = 'vocabulary',
-           conceptSetExpressionTable,
            vocabularyIdForRecommender = c('SNOMED', 'ICD'),
            exportResults = TRUE,
            locationForResults,
            blackList = c(0),
-           iteration = 1) {
+           iteration = 1,
+           connection) {
     result <- list()
-    result$conceptSetExpressionTable <- conceptSetExpressionTable
+    result$conceptSetExpressionDataFrame <- conceptSetExpressionDataFrame
     result$conceptSetExpression <-
-      getConceptSetExpressionFromConceptTable(conceptTable = conceptSetExpressionTable)
+      getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = conceptSetExpressionDataFrame)
     
     ### optimized
-    result$conceptSetExpressionTableOptimized <-
+    result$conceptSetExpressionOptimized <-
       optimizeConceptSetExpression(
         connection = connection,
         conceptSetExpression = result$conceptSetExpression,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
-      ) %>%
-      dplyr::filter(.data$removed == 0) %>%
-      dplyr::select(.data$conceptId) %>%
-      dplyr::distinct() %>%
-      dplyr::left_join(y = result$conceptSetExpressionTable,
-                       by = 'conceptId')
+      )
     
     result$conceptSetExpressionOptimized <-
-      getConceptSetExpressionFromConceptTable(conceptTable = result$conceptSetExpressionTableOptimized)
+      getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = conceptSetExpressionDataFrame)
     
     #################################
     recommendation <-
-      getRecommendationForConceptTable(
+      getRecommendationForConceptSetExpressionDataFrame(
         connection = connection,
-        conceptSetExpressionTable = result$conceptSetExpressionTable,
+        conceptSetExpressionDataFrame = result$conceptSetExpressionDataFrame,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         vocabularyIdForRecommender = vocabularyIdForRecommender
       )
     result$recommendedStandard <-
       recommendation$recommendedStandard %>%
-      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionTable$conceptId) %>%
+      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionDataFrame$conceptId) %>%
       dplyr::filter(!.data$conceptId %in% blackList)
     result$recommendedSource <- recommendation$recommendedSource %>%
-      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionTable$conceptId) %>%
+      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionDataFrame$conceptId) %>%
       dplyr::filter(!.data$conceptId %in% blackList)
     
     
