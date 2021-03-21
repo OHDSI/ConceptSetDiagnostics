@@ -83,7 +83,6 @@ optimizeConceptSetExpression <-
       SqlRender::loadRenderTranslateSql(
         sqlFilename = "OptimizeConceptSetWithTemporaryTable.sql",
         packageName = "ConceptSetDiagnostics",
-        dbms = dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
         conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
@@ -95,7 +94,6 @@ optimizeConceptSetExpression <-
       SqlRender::loadRenderTranslateSql(
         sqlFilename = "OptimizeConceptSetWithoutTempTable.sql",
         packageName = "ConceptSetDiagnostics",
-        dbms = dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
         conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,

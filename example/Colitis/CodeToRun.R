@@ -37,7 +37,7 @@ conceptSetExpressionTable <- conceptSetExpressionTable1
 
 ##  do automated processing based on search results
 designDiagnostic <-
-  performDesignDiagnosticsOnConceptTable(
+  ConceptSetDiagnostics::performDesignDiagnosticsOnConceptTable(
     connection = connection,
     conceptSetExpressionTable = conceptSetExpressionTable,
     exportResults = TRUE,
