@@ -39,23 +39,23 @@ performDesignDiagnosticsOnConceptTable <-
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
     
-    result$conceptSetExpressionOptimized <-
-      getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = conceptSetExpressionDataFrame)
+    result$conceptSetExpressionDataFrameOptimized <-
+      getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = result$conceptSetExpressionOptimized)
     
     #################################
     recommendation <-
       getRecommendationForConceptSetExpressionDataFrame(
         connection = connection,
-        conceptSetExpressionDataFrame = result$conceptSetExpressionDataFrame,
+        conceptSetExpressionDataFrame = result$conceptSetExpressionDataFrameOptimized,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         vocabularyIdForRecommender = vocabularyIdForRecommender
       )
     result$recommendedStandard <-
       recommendation$recommendedStandard %>%
-      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionDataFrame$conceptId) %>%
+      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionDataFrameOptimized$conceptId) %>%
       dplyr::filter(!.data$conceptId %in% blackList)
     result$recommendedSource <- recommendation$recommendedSource %>%
-      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionDataFrame$conceptId) %>%
+      dplyr::filter(!.data$conceptId %in% result$conceptSetExpressionDataFrameOptimized$conceptId) %>%
       dplyr::filter(!.data$conceptId %in% blackList)
     
     

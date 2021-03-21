@@ -36,7 +36,7 @@ conceptSetExpressionTable1 <-
 conceptSetExpressionTable <- conceptSetExpressionTable1
 
 ##  do automated processing based on search results
-designDiagnostic <-
+designDiagnostic1 <-
   ConceptSetDiagnostics::performDesignDiagnosticsOnConceptTable(
     connection = connection,
     conceptSetExpressionDataFrame = conceptSetExpressionTable,
@@ -74,26 +74,34 @@ discoveredThruRecommender <- c(77025, 4342751,
 
 
 
-
-
-discoveredConceptIdExpression <- ConceptSetDiagnostics::getConceptIdDetails(connection = connection, 
+discoveredConceptIdExpression1 <- ConceptSetDiagnostics::getConceptIdDetails(connection = connection, 
                                                                    conceptIds = discoveredThruRecommender) %>% 
   ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(selectAllDescendants = TRUE)
-discoveredConceptIdsResolved1 <-  ConceptSetDiagnostics::resolveConceptSetExpression(conceptSetExpression = discoveredConceptIds1,
-                                                                                     connection = connection)
-blackList <- setdiff(discoveredConceptIds$resolvedConcepts$conceptId, discoveredConceptIds$mappedConcepts$conceptId)
 
-discoveredConceptIds1 <- ConceptSetDiagnostics::getConceptIdDetails(connection = connection, 
-                                                                    conceptIds = discoveredThruRecommender) %>% 
-  ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(selectAllDescendants = TRUE) 
+discoveredConceptIdExpressionDataFrame1 <- ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(
+  conceptSetExpression = discoveredConceptIdExpression1
+)
 
-designDiagnostic <-
-  performDesignDiagnosticsOnConceptTable(
+discoveredConceptIdsResolved1 <-  ConceptSetDiagnostics::resolveConceptSetExpression(
+  conceptSetExpression = discoveredConceptIdExpression1,
+  connection = connection)
+
+blackList <- setdiff(discoveredConceptIdsResolved1$resolvedConcepts$conceptId, 
+                     discoveredConceptIdsResolved1$mappedConcepts$conceptId) %>% unique() %>% sort()
+
+conceptSetExpressionTable <- dplyr::bind_rows(conceptSetExpressionTable, discoveredConceptIdExpressionDataFrame1) %>% 
+  ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame() %>% 
+  ConceptSetDiagnostics::optimizeConceptSetExpression(connection = connection) %>% 
+  ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression()
+
+
+designDiagnostic2 <-
+  ConceptSetDiagnostics::performDesignDiagnosticsOnConceptTable(
     connection = connection,
-    conceptSetExpressionTable = conceptSetExpressionTable,
+    conceptSetExpressionDataFrame = conceptSetExpressionTable,
     exportResults = TRUE,
-    locationForResults = locationForResults,
     blackList = blackList,
+    locationForResults = locationForResults,
     iteration = 2
   )
 ############## complete standard
