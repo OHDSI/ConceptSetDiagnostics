@@ -28,7 +28,7 @@ performDesignDiagnosticsOnSearchTerm <-
            connection) {
     
     # step perform string search
-    searchResultConceptIds <- ConceptSetDiagnostics::getStringSearchConcepts(connection = connection,
+    searchResultConceptIds <- getStringSearchConcepts(connection = connection,
                                                                              searchString = searchString) 
     if (length(vocabularyIdOfInterest) > 0) {
       searchResultConceptIds <- searchResultConceptIds %>% 
@@ -41,24 +41,26 @@ performDesignDiagnosticsOnSearchTerm <-
     
     # develop a concept set expression based on string search
     conceptSetExpressionDataFrame <- 
-      ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(
+      getConceptSetExpressionFromConceptSetExpressionDataFrame(
         conceptSetExpressionDataFrame = searchResultConceptIds,
         selectAllDescendants = TRUE) %>% 
-      ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connection) %>% 
-      ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(updateVocabularyFields = TRUE, 
-                                                                                      connection = connection)
+      getConceptSetSignatureExpression(connection = connection) %>% 
+      getConceptSetExpressionDataFrameFromConceptSetExpression(updateVocabularyFields = TRUE, 
+                                                                                      connection = connection) 
     
     conceptSetExpression <- 
-      ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(
+      getConceptSetExpressionFromConceptSetExpressionDataFrame(
         conceptSetExpressionDataFrame = conceptSetExpressionDataFrame)
+    
+    
     
     # resolve concept set expression to individual concept ids
     resolvedConceptIds <- 
-      ConceptSetDiagnostics::resolveConceptSetExpression(connection = connection, 
+      resolveConceptSetExpression(connection = connection, 
                                                          conceptSetExpression = conceptSetExpression)
-    
+  
     recommendedConceptIds <- 
-      ConceptSetDiagnostics::getRecommendationForConceptSetExpression(
+      getRecommendationForConceptSetExpression(
         conceptSetExpression = conceptSetExpression, 
         connection = connection, 
         vocabularyIdOfInterest = vocabularyIdOfInterest, 
@@ -71,9 +73,10 @@ performDesignDiagnosticsOnSearchTerm <-
                          recommendedConceptIds = recommendedConceptIds)
     
     if (exportResults) {
-      if (nrow(result$recommendedStandard) > 0) {
+      dir.create(path = locationForResults, showWarnings = FALSE, recursive = TRUE)
+      if (nrow(recommendedConceptIds$recommendedStandard) > 0) {
         readr::write_excel_csv(
-          x = result$recommendedStandard,
+          x = recommendedConceptIds$recommendedStandard,
           file = file.path(
             locationForResults,
             paste0("recommendedStandard.csv")
@@ -101,9 +104,9 @@ performDesignDiagnosticsOnSearchTerm <-
           force = TRUE
         )
       }
-      if (nrow(result$recommendedSource) > 0) {
+      if (nrow(recommendedConceptIds$recommendedSource) > 0) {
         readr::write_excel_csv(
-          x = result$recommendedSource,
+          x = recommendedConceptIds$recommendedSource,
           file = file.path(
             locationForResults,
             paste0("recommendedSource.csv")
@@ -132,5 +135,5 @@ performDesignDiagnosticsOnSearchTerm <-
         )
       }
     }
-    return(result)
+    return(searchResult)
   }

@@ -87,8 +87,8 @@ SELECT a.concept_id original_concept_id,
 	c3.concept_name ancestor_concept_name,
 	d.available_standard_concept_id mapped_concept_id,
 	c4.concept_name mapped_concept_name,
-	ISNULL(b.concept_id, d.available_standard_concept_id) subsumed_concept_id,
-	ISNULL(c2.concept_name, c4.concept_name) subsumed_concept_name
+	ISNULL(b.ancestor_concept_id, d.available_standard_concept_id) subsumed_concept_id,
+	ISNULL(c3.concept_name, c4.concept_name) subsumed_concept_name
 INTO #concepts_included
 FROM #not_excluded a
 LEFT JOIN #not_excluded_desc b ON a.concept_id = b.concept_id

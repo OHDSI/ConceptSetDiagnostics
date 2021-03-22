@@ -108,28 +108,28 @@ getOptimizationRecommendationForConceptSetTable <-
         conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
       )
     
-    sqlWithoutTemporaryTable <-
-      SqlRender::loadRenderTranslateSql(
-        sqlFilename = "OptimizeConceptSetWithoutTempTable.sql",
-        packageName = "ConceptSetDiagnostics",
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
-        conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
-        conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
-        conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
-      )
-    
-    
-    if (numberOfConceptIds > 100) {
+    # sqlWithoutTemporaryTable <-
+    #   SqlRender::loadRenderTranslateSql(
+    #     sqlFilename = "OptimizeConceptSetWithoutTempTable.sql",
+    #     packageName = "ConceptSetDiagnostics",
+    #     vocabulary_database_schema = vocabularyDatabaseSchema,
+    #     conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
+    #     conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
+    #     conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
+    #     conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
+    #   )
+    # 
+    # 
+    # if (numberOfConceptIds > 100) {
       sql <- sqlWithTemporaryTable
       renderTranslateExecuteSql(connection = connection,
                                 sql = sql)
       retrieveSql <-
         SqlRender::translate(sql = "SELECT * FROM #optimized_set;", targetDialect = "postgresql")
-    } else {
-      sql <- sqlWithoutTemporaryTable
-      retrieveSql <- sql
-    }
+    # } else {
+    #   sql <- sqlWithoutTemporaryTable
+    #   retrieveSql <- sql
+    # }
     
     data <-
       renderTranslateQuerySql(

@@ -21,12 +21,15 @@ optimizeConceptSetExpression <-
   function(conceptSetExpression,
            vocabularyDatabaseSchema = 'vocabulary',
            connection) {
-    optimizationRecommendation <-
+    conceptSetExpressionDataFrame <-
       getConceptSetExpressionDataFrameFromConceptSetExpression(connection = connection,
                                                                conceptSetExpression =
-                                                                 conceptSetExpression) %>%
-      getOptimizationRecommendationForConceptSetTable(connection = connection,
-                                                      vocabularyDatabaseSchema = vocabularyDatabaseSchema)
+                                                                 conceptSetExpression)
+    
+    optimizationRecommendation <- getOptimizationRecommendationForConceptSetTable(
+      connection = connection,
+      conceptSetExpressionDataFrame = conceptSetExpressionDataFrame,
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema)
     
     retained <- optimizationRecommendation %>%
       dplyr::mutate(isExcluded = as.logical(.data$excluded)) %>%

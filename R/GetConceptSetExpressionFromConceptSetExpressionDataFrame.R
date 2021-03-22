@@ -27,15 +27,18 @@ getConceptSetExpressionFromConceptSetExpressionDataFrame <-
       conceptSetExpressionDataFrame$isExcluded <- FALSE
     }
     if (!'includeDescendants' %in% colnames(conceptSetExpressionDataFrame)) {
-      if (selectAllDescendants) {
-        conceptSetExpressionDataFrame$includeDescendants <- TRUE
-      } else {
-        conceptSetExpressionDataFrame$includeDescendants <- FALSE
-      }
-    } else {
-      if (selectAllDescendants) {
-        conceptSetExpressionDataFrame$includeDescendants <- TRUE
-      }
+      conceptSetExpressionDataFrame$includeDescendants <- FALSE
+    }
+    if (selectAllDescendants) {
+      conceptSetExpressionDataFrame <- 
+        dplyr::bind_rows(
+          conceptSetExpressionDataFrame %>% 
+          dplyr::filter(.data$standardConcept == 'S') %>% 
+            dplyr::mutate(includeDescendants = TRUE),
+          conceptSetExpressionDataFrame %>% 
+            dplyr::filter(!.data$standardConcept == 'S') %>% 
+            dplyr::mutate(includeDescendants = FALSE)
+        )
     }
     if (purgeVocabularyDetails) {
       conceptSetExpressionDataFrame <- conceptSetExpressionDataFrame %>%
