@@ -20,6 +20,7 @@ getConceptSetExpressionDataFrameFromConceptSetExpression <-
   function(conceptSetExpression,
            updateVocabularyFields = FALSE,
            recordCount = FALSE,
+           connection = NULL,
            vocabularyDatabaseSchema = 'vocabulary') {
     if (length(conceptSetExpression) == 0) {
       return(NULL)

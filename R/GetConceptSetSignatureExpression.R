@@ -20,8 +20,8 @@
 getConceptSetSignatureExpression <-
   function(conceptSetExpression, connection) {
     conceptSetExpression <-
-      getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = conceptSetExpression) %>%
-      optimizeConceptSetExpression(connection = connection) %>%
+      optimizeConceptSetExpression(connection = connection,
+                                   conceptSetExpression = conceptSetExpression) %>%
       getConceptSetExpressionDataFrameFromConceptSetExpression() %>%
       # strip all meta information
       getConceptSetExpressionFromConceptSetExpressionDataFrame(purgeVocabularyDetails = TRUE)
