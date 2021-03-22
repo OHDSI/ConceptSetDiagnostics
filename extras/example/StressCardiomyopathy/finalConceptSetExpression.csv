@@ -1,3 +1,0 @@
-﻿conceptId,isExcluded,includeDescendants,includeMapped,conceptName,vocabularyId,standardConcept,invalidReason,conceptCode,conceptClassId,domainId,rc,dbc,drc,ddbc
-40479589,FALSE,TRUE,FALSE,Takotsubo cardiomyopathy,SNOMED,S,V,441541008,Clinical Finding,Condition,1220706,15,1220706,15
-40225378,FALSE,TRUE,FALSE,Takotsubo Cardiomyopathy,NDFRT,N,V,N0000181245,Ind / CI,Drug,0,0,0,0

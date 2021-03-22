@@ -1,7 +1,0 @@
-﻿conceptId,conceptName,vocabularyId,domainId,standardConcept,conceptInSet,rc,dc,drc,dbc
-4224623,Autoimmune urticaria,SNOMED,Condition,S,Not included - descendant,611,2,953,2
-4223490,Acute autoimmune urticaria,SNOMED,Condition,S,Not included - descendant,242,2,242,2
-4086741,Acquired C1 esterase inhibitor deficiency,SNOMED,Condition,S,Not included - descendant,100,1,100,1
-4221671,Chronic autoimmune urticaria,SNOMED,Condition,S,Not included - descendant,100,1,100,1
-4274025,Disease,SNOMED,Condition,S,Not included - parent,0,0,0,0
-4223491,Episodic autoimmune urticaria,SNOMED,Condition,S,Not included - descendant,0,0,0,0

@@ -1,21 +1,8 @@
-keyWords1 <- 'Muscle Weakness'
-keyWords2 <- 'Myasthenia'
-keyWords3 <- 'Paralysis'
-keyWords4 <- 'Paresis'
+keyWords <- c('Muscle Weakness','Myasthenia','Paralysis','Paresis')
 
-
-folder <- stringr::str_replace_all(string = keyWords1,
-                                   pattern = " ",
-                                   replacement = "")
-# Load the package
-library(ConceptSetDiagnostics)
-
-locationForResults <-
-  file.path(rstudioapi::getActiveProject(), 'example', folder)
-dir.create(path = locationForResults,
-           recursive = TRUE,
-           showWarnings = FALSE)
-
+outputLocation <- keyWords[[1]]
+vocabularyIdOfInterest <- c('SNOMED', 'HCPCS', 'ICD10CM', 'ICD10', 'ICD9CM', 'ICD9', 'Read')
+domainIdOfInterest <- c('Condition', 'Observation')
 # Details for connecting to the server:
 connectionDetails <-
   DatabaseConnector::createConnectionDetails(
@@ -33,81 +20,58 @@ connectionDetails <-
 connection <-
   DatabaseConnector::connect(connectionDetails = connectionDetails)
 
+# Load the package
+library(ConceptSetDiagnostics)
+
+## create output location
+locationForResults <-
+  file.path(rstudioapi::getActiveProject(), 'extras', 'example', outputLocation)
+
 # get search results
-conceptSetExpressionTable1 <-
-  ConceptSetDiagnostics::getStringSearchConcepts(connection = connection,
-                                                 searchString = keyWords1)
-conceptSetExpressionTable2 <-
-  ConceptSetDiagnostics::getStringSearchConcepts(connection = connection,
-                                                 searchString = keyWords2)
-conceptSetExpressionTable3 <-
-  ConceptSetDiagnostics::getStringSearchConcepts(connection = connection,
-                                                 searchString = keyWords3)
-conceptSetExpressionTable4 <-
-  ConceptSetDiagnostics::getStringSearchConcepts(connection = connection,
-                                                 searchString = keyWords4)
-conceptSetExpressionTable <-
-  dplyr::bind_rows(
-    conceptSetExpressionTable1,
-    conceptSetExpressionTable2,
-    conceptSetExpressionTable3,
-    conceptSetExpressionTable4
-  )
+searchResult <- list()
 
-##  do automated processing based on search results
-designDiagnostic <-
-  performDesignDiagnosticsOnConceptTable(
-    connection = connection,
-    conceptSetExpressionTable = conceptSetExpressionTable,
-    exportResults = TRUE,
-    locationForResults = locationForResults,
-    iteration = 1
-  )
+### iteration 1
+for (i in (1:length(keyWords))) {
+  locationForResults2 <- file.path(locationForResults,
+                                   paste0('keyWord', keyWords[[i]]),
+                                   'iteration1')
+  designDiagnostics <- ConceptSetDiagnostics::performDesignDiagnosticsOnSearchTerm(searchString = keyWords[[i]], 
+                                                                                   exportResults = FALSE,
+                                                                                   locationForResults = locationForResults2,
+                                                                                   vocabularyIdOfInterest = vocabularyIdOfInterest,
+                                                                                   domainIdOfInterest = domainIdOfInterest, 
+                                                                                   connection = connection)
+  searchResult[[i]] <- designDiagnostics
+}
 
-
-############### review only standard for round 1
-discoveredThruRecommender <- c(4093200,
-                               4093199,
-                               4102126,
-                               4093681,
-                               4093680,
-                               4093198,
-                               4061398,
-                               4092725,
-                               4179290,
-                               4092710,
-                               3198828,
-                               3186568,
-                               35622370)
-
-recommendedConceptSetExpression <- ConceptSetDiagnostics::getConceptIdDetails(connection = connection, 
-                                                                              conceptIds = discoveredThruRecommender)
-recommendedConceptSetExpression <- recommendedConceptSetExpression %>% 
-  ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(selectAllDescendants = TRUE) %>% 
-  ConceptSetDiagnostics::getConceptSetDataFrameFromExpression() %>% 
-  dplyr::left_join(y = recommendedConceptSetExpression, by = 'conceptId')
-conceptSetExpressionTable <- dplyr::union(conceptSetExpressionTable, recommendedConceptSetExpression)
-blackList <- setdiff(designDiagnostic$recommendedStandard$conceptId, discoveredThruRecommender)
-designDiagnostic <-
-  performDesignDiagnosticsOnConceptTable(
-    connection = connection,
-    conceptSetExpressionTable = conceptSetExpressionTable,
-    exportResults = TRUE,
-    locationForResults = locationForResults,
-    blackList = blackList,
-    iteration = 2
-  )
-############## complete standard
-
-## no source codes recommended
-############## complete non standard
+saveRDS(object = searchResult, file = file.path(locationForResults, "searchResult.rds"))
+if (length(searchResult) >  1) {
+  conceptSetExpressionAllTerms <- list()
+  for (i in (1:length(searchResult))) {
+    conceptSetExpressionAllTerms[[i]] <- searchResult[[i]]$conceptSetExpressionDataFrame
+  }
+  conceptSetExpressionAllTerms <- dplyr::bind_rows(conceptSetExpressionAllTerms) %>% 
+    ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame() %>% 
+    ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connection) %>% 
+    ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(connection = connection, 
+                                                                                    updateVocabularyFields = TRUE) %>% 
+    ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame()
+  
+  json <- conceptSetExpressionAllTerms %>% 
+    RJSONIO::toJSON(digits = 23, pretty = TRUE)
+  
+  SqlRender::writeSql(sql = json,
+                      targetFile = file.path(locationForResults, "conceptSetExpressionAllTerms.json"))
+}
 
 
-readr::write_excel_csv(
-  x = designDiagnostic$conceptSetExpressionTableOptimized,
-  file = file.path(locationForResults, "finalConceptSetExpression.csv"),
-  append = FALSE,
-  na = ""
-) 
+for (j in (1:length(searchResult))) {
+  json <- ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(
+    conceptSetExpressionDataFrame = designDiagnostics$conceptSetExpressionDataFrame) %>% 
+    RJSONIO::toJSON(digits = 23, pretty = TRUE) 
+  SqlRender::writeSql(sql = json,
+                      targetFile = file.path(locationForResults, paste0("conceptSetExpression", j, ".json")))
+}
 
 DatabaseConnector::disconnect(connection = connection)
+

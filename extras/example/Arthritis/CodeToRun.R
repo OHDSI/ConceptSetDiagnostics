@@ -1,17 +1,11 @@
-keyWords1 <- 'arthritis'
+keyWords <- 'arthritis'
 
-folder <- stringr::str_replace_all(string = keyWords1,
-                                   pattern = " ",
-                                   replacement = "")
-# Load the package
-library(ConceptSetDiagnostics)
 
-locationForResults <-
-  file.path(rstudioapi::getActiveProject(), 'example', folder)
-dir.create(path = locationForResults,
-           recursive = TRUE,
-           showWarnings = FALSE)
 
+
+outputLocation <- keyWords[[1]]
+vocabularyIdOfInterest <- c('SNOMED', 'HCPCS', 'ICD10CM', 'ICD10', 'ICD9CM', 'ICD9', 'Read')
+domainIdOfInterest <- c('Condition', 'Observation')
 # Details for connecting to the server:
 connectionDetails <-
   DatabaseConnector::createConnectionDetails(
@@ -29,39 +23,58 @@ connectionDetails <-
 connection <-
   DatabaseConnector::connect(connectionDetails = connectionDetails)
 
+# Load the package
+library(ConceptSetDiagnostics)
+
+## create output location
+locationForResults <-
+  file.path(rstudioapi::getActiveProject(), 'extras', 'example', outputLocation)
+
 # get search results
-conceptSetExpressionTable1 <-
-  ConceptSetDiagnostics::getStringSearchConcepts(connection = connection,
-                                                 searchString = keyWords1)
-conceptSetExpressionTable <- conceptSetExpressionTable1
+searchResult <- list()
 
-##  do automated processing based on search results
-designDiagnostic <-
-  ConceptSetDiagnostics::performDesignDiagnosticsOnConceptTable(
-    connection = connection,
-    conceptSetExpressionTable = conceptSetExpressionTable,
-    exportResults = TRUE,
-    locationForResults = locationForResults,
-    iteration = 1
-  )
+### iteration 1
+for (i in (1:length(keyWords))) {
+  locationForResults2 <- file.path(locationForResults,
+                                   paste0('keyWord', keyWords[[i]]),
+                                   'iteration1')
+  designDiagnostics <- ConceptSetDiagnostics::performDesignDiagnosticsOnSearchTerm(searchString = keyWords[[i]], 
+                                                                                   exportResults = FALSE,
+                                                                                   locationForResults = locationForResults2,
+                                                                                   vocabularyIdOfInterest = vocabularyIdOfInterest,
+                                                                                   domainIdOfInterest = domainIdOfInterest, 
+                                                                                   connection = connection)
+  searchResult[[i]] <- designDiagnostics
+}
+
+saveRDS(object = searchResult, file = file.path(locationForResults, "searchResult.rds"))
+if (length(searchResult) >  1) {
+  conceptSetExpressionAllTerms <- list()
+  for (i in (1:length(searchResult))) {
+    conceptSetExpressionAllTerms[[i]] <- searchResult[[i]]$conceptSetExpressionDataFrame
+  }
+  conceptSetExpressionAllTerms <- dplyr::bind_rows(conceptSetExpressionAllTerms) %>% 
+    ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame() %>% 
+    ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connection) %>% 
+    ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(connection = connection, 
+                                                                                    updateVocabularyFields = TRUE) %>% 
+    ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame()
+  
+  json <- conceptSetExpressionAllTerms %>% 
+    RJSONIO::toJSON(digits = 23, pretty = TRUE)
+  
+  SqlRender::writeSql(sql = json,
+                      targetFile = file.path(locationForResults, "conceptSetExpressionAllTerms.json"))
+}
 
 
-############### review only standard for round 1
-### decision - none selected
+for (j in (1:length(searchResult))) {
+  json <- ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(
+    conceptSetExpressionDataFrame = designDiagnostics$conceptSetExpressionDataFrame) %>% 
+    RJSONIO::toJSON(digits = 23, pretty = TRUE) 
+  SqlRender::writeSql(sql = json,
+                      targetFile = file.path(locationForResults, paste0("conceptSetExpression", j, ".json")))
+}
 
-############## complete standard
+DatabaseConnector::disconnect(connection = connection)
 
-############## review source code recommended
-### 1570354	Secondary osteoarthritis, shoulder	ICD10CM	M19.21	644	6
-### small number, ignore.
-### mapped to Disorder of joint of shoulder region, AND Arthropathy associated with another disorder
-
-############## complete non standard
-
-
-readr::write_excel_csv(
-  x = designDiagnostic$conceptSetExpressionTableOptimized,
-  file = file.path(locationForResults, "finalConceptSetExpression.csv"),
-  append = FALSE,
-  na = ""
-) 
