@@ -10,12 +10,16 @@ Depends:
     dplyr
 Imports:
 	Andromeda,
-	readr,
+	DatabaseConnector,
+	dplyr,
 	methods,
-	ROhdsiWebApi,
 	purrr,
+	readr,
+	readr,
 	RJSONIO,
 	rlang,
+	ROhdsiWebApi,
+	SqlRender,
 	SqlRender,
 	stringi,
 	stringr,
