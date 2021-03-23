@@ -31,7 +31,7 @@ resolveConceptSetExpression <- function(conceptSetExpression,
   descendantConcepts <-
     getDescendantConcepts(
       connection = connection,
-      descendantConceptId = conceptSetExpressionDataFrame %>%
+      conceptIds = conceptSetExpressionDataFrame %>%
         dplyr::filter(.data$includeDescendants == TRUE) %>%
         dplyr::pull(.data$conceptId)
     )

@@ -18,22 +18,18 @@
 # given a list of conceptIds, get their descendants
 #' @export
 getDescendantConcepts <-
-  function(descendantConceptId,
+  function(conceptIds,
            connection,
            vocabularyDatabaseSchema = 'vocabulary') {
-    if (any(
-      is.null(descendantConceptId),
-      is.na(descendantConceptId),
-      length(descendantConceptId) == 0
-    )) {
-      descendantConceptId <- 0
+    if (length(conceptIds) == 0) {
+      stop('No concept id provided')
     }
     sql <-
       SqlRender::loadRenderTranslateSql(
         sqlFilename = "GetDescendantConcepts.sql",
         packageName = "ConceptSetDiagnostics",
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        conceptsIdsToGetDescendants = descendantConceptId
+        conceptsIdsToGetDescendants = conceptIds
       )
     
     data <-
