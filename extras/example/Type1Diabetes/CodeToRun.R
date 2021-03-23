@@ -1,7 +1,9 @@
 keyWords <- c('Type 1 Diabetes', 'Type I Diabetes','Mellitus Type 1','Mellitus Type I')
 
 
-outputLocation <- keyWords[[1]]
+outputLocation <- stringr::str_replace_all(string = keyWords[[1]], 
+                                           pattern = " ",
+                                           replacement = "")
 vocabularyIdOfInterest <- c('SNOMED', 'HCPCS', 'ICD10CM', 'ICD10', 'ICD9CM', 'ICD9', 'Read')
 domainIdOfInterest <- c('Condition', 'Observation')
 # Details for connecting to the server:

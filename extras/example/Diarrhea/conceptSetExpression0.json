@@ -1,0 +1,84 @@
+{
+	"items" : [
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4108673,
+				"CONCEPT_NAME" : "Double coronary vessel disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "194843003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4111393,
+				"CONCEPT_NAME" : "Single coronary vessel disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "194842008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4124682,
+				"CONCEPT_NAME" : "Triple vessel disease of the heart",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "233817007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4155007,
+				"CONCEPT_NAME" : "Multi vessel coronary artery disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "371803003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40398869,
+				"CONCEPT_NAME" : "Coronary artery disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "194841001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		}
+	]
+}

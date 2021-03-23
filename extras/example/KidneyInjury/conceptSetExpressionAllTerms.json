@@ -1,0 +1,5876 @@
+{
+	"items" : [
+		{
+			"concept" : {
+				"CONCEPT_ID" : 192359,
+				"CONCEPT_NAME" : "Renal failure syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "42399005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 193165,
+				"CONCEPT_NAME" : "Disorder of adrenal gland",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "30171000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 193820,
+				"CONCEPT_NAME" : "Miscarriage complicated by renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "10697004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 193984,
+				"CONCEPT_NAME" : "Adrenal hypofunction",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "111563005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 197047,
+				"CONCEPT_NAME" : "Failed attempted termination of pregnancy complicated by renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "29421008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 197921,
+				"CONCEPT_NAME" : "Renal osteodystrophy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "16726004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 198124,
+				"CONCEPT_NAME" : "Kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "90708001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 198124,
+				"CONCEPT_NAME" : "Kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "90708001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 199870,
+				"CONCEPT_NAME" : "Renal vascular disorder",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "16934004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 432961,
+				"CONCEPT_NAME" : "Acute renal papillary necrosis with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "298015003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 435008,
+				"CONCEPT_NAME" : "Complete legal termination of pregnancy with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "198721006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 435871,
+				"CONCEPT_NAME" : "Complete illegal termination of pregnancy with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "198759003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 439322,
+				"CONCEPT_NAME" : "Incomplete illegal termination of pregnancy with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "198747002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 439331,
+				"CONCEPT_NAME" : "Incomplete legal termination of pregnancy with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "198708004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 439696,
+				"CONCEPT_NAME" : "Hypertensive heart and renal disease with (congestive) heart failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "194779001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 760992,
+				"CONCEPT_NAME" : "Chronic graft-versus-host disease following kidney transplant",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "128631000119109",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 762881,
+				"CONCEPT_NAME" : "Documentation of renal disorder medication action plan",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "433151000124104",
+				"CONCEPT_CLASS_ID" : "Procedure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 915633,
+				"CONCEPT_NAME" : "Documentation that the patient is on a statin medication or has documentation of a valid contraindication or exception to statin medications; contraindications/exceptions that can be defined by diagnosis codes include pregnancy during the measurement p...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9507",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 915633,
+				"CONCEPT_NAME" : "Documentation that the patient is on a statin medication or has documentation of a valid contraindication or exception to statin medications; contraindications/exceptions that can be defined by diagnosis codes include pregnancy during the measurement p...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9507",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 915772,
+				"CONCEPT_NAME" : "Documentation of medical reason(s) for not currently being a statin therapy user or receive an order (prescription) for statin therapy (e.g., patient with adverse effect, allergy or intolerance to statin medication therapy, patients who have an activ...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9667",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1314385,
+				"CONCEPT_NAME" : "Documentation of medical reason(s) for prescribing or dispensing antibiotic (e.g., intestinal infection, pertussis, bacterial infection, lyme disease, otitis media, acute sinusitis, acute pharyngitis, acute tonsillitis, chronic sinusitis, infection o...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9712",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1314395,
+				"CONCEPT_NAME" : "Documented history of renal failure or baseline serum creatinine = 4.0 mg/dl; renal transplant recipients are not considered to have preoperative renal failure, unless, since transplantation the cr has been or is 4.0 or higher",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9722",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1314454,
+				"CONCEPT_NAME" : "Documentation of medical reason(s) for not currently being a statin therapy user or receive an order (prescription) for statin therapy (e.g., patient with adverse effect, allergy or intolerance to statin medication therapy, patients who are receiving p...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9781",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1397651,
+				"CONCEPT_NAME" : "H/O: acute kidney injury",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "14D8.00",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1571639,
+				"CONCEPT_NAME" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, childbirth and the puerperium",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.2",
+				"CONCEPT_CLASS_ID" : "4-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1571640,
+				"CONCEPT_NAME" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.21",
+				"CONCEPT_CLASS_ID" : "5-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1571641,
+				"CONCEPT_NAME" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, childbirth and the puerperium",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.3",
+				"CONCEPT_CLASS_ID" : "4-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1571642,
+				"CONCEPT_NAME" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.31",
+				"CONCEPT_CLASS_ID" : "5-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1571713,
+				"CONCEPT_NAME" : "Pregnancy related renal disease",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O26.83",
+				"CONCEPT_CLASS_ID" : "5-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617395,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES DURING THE COURSE OF TREATMENT, FOR PATIENTS 20 YEARS OF AGE AND OVER; WITH 4 OR MORE FACE-TO-FACE PHYSICIAN VISITS PER MONTH",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0317",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617396,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES DURING THE COURSE OF TREATMENT, FOR PATIENTS 20 YEARS OF AGE AND OVER; WITH 2 OR 3 FACE-TO-FACE PHYSICIAN VISITS PER MONTH",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0318",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617397,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES DURING THE COURSE OF TREATMENT, FOR PATIENTS 20 YEARS OF AGE AND OVER; WITH 1 FACE-TO-FACE PHYSICIAN VISIT PER MONTH",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0319",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617398,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES FOR HOME DIALYSIS PATIENTS PER FULL MONTH; FOR PATIENTS UNDER TWO YEARS OF AGE TO INCLUDE MONITORING FOR ADEQUACY OF NUTRITION, ASSESSMENT OF GROWTH AND DEVELOPMENT, AND COUNSELING OF PARENTS",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0320",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617399,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES FOR HOME DIALYSIS PATIENTS PER FULL MONTH; FOR PATIENTS TWO TO ELEVEN YEARS OF AGE TO INCLUDE MONITORING FOR ADEQUACY OF NUTRITION, ASSESSMENT OF GROWTH AND DEVELOPMENT, AND COUNSELING OF PARENTS",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0321",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617400,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES FOR HOME DIALYSIS PATIENTS PER FULL MONTH; FOR PATIENTS TWELVE TO NINETEEN YEARS OF AGE TO INCLUDE MONITORING FOR ADEQUACY OF NUTRITION, ASSESSMENT OF GROWTH AND DEVELOPMENT, AND COUNSELING OF PARENTS",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0322",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617401,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES FOR HOME DIALYSIS PATIENTS PER FULL MONTH; FOR PATIENTS TWENTY YEARS OF AGE AND OLDER",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0323",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617402,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES LESS THAN FULL MONTH, PER DAY; FOR PATIENTS UNDER TWO YEARS OF AGE",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0324",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617403,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES LESS THAN FULL MONTH, PER DAY; FOR PATIENTS BETWEEN TWO AND ELEVEN YEARS OF AGE",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0325",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617404,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES LESS THAN FULL MONTH, PER DAY; FOR PATIENTS BETWEEN TWELVE AND NINETEEN YEARS OF AGE",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0326",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617405,
+				"CONCEPT_NAME" : "END STAGE RENAL DISEASE (ESRD) RELATED SERVICES LESS THAN FULL MONTH, PER DAY; FOR PATIENTS TWENTY YEARS OF AGE AND OVER",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G0327",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617544,
+				"CONCEPT_NAME" : "End stage renal disease patient with documented dialysis dose of urr greater than or equal to 65% (or kt/v greater than or equal to 1.2)",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8075",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617545,
+				"CONCEPT_NAME" : "End stage renal disease patient with documented dialysis dose of urr less than 65% (or kt/v less than 1.2)",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8076",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617546,
+				"CONCEPT_NAME" : "Clinician documented that end stage renal disease patient was not an eligible candidate for urr or kt/v measure",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8077",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617547,
+				"CONCEPT_NAME" : "End stage renal disease patient with documented hematocrit greater than or equal to 33 (or hemoglobin greater than or equal to 11)",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8078",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617548,
+				"CONCEPT_NAME" : "End stage renal disease patient with documented hematocrit less than 33 (or hemoglobin less than 11)",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8079",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617549,
+				"CONCEPT_NAME" : "Clinician documented that end stage renal disease patient was not an eligible candidate for hematocrit (hemoglobin) measure",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8080",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617550,
+				"CONCEPT_NAME" : "End stage renal disease patient requiring hemodialysis vascular access documented to have received autogenous av fistula",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8081",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617551,
+				"CONCEPT_NAME" : "End stage renal disease patient requiring hemodialysis documented to have received vascular access other than autogenous av fistula",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8082",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617552,
+				"CONCEPT_NAME" : "End-stage renal disease patient requiring hemodialysis vascular access was not an eligible candidate for autogenous av fistula",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8085",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617794,
+				"CONCEPT_NAME" : "End-stage renal disease patient with a hematocrit or hemoglobin not documented",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8387",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617795,
+				"CONCEPT_NAME" : "End-stage renal disease patient with urr or kt/v value not documented, but otherwise eligible for measure",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8388",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617873,
+				"CONCEPT_NAME" : "Angiotensin converting enzyme (ace) inhibitor or angiotensin receptor blocker (arb) therapy not prescribed for reasons documented by the clinician (e.g., allergy, intolerance, pregnancy, renal failure due to ace inhibitor, diseases of the aortic or mit...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8474",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617873,
+				"CONCEPT_NAME" : "Angiotensin converting enzyme (ace) inhibitor or angiotensin receptor blocker (arb) therapy not prescribed for reasons documented by the clinician (e.g., allergy, intolerance, pregnancy, renal failure due to ace inhibitor, diseases of the aortic or mit...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8474",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617886,
+				"CONCEPT_NAME" : "I intend to report the chronic kidney disease (ckd) measures group",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8487",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617887,
+				"CONCEPT_NAME" : "Clinician intends to report the end stage renal disease (esrd) measure group",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8488",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617894,
+				"CONCEPT_NAME" : "All quality actions for the applicable measures in the chronic kidney disease (ckd) measures group have been performed for this patient",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8495",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4006325,
+				"CONCEPT_NAME" : "Hypertension secondary to renal disease in obstetric context",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "111438007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4029094,
+				"CONCEPT_NAME" : "Renal failure-associated hyperphosphatemia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "237904006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4056470,
+				"CONCEPT_NAME" : "Renal function impairment with growth failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "197671004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4058106,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "199085003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4059138,
+				"CONCEPT_NAME" : "Kidney and ureter disease NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "197827000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4059592,
+				"CONCEPT_NAME" : "Renal tubulo-interstitial disorders in infectious and parasitic diseases classified elsewhere",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "197741004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4062562,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy - delivered with postnatal complication",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "199082000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4062563,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy - not delivered",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "199083005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4062564,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy with postnatal complication",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "199084004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4062919,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy unspecified",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "199080008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4062920,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy - delivered",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "199081007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4066004,
+				"CONCEPT_NAME" : "Post-delivery acute renal failure unspecified",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "200116000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4077355,
+				"CONCEPT_NAME" : "H/O: kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "275552000",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4077355,
+				"CONCEPT_NAME" : "H/O: kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "275552000",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4113053,
+				"CONCEPT_NAME" : "Unspecified complete abortion with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "198797003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4113363,
+				"CONCEPT_NAME" : "Unspecified abortion with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "198773007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4113848,
+				"CONCEPT_NAME" : "Unspecified spontaneous abortion with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "198635002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4113977,
+				"CONCEPT_NAME" : "Unspecified illegal abortion with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "198735008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4113985,
+				"CONCEPT_NAME" : "Unspecified incomplete abortion with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "198785004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4114130,
+				"CONCEPT_NAME" : "Unspecified legal abortion with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "198695004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4114262,
+				"CONCEPT_NAME" : "Failed attempted termination of pregnancy with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "198809000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4122170,
+				"CONCEPT_NAME" : "Other kidney/urinary diseases",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "286979008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4124794,
+				"CONCEPT_NAME" : "Family history of kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "289916006",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4127719,
+				"CONCEPT_NAME" : "X-linked recessive nephrolithiasis with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "236713006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4141739,
+				"CONCEPT_NAME" : "Renal disease diet",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "33489005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4143076,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "267203000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4143363,
+				"CONCEPT_NAME" : "Neuropathy in renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "267602002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4144123,
+				"CONCEPT_NAME" : "Other kidney and ureter disorders",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "266557001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4146013,
+				"CONCEPT_NAME" : "Kidney/urinary disease NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "307415006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4146725,
+				"CONCEPT_NAME" : "Fetal or neonatal effect of maternal renal or urinary disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "268795001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4146907,
+				"CONCEPT_NAME" : "Acute renal failure diet",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "30105008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4148065,
+				"CONCEPT_NAME" : "Overeating disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "35175007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4153346,
+				"CONCEPT_NAME" : "Azotemia due to intrarenal disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "371019009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4159870,
+				"CONCEPT_NAME" : "White spotted kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "371326003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4179226,
+				"CONCEPT_NAME" : "Dependence on dialysis due to end stage renal disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "429075005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4180769,
+				"CONCEPT_NAME" : "Renal failure associated with renal vascular disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "363287001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4188214,
+				"CONCEPT_NAME" : "Familial juvenile gout",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "46785007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4190393,
+				"CONCEPT_NAME" : "History of renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "414417004",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4191043,
+				"CONCEPT_NAME" : "Renal failure NOS following abortive pregnancy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "373916005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4206475,
+				"CONCEPT_NAME" : "Prerenal uremia syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "55655006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4219504,
+				"CONCEPT_NAME" : "Glycogen storage disease, type I",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "7265005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4220631,
+				"CONCEPT_NAME" : "Injury of kidney",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "40095003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4230586,
+				"CONCEPT_NAME" : "Dioctophyme renale infection",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "40410004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4237482,
+				"CONCEPT_NAME" : "Abortion with uraemia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "40894000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4280499,
+				"CONCEPT_NAME" : "Chronic renal failure diet",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "65579002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4296487,
+				"CONCEPT_NAME" : "Calcifying panniculitis due to hyperparathyroidism in renal disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "403418006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4308582,
+				"CONCEPT_NAME" : "Amaranthus retroflexus poisoning",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "83681002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4309184,
+				"CONCEPT_NAME" : "Bacterial kidney disease of fish",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "8436004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4326425,
+				"CONCEPT_NAME" : "Hyperalimentation formula for renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "74930008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4334196,
+				"CONCEPT_NAME" : "Family history of chronic renal impairment",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "430560006",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4334341,
+				"CONCEPT_NAME" : "Family history of renal failure syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "430682005",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 35207674,
+				"CONCEPT_NAME" : "Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "I13.2",
+				"CONCEPT_CLASS_ID" : "4-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 35209300,
+				"CONCEPT_NAME" : "Other disorders of kidney and ureter in diseases classified elsewhere",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "N29",
+				"CONCEPT_CLASS_ID" : "3-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 35209544,
+				"CONCEPT_NAME" : "Renal failure following ectopic and molar pregnancy",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O08.4",
+				"CONCEPT_CLASS_ID" : "4-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 35607997,
+				"CONCEPT_NAME" : "Action myoclonus renal failure syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "764453009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 35621979,
+				"CONCEPT_NAME" : "Encephalopathy, hypertrophic cardiomyopathy, renal tubular disease syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "763280005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 35624320,
+				"CONCEPT_NAME" : "Acute adrenal insufficiency",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "766986002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36713020,
+				"CONCEPT_NAME" : "Hyperparathyroidism due to end stage renal disease on dialysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "16218721000119107",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36715491,
+				"CONCEPT_NAME" : "Low alkaline phosphatase due to chronic kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "721183009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36716029,
+				"CONCEPT_NAME" : "Hyperuricemia, anemia, renal failure syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "721840000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36716182,
+				"CONCEPT_NAME" : "Acute kidney injury due to circulatory failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "722095005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36716312,
+				"CONCEPT_NAME" : "Acute kidney injury due to sepsis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "722278006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36717134,
+				"CONCEPT_NAME" : "Chronic kidney disease clinical management plan",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "720701005",
+				"CONCEPT_CLASS_ID" : "Qualifier Value",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37204433,
+				"CONCEPT_NAME" : "46,XY disorder of sex development, adrenal insufficiency due to CYP11A1 deficiency",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "783092005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37392737,
+				"CONCEPT_NAME" : "Acute kidney injury warning stage",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1007921000000107",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37393690,
+				"CONCEPT_NAME" : "GFR (glomerular filtration rate) calculated by abbreviated Modification of Diet in Renal Disease Study Group calculation",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1020291000000106",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37395514,
+				"CONCEPT_NAME" : "Acute kidney injury due to acute tubular necrosis due to hypovolaemia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1048451000000103",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37395516,
+				"CONCEPT_NAME" : "Acute kidney injury due to acute tubular necrosis due to circulatory failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1048481000000109",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37395517,
+				"CONCEPT_NAME" : "Acute kidney injury due to acute tubular necrosis due to sepsis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1048491000000106",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37395518,
+				"CONCEPT_NAME" : "Acute kidney injury due to acute tubular necrosis with histological evidence",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1048501000000100",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37395652,
+				"CONCEPT_NAME" : "Anemia in chronic kidney disease stage 5",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "691411000119101",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37397038,
+				"CONCEPT_NAME" : "Renal tubulopathy with encephalopathy and liver failure syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "717053007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37398911,
+				"CONCEPT_NAME" : "Anemia in chronic kidney disease stage 4",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "691401000119104",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40302133,
+				"CONCEPT_NAME" : "H/O: kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "138814004",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40302133,
+				"CONCEPT_NAME" : "H/O: kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "138814004",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40317612,
+				"CONCEPT_NAME" : "Genitourinary system diseases (& [kidney] or [urinary])",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155848006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40317624,
+				"CONCEPT_NAME" : "Other kidney/urinary diseases",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155859002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40317638,
+				"CONCEPT_NAME" : "Kidney &/or ureter disorder NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155871008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40317638,
+				"CONCEPT_NAME" : "Kidney &/or ureter disorder NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155871008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40317674,
+				"CONCEPT_NAME" : "Kidney/urinary disease NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155903006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40326304,
+				"CONCEPT_NAME" : "Colic - renal, symptom",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "162140006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40333226,
+				"CONCEPT_NAME" : "H/O: renal disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "161545007",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40333226,
+				"CONCEPT_NAME" : "H/O: renal disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "161545007",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40342795,
+				"CONCEPT_NAME" : "Complete disruption of kidney parenchyma with open wound into cavity",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "25955005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40346984,
+				"CONCEPT_NAME" : "Kidney diseases",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "266612003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40346984,
+				"CONCEPT_NAME" : "Kidney diseases",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "266612003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40346997,
+				"CONCEPT_NAME" : "Kidney disease NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "266624005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40346997,
+				"CONCEPT_NAME" : "Kidney disease NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "266624005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40347000,
+				"CONCEPT_NAME" : "Pyoureter",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "266627003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353431,
+				"CONCEPT_NAME" : "[EDTA] Tuberculosis of renal tract associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274542006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353432,
+				"CONCEPT_NAME" : "[EDTA] Cystinosis associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274543001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353433,
+				"CONCEPT_NAME" : "[EDTA] Primary oxalosis associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274544007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353434,
+				"CONCEPT_NAME" : "[EDTA] Amyloid associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274545008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353435,
+				"CONCEPT_NAME" : "[EDTA] Haemolytic uraemic syndrome including Moschcowitz syndrome associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274546009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353439,
+				"CONCEPT_NAME" : "[EDTA] Goodpasture's syndrome associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274550002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353442,
+				"CONCEPT_NAME" : "[EDTA] Severe nephrotic syndrome with focal sclerosis (paediatric patients only) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274552005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353443,
+				"CONCEPT_NAME" : "[EDTA] Lupus erythematosus associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274553000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353444,
+				"CONCEPT_NAME" : "[EDTA] Membranous nephropathy associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274554006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353445,
+				"CONCEPT_NAME" : "[EDTA] Cortical or tubular necrosis associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274555007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353446,
+				"CONCEPT_NAME" : "[EDTA] Chronic renal failure, aetiology uncertain",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274556008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353447,
+				"CONCEPT_NAME" : "[EDTA] Renal vascular disease - classified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274557004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353447,
+				"CONCEPT_NAME" : "[EDTA] Renal vascular disease - classified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274557004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353825,
+				"CONCEPT_NAME" : "[EDTA] Renal vascular disease due to hypertension (no primary renal disease) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274559001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353825,
+				"CONCEPT_NAME" : "[EDTA] Renal vascular disease due to hypertension (no primary renal disease) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274559001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353826,
+				"CONCEPT_NAME" : "[EDTA] Renal vascular disease due to malignant hypertension (no primary renal disease) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274560006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353826,
+				"CONCEPT_NAME" : "[EDTA] Renal vascular disease due to malignant hypertension (no primary renal disease) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274560006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353831,
+				"CONCEPT_NAME" : "[EDTA] Congenital renal hypoplasia - type unspecified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274564002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353832,
+				"CONCEPT_NAME" : "[EDTA] Congenital renal dysplasia with or without urinary tract malformation associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274565001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353833,
+				"CONCEPT_NAME" : "[EDTA] Polycystic kidneys, infantile (recessive) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274566000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353834,
+				"CONCEPT_NAME" : "[EDTA] Polycystic kidneys, adult type (dominant) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274567009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353835,
+				"CONCEPT_NAME" : "[EDTA] Medullary cystic disease, including nephronophthisis, associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274568004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353835,
+				"CONCEPT_NAME" : "[EDTA] Medullary cystic disease, including nephronophthisis, associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274568004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353836,
+				"CONCEPT_NAME" : "[EDTA] Syndrome of agenesis of abdominal muscles (Prune belly syndrome) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274569007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353837,
+				"CONCEPT_NAME" : "[EDTA] Hereditary nephritis with nerve deafness (Alport's Syndrome) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274570008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353845,
+				"CONCEPT_NAME" : "[EDTA] Other identified specified renal disorders associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274577006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353846,
+				"CONCEPT_NAME" : "[EDTA] IgA nephropathy (proven by immunofluorescence, excluding Henoch-Schonlein purpura) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274578001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353847,
+				"CONCEPT_NAME" : "[EDTA] Membrano-proliferative glomerulonephritis,type I (proven immunofluorescence / electron microscopy-excluding lupus erythematosus+other specified multi-system disease) associated renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274579009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353847,
+				"CONCEPT_NAME" : "[EDTA] Membrano-proliferative glomerulonephritis,type I (proven immunofluorescence / electron microscopy-excluding lupus erythematosus+other specified multi-system disease) associated renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274579009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353849,
+				"CONCEPT_NAME" : "[EDTA] Dense deposit disease, membrano-proliferative glomerulonephritis, type II, (proven by immunofluorescence and/or electronic microscopy) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274580007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353849,
+				"CONCEPT_NAME" : "[EDTA] Dense deposit disease, membrano-proliferative glomerulonephritis, type II, (proven by immunofluorescence and/or electronic microscopy) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274580007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353850,
+				"CONCEPT_NAME" : "[EDTA] Traumatic or surgical loss of kidney associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274581006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353851,
+				"CONCEPT_NAME" : "[EDTA] Cystic kidney disease - other specified type associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274582004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353851,
+				"CONCEPT_NAME" : "[EDTA] Cystic kidney disease - other specified type associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274582004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353851,
+				"CONCEPT_NAME" : "[EDTA] Cystic kidney disease - other specified type associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274582004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353852,
+				"CONCEPT_NAME" : "[EDTA] Cystic kidney disease - type unspecified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274583009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353852,
+				"CONCEPT_NAME" : "[EDTA] Cystic kidney disease - type unspecified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274583009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353852,
+				"CONCEPT_NAME" : "[EDTA] Cystic kidney disease - type unspecified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274583009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353853,
+				"CONCEPT_NAME" : "[EDTA] Nephropathy due to analgesic drugs associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274584003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353854,
+				"CONCEPT_NAME" : "[EDTA] Balkan nephropathy associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274585002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353855,
+				"CONCEPT_NAME" : "[EDTA] Nephrocalcinosis and hypercalcaemic nephropathy associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274586001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353856,
+				"CONCEPT_NAME" : "[EDTA] Gout associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274587005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353857,
+				"CONCEPT_NAME" : "[EDTA] Multi-system disease - otherwise specified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274588000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353857,
+				"CONCEPT_NAME" : "[EDTA] Multi-system disease - otherwise specified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274588000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353858,
+				"CONCEPT_NAME" : "[EDTA] Diabetes Type I (insulin dependent) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274589008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353859,
+				"CONCEPT_NAME" : "[EDTA] Diabetes Type II (non-insulin-dependent) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274590004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353861,
+				"CONCEPT_NAME" : "[EDTA] Scleroderma associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274591000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353862,
+				"CONCEPT_NAME" : "[EDTA] Henoch-Schonlein purpura associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274592007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353863,
+				"CONCEPT_NAME" : "[EDTA] Myelomatosis associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274593002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353864,
+				"CONCEPT_NAME" : "[EDTA] Nephropathy caused by other specified drug associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274594008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353865,
+				"CONCEPT_NAME" : "[EDTA] Nephropathy due to cis-platinum associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274595009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353866,
+				"CONCEPT_NAME" : "[EDTA] Nephropathy due to cyclosporin A associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274596005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353867,
+				"CONCEPT_NAME" : "[EDTA] Kidney tumour associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274597001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353868,
+				"CONCEPT_NAME" : "[EDTA] Hereditary nephropathy - otherwise specified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274598006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353869,
+				"CONCEPT_NAME" : "[EDTA] Hereditary/familial nephropathy - type unspecified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274599003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353870,
+				"CONCEPT_NAME" : "[EDTA] Fabry's disease associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274600000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353870,
+				"CONCEPT_NAME" : "[EDTA] Fabry's disease associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274600000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353873,
+				"CONCEPT_NAME" : "[EDTA] Wegener's granulomatosis associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274601001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353874,
+				"CONCEPT_NAME" : "[EDTA] Renal vascular disease due to polyarteritis associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274602008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353874,
+				"CONCEPT_NAME" : "[EDTA] Renal vascular disease due to polyarteritis associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274602008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353893,
+				"CONCEPT_NAME" : "[EDTA] Oligomeganephronic hypoplasia associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274620004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353902,
+				"CONCEPT_NAME" : "[EDTA] Glomerulonephritis, histologically examined (otherwise specified) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274628006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353903,
+				"CONCEPT_NAME" : "[EDTA] Glomerulonephritis, histologically not examined associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274629003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40353904,
+				"CONCEPT_NAME" : "[EDTA] Pyelonephritis/interstitial nephritis associated with neurogenic bladder and renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274630008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40354339,
+				"CONCEPT_NAME" : "[EDTA] Pyelonephritis/interstitial nephritis cause not specified associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274631007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40354340,
+				"CONCEPT_NAME" : "[EDTA] Pyelonephritis/interstitial nephritis due to acquired obstructive uropathy associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274632000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40354341,
+				"CONCEPT_NAME" : "[EDTA] Pyelonephritis/interstitial nephritis due to congenital obstructive uropathy with or without vesico-ureteric reflux associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274633005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40354342,
+				"CONCEPT_NAME" : "[EDTA] Pyelonephritis/interstitial nephritis due to other specified cause associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274634004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40354343,
+				"CONCEPT_NAME" : "[EDTA] Pyelonephritis/interstitial nephritis due to urolithiasis associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274635003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40354344,
+				"CONCEPT_NAME" : "[EDTA] Pyelonephritis/interstitial nephritis due to vesico-ureteric reflux without obstruction associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "274636002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40360241,
+				"CONCEPT_NAME" : "[EDTA] Pyelonephritis or interstitial nephritis associated renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "281854005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40374521,
+				"CONCEPT_NAME" : "[EDTA] Focal segmental glomeruloscerosis with nephrotic syndrome in adults with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "285278004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40374522,
+				"CONCEPT_NAME" : "[EDTA] Crescentric glomerulonephritis (type I,II,III) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "285279007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40374523,
+				"CONCEPT_NAME" : "[EDTA] Tubulo-interstitial nephritis (not pyelonephritis) associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "285280005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40374525,
+				"CONCEPT_NAME" : "[EDTA] Lead-induced nephropathy associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "285281009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40374954,
+				"CONCEPT_NAME" : "[EDTA] Ischaemic renal disease / cholesterol embolism associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "285282002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40374954,
+				"CONCEPT_NAME" : "[EDTA] Ischaemic renal disease / cholesterol embolism associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "285282002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40374955,
+				"CONCEPT_NAME" : "[EDTA] Cryoglobulineme glomerulonephritis associated with renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "285283007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40376588,
+				"CONCEPT_NAME" : "Hemorrhagic fever with renal syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "186701001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40386727,
+				"CONCEPT_NAME" : "Diabetes mellitus: [with renal manifestation] or [nephropathy]",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "190338009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40386727,
+				"CONCEPT_NAME" : "Diabetes mellitus: [with renal manifestation] or [nephropathy]",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "190338009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40390478,
+				"CONCEPT_NAME" : "Renal glucosuria",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "1913007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40393484,
+				"CONCEPT_NAME" : "Renal failure NOS following abortive pregnancy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "198847005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40395143,
+				"CONCEPT_NAME" : "Renal impairment",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "197657007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40395976,
+				"CONCEPT_NAME" : "Kidney calculus",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "197792007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40395982,
+				"CONCEPT_NAME" : "Other kidney &/or ureter disorders",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "197798006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40396002,
+				"CONCEPT_NAME" : "Other kidney and ureter disorders",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "197815003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40399075,
+				"CONCEPT_NAME" : "[X]Other specified renal tubulo-interstitial diseases",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "198513002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40399077,
+				"CONCEPT_NAME" : "[X]Renal tubulo-interstitial disorders in neoplastic diseases classified elsewhere",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "198515009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40399078,
+				"CONCEPT_NAME" : "[X]Renal tubulo-interstitial disorders in blood diseases and disorders involving the immune mechanism classified elsewhere",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "198516005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40399079,
+				"CONCEPT_NAME" : "[X]Renal tubulo-interstitial disorders in metabolic diseases classified elsewhere",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "198517001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40399082,
+				"CONCEPT_NAME" : "[X]Renal tubulo-interstitial disorders in other diseases classified elsewhere",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "198520009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40399088,
+				"CONCEPT_NAME" : "[X]Other acute renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "198525004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40399089,
+				"CONCEPT_NAME" : "[X]Other chronic renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "198526003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40399097,
+				"CONCEPT_NAME" : "[X]Other disorders of kidney and ureter in infectious and parasitic diseases classified elsewhere",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "198533003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40399098,
+				"CONCEPT_NAME" : "[X]Other disorders of kidney and ureter in other diseases classified elsewhere",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "198534009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40403348,
+				"CONCEPT_NAME" : "[X]Other cystic kidney diseases",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "205940005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40404970,
+				"CONCEPT_NAME" : "Toe injury NEC due to birth trauma",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "206255002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40409737,
+				"CONCEPT_NAME" : "Det.ren.func.after ren.transpl",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "213147001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40409948,
+				"CONCEPT_NAME" : "Kidney: [injury NOS] or [ruptured NOS]",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "210209001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40415172,
+				"CONCEPT_NAME" : "Mechanical failure of instrument &/or apparatus during kidney dialysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "216978006",
+				"CONCEPT_CLASS_ID" : "Event",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40478891,
+				"CONCEPT_NAME" : "Erythropoietin resistance in anemia of chronic kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "444271000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40524359,
+				"CONCEPT_NAME" : "[V]Family history of kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "315837003",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40528259,
+				"CONCEPT_NAME" : "Renal failure/ketogen food",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "328186004",
+				"CONCEPT_CLASS_ID" : "Pharma/Biol Product",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40616567,
+				"CONCEPT_NAME" : "Pulpy kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "69011007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40663931,
+				"CONCEPT_NAME" : "Developed postoperative renal failure or required dialysis",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8575",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40664307,
+				"CONCEPT_NAME" : "No postoperative renal failure/dialysis not required",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8576",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40664692,
+				"CONCEPT_NAME" : "Patient prescribed or dispensed antibiotic for documented medical reason(s) within three days after the initial diagnosis of uri (e.g., intestinal infection, pertussis, bacterial infection, lyme disease, otitis media, acute sinusitis, acute pharyngitis...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8709",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40664728,
+				"CONCEPT_NAME" : "Documentation of diagnosis of chronic kidney disease",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8771",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 42538350,
+				"CONCEPT_NAME" : "POS-S Renal (Palliative care Outcome Scale symptom list for end-stage renal disease) score",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "761866001",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 43020784,
+				"CONCEPT_NAME" : "Fetal hypertrophic cardiomyopathy associated with renal disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "472326004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 43533259,
+				"CONCEPT_NAME" : "Clinician documented that patient was not an eligible candidate for angiotensin converting enzyme (ace) inhibitor or angiotensin receptor blocker (arb) therapy (eg, allergy, intolerance, pregnancy, renal failure due to ace inhibitor, diseases of the ao...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8936",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 43533259,
+				"CONCEPT_NAME" : "Clinician documented that patient was not an eligible candidate for angiotensin converting enzyme (ace) inhibitor or angiotensin receptor blocker (arb) therapy (eg, allergy, intolerance, pregnancy, renal failure due to ace inhibitor, diseases of the ao...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8936",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 43533376,
+				"CONCEPT_NAME" : "Documentation of medical reason(s) for patient having a hemoglobin level < 10 g/dl (e.g., patients who have non-renal etiologies of anemia [e.g., sickle cell anemia or other hemoglobinopathies, hypersplenism, primary bone marrow disease, anemia related...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8975",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44782675,
+				"CONCEPT_NAME" : "At risk of chronic kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "698463001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44786436,
+				"CONCEPT_NAME" : "Documentation of end stage renal disease (esrd), dialysis, renal transplant before or during the measurement period or pregnancy during the measurement period",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9231",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44790945,
+				"CONCEPT_NAME" : "Chronic kidney disease monitoring",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "248721000000108",
+				"CONCEPT_CLASS_ID" : "Procedure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44791043,
+				"CONCEPT_NAME" : "Predicted stage chronic kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "249311000000109",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44791713,
+				"CONCEPT_NAME" : "Did not attend chronic kidney disease monitoring clinic",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "298141000000107",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44800719,
+				"CONCEPT_NAME" : "[X]Other disorders of kidney and ureter in infectious and parasitic diseases classified elsewhere",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "465851000000108",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44803874,
+				"CONCEPT_NAME" : "Exception reporting - chronic kidney disease quality indicators",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "717361000000100",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44804337,
+				"CONCEPT_NAME" : "Chronic kidney disease monitoring invitation",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "711421000000107",
+				"CONCEPT_CLASS_ID" : "Procedure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44804507,
+				"CONCEPT_NAME" : "No family history of renal disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "777571000000109",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44804516,
+				"CONCEPT_NAME" : "No history of renal disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "777721000000100",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44806368,
+				"CONCEPT_NAME" : "Chronic kidney disease self-management plan agreed",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "811941000000105",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44808279,
+				"CONCEPT_NAME" : "Estimated glomerular filtration rate using Chronic Kidney Disease Epidemiology Collaboration formula",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "857971000000104",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44808358,
+				"CONCEPT_NAME" : "QKidney disease risk calculator score",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "848961000000105",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44809061,
+				"CONCEPT_NAME" : "Acute kidney injury stage 1",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "851931000000107",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44809062,
+				"CONCEPT_NAME" : "Acute kidney injury stage 2",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "851941000000103",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44809063,
+				"CONCEPT_NAME" : "Acute kidney injury stage 3",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "851951000000100",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44813596,
+				"CONCEPT_NAME" : "[X]Other disorders of kidney and ureter in other diseases classified elsewhere",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "469791000000106",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44819693,
+				"CONCEPT_NAME" : "Hypertensive heart and chronic kidney disease, malignant, with heart failure and with chronic kidney disease stage V or end stage renal disease",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "404.03",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44819849,
+				"CONCEPT_NAME" : "Hypertension secondary to renal disease, complicating pregnancy, childbirth, and the puerperium, unspecified as to episode of care or not applicable",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "642.10",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44819850,
+				"CONCEPT_NAME" : "Hypertension secondary to renal disease, complicating pregnancy, childbirth, and the puerperium, antepartum condition or complication",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "642.13",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44820856,
+				"CONCEPT_NAME" : "Hypertensive heart and chronic kidney disease, benign, with heart failure and chronic kidney disease stage V or end stage renal disease",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "404.13",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44820856,
+				"CONCEPT_NAME" : "Hypertensive heart and chronic kidney disease, benign, with heart failure and chronic kidney disease stage V or end stage renal disease",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "404.13",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44820856,
+				"CONCEPT_NAME" : "Hypertensive heart and chronic kidney disease, benign, with heart failure and chronic kidney disease stage V or end stage renal disease",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "404.13",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44821023,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy, without mention of hypertension, delivered, with or without mention of antepartum condition",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "646.21",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44821950,
+				"CONCEPT_NAME" : "Hypertensive heart and chronic kidney disease, unspecified, without heart failure and with chronic kidney disease stage V or end stage renal disease",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "404.92",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44822076,
+				"CONCEPT_NAME" : "Unspecified abortion complicated by renal failure",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "637.3",
+				"CONCEPT_CLASS_ID" : "4-dig nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44822077,
+				"CONCEPT_NAME" : "Unspecified abortion, complicated by renal failure, unspecified",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "637.30",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44822086,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy, without mention of hypertension",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "646.2",
+				"CONCEPT_CLASS_ID" : "4-dig nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44823418,
+				"CONCEPT_NAME" : "Maternal renal and urinary tract diseases affecting fetus or newborn",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "760.1",
+				"CONCEPT_CLASS_ID" : "4-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44824235,
+				"CONCEPT_NAME" : "Hypertensive heart and chronic kidney disease, unspecified, with heart failure and chronic kidney disease stage V or end stage renal disease",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "404.93",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44824391,
+				"CONCEPT_NAME" : "Hypertension secondary to renal disease, complicating pregnancy, childbirth, and the puerperium",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "642.1",
+				"CONCEPT_CLASS_ID" : "4-dig nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44824392,
+				"CONCEPT_NAME" : "Hypertension secondary to renal disease, complicating pregnancy, childbirth, and the puerperium, delivered, with mention of postpartum complication",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "642.12",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44825597,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy, without mention of hypertension, delivered, with mention of postpartum complication",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "646.22",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44827332,
+				"CONCEPT_NAME" : "Family history of kidney diseases",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "V18.6",
+				"CONCEPT_CLASS_ID" : "4-dig nonbill V code",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44827930,
+				"CONCEPT_NAME" : "Hypertension secondary to renal disease, complicating pregnancy, childbirth, and the puerperium, delivered, with or without mention of antepartum condition",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "642.11",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44828258,
+				"CONCEPT_NAME" : "Injury to kidney with open wound into cavity, hematoma without rupture of capsule",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "866.11",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44829109,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy, without mention of hypertension, postpartum condition or complication",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "646.24",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44831232,
+				"CONCEPT_NAME" : "Hypertensive heart and chronic kidney disease, malignant, without heart failure and with chronic kidney disease stage V or end stage renal disease",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "404.02",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44832810,
+				"CONCEPT_NAME" : "Injury to kidney without mention of open wound into cavity, hematoma without rupture of capsule",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "866.01",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44833560,
+				"CONCEPT_NAME" : "Hypertensive heart and chronic kidney disease, benign, without heart failure and with chronic kidney disease stage V or end stage renal disease",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "404.12",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44833714,
+				"CONCEPT_NAME" : "Hypertension secondary to renal disease, complicating pregnancy, childbirth, and the puerperium, postpartum condition or complication",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "642.14",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44834034,
+				"CONCEPT_NAME" : "Injury to kidney with open wound into cavity, complete disruption of kidney parenchyma",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "866.13",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44834868,
+				"CONCEPT_NAME" : "Unspecified abortion, complicated by renal failure, incomplete",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "637.31",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44834869,
+				"CONCEPT_NAME" : "Unspecified abortion, complicated by renal failure, complete",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "637.32",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44836078,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy, without mention of hypertension, antepartum condition or complication",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "646.23",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44836623,
+				"CONCEPT_NAME" : "Family history of other kidney diseases",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "V18.69",
+				"CONCEPT_CLASS_ID" : "5-dig billing V code",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44837238,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy, without mention of hypertension, unspecified as to episode of care or not applicable",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "646.20",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45423656,
+				"CONCEPT_NAME" : "Kidney and ureter disease NOS",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "K13z.00",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45427682,
+				"CONCEPT_NAME" : "Mechanical failure of apparatus during renal dialysis",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "TA42011",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45433613,
+				"CONCEPT_NAME" : "[X]Other disorders of kidney and ureter in infectious and parasitic diseases classified elsewhere",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "Kyu4200",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45436949,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy - not delivered",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L162300",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45440233,
+				"CONCEPT_NAME" : "[X]Other disorders of kidney and ureter in other diseases classified elsewhere",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "Kyu4300",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45443530,
+				"CONCEPT_NAME" : "Renal failure NOS following abortive pregnancy",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L093z00",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45446819,
+				"CONCEPT_NAME" : "Acute kidney injury",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "K04..12",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45456934,
+				"CONCEPT_NAME" : "Unspecified legal abortion with renal failure",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L050300",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45460237,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy NOS",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L162z00",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45463681,
+				"CONCEPT_NAME" : "Unspecified illegal abortion with renal failure",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L060300",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45463695,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy - delivered",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L162100",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45466381,
+				"CONCEPT_NAME" : "Predicted stage chronic kidney disease",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "9Ot5.00",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45467077,
+				"CONCEPT_NAME" : "Pre-existing hypertensive heart and renal disease complicating pregnancy, childbirth and the puerperium",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L128100",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45480454,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy unspecified",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L162000",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45483728,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L162.00",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45483729,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy with postnatal complication",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L162400",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45487106,
+				"CONCEPT_NAME" : "Unspecified abortion with renal failure",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L070300",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45513624,
+				"CONCEPT_NAME" : "Unspecified renal disease in pregnancy - delivered with postnatal complication",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "L162200",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45520956,
+				"CONCEPT_NAME" : "Failure of sterile precautions during renal dialysis",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "TA22011",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45534126,
+				"CONCEPT_NAME" : "Other disorders of kidney and ureter in other diseases classified elsewhere",
+				"VOCABULARY_ID" : "ICD10",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "N29.8",
+				"CONCEPT_CLASS_ID" : "ICD10 code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45534171,
+				"CONCEPT_NAME" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, unspecified trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.219",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45534172,
+				"CONCEPT_NAME" : "Pre-existing hypertensive chronic kidney disease complicating childbirth",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.22",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45534917,
+				"CONCEPT_NAME" : "Unspecified injury of right kidney, sequela",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "S37.001S",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45539084,
+				"CONCEPT_NAME" : "Renal failure following abortion and ectopic and molar pregnancy",
+				"VOCABULARY_ID" : "ICD10",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O08.4",
+				"CONCEPT_CLASS_ID" : "ICD10 code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45539086,
+				"CONCEPT_NAME" : "Pre-existing hypertensive chronic kidney disease complicating the puerperium",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.23",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45539087,
+				"CONCEPT_NAME" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, unspecified trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.319",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45539110,
+				"CONCEPT_NAME" : "Pregnancy related renal disease, second trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O26.832",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45544031,
+				"CONCEPT_NAME" : "Postpartum acute renal failure",
+				"VOCABULARY_ID" : "ICD10",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O90.4",
+				"CONCEPT_CLASS_ID" : "ICD10 code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45544617,
+				"CONCEPT_NAME" : "Other injury of right kidney, sequela",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "S37.091S",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45548656,
+				"CONCEPT_NAME" : "Other disorders of kidney and ureter in diseases classified elsewhere",
+				"VOCABULARY_ID" : "ICD10",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "N29",
+				"CONCEPT_CLASS_ID" : "ICD10 Hierarchy",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45548697,
+				"CONCEPT_NAME" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, second trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.212",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45548698,
+				"CONCEPT_NAME" : "Pre-existing hypertensive heart and renal disease complicating pregnancy, childbirth and the puerperium",
+				"VOCABULARY_ID" : "ICD10",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.3",
+				"CONCEPT_CLASS_ID" : "ICD10 code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45548726,
+				"CONCEPT_NAME" : "Pregnancy related renal disease, unspecified trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O26.839",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45552372,
+				"CONCEPT_NAME" : "Diabetes mellitus due to underlying condition with diabetic chronic kidney disease",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "E08.22",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45558147,
+				"CONCEPT_NAME" : "Other disorders of kidney and ureter in infectious and parasitic diseases classified elsewhere",
+				"VOCABULARY_ID" : "ICD10",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "N29.1",
+				"CONCEPT_CLASS_ID" : "ICD10 code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45558201,
+				"CONCEPT_NAME" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, third trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.313",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45558202,
+				"CONCEPT_NAME" : "Pre-existing hypertensive heart and chronic kidney disease complicating childbirth",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.32",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45561945,
+				"CONCEPT_NAME" : "Drug or chemical induced diabetes mellitus with diabetic chronic kidney disease",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "E09.22",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45563063,
+				"CONCEPT_NAME" : "Pregnancy related renal disease, third trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O26.833",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45567886,
+				"CONCEPT_NAME" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, first trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.211",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45567902,
+				"CONCEPT_NAME" : "Pregnancy related renal disease, first trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O26.831",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45577557,
+				"CONCEPT_NAME" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, second trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.312",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45582443,
+				"CONCEPT_NAME" : "Pre-existing hypertensive renal disease complicating pregnancy, childbirth and the puerperium",
+				"VOCABULARY_ID" : "ICD10",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.2",
+				"CONCEPT_CLASS_ID" : "ICD10 code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45582444,
+				"CONCEPT_NAME" : "Pre-existing hypertensive heart and chronic kidney disease complicating the puerperium",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.33",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45587280,
+				"CONCEPT_NAME" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, third trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.213",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45587281,
+				"CONCEPT_NAME" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, first trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O10.311",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45595797,
+				"CONCEPT_NAME" : "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "E11.22",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45596188,
+				"CONCEPT_NAME" : "Hypertensive heart and chronic kidney disease without heart failure, with stage 5 chronic kidney disease, or end stage renal disease",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "I13.11",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45602459,
+				"CONCEPT_NAME" : "Unspecified injury of left kidney, sequela",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "S37.002S",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45602465,
+				"CONCEPT_NAME" : "Other injury of unspecified kidney, sequela",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "S37.099S",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45605778,
+				"CONCEPT_NAME" : "Hypertensive renal disease without renal failure",
+				"VOCABULARY_ID" : "ICD10",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "I12.9",
+				"CONCEPT_CLASS_ID" : "ICD10 code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45607260,
+				"CONCEPT_NAME" : "Unspecified injury of unspecified kidney, sequela",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "S37.009S",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45607268,
+				"CONCEPT_NAME" : "Other injury of left kidney, sequela",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "S37.092S",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45757442,
+				"CONCEPT_NAME" : "Acute nontraumatic kidney injury",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "140031000119103",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45765672,
+				"CONCEPT_NAME" : "Modification of diet in renal disease formula",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "702668005",
+				"CONCEPT_CLASS_ID" : "Qualifier Value",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45768812,
+				"CONCEPT_NAME" : "Anemia in chronic kidney disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "707323002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45770903,
+				"CONCEPT_NAME" : "Prerenal renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "129561000119108",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45770903,
+				"CONCEPT_NAME" : "Prerenal renal failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "129561000119108",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 46284080,
+				"CONCEPT_NAME" : "Chronic kidney disease resolved",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "939211000000104",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 46286899,
+				"CONCEPT_NAME" : "At risk of acute kidney injury",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "938911000000100",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 46287046,
+				"CONCEPT_NAME" : "Family history of end stage renal disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "959511000000100",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		}
+	]
+}
