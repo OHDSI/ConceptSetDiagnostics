@@ -12,4 +12,4 @@ FROM @vocabulary_database_schema.concept_relationship cr
 JOIN @vocabulary_database_schema.concept c ON c.concept_id = cr.concept_id_1
 WHERE cr.concept_id_2 IN (@conceptIds)
 	AND cr.INVALID_REASON IS NULL
-	AND relationship_id IN ('Maps from');
+	AND relationship_id IN ('Mapped from');
