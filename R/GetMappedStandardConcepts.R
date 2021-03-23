@@ -17,21 +17,19 @@
 
 # given a list of conceptIds, get their mapped
 #' @export
-getMappedConcepts <-
-  function(mappedConceptId,
+getMappedStandardConcepts <-
+  function(conceptIds,
            connection,
            vocabularyDatabaseSchema = 'vocabulary') {
-    if (any(is.null(mappedConceptId),
-            is.na(mappedConceptId),
-            length(mappedConceptId) == 0)) {
-      mappedConceptId <- 0
+    if (length(conceptIds) == 0) {
+      stop('no concept id provided')
     }
     sql <-
       SqlRender::loadRenderTranslateSql(
-        sqlFilename = "GetMappedSourcecodes.sql",
+        sqlFilename = "GetMappedStandardcodes.sql",
         packageName = "ConceptSetDiagnostics",
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        conceptsIdsToGetMapped = mappedConceptId
+        conceptsIdsToGetMapped = conceptIds
       )
     data <-
       renderTranslateQuerySql(

@@ -113,9 +113,9 @@ resolveConceptSetExpression <- function(conceptSetExpression,
   
   # get the mapped concepts for the resolved conceptIds
   mappedConcepts <-
-    getMappedConcepts(
+    getMappedSourceConcepts(
       connection = connection,
-      mappedConceptId =  resolvedConceptIds %>%
+      conceptIds = resolvedConceptIds %>%
         dplyr::pull(.data$conceptId)
     ) %>%
     dplyr::filter(.data$standardConceptId != .data$conceptId) %>%
