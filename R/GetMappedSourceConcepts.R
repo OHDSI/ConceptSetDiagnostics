@@ -29,7 +29,7 @@ getMappedSourceConcepts <-
         sqlFilename = "GetMappedSourcecodes.sql",
         packageName = "ConceptSetDiagnostics",
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        conceptsIdsToGetMapped = conceptIds
+        conceptsIds = conceptIds
       )
     data <-
       renderTranslateQuerySql(
