@@ -29,7 +29,7 @@ getMappedStandardConcepts <-
         sqlFilename = "GetMappedStandardcodes.sql",
         packageName = "ConceptSetDiagnostics",
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        conceptsIdsToGetMapped = conceptIds
+        conceptIds = conceptIds
       )
     data <-
       renderTranslateQuerySql(
