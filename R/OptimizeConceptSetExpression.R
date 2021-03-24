@@ -31,9 +31,17 @@ optimizeConceptSetExpression <-
       conceptSetExpressionDataFrame = conceptSetExpressionDataFrame,
       vocabularyDatabaseSchema = vocabularyDatabaseSchema)
     
+    removed <- optimizationRecommendation %>%
+      dplyr::mutate(isExcluded = as.logical(.data$excluded)) %>%
+      dplyr::filter(.data$removed == 1) %>%
+      dplyr::select(.data$conceptId, .data$isExcluded)
+    
     retained <- optimizationRecommendation %>%
       dplyr::mutate(isExcluded = as.logical(.data$excluded)) %>%
       dplyr::filter(.data$removed == 0) %>%
+      dplyr::anti_join(removed %>% 
+                         dplyr::select(.data$conceptId) %>% 
+                         dplyr::distinct()) %>% 
       dplyr::select(.data$conceptId, .data$isExcluded)
     
     if (nrow(retained) > 0) {
