@@ -55,7 +55,7 @@ optimizeConceptSetExpression <-
         getConceptSetExpressionDataFrameFromConceptSetExpression() %>%
         dplyr::inner_join(removed, by = c('conceptId', 'isExcluded'))
     } else {
-      removed <- dplyr::tibble()
+      removed <- NULL
     }
     
     conceptSetExpressionDataFrame <-
