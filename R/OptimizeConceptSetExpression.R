@@ -68,5 +68,5 @@ optimizeConceptSetExpression <-
     data <- list(recommended = conceptSetExpression,
                  removed = removed)
     
-    return(conceptSetExpression)
+    return(data)
   }
