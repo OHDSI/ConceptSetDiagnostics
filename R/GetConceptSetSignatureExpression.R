@@ -21,7 +21,7 @@ getConceptSetSignatureExpression <-
   function(conceptSetExpression, connection) {
     conceptSetExpression <-
       optimizeConceptSetExpression(connection = connection,
-                                   conceptSetExpression = conceptSetExpression) %>%
+                                   conceptSetExpression = conceptSetExpression)$recommended %>%
       getConceptSetExpressionDataFrameFromConceptSetExpression() %>%
       # strip all meta information
       getConceptSetExpressionFromConceptSetExpressionDataFrame(purgeVocabularyDetails = TRUE)
