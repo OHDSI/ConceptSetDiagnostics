@@ -1,0 +1,2452 @@
+{
+	"items" : [
+		{
+			"concept" : {
+				"CONCEPT_ID" : 10100,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, first trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.821",
+				"CONCEPT_CLASS_ID" : "6-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 10101,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, second trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.822",
+				"CONCEPT_CLASS_ID" : "6-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 10102,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, third trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.823",
+				"CONCEPT_CLASS_ID" : "6-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 10103,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, unspecified trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.829",
+				"CONCEPT_CLASS_ID" : "6-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 434316,
+				"CONCEPT_NAME" : "von Willebrand disorder",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "128105004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 765879,
+				"CONCEPT_NAME" : "Long-term current use of antiplatelet drug",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "449681000124101",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 915655,
+				"CONCEPT_NAME" : "Patient has documentation of ventricular shunt, brain tumor, multisystem trauma, or is currently taking an antiplatelet medication including: abciximab, anagrelide, cangrelor, cilostazol, clopidogrel, dipyridamole, eptifibatide, prasugrel, ticlopidine,...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9531",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 915660,
+				"CONCEPT_NAME" : "Documentation of medical reason(s) for ordering an advanced brain imaging study (i.e., patient has an abnormal neurological examination; patient has the coexistence of seizures, or both; recent onset of severe headache; change in the type of headache;...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9536",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 915714,
+				"CONCEPT_NAME" : "Documentation of an order for anti-platelet agents",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9609",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 915715,
+				"CONCEPT_NAME" : "Documentation of medical reason(s) in the patient's record for not ordering anti-platelet agents",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9610",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 915716,
+				"CONCEPT_NAME" : "Order for anti-platelet agents was not documented in the patient's record, reason not given",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9611",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 953313,
+				"CONCEPT_NAME" : "Aspirin or another antiplatelet therapy not used, reason not given",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "M1057",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 953315,
+				"CONCEPT_NAME" : "Aspirin or another antiplatelet therapy used",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "M1055",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1314466,
+				"CONCEPT_NAME" : "Patient is currently on a daily aspirin or other antiplatelet",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9793",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1314467,
+				"CONCEPT_NAME" : "Documentation of medical reason(s) for not on a daily aspirin or other antiplatelet (e.g., history of gastrointestinal bleed, intra-cranial bleed, idiopathic thrombocytopenic purpura (itp), gastric bypass or documentation of active anticoagulant use du...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9794",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1314468,
+				"CONCEPT_NAME" : "Patient is not currently on a daily aspirin or other antiplatelet",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9795",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1571795,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.82",
+				"CONCEPT_CLASS_ID" : "5-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617526,
+				"CONCEPT_NAME" : "Coronary artery disease patient documented to be on antiplatelet therapy",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8036",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617527,
+				"CONCEPT_NAME" : "Coronary artery disease patient not documented to be on antiplatelet therapy",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8037",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617528,
+				"CONCEPT_NAME" : "Clinician documented that coronary artery disease patient was not eligible candidate for antiplatelet therapy measure",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8038",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617595,
+				"CONCEPT_NAME" : "Clinician documented that patient with isolated coronary artery bypass graft was not an eligible candidate for antiplatelet therapy at discharge measure",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8172",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617632,
+				"CONCEPT_NAME" : "PATIENT DOCUMENTED TO HAVE BEEN PRESCRIBED ANTIPLATELET THERAPY AT DISCHARGE",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8222",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617633,
+				"CONCEPT_NAME" : "Patient not documented to have received prescription for antiplatelet therapy at discharge",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8223",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617634,
+				"CONCEPT_NAME" : "CLINICIAN DOCUMENTED THAT PATIENT WAS NOT AN ELIGIBLE CANDIDATE FOR ANTIPLATELET THERAPY AT DISCHARGE THAT PATIENT IS ON ANTICOAGULATION THERAPY",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8224",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617920,
+				"CONCEPT_NAME" : "ANTIPLATELET THERAPY RECEIVED (ASA [81-325 MG/DAY] AND/OR CLOPIDOGREL [75 MG/DAY]) WITHIN 48 HOURS OF THE INITIATION OF SURGERY AND AT DISCHARGE",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8521",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617921,
+				"CONCEPT_NAME" : "CLINICIAN DOCUMENTED THAT PATIENT WAS NOT AN ELIGIBLE CANDIDATE FOR ANTIPLATELET THERAPY",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8522",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 2617922,
+				"CONCEPT_NAME" : "ANTIPLATELET THERAPY NOT RECEIVED 48 HOURS PRIOR TO CEA AND AT DISCHARGE, REASON NOT SPECIFIED",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8523",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4001178,
+				"CONCEPT_NAME" : "Platelet-derived growth factor",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "10987005",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4004695,
+				"CONCEPT_NAME" : "Anti-platelet antibody",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "121129000",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4006469,
+				"CONCEPT_NAME" : "Reticular dysgenesis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "111584000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4021554,
+				"CONCEPT_NAME" : "Platelet poor plasma",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "116202001",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4021555,
+				"CONCEPT_NAME" : "Platelet rich plasma",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "116203006",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4022154,
+				"CONCEPT_NAME" : "Platelet product issued",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "116809002",
+				"CONCEPT_CLASS_ID" : "Procedure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4079504,
+				"CONCEPT_NAME" : "Platelet production",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "179202003",
+				"CONCEPT_CLASS_ID" : "Qualifier Value",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4094890,
+				"CONCEPT_NAME" : "Platelet finding",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "250311007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4101122,
+				"CONCEPT_NAME" : "Platelet concentrate, preparation",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "27848005",
+				"CONCEPT_CLASS_ID" : "Procedure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4102917,
+				"CONCEPT_NAME" : "Platelet-specific antigen",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "28585007",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4127332,
+				"CONCEPT_NAME" : "Cluster of differentiation antigen 29",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "259949008",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4132578,
+				"CONCEPT_NAME" : "Platelet antigen system",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "127423001",
+				"CONCEPT_CLASS_ID" : "Qualifier Value",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4133293,
+				"CONCEPT_NAME" : "Abnormal platelet",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "127566005",
+				"CONCEPT_CLASS_ID" : "Morph Abnormality",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4153101,
+				"CONCEPT_NAME" : "Lymphocyte antigen CD62",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "28424006",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4172193,
+				"CONCEPT_NAME" : "Adverse reaction to antiplatelet agent",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "420187006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4172913,
+				"CONCEPT_NAME" : "Platelet destruction",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "47827002",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4174560,
+				"CONCEPT_NAME" : "Duodenal ulcer induced by anti-platelet agent",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "423643000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4184025,
+				"CONCEPT_NAME" : "Platelet activating factor",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "43278003",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4187213,
+				"CONCEPT_NAME" : "Platelet production finding",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "415117004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4195108,
+				"CONCEPT_NAME" : "Canine infectious cyclic thrombocytopenia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "79624007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4204676,
+				"CONCEPT_NAME" : "Platelet life span",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "54952000",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4206617,
+				"CONCEPT_NAME" : "Indium^113^ oxoquinoline platelet label",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "56006008",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4213534,
+				"CONCEPT_NAME" : "Platelet function",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "417313007",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4216407,
+				"CONCEPT_NAME" : "Platelet concentrate, pooling",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "72316005",
+				"CONCEPT_CLASS_ID" : "Procedure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4219305,
+				"CONCEPT_NAME" : "Platelet feature",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "417413006",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4220129,
+				"CONCEPT_NAME" : "Lymphocyte antigen CD31",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "4167003",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4229401,
+				"CONCEPT_NAME" : "Platelet-fibrin retinal embolus",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "404669007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4248146,
+				"CONCEPT_NAME" : "Transfusion reaction due to platelet antibody",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "72813006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4250016,
+				"CONCEPT_NAME" : "Platelet thrombus",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "73832007",
+				"CONCEPT_CLASS_ID" : "Morph Abnormality",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4261942,
+				"CONCEPT_NAME" : "History of antiplatelet agent therapy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "441186000",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4279295,
+				"CONCEPT_NAME" : "1-alkylglycerophosphocholine acetyltransferase",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "66153007",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4304094,
+				"CONCEPT_NAME" : "Platelet component of blood",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "419397004",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4304540,
+				"CONCEPT_NAME" : "Autoplatelet sensitivity",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "81535001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4307651,
+				"CONCEPT_NAME" : "Ehlers-Danlos syndrome, dysfibronectinemic",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "83586000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4310838,
+				"CONCEPT_NAME" : "Gastric ulcer induced by anti-platelet agent",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "424301005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4324278,
+				"CONCEPT_NAME" : "Platelet rich plasma, preparation",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "71687000",
+				"CONCEPT_CLASS_ID" : "Procedure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4327167,
+				"CONCEPT_NAME" : "Abnormal platelet destruction",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "75542001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4332151,
+				"CONCEPT_NAME" : "Platelet disorder",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "22716005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36674731,
+				"CONCEPT_NAME" : "Lissencephaly due to LIS1 mutation",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "770560008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36675125,
+				"CONCEPT_NAME" : "Platelet aggregation inhibitor",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "771451006",
+				"CONCEPT_CLASS_ID" : "Disposition",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36675126,
+				"CONCEPT_NAME" : "Platelet aggregation inhibitor",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "771452004",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36676747,
+				"CONCEPT_NAME" : "Antiplatelet therapeutic role",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "773884006",
+				"CONCEPT_CLASS_ID" : "Qualifier Value",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37109926,
+				"CONCEPT_NAME" : "Platelet embolism",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "723876009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37110398,
+				"CONCEPT_NAME" : "Myeloid neoplasm associated with beta-type platelet-derived growth factor receptor gene rearrangement",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "724642009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37110574,
+				"CONCEPT_NAME" : "Occlusion of microvasculature of skin caused by platelet plug",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "724856009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37111695,
+				"CONCEPT_NAME" : "Platelet factor 4-heparin complex Ab",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "726769004",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37111695,
+				"CONCEPT_NAME" : "Platelet factor 4-heparin complex Ab",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "726769004",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37207457,
+				"CONCEPT_NAME" : "History of thrombocytopenia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "49341000119108",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37392361,
+				"CONCEPT_NAME" : "Heparin induced thrombocytopenia screening test",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1003111000000109",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37392532,
+				"CONCEPT_NAME" : "Platelet neutralisation procedure correction",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1005261000000100",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37392894,
+				"CONCEPT_NAME" : "Platelet function test",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1009981000000103",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37393421,
+				"CONCEPT_NAME" : "Indirect platelet antibody screening test",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1016771000000108",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37393863,
+				"CONCEPT_NAME" : "Platelet count",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1022651000000100",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37397537,
+				"CONCEPT_NAME" : "Beta thalassemia X-linked thrombocytopenia syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "718196002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37397896,
+				"CONCEPT_NAME" : "Percentage reticulated platelet count",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "993161000000104",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37397923,
+				"CONCEPT_NAME" : "Mean platelet volume",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "993481000000101",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37398013,
+				"CONCEPT_NAME" : "Platelet antibodies test",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "994691000000100",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37398014,
+				"CONCEPT_NAME" : "Direct platelet antibody test",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "994701000000100",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37399153,
+				"CONCEPT_NAME" : "Immature platelet fraction",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1006431000000101",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37399282,
+				"CONCEPT_NAME" : "Platelet distribution width",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1018131000000108",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40267653,
+				"CONCEPT_NAME" : "Platelet mean volume",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "103214008",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40267654,
+				"CONCEPT_NAME" : "Platelet mean diameter",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "103215009",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40321712,
+				"CONCEPT_NAME" : "Purpura",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "154822006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40343486,
+				"CONCEPT_NAME" : "PLT - Platelet",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "259727009",
+				"CONCEPT_CLASS_ID" : "Body Structure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40351351,
+				"CONCEPT_NAME" : "Thrombocytopenic purpura",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "267564008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40390497,
+				"CONCEPT_NAME" : "[X]Essential thrombocytopenia NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "191318001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40390500,
+				"CONCEPT_NAME" : "Essential thrombocytopenia NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "191320003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40390898,
+				"CONCEPT_NAME" : "Genetic leucocyte anomalies",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "191356000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40390898,
+				"CONCEPT_NAME" : "Genetic leucocyte anomalies",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "191356000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40390986,
+				"CONCEPT_NAME" : "[X]Other primary thrombocytopenia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "191435001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40424015,
+				"CONCEPT_NAME" : "[X]Antithrombotic drugs [platelet-aggregation inhibitors] causing adverse effects in therapeutic use",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "222998000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40452035,
+				"CONCEPT_NAME" : "Mean platelet volume",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "250312000",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40452046,
+				"CONCEPT_NAME" : "Platelet survival",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "250325008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40458661,
+				"CONCEPT_NAME" : "Platelet aggregation assay",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "258062003",
+				"CONCEPT_CLASS_ID" : "Qualifier Value",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40461932,
+				"CONCEPT_NAME" : "Platelet",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "256396005",
+				"CONCEPT_CLASS_ID" : "Body Structure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40501819,
+				"CONCEPT_NAME" : "Platelet precursor",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "304600005",
+				"CONCEPT_CLASS_ID" : "Substance",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40519761,
+				"CONCEPT_NAME" : "Antiplatelet aspirin",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "319770009",
+				"CONCEPT_CLASS_ID" : "Pharma/Biol Product",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40634965,
+				"CONCEPT_NAME" : "Platelet production",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "75402009",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40660911,
+				"CONCEPT_NAME" : "Antiplatelet medication at discharge",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8579",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40660912,
+				"CONCEPT_NAME" : "Antiplatelet medication contraindicated",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8580",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40662756,
+				"CONCEPT_NAME" : "No antiplatelet medication at discharge",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8581",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40663933,
+				"CONCEPT_NAME" : "Aspirin or another antiplatelet therapy used",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8598",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40663934,
+				"CONCEPT_NAME" : "Aspirin or another antiplatelet therapy not used, reason not given",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G8599",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 42536359,
+				"CONCEPT_NAME" : "PDW (platelet distribution width) calculation technique",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "735143003",
+				"CONCEPT_CLASS_ID" : "Qualifier Value",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 42538015,
+				"CONCEPT_NAME" : "Myeloid and/or lymphoid neoplasm associated with platelet derived growth factor receptor alpha rearrangement",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "738527001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 42538443,
+				"CONCEPT_NAME" : "Platelet aggregation process",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "762000009",
+				"CONCEPT_CLASS_ID" : "Qualifier Value",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 42539515,
+				"CONCEPT_NAME" : "PMV (platelet mean volume) calculation technique",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "735142008",
+				"CONCEPT_CLASS_ID" : "Qualifier Value",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 42539565,
+				"CONCEPT_NAME" : "Antiplatelet therapy contraindicated",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "7861000175101",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 42872945,
+				"CONCEPT_NAME" : "Myeloid or lymphoid neoplasm with alpha-type platelet-derived growth factor receptor gene rearrangement",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "450940003",
+				"CONCEPT_CLASS_ID" : "Morph Abnormality",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 42872946,
+				"CONCEPT_NAME" : "Myeloid neoplasm with beta-type platelet-derived growth factor receptor gene rearrangement",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "450941004",
+				"CONCEPT_CLASS_ID" : "Morph Abnormality",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 42872952,
+				"CONCEPT_NAME" : "Refractory thrombocytopenia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "450947000",
+				"CONCEPT_CLASS_ID" : "Morph Abnormality",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44782967,
+				"CONCEPT_NAME" : "Long term dual antiplatelet drug therapy indicated",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "698985001",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44783013,
+				"CONCEPT_NAME" : "Duration of antiplatelet therapy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "699047009",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44786482,
+				"CONCEPT_NAME" : "Documentation that the patient is on daily aspirin or anti-platelet or has documentation of a valid contraindication or exception to aspirin/anti-platelet; contraindications/exceptions include anti-coagulant use, allergy to aspirin or anti-platelets, h...",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9277",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44786483,
+				"CONCEPT_NAME" : "Documentation that the patient is not on daily aspirin or anti-platelet regimen",
+				"VOCABULARY_ID" : "HCPCS",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G9278",
+				"CONCEPT_CLASS_ID" : "HCPCS",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44793270,
+				"CONCEPT_NAME" : "Platelet disorder drugs Band 1 - OPCS Classification of Interventions and Procedures",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "380591000000100",
+				"CONCEPT_CLASS_ID" : "Procedure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44804840,
+				"CONCEPT_NAME" : "History of antiplatelet therapy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "361071000000102",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45534252,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, unspecified trimester, not applicable or unspecified",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8290",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45539164,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, first trimester, fetus 3",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8213",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45543989,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, third trimester, fetus 4",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8234",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45548778,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, first trimester, not applicable or unspecified",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8210",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45548779,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, first trimester, fetus 4",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8214",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45553536,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, unspecified trimester, fetus 3",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8293",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45553537,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, unspecified trimester, fetus 5",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8295",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45558283,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, second trimester, fetus 2",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8222",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45558284,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, unspecified trimester, fetus 1",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8291",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45563133,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, first trimester, fetus 1",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8211",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45563134,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, third trimester, fetus 2",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8232",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45563135,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, third trimester, fetus 5",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8235",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45567953,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, second trimester, fetus 1",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8221",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45572834,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, second trimester, fetus 3",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8223",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45572835,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, third trimester, fetus 1",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8231",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45577620,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, first trimester, fetus 5",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8215",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45577621,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, second trimester, fetus 5",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8225",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45577622,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, second trimester, other fetus",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8229",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45577623,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, third trimester, other fetus",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8239",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45582523,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, first trimester, other fetus",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8219",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45582524,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, unspecified trimester, fetus 4",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8294",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45582525,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, unspecified trimester, other fetus",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8299",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45592242,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, second trimester, fetus 4",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8224",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45592243,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, third trimester, fetus 3",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8233",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45596994,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, first trimester, fetus 2",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8212",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45606603,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, second trimester, not applicable or unspecified",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8220",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45606604,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, third trimester, not applicable or unspecified",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8230",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45606605,
+				"CONCEPT_NAME" : "Fetal anemia and thrombocytopenia, unspecified trimester, fetus 2",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O36.8292",
+				"CONCEPT_CLASS_ID" : "7-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45769804,
+				"CONCEPT_NAME" : "Platelet aggregation technique",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "708532004",
+				"CONCEPT_CLASS_ID" : "Qualifier Value",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		}
+	]
+}
