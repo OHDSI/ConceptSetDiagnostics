@@ -5,9 +5,10 @@ shiny::shinyServer(function(input, output, session) {
   conceptSetResults <- reactiveVal(NULL)
   observeEvent(eventExpr = input$search, handlerExpr = {
     shiny::withProgress(expr = {
-      data <- ConceptSetDiagnostics::performDesignDiagnosticsOnSearchTerm(searchString = input$keyword,
-                                                                          connection = connection)
-    },message = "Loading, Please Wait . .")
+      data <-
+        ConceptSetDiagnostics::performDesignDiagnosticsOnSearchTerm(searchString = input$keyword,
+                                                                    connection = connection)
+    }, message = "Loading, Please Wait . .")
     conceptSetResults(data)
   })
   
@@ -15,8 +16,7 @@ shiny::shinyServer(function(input, output, session) {
     if (is.null(conceptSetResults())) {
       return(NULL)
     } else {
-      conceptSetResults()$searchResultConceptIds
-      # standardDataTable(data = conceptSetResults()$searchResultConceptIds)
+      standardDataTable(data = conceptSetResults()$searchResultConceptIds)
     }
   })
   
@@ -24,8 +24,7 @@ shiny::shinyServer(function(input, output, session) {
     if (is.null(conceptSetResults())) {
       return(NULL)
     } else {
-      conceptSetResults()$conceptSetExpressionDataFrame
-      # standardDataTable(data = conceptSetResults()$conceptSetExpressionDataFrame)
+      standardDataTable(data = conceptSetResults()$conceptSetExpressionDataFrame)
     }
   })
   
@@ -33,8 +32,7 @@ shiny::shinyServer(function(input, output, session) {
     if (is.null(conceptSetResults())) {
       return(NULL)
     } else {
-      conceptSetResults()$resolvedConceptIds$resolvedConcepts
-      # standardDataTable(data = conceptSetResults()$conceptSetExpressionDataFrame)
+      standardDataTable(data = conceptSetResults()$resolvedConceptIds$resolvedConcepts)
     }
   })
   
@@ -42,8 +40,7 @@ shiny::shinyServer(function(input, output, session) {
     if (is.null(conceptSetResults())) {
       return(NULL)
     } else {
-      conceptSetResults()$resolvedConceptIds$mappedConcepts
-      # standardDataTable(data = conceptSetResults()$conceptSetExpressionDataFrame)
+      standardDataTable(data = conceptSetResults()$resolvedConceptIds$mappedConcepts)
     }
   })
   
@@ -51,8 +48,7 @@ shiny::shinyServer(function(input, output, session) {
     if (is.null(conceptSetResults())) {
       return(NULL)
     } else {
-      conceptSetResults()$recommendedConceptIds$recommendedStandard
-      # standardDataTable(data = conceptSetResults()$conceptSetExpressionDataFrame)
+      standardDataTable(data = conceptSetResults()$recommendedConceptIds$recommendedStandard)
     }
   })
   
@@ -60,8 +56,7 @@ shiny::shinyServer(function(input, output, session) {
     if (is.null(conceptSetResults())) {
       return(NULL)
     } else {
-      conceptSetResults()$recommendedConceptIds$recommendedSource
-      # standardDataTable(data = conceptSetResults()$conceptSetExpressionDataFrame)
+      standardDataTable(data = conceptSetResults()$recommendedConceptIds$recommendedSource)
     }
   })
   
@@ -69,8 +64,7 @@ shiny::shinyServer(function(input, output, session) {
     if (is.null(conceptSetResults())) {
       return(NULL)
     } else {
-      conceptSetResults()$recommendedConceptIds$recommendedSource
-      # standardDataTable(data = conceptSetResults()$conceptSetExpressionDataFrame)
+      standardDataTable(data = conceptSetResults()$recommendedConceptIds$recommendedSource)
     }
   })
   
@@ -78,10 +72,10 @@ shiny::shinyServer(function(input, output, session) {
     if (is.null(conceptSetResults())) {
       return(NULL)
     } else {
-      data <- ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetResults()$conceptSetExpressionDataFrame)
-      result <- jsonlite::toJSON(data,pretty = TRUE)
-      # standardDataTable(data = conceptSetResults()$conceptSetExpressionDataFrame)
+      data <-
+        ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetResults()$conceptSetExpressionDataFrame)
+      jsonlite::toJSON(data, pretty = TRUE)
     }
-  }) 
+  })
   
 })

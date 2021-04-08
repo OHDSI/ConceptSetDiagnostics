@@ -10,16 +10,12 @@ shinydashboard::dashboardPage(
       status = "primary",
       solidHeader = TRUE,
       collapsible = TRUE,
-      shiny::textInput(inputId = "keyword", label = "Keyword"),
+      shiny::textInput(inputId = "keyword", label = "Search phrase"),
       shiny::actionButton(inputId = "search", label = "Search")
     ),
     shiny::tabsetPanel(
       id = "cohortDetails",
       type = "tab",
-      shiny::tabPanel(title = "Search Result",
-                      value = "searchResult",
-                      DT::DTOutput(outputId = "searchResultConceptIds")
-      ),
       shiny::tabPanel(title = "Concept Set Expression",
                       value = "conceptSetExpression",
                       DT::DTOutput(outputId = "conceptSetExpression")
@@ -59,6 +55,10 @@ shinydashboard::dashboardPage(
                         )
                       )
                       
+      ),
+      shiny::tabPanel(title = "Search Result",
+                      value = "searchResult",
+                      DT::DTOutput(outputId = "searchResultConceptIds")
       ),
       shiny::tabPanel(title = "JSON",
                       value = "json",
