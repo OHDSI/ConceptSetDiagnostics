@@ -28,3 +28,26 @@ connectionDetails <-
   )
 connection <-
   DatabaseConnector::connect(connectionDetails = connectionDetails)
+
+defaultVocabularySchema <- "vocabulary"
+
+
+sqlVocabulary <- "SELECT * FROM @vocabulary_database_schema.vocabulary;"
+sqlDomains <- "SELECT * FROM @vocabulary_database_schema.domain;"
+
+
+vocabulary <- DatabaseConnector::renderTranslateQuerySql(connection = connection, 
+                                                         sql = sqlVocabulary,
+                                                         snakeCaseToCamelCase = TRUE,
+                                                         vocabulary_database_schema = defaultVocabularySchema) %>% 
+  dplyr::tibble()
+
+domain <- DatabaseConnector::renderTranslateQuerySql(connection = connection, 
+                                                     sql = sqlDomains,
+                                                     snakeCaseToCamelCase = TRUE,
+                                                     vocabulary_database_schema = defaultVocabularySchema) %>% 
+  dplyr::tibble()
+
+vocabularyVersion <- vocabulary %>% 
+  dplyr::filter(.data$vocabularyId == 'None') %>% 
+  dplyr::pull(.data$vocabularyVersion)

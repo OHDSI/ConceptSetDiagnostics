@@ -7,6 +7,7 @@ shiny::shinyServer(function(input, output, session) {
     shiny::withProgress(expr = {
       data <-
         ConceptSetDiagnostics::performDesignDiagnosticsOnSearchTerm(searchString = input$keyword,
+                                                                    vocabularyDatabaseSchema = defaultVocabularySchema,
                                                                     connection = connection)
     }, message = "Loading, Please Wait . .")
     conceptSetResults(data)
@@ -73,7 +74,8 @@ shiny::shinyServer(function(input, output, session) {
       return(NULL)
     } else {
       data <-
-        ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetResults()$conceptSetExpressionDataFrame)
+        ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(
+          conceptSetExpressionDataFrame = conceptSetResults()$conceptSetExpressionDataFrame)
       jsonlite::toJSON(data, pretty = TRUE)
     }
   })
