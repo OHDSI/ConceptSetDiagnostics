@@ -1,8 +1,6 @@
 # given key words
 keyWords <- c('Angioedema')
 
-
-
 outputLocation <- stringr::str_replace_all(string = keyWords[[1]], 
                                        pattern = " ",
                                        replacement = "")
