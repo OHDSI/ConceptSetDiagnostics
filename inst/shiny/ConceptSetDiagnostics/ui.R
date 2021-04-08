@@ -12,7 +12,6 @@ shinydashboard::dashboardPage(
       collapsible = TRUE,
       shiny::textInput(inputId = "keyword", label = "Keyword"),
       shiny::actionButton(inputId = "search", label = "Search")
-      
     )
   )
 )
