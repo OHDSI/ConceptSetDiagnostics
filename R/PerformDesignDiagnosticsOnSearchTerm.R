@@ -19,8 +19,8 @@
 #' @export
 performDesignDiagnosticsOnSearchTerm <-
   function(searchString,
-           exportResults = TRUE,
-           locationForResults,
+           exportResults = FALSE,
+           locationForResults = NULL,
            vocabularyDatabaseSchema = 'vocabulary',
            blackList = c(0),
            vocabularyIdOfInterest = c('SNOMED', 'HCPCS', 'ICD10CM', 'ICD10', 'ICD9CM', 'ICD9', 'Read'),
@@ -29,7 +29,7 @@ performDesignDiagnosticsOnSearchTerm <-
     
     # step perform string search
     searchResultConceptIds <- getStringSearchConcepts(connection = connection,
-                                                                             searchString = searchString) 
+                                                      searchString = searchString) 
     if (length(vocabularyIdOfInterest) > 0) {
       searchResultConceptIds <- searchResultConceptIds %>% 
         dplyr::filter(.data$vocabularyId %in% vocabularyIdOfInterest)
@@ -46,7 +46,7 @@ performDesignDiagnosticsOnSearchTerm <-
         selectAllDescendants = TRUE) %>% 
       getConceptSetSignatureExpression(connection = connection) %>% 
       getConceptSetExpressionDataFrameFromConceptSetExpression(updateVocabularyFields = TRUE, 
-                                                                                      connection = connection) 
+                                                               connection = connection) 
     
     conceptSetExpression <- 
       getConceptSetExpressionFromConceptSetExpressionDataFrame(
@@ -57,8 +57,8 @@ performDesignDiagnosticsOnSearchTerm <-
     # resolve concept set expression to individual concept ids
     resolvedConceptIds <- 
       resolveConceptSetExpression(connection = connection, 
-                                                         conceptSetExpression = conceptSetExpression)
-  
+                                  conceptSetExpression = conceptSetExpression)
+    
     recommendedConceptIds <- 
       getRecommendationForConceptSetExpression(
         conceptSetExpression = conceptSetExpression, 
@@ -73,66 +73,68 @@ performDesignDiagnosticsOnSearchTerm <-
                          recommendedConceptIds = recommendedConceptIds)
     
     if (exportResults) {
-      dir.create(path = locationForResults, showWarnings = FALSE, recursive = TRUE)
-      if (nrow(recommendedConceptIds$recommendedStandard) > 0) {
-        readr::write_excel_csv(
-          x = recommendedConceptIds$recommendedStandard,
-          file = file.path(
-            locationForResults,
-            paste0("recommendedStandard.csv")
-          ),
-          append = FALSE,
-          na = ""
-        )
-        writeLines(text = paste0(
-          "Wrote recommendedStandard.csv to ",
-          locationForResults
-        ))
-      } else {
-        writeLines(
-          text = paste0(
-            "No recommendation. recommendedStandard.csv is not written to ",
-            locationForResults
+      if (!is.null(locationForResults)) {
+        dir.create(path = locationForResults, showWarnings = FALSE, recursive = TRUE)
+        if (nrow(recommendedConceptIds$recommendedStandard) > 0) {
+          readr::write_excel_csv(
+            x = recommendedConceptIds$recommendedStandard,
+            file = file.path(
+              locationForResults,
+              paste0("recommendedStandard.csv")
+            ),
+            append = FALSE,
+            na = ""
           )
-        )
-        unlink(
-          x = file.path(
-            locationForResults,
-            paste0("recommendedStandard.csv")
-          ),
-          recursive = TRUE,
-          force = TRUE
-        )
-      }
-      if (nrow(recommendedConceptIds$recommendedSource) > 0) {
-        readr::write_excel_csv(
-          x = recommendedConceptIds$recommendedSource,
-          file = file.path(
-            locationForResults,
-            paste0("recommendedSource.csv")
-          ),
-          append = FALSE,
-          na = ""
-        )
-        writeLines(text = paste0(
-          "Wrote recommendedSource.csv to ",
-          locationForResults
-        ))
-      } else {
-        writeLines(
-          text = paste0(
-            "No recommendation. recommendedSource.csv is not written to ",
+          writeLines(text = paste0(
+            "Wrote recommendedStandard.csv to ",
             locationForResults
+          ))
+        } else {
+          writeLines(
+            text = paste0(
+              "No recommendation. recommendedStandard.csv is not written to ",
+              locationForResults
+            )
           )
-        )
-        unlink(
-          x = file.path(
-            locationForResults,
-            paste0("recommendedSource.csv")
-          ),
-          recursive = TRUE,
-          force = TRUE
-        )
+          unlink(
+            x = file.path(
+              locationForResults,
+              paste0("recommendedStandard.csv")
+            ),
+            recursive = TRUE,
+            force = TRUE
+          )
+        }
+        if (nrow(recommendedConceptIds$recommendedSource) > 0) {
+          readr::write_excel_csv(
+            x = recommendedConceptIds$recommendedSource,
+            file = file.path(
+              locationForResults,
+              paste0("recommendedSource.csv")
+            ),
+            append = FALSE,
+            na = ""
+          )
+          writeLines(text = paste0(
+            "Wrote recommendedSource.csv to ",
+            locationForResults
+          ))
+        } else {
+          writeLines(
+            text = paste0(
+              "No recommendation. recommendedSource.csv is not written to ",
+              locationForResults
+            )
+          )
+          unlink(
+            x = file.path(
+              locationForResults,
+              paste0("recommendedSource.csv")
+            ),
+            recursive = TRUE,
+            force = TRUE
+          )
+        }
       }
     }
     return(searchResult)
