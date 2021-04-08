@@ -65,4 +65,23 @@ shiny::shinyServer(function(input, output, session) {
     }
   })
   
+  output$recommendedSourceConceptSetExpression <- DT::renderDT({
+    if (is.null(conceptSetResults())) {
+      return(NULL)
+    } else {
+      conceptSetResults()$recommendedConceptIds$recommendedSource
+      # standardDataTable(data = conceptSetResults()$conceptSetExpressionDataFrame)
+    }
+  })
+  
+  output$conceptSetExpressionJSON <- shiny::renderText({
+    if (is.null(conceptSetResults())) {
+      return(NULL)
+    } else {
+      data <- ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetResults()$conceptSetExpressionDataFrame)
+      result <- jsonlite::toJSON(data,pretty = TRUE)
+      # standardDataTable(data = conceptSetResults()$conceptSetExpressionDataFrame)
+    }
+  }) 
+  
 })

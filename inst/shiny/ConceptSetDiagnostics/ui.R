@@ -59,6 +59,17 @@ shinydashboard::dashboardPage(
                         )
                       )
                       
+      ),
+      shiny::tabPanel(title = "JSON",
+                      value = "json",
+                      copyToClipboardButton(toCopyId = "conceptSetExpressionJSON", 
+                                            style = "margin-top: 5px; margin-bottom: 5px;"),
+                      shiny::verbatimTextOutput(outputId = "conceptSetExpressionJSON"),
+                      tags$head(
+                        tags$style(
+                          "#conceptSetExpressionJSON { max-height:700px};"
+                        )
+                      )
       )
       ),
   )
