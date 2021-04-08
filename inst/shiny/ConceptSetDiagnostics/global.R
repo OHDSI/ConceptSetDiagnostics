@@ -1,4 +1,4 @@
-
+source("HelperFunctions.R")
 
 # Used for Testing with old DB connection
 # connectionDetails <-
