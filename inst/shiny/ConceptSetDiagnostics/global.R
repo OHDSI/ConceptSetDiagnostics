@@ -1,4 +1,5 @@
 
+
 # Used for Testing with old DB connection
 # connectionDetails <-
 #   DatabaseConnector::createConnectionDetails(
@@ -27,4 +28,3 @@ connectionDetails <-
   )
 connection <-
   DatabaseConnector::connect(connectionDetails = connectionDetails)
-
