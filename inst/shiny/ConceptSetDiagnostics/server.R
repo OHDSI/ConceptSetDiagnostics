@@ -3,25 +3,25 @@ library(ConceptSetDiagnostics)
 library(purrr)
 
 shiny::shinyServer(function(input, output, session) {
- 
-  
   numberOfKeywords <- reactiveVal(1)
-  col_names <- shiny::reactive(paste0("col", seq_len(numberOfKeywords())))
+  col_names <-
+    shiny::reactive(paste0("col", seq_len(numberOfKeywords())))
   
-   
-  observeEvent(eventExpr = input$addKeyword,handlerExpr = {
+  
+  observeEvent(eventExpr = input$addKeyword, handlerExpr = {
     numberOfKeywords(numberOfKeywords() + 1)
   })
   
   
-  observeEvent(eventExpr = input$removeKeyword,handlerExpr = {
-    if(numberOfKeywords() > 1) {
-      numberOfKeywords(numberOfKeywords() - 1)
-    }
-  })
+  observeEvent(eventExpr = input$removeKeyword,
+               handlerExpr = {
+                 if (numberOfKeywords() > 1) {
+                   numberOfKeywords(numberOfKeywords() - 1)
+                 }
+               })
   
   output$col <- renderUI({
-    purrr::map(col_names(), ~ shiny::textInput(.x, NULL,value = isolate(input[[.x]])))
+    purrr::map(col_names(), ~ shiny::textInput(.x, NULL, value = isolate(input[[.x]])))
   })
   
   conceptSetResultsExpression <- reactiveVal(NULL)
@@ -123,7 +123,10 @@ shiny::shinyServer(function(input, output, session) {
           
           SqlRender::writeSql(
             sql = json,
-            targetFile = file.path(outerLocation, "conceptSetExpressionAllTerms.json")
+            targetFile = file.path(
+              outerLocation,
+              "conceptSetExpressionAllTerms.json"
+            )
           )
         }
       }
@@ -140,7 +143,8 @@ shiny::shinyServer(function(input, output, session) {
   
   getConceptSetExpression <- shiny::reactive({
     shiny::withProgress(message = "Loading. . .", {
-      data <- ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetResultsExpression())
+      data <-
+        ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetResultsExpression())
     })
     return(data)
   })
@@ -155,7 +159,9 @@ shiny::shinyServer(function(input, output, session) {
   
   getResolved <- shiny::reactive({
     shiny::withProgress(message = "Loading. . .", {
-      data <- ConceptSetDiagnostics::resolveConceptSetExpression(conceptSetExpression = conceptSetResultsExpression(),connection = connection)
+      data <-
+        ConceptSetDiagnostics::resolveConceptSetExpression(conceptSetExpression = conceptSetResultsExpression(),
+                                                           connection = connection)
     })
     return(data)
   })
@@ -178,7 +184,8 @@ shiny::shinyServer(function(input, output, session) {
   
   getRecommendation <- shiny::reactive({
     shiny::withProgress(message = "Loading. . .", {
-      data <- ConceptSetDiagnostics::getRecommendationForConceptSetExpression(conceptSetResultsExpression(),connection = connection)
+      data <-
+        ConceptSetDiagnostics::getRecommendationForConceptSetExpression(conceptSetResultsExpression(), connection = connection)
     })
     return(data)
   })
@@ -204,7 +211,7 @@ shiny::shinyServer(function(input, output, session) {
       return(NULL)
     } else {
       data <-
-        conceptSetResultsExpression() %>% 
+        conceptSetResultsExpression() %>%
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
     }
   })

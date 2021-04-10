@@ -5,11 +5,9 @@ source("HelperFunctions.R")
 connectionDetails <-
   DatabaseConnector::createConnectionDetails(
     dbms = "postgresql",
-    server = paste(
-      Sys.getenv("phoebedbServer"),
-      Sys.getenv("phoebedb"),
-      sep = "/"
-    ),
+    server = paste(Sys.getenv("phoebedbServer"),
+                   Sys.getenv("phoebedb"),
+                   sep = "/"),
     user = Sys.getenv("phoebedbUser"),
     password = Sys.getenv("phoebedbPw"),
     port = Sys.getenv("shinydbPort")
@@ -33,22 +31,29 @@ connection <-
 defaultVocabularySchema <- "vocabulary"
 
 
-sqlVocabulary <- "SELECT * FROM @vocabulary_database_schema.vocabulary;"
+sqlVocabulary <-
+  "SELECT * FROM @vocabulary_database_schema.vocabulary;"
 sqlDomains <- "SELECT * FROM @vocabulary_database_schema.domain;"
 
 
-vocabulary <- DatabaseConnector::renderTranslateQuerySql(connection = connection, 
-                                                         sql = sqlVocabulary,
-                                                         snakeCaseToCamelCase = TRUE,
-                                                         vocabulary_database_schema = defaultVocabularySchema) %>% 
+vocabulary <-
+  DatabaseConnector::renderTranslateQuerySql(
+    connection = connection,
+    sql = sqlVocabulary,
+    snakeCaseToCamelCase = TRUE,
+    vocabulary_database_schema = defaultVocabularySchema
+  ) %>%
   dplyr::tibble()
 
-domain <- DatabaseConnector::renderTranslateQuerySql(connection = connection, 
-                                                     sql = sqlDomains,
-                                                     snakeCaseToCamelCase = TRUE,
-                                                     vocabulary_database_schema = defaultVocabularySchema) %>% 
+domain <-
+  DatabaseConnector::renderTranslateQuerySql(
+    connection = connection,
+    sql = sqlDomains,
+    snakeCaseToCamelCase = TRUE,
+    vocabulary_database_schema = defaultVocabularySchema
+  ) %>%
   dplyr::tibble()
 
-vocabularyVersion <- vocabulary %>% 
-  dplyr::filter(.data$vocabularyId == 'None') %>% 
+vocabularyVersion <- vocabulary %>%
+  dplyr::filter(.data$vocabularyId == 'None') %>%
   dplyr::pull(.data$vocabularyVersion)
