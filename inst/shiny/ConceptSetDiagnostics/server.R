@@ -30,6 +30,7 @@ shiny::shinyServer(function(input, output, session) {
   })
   
   conceptSetSearchResults <- reactiveVal(value = NULL)
+  conceptSetResultsExpression <- reactiveVal(value = NULL)
   observeEvent(eventExpr = input$search,
                handlerExpr = {
                  shiny::withProgress(expr = {
@@ -72,6 +73,7 @@ shiny::shinyServer(function(input, output, session) {
                        dplyr::distinct() %>% 
                        dplyr::arrange(dplyr::desc(.data$drc))
                      conceptSetSearchResults(searchResultConceptIdsAllTerms)
+                     conceptSetResultsExpression(NULL)
                    }
                  }, message = "Loading, Please Wait . .")
                })
@@ -105,10 +107,11 @@ shiny::shinyServer(function(input, output, session) {
   })
   
   output$conceptSetExpression <- DT::renderDT({
-    if (is.null(conceptSetSearchResults())) {
+    conceptSetResultsExpression(getConceptSetExpression())
+    if (is.null(conceptSetResultsExpression())) {
       return(NULL)
     } else {
-      standardDataTable(data = getConceptSetExpression())
+      standardDataTable(data = conceptSetResultsExpression())
     }
   })
   
