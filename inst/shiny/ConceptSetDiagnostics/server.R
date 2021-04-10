@@ -69,7 +69,8 @@ shiny::shinyServer(function(input, output, session) {
                      
                      searchResultConceptIdsAllTerms <-
                        dplyr::bind_rows(searchResultConceptIdsAllTerms) %>%
-                       dplyr::distinct()
+                       dplyr::distinct() %>% 
+                       dplyr::arrange(dplyr::desc(.data$drc))
                      conceptSetSearchResults(searchResultConceptIdsAllTerms)
                    }
                  }, message = "Loading, Please Wait . .")
@@ -97,7 +98,8 @@ shiny::shinyServer(function(input, output, session) {
           updateVocabularyFields = TRUE,
           recordCount = TRUE,
           connection = connection
-        )
+        ) %>% 
+        dplyr::arrange(dplyr::desc(.data$drc))
     })
     return(conceptSetExpressionDataFrame)
   })
