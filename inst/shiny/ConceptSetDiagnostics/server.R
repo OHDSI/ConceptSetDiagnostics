@@ -30,39 +30,8 @@ shiny::shinyServer(function(input, output, session) {
     shiny::withProgress(expr = {
       keywords <- purrr::map_chr(col_names(), ~ input[[.x]] %||% "")
       if (length(keywords) > 0) {
-        locationFolder <-
-          paste0(
-            stringr::str_replace_all(
-              string = stringr::str_to_title(string = keywords[[1]]),
-              pattern = " ",
-              replacement = ""
-            ),
-            "WithOtherKeywords"
-          )
-        
-        if (length(keywords) == 1) {
-          outerLocation <- file.path(rstudioapi::getActiveProject(),
-                                     'extras',
-                                     'example')
-        } else {
-          outerLocation <-
-            file.path(rstudioapi::getActiveProject(),
-                      'extras',
-                      'example',
-                      locationFolder)
-          dir.create(outerLocation, showWarnings = FALSE)
-        }
         searchResult <- list()
         for (i in 1:length(keywords)) {
-          innerLocation <-
-            stringr::str_replace_all(
-              string = stringr::str_to_title(string = keywords[[i]]),
-              pattern = " ",
-              replacement = ""
-            )
-          locationForResults <-
-            file.path(outerLocation, innerLocation)
-          dir.create(locationForResults, showWarnings = FALSE)
           
           vocabularyIdOfInterest <-
             c('SNOMED',
@@ -80,7 +49,6 @@ shiny::shinyServer(function(input, output, session) {
             ConceptSetDiagnostics::performDesignDiagnosticsOnSearchTerm(
               searchString = keywords[[i]],
               exportResults = FALSE,
-              locationForResults = locationForResults,
               vocabularyIdOfInterest = vocabularyIdOfInterest,
               domainIdOfInterest = domainIdOfInterest,
               connection = connection
@@ -89,15 +57,8 @@ shiny::shinyServer(function(input, output, session) {
           json <-
             ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = designDiagnostics$conceptSetExpressionDataFrame) %>%
             RJSONIO::toJSON(digits = 23, pretty = TRUE)
-          SqlRender::writeSql(sql = json,
-                              targetFile = file.path(
-                                locationForResults,
-                                paste0("conceptSetExpression", ".json")
-                              ))
         }
         
-        saveRDS(object = searchResult,
-                file = file.path(outerLocation, "searchResult.rds"))
         if (length(searchResult) >=  1) {
           conceptSetExpressionAllTerms <- list()
           searchResultConceptIdsAllTerms <- list()
@@ -121,13 +82,6 @@ shiny::shinyServer(function(input, output, session) {
           json <- conceptSetExpressionAllTerms %>%
             RJSONIO::toJSON(digits = 23, pretty = TRUE)
           
-          SqlRender::writeSql(
-            sql = json,
-            targetFile = file.path(
-              outerLocation,
-              "conceptSetExpressionAllTerms.json"
-            )
-          )
         }
       }
     }, message = "Loading, Please Wait . .")
