@@ -1,5 +1,3 @@
-library(magrittr)
-
 shinydashboard::dashboardPage(
   sidebar = shinydashboard::dashboardSidebar(disable = TRUE),
   header = shinydashboard::dashboardHeader(title = "Concept Set Diagnostric"),

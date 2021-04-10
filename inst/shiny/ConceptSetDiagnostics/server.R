@@ -1,6 +1,5 @@
-library(magrittr)
-library(ConceptSetDiagnostics)
-library(purrr)
+# library(ConceptSetDiagnostics)
+# library(purrr)
 
 shiny::shinyServer(function(input, output, session) {
   numberOfKeywords <- reactiveVal(1)
