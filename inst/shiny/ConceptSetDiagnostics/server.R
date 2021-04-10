@@ -29,7 +29,6 @@ shiny::shinyServer(function(input, output, session) {
     )
   })
   
-  conceptSetResultsExpression <- reactiveVal(value = NULL)
   conceptSetSearchResults <- reactiveVal(value = NULL)
   observeEvent(eventExpr = input$search,
                handlerExpr = {
@@ -64,21 +63,6 @@ shiny::shinyServer(function(input, output, session) {
                            dplyr::filter(.data$domainId %in% domainIdOfInterest)
                        }
                        
-                       # develop a concept set expression based on string search
-                       conceptSetExpressionDataFrame <-
-                         ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(
-                           conceptSetExpressionDataFrame = searchResultConceptIds,
-                           selectAllDescendants = TRUE
-                         ) %>%
-                         ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connection) %>%
-                         ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(
-                           updateVocabularyFields = TRUE,
-                           recordCount = TRUE,
-                           connection = connection
-                         )
-                       
-                       conceptSetExpressionAllTerms[[i]] <-
-                         conceptSetExpressionDataFrame
                        searchResultConceptIdsAllTerms[[i]] <-
                          searchResultConceptIds
                      }
@@ -87,20 +71,10 @@ shiny::shinyServer(function(input, output, session) {
                        dplyr::bind_rows(searchResultConceptIdsAllTerms) %>%
                        dplyr::distinct()
                      conceptSetSearchResults(searchResultConceptIdsAllTerms)
-                     
-                     conceptSetExpressionAllTerms <-
-                       dplyr::bind_rows(conceptSetExpressionAllTerms) %>%
-                       ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame() %>%
-                       ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connection) %>%
-                       ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(
-                         connection = connection,
-                         recordCount = TRUE,
-                         updateVocabularyFields = TRUE
-                       )
-                     conceptSetResultsExpression(conceptSetExpressionAllTerms)
                    }
                  }, message = "Loading, Please Wait . .")
                })
+  
   
   output$searchResultConceptIds <- DT::renderDT({
     if (is.null(conceptSetSearchResults())) {
@@ -112,13 +86,24 @@ shiny::shinyServer(function(input, output, session) {
   
   getConceptSetExpression <- shiny::reactive({
     shiny::withProgress(message = "Loading. . .", {
-      data <- conceptSetResultsExpression()
+      # develop a concept set expression based on string search
+      conceptSetExpressionDataFrame <-
+        ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(
+          conceptSetExpressionDataFrame = conceptSetSearchResults(),
+          selectAllDescendants = TRUE
+        ) %>%
+        ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connection) %>%
+        ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(
+          updateVocabularyFields = TRUE,
+          recordCount = TRUE,
+          connection = connection
+        )
     })
-    return(data)
+    return(conceptSetExpressionDataFrame)
   })
   
   output$conceptSetExpression <- DT::renderDT({
-    if (is.null(conceptSetResultsExpression())) {
+    if (is.null(conceptSetSearchResults())) {
       return(NULL)
     } else {
       standardDataTable(data = getConceptSetExpression())
