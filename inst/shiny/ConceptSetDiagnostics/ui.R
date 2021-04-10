@@ -10,8 +10,15 @@ shinydashboard::dashboardPage(
       status = "primary",
       solidHeader = TRUE,
       collapsible = TRUE,
-      shiny::textInput(inputId = "keyword", label = "Search phrase"),
-      shiny::actionButton(inputId = "search", label = "Search")
+      shiny::h5("Enter Keyword(s) :"),
+      column(8,shiny::uiOutput("col")),
+      column(4,
+             shiny::actionButton(inputId = "addKeyword",icon = icon("plus"),label = ""),
+             shiny::actionButton(inputId = "removeKeyword",icon = icon("minus"),label = "")
+             ),
+      column(12,
+        shiny::actionButton(inputId = "search", label = "Search")
+      )
     ),
     shiny::tabsetPanel(
       id = "cohortDetails",
