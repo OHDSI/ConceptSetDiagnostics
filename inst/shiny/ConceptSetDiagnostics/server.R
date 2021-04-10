@@ -33,7 +33,8 @@ shiny::shinyServer(function(input, output, session) {
       keywords <- purrr::map_chr(.x = col_names(), 
                                  .f = ~ input[[.x]] %||% "")
       if (length(keywords) > 0) {
-        searchResult <- list()
+        conceptSetExpressionAllTerms <- list()
+        searchResultConceptIdsAllTerms <- list()
         for (i in 1:length(keywords)) {
           vocabularyIdOfInterest <-
             c('SNOMED',
@@ -44,30 +45,37 @@ shiny::shinyServer(function(input, output, session) {
               'ICD9',
               'Read')
           domainIdOfInterest <- c('Condition', 'Observation')
-          designDiagnostics <-
-            ConceptSetDiagnostics::performDesignDiagnosticsOnSearchTerm(
-              searchString = keywords[[i]],
-              exportResults = FALSE,
-              vocabularyIdOfInterest = vocabularyIdOfInterest,
-              domainIdOfInterest = domainIdOfInterest,
-              connection = connection
-            )
-          searchResult[[i]] <- designDiagnostics
-          # json <-
-          #   ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(
-          #     conceptSetExpressionDataFrame = designDiagnostics$conceptSetExpressionDataFrame) %>%
-          #   RJSONIO::toJSON(digits = 23, pretty = TRUE)
+          
+          # step perform string search
+          searchResultConceptIds <- ConceptSetDiagnostics::getStringSearchConcepts(connection = connection,
+                                                            searchString =  keywords[[i]]) 
+          if (length(vocabularyIdOfInterest) > 0) {
+            searchResultConceptIds <- searchResultConceptIds %>% 
+              dplyr::filter(.data$vocabularyId %in% vocabularyIdOfInterest)
+          }
+          if (length(domainIdOfInterest) > 0) {
+            searchResultConceptIds <- searchResultConceptIds %>% 
+              dplyr::filter(.data$domainId %in% domainIdOfInterest)
+          }
+          
+          # develop a concept set expression based on string search
+          conceptSetExpressionDataFrame <- 
+            ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(
+              conceptSetExpressionDataFrame = searchResultConceptIds,
+              selectAllDescendants = TRUE) %>% 
+            ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connection) %>% 
+            ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(updateVocabularyFields = TRUE, 
+                                                                                            recordCount = TRUE, 
+                                                                     connection = connection) 
+          
+          conceptSetExpressionAllTerms[[i]] <- conceptSetExpressionDataFrame
+          searchResultConceptIdsAllTerms[[i]] <- searchResultConceptIds
         }
         
-        if (length(searchResult) >=  1) {
-          conceptSetExpressionAllTerms <- list()
-          searchResultConceptIdsAllTerms <- list()
-          for (i in (1:length(searchResult))) {
-            conceptSetExpressionAllTerms[[i]] <-
-              searchResult[[i]]$conceptSetExpressionDataFrame
-            searchResultConceptIdsAllTerms[[i]] <-
-              searchResult[[i]]$searchResultConceptIds
-          }
+        searchResultConceptIdsAllTerms <- dplyr::bind_rows(searchResultConceptIdsAllTerms) %>% 
+          dplyr::distinct()
+        conceptSetSearchResults(searchResultConceptIdsAllTerms)
+        
           conceptSetExpressionAllTerms <-
             dplyr::bind_rows(conceptSetExpressionAllTerms) %>%
             ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame() %>%
@@ -75,11 +83,7 @@ shiny::shinyServer(function(input, output, session) {
             ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(connection = connection,
                                                                                             recordCount = TRUE, 
                                                                                             updateVocabularyFields = TRUE)
-          
           conceptSetResultsExpression(conceptSetExpressionAllTerms)
-          conceptSetSearchResults(dplyr::bind_rows(searchResultConceptIdsAllTerms) %>% 
-                                    dplyr::distinct())
-        }
       }
     }, message = "Loading, Please Wait . .")
   })
