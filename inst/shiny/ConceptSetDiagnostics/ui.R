@@ -9,9 +9,9 @@ shinydashboard::dashboardPage(
       solidHeader = TRUE,
       collapsible = TRUE,
       shiny::h5("Enter Keyword(s) :"),
-      column(8, shiny::uiOutput("col")),
+      column(4, shiny::uiOutput("col")),
       column(
-        4,
+        2,
         shiny::actionButton(
           inputId = "addKeyword",
           icon = icon("plus"),
@@ -22,6 +22,18 @@ shinydashboard::dashboardPage(
           icon = icon("minus"),
           label = ""
         )
+      ),
+      column(3,
+             shiny::selectInput(inputId = "vocabularyId",
+                                label = "vocabulary ID of Interest",
+                                choices =  c('SNOMED','HCPCS','ICD10CM','ICD10','ICD9CM','ICD9','Read'),
+                                selected = c('SNOMED','HCPCS','ICD10CM','ICD10','ICD9CM','ICD9','Read'),multiple = TRUE)
+             ),
+      column(3,
+             shiny::selectInput(inputId = "domainId",
+                                label = "domain ID of Interest",
+                                choices =  c('Condition', 'Observation'),
+                                selected = c('Condition', 'Observation'),multiple = TRUE)
       ),
       column(12,
              shiny::actionButton(inputId = "search", label = "Search"))

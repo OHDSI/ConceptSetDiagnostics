@@ -40,16 +40,8 @@ shiny::shinyServer(function(input, output, session) {
                      conceptSetExpressionAllTerms <- list()
                      searchResultConceptIdsAllTerms <- list()
                      for (i in 1:length(keywords)) {
-                       vocabularyIdOfInterest <-
-                         c('SNOMED',
-                           'HCPCS',
-                           'ICD10CM',
-                           'ICD10',
-                           'ICD9CM',
-                           'ICD9',
-                           'Read')
-                       domainIdOfInterest <-
-                         c('Condition', 'Observation')
+                       vocabularyIdOfInterest <- input$vocabularyId
+                       domainIdOfInterest <- input$domainId
                        
                        # step perform string search
                        searchResultConceptIds <-
