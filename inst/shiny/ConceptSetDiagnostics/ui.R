@@ -38,6 +38,12 @@ shinydashboard::dashboardPage(
       column(12,
              shiny::actionButton(inputId = "search", label = "Search"))
     ),
+    shinydashboard::box(
+      title = "Concept Set Result",
+      width = NULL,
+      status = "primary",
+      solidHeader = TRUE,
+      collapsible = TRUE,
     shiny::tabsetPanel(
       id = "cohortDetails",
       type = "tab",
@@ -99,6 +105,16 @@ shinydashboard::dashboardPage(
           "#conceptSetExpressionJSON { max-height:700px};"
         ))
       )
-    ),
+    )),
+    shinydashboard::box(title = "Concept ID Details",
+                         width = NULL,
+                         status = "primary",
+                         solidHeader = TRUE,
+                         collapsible = TRUE,
+                        shinyWidgets::pickerInput(
+                          inputId = "conceptId",
+                          label = "Select Concept ID", 
+                          choices = c(),
+                        ))
   )
 )

@@ -75,8 +75,19 @@ shiny::shinyServer(function(input, output, session) {
     if (is.null(conceptSetSearchResults())) {
       return(NULL)
     } else {
-      standardDataTable(data = conceptSetSearchResults())
+      standardDataTable(data = conceptSetSearchResults(),selectionMode = "multiple") %>% 
+        DT::formatStyle(
+          'conceptName', 'standardConcept',
+          color = DT::styleEqual(c('S', 'N','C'), c('blue', 'red','purple'))
+        )
     }
+  })
+  
+  observeEvent(eventExpr = input$searchResultConceptIds_rows_selected,handlerExpr = {
+    idx <- input$searchResultConceptIds_rows_selected
+    conceptName <- conceptSetSearchResults()[idx,]$conceptName
+    shinyWidgets::updatePickerInput(session = session,inputId = "conceptId",choices = conceptName)
+    ConceptSetDiagnostics::getConceptIdDetails(conceptIds = c(4028741),connection = connection)
   })
   
   getConceptSetExpression <- shiny::reactive({
