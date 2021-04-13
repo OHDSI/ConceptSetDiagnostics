@@ -2,6 +2,7 @@
 
 export(getConceptIdDetails)
 export(getConceptPrevalenceCountsForConceptIds)
+export(getConceptRelationship)
 export(getConceptSetDetailsFromCohortDefinition)
 export(getConceptSetExpressionDataFrameFromConceptSetExpression)
 export(getConceptSetExpressionFromConceptSetExpressionDataFrame)
