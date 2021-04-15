@@ -105,6 +105,34 @@ shiny::shinyServer(function(input, output, session) {
           connection = connection
         ) %>% 
         dplyr::arrange(dplyr::desc(.data$drc))
+      
+      conceptSetExpressionDataFrame$checkedDescendants <- ""
+      conceptSetExpressionDataFrame$checkedMapped <- ""
+      conceptSetExpressionDataFrame$checkedExcluded <- ""
+      for(i in 1:nrow(conceptSetExpressionDataFrame)) {
+        if(conceptSetExpressionDataFrame[i,]$includeDescendants) {
+          conceptSetExpressionDataFrame$checkedDescendants <- 'checked=\"checked\"'
+        }
+        if(conceptSetExpressionDataFrame[i,]$includeMapped) {
+          conceptSetExpressionDataFrame$checkedMapped <- 'checked=\"checked\"'
+        }
+        if(conceptSetExpressionDataFrame[i,]$isExcluded) {
+          conceptSetExpressionDataFrame$checkedExcluded <- 'checked=\"checked\"'
+        }
+      }
+      conceptSetExpressionDataFrame <- conceptSetExpressionDataFrame %>%
+        dplyr::mutate(
+          # use glue to create checked field in javascript
+          selectDescendants = glue::glue(
+            '<input type="checkbox" class="selectDescendants"  name="selectDescendants" {conceptSetExpressionDataFrame$checkedDescendants}  value="{1:nrow(conceptSetExpressionDataFrame)}"><br>'
+          ),
+          selectMapped = glue::glue(
+            '<input type="checkbox" class="selectMapped"  name="selectMapped" {conceptSetExpressionDataFrame$checkedMapped}  value="{1:nrow(conceptSetExpressionDataFrame)}"><br>'
+          ),
+          selectExcluded = glue::glue(
+            '<input type="checkbox" class="selectExcluded"  name="selectExcluded" {conceptSetExpressionDataFrame$checkedExcluded}  value="{1:nrow(conceptSetExpressionDataFrame)}"><br>'
+          )
+        ) 
     })
     return(conceptSetExpressionDataFrame)
   })
@@ -114,19 +142,59 @@ shiny::shinyServer(function(input, output, session) {
     if (is.null(conceptSetResultsExpression())) {
       return(NULL)
     } else {
-      standardDataTable(data = conceptSetResultsExpression())
+      standardDataTable(
+        data = conceptSetResultsExpression() %>%
+          dplyr::select(
+            -.data$includeDescendants,
+            -.data$includeMapped,
+            -.data$isExcluded,
+            -.data$checkedDescendants,
+            -.data$checkedMapped,
+            -.data$checkedExcluded
+          ),
+        selectionMode = "none"
+      )
     }
   })
   
   getResolved <- shiny::reactive({
     shiny::withProgress(message = "Loading. . .", {
+      data <- conceptSetResultsExpression()
+      data$includeDescendants <- FALSE
+      data$includeMapped <- FALSE
+      data$isExcluded <- FALSE
+      if (is.null(input$descendants_checkboxes_checked)) {
+        data$includeDescendants <- conceptSetResultsExpression()$includeDescendants
+      } else {
+        data$includeDescendants[as.integer(input$descendants_checkboxes_checked)] <- TRUE
+      }
+      if (is.null(input$mapped_checkboxes_checked)) {
+        data$includeMapped <- conceptSetResultsExpression()$includeMapped
+      } else {
+        data$includeMapped[as.integer(input$mapped_checkboxes_checked)] <- TRUE
+      }
+      if (is.null(input$excluded_checkboxes_checked)) {
+        data$isExcluded <- conceptSetResultsExpression()$isExcluded
+      } else {
+        data$isExcluded[as.integer(input$excluded_checkboxes_checked)] <- TRUE
+      }
+      data <- data %>% 
+        dplyr::select(
+          -.data$selectDescendants,
+          -.data$selectMapped,
+          -.data$selectExcluded,
+          -.data$checkedDescendants,
+          -.data$checkedMapped,
+          -.data$checkedExcluded
+        )
+
       conceptSetExpression <-
-        ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = conceptSetResultsExpression())
-      data <-
+        ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = data)
+      result <-
         ConceptSetDiagnostics::resolveConceptSetExpression(conceptSetExpression = conceptSetExpression,
                                                            connection = connection)
     })
-    return(data)
+    return(result)
   })
   
   output$resolvedConceptSetExpression <- DT::renderDT({

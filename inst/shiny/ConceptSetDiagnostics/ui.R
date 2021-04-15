@@ -55,7 +55,49 @@ shinydashboard::dashboardPage(
       shiny::tabPanel(
         title = "Concept Set Expression",
         value = "conceptSetExpression",
-        DT::DTOutput(outputId = "conceptSetExpression")
+        DT::DTOutput(outputId = "conceptSetExpression"),
+        tags$script(
+          HTML(
+            '$(document).on("click", ".selectDescendants", function () {
+                       var descendantsCheckboxes = document.getElementsByName("selectDescendants");
+                       var descendantsCheckboxesChecked = [];
+                       for (var i=0; i<descendantsCheckboxes.length; i++) {
+                       if (descendantsCheckboxes[i].checked) {
+                       descendantsCheckboxesChecked.push(descendantsCheckboxes[i].value);
+                      }
+                      }
+                     Shiny.onInputChange("descendants_checkboxes_checked",descendantsCheckboxesChecked);});
+                     
+            $(document).on("click", ".selectMapped", function () {
+                       var mappedCheckboxes = document.getElementsByName("selectMapped");
+                       var mappedCheckboxesChecked = [];
+                       for (var i=0; i<mappedCheckboxes.length; i++) {
+                       if (mappedCheckboxes[i].checked) {
+                       mappedCheckboxesChecked.push(mappedCheckboxes[i].value);
+                      }
+                      }
+                     Shiny.onInputChange("mapped_checkboxes_checked",mappedCheckboxesChecked);});
+                     
+            $(document).on("click", ".selectExcluded", function () {
+                       var excludedCheckboxes = document.getElementsByName("selectExcluded");
+                       var excludedCheckboxesChecked = [];
+                       for (var i=0; i<excludedCheckboxes.length; i++) {
+                       if (excludedCheckboxes[i].checked) {
+                       excludedCheckboxesChecked.push(excludedCheckboxes[i].value);
+                      }
+                      }
+                     Shiny.onInputChange("excluded_checkboxes_checked",excludedCheckboxesChecked);});
+            '
+          )
+        ),
+        tags$style(
+          HTML(
+            '.selectDescendants,.selectMapped,.selectExcluded {
+              height : 30px;
+              width : 30px;
+            }'
+          )
+        )
       ),
       shiny::tabPanel(
         title = "Resolved",
