@@ -18,12 +18,8 @@
 # 
 #' @export
 getRelationship <-
-  function(conceptIds,
-           connection,
+  function(connection,
            vocabularyDatabaseSchema = 'vocabulary') {
-    if (length(conceptIds) == 0) {
-      stop('No concept id provided')
-    }
     data <-
       DatabaseConnector::renderTranslateQuerySql(connection = connection, 
                                                  sql = "SELECT * FROM @vocabulary_database_schema.relationship;",
