@@ -5,11 +5,11 @@ source("HelperFunctions.R")
 connectionDetails <-
   DatabaseConnector::createConnectionDetails(
     dbms = "postgresql",
-    server = paste(Sys.getenv("phoebedbServer"),
-                   Sys.getenv("phoebedb"),
+    server = paste(Sys.getenv("shinyDbServer"),
+                   Sys.getenv("shinydbDatabase"),
                    sep = "/"),
-    user = Sys.getenv("phoebedbUser"),
-    password = Sys.getenv("phoebedbPw"),
+    user = Sys.getenv("shinyDbUser"),
+    password = Sys.getenv("shinyDbPassword"),
     port = Sys.getenv("shinydbPort")
   )
 
