@@ -6,8 +6,9 @@ Author: Gowtham Rao [aut, cre]
 Maintainer: Gowtham Rao <rao@ohdsi.org>
 Description: A package for design diagnostics.
 Depends:
-    DatabaseConnector (>= 2.2.0),
-    dplyr
+    DatabaseConnector (>= 4.0.0),
+    dplyr,
+    R (>= 4.0.0)
 Imports:
 	Andromeda,
 	methods,
