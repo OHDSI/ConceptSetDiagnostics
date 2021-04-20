@@ -8,7 +8,8 @@ camelCaseToTitleCase <- function(string) {
 snakeCaseToCamelCase <- function(string) {
   string <- tolower(string)
   for (letter in letters) {
-    string <- gsub(paste("_", letter, sep = ""), toupper(letter), string)
+    string <-
+      gsub(paste("_", letter, sep = ""), toupper(letter), string)
   }
   string <- gsub("_([0-9])", "\\1", string)
   return(string)
@@ -27,7 +28,7 @@ standardDataTable <- function(data,
   dataTableOption =
     list(
       pageLength = pageLength,
-      lengthMenu = list(c(5, 10, 20, -1), c("5", "10", "20", "All")),
+      lengthMenu = list(c(5, 10, 20,-1), c("5", "10", "20", "All")),
       lengthChange = TRUE,
       searching = searching,
       ordering = TRUE,

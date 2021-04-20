@@ -15,66 +15,85 @@
 # limitations under the License.
 #
 
-# given a concept set table, perform design diagnostics
+#' given a concept set table, perform design diagnostics
+#'
+#' @template Connection
+#'
+#' @template VocabularyDatabaseSchema
+#'
+#' @param exportResults       Do you want to export results?
+#'
+#' @param locationForResults  If you want to export results, please provide disk drive location
+#'
+#' @param vocabularyIdOfInterest A list of vocabulary ids to filter the results.
+#'
+#' @param domainIdOfInterest     A list of domain ids to filter the results.
+#' 
+#' @param searchString        A phrase with one or more words to search for.
+#'
 #' @export
 performDesignDiagnosticsOnSearchTerm <-
   function(searchString,
            exportResults = FALSE,
            locationForResults = NULL,
            vocabularyDatabaseSchema = 'vocabulary',
-           blackList = c(0),
            vocabularyIdOfInterest = c('SNOMED', 'HCPCS', 'ICD10CM', 'ICD10', 'ICD9CM', 'ICD9', 'Read'),
            domainIdOfInterest = c('Condition', 'Procedure', 'Observation'),
            connection) {
-    
     # step perform string search
-    searchResultConceptIds <- getStringSearchConcepts(connection = connection,
-                                                      searchString = searchString) 
+    searchResultConceptIds <-
+      getStringSearchConcepts(connection = connection,
+                              vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+                              searchString = searchString)
     if (length(vocabularyIdOfInterest) > 0) {
-      searchResultConceptIds <- searchResultConceptIds %>% 
+      searchResultConceptIds <- searchResultConceptIds %>%
         dplyr::filter(.data$vocabularyId %in% vocabularyIdOfInterest)
     }
     if (length(domainIdOfInterest) > 0) {
-      searchResultConceptIds <- searchResultConceptIds %>% 
+      searchResultConceptIds <- searchResultConceptIds %>%
         dplyr::filter(.data$domainId %in% domainIdOfInterest)
     }
     
     # develop a concept set expression based on string search
-    conceptSetExpressionDataFrame <- 
+    conceptSetExpressionDataFrame <-
       getConceptSetExpressionFromConceptSetExpressionDataFrame(
         conceptSetExpressionDataFrame = searchResultConceptIds,
-        selectAllDescendants = TRUE) %>% 
-      getConceptSetSignatureExpression(connection = connection) %>% 
-      getConceptSetExpressionDataFrameFromConceptSetExpression(updateVocabularyFields = TRUE, 
-                                                               connection = connection) 
+        selectAllDescendants = TRUE) %>%
+      getConceptSetSignatureExpression(connection = connection) %>%
+      getConceptSetExpressionDataFrameFromConceptSetExpression(updateVocabularyFields = TRUE,
+                                                               connection = connection)
     
-    conceptSetExpression <- 
+    conceptSetExpression <-
       getConceptSetExpressionFromConceptSetExpressionDataFrame(
         conceptSetExpressionDataFrame = conceptSetExpressionDataFrame)
     
     
-    
     # resolve concept set expression to individual concept ids
-    resolvedConceptIds <- 
-      resolveConceptSetExpression(connection = connection, 
+    resolvedConceptIds <-
+      resolveConceptSetExpression(connection = connection,
                                   conceptSetExpression = conceptSetExpression)
     
-    recommendedConceptIds <- 
+    recommendedConceptIds <-
       getRecommendationForConceptSetExpression(
-        conceptSetExpression = conceptSetExpression, 
-        connection = connection, 
-        vocabularyIdOfInterest = vocabularyIdOfInterest, 
-        domainIdOfInterest = domainIdOfInterest)
+        conceptSetExpression = conceptSetExpression,
+        connection = connection,
+        vocabularyIdOfInterest = vocabularyIdOfInterest,
+        domainIdOfInterest = domainIdOfInterest
+      )
     
-    searchResult <- list(searchString = searchString,
-                         searchResultConceptIds = searchResultConceptIds,
-                         conceptSetExpressionDataFrame = conceptSetExpressionDataFrame,
-                         resolvedConceptIds = resolvedConceptIds,
-                         recommendedConceptIds = recommendedConceptIds)
+    searchResult <- list(
+      searchString = searchString,
+      searchResultConceptIds = searchResultConceptIds,
+      conceptSetExpressionDataFrame = conceptSetExpressionDataFrame,
+      resolvedConceptIds = resolvedConceptIds,
+      recommendedConceptIds = recommendedConceptIds
+    )
     
     if (exportResults) {
       if (!is.null(locationForResults)) {
-        dir.create(path = locationForResults, showWarnings = FALSE, recursive = TRUE)
+        dir.create(path = locationForResults,
+                   showWarnings = FALSE,
+                   recursive = TRUE)
         if (nrow(recommendedConceptIds$recommendedStandard) > 0) {
           readr::write_excel_csv(
             x = recommendedConceptIds$recommendedStandard,
@@ -108,17 +127,13 @@ performDesignDiagnosticsOnSearchTerm <-
         if (nrow(recommendedConceptIds$recommendedSource) > 0) {
           readr::write_excel_csv(
             x = recommendedConceptIds$recommendedSource,
-            file = file.path(
-              locationForResults,
-              paste0("recommendedSource.csv")
-            ),
+            file = file.path(locationForResults,
+                             paste0("recommendedSource.csv")),
             append = FALSE,
             na = ""
           )
-          writeLines(text = paste0(
-            "Wrote recommendedSource.csv to ",
-            locationForResults
-          ))
+          writeLines(text = paste0("Wrote recommendedSource.csv to ",
+                                   locationForResults))
         } else {
           writeLines(
             text = paste0(
@@ -127,10 +142,8 @@ performDesignDiagnosticsOnSearchTerm <-
             )
           )
           unlink(
-            x = file.path(
-              locationForResults,
-              paste0("recommendedSource.csv")
-            ),
+            x = file.path(locationForResults,
+                          paste0("recommendedSource.csv")),
             recursive = TRUE,
             force = TRUE
           )

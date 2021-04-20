@@ -1,20 +1,32 @@
 # Copyright 2020 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #     http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# 
+#
 
+#' convert a concept set expression object into a data frame object
+#'
+#' @template Connection
+#'
+#' @param updateVocabularyFields  Do you want to update the details of concepts from the vocabulary tables?
+#'
+#' @param recordCount             Do you want the function to return record count for the concept ids?
+#'
+#' @template VocabularyDatabaseSchema
+#'
+#' @template conceptSetExpression
+#'
 #' @export
 getConceptSetExpressionDataFrameFromConceptSetExpression <-
   function(conceptSetExpression,
@@ -40,9 +52,13 @@ getConceptSetExpressionDataFrameFromConceptSetExpression <-
                                                                 ~ ifelse(is.null(.x), NA, .x)))
       } else {
         if ('CONCEPT_ID' %in% names(items[[i]][[1]])) {
-          warning(paste0("record in concept set expression with concept id ",
-                         (items[[i]][[1]]$CONCEPT_ID),
-                         " does not conform with the standard structure in concept set expression"))
+          warning(
+            paste0(
+              "record in concept set expression with concept id ",
+              (items[[i]][[1]]$CONCEPT_ID),
+              " does not conform with the standard structure in concept set expression"
+            )
+          )
         }
       }
     }
@@ -168,28 +184,26 @@ getConceptSetExpressionDataFrameFromConceptSetExpression <-
     
     if (!recordCount) {
       if ('rc' %in% colnames(conceptSetExpressionDetails)) {
-        conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
-          dplyr::select(-.data$rc,
-                        -.data$dbc,
-                        -.data$drc,
-                        -.data$ddbc)
+        conceptSetExpressionDetails <- conceptSetExpressionDetails %>%
+          dplyr::select(-.data$rc, -.data$dbc, -.data$drc, -.data$ddbc)
       }
     } else {
       if (!'rc' %in% colnames(conceptSetExpressionDetails)) {
-        conceptIds <- conceptSetExpressionDetails$conceptId %>% 
-          unique() %>% 
-          getConceptIdDetails(connection = connection, 
-                              vocabularyDatabaseSchema = vocabularyDatabaseSchema) %>% 
-          dplyr::select(.data$conceptId, 
+        conceptIds <- conceptSetExpressionDetails$conceptId %>%
+          unique() %>%
+          getConceptIdDetails(connection = connection,
+                              vocabularyDatabaseSchema = vocabularyDatabaseSchema) %>%
+          dplyr::select(.data$conceptId,
                         .data$rc,
                         .data$dbc,
                         .data$drc,
                         .data$ddbc)
-        conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
-          dplyr::left_join(y = conceptIds, by = "conceptId") %>% 
+        conceptSetExpressionDetails <-
+          conceptSetExpressionDetails %>%
+          dplyr::left_join(y = conceptIds, by = "conceptId") %>%
           dplyr::arrange(dplyr::desc(.data$drc))
       } else {
-        conceptSetExpressionDetails <- conceptSetExpressionDetails %>% 
+        conceptSetExpressionDetails <- conceptSetExpressionDetails %>%
           dplyr::arrange(dplyr::desc(.data$drc))
       }
     }

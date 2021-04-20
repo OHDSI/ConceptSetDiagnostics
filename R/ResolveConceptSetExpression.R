@@ -1,25 +1,29 @@
 # Copyright 2020 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #     http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# 
+#
 
-# Given a concept set expression, get the resolved concepts
+#' Given a concept set expression, get the resolved concepts
+#'
+#' @template Connection
+#' 
+#' @template ConceptSetExpression
+#'
 #' @export
 resolveConceptSetExpression <- function(conceptSetExpression,
-                                        connection
-) {
+                                        connection) {
   # convert concept set expression R object (list) to data frame
   conceptSetExpressionDataFrame <-
     getConceptSetExpressionDataFrameFromConceptSetExpression(connection = connection,
@@ -113,11 +117,9 @@ resolveConceptSetExpression <- function(conceptSetExpression,
   
   # get the mapped concepts for the resolved conceptIds
   mappedConcepts <-
-    getMappedSourceConcepts(
-      connection = connection,
-      conceptIds = resolvedConceptIds %>%
-        dplyr::pull(.data$conceptId)
-    ) %>%
+    getMappedSourceConcepts(connection = connection,
+                            conceptIds = resolvedConceptIds %>%
+                              dplyr::pull(.data$conceptId)) %>%
     dplyr::filter(.data$standardConceptId != .data$conceptId) %>%
     dplyr::distinct() %>%
     dplyr::left_join(
