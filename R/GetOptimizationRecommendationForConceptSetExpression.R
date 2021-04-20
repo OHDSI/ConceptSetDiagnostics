@@ -1,21 +1,28 @@
 # Copyright 2020 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #     http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# 
+#
 
-# given a concept set tble, get optimization recommendation
+#' given a concept set tble, get optimization recommendation
+#'
+#' @template Connection
+#'
+#' @template VocabularyDatabaseSchema
+#'
+#' @param conceptSetExpressionDataFrame   Concept set expression in data frame format.
+#'
 #' @export
 getOptimizationRecommendationForConceptSetTable <-
   function(conceptSetExpressionDataFrame,
@@ -33,13 +40,14 @@ getOptimizationRecommendationForConceptSetTable <-
       )
     }
     
-    conceptSetConceptIdsExcluded <- conceptSetExpressionDataFrame %>%
+    conceptSetConceptIdsExcluded <-
+      conceptSetExpressionDataFrame %>%
       dplyr::filter(.data$isExcluded == TRUE) %>%
       dplyr::pull(.data$conceptId)
     
     conceptSetConceptIdsDescendantsExcluded <-
       conceptSetExpressionDataFrame %>%
-      dplyr::filter(.data$isExcluded == TRUE) %>% 
+      dplyr::filter(.data$isExcluded == TRUE) %>%
       dplyr::filter(.data$includeDescendants == TRUE) %>%
       dplyr::pull(.data$conceptId)
     
@@ -50,7 +58,7 @@ getOptimizationRecommendationForConceptSetTable <-
     
     conceptSetConceptIdsDescendantsNotExcluded <-
       conceptSetExpressionDataFrame %>%
-      dplyr::filter(!.data$isExcluded == TRUE) %>% 
+      dplyr::filter(!.data$isExcluded == TRUE) %>%
       dplyr::filter(.data$includeDescendants == TRUE) %>%
       dplyr::pull(.data$conceptId)
     
@@ -88,14 +96,14 @@ getOptimizationRecommendationForConceptSetTable <-
     
     #switch between sql with or without temp table based on
     #number of concept ids to optimize
-    numberOfConceptIds <- length(unique(
-      c(
-        conceptSetConceptIdsExcluded,
-        conceptSetConceptIdsDescendantsExcluded,
-        conceptSetConceptIdsNotExcluded,
-        conceptSetConceptIdsDescendantsNotExcluded
-      )
-    ))
+    # numberOfConceptIds <- length(unique(
+    #   c(
+    #     conceptSetConceptIdsExcluded,
+    #     conceptSetConceptIdsDescendantsExcluded,
+    #     conceptSetConceptIdsNotExcluded,
+    #     conceptSetConceptIdsDescendantsNotExcluded
+    #   )
+    # ))
     
     sqlWithTemporaryTable <-
       SqlRender::loadRenderTranslateSql(
@@ -118,14 +126,14 @@ getOptimizationRecommendationForConceptSetTable <-
     #     conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
     #     conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
     #   )
-    # 
-    # 
+    #
+    #
     # if (numberOfConceptIds > 100) {
-      sql <- sqlWithTemporaryTable
-      renderTranslateExecuteSql(connection = connection,
-                                sql = sql)
-      retrieveSql <-
-        SqlRender::translate(sql = "SELECT * FROM #optimized_set;", targetDialect = "postgresql")
+    sql <- sqlWithTemporaryTable
+    renderTranslateExecuteSql(connection = connection,
+                              sql = sql)
+    retrieveSql <-
+      SqlRender::translate(sql = "SELECT * FROM #optimized_set;", targetDialect = "postgresql")
     # } else {
     #   sql <- sqlWithoutTemporaryTable
     #   retrieveSql <- sql
