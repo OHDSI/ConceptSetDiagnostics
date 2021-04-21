@@ -199,10 +199,27 @@ shinydashboard::dashboardPage(
         status = "primary",
         solidHeader = TRUE,
         collapsible = TRUE,
-        shinyWidgets::pickerInput(
-          inputId = "conceptId",
-          label = "Select Concept ID",
-          choices = c(),
+        column(
+          4,
+          shinydashboard::box(
+            title = "Concept Synonym",
+            width = NULL,
+            status = "primary",
+            solidHeader = TRUE,
+            collapsible = TRUE,
+            DT::DTOutput(outputId = "conceptSynonym")
+          )
+        ),
+        column(
+          8,
+          shinydashboard::box(
+            title = "Relationship",
+            width = NULL,
+            status = "primary",
+            solidHeader = TRUE,
+            collapsible = TRUE,
+            DT::DTOutput(outputId = "conceptRelationship")
+          )
         )
       )
     )
