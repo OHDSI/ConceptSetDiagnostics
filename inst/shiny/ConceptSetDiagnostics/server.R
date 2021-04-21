@@ -295,10 +295,10 @@ shiny::shinyServer(function(input, output, session) {
         data$isExcluded[as.integer(input$excluded_checkboxes_checked)] <-
           TRUE
       }
-      data <- data %>%
-        dplyr::select(
-          -.data$selectDescendants,-.data$selectMapped,-.data$selectExcluded,-.data$checkedDescendants,-.data$checkedMapped,-.data$checkedExcluded
-        )
+      # data <- data %>%
+      #   dplyr::select(
+      #     -.data$selectDescendants,-.data$selectMapped,-.data$selectExcluded,-.data$checkedDescendants,-.data$checkedMapped,-.data$checkedExcluded
+      #   )
       
       conceptSetExpression <-
         ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = data)
@@ -359,6 +359,68 @@ shiny::shinyServer(function(input, output, session) {
       data <-
         ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = conceptSetResultsExpression()) %>%
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
+    }
+  })
+  
+  selectedConceptId <- reactiveVal(NULL)
+  observeEvent(eventExpr = input$searchResultConceptIds_rows_selected,
+               handlerExpr = {
+                 idx <- input$searchResultConceptIds_rows_selected
+                 selectedConceptId(conceptSetSearchResults()$conceptId[idx])
+  })
+  
+  observeEvent(eventExpr = input$resolvedConceptSetExpression_rows_selected,
+               handlerExpr = {
+                 idx <- input$resolvedConceptSetExpression_rows_selected
+                 selectedConceptId(getResolved()$resolvedConcepts$conceptId[idx])
+               })
+  
+  observeEvent(eventExpr = input$mappedConceptSetExpression_rows_selected,
+               handlerExpr = {
+                 idx <- input$mappedConceptSetExpression_rows_selected
+                 selectedConceptId(getResolved()$mappedConcepts$conceptId[idx])
+               })
+  
+  output$conceptSynonym <- DT::renderDT({
+    if (!is.null(selectedConceptId())) {
+      shiny::withProgress(message = "Loading. Please wait . . .", {
+        data <-
+          ConceptSetDiagnostics::getConceptSynonym(conceptIds = selectedConceptId(), connection = connection)
+        data <- data %>%
+          dplyr::rename("SynonymName" = "conceptSynonymName") %>%
+          dplyr::select(.data$SynonymName)
+        return(data)
+      })
+    }
+  })
+  
+  output$conceptRelationship <- DT::renderDT({
+    if (!is.null(selectedConceptId())) {
+      shiny::withProgress(message = "Loading. Please wait . . .", {
+        data1 <-
+          ConceptSetDiagnostics::getConceptRelationship(conceptIds = selectedConceptId(), connection = connection) %>%
+          dplyr::arrange(.data$relationshipId)
+        
+        data2 <-
+          ConceptSetDiagnostics::getConceptIdDetails(conceptIds = data1$conceptId2,
+                                                     connection = connection)
+        
+        data <- data1 %>%
+          dplyr::inner_join(data2, by = c("conceptId2" = "conceptId")) %>%
+          dplyr::select(
+            .data$relationshipId,
+            .data$conceptName,
+            .data$conceptId2,
+            .data$vocabularyId
+          ) %>%
+          dplyr::rename(
+            c("Relationship" = "relationshipId"),
+            c("Relates To" = "conceptName"),
+            c("ConceptID" = "conceptId2"),
+            c("Vocabulary" = "vocabularyId")
+          )
+        return(data)
+      })
     }
   })
 })
