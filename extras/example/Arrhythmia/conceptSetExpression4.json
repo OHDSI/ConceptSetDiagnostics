@@ -1,0 +1,452 @@
+{
+	"items" : [
+		{
+			"concept" : {
+				"CONCEPT_ID" : 321042,
+				"CONCEPT_NAME" : "Cardiac arrest",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "410429000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1571726,
+				"CONCEPT_NAME" : "Cardiac arrest due to anesthesia during pregnancy",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O29.11",
+				"CONCEPT_CLASS_ID" : "5-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4077195,
+				"CONCEPT_NAME" : "Respiratory arrest preceding cardiac arrest",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "276259003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4173781,
+				"CONCEPT_NAME" : "Cardiac arrest due to electrocution",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "424390001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4175137,
+				"CONCEPT_NAME" : "Miscarriage with cardiac arrest and/or cardiac failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "48739004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4226279,
+				"CONCEPT_NAME" : "Cardiac arrest location",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "405803004",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4233618,
+				"CONCEPT_NAME" : "Cardiac arrest rhythm",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "405804005",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4249449,
+				"CONCEPT_NAME" : "Failed attempted termination of pregnancy with cardiac arrest and/or failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "73837001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4324181,
+				"CONCEPT_NAME" : "History of cardiac arrest",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "429007001",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37017207,
+				"CONCEPT_NAME" : "Referral to cardiac rapid response team",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "713442009",
+				"CONCEPT_CLASS_ID" : "Procedure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40392267,
+				"CONCEPT_NAME" : "Cardio-respiratory arrest",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "195085006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40503369,
+				"CONCEPT_NAME" : "Cardiac arrest - asystole",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "30298009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 43530918,
+				"CONCEPT_NAME" : "Induced termination of pregnancy complicated by cardiac arrest and/or failure",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "609460008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44790722,
+				"CONCEPT_NAME" : "Cardiac arrest witnessed by ambulance clinician",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "242741000000104",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44790723,
+				"CONCEPT_NAME" : "Cardiac arrest witnessed by bystander",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "242751000000101",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44790740,
+				"CONCEPT_NAME" : "Cardiac arrest witnessed by community responder",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "242761000000103",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44790741,
+				"CONCEPT_NAME" : "Cardiac arrest witnessed by no one",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "242771000000105",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44790742,
+				"CONCEPT_NAME" : "Cardiac arrest witnessed, witness not known",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "242781000000107",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44826147,
+				"CONCEPT_NAME" : "Personal history of sudden cardiac arrest",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "V12.53",
+				"CONCEPT_CLASS_ID" : "5-dig billing V code",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45534161,
+				"CONCEPT_NAME" : "Cardiac arrest following failed attempted termination of pregnancy",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O07.36",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45539115,
+				"CONCEPT_NAME" : "Cardiac arrest due to anesthesia during pregnancy, first trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O29.111",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45553491,
+				"CONCEPT_NAME" : "Cardiac arrest due to anesthesia during pregnancy, second trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O29.112",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45563037,
+				"CONCEPT_NAME" : "Cardiac arrest following incomplete spontaneous abortion",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O03.36",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45563042,
+				"CONCEPT_NAME" : "Cardiac arrest following an ectopic and molar pregnancy",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O08.81",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45577572,
+				"CONCEPT_NAME" : "Cardiac arrest due to anesthesia during pregnancy, unspecified trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O29.119",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45587266,
+				"CONCEPT_NAME" : "Cardiac arrest following complete or unspecified spontaneous abortion",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O03.86",
+				"CONCEPT_CLASS_ID" : "5-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45592207,
+				"CONCEPT_NAME" : "Cardiac arrest due to anesthesia during pregnancy, third trimester",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "O29.113",
+				"CONCEPT_CLASS_ID" : "6-char billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45766194,
+				"CONCEPT_NAME" : "Hypoxic ischemic encephalopathy due to cardiac arrest",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "703305006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		}
+	]
+}

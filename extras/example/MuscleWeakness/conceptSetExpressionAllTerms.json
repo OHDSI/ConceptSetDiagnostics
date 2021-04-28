@@ -1,0 +1,3332 @@
+{
+	"items" : [
+		{
+			"concept" : {
+				"CONCEPT_ID" : 73184,
+				"CONCEPT_NAME" : "Familial periodic paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "267607008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 76685,
+				"CONCEPT_NAME" : "Myasthenia gravis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "91637004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 79908,
+				"CONCEPT_NAME" : "Muscle weakness",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "26544005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 192357,
+				"CONCEPT_NAME" : "Paralytic ileus",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "55525008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 195240,
+				"CONCEPT_NAME" : "Monoplegia of lower limb",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "80420005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 195847,
+				"CONCEPT_NAME" : "Gastroparesis syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "235675006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 196736,
+				"CONCEPT_NAME" : "Paralysis of bladder",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "398029001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 261047,
+				"CONCEPT_NAME" : "Unilateral partial vocal cord paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "195842003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 374041,
+				"CONCEPT_NAME" : "External ophthalmoplegia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "19373007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 374562,
+				"CONCEPT_NAME" : "Acute poliomyelitis with paralysis except bulbar",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "172672006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 375263,
+				"CONCEPT_NAME" : "Cycloplegia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "68158006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 375263,
+				"CONCEPT_NAME" : "Cycloplegia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "68158006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 375529,
+				"CONCEPT_NAME" : "Infantile cerebral palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "230772000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 375536,
+				"CONCEPT_NAME" : "Organic writer's cramp",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "52008007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 376901,
+				"CONCEPT_NAME" : "Acute paralytic poliomyelitis, bulbar",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "64764001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 378158,
+				"CONCEPT_NAME" : "Convergence palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "194132009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 378439,
+				"CONCEPT_NAME" : "Fourth nerve palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "20610004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 378439,
+				"CONCEPT_NAME" : "Fourth nerve palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "20610004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 379012,
+				"CONCEPT_NAME" : "Monoplegia of upper limb",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "41764006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 381270,
+				"CONCEPT_NAME" : "Parkinson's disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "49049000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 381572,
+				"CONCEPT_NAME" : "Abducens nerve palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "398760006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 381572,
+				"CONCEPT_NAME" : "Abducens nerve palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "398760006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 435238,
+				"CONCEPT_NAME" : "Sleep paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "277180005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 436011,
+				"CONCEPT_NAME" : "Bends",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "89684003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 436684,
+				"CONCEPT_NAME" : "Progressive bulbar palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "54304004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 438138,
+				"CONCEPT_NAME" : "Paralytic syndromes",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "286937002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 440377,
+				"CONCEPT_NAME" : "Paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "44695005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 442774,
+				"CONCEPT_NAME" : "Intermittent claudication",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "63491006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 444419,
+				"CONCEPT_NAME" : "Tetraparesis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "91327001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 710653,
+				"CONCEPT_NAME" : "Upper motor neuron facial paralysis",
+				"VOCABULARY_ID" : "ICD10",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G83.6",
+				"CONCEPT_CLASS_ID" : "ICD10 code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 762807,
+				"CONCEPT_NAME" : "History of hemorrhagic stroke with residual hemiparesis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "432191000124101",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 765130,
+				"CONCEPT_NAME" : "Family history of myasthenia gravis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "3570001000004106",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 765474,
+				"CONCEPT_NAME" : "Paralysis of left musculocutaneous nerve",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "292611000119107",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1568400,
+				"CONCEPT_NAME" : "Myasthenia gravis and other myoneural disorders",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G70",
+				"CONCEPT_CLASS_ID" : "3-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 1568412,
+				"CONCEPT_NAME" : "Paraplegia (paraparesis) and quadriplegia (quadriparesis)",
+				"VOCABULARY_ID" : "ICD10CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G82",
+				"CONCEPT_CLASS_ID" : "3-char nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4012214,
+				"CONCEPT_NAME" : "Paralysis present",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "162241004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4028042,
+				"CONCEPT_NAME" : "Taboparesis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "13310005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4029795,
+				"CONCEPT_NAME" : "Reticuloendothelial blockade",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "13897001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4031719,
+				"CONCEPT_NAME" : "Paralysis of vagus, spinal accessory and hypoglossal nerves",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "129614001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4031798,
+				"CONCEPT_NAME" : "Neurogenic muscle weakness, ataxia and retinitis pigmentosa",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "237984008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4032342,
+				"CONCEPT_NAME" : "Paralysis of palate",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "129583005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4032800,
+				"CONCEPT_NAME" : "Saturday night paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "14786003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4034093,
+				"CONCEPT_NAME" : "Partial bilateral paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "23728006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4038582,
+				"CONCEPT_NAME" : "O/E - no paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "163599009",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4043747,
+				"CONCEPT_NAME" : "Spastic cerebral palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "230773005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4045732,
+				"CONCEPT_NAME" : "Myopathy in myasthenia gravis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "230687001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4045740,
+				"CONCEPT_NAME" : "Lacunar ataxic hemiparesis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "230702001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4048495,
+				"CONCEPT_NAME" : "Congenital laryngeal abductor palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "232442001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4048496,
+				"CONCEPT_NAME" : "Congenital laryngeal adductor palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "232443006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4059614,
+				"CONCEPT_NAME" : "Bladder sphincter paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "197876006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4062578,
+				"CONCEPT_NAME" : "O/E -cranial nerve 5-paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "164104008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4062583,
+				"CONCEPT_NAME" : "O/E - cranials 9+10 paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "164116002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4062847,
+				"CONCEPT_NAME" : "O/E -cranial 7 -paralysis -LMN",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "164107001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4063206,
+				"CONCEPT_NAME" : "O/E -cranial nerve 3-paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "164092003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4063210,
+				"CONCEPT_NAME" : "O/E-cranial nerve 11 paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "164119009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4063211,
+				"CONCEPT_NAME" : "O/E-cranial nerve 12 paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "164122006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4064216,
+				"CONCEPT_NAME" : "O/E -cranial nerve 4-paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "164095001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4064218,
+				"CONCEPT_NAME" : "O/E -cranial nerve 6-paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "164098004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4070940,
+				"CONCEPT_NAME" : "Cortical paralysis of fixation syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "20485009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4079019,
+				"CONCEPT_NAME" : "Phrenic nerve lesion",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "277321001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4079484,
+				"CONCEPT_NAME" : "Exercises for paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "183291002",
+				"CONCEPT_CLASS_ID" : "Procedure",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4080826,
+				"CONCEPT_NAME" : "Divergence paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "246717005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4081615,
+				"CONCEPT_NAME" : "Paraparesis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "1845001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4087081,
+				"CONCEPT_NAME" : "Rucksack paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "24408004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4087793,
+				"CONCEPT_NAME" : "Myostatic paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "246782008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4092151,
+				"CONCEPT_NAME" : "Degree of paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "280942002",
+				"CONCEPT_CLASS_ID" : "Attribute",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4095248,
+				"CONCEPT_NAME" : "acute canine polyradiculoneuropathy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "26251000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4101133,
+				"CONCEPT_NAME" : "Pseudocholinesterase deficiency",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "191397007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4102093,
+				"CONCEPT_NAME" : "Obturator nerve paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "252794008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4103073,
+				"CONCEPT_NAME" : "Porcine enteroviral encephalomyelitis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "28815008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4104204,
+				"CONCEPT_NAME" : "Complete bilateral paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "29188005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4104710,
+				"CONCEPT_NAME" : "Parkinson's disease NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "192831003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4104844,
+				"CONCEPT_NAME" : "Cervical sympathetic paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "192915005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4131651,
+				"CONCEPT_NAME" : "Nuclear facial nerve paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "26554009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4132103,
+				"CONCEPT_NAME" : "Unilateral paresis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "127377003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4137853,
+				"CONCEPT_NAME" : "Contracture of gastrocnemius muscle due to paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "425491009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4139136,
+				"CONCEPT_NAME" : "Nothnagel's syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "32680009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4139780,
+				"CONCEPT_NAME" : "Crutch paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "32739008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4148062,
+				"CONCEPT_NAME" : "Paresis of extraocular muscles",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "35158001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4157607,
+				"CONCEPT_NAME" : "Paralysis due to lesion of spinal cord",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "372310001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4159154,
+				"CONCEPT_NAME" : "Paralysis from birth trauma",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "371129000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4160436,
+				"CONCEPT_NAME" : "Common peroneal nerve paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "399088004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4163132,
+				"CONCEPT_NAME" : "Chastek paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "399041003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4164770,
+				"CONCEPT_NAME" : "Guillain-Barré syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "40956001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4165573,
+				"CONCEPT_NAME" : "Sweeney",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "4109002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4171937,
+				"CONCEPT_NAME" : "Paralysis absent",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "274811005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4172528,
+				"CONCEPT_NAME" : "Pelagic paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "277190002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4173242,
+				"CONCEPT_NAME" : "Triparesis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "48163001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4177506,
+				"CONCEPT_NAME" : "Vagus nerve palate paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "50639002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4184466,
+				"CONCEPT_NAME" : "Juvenile paralysis agitans of Hunt",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "43647007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4189235,
+				"CONCEPT_NAME" : "Third cranial nerve weakness",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "388980004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4194210,
+				"CONCEPT_NAME" : "Monoparesis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "79520009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4196570,
+				"CONCEPT_NAME" : "Inferior rectus underaction",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "313161005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4196572,
+				"CONCEPT_NAME" : "Inferior oblique underaction",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "313163008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4198623,
+				"CONCEPT_NAME" : "Intermediate syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "432991000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4200538,
+				"CONCEPT_NAME" : "Pupillary paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "5310008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4202652,
+				"CONCEPT_NAME" : "Heredofamilial brachial plexus paralysis syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "53857003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4202837,
+				"CONCEPT_NAME" : "Unilateral paralysis of tongue",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "52787007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4215375,
+				"CONCEPT_NAME" : "Marek disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "41615007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4216080,
+				"CONCEPT_NAME" : "Partial unilateral paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "71738007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4218201,
+				"CONCEPT_NAME" : "Infantile paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "397928009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4221837,
+				"CONCEPT_NAME" : "Klumpke-Déjerine paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "83886009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4224848,
+				"CONCEPT_NAME" : "Andersen Tawil syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "422348008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4228218,
+				"CONCEPT_NAME" : "Hysterical paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "88984006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4230185,
+				"CONCEPT_NAME" : "Complete unilateral paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "88715005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4231407,
+				"CONCEPT_NAME" : "Parturient paresis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "405256006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4234100,
+				"CONCEPT_NAME" : "Downer cow syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "90119005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4239173,
+				"CONCEPT_NAME" : "Cerebral paresis with homolateral ataxia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "68107009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4240594,
+				"CONCEPT_NAME" : "Cerebral paralysis with homolateral ataxia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "59103002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4241576,
+				"CONCEPT_NAME" : "Congenital syphilitic osteochondritis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "58392004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4242834,
+				"CONCEPT_NAME" : "Parinaud's syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "37991008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4243934,
+				"CONCEPT_NAME" : "Paralysis of tongue",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "38228000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4248158,
+				"CONCEPT_NAME" : "Poisoning by triorthocresyl phosphate",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "7287001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4253192,
+				"CONCEPT_NAME" : "Secondary periodic paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "7409003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4253668,
+				"CONCEPT_NAME" : "Tick paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "74225001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4268601,
+				"CONCEPT_NAME" : "Curled toe paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "63230008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4270614,
+				"CONCEPT_NAME" : "Amyotonia congenita",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "63135006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4270644,
+				"CONCEPT_NAME" : "Cricket paralysis virus",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "63268005",
+				"CONCEPT_CLASS_ID" : "Organism",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4274316,
+				"CONCEPT_NAME" : "Fugu poisoning",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "64815002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4275136,
+				"CONCEPT_NAME" : "Paralysis of diaphragm",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "64228003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4275753,
+				"CONCEPT_NAME" : "Drug-induced myasthenia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "65242001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4276185,
+				"CONCEPT_NAME" : "Pseudorabies",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "6462002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4277456,
+				"CONCEPT_NAME" : "Diplegia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "6481005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4278082,
+				"CONCEPT_NAME" : "Supranuclear paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "66010009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4282298,
+				"CONCEPT_NAME" : "Ixodes rubicundus",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "66248008",
+				"CONCEPT_CLASS_ID" : "Organism",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4288861,
+				"CONCEPT_NAME" : "Paralysis of colon",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "69098002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4300080,
+				"CONCEPT_NAME" : "Complete unilateral paresis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "77291009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4300531,
+				"CONCEPT_NAME" : "Erb-Duchenne paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "78141002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4300753,
+				"CONCEPT_NAME" : "Immunologic tolerance",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "77472006",
+				"CONCEPT_CLASS_ID" : "Observable Entity",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4311957,
+				"CONCEPT_NAME" : "Cholinergic crisis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "8563000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4318400,
+				"CONCEPT_NAME" : "Respiratory tract paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "95430002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4318844,
+				"CONCEPT_NAME" : "Detrusor muscle paresis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "95585001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4318844,
+				"CONCEPT_NAME" : "Detrusor muscle paresis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "95585001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4318979,
+				"CONCEPT_NAME" : "Unilateral facial paresis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "95667004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4319469,
+				"CONCEPT_NAME" : "Congenital flaccid paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "95652003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4333912,
+				"CONCEPT_NAME" : "Abnormal gait due to muscle weakness",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "432559006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4335605,
+				"CONCEPT_NAME" : "Pharmacological paralysis of accommodation",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "232145009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4337446,
+				"CONCEPT_NAME" : "Acute mastoiditis with facial paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "232269003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4339031,
+				"CONCEPT_NAME" : "Horizontal gaze palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "232115006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36676496,
+				"CONCEPT_NAME" : "Distal arthrogryposis type 5D",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "773396009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 36680604,
+				"CONCEPT_NAME" : "COL4A1-related familial vascular leukoencephalopathy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "778060000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37019108,
+				"CONCEPT_NAME" : "Human T-cell lymphotropic virus 1-associated myelopathy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "714279000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37116570,
+				"CONCEPT_NAME" : "Parasympathoparetic pupil",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "733320001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37205047,
+				"CONCEPT_NAME" : "Nerve palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "784289008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37206120,
+				"CONCEPT_NAME" : "Palmoplantar keratoderma, spastic paralysis syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "785725008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37311922,
+				"CONCEPT_NAME" : "Leaden paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "788976000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 37396501,
+				"CONCEPT_NAME" : "Worster Drought syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "716335003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40280060,
+				"CONCEPT_NAME" : "Paralysis of bladder",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "1088008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40283578,
+				"CONCEPT_NAME" : "Deficiency of cholinesterase",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "124415006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40312363,
+				"CONCEPT_NAME" : "Sixth nerve palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "14720007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40312363,
+				"CONCEPT_NAME" : "Sixth nerve palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "14720007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40318855,
+				"CONCEPT_NAME" : "[D]Transient limb paralysis NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "158207000",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40322319,
+				"CONCEPT_NAME" : "Parkinson's disease NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155002003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40322327,
+				"CONCEPT_NAME" : "Writer's cramp-organic",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155009007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40322344,
+				"CONCEPT_NAME" : "Infant cerebral palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155024003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40322348,
+				"CONCEPT_NAME" : "Paralytic syndromes",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155028000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40322782,
+				"CONCEPT_NAME" : "Chronic fatigue syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155062000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40322790,
+				"CONCEPT_NAME" : "Bell's palsy &/or facial palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155070005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40323326,
+				"CONCEPT_NAME" : "Ophthalmoplegia NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "155196009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40345090,
+				"CONCEPT_NAME" : "GPI-general paralysis insane",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "266210001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40351555,
+				"CONCEPT_NAME" : "Chronic fatigue syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "271798008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40351914,
+				"CONCEPT_NAME" : "Writer's cramp -organic",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "267690000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40351917,
+				"CONCEPT_NAME" : "Hereditary spastic paraplegia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "267692008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40351930,
+				"CONCEPT_NAME" : "Bell's palsy &/or facial palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "267703001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40351934,
+				"CONCEPT_NAME" : "Acute infective polyneuritis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "267707000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40351980,
+				"CONCEPT_NAME" : "Divers palsy",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "269425003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40352378,
+				"CONCEPT_NAME" : "Strabismus NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "267745004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40377146,
+				"CONCEPT_NAME" : "Early congenital syphilis with symptoms",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "186832005",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40383843,
+				"CONCEPT_NAME" : "Acute poliomyelitis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "186475007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40387456,
+				"CONCEPT_NAME" : "Chronic progressive external ophthalmoplegia",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "194034008",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40390521,
+				"CONCEPT_NAME" : "Vogt's disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "192853001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40390522,
+				"CONCEPT_NAME" : "Vogt's disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "192854007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40390621,
+				"CONCEPT_NAME" : "Spastic foot",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "192943001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40391099,
+				"CONCEPT_NAME" : "Chronic fatigue syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "193054000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40392763,
+				"CONCEPT_NAME" : "Cerebral palsy, not congenital or infantile, acute",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "195218009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40395430,
+				"CONCEPT_NAME" : "Paralysis of vocal cords &/or larynx",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "195840006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40400057,
+				"CONCEPT_NAME" : "[D]Transient limb paralysis NOS",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "D",
+				"CONCEPT_CODE" : "206831004",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Deleted",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40408900,
+				"CONCEPT_NAME" : "Nonfatal electric current effects",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "212983001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40435769,
+				"CONCEPT_NAME" : "Neurogenic dysfunction of the urinary bladder",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "23201000",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40448447,
+				"CONCEPT_NAME" : "Chronic fatigue syndrome",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "247372003",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40480819,
+				"CONCEPT_NAME" : "Caisson disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "44016006",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40486268,
+				"CONCEPT_NAME" : "Lateral rectus muscle denervation paresis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "46587002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40493620,
+				"CONCEPT_NAME" : "Gallid herpesvirus 2",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "46400001",
+				"CONCEPT_CLASS_ID" : "Organism",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40515146,
+				"CONCEPT_NAME" : "Third cranial nerve paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "30764004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40530357,
+				"CONCEPT_NAME" : "Common peroneal nerve disorder-retired",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "34553007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40572029,
+				"CONCEPT_NAME" : "Moebius congenital oculofacial paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "393607001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40598661,
+				"CONCEPT_NAME" : "Acute poliomyelitis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "54839009",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40602642,
+				"CONCEPT_NAME" : "Lesion of lateral popliteal nerve",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "55740007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40607789,
+				"CONCEPT_NAME" : "Serum cholinesterase defect",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "62793002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40621507,
+				"CONCEPT_NAME" : "Convergence insufficiency",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "65940002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40637155,
+				"CONCEPT_NAME" : "Sixth cranial nerve disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "82373004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 40637155,
+				"CONCEPT_NAME" : "Sixth cranial nerve disease",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "U",
+				"CONCEPT_CODE" : "82373004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Updated",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 43530611,
+				"CONCEPT_NAME" : "Paralytic syndrome of both lower limbs as sequela of stroke",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "102831000119104",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 43530612,
+				"CONCEPT_NAME" : "Paralytic syndrome of all four limbs as sequela of stroke",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "103761000119107",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 43530667,
+				"CONCEPT_NAME" : "History of hemorrhagic stroke with hemiparesis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "140701000119108",
+				"CONCEPT_CLASS_ID" : "Context-dependent",
+				"DOMAIN_ID" : "Observation",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 43530984,
+				"CONCEPT_NAME" : "Femoral nerve paralysis",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "609531002",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 43531639,
+				"CONCEPT_NAME" : "Paralytic syndrome on one side of the body",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "609557004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44826336,
+				"CONCEPT_NAME" : "Acute poliomyelitis with other paralysis, poliovirus type III",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "045.13",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44830921,
+				"CONCEPT_NAME" : "Acute poliomyelitis with other paralysis, poliovirus, unspecified type",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "045.10",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44832074,
+				"CONCEPT_NAME" : "Acute poliomyelitis with other paralysis, poliovirus type I",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "045.11",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44832390,
+				"CONCEPT_NAME" : "Hemiplegia/hemiparesis as late effect of cerebrovascular disease",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "438.2",
+				"CONCEPT_CLASS_ID" : "4-dig nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44833455,
+				"CONCEPT_NAME" : "Myasthenic syndromes in diseases classified elsewhere",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "358.1",
+				"CONCEPT_CLASS_ID" : "4-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44834427,
+				"CONCEPT_NAME" : "Acute poliomyelitis with other paralysis",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "045.1",
+				"CONCEPT_CLASS_ID" : "4-dig nonbill code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 44836774,
+				"CONCEPT_NAME" : "Acute poliomyelitis with other paralysis, poliovirus type II",
+				"VOCABULARY_ID" : "ICD9CM",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "045.12",
+				"CONCEPT_CLASS_ID" : "5-dig billing code",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45506652,
+				"CONCEPT_NAME" : "Pupillary paralysis",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "F4K4900",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45516751,
+				"CONCEPT_NAME" : "Moebius congenital oculofacial paralysis",
+				"VOCABULARY_ID" : "Read",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "F326200",
+				"CONCEPT_CLASS_ID" : "Read",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45586310,
+				"CONCEPT_NAME" : "Myasthenia gravis and other myoneural disorders",
+				"VOCABULARY_ID" : "ICD10",
+				"STANDARD_CONCEPT" : null,
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "G70",
+				"CONCEPT_CLASS_ID" : "ICD10 Hierarchy",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Non-standard"
+			},
+			"includeDescendants" : false,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 45765471,
+				"CONCEPT_NAME" : "Fatty acid hydroxylase associated neurodegeneration",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "702419001",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		}
+	]
+}

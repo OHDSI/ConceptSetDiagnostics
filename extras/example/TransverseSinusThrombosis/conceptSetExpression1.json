@@ -1,0 +1,36 @@
+{
+	"items" : [
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4057329,
+				"CONCEPT_NAME" : "Thrombosis of lateral venous sinus",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "21258007",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		},
+		{
+			"concept" : {
+				"CONCEPT_ID" : 4105338,
+				"CONCEPT_NAME" : "Thrombosis transverse sinus",
+				"VOCABULARY_ID" : "SNOMED",
+				"STANDARD_CONCEPT" : "S",
+				"INVALID_REASON" : "V",
+				"CONCEPT_CODE" : "192761004",
+				"CONCEPT_CLASS_ID" : "Clinical Finding",
+				"DOMAIN_ID" : "Condition",
+				"INVALID_REASON_CAPTION" : "Valid",
+				"STANDARD_CONCEPT_CAPTION" : "Standard"
+			},
+			"includeDescendants" : true,
+			"includeMapped" : false
+		}
+	]
+}
