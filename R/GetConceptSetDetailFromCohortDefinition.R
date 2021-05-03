@@ -22,6 +22,7 @@
 #' @export
 getConceptSetDetailsFromCohortDefinition <-
   function(cohortDefinitionExpression) {
+    
     if ("expression" %in% names(cohortDefinitionExpression)) {
       expression <- cohortDefinitionExpression$expression
     }

@@ -31,6 +31,11 @@ getConceptIdDetails <-
            connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = 'vocabulary') {
+    
+    if (length(conceptIds) == 0) {
+      stop('No concept id provided')
+    }
+    
     sql <-
       SqlRender::readSql(
         sourceFile = system.file("sql", "sql_server", 'GetConceptIdDetails.sql',
