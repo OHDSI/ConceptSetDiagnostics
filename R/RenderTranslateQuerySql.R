@@ -30,7 +30,9 @@ renderTranslateQuerySql <-
       } else {
         stop("No connection or connectionDetails provided.")
       }
-    } else if (methods::is(connection, "Pool")) {
+    }
+    
+    if (methods::is(connection, "Pool")) {
       # Connection pool is used by Shiny app, which always uses PostgreSQL:
       sql <- SqlRender::render(sql, ...)
       sql <- SqlRender::translate(sql, targetDialect = "postgresql")
@@ -46,7 +48,6 @@ renderTranslateQuerySql <-
       }
       return(data %>% dplyr::tibble())
     } else {
-      # note needs dbms
       if (is.null(attr(connection, "dbms"))) {
         stop("dbms not provided. Unable to translate query.")
       }

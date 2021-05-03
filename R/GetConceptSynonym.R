@@ -31,6 +31,7 @@ getConceptSynonym <-
            connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = 'vocabulary') {
+    
     if (length(conceptIds) == 0) {
       stop('No concept id provided')
     }
