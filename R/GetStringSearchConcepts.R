@@ -32,11 +32,12 @@ getStringSearchConcepts <-
   function(searchString,
            vocabularyDatabaseSchema = 'vocabulary',
            connection = NULL,
-           connectionDetails = NULL) {
+           connectionDetails = NULL,
+           conceptPrevalenceSchema = 'concept_prevalence') {
     searchString <-
       stringr::str_squish(tolower(gsub("[^a-zA-Z0-9 ,]", " ", searchString)))
     
-    if (attr(connection, "dbms") == 'postgresql' ||
+    if ( (!is.null(connection) && attr(connection, "dbms") == 'postgresql') ||
         connectionDetails$dbms == 'postgresql' ||
         methods::is(connection, "Pool")) {
       # Note this function is designed for postgres with TSV enabled.
@@ -101,6 +102,7 @@ getStringSearchConcepts <-
           connectionDetails = connectionDetails,
           sql = sql,
           vocabulary_database_schema = vocabularyDatabaseSchema,
+          concept_prevalence_schema = conceptPrevalenceSchema,
           search_string_tsv = searchStringTsv,
           search_string_reverse_tsv = searchStringReverseTsv,
           search_string = searchString,
@@ -123,6 +125,7 @@ getStringSearchConcepts <-
           connectionDetails = connectionDetails,
           sql = sql,
           vocabulary_database_schema = vocabularyDatabaseSchema,
+          concept_prevalence_schema = conceptPrevalenceSchema,
           search_string = searchString,
           snakeCaseToCamelCase = TRUE
         )

@@ -29,14 +29,17 @@ getDeepConceptRelationship <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
-           vocabularyDatabaseSchema = 'vocabulary') {
+           vocabularyDatabaseSchema = 'vocabulary',
+           conceptPrevalenceSchema = 'concept_prevalence') {
     if (length(conceptIds) == 0) {
       stop('No concept id provided')
     }
     
     conceptAncestor <-
       ConceptSetDiagnostics::getConceptAncestor(conceptIds = conceptIds,
-                                                connection = connection) %>%
+                                                connection = connection,
+                                                connectionDetails = connectionDetails,
+                                                vocabularyDatabaseSchema = vocabularyDatabaseSchema) %>%
       dplyr::mutate(
         relationshipDirection = dplyr::if_else(
           condition = .data$ancestorConceptId == conceptIds,
@@ -58,7 +61,8 @@ getDeepConceptRelationship <-
     conceptRelationship <-
       ConceptSetDiagnostics::getConceptRelationship(
         conceptIds = conceptAncestor$conceptId %>% unique(),
-        connection = connection
+        connection = connection,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
     
     conceptRelationship <- dplyr::bind_rows(
@@ -85,6 +89,10 @@ getDeepConceptRelationship <-
         .data$conceptId
       )
     
+    if (nrow(conceptRelationship) == 0) {
+      return(NULL)
+    }
+    
     conceptIdDetails <-
       ConceptSetDiagnostics::getConceptIdDetails(
         conceptIds = c(
@@ -92,7 +100,9 @@ getDeepConceptRelationship <-
           conceptRelationship$ancestorPathConceptId,
           conceptRelationship$conceptId
         ) %>% unique(),
-        connection = connection
+        connection = connection,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        conceptPrevalenceSchema = conceptPrevalenceSchema
       )
     
     data <- list(conceptRelationship = conceptRelationship,
