@@ -1,0 +1,901 @@
+"source_id","source_name","concept_id","concept_name","cnt"
+2106871,"transplant of lung",4337138,"Transplant of lung",8455
+2109141,"appendectomy",4198190,"Appendectomy",1163704
+2109141,"appendectomy",4323208,"History of appendectomy",1266477
+2109142,"appendectomy",4198190,"Appendectomy",1163704
+2109142,"appendectomy",4323208,"History of appendectomy",1266477
+2109368,"cholecystectomy",4163971,"Laparoscopic cholecystectomy",5252752
+2109368,"cholecystectomy",4242997,"Cholecystectomy",1867141
+2110011,"vasectomy",4330583,"Vasectomy",355840
+2110195,"removal of intrauterine device",4238715,"Removal of intrauterine device",1907258
+2211443,"x-ray of clavicle",4058899,"Plain X-ray of clavicle",91230
+2212358,"glucose tolerance test",4012477,"Glucose tolerance test",831238
+2212320,"estradiol",1548195,"Estradiol",1495503
+2212320,"estradiol",1549786,"Ethinyl Estradiol",127872
+2212320,"estradiol",19127904,"{24 (drospirenone 3 MG / Ethinyl Estradiol 0.02 MG Oral Tablet) / 4 (Inert Ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day]",18867036
+2212320,"estradiol",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+2212320,"estradiol",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+2212320,"estradiol",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+2212320,"estradiol",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+2212320,"estradiol",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+2212320,"estradiol",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+2212320,"estradiol",43012433,"21 DAY Ethinyl Estradiol 0.000625 MG/HR / Etonogestrel 0.005 MG/HR Vaginal Ring [NuvaRing]",56915226
+2212110,"cyclosporine",19010482,"Cyclosporine",115459
+2212110,"cyclosporine",19134077,"cyclosporine, modified 100 MG [Neoral]",163019
+2212178,"acetaminophen",1125315,"Acetaminophen",46380782
+2212178,"acetaminophen",1127078,"Acetaminophen 160 MG Oral Tablet",197947
+2212178,"acetaminophen",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+2212178,"acetaminophen",19133768,"Acetaminophen 750 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",53234446
+2212178,"acetaminophen",40162522,"Acetaminophen 325 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",132651065
+2212178,"acetaminophen",40229134,"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",30190
+2212178,"acetaminophen",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+2212538,"progesterone",1500211,"Medroxyprogesterone",140080
+2212538,"progesterone",40224805,"1 ML medroxyprogesterone acetate 150 MG/ML Injection",12589041
+2213495,"toxoid",40213180,"meningococcal polysaccharide (groups A, C, Y and W-135) diphtheria toxoid conjugate vaccine (MCV4P)",3518897
+2213495,"toxoid",40213227,"tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use (5 Lf of tetanus toxoid and 2 Lf of diphtheria toxoid)",8594111
+2213495,"toxoid",40213230,"tetanus toxoid, reduced diphtheria toxoid, and acellular pertussis vaccine, adsorbed",6759201
+2213495,"toxoid",40213281,"diphtheria, tetanus toxoids and acellular pertussis vaccine",139205843
+2213495,"vaccine",40213160,"poliovirus vaccine, inactivated",33619511
+2213495,"vaccine",40213180,"meningococcal polysaccharide (groups A, C, Y and W-135) diphtheria toxoid conjugate vaccine (MCV4P)",3518897
+2213495,"vaccine",40213198,"pneumococcal conjugate vaccine, 13 valent",95766963
+2213495,"vaccine",40213201,"pneumococcal polysaccharide vaccine, 23 valent",4189907
+2213495,"vaccine",40213216,"rotavirus, live, monovalent vaccine",8788016
+2213495,"vaccine",40213230,"tetanus toxoid, reduced diphtheria toxoid, and acellular pertussis vaccine, adsorbed",6759201
+2213495,"vaccine",40213251,"varicella virus vaccine",57049708
+2213495,"vaccine",40213260,"zoster vaccine, live",1937031
+2213495,"vaccine",40213281,"diphtheria, tetanus toxoids and acellular pertussis vaccine",139205843
+2213495,"vaccine",40213296,"hepatitis A vaccine, adult dosage",9340193
+2213495,"vaccine",40213299,"hepatitis A vaccine, pediatric/adolescent dosage, 2 dose schedule",65892591
+2213495,"vaccine",40213306,"hepatitis B vaccine, adult dosage",15366017
+2213495,"vaccine",40213314,"Haemophilus influenzae type b vaccine, PRP-OMP conjugate",17000066
+2213495,"vaccine",40213320,"human papilloma virus vaccine, quadrivalent",2010508
+46257464,"oxycodone",1124957,"Oxycodone",1273684
+46257464,"oxycodone",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+46257742,"methylphenidate",705944,"Methylphenidate",55877
+46257742,"methylphenidate",40236446,"Methylphenidate Hydrochloride 20 MG Oral Tablet",13447155
+46257656,"fentanyl",1154029,"Fentanyl",4806343
+3017983,"review of systems",4187458,"Review of systems",3228
+3019044,"history of hospitalization",3051031,"History of Hospitalizations+Outpatient visits Narrative",29534
+40761359,"myocardial infarction",4163874,"History of myocardial infarction",273743
+40761359,"myocardial infarction",4329847,"Myocardial infarction",727024
+40761369,"atrial fibrillation",313217,"Atrial fibrillation",401301046
+3020278,"review of systems",4187458,"Review of systems",3228
+3021987,"procedure",4163951,"Electrocardiographic procedure",53498529
+3025125,"penicillin v [susceptibility]",19133873,"Penicillin V Potassium 250 MG Oral Tablet",4802843
+3025125,"penicillin v [susceptibility]",19133905,"Penicillin V Potassium 500 MG Oral Tablet",63170593
+40768618,"day [phenx]",43012433,"21 DAY Ethinyl Estradiol 0.000625 MG/HR / Etonogestrel 0.005 MG/HR Vaginal Ring [NuvaRing]",56915226
+4029571,"cystectomy",4163971,"Laparoscopic cholecystectomy",5252752
+4029571,"cystectomy",4242997,"Cholecystectomy",1867141
+4040976,"behavioral therapy",4043071,"Cognitive and behavioral therapy",6688
+377091,"seizure",4029498,"Seizure disorder",1878946
+73571,"pathological fracture",40480160,"Pathological fracture due to osteoporosis",1050286
+443419,"laceration",4109685,"Laceration of foot",1208460
+443419,"laceration",4113008,"Laceration of hand",3553680
+443419,"laceration",4156265,"Facial laceration",43555
+443419,"laceration",4152936,"Laceration of thigh",428685
+443419,"laceration",4155034,"Laceration of forearm",2080186
+75053,"fracture",4142905,"Fracture of rib",526303
+75053,"fracture",4048695,"Fracture of vertebral column without spinal cord injury",664
+75053,"fracture",4059173,"Fracture of ankle",163287
+75053,"fracture",4066995,"Fracture of vertebral column with spinal cord injury",6776
+75053,"fracture",4230399,"Closed fracture of hip",17244
+75053,"fracture",4237458,"Fracture of clavicle",988153
+75053,"fracture",4278672,"Fracture of forearm",274338
+75053,"fracture",40480160,"Pathological fracture due to osteoporosis",1050286
+4042150,"removal",4238715,"Removal of intrauterine device",1907258
+443943,"zoster",40213260,"zoster vaccine, live",1937031
+4053842,"single",4337611,"Single lung transplant",4816
+432250,"infection",433125,"Infection due to Staphylococcus aureus",22973
+432250,"infection",4056621,"Recurrent urinary tract infection",331460
+432250,"infection",4116491,"Escherichia coli urinary tract infection",15612
+432795,"injury",4001336,"Concussion injury of brain",5186615
+432795,"injury",4048695,"Fracture of vertebral column without spinal cord injury",664
+432795,"injury",4066995,"Fracture of vertebral column with spinal cord injury",6776
+432795,"injury",4132546,"Traumatic brain injury",182007
+432795,"injury",4146173,"Injury of tendon of the rotator cuff of shoulder",114785
+432795,"injury",4168004,"Burn injury",2022
+432795,"injury",4218389,"Whiplash injury to neck",46625
+432795,"injury",40479422,"Injury of medial collateral ligament of knee",3331
+432795,"injury",40479768,"Injury of anterior cruciate ligament",4341
+80502,"osteoporosis",40480160,"Pathological fracture due to osteoporosis",1050286
+81902,"urinary tract infection",4056621,"Recurrent urinary tract infection",331460
+81902,"urinary tract infection",4116491,"Escherichia coli urinary tract infection",15612
+433856,"fracture of hip",4230399,"Closed fracture of hip",17244
+434272,"varicella",40213251,"varicella virus vaccine",57049708
+434568,"diphtheria",40213180,"meningococcal polysaccharide (groups A, C, Y and W-135) diphtheria toxoid conjugate vaccine (MCV4P)",3518897
+434568,"diphtheria",40213227,"tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use (5 Lf of tetanus toxoid and 2 Lf of diphtheria toxoid)",8594111
+434568,"diphtheria",40213230,"tetanus toxoid, reduced diphtheria toxoid, and acellular pertussis vaccine, adsorbed",6759201
+434568,"diphtheria",40213281,"diphtheria, tetanus toxoids and acellular pertussis vaccine",139205843
+4056125,"sweat test",4314290,"Cystic fibrosis sweat test",14157
+4056681,"plain x-ray",4058899,"Plain X-ray of clavicle",91230
+4056681,"radiograph",4024289,"Radiography of ankle",130338
+4056681,"radiograph",4047491,"Radiography of humerus",12960
+4056681,"radiograph",4243062,"Radiography of wrist",202462
+435740,"tetanus",40213227,"tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use (5 Lf of tetanus toxoid and 2 Lf of diphtheria toxoid)",8594111
+435740,"tetanus",40213230,"tetanus toxoid, reduced diphtheria toxoid, and acellular pertussis vaccine, adsorbed",6759201
+435740,"tetanus",40213281,"diphtheria, tetanus toxoids and acellular pertussis vaccine",139205843
+4021230,"release",19074841,"12 HR Cefaclor 500 MG Extended Release Oral Tablet",22418
+4021230,"release",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+4021230,"release",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+192671,"gastrointestinal hemorrhage",35208414,"Gastrointestinal hemorrhage, unspecified",15344090
+192956,"cholecystitis",198809,"Acute cholecystitis",6577906
+193253,"nephritis",198199,"Pyelonephritis",8413469
+194990,"hepatitis",40213296,"hepatitis A vaccine, adult dosage",9340193
+194990,"hepatitis",40213299,"hepatitis A vaccine, pediatric/adolescent dosage, 2 dose schedule",65892591
+194990,"hepatitis",40213306,"hepatitis B vaccine, adult dosage",15366017
+195588,"cystitis",198809,"Acute cholecystitis",6577906
+437312,"hemorrhage",192671,"Gastrointestinal hemorrhage",44246108
+437312,"hemorrhage",35208414,"Gastrointestinal hemorrhage, unspecified",15344090
+4035987,"viral pharyngitis",4112343,"Acute viral pharyngitis",83241
+4048365,"measurement",4052083,"Measurement of respiratory function",90541126
+4024715,"consciousness",375671,"Concussion with loss of consciousness",3813043
+4024715,"consciousness",378001,"Concussion with no loss of consciousness",9642669
+256451,"bronchitis",258780,"Emphysematous bronchitis",13568821
+256451,"bronchitis",260139,"Acute bronchitis",199332496
+257007,"allergic rhinitis",4048171,"Perennial allergic rhinitis with seasonal variation",22053
+257007,"allergic rhinitis",4280726,"Seasonal allergic rhinitis",24917852
+257007,"allergic rhinitis",40486433,"Perennial allergic rhinitis",12700
+257778,"pertussis",40213230,"tetanus toxoid, reduced diphtheria toxoid, and acellular pertussis vaccine, adsorbed",6759201
+257778,"pertussis",40213281,"diphtheria, tetanus toxoids and acellular pertussis vaccine",139205843
+259153,"sore throat",28060,"Streptococcal sore throat",74359083
+440279,"accident",381316,"Cerebrovascular accident",1637724
+316524,"hematocrit",3009542,"Hematocrit",340785110
+317009,"asthma",4051466,"Childhood asthma",22186
+317009,"asthma",4062501,"Asthma screening",13099
+440921,"trauma",4132546,"Traumatic brain injury",182007
+321042,"cardiac arrest",4324181,"History of cardiac arrest",5657
+441267,"cystic fibrosis",4314290,"Cystic fibrosis sweat test",14157
+372448,"loss of consciousness",375671,"Concussion with loss of consciousness",3813043
+372448,"loss of consciousness",378001,"Concussion with no loss of consciousness",9642669
+4077953,"therapy",4043071,"Cognitive and behavioral therapy",6688
+4065371,"cephalogram",4181917,"Electroencephalogram",1520323
+4098197,"allergy screening",4191853,"Allergy screening test",68202
+4119343,"v status",40758406,"HIV status",37363
+4081877,"cephalogram",4181917,"Electroencephalogram",1520323
+4149353,"attention deficit disorder",440086,"Child attention deficit disorder",214496
+4147571,"follow-up",4230209,"Psychiatric follow-up",64699
+4180248,"rehabilitation",4035793,"Pulmonary rehabilitation",34656
+4151358,"hematocrit",3009542,"Hematocrit",340785110
+4151924,"replacement",4186930,"Replacement of intrauterine contraceptive device",3755
+4226263,"pharyngitis",4112343,"Acute viral pharyngitis",83241
+4226399,"fibrillation",313217,"Atrial fibrillation",401301046
+4242997,"cholecystectomy",4163971,"Laparoscopic cholecystectomy",5252752
+4172515,"therapy",4043071,"Cognitive and behavioral therapy",6688
+4243624,"tolerance test",4012477,"Glucose tolerance test",831238
+4183452,"otitis",372328,"Otitis media",146847776
+4229451,"bypass",4336464,"Coronary artery bypass graft",564514
+4198190,"appendectomy",4323208,"History of appendectomy",1266477
+4215793,"insertion",4059978,"Insertion of subcutaneous contraceptive",1318398
+4215793,"insertion",4275113,"Insertion of intrauterine contraceptive device",4362146
+4215793,"placement",4186930,"Replacement of intrauterine contraceptive device",3755
+4174520,"fracture of vertebra",4048695,"Fracture of vertebral column without spinal cord injury",664
+4174520,"fracture of vertebra",4066995,"Fracture of vertebral column with spinal cord injury",6776
+4174520,"fracture of vertebral column",4048695,"Fracture of vertebral column without spinal cord injury",664
+4174520,"fracture of vertebral column",4066995,"Fracture of vertebral column with spinal cord injury",6776
+4168166,"bypass graft",4336464,"Coronary artery bypass graft",564514
+4158691,"replacement",4186930,"Replacement of intrauterine contraceptive device",3755
+4189544,"culture",4015189,"Microbial culture of sputum",301464
+4189544,"culture",4024958,"Throat culture",3384590
+4189544,"microbial culture",4015189,"Microbial culture of sputum",301464
+4235863,"spinal cord injury",4048695,"Fracture of vertebral column without spinal cord injury",664
+4235863,"spinal cord injury",4066995,"Fracture of vertebral column with spinal cord injury",6776
+4203711,"follow-up",4230209,"Psychiatric follow-up",64699
+4236340,"angiodysplasia",4310024,"Angiodysplasia of stomach",1083216
+4283893,"sinusitis",257012,"Chronic sinusitis",101416333
+4283893,"sinusitis",4294548,"Acute bacterial sinusitis",91247
+4283893,"sinusitis",40481087,"Viral sinusitis",9544
+4286638,"childhood",4051466,"Childhood asthma",22186
+4223947,"hepatitis a",40213296,"hepatitis A vaccine, adult dosage",9340193
+4223947,"hepatitis a",40213299,"hepatitis A vaccine, pediatric/adolescent dosage, 2 dose schedule",65892591
+4241075,"injection",4295880,"Intramuscular injection",1403
+4241075,"injection",35605482,"2 ML Ondansetron 2 MG/ML Injection",73782873
+4241075,"injection",35605858,"1 ML Morphine Sulfate 5 MG/ML Injection",341759
+4241075,"injection",40220386,"100 ML Propofol 10 MG/ML Injection",363804
+4241075,"injection",40220960,"alteplase 100 MG Injection",49907
+4241075,"injection",40224805,"1 ML medroxyprogesterone acetate 150 MG/ML Injection",12589041
+4241075,"injection",40243436,"1 ML Atropine Sulfate 1 MG/ML Injection",67002
+4241075,"injection",46275444,"Piperacillin 4000 MG / tazobactam 500 MG Injection",161269
+4241075,"injection",46275916,"1 ML Epinephrine 1 MG/ML Injection",2973880
+4266367,"influenza",40213154,"Influenza, seasonal, injectable, preservative free",10529429
+4266367,"influenza",40213314,"Haemophilus influenzae type b vaccine, PRP-OMP conjugate",17000066
+4267147,"platelet count",3007461,"Platelet count",243953918
+4291025,"arthritis",80180,"Osteoarthritis",153634099
+4291025,"arthritis",80809,"Rheumatoid arthritis",99483359
+4268870,"e test",4012477,"Glucose tolerance test",831238
+4320791,"rhinitis",4048171,"Perennial allergic rhinitis with seasonal variation",22053
+4320791,"rhinitis",4280726,"Seasonal allergic rhinitis",24917852
+4320791,"rhinitis",40486433,"Perennial allergic rhinitis",12700
+40589905,"allergic reaction",4084167,"Acute allergic reaction",25271
+4344040,"injury of tendon",4146173,"Injury of tendon of the rotator cuff of shoulder",114785
+4321844,"ligation",4117038,"Bilateral tubal ligation",42223
+4322976,"procedure",4163951,"Electrocardiographic procedure",53498529
+4307254,"closed fracture",4230399,"Closed fracture of hip",17244
+4272488,"colitis",81893,"Ulcerative colitis",17955719
+4273307,"platelet count",3007461,"Platelet count",243953918
+4353741,"cardioversion",4078793,"Direct current cardioversion",6809
+4274025,"disease",378419,"Alzheimer's disease",62054199
+4274025,"disease",1569708,"Other diseases of digestive system",903
+4274025,"disease",4266809,"Diverticular disease",12672085
+4274025,"diseases",1569708,"Other diseases of digestive system",903
+4274025,"disorder",440086,"Child attention deficit disorder",214496
+4274025,"disorder",4029498,"Seizure disorder",1878946
+37397180,"allergy to animal",439406,"Allergy to animal dander",151243
+4329847,"myocardial infarct",4163874,"History of myocardial infarction",273743
+4329847,"myocardial infarction",4163874,"History of myocardial infarction",273743
+4275431,"ablation",4057420,"Catheter ablation of tissue of heart",20029
+4298948,"tubal ligation",4117038,"Bilateral tubal ligation",42223
+35624626,"allergy to pea",4240902,"Allergy to peanuts",1728478
+4279903,"ectomy",4163971,"Laparoscopic cholecystectomy",5252752
+4279903,"ectomy",4198190,"Appendectomy",1163704
+4279903,"ectomy",4242997,"Cholecystectomy",1867141
+4279903,"ectomy",4323208,"History of appendectomy",1266477
+4279903,"ectomy",4330583,"Vasectomy",355840
+4281232,"hepatitis b",40213306,"hepatitis B vaccine, adult dosage",15366017
+43530807,"allergy",4102123,"Latex allergy",1085584
+43530807,"allergy",4139681,"Allergy to dairy product",1288345
+4313889,"endoscopy",4010253,"Nasal sinus endoscopy",1885
+40486433,"perennial allergic rhinitis",4048171,"Perennial allergic rhinitis with seasonal variation",22053
+43530807,"allergy",433644,"Shellfish allergy",183808
+43530807,"allergy",438614,"Allergy to nut",97900
+43530807,"allergy",439406,"Allergy to animal dander",151243
+43530807,"allergy",442116,"Allergy to eggs",783661
+43530807,"allergy",4048169,"Allergy to house dust mite",89945
+43530807,"allergy",4169137,"Allergy to wheat",21204
+43530807,"allergy",4174876,"Allergy to bee venom",44367
+43530807,"allergy",4191853,"Allergy screening test",68202
+43530807,"allergy",4219399,"Allergy to fish",48709
+43530807,"allergy",4240902,"Allergy to peanuts",1728478
+43530807,"allergy",4302207,"Allergy to grass pollen",14018
+43530807,"allergy",4304110,"Allergy to mold",199259
+43530807,"allergy",4306014,"Allergy to tree pollen",61628
+43530807,"allergy",37017711,"Allergy to soy",42652
+45766333,"bacterial sinusitis",4294548,"Acute bacterial sinusitis",91247
+45766714,"dermatitis",133834,"Atopic dermatitis",48717146
+45766714,"dermatitis",134438,"Contact dermatitis",98842199
+46273183,"intestinal hemorrhage",192671,"Gastrointestinal hemorrhage",44246108
+46273183,"intestinal hemorrhage",35208414,"Gastrointestinal hemorrhage, unspecified",15344090
+46273955,"papilloma",40213320,"human papilloma virus vaccine, quadrivalent",2010508
+19038968,"simvastatin 20 mg [zocor]",1539411,"Simvastatin 20 MG Oral Tablet",358709730
+19079968,"acetaminophen 325 mg [ridenol]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+1332418,"amlodipine",1332419,"Amlodipine 5 MG Oral Tablet",409643212
+1332450,"amlodipine 5 mg",1332419,"Amlodipine 5 MG Oral Tablet",409643212
+701322,"memantine",40222846,"Memantine hydrochloride 2 MG/ML Oral Solution",29796
+19080314,"amlodipine 5 mg [norvasc]",1332419,"Amlodipine 5 MG Oral Tablet",409643212
+19039298,"sevoflurane",19023398,"sevoflurane 1000 MG/ML Inhalation Solution",336824
+19039300,"sevoflurane 1000 mg/ml",19023398,"sevoflurane 1000 MG/ML Inhalation Solution",336824
+19129851,"ibuprofen 100 mg [motrin]",19019979,"Ibuprofen 100 MG Oral Tablet",559760
+19080591,"hydrocortisone 10 mg/ml [scalp-cort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19080833,"amoxicillin 250 mg [senox]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+705944,"methylphenidate",40236446,"Methylphenidate Hydrochloride 20 MG Oral Tablet",13447155
+708298,"midazolam",19078924,"Midazolam 1 MG/ML Injectable Solution",26822188
+708336,"midazolam 1 mg/ml",19078924,"Midazolam 1 MG/ML Injectable Solution",26822188
+1343916,"epinephrine",1594382,"NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",2725822
+1343916,"epinephrine",46275916,"1 ML Epinephrine 1 MG/ML Injection",2973880
+1344056,"epinephrine 1 mg/ml",1594382,"NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",2725822
+1344056,"epinephrine 1 mg/ml",46275916,"1 ML Epinephrine 1 MG/ML Injection",2973880
+19081053,"celecoxib 200 mg",1118088,"celecoxib 200 MG Oral Capsule [Celebrex]",66852874
+19081053,"celecoxib 200 mg",44923712,"celecoxib 200 MG Oral Capsule [Celebrex]",58536451
+1347450,"alteplase",40220960,"alteplase 100 MG Injection",49907
+19003953,"rocuronium",42707627,"rocuronium bromide 10 MG/ML Injectable Solution",5561471
+715997,"donepezil",40223768,"Donepezil hydrochloride 10 MG Oral Tablet",47751334
+19081460,"hydrocortisone 10 mg",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19081471,"hydrocortisone 10 mg/ml",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19081494,"ibuprofen 100 mg",19019979,"Ibuprofen 100 MG Oral Tablet",559760
+19081496,"ibuprofen 200 mg",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19081533,"aspirin 81 mg [st. joseph aspirin]",19059056,"Aspirin 81 MG Oral Tablet",21567073
+19081616,"lorazepam 2 mg",19057271,"Lorazepam 2 MG/ML Injectable Solution",737520
+723013,"diazepam",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+723013,"diazepam",19115351,"Diazepam 5 MG [Valium]",8386643
+723162,"diazepam 5 mg/ml",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+723164,"diazepam 5 mg",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+723164,"diazepam 5 mg",19115351,"Diazepam 5 MG [Valium]",8386643
+19081738,"norgestimate 0.25 mg",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+19081738,"norgestimate 0.25 mg",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+19082148,"acetaminophen 325 mg [t-painol]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+19082206,"ibuprofen 200 mg [tab-profen]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19082430,"naproxen sodium 220 mg [midol extended relief]",1115171,"Naproxen sodium 220 MG Oral Tablet",3519237
+19005824,"hydrocortisone 10 mg/ml [proctozone-h]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19005834,"amoxicillin 250 mg [wymox]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19005835,"amoxicillin 500 mg [wymox]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+738818,"doxylamine",40229134,"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",30190
+740275,"carbamazepine",19074679,"Carbamazepine 20 MG/ML Oral Suspension [Tegretol]",143625
+740348,"carbamazepine 20 mg/ml",19074679,"Carbamazepine 20 MG/ML Oral Suspension [Tegretol]",143625
+19042337,"acetaminophen 325 mg [tylenol]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+742185,"atomoxetine",19123231,"atomoxetine 100 MG Oral Capsule",270261
+19042587,"diazepam 5 mg/ml [valium]",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+19042590,"lorazepam 2 mg/ml [ativan]",19057271,"Lorazepam 2 MG/ML Injectable Solution",737520
+19042619,"ibuprofen 200 mg [motrin]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19083542,"amoxicillin 250 mg [trimox]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19083543,"amoxicillin 500 mg [trimox]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+753626,"propofol",40220386,"100 ML Propofol 10 MG/ML Injection",363804
+753630,"propofol 10 mg/ml",40220386,"100 ML Propofol 10 MG/ML Injection",363804
+19131646,"levonorgestrel 0.000833 mg/hr",19132304,"Levonorgestrel 0.000833 MG/HR Intrauterine System [Mirena]",3149016
+19131647,"levonorgestrel 0.000833 mg/hr intrauterine system",19132304,"Levonorgestrel 0.000833 MG/HR Intrauterine System [Mirena]",3149016
+19043320,"hydrocortisone 10 mg/ml [dermacort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+757627,"galantamine",19077572,"Galantamine 4 MG Oral Tablet",474560
+19043349,"hydrocortisone 10 mg/ml [hytone]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19043372,"hydrocortisone 10 mg/ml [nutracort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19043374,"hydrocortisone 10 mg/ml [proctocort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+1356227,"sodium chloride 9 mg/ml [broncho saline]",19079524,"Sodium Chloride 9 MG/ML Injectable Solution",11432853
+19084040,"ferrous sulfate 325 mg",19077344,"ferrous sulfate 325 MG Oral Tablet",65494574
+19084050,"acetaminophen 325 mg [tycolene]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+19084136,"acetaminophen 325 mg [tylophen]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+782043,"isoflurane",782047,"Isoflurane 999 MG/ML Inhalation Solution",5142
+782046,"isoflurane 999 mg/ml",782047,"Isoflurane 999 MG/ML Inhalation Solution",5142
+19132303,"levonorgestrel 0.000833 mg/hr [mirena]",19132304,"Levonorgestrel 0.000833 MG/HR Intrauterine System [Mirena]",3149016
+19109535,"dienogest 2 mg",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+1361711,"nitroglycerin",19126352,"Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",973006
+791967,"lorazepam",19057271,"Lorazepam 2 MG/ML Injectable Solution",737520
+792033,"lorazepam 2 mg/ml",19057271,"Lorazepam 2 MG/ML Injectable Solution",737520
+1362236,"nitroglycerin 0.4 mg",19126352,"Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",973006
+19084980,"galantamine 4 mg",19077572,"Galantamine 4 MG Oral Tablet",474560
+792367,"oxycodone hydrochloride 5 mg [roxybond]",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+19044572,"tacrine 10 mg [cognex]",836659,"Tacrine 10 MG Oral Capsule",1300
+19007721,"thyrotropin",3009201,"Thyrotropin [Units/volume] in Serum or Plasma",23968293
+19085458,"tacrine 10 mg",836659,"Tacrine 10 MG Oral Capsule",1300
+19044903,"naproxen 500 mg [naprosyn]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+792684,"acetaminophen 325 mg [dolofin]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+19086049,"nitroglycerin 0.4 mg/actuat",19126352,"Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",973006
+792838,"hydrocortisone 10 mg/ml [cortizone]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19045281,"amoxicillin 500 mg [amoxil]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19045282,"amoxicillin 250 mg [amoxil]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+793007,"epinephrine 1 mg/ml [symjepi]",46275916,"1 ML Epinephrine 1 MG/ML Injection",2973880
+19133767,"hydrocodone bitartrate 7.5 mg",19133768,"Acetaminophen 750 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",53234446
+19133767,"hydrocodone bitartrate 7.5 mg",40162522,"Acetaminophen 325 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",132651065
+19133872,"penicillin v potassium 250 mg",19133873,"Penicillin V Potassium 250 MG Oral Tablet",4802843
+19133876,"penicillin v potassium 250 mg [beepen-vk]",19133873,"Penicillin V Potassium 250 MG Oral Tablet",4802843
+19046180,"carbon dioxide",3015632,"Carbon dioxide serum/plasma",127076567
+19133882,"penicillin v potassium 250 mg [pen-v]",19133873,"Penicillin V Potassium 250 MG Oral Tablet",4802843
+19133884,"penicillin v potassium 250 mg [pen-vee k]",19133873,"Penicillin V Potassium 250 MG Oral Tablet",4802843
+793135,"levonorgestrel 0.000813 mg/hr",46221626,"Levonorgestrel 0.000813 MG/HR Intrauterine System [Liletta]",39068
+793136,"levonorgestrel 0.000813 mg/hr [liletta]",46221626,"Levonorgestrel 0.000813 MG/HR Intrauterine System [Liletta]",39068
+19133886,"penicillin v potassium 250 mg [truxcillin-vk]",19133873,"Penicillin V Potassium 250 MG Oral Tablet",4802843
+1396131,"ferrous sulfate",19077344,"ferrous sulfate 325 MG Oral Tablet",65494574
+19133904,"penicillin v potassium 500 mg",19133905,"Penicillin V Potassium 500 MG Oral Tablet",63170593
+19133908,"penicillin v potassium 500 mg [beepen-vk]",19133905,"Penicillin V Potassium 500 MG Oral Tablet",63170593
+19133912,"penicillin v potassium 500 mg [pen-v]",19133905,"Penicillin V Potassium 500 MG Oral Tablet",63170593
+19087452,"prednisone 5 mg [orasone]",1551192,"Prednisone 5 MG Oral Tablet",81732548
+1500211,"medroxyprogesterone",40224805,"1 ML medroxyprogesterone acetate 150 MG/ML Injection",12589041
+19047285,"loratadine 5 mg [claritin]",19125062,"Loratadine 5 MG Chewable Tablet",145123
+1501700,"levothyroxine",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+19047471,"cefaclor 250 mg [ceclor]",19074843,"Cefaclor 250 MG Oral Capsule",707318
+1503184,"mestranol",19128065,"{7 (Inert Ingredients 1 MG Oral Tablet) / 21 (Mestranol 0.05 MG / Norethindrone 1 MG Oral Tablet) } Pack [Norinyl 1+50 28 Day]",23641
+1503242,"mestranol 0.05 mg",19128065,"{7 (Inert Ingredients 1 MG Oral Tablet) / 21 (Mestranol 0.05 MG / Norethindrone 1 MG Oral Tablet) } Pack [Norinyl 1+50 28 Day]",23641
+19047676,"loratadine 10 mg [tavist non-sedating]",1107882,"Loratadine 10 MG Oral Tablet",124393160
+1507705,"cortisone",975125,"Hydrocortisone",1940292
+1507705,"cortisone",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+1507733,"cortisone 10 mg",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19010482,"cyclosporine",19134077,"cyclosporine, modified 100 MG [Neoral]",163019
+1510443,"ibuprofen 200 mg [dragon tabs]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19010530,"cyclosporine, modified 100 mg",19134077,"cyclosporine, modified 100 MG [Neoral]",163019
+1510504,"doxycycline monohydrate 100 mg [okebo]",46233710,"Doxycycline Monohydrate 100 MG Oral Tablet",8000486
+19049024,"potassium",3023103,"Potassium serum/plasma",143669979
+19049024,"potassium",19133873,"Penicillin V Potassium 250 MG Oral Tablet",4802843
+19049024,"potassium",19133905,"Penicillin V Potassium 500 MG Oral Tablet",63170593
+836654,"tacrine",836659,"Tacrine 10 MG Oral Capsule",1300
+19135710,"naproxen sodium 220 mg [wal-proxen]",1115171,"Naproxen sodium 220 MG Oral Tablet",3519237
+19089062,"prednisone 5 mg [deltasone]",1551192,"Prednisone 5 MG Oral Tablet",81732548
+19011097,"propionate",40169216,"120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",7055
+19011097,"propionate",40169281,"60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler",1827
+19136048,"sodium",967823,"Sodium Chloride",400895878
+19136048,"sodium",1115171,"Naproxen sodium 220 MG Oral Tablet",3519237
+19136048,"sodium",3019550,"Sodium serum/plasma",137715448
+19136048,"sodium",19079524,"Sodium Chloride 9 MG/ML Injectable Solution",11432853
+19136048,"sodium",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+19136048,"sodium",40163554,"Warfarin Sodium 5 MG Oral Tablet",114713958
+19136048,"sodium",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+19136048,"sodium",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+1512674,"drospirenone",19127904,"{24 (drospirenone 3 MG / Ethinyl Estradiol 0.02 MG Oral Tablet) / 4 (Inert Ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day]",18867036
+1512675,"drospirenone 3 mg",19127904,"{24 (drospirenone 3 MG / Ethinyl Estradiol 0.02 MG Oral Tablet) / 4 (Inert Ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day]",18867036
+1515774,"norgestimate",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+1515774,"norgestimate",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+1515777,"norgestimate 0.18 mg",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+1515777,"norgestimate 0.18 mg",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+35200012,"propofol 10 mg/ml [propothesia]",40220386,"100 ML Propofol 10 MG/ML Injection",363804
+19052059,"aspartate",3013721,"Aspartate aminotransferase serum/plasma",119617367
+19052489,"alanine",3006923,"Alanine aminotransferase serum/plasma",277205707
+19052580,"hydrocortisone 10 mg/ml [acticort 100]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19053009,"hydrocortisone 10 mg/ml [ala-cort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+1519936,"etonogestrel",1519937,"Etonogestrel 68 MG Drug Implant",108887
+1519936,"etonogestrel",43012433,"21 DAY Ethinyl Estradiol 0.000625 MG/HR / Etonogestrel 0.005 MG/HR Vaginal Ring [NuvaRing]",56915226
+1519940,"etonogestrel 0.005 mg/hr",43012433,"21 DAY Ethinyl Estradiol 0.000625 MG/HR / Etonogestrel 0.005 MG/HR Vaginal Ring [NuvaRing]",56915226
+1521369,"norethindrone",19127922,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]",7738128
+1521369,"norethindrone",19128065,"{7 (Inert Ingredients 1 MG Oral Tablet) / 21 (Mestranol 0.05 MG / Norethindrone 1 MG Oral Tablet) } Pack [Norinyl 1+50 28 Day]",23641
+1521369,"norethindrone",19129144,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",8341706
+1521369,"norethindrone",19133679,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Errin 28 Day]",6285061
+1521369,"norethindrone",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+1521405,"norethindrone 0.35 mg",19127922,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]",7738128
+1521405,"norethindrone 0.35 mg",19129144,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",8341706
+1521405,"norethindrone 0.35 mg",19133679,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Errin 28 Day]",6285061
+1521406,"norethindrone 1 mg",19128065,"{7 (Inert Ingredients 1 MG Oral Tablet) / 21 (Mestranol 0.05 MG / Norethindrone 1 MG Oral Tablet) } Pack [Norinyl 1+50 28 Day]",23641
+1521592,"norgestrel",1589505,"Levonorgestrel",45421
+1521592,"norgestrel",1718412,"Levonorgestrel 0.000729 MG/HR Intrauterine System [Kyleena]",73665
+1521592,"norgestrel",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+1521592,"norgestrel",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+1521592,"norgestrel",19132304,"Levonorgestrel 0.000833 MG/HR Intrauterine System [Mirena]",3149016
+1521592,"norgestrel",43012754,"Levonorgestrel 0.00354 MG/HR Drug Implant",2120
+1521592,"norgestrel",46221626,"Levonorgestrel 0.000813 MG/HR Intrauterine System [Liletta]",39068
+1521599,"norgestrel 0.15 mg",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+1521599,"norgestrel 0.15 mg",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+19091065,"ethinyl estradiol 0.01 mg",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+1539403,"simvastatin",1539411,"Simvastatin 20 MG Oral Tablet",358709730
+1539465,"simvastatin 20 mg",1539411,"Simvastatin 20 MG Oral Tablet",358709730
+1545958,"atorvastatin",1545959,"atorvastatin 80 MG Oral Tablet",78234878
+1545961,"atorvastatin 80 mg",1545959,"atorvastatin 80 MG Oral Tablet",78234878
+1548195,"estradiol",1549786,"Ethinyl Estradiol",127872
+1548195,"estradiol",19127904,"{24 (drospirenone 3 MG / Ethinyl Estradiol 0.02 MG Oral Tablet) / 4 (Inert Ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day]",18867036
+1548195,"estradiol",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+1548195,"estradiol",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+1548195,"estradiol",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+1548195,"estradiol",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+1548195,"estradiol",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+1548195,"estradiol",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+1548195,"estradiol",43012433,"21 DAY Ethinyl Estradiol 0.000625 MG/HR / Etonogestrel 0.005 MG/HR Vaginal Ring [NuvaRing]",56915226
+19054876,"dienogest",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+1549786,"ethinyl estradiol",19127904,"{24 (drospirenone 3 MG / Ethinyl Estradiol 0.02 MG Oral Tablet) / 4 (Inert Ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day]",18867036
+1549786,"ethinyl estradiol",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+1549786,"ethinyl estradiol",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+1549786,"ethinyl estradiol",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+1549786,"ethinyl estradiol",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+1549786,"ethinyl estradiol",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+1549786,"ethinyl estradiol",43012433,"21 DAY Ethinyl Estradiol 0.000625 MG/HR / Etonogestrel 0.005 MG/HR Vaginal Ring [NuvaRing]",56915226
+1549788,"ethinyl estradiol 0.02 mg oral tablet",19127904,"{24 (drospirenone 3 MG / Ethinyl Estradiol 0.02 MG Oral Tablet) / 4 (Inert Ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day]",18867036
+1549914,"ethinyl estradiol 0.03 mg",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+1549914,"ethinyl estradiol 0.03 mg",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+1549914,"ethinyl estradiol 0.03 mg",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+1549916,"ethinyl estradiol 0.02 mg",19127904,"{24 (drospirenone 3 MG / Ethinyl Estradiol 0.02 MG Oral Tablet) / 4 (Inert Ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day]",18867036
+1549916,"ethinyl estradiol 0.02 mg",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+1549918,"ethinyl estradiol 0.035 mg",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+1549918,"ethinyl estradiol 0.035 mg",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+1549918,"ethinyl estradiol 0.035 mg",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+1551099,"prednisone",1551192,"Prednisone 5 MG Oral Tablet",81732548
+1551099,"prednisone",19089061,"Prednisone 2.5 MG [Deltasone]",341752
+1551195,"prednisone 2.5 mg",19089061,"Prednisone 2.5 MG [Deltasone]",341752
+1551198,"prednisone 5 mg",1551192,"Prednisone 5 MG Oral Tablet",81732548
+19015501,"epinephrine 1 mg/ml [epipen]",46275916,"1 ML Epinephrine 1 MG/ML Injection",2973880
+1552310,"progesterone",1500211,"Medroxyprogesterone",140080
+1552310,"progesterone",40224805,"1 ML medroxyprogesterone acetate 150 MG/ML Injection",12589041
+914335,"atropine",40243436,"1 ML Atropine Sulfate 1 MG/ML Injection",67002
+19057827,"ibuprofen 200 mg [cap-profen]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19058121,"cefaclor 500 mg [ceclor cd]",19074841,"12 HR Cefaclor 500 MG Extended Release Oral Tablet",22418
+19112768,"carbamazepine 20 mg/ml [tegretol]",19074679,"Carbamazepine 20 MG/ML Oral Suspension [Tegretol]",143625
+1560524,"glucose",3004501,"Glucose lab",636349695
+1560524,"glucose",4012477,"Glucose tolerance test",831238
+19113026,"haemophilus influenzae type b",40213314,"Haemophilus influenzae type b vaccine, PRP-OMP conjugate",17000066
+19113076,"amoxicillin 250 mg [moxilin]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+1589505,"levonorgestrel",1718412,"Levonorgestrel 0.000729 MG/HR Intrauterine System [Kyleena]",73665
+1589505,"levonorgestrel",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+1589505,"levonorgestrel",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+1589505,"levonorgestrel",19132304,"Levonorgestrel 0.000833 MG/HR Intrauterine System [Mirena]",3149016
+1589505,"levonorgestrel",43012754,"Levonorgestrel 0.00354 MG/HR Drug Implant",2120
+1589505,"levonorgestrel",46221626,"Levonorgestrel 0.000813 MG/HR Intrauterine System [Liletta]",39068
+1589542,"levonorgestrel 0.15 mg",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+1589542,"levonorgestrel 0.15 mg",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+19113370,"amoxicillin 500 mg [sumox]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19113465,"cefuroxime 250 mg [alti cefuroxime]",19075001,"Cefuroxime 250 MG Oral Tablet",14607903
+19059196,"acetaminophen 325 mg [conacetol]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+19113549,"cefaclor 250 mg [raniclor]",19074843,"Cefaclor 250 MG Oral Capsule",707318
+920293,"nitrofurantoin",920300,"Nitrofurantoin 5 MG/ML Oral Suspension",688662
+920293,"nitrofurantoin",920334,"NITROFURANTOIN, MACROCRYSTALS 50 MG Oral Capsule",9915019
+920335,"nitrofurantoin 5 mg/ml",920300,"Nitrofurantoin 5 MG/ML Oral Suspension",688662
+920339,"nitrofurantoin 5 mg",920300,"Nitrofurantoin 5 MG/ML Oral Suspension",688662
+19059580,"hydrocortisone 10 mg/ml [cortaid]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19059604,"hydrocortisone 10 mg/ml [cortane]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19018544,"calcium",3006906,"Calcium serum/plasma serum/plasma",129267964
+19060161,"diazepam 5 mg/ml [d-val]",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+19114227,"hydrocortisone 10 mg/ml [procto-pak]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19019339,"norethindrone 0.35 mg oral tablet",19127922,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]",7738128
+19019339,"norethindrone 0.35 mg oral tablet",19129144,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",8341706
+19019339,"norethindrone 0.35 mg oral tablet",19133679,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Errin 28 Day]",6285061
+19114696,"midazolam 1 mg/ml [midazolan]",19078924,"Midazolam 1 MG/ML Injectable Solution",26822188
+19061218,"hydrocortisone 10 mg/ml [dermarest dricort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19061283,"ethinyl estradiol 0.01 mg oral tablet",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+19020477,"nitrogen",3013682,"Urea nitrogen serum/plasma",138222910
+933724,"phenazopyridine",40236824,"Phenazopyridine hydrochloride 100 MG Oral Tablet",9605925
+19061358,"hydrocortisone 10 mg/ml [dermtex hc]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+933952,"pheniramine",1192710,"Chlorpheniramine",1225668
+933952,"pheniramine",19112599,"Chlorpheniramine Maleate 2 MG/ML Oral Solution",3397
+933952,"pheniramine",43012036,"Chlorpheniramine Maleate 4 MG Oral Tablet",747106
+35603355,"atropine sulfate 1 mg/ml injection",40243436,"1 ML Atropine Sulfate 1 MG/ML Injection",67002
+19115414,"amoxicillin 250 mg [rimoxallin]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19115415,"amoxicillin 500 mg [rimoxallin]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19115586,"hydrocortisone 10 mg/ml [hydrocortistab]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19062772,"acetaminophen 325 mg [dolono]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+19096779,"cefaclor 500 mg extended release oral tablet",19074841,"12 HR Cefaclor 500 MG Extended Release Oral Tablet",22418
+19115697,"naproxen 500 mg [timpron]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+19115703,"amoxicillin 250 mg [galenamox tp]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19115704,"amoxicillin 500 mg [galenamox tp]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+1593991,"diphenhydramine hydrochloride 25 mg [dormin]",40232448,"Diphenhydramine Hydrochloride 25 MG Oral Tablet",1179957
+19116067,"amoxicillin 250 mg [amoram]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19116068,"amoxicillin 500 mg [amoram]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19116079,"amoxicillin 500 mg [amoxil fiztab]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19116080,"amoxicillin 250 mg [amoxymed]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19116084,"ampicillin 100 mg/ml [penbritin]",19129655,"Ampicillin 100 MG/ML Injectable Solution",32511
+19116164,"prednisone 5 mg [decortisyl]",1551192,"Prednisone 5 MG Oral Tablet",81732548
+19116324,"naproxen 500 mg [valrox]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+19022882,"hydrocortisone 10 mg/ml [procto-kit]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19116327,"naproxen 500 mg [pranoxen continus]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+19116328,"naproxen 500 mg [arthrosin 500]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+19116329,"naproxen 500 mg [naprosyn sr]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+19116331,"naproxen 500 mg [arthroxen]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+19116332,"naproxen 500 mg [rimoxyn]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+19116335,"naproxen 500 mg [nycopren]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+19116337,"naproxen 500 mg [prosaid]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+19022929,"hydrocortisone 10 mg/ml [itch-x maximum strength]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19065349,"ferrous sulfate 325 mg [feosol]",19077344,"ferrous sulfate 325 MG Oral Tablet",65494574
+19023382,"atorvastatin 80 mg [lipitor]",1545959,"atorvastatin 80 MG Oral Tablet",78234878
+19116802,"ibuprofen 200 mg [relcofen]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19116879,"ibuprofen 200 mg [inoven]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19116936,"amoxicillin 250 mg [zoxycil]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19116937,"amoxicillin 500 mg [zoxycil]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+1595799,"ferrous fumarate",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+19117036,"cefaclor 500 mg [keftid]",19074841,"12 HR Cefaclor 500 MG Extended Release Oral Tablet",22418
+1595936,"ferrous fumarate 75 mg",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+19117069,"naproxen 500 mg [timpron 500 ec]",19019273,"Naproxen 500 MG Oral Tablet",161401579
+961145,"glycerin",1361711,"Nitroglycerin",4001504
+961145,"glycerin",19126352,"Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",973006
+19067155,"hydrocortisone 10 mg/ml [gly-cort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19117346,"diazepam 5 mg/ml [stesolid]",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+19117390,"amoxicillin 500 mg [amoxidin]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19117392,"amoxicillin 500 mg [amopen]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19117393,"amoxicillin 500 mg [almodan]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19117395,"amoxicillin 500 mg [galenamox]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19117428,"prednisone 5 mg [econosone]",1551192,"Prednisone 5 MG Oral Tablet",81732548
+19117432,"ibuprofen 200 mg [paxofen]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19117436,"ibuprofen 200 mg [cuprofen]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19117439,"ibuprofen 200 mg [arthrofen 200]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19117440,"ibuprofen 200 mg [phor pain]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19117441,"ibuprofen 200 mg [proflex]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19117630,"diazepam 5 mg/ml [diazemuls]",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+19117653,"amoxicillin 250 mg [amopen]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+35604747,"medroxyprogesterone acetate 150 mg/ml injection",40224805,"1 ML medroxyprogesterone acetate 150 MG/ML Injection",12589041
+19117788,"amoxicillin 250 mg [galenamox]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19117790,"amoxicillin 250 mg [almodan]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19117792,"amoxicillin 250 mg [amoxidin]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19117813,"hydrocortisone 10 mg/ml [efcortelan]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19117923,"amoxicillin 250 mg [biomox]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19117924,"amoxicillin 500 mg [biomox]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19100321,"hydrocortisone 10 mg/ml [yeast-x external]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19117951,"epinephrine 1 mg/ml [ana-guard]",1594382,"NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",2725822
+1713332,"amoxicillin",1713671,"Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet",588953
+1713332,"amoxicillin",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+1713332,"amoxicillin",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+1713545,"amoxicillin 250 mg",1713671,"Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet",588953
+1713545,"amoxicillin 250 mg",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+1713547,"amoxicillin 500 mg",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19118099,"hydrocortisone 10 mg/ml [texacort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19118100,"hydrocortisone 10 mg/ml [theracort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19118106,"hydrocortisone 10 mg/ml [hydrocort cream]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19118108,"hydrocortisone 10 mg/ml [instacort 10]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19118111,"hydrocortisone 10 mg/ml [procort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19118112,"hydrocortisone 10 mg/ml [cetacort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19118221,"ibuprofen 200 mg [uni-pro]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+1717327,"ampicillin",19129655,"Ampicillin 100 MG/ML Injectable Solution",32511
+19070131,"ferrous sulfate 325 mg [ironmar]",19077344,"ferrous sulfate 325 MG Oral Tablet",65494574
+1717504,"ampicillin 100 mg/ml",19129655,"Ampicillin 100 MG/ML Injectable Solution",32511
+19118823,"norethindrone 0.35 mg [nor-qd]",19127922,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]",7738128
+19118823,"norethindrone 0.35 mg [nor-qd]",19129144,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",8341706
+19118823,"norethindrone 0.35 mg [nor-qd]",19133679,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Errin 28 Day]",6285061
+19118851,"acetaminophen 325 mg [q-nol]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+19070932,"hydrocortisone 10 mg/ml [lacticare-hc]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+35605221,"hydrocortisone 10 mg/ml [psoriasin itch]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+967823,"sodium chloride",19079524,"Sodium Chloride 9 MG/ML Injectable Solution",11432853
+19119216,"acetaminophen 160 mg [mapap junior strength]",1127078,"Acetaminophen 160 MG Oral Tablet",197947
+19071556,"diazepam 5 mg/ml [valicot]",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+19101873,"norgestrel 0.15 mg oral tablet",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+19101873,"norgestrel 0.15 mg oral tablet",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+35605483,"ondansetron 2 mg/ml injection",35605482,"2 ML Ondansetron 2 MG/ML Injection",73782873
+19071968,"creatinine",3016723,"Creatinine serum/plasma",149863019
+19102032,"etonogestrel 68 mg",1519937,"Etonogestrel 68 MG Drug Implant",108887
+975125,"hydrocortisone",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19120080,"diazepam 5 mg/ml [dizac]",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+19072432,"acetaminophen 325 mg [mardol]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+19120375,"cefaclor 500 mg [ceclor pulvules]",19074841,"12 HR Cefaclor 500 MG Extended Release Oral Tablet",22418
+19120465,"ibuprofen 200 mg [anadin ibuprofen]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19120468,"ibuprofen 200 mg [nurofen advance]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19072941,"ibuprofen 200 mg [menadol]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+19120573,"hydrocortisone 10 mg/ml [anusert hc-1]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19120710,"cefaclor 500 mg [cefaclor cd]",19074841,"12 HR Cefaclor 500 MG Extended Release Oral Tablet",22418
+1718993,"levonorgestrel 0.000729 mg/hr",1718412,"Levonorgestrel 0.000729 MG/HR Intrauterine System [Kyleena]",73665
+1718994,"levonorgestrel 0.000729 mg/hr intrauterine system",1718412,"Levonorgestrel 0.000729 MG/HR Intrauterine System [Kyleena]",73665
+19120821,"digoxin 0.125 mg [lanoxin]",19018935,"Digoxin 0.125 MG Oral Tablet",30156849
+19120838,"amoxicillin 500 mg [moxilin]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+19120843,"hydrocortisone 10 mg/ml [caldecort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19120864,"prednisone 5 mg [prednicot]",1551192,"Prednisone 5 MG Oral Tablet",81732548
+19121054,"diazepam 5 mg/ml [diazepam intensol]",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+19029025,"celecoxib 200 mg oral capsule",1118088,"celecoxib 200 MG Oral Capsule [Celebrex]",66852874
+19029025,"celecoxib 200 mg oral capsule",44923712,"celecoxib 200 MG Oral Capsule [Celebrex]",58536451
+19121075,"hydrocortisone 10 mg/ml [theracort anti-itch]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+35605859,"morphine sulfate 5 mg/ml injection",35605858,"1 ML Morphine Sulfate 5 MG/ML Injection",341759
+19029306,"acetate",40224805,"1 ML medroxyprogesterone acetate 150 MG/ML Injection",12589041
+19029306,"acetate",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+1729720,"penicillin v",19133873,"Penicillin V Potassium 250 MG Oral Tablet",4802843
+1729720,"penicillin v",19133905,"Penicillin V Potassium 500 MG Oral Tablet",63170593
+19074694,"carbamazepine 20 mg/ml oral suspension",19074679,"Carbamazepine 20 MG/ML Oral Suspension [Tegretol]",143625
+1738521,"doxycycline",46233710,"Doxycycline Monohydrate 100 MG Oral Tablet",8000486
+1738521,"doxycycline",46233988,"Doxycycline Monohydrate 50 MG Oral Tablet",678747
+1741122,"tazobactam",46275444,"Piperacillin 4000 MG / tazobactam 500 MG Injection",161269
+1746114,"piperacillin",46275444,"Piperacillin 4000 MG / tazobactam 500 MG Injection",161269
+1000560,"ondansetron",35605482,"2 ML Ondansetron 2 MG/ML Injection",73782873
+1000599,"ondansetron 2 mg/ml",35605482,"2 ML Ondansetron 2 MG/ML Injection",73782873
+19030957,"escherichia coli",4116491,"Escherichia coli urinary tract infection",15612
+1759842,"clavulanate",1713671,"Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet",588953
+1759843,"clavulanate 125 mg",1713671,"Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet",588953
+19076733,"dornase alfa 1 mg/ml inhalation solution",19029476,"Dornase Alfa 1 MG/ML Inhalation Solution [Pulmozyme]",1459979
+1768849,"cefaclor",19074841,"12 HR Cefaclor 500 MG Extended Release Oral Tablet",22418
+1768849,"cefaclor",19074843,"Cefaclor 250 MG Oral Capsule",707318
+1768881,"cefaclor 250 mg",19074843,"Cefaclor 250 MG Oral Capsule",707318
+1768904,"cefaclor 500 mg",19074841,"12 HR Cefaclor 500 MG Extended Release Oral Tablet",22418
+19077018,"penicillin v potassium 500 mg [pen-vee k]",19133905,"Penicillin V Potassium 500 MG Oral Tablet",63170593
+19077020,"hydrocortisone 10 mg/ml [penecort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19031815,"amoxicillin 250 mg [amoxicot]",19073183,"Amoxicillin 250 MG Oral Capsule",12912299
+19031816,"amoxicillin 500 mg [amoxicot]",19073188,"Amoxicillin 500 MG Oral Tablet",12167626
+1102527,"meperidine",40165015,"Meperidine Hydrochloride 50 MG Oral Tablet",3670429
+1778162,"cefuroxime",19075001,"Cefuroxime 250 MG Oral Tablet",14607903
+1778228,"cefuroxime 250 mg",19075001,"Cefuroxime 250 MG Oral Tablet",14607903
+19123230,"atomoxetine 100 mg",19123231,"atomoxetine 100 MG Oral Capsule",270261
+1107830,"loratadine",1107882,"Loratadine 10 MG Oral Tablet",124393160
+1107830,"loratadine",19125062,"Loratadine 5 MG Chewable Tablet",145123
+1107885,"loratadine 10 mg",1107882,"Loratadine 10 MG Oral Tablet",124393160
+1107886,"loratadine 5 mg",19125062,"Loratadine 5 MG Chewable Tablet",145123
+19123271,"acetaminophen 160 mg [tylenol]",1127078,"Acetaminophen 160 MG Oral Tablet",197947
+1110410,"morphine",35605858,"1 ML Morphine Sulfate 5 MG/ML Injection",341759
+1112807,"aspirin",19059056,"Aspirin 81 MG Oral Tablet",21567073
+19123433,"epinephrine 1 mg/ml [twinject]",46275916,"1 ML Epinephrine 1 MG/ML Injection",2973880
+19033193,"pertussis vaccine",40213230,"tetanus toxoid, reduced diphtheria toxoid, and acellular pertussis vaccine, adsorbed",6759201
+19033193,"pertussis vaccine",40213281,"diphtheria, tetanus toxoids and acellular pertussis vaccine",139205843
+1113309,"aspirin 81 mg",19059056,"Aspirin 81 MG Oral Tablet",21567073
+1115008,"naproxen",1115171,"Naproxen sodium 220 MG Oral Tablet",3519237
+1115008,"naproxen",19019273,"Naproxen 500 MG Oral Tablet",161401579
+1115092,"naproxen 500 mg",19019273,"Naproxen 500 MG Oral Tablet",161401579
+1115170,"naproxen sodium 220 mg",1115171,"Naproxen sodium 220 MG Oral Tablet",3519237
+1118084,"celecoxib",1118088,"celecoxib 200 MG Oral Capsule [Celebrex]",66852874
+1118084,"celecoxib",44923712,"celecoxib 200 MG Oral Capsule [Celebrex]",58536451
+1119510,"dextromethorphan",40229134,"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",30190
+19124387,"ibuprofen 200 mg [wal-profen]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+1124300,"diclofenac",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+1124300,"diclofenac",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+1124957,"oxycodone",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+1125315,"acetaminophen",1127078,"Acetaminophen 160 MG Oral Tablet",197947
+1125315,"acetaminophen",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+1125315,"acetaminophen",19133768,"Acetaminophen 750 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",53234446
+1125315,"acetaminophen",40162522,"Acetaminophen 325 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",132651065
+1125315,"acetaminophen",40229134,"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",30190
+1125315,"acetaminophen",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+19079192,"ibuprofen 200 mg [q-profen]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+1125443,"dornase alfa",19029476,"Dornase Alfa 1 MG/ML Inhalation Solution [Pulmozyme]",1459979
+1125448,"dornase alfa 1 mg/ml",19029476,"Dornase Alfa 1 MG/ML Inhalation Solution [Pulmozyme]",1459979
+1127495,"acetaminophen 160 mg",1127078,"Acetaminophen 160 MG Oral Tablet",197947
+1127524,"acetaminophen 325 mg",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+1127524,"acetaminophen 325 mg",40162522,"Acetaminophen 325 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",132651065
+1127524,"acetaminophen 325 mg",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+1127530,"acetaminophen 750 mg",19133768,"Acetaminophen 750 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",53234446
+1127642,"acetaminophen 21.7 mg/ml",40229134,"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",30190
+19079481,"hydrocortisone 10 mg/ml [recort plus]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19126544,"penicillin",1729720,"Penicillin V",25453
+1129625,"diphenhydramine",40232448,"Diphenhydramine Hydrochloride 25 MG Oral Tablet",1179957
+19034870,"penicillin v potassium 500 mg [truxcillin-vk]",19133905,"Penicillin V Potassium 500 MG Oral Tablet",63170593
+1137529,"salmeterol",40169281,"60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler",1827
+19125488,"norgestimate 0.215 mg",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+19125488,"norgestimate 0.215 mg",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+1137537,"salmeterol 0.05 mg/actuat",40169281,"60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler",1827
+1149196,"cetirizine",40228214,"cetirizine hydrochloride 10 MG Oral Tablet",97116434
+1149196,"cetirizine",40228230,"cetirizine hydrochloride 5 MG Oral Tablet",2130693
+1149380,"fluticasone",40169216,"120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",7055
+1149380,"fluticasone",40169281,"60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler",1827
+1153428,"fexofenadine",40223821,"Fexofenadine hydrochloride 30 MG Oral Tablet",794779
+1153428,"fexofenadine",40223834,"Fexofenadine hydrochloride 60 MG Oral Tablet",9464105
+19126208,"hydrocortisone 10 mg/ml [dermarest eczema]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+19126353,"nitroglycerin 0.4 mg/actuat [nitromist]",19126352,"Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",973006
+1154343,"albuterol",1154615,"200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",48454347
+1154459,"albuterol 0.09 mg/actuat",1154615,"200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",48454347
+19126510,"fumarate",1595799,"Ferrous fumarate",166794
+19126510,"fumarate",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+19126544,"penicillin",1728416,"Penicillin G",18654
+19126544,"penicillin",19133873,"Penicillin V Potassium 250 MG Oral Tablet",4802843
+19126544,"penicillin",19133905,"Penicillin V Potassium 500 MG Oral Tablet",63170593
+40173379,"diphenhydramine hydrochloride 25 mg",40232448,"Diphenhydramine Hydrochloride 25 MG Oral Tablet",1179957
+40173589,"alendronic acid 10 mg",40173590,"Alendronic acid 10 MG Oral Tablet",1116123
+40173592,"alendronic acid 10 mg [fosamax]",40173590,"Alendronic acid 10 MG Oral Tablet",1116123
+19126788,"hydrocortisone 10 mg/ml [gynecort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+40234242,"cetirizine hydrochloride 10 mg [wal-zyr]",40228214,"cetirizine hydrochloride 10 MG Oral Tablet",97116434
+1174888,"hydrocodone",19133768,"Acetaminophen 750 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",53234446
+1174888,"hydrocodone",40162522,"Acetaminophen 325 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",132651065
+1177480,"ibuprofen",19019979,"Ibuprofen 100 MG Oral Tablet",559760
+1177480,"ibuprofen",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+40234244,"cetirizine hydrochloride 5 mg [wal-zyr]",40228230,"cetirizine hydrochloride 5 MG Oral Tablet",2130693
+40234401,"diphenhydramine hydrochloride 25 mg [sominex]",40232448,"Diphenhydramine Hydrochloride 25 MG Oral Tablet",1179957
+1192710,"chlorpheniramine",19112599,"Chlorpheniramine Maleate 2 MG/ML Oral Solution",3397
+1192710,"chlorpheniramine",43012036,"Chlorpheniramine Maleate 4 MG Oral Tablet",747106
+19038625,"propofol 10 mg/ml [diprivan]",40220386,"100 ML Propofol 10 MG/ML Injection",363804
+42902290,"norethindrone acetate 1 mg oral tablet",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+19127890,"inert ingredients",19127904,"{24 (drospirenone 3 MG / Ethinyl Estradiol 0.02 MG Oral Tablet) / 4 (Inert Ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day]",18867036
+19127890,"inert ingredients",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+19127890,"inert ingredients",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+19127890,"inert ingredients",19128065,"{7 (Inert Ingredients 1 MG Oral Tablet) / 21 (Mestranol 0.05 MG / Norethindrone 1 MG Oral Tablet) } Pack [Norinyl 1+50 28 Day]",23641
+19127890,"inert ingredients",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+19127890,"inert ingredients",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+19127891,"inert ingredients 1 mg",19127904,"{24 (drospirenone 3 MG / Ethinyl Estradiol 0.02 MG Oral Tablet) / 4 (Inert Ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day]",18867036
+19127891,"inert ingredients 1 mg",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+19127891,"inert ingredients 1 mg",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+19127891,"inert ingredients 1 mg",19128065,"{7 (Inert Ingredients 1 MG Oral Tablet) / 21 (Mestranol 0.05 MG / Norethindrone 1 MG Oral Tablet) } Pack [Norinyl 1+50 28 Day]",23641
+19127891,"inert ingredients 1 mg",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+19127891,"inert ingredients 1 mg",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+19127892,"inert ingredients 1 mg oral tablet",19127904,"{24 (drospirenone 3 MG / Ethinyl Estradiol 0.02 MG Oral Tablet) / 4 (Inert Ingredients 1 MG Oral Tablet) } Pack [Yaz 28 Day]",18867036
+19127892,"inert ingredients 1 mg oral tablet",19127918,"{21 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",10329000
+19127892,"inert ingredients 1 mg oral tablet",19128022,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Or",18687460
+19127892,"inert ingredients 1 mg oral tablet",19128065,"{7 (Inert Ingredients 1 MG Oral Tablet) / 21 (Mestranol 0.05 MG / Norethindrone 1 MG Oral Tablet) } Pack [Norinyl 1+50 28 Day]",23641
+19127892,"inert ingredients 1 mg oral tablet",19128263,"{7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (Inert Ingredients 1 MG Oral Tablet) } Pack [Tr",37891397
+19127892,"inert ingredients 1 mg oral tablet",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+19127921,"{28 (norethindrone 0.35 mg oral tablet) } pack",19127922,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]",7738128
+19127921,"{28 (norethindrone 0.35 mg oral tablet) } pack",19129144,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",8341706
+19127921,"{28 (norethindrone 0.35 mg oral tablet) } pack",19133679,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Errin 28 Day]",6285061
+42902643,"epinephrine 1 mg/ml auto-injector",1594382,"NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",2725822
+45892746,"propofol 10 mg/ml [rapinovet]",40220386,"100 ML Propofol 10 MG/ML Injection",363804
+1305058,"methotrexate",19007333,"Methotrexate 10 MG Oral Tablet",12209
+1305130,"methotrexate 10 mg",19007333,"Methotrexate 10 MG Oral Tablet",12209
+40174875,"levothyroxine sodium 0.075 mg",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174891,"levothyroxine sodium 0.075 mg [eltroxin]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174892,"levothyroxine sodium 0.075 mg [euthyrox]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174893,"levothyroxine sodium 0.075 mg [levo-t]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174894,"levothyroxine sodium 0.075 mg [levotabs]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174895,"levothyroxine sodium 0.075 mg [levothroid]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174896,"levothyroxine sodium 0.075 mg [levoxyl]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174897,"levothyroxine sodium 0.075 mg [novothyrox]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174898,"levothyroxine sodium 0.075 mg [synthroid]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174899,"levothyroxine sodium 0.075 mg [thyrox]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174900,"levothyroxine sodium 0.075 mg [tirosint]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+40174901,"levothyroxine sodium 0.075 mg [unithroid]",40174880,"Levothyroxine Sodium 0.075 MG Oral Tablet",148226523
+42903088,"albuterol 0.09 mg/actuat metered dose inhaler",1154615,"200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",48454347
+40236351,"loratadine 10 mg [wal-vert]",1107882,"Loratadine 10 MG Oral Tablet",124393160
+40236438,"methylphenidate hydrochloride 20 mg",40236446,"Methylphenidate Hydrochloride 20 MG Oral Tablet",13447155
+42903330,"salmeterol 0.05 mg/actuat dry powder inhaler",40169281,"60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler",1827
+1309944,"amiodarone",1310034,"3 ML Amiodarone hydrochloride 50 MG/ML Prefilled Syringe",1846
+1309994,"amiodarone hydrochloride 50 mg/ml",1310034,"3 ML Amiodarone hydrochloride 50 MG/ML Prefilled Syringe",1846
+1310149,"warfarin",40163554,"Warfarin Sodium 5 MG Oral Tablet",114713958
+46221402,"methylphenidate hydrochloride 20 mg [aptensio]",40236446,"Methylphenidate Hydrochloride 20 MG Oral Tablet",13447155
+40236820,"phenazopyridine hydrochloride 100 mg",40236824,"Phenazopyridine hydrochloride 100 MG Oral Tablet",9605925
+40236830,"phenazopyridine hydrochloride 100 mg [azo]",40236824,"Phenazopyridine hydrochloride 100 MG Oral Tablet",9605925
+40236834,"phenazopyridine hydrochloride 100 mg [urogesic]",40236824,"Phenazopyridine hydrochloride 100 MG Oral Tablet",9605925
+46221622,"levonorgestrel 0.000813 mg/hr intrauterine system",46221626,"Levonorgestrel 0.000813 MG/HR Intrauterine System [Liletta]",39068
+42903718,"tartrate",19133768,"Acetaminophen 750 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",53234446
+42903718,"tartrate",40162522,"Acetaminophen 325 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",132651065
+46233712,"doxycycline monohydrate 100 mg [adoxa]",46233710,"Doxycycline Monohydrate 100 MG Oral Tablet",8000486
+46233713,"doxycycline monohydrate 100 mg [avidoxy]",46233710,"Doxycycline Monohydrate 100 MG Oral Tablet",8000486
+40237199,"diphenhydramine hydrochloride 25 mg [banophen]",40232448,"Diphenhydramine Hydrochloride 25 MG Oral Tablet",1179957
+40237201,"diphenhydramine hydrochloride 25 mg [compoz]",40232448,"Diphenhydramine Hydrochloride 25 MG Oral Tablet",1179957
+40237208,"diphenhydramine hydrochloride 25 mg [nytol]",40232448,"Diphenhydramine Hydrochloride 25 MG Oral Tablet",1179957
+40237209,"diphenhydramine hydrochloride 25 mg [paxidorm]",40232448,"Diphenhydramine Hydrochloride 25 MG Oral Tablet",1179957
+1322184,"clopidogrel",19075601,"clopidogrel 75 MG Oral Tablet",195889448
+1322187,"clopidogrel 75 mg",19075601,"clopidogrel 75 MG Oral Tablet",195889448
+46233830,"hydrocortisone 10 mg/ml [selsun blue scalp itch]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+1326303,"digoxin",19018935,"Digoxin 0.125 MG Oral Tablet",30156849
+1326409,"digoxin 0.125 mg",19018935,"Digoxin 0.125 MG Oral Tablet",30156849
+40237330,"sevoflurane 1000 mg/ml [sevothesia]",19023398,"sevoflurane 1000 MG/ML Inhalation Solution",336824
+46233990,"doxycycline monohydrate 50 mg [adoxa]",46233988,"Doxycycline Monohydrate 50 MG Oral Tablet",678747
+40237586,"acetaminophen 160 mg [panadol]",1127078,"Acetaminophen 160 MG Oral Tablet",197947
+40176085,"morphine sulfate 5 mg/ml [mst continus]",35605858,"1 ML Morphine Sulfate 5 MG/ML Injection",341759
+46234352,"nitrofurantoin, macrocrystals 50 mg",920334,"NITROFURANTOIN, MACROCRYSTALS 50 MG Oral Capsule",9915019
+46234353,"nitrofurantoin, macrocrystals 50 mg [macrodantin]",920334,"NITROFURANTOIN, MACROCRYSTALS 50 MG Oral Capsule",9915019
+43011651,"chlorpheniramine maleate 4 mg [chlor-trimeton]",43012036,"Chlorpheniramine Maleate 4 MG Oral Tablet",747106
+46234411,"doxycycline monohydrate 50 mg",46233988,"Doxycycline Monohydrate 50 MG Oral Tablet",678747
+43011652,"chlorpheniramine maleate 4 mg [aller-chlor]",43012036,"Chlorpheniramine Maleate 4 MG Oral Tablet",747106
+46234413,"doxycycline monohydrate 50 mg [monodox]",46233988,"Doxycycline Monohydrate 50 MG Oral Tablet",678747
+43011683,"chlorpheniramine maleate 4 mg [chlorate]",43012036,"Chlorpheniramine Maleate 4 MG Oral Tablet",747106
+43011687,"diphenhydramine hydrochloride 25 mg [wal-sleep z]",40232448,"Diphenhydramine Hydrochloride 25 MG Oral Tablet",1179957
+46234524,"doxycycline monohydrate 100 mg",46233710,"Doxycycline Monohydrate 100 MG Oral Tablet",8000486
+46234526,"doxycycline monohydrate 100 mg [monodox]",46233710,"Doxycycline Monohydrate 100 MG Oral Tablet",8000486
+40181754,"estradiol valerate 1 mg",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+40181755,"estradiol valerate 1 mg oral tablet",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+40181756,"estradiol valerate 2 mg",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+40181757,"estradiol valerate 3 mg",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+40181758,"estradiol valerate 3 mg oral tablet",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+40181783,"dienogest 3 mg",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+46275443,"piperacillin 4000 mg",46275444,"Piperacillin 4000 MG / tazobactam 500 MG Injection",161269
+40239211,"ibuprofen 200 mg [counteract ib]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+40239281,"oxycodone hydrochloride 5 mg [m-oxy]",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+40239282,"oxycodone hydrochloride 5 mg [oxynorm]",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+40239283,"oxycodone hydrochloride 5 mg [oxyrapid]",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+43012694,"ethinyl estradiol 0.000625 mg/hr",43012433,"21 DAY Ethinyl Estradiol 0.000625 MG/HR / Etonogestrel 0.005 MG/HR Vaginal Ring [NuvaRing]",56915226
+43012721,"haemophilus influenzae",40213314,"Haemophilus influenzae type b vaccine, PRP-OMP conjugate",17000066
+40220389,"propofol 10 mg/ml injection",40220386,"100 ML Propofol 10 MG/ML Injection",363804
+43012753,"levonorgestrel 0.00354 mg/hr",43012754,"Levonorgestrel 0.00354 MG/HR Drug Implant",2120
+46275875,"tazobactam 500 mg",46275444,"Piperacillin 4000 MG / tazobactam 500 MG Injection",161269
+40240171,"oxycodone hydrochloride 5 mg [oxecta]",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+46275919,"epinephrine 1 mg/ml injection",46275916,"1 ML Epinephrine 1 MG/ML Injection",2973880
+40240628,"chlorpheniramine maleate 2 mg/ml",19112599,"Chlorpheniramine Maleate 2 MG/ML Oral Solution",3397
+46276153,"sodium chloride 9 mg/ml",19079524,"Sodium Chloride 9 MG/ML Injectable Solution",11432853
+40220958,"alteplase 100 mg",40220960,"alteplase 100 MG Injection",49907
+40220961,"alteplase 100 mg [activase]",40220960,"alteplase 100 MG Injection",49907
+40161251,"ibuprofen 200 mg [ibuprohm]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+46287501,"doxycycline monohydrate 50 mg [mondoxyne]",46233988,"Doxycycline Monohydrate 50 MG Oral Tablet",678747
+40221361,"diazepam 5 mg/ml [diastat]",19076374,"Diazepam 5 MG/ML Injectable Solution",148317
+46287567,"doxycycline monohydrate 100 mg [mondoxyne]",46233710,"Doxycycline Monohydrate 100 MG Oral Tablet",8000486
+43014259,"valerate",40221415,"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (Inert Ingredients 1 MG Oral Tablet) } Pack [Nata",1883608
+46287708,"hydrocortisone 10 mg/ml [blue-emu anti-itch]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+46287723,"oxycodone hydrochloride 5 mg [oxaydo]",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+40163553,"warfarin sodium 5 mg",40163554,"Warfarin Sodium 5 MG Oral Tablet",114713958
+40162353,"diclofenac sodium 75 mg",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+40162353,"diclofenac sodium 75 mg",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+40222845,"memantine hydrochloride 2 mg/ml",40222846,"Memantine hydrochloride 2 MG/ML Oral Solution",29796
+40243311,"aspirin 81 mg [ecotrin]",19059056,"Aspirin 81 MG Oral Tablet",21567073
+40243435,"atropine sulfate 1 mg/ml",40243436,"1 ML Atropine Sulfate 1 MG/ML Injection",67002
+40163129,"ibuprofen 200 mg [midol cramps & bodyaches]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+40223457,"chlorpheniramine maleate 2 mg",19112599,"Chlorpheniramine Maleate 2 MG/ML Oral Solution",3397
+40223461,"chlorpheniramine maleate 4 mg",43012036,"Chlorpheniramine Maleate 4 MG Oral Tablet",747106
+40223725,"rocuronium bromide 10 mg/ml",42707627,"rocuronium bromide 10 MG/ML Injectable Solution",5561471
+40223765,"donepezil hydrochloride 10 mg",40223768,"Donepezil hydrochloride 10 MG Oral Tablet",47751334
+40223818,"fexofenadine hydrochloride 30 mg",40223821,"Fexofenadine hydrochloride 30 MG Oral Tablet",794779
+40223828,"fexofenadine hydrochloride 60 mg",40223834,"Fexofenadine hydrochloride 60 MG Oral Tablet",9464105
+40243943,"hydrocortisone 10 mg/ml [monistat itch relief]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+40163557,"warfarin sodium 5 mg [coumadin]",40163554,"Warfarin Sodium 5 MG Oral Tablet",114713958
+40163558,"warfarin sodium 5 mg [jantoven]",40163554,"Warfarin Sodium 5 MG Oral Tablet",114713958
+43532032,"maleate",19112599,"Chlorpheniramine Maleate 2 MG/ML Oral Solution",3397
+43532032,"maleate",43012036,"Chlorpheniramine Maleate 4 MG Oral Tablet",747106
+40164720,"hydrocodone bitartrate 7.5 mg oral tablet",19133768,"Acetaminophen 750 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",53234446
+40164720,"hydrocodone bitartrate 7.5 mg oral tablet",40162522,"Acetaminophen 325 MG / Hydrocodone Bitartrate 7.5 MG Oral Tablet",132651065
+40165009,"meperidine hydrochloride 50 mg",40165015,"Meperidine Hydrochloride 50 MG Oral Tablet",3670429
+40165017,"meperidine hydrochloride 50 mg [demerol]",40165015,"Meperidine Hydrochloride 50 MG Oral Tablet",3670429
+40224804,"medroxyprogesterone acetate 150 mg/ml",40224805,"1 ML medroxyprogesterone acetate 150 MG/ML Injection",12589041
+43532777,"isoflurane 999 mg/ml [isoflo]",782047,"Isoflurane 999 MG/ML Inhalation Solution",5142
+40225999,"cetirizine hydrochloride 10 mg",40228214,"cetirizine hydrochloride 10 MG Oral Tablet",97116434
+43560531,"diphenhydramine hydrochloride 25 mg [wal-som]",40232448,"Diphenhydramine Hydrochloride 25 MG Oral Tablet",1179957
+40166761,"diclofenac sodium 75 mg [dexomon sr]",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+40166761,"diclofenac sodium 75 mg [dexomon sr]",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+40166762,"diclofenac sodium 75 mg [dicloflex sr]",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+40166762,"diclofenac sodium 75 mg [dicloflex sr]",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+40166763,"diclofenac sodium 75 mg [diclomax sr]",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+40166763,"diclofenac sodium 75 mg [diclomax sr]",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+40166764,"diclofenac sodium 75 mg [diclotard]",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+40166764,"diclofenac sodium 75 mg [diclotard]",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+40166765,"diclofenac sodium 75 mg [diclovol sr]",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+40166765,"diclofenac sodium 75 mg [diclovol sr]",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+40166768,"diclofenac sodium 75 mg [lofensaid retard]",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+40166768,"diclofenac sodium 75 mg [lofensaid retard]",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+40166770,"diclofenac sodium 75 mg [rheumatac retard]",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+40166770,"diclofenac sodium 75 mg [rheumatac retard]",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+42706210,"digoxin 0.125 mg [digox]",19018935,"Digoxin 0.125 MG Oral Tablet",30156849
+40166773,"diclofenac sodium 75 mg [volsaid retard]",40162359,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",68695681
+40166773,"diclofenac sodium 75 mg [volsaid retard]",45011828,"Diclofenac Sodium 75 MG Delayed Release Oral Tablet",7120479
+40227524,"dextromethorphan hydrobromide 1 mg/ml",40229134,"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",30190
+40228217,"cetirizine hydrochloride 10 mg [alleroff]",40228214,"cetirizine hydrochloride 10 MG Oral Tablet",97116434
+40228218,"cetirizine hydrochloride 5 mg",40228230,"cetirizine hydrochloride 5 MG Oral Tablet",2130693
+40228299,"norethindrone acetate 1 mg",42902245,"{5 (Ethinyl Estradiol 0.02 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ethinyl Estradiol 0.03 MG / norethindrone acetate 1 MG Oral Tablet) / 9 (Ethinyl Estradiol 0.035 MG / norethindrone acetate 1 MG Oral Tablet) / 7 (Ferrous fumarate 75 MG Oral Tab",284651
+40228443,"loratadine 10 mg [loradamed]",1107882,"Loratadine 10 MG Oral Tablet",124393160
+40228550,"oxycodone hydrochloride 5 mg",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+44784837,"hydrocortisone 10 mg/ml [resicort]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+44785045,"protein s",3020630,"Protein serum/plasma",121199889
+40169035,"estradiol 0.01 mg",19128009,"{7 (Ethinyl Estradiol 0.01 MG Oral Tablet) / 84 (Ethinyl Estradiol 0.03 MG / Levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]",2065827
+40230706,"doxylamine succinate 0.417 mg/ml",40229134,"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",30190
+40170024,"morphine sulfate 5 mg",35605858,"1 ML Morphine Sulfate 5 MG/ML Injection",341759
+40170032,"morphine sulfate 5 mg/ml",35605858,"1 ML Morphine Sulfate 5 MG/ML Injection",341759
+40231132,"hydrocortisone 10 mg/ml [beta-hc]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+40231133,"hydrocortisone 10 mg/ml [glytone soothe calming]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+44814534,"epinephrine 1 mg/ml [adrenalin]",1594382,"NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",2725822
+40231136,"hydrocortisone 10 mg/ml [scalpicin itch relief]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+44814534,"epinephrine 1 mg/ml [adrenalin]",46275916,"1 ML Epinephrine 1 MG/ML Injection",2973880
+42799347,"aspirin 81 mg [aspir-low]",19059056,"Aspirin 81 MG Oral Tablet",21567073
+44815878,"norethindrone 0.35 mg [norlyroc]",19127922,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]",7738128
+44815878,"norethindrone 0.35 mg [norlyroc]",19129144,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",8341706
+44815878,"norethindrone 0.35 mg [norlyroc]",19133679,"{28 (Norethindrone 0.35 MG Oral Tablet) } Pack [Errin 28 Day]",6285061
+40170971,"epinephrine 1 mg/ml [adrenaclick]",1594382,"NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",2725822
+42800359,"acetaminophen 325 mg [pharbetol]",1127433,"Acetaminophen 325 MG Oral Tablet",69991904
+40170971,"epinephrine 1 mg/ml [adrenaclick]",46275916,"1 ML Epinephrine 1 MG/ML Injection",2973880
+40171019,"fluticasone propionate 0.044 mg/actuat",40169216,"120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",7055
+40171037,"fluticasone propionate 0.25 mg/actuat",40169281,"60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler",1827
+42800849,"ibuprofen 200 mg [proprinal]",19078461,"Ibuprofen 200 MG Oral Tablet",9827430
+40232617,"hydrocortisone 10 mg/ml [keratol hc]",19008572,"Hydrocortisone 10 MG/ML Topical Cream",10086239
+40232756,"oxycodone hydrochloride 5 mg oral tablet",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+40232760,"oxycodone hydrochloride 5 mg [endocodone]",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+40232762,"oxycodone hydrochloride 5 mg [percolone]",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+40232763,"oxycodone hydrochloride 5 mg [roxicodone]",40231925,"Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",199754064
+42873423,"prednisone 5 mg [rayos]",1551192,"Prednisone 5 MG Oral Tablet",81732548
+42873910,"epinephrine 1 mg/ml [auvi-q]",1594382,"NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",2725822
+42873910,"epinephrine 1 mg/ml [auvi-q]",46275916,"1 ML Epinephrine 1 MG/ML Injection",2973880
+45775826,"naproxen sodium 220 mg [menstridol]",1115171,"Naproxen sodium 220 MG Oral Tablet",3519237
+45775879,"isoflurane 999 mg/ml [fluriso]",782047,"Isoflurane 999 MG/ML Inhalation Solution",5142
+45776312,"isoflurane 999 mg/ml [isothesia]",782047,"Isoflurane 999 MG/ML Inhalation Solution",5142
+45776851,"isoflurane 999 mg/ml [isosol]",782047,"Isoflurane 999 MG/ML Inhalation Solution",5142
+45892051,"aspirin 81 mg [aspi-cor]",19059056,"Aspirin 81 MG Oral Tablet",21567073
+42900111,"staphylococcus aureus",433125,"Infection due to Staphylococcus aureus",22973
+42900561,"succinate",40229134,"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",30190

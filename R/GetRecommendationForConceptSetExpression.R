@@ -36,9 +36,11 @@ getRecommendationForConceptSetExpression <-
            vocabularyIdOfInterest = c('SNOMED', 'HCPCS', 'ICD10CM', 'ICD10', 'ICD9CM', 'ICD9', 'Read'),
            domainIdOfInterest = c('Condition', 'Procedure', 'Observation'),
            connection = NULL,
-           connectionDetails = NULL) {
+           connectionDetails = NULL,
+           conceptPrevalenceSchema = 'concept_prevalence') {
     conceptSetExpressionDataFrame <-
-      getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = conceptSetExpression)
+      getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = conceptSetExpression,
+                                                               vocabularyDatabaseSchema = vocabularyDatabaseSchema)
     
     if (length(vocabularyIdOfInterest) > 0) {
       conceptSetExpressionDataFrame <- conceptSetExpressionDataFrame %>%
@@ -56,7 +58,9 @@ getRecommendationForConceptSetExpression <-
       resolveConceptSetExpression(
         conceptSetExpression = conceptSetExpression,
         connection = connection,
-        connectionDetails = connectionDetails
+        connectionDetails = connectionDetails,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        conceptPrevalenceSchema = conceptPrevalenceSchema
       )
     forRecommendation <-
       c(
@@ -68,14 +72,16 @@ getRecommendationForConceptSetExpression <-
         connection = connection,
         connectionDetails = connectionDetails,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-        conceptIds = forRecommendation
+        conceptIds = forRecommendation,
+        conceptPrevalenceSchema = conceptPrevalenceSchema
       )
     recommendedSource <-
       getRecommendedSource(
         connection = connection,
         connectionDetails = connectionDetails,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-        conceptIds = forRecommendation
+        conceptIds = forRecommendation,
+        conceptPrevalenceSchema = conceptPrevalenceSchema
       )
     
     data <- list()

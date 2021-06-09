@@ -29,7 +29,8 @@
 resolveConceptSetExpression <- function(conceptSetExpression,
                                         connection = NULL,
                                         connectionDetails = NULL,
-                                        vocabularyDatabaseSchema = 'vocabulary') {
+                                        vocabularyDatabaseSchema = 'vocabulary',
+                                        conceptPrevalenceSchema = 'concept_prevalence') {
   # convert concept set expression R object (list) to data frame
   conceptSetExpressionDataFrame <-
     getConceptSetExpressionDataFrameFromConceptSetExpression(
@@ -37,7 +38,8 @@ resolveConceptSetExpression <- function(conceptSetExpression,
       connectionDetails = connectionDetails,
       conceptSetExpression =
         conceptSetExpression,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      conceptPrevalenceSchema = conceptPrevalenceSchema
     )
   
   # get all descendant concept ids (as dataframe) for concepts that have
@@ -45,6 +47,9 @@ resolveConceptSetExpression <- function(conceptSetExpression,
   conceptIdsWithIncludeDescendants <- conceptSetExpressionDataFrame %>%
     dplyr::filter(.data$includeDescendants == TRUE) %>%
     dplyr::pull(.data$conceptId)
+  
+  if(length(conceptIdsWithIncludeDescendants) == 0)
+    return(NULL)
   
   descendantConcepts <-
     getConceptAncestor(
@@ -56,18 +61,24 @@ resolveConceptSetExpression <- function(conceptSetExpression,
     dplyr::filter(.data$ancestorConceptId %in% conceptIdsWithIncludeDescendants) %>% 
     dplyr::rename(conceptId = .data$descendantConceptId)
   
+  if (nrow(descendantConcepts) == 0)
+    return(NULL)
+  
   conceptIdDetailsForDescendantConcepts <- getConceptIdDetails(conceptIds = descendantConcepts$conceptId,
                                                                connection = connection,
                                                                connectionDetails = connectionDetails,
-                                                               vocabularyDatabaseSchema = vocabularyDatabaseSchema)
+                                                               vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+                                                               conceptPrevalenceSchema = conceptPrevalenceSchema)
   
   descendantConcepts <- descendantConcepts %>% 
     dplyr::inner_join(conceptIdDetailsForDescendantConcepts, by = "conceptId")
   
+
   # get all conceptIds (as dataframe) that are excluded in concept set expression
   excludedConceptIds <- conceptSetExpressionDataFrame %>%
     dplyr::filter(.data$isExcluded == TRUE) %>%
     dplyr::select(.data$conceptId)
+  
   
   # get all conceptIds (as dataframe) that are excluded in concept set expression with descendants
   excludedConceptIdsWithDescendants <- descendantConcepts %>%
@@ -91,6 +102,7 @@ resolveConceptSetExpression <- function(conceptSetExpression,
         dplyr::pull(.data$conceptId) %>% 
         unique()
     )
+
   
   conceptIdsInConceptSetExpressionTableToBeExcluded <-
     union(
@@ -106,6 +118,9 @@ resolveConceptSetExpression <- function(conceptSetExpression,
   resolvedConceptIds <-
     setdiff(x = conceptIdsInConceptSetExpressionTableToBeIncluded,
             y = conceptIdsInConceptSetExpressionTableToBeExcluded)
+  if (length(resolvedConceptIds) == 0) {
+    return(NULL)
+  }
   
   #get all resolved concept Ids as data frame
   resolvedConceptIds <- dplyr::union(
