@@ -173,6 +173,9 @@ ConceptSetDiagnostics::getRelationship(connection = connection, vocabularyDataba
 #----19. getVocabulary----
 ConceptSetDiagnostics::getVocabulary(connection = connection,vocabularyDatabaseSchema = databaseSchema)
 
-
+#----20. optimizeConceptSetExpression----
+ConceptSetDiagnostics::optimizeConceptSetExpression(connection = connection,
+                                                    conceptSetExpression = conceptSetExpression,
+                                                    vocabularyDatabaseSchema = databaseSchema)
 
 
