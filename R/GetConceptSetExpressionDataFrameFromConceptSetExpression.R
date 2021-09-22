@@ -36,7 +36,8 @@ getConceptSetExpressionDataFrameFromConceptSetExpression <-
            recordCount = FALSE,
            connection = NULL,
            connectionDetails = NULL,
-           vocabularyDatabaseSchema = 'vocabulary') {
+           vocabularyDatabaseSchema = 'vocabulary',
+           conceptPrevalenceSchema = 'concept_prevalence') {
     if (length(conceptSetExpression) == 0) {
       return(NULL)
     }
@@ -123,6 +124,7 @@ getConceptSetExpressionDataFrameFromConceptSetExpression <-
           connection = connection,
           connectionDetails = connectionDetails,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+          conceptPrevalenceSchema = conceptPrevalenceSchema,
           conceptIds = conceptSetExpressionDetails$conceptId %>% unique()
         )
         conceptSetExpressionDetails <-
@@ -199,7 +201,8 @@ getConceptSetExpressionDataFrameFromConceptSetExpression <-
           getConceptIdDetails(
             connection = connection,
             connectionDetails = connectionDetails,
-            vocabularyDatabaseSchema = vocabularyDatabaseSchema
+            vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+            conceptPrevalenceSchema = conceptPrevalenceSchema
           ) %>%
           dplyr::select(.data$conceptId,
                         .data$rc,

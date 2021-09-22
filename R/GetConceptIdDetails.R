@@ -30,7 +30,8 @@ getConceptIdDetails <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
-           vocabularyDatabaseSchema = 'vocabulary') {
+           vocabularyDatabaseSchema = 'vocabulary',
+           conceptPrevalenceSchema = 'concept_prevalence') {
     
     if (length(conceptIds) == 0) {
       stop('No concept id provided')
@@ -48,6 +49,7 @@ getConceptIdDetails <-
         connectionDetails = connectionDetails,
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
+        concept_prevalence_schema = conceptPrevalenceSchema,
         concept_ids = conceptIds,
         snakeCaseToCamelCase = TRUE
       )

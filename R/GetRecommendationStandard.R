@@ -30,7 +30,8 @@ getRecommendedStandard <-
   function(conceptIds,
            vocabularyDatabaseSchema = 'vocabulary',
            connection = NULL,
-           connectionDetails = NULL) {
+           connectionDetails = NULL,
+           conceptPrevalenceSchema = 'concept_prevalence') {
     # Filtering strings to letters, numbers and spaces only to avoid SQL injection:
     conceptIds <-  gsub("[^a-zA-Z0-9 ,]", " ", conceptIds)
     
@@ -46,6 +47,7 @@ getRecommendedStandard <-
         connectionDetails = connectionDetails,
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
+        concept_prevalence = conceptPrevalenceSchema,
         source_list = conceptIds[[1]],
         snakeCaseToCamelCase = TRUE
       ) %>%

@@ -11,6 +11,6 @@ SELECT c.CONCEPT_ID,
 	ISNULL(universe.DRC, 0) DRC,
 	ISNULL(universe.DDBC, 0) DDBC
 FROM @vocabulary_database_schema.concept c
-LEFT JOIN concept_prevalence.universe ON c.concept_id = universe.concept_id
+LEFT JOIN @concept_prevalence_schema.universe ON c.concept_id = universe.concept_id
 WHERE c.CONCEPT_ID IN (@concept_ids)
 ORDER BY ISNULL(universe.DRC, 0) DESC;
