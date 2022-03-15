@@ -11,7 +11,8 @@ getConceptSetExpressionDataFrameFromConceptSetExpression(
   recordCount = FALSE,
   connection = NULL,
   connectionDetails = NULL,
-  vocabularyDatabaseSchema = "vocabulary"
+  vocabularyDatabaseSchema = "vocabulary",
+  conceptPrevalenceSchema = "concept_prevalence"
 )
 }
 \arguments{

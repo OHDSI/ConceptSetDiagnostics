@@ -11,7 +11,8 @@ getRecommendationForConceptSetExpression(
     "Read"),
   domainIdOfInterest = c("Condition", "Procedure", "Observation"),
   connection = NULL,
-  connectionDetails = NULL
+  connectionDetails = NULL,
+  conceptPrevalenceSchema = "concept_prevalence"
 )
 }
 \arguments{

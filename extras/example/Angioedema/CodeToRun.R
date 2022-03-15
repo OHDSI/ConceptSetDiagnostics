@@ -1,5 +1,10 @@
+## create output location
+locationForResults <-
+  file.path("D:\\OHDSI\\OHDSI\\Workgroup - Phenotype Development and Evaluation - Documents\\Long Covid\\Gowtham", 'longCovid', outputLocation)
+
+
 # given key words
-keyWords <- c('Angioedema')
+keyWords <- c('Abdominal pain')
 
 outputLocation <- stringr::str_replace_all(string = keyWords[[1]], 
                                        pattern = " ",
@@ -11,13 +16,13 @@ connectionDetails <-
   DatabaseConnector::createConnectionDetails(
     dbms = "postgresql",
     server = paste(
-      Sys.getenv("phenotypeLibraryDbServer"),
-      Sys.getenv("phenotypeLibraryDbDatabase"),
+      Sys.getenv("shinydbServer"),
+      Sys.getenv("shinydbDatabase"),
       sep = "/"
     ),
-    user = Sys.getenv("shinyDbUser"),
-    password = Sys.getenv("shinyDbPassword"),
-    port = Sys.getenv("phenotypeLibraryDbPort")
+    user = Sys.getenv("shinydbUser"),
+    password = Sys.getenv("shinydbPw"),
+    port = Sys.getenv("shinydbPort")
   )
 
 connection <-
@@ -26,9 +31,6 @@ connection <-
 # Load the package
 library(ConceptSetDiagnostics)
 
-## create output location
-locationForResults <-
-  file.path(rstudioapi::getActiveProject(), 'extras', 'example', outputLocation)
 
 # get search results
 searchResult <- list()

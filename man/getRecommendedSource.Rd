@@ -8,7 +8,8 @@ getRecommendedSource(
   conceptIds,
   vocabularyDatabaseSchema = "vocabulary",
   connection = NULL,
-  connectionDetails = NULL
+  connectionDetails = NULL,
+  conceptPrevalenceSchema = "concept_prevalence"
 )
 }
 \arguments{
