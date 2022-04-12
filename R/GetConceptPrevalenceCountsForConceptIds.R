@@ -16,38 +16,51 @@
 #
 
 
+#' get concept id count
+#'
+#' @description
 #' Get the count for an array of concept id(s) from concept prevalence table.
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
 #' @template ConceptIds
 #'
-#' @param conceptPrevalenceSchema   The schema containing the concept prevalence data.
+#' @template ConceptPrevalenceTable
+#'
+#' @return
+#' Returns a tibble data frame.
 #'
 #' @export
-getConceptPrevalenceCountsForConceptIds <- function(conceptIds,
-                                                    connection = NULL,
-                                                    connectionDetails = NULL,
-                                                    conceptPrevalenceSchema = 'concept_prevalence') {
+getConceptPrevalenceCounts <- function(conceptIds,
+                                       connection = NULL,
+                                       connectionDetails = NULL,
+                                       conceptPrevalenceTable = 'concept_prevalence') {
   if (length(conceptIds) == 0) {
     stop('No concept id provided')
   }
+  if (is.null(conceptPrevalenceTable) ||
+      length(conceptPrevalenceTable) == 0) {
+    stop('Please provide concept prevalence table')
+  }
+  
+  start <- Sys.time()
+  
+  if (is.null(connection)) {
+    connection <- DatabaseConnector::connect(connectionDetails)
+    on.exit(DatabaseConnector::disconnect(connection))
+  }
   
   sql <- "select *
-          from @concept_prevalence.cp_master
+          from @conceptPrevalenceTable
           where concept_id in (@concept_ids);"
   
   data <-
-    renderTranslateQuerySql(
+    DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
-      connectionDetails = connectionDetails,
       concept_ids = conceptIds,
-      concept_prevalence = conceptPrevalenceSchema,
+      conceptPrevalenceTable = conceptPrevalenceTable,
       sql = sql,
       snakeCaseToCamelCase = TRUE
-    ) %>%
-    dplyr::arrange(1)
+    ) %>% dplyr::tibble()
   return(data)
 }
