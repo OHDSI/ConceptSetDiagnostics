@@ -21,6 +21,9 @@ in concept set expression.}
 \item{purgeVocabularyDetails}{Do you want to purge the details of concepts in the
 concept set expression.}
 }
+\value{
+Returns a R list object
+}
 \description{
 Get concept set expression object from concept set expression data frame
 }

@@ -17,12 +17,18 @@
 
 #' given a list of conceptIds, get their mapped
 #'
+#' @description
+#' Given a concept set expression, get the resolved concepts
+#'
 #' @template Connection
 #'
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
-#'
+#' 
+#' @return
+#' Returns a tibble data frame.
+#' 
 #' @export
 getMappedSourceConcepts <-
   function(conceptIds,

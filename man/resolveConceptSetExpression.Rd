@@ -27,6 +27,9 @@ provided.}
 
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 }
+\value{
+Returns a tibble data frame.
+}
 \description{
 Given a concept set expression, get the resolved concepts
 }

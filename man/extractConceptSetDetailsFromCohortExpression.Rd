@@ -12,6 +12,9 @@ using RJSONIO::fromJSON(content = json, digits = 23). Note: it is important to u
 numerical precision may be lost for large integer values like conceptId's in cohort definition. The cohort
 expression JSON is commonly generated using OHDSI tools like Atlas or CapR.}
 }
+\value{
+Returns a tibble data frame.
+}
 \description{
 Get concept set details from cohort definition
 }

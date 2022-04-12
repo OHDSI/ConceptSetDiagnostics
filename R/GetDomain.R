@@ -16,10 +16,17 @@
 #
 
 #' Get all the domain id(s) in the vocabulary schema.
+#'
+#' @description
+#' Get all the domain id(s) in the vocabulary schema.
+#' 
 #' @template Connection
 #'
 #' @template VocabularyDatabaseSchema
 #'
+#' @return
+#' Returns a tibble data frame.
+#' 
 #' @export
 getDomain <-
   function(connection = NULL,

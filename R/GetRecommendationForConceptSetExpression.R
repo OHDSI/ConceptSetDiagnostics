@@ -17,6 +17,9 @@
 
 #' Get recommended concepts for a concept set expression.
 #'
+#' @description
+#' Get recommended concepts for a concept set expression.
+#'
 #' @template Connection
 #'
 #' @template VocabularyDatabaseSchema
@@ -26,7 +29,12 @@
 #' @param vocabularyIdOfInterest A list of vocabulary id from OMOP to filter the results
 #'
 #' @param domainIdOfInterest A list of domain id from OMOP to filter the results
+#' 
+#' @template ConceptPrevalenceTable
 #'
+#' @return
+#' Returns a tibble data frame.
+#' 
 #' @export
 getRecommendationForConceptSetExpression <-
   function(conceptSetExpression,
@@ -36,6 +44,7 @@ getRecommendationForConceptSetExpression <-
            connection = NULL,
            connectionDetails = NULL,
            conceptPrevalenceSchema = 'concept_prevalence') {
+    browser()
     conceptSetExpressionDataFrame <-
       getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = conceptSetExpression,
                                                                vocabularyDatabaseSchema = vocabularyDatabaseSchema)
@@ -57,9 +66,9 @@ getRecommendationForConceptSetExpression <-
         conceptSetExpression = conceptSetExpression,
         connection = connection,
         connectionDetails = connectionDetails,
-        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-        conceptPrevalenceSchema = conceptPrevalenceSchema
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
+    
     forRecommendation <-
       c(
         resolvedConceptIds$resolvedConcepts$conceptId,

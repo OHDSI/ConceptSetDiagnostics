@@ -17,11 +17,17 @@
 
 #' given a list of conceptIds, get their mapped
 #'
+#' @description
+#' given a list of conceptIds, get their mapped
+#'
 #' @template Connection
 #'
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
+#' 
+#' @return
+#' Returns a tibble data frame.
 #'
 #' @export
 getMappedStandardConcepts <-

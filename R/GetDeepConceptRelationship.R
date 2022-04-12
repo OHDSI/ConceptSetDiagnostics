@@ -29,6 +29,7 @@ getDeepConceptRelationship <-
            connectionDetails = NULL,
            vocabularyDatabaseSchema = 'vocabulary',
            conceptPrevalenceSchema = 'concept_prevalence') {
+    browser()
     if (length(conceptIds) == 0) {
       stop('No concept id provided')
     }

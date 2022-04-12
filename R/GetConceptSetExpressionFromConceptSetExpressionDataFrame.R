@@ -17,6 +17,9 @@
 
 #' Get concept set expression object from concept set expression data frame
 #'
+#' @description
+#' Get concept set expression object from concept set expression data frame
+#'
 #' @param conceptSetExpressionDataFrame   Concept set expression in data frame format.
 #'
 #' @param selectAllDescendants            Do you want to over ride the concept set
@@ -25,6 +28,9 @@
 #'
 #' @param purgeVocabularyDetails          Do you want to purge the details of concepts in the
 #'                                        concept set expression.
+#'                                        
+#' @return
+#' Returns a R list object
 #'
 #' @export
 getConceptSetExpressionFromConceptSetExpressionDataFrame <-

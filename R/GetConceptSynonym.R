@@ -17,6 +17,9 @@
 
 #' given a list of conceptIds, get their synonyms
 #'
+#' @description
+#' given a list of conceptIds, get their synonyms
+#'
 #' @template Connection
 #'
 #' @template ConceptIds

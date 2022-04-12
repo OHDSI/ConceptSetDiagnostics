@@ -29,6 +29,7 @@ getConceptSetSignatureExpression <-
            connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = 'vocabulary') {
+    browser()
     conceptSetExpression <-
       optimizeConceptSetExpression(
         connection = connection,

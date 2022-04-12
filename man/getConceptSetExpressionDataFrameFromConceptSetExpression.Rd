@@ -33,6 +33,9 @@ provided.}
 
 \item{recordCount}{Do you want the function to return record count for the concept ids?}
 }
+\value{
+Returns a tibble data frame.
+}
 \description{
 convert a concept set expression object into a data frame object
 }

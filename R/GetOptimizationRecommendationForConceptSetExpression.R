@@ -15,20 +15,32 @@
 # limitations under the License.
 #
 
-#' given a concept set tble, get optimization recommendation
+
+#' given a concept set expression, get optimization recommendation
+#'
+#' @description
+#' given a concept set expression, get optimization recommendation
 #'
 #' @template Connection
 #'
 #' @template VocabularyDatabaseSchema
 #'
-#' @param conceptSetExpressionDataFrame   Concept set expression in data frame format.
+#' @template TempEmulationSchema
+#'
+#' @template ConceptSetExpression
+#' 
+#' @return
+#' Returns a tibble data frame.
 #'
 #' @export
-getOptimizationRecommendationForConceptSetTable <-
-  function(conceptSetExpressionDataFrame,
+getOptimizationRecommendationForConceptSetExpression <-
+  function(conceptSetExpression,
            vocabularyDatabaseSchema = 'vocabulary',
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            connectionDetails = NULL,
            connection = NULL) {
+    conceptSetExpressionDataFrame <-
+      getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression)
     if (nrow(conceptSetExpressionDataFrame) <= 1) {
       # no optimization necessary
       return(
@@ -39,6 +51,18 @@ getOptimizationRecommendationForConceptSetTable <-
           ) %>%
           dplyr::select(.data$conceptId, .data$excluded, .data$removed)
       )
+    }
+    
+    if (all(is.null(connectionDetails),
+            is.null(connection))) {
+      stop('Please provide either connection or connectionDetails to connect to database.')
+    }
+    # Set up connection to server----
+    if (is.null(connection)) {
+      if (!is.null(connectionDetails)) {
+        connection <- DatabaseConnector::connect(connectionDetails)
+        on.exit(DatabaseConnector::disconnect(connection))
+      }
     }
     
     conceptSetConceptIdsExcluded <-
@@ -63,57 +87,58 @@ getOptimizationRecommendationForConceptSetTable <-
       dplyr::filter(.data$includeDescendants == TRUE) %>%
       dplyr::pull(.data$conceptId)
     
-    if (any(
-      is.null(conceptSetConceptIdsExcluded),
-      is.na(conceptSetConceptIdsExcluded),
-      length(conceptSetConceptIdsExcluded) == 0
-    )) {
+    if (!hasData(conceptSetConceptIdsExcluded)) {
       conceptSetConceptIdsExcluded <- 0
     }
-    
-    if (any(
-      is.null(conceptSetConceptIdsDescendantsExcluded),
-      is.na(conceptSetConceptIdsDescendantsExcluded),
-      length(conceptSetConceptIdsDescendantsExcluded) == 0
-    )) {
+    if (!hasData(conceptSetConceptIdsDescendantsExcluded)) {
       conceptSetConceptIdsDescendantsExcluded <- 0
     }
-    
-    if (any(
-      is.null(conceptSetConceptIdsNotExcluded),
-      is.na(conceptSetConceptIdsNotExcluded),
-      length(conceptSetConceptIdsNotExcluded) == 0
-    )) {
+    if (!hasData(conceptSetConceptIdsNotExcluded)) {
       conceptSetConceptIdsNotExcluded <- 0
     }
-    
-    if (any(
-      is.null(conceptSetConceptIdsDescendantsNotExcluded),
-      is.na(conceptSetConceptIdsDescendantsNotExcluded),
-      length(conceptSetConceptIdsDescendantsNotExcluded) == 0
-    )) {
+    if (!hasData(conceptSetConceptIdsDescendantsNotExcluded)) {
       conceptSetConceptIdsDescendantsNotExcluded <- 0
     }
     
-    sql <-
-      SqlRender::readSql(
-        sourceFile = system.file(
-          "sql",
-          "sql_server",
-          'OptimizeConceptSetWithTemporaryTable.sql',
-          package = "ConceptSetDiagnostics"
-        )
-      )
-    
-    data <- renderTranslateExecuteRetrieveSql(
-      connection = connection,
-      connectionDetails = connectionDetails,
-      sql = sql,
+    sql <- SqlRender::loadRenderTranslateSql(
+      "OptimizeConceptSet.sql",
+      packageName = utils::packageName(),
+      dbms = connection@dbms,
+      tempEmulationSchema = tempEmulationSchema,
       vocabulary_database_schema = vocabularyDatabaseSchema,
       conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
       conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
       conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
       conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
     )
+    
+    DatabaseConnector::executeSql(
+      connection = connection,
+      sql = sql,
+      reportOverallTime = FALSE,
+      progressBar = FALSE
+    )
+    
+    data <-
+      DatabaseConnector::renderTranslateQuerySql(
+        connection = connection,
+        sql = "SELECT * FROM #optimized_set;",
+        snakeCaseToCamelCase = TRUE
+      )
+    
+    sqlCleanUp <- "DROP TABLE IF EXISTS #optimized_set;"
+    
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = sqlCleanUp,
+      reportOverallTime = FALSE,
+      progressBar = FALSE
+    )
+    data <- data %>%
+      dplyr::filter(.data$conceptId != 0)
+    
+    if (nrow(data) == 0) {
+      return(NULL)
+    }
     return(data)
   }

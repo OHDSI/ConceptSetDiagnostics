@@ -17,7 +17,13 @@
 
 #' Get concept set details from cohort definition
 #'
+#' @description
+#' Get concept set details from cohort definition
+#'
 #' @template CohortExpression
+#' 
+#' @return
+#' Returns a tibble data frame.
 #'
 #' @export
 extractConceptSetDetailsFromCohortExpression <-
@@ -51,8 +57,8 @@ extractConceptSetDetailsFromCohortExpression <-
     # convert to data frame and then to named list object
     # assign unique id inside cohort definition expression
     
-    data <- dplyr::inner_join(x = conceptSetJson,
-                              y = conceptSetSql,
+    data <- dplyr::inner_join(x = extractedConceptSetExpression,
+                              y = extractedConceptSetSql,
                               by = c("conceptSetId"))
     return(data)
   }

@@ -22,6 +22,10 @@
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
+#' 
+#' @return
+#' Returns a tibble data frame.
+#' 
 #' @export
 getConceptRelationship <-
   function(conceptIds,

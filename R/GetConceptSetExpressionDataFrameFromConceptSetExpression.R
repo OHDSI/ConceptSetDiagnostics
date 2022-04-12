@@ -17,6 +17,9 @@
 
 #' convert a concept set expression object into a data frame object
 #'
+#' @description
+#' convert a concept set expression object into a data frame object
+#'
 #' @template Connection
 #'
 #' @param updateVocabularyFields  Do you want to update the details of concepts from the vocabulary tables?
@@ -26,6 +29,9 @@
 #' @template VocabularyDatabaseSchema
 #'
 #' @template conceptSetExpression
+#' 
+#' @return
+#' Returns a tibble data frame.
 #'
 #' @export
 getConceptSetExpressionDataFrameFromConceptSetExpression <-
