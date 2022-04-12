@@ -15,15 +15,19 @@
 # limitations under the License.
 #
 
-#' given a list of conceptIds, get their ancestor and descendants
+#' get concept ancestor
+#'
+#' @description
+#' given an array of conceptIds, get their ancestor and descendants.
 #'
 #' @template Connection
-#'
-#' @template ConnectionDetails
 #'
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
+#'
+#' @return
+#' Returns a tibble data frame.
 #'
 #' @export
 getConceptAncestor <-
@@ -35,21 +39,28 @@ getConceptAncestor <-
       stop('No concept id provided')
     }
     
+    start <- Sys.time()
+    
+    if (is.null(connection)) {
+      connection <- DatabaseConnector::connect(connectionDetails)
+      on.exit(DatabaseConnector::disconnect(connection))
+    }
+    
     sql <-
-      SqlRender::readSql(
-        sourceFile = system.file("sql", "sql_server", 'GetConceptAncestor.sql',
-                                 package = "ConceptSetDiagnostics")
+      SqlRender::loadRenderTranslateSql(
+        sqlFilename = "GetConceptAncestor.sql",
+        packageName = utils::packageName(),
+        dbms = connection@dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema
       )
     
     data <-
-      renderTranslateQuerySql(
+      DatabaseConnector::querySql(
         connection = connection,
-        connectionDetails = connectionDetails,
-        concept_ids = conceptIds,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
         sql = sql,
         snakeCaseToCamelCase = TRUE
       ) %>%
-      dplyr::arrange(1)
+      tidyr::tibble()
+    
     return(data)
   }
