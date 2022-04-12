@@ -15,15 +15,24 @@
 # limitations under the License.
 #
 
-#' Concept search using string
+#' get concept id details
+#'
+#' @description
+#' given an array of conceptIds, get their details
 #'
 #' @template Connection
-#'
-#' @template ConnectionDetails
 #'
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
+#'
+#' @param conceptPrevalenceTable A reference table (can be schemaName.tableName) that
+#'                               holds the concept prevalence data. The required fields are
+#'                               concept_id, rc, drc, dbc, ddbc. In case of error,
+#'                               cocneptPrevalence is silently ignored.
+#'
+#' @return
+#' Returns a tibble data frame.
 #'
 #' @export
 getConceptIdDetails <-
@@ -31,27 +40,58 @@ getConceptIdDetails <-
            connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = 'vocabulary',
-           conceptPrevalenceSchema = 'concept_prevalence') {
-    
+           conceptPrevalenceTable = 'concept_prevalence') {
     if (length(conceptIds) == 0) {
       stop('No concept id provided')
     }
     
+    start <- Sys.time()
+    
+    if (is.null(connection)) {
+      connection <- DatabaseConnector::connect(connectionDetails)
+      on.exit(DatabaseConnector::disconnect(connection))
+    }
+    
     sql <-
-      SqlRender::readSql(
-        sourceFile = system.file("sql", "sql_server", 'GetConceptIdDetails.sql',
-                                 package = "ConceptSetDiagnostics")
+      SqlRender::loadRenderTranslateSql(
+        sqlFilename = "GetConceptIdDetails.sql",
+        packageName = utils::packageName(),
+        dbms = connection@dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema
       )
     
-    data <-
-      renderTranslateQuerySql(
-        connection = connection,
-        connectionDetails = connectionDetails,
-        sql = sql,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        concept_prevalence_schema = conceptPrevalenceSchema,
-        concept_ids = conceptIds,
-        snakeCaseToCamelCase = TRUE
+    data <- DatabaseConnector::querySql(
+      connection = connection,
+      sql = sql,
+      snakeCaseToCamelCase = TRUE,
+      concept_ids = conceptIds
+    ) %>%
+      tidyr::tibble()
+    
+    if (!is.null(conceptPrevalenceTable)) {
+      conceptPrevalence <- tryCatch(
+        expr = {
+          DatabaseConnector::querySql(
+            connection = connection,
+            sql = "SELECT CONCEPT_ID, RC, DBC, DRC, DDBC
+              FROM @concept_prevalence_table
+              WHERE CONCEPT_ID IN (@concept_ids);",
+            snakeCaseToCamelCase = TRUE,
+            concept_ids = conceptIds
+          ) %>%
+            tidyr::tibble()
+        },
+        finally =
+          ParallelLogger::logInfo(" - Failed to obtain concept prevalence.")
       )
+    }
+    
+    if (exists("conceptPrevalence") &&
+        dplyr::is.tbl(conceptPrevalence)) {
+      data <- data %>%
+        dplyr::left_join(conceptPrevalence,
+                         by = "conceptId")
+    }
+    
     return(data)
   }
