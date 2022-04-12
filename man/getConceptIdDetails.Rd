@@ -2,14 +2,14 @@
 % Please edit documentation in R/GetConceptIdDetails.R
 \name{getConceptIdDetails}
 \alias{getConceptIdDetails}
-\title{Concept search using string}
+\title{get concept id details}
 \usage{
 getConceptIdDetails(
   conceptIds,
   connection = NULL,
   connectionDetails = NULL,
   vocabularyDatabaseSchema = "vocabulary",
-  conceptPrevalenceSchema = "concept_prevalence"
+  conceptPrevalenceTable = "concept_prevalence"
 )
 }
 \arguments{
@@ -27,7 +27,15 @@ DatabaseConnector package. Can be left NULL if \code{connection} is
 provided.}
 
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
+
+\item{conceptPrevalenceTable}{A reference table (can be schemaName.tableName) that
+holds the concept prevalence data. The required fields are
+concept_id, rc, drc, dbc, ddbc. In case of error,
+cocneptPrevalence is silently ignored.}
+}
+\value{
+Returns a tibble data frame.
 }
 \description{
-Concept search using string
+given an array of conceptIds, get their details
 }

@@ -19,8 +19,6 @@
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
 #' @template ConceptSetExpression
 #' 
 #' @template VocabularyDatabaseSchema
@@ -29,8 +27,7 @@
 resolveConceptSetExpression <- function(conceptSetExpression,
                                         connection = NULL,
                                         connectionDetails = NULL,
-                                        vocabularyDatabaseSchema = 'vocabulary',
-                                        conceptPrevalenceSchema = 'concept_prevalence') {
+                                        vocabularyDatabaseSchema = 'vocabulary') {
   # convert concept set expression R object (list) to data frame
   conceptSetExpressionDataFrame <-
     getConceptSetExpressionDataFrameFromConceptSetExpression(
@@ -38,8 +35,7 @@ resolveConceptSetExpression <- function(conceptSetExpression,
       connectionDetails = connectionDetails,
       conceptSetExpression =
         conceptSetExpression,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-      conceptPrevalenceSchema = conceptPrevalenceSchema
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema
     )
   
   # get all descendant concept ids (as dataframe) for concepts that have
@@ -67,8 +63,7 @@ resolveConceptSetExpression <- function(conceptSetExpression,
   conceptIdDetailsForDescendantConcepts <- getConceptIdDetails(conceptIds = descendantConcepts$conceptId,
                                                                connection = connection,
                                                                connectionDetails = connectionDetails,
-                                                               vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-                                                               conceptPrevalenceSchema = conceptPrevalenceSchema)
+                                                               vocabularyDatabaseSchema = vocabularyDatabaseSchema)
   
   descendantConcepts <- descendantConcepts %>% 
     dplyr::inner_join(conceptIdDetailsForDescendantConcepts, by = "conceptId")

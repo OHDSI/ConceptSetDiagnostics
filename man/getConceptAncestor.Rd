@@ -2,7 +2,7 @@
 % Please edit documentation in R/GetConceptAncestor.R
 \name{getConceptAncestor}
 \alias{getConceptAncestor}
-\title{given a list of conceptIds, get their ancestor and descendants}
+\title{get concept ancestor}
 \usage{
 getConceptAncestor(
   conceptIds,
@@ -27,6 +27,9 @@ provided.}
 
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 }
+\value{
+Returns a tibble data frame.
+}
 \description{
-given a list of conceptIds, get their ancestor and descendants
+given an array of conceptIds, get their ancestor and descendants.
 }

@@ -19,8 +19,6 @@
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
@@ -32,23 +30,31 @@ getMappedStandardConcepts <-
            connectionDetails = NULL,
            vocabularyDatabaseSchema = 'vocabulary') {
     if (length(conceptIds) == 0) {
-      stop('no concept id provided')
+      stop('No concept id provided')
+    }
+    
+    start <- Sys.time()
+    
+    if (is.null(connection)) {
+      connection <- DatabaseConnector::connect(connectionDetails)
+      on.exit(DatabaseConnector::disconnect(connection))
     }
     
     sql <-
-      SqlRender::readSql(
-        sourceFile = system.file("sql", "sql_server", 'GetMappedStandardcodes.sql',
-                                 package = "ConceptSetDiagnostics")
+      SqlRender::loadRenderTranslateSql(
+        sqlFilename = "GetMappedStandardcodes.sql",
+        packageName = utils::packageName(),
+        dbms = connection@dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema
       )
+    
     data <-
-      renderTranslateQuerySql(
+      DatabaseConnector::querySql(
         connection = connection,
-        connectionDetails = connectionDetails,
         sql = sql,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        conceptIds = conceptIds,
         snakeCaseToCamelCase = TRUE
       ) %>%
-      dplyr::arrange(1)
+      tidyr::tibble()
+    
     return(data)
   }

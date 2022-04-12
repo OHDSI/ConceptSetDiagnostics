@@ -32,16 +32,14 @@ combineConceptSetsInCohortDefinitionSet <-
     checkmate::reportAssertions(checkIfCohortDefinitionSet(cohorts))
     
     conceptSets <- list()
-    conceptSetCounter <- 0
     
     for (i in (1:nrow(cohortDefinitionSet))) {
-      cohort <- cohortDefinitionSet[i,]
-      conceptSetJson <-
-        extractConceptSetsJsonFromCohortJson(cohortJson = cohort$json)
+      cohort <- cohortDefinitionSet[i, ]
+      conceptSetExpression <-
+        extractConceptSetExpressionsFromCohortExpression(cohortExpression = RJSONIO::fromJSON(content = cohortDefinitionSet$json,
+                                                                                              digits = 23))
       conceptSetSql <-
-        extractConceptSetsSqlFromCohortJson(cohortSql = cohort$sql)
-      conceptSetJson$cohortId <- cohort$cohortId
-      conceptSetSql$cohortId <- cohort$cohortId
+        extractConceptSetsSqlFromCohortJson(cohortSql = getCohortSqlFromCohortExpressionUsingCirceR(cohortExpression = cohortDefinitionSet$json))
       
       conceptSets[[i]] <- cohort %>%
         dplyr::left_join(dplyr::inner_join(
@@ -55,8 +53,9 @@ combineConceptSetsInCohortDefinitionSet <-
       return(NULL)
     }
     conceptSets <- dplyr::bind_rows(conceptSets) %>%
-      dplyr::arrange(.data$cohortId, .data$conceptSetId)
+      dplyr::arrange(.data$conceptSetId)
     
+    # TO DO!!! refactor how concept sets are uniquely identified
     uniqueConceptSets <- conceptSets %>%
       dplyr::select(.data$conceptSetExpression) %>%
       dplyr::distinct() %>%
@@ -73,17 +72,3 @@ combineConceptSetsInCohortDefinitionSet <-
                      .data$conceptSetId)
     return(conceptSets)
   }
-
-
-checkIfCohortDefinitionSet <- function(cohortDefinitionSet) {
-  errorMessage <- checkmate::makeAssertCollection()
-  checkmate::assertDataFrame(x = cohorts,
-                             min.cols = 1,
-                             add = errorMessage)
-  checkmate::assertNames(
-    x = colnames(cohorts),
-    must.include = c('cohortId'),
-    add = errorMessage
-  )
-  errorMessage
-}

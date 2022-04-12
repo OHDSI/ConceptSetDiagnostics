@@ -1,9 +1,9 @@
---get all source codes that map to the list of concepts provided
-SELECT cr.CONCEPT_ID_2 AS NON_STANDARD_CONCEPT_ID,
+--get all standard codes that map to the list of provided source codes
+SELECT cr.CONCEPT_ID_2 AS SEARCHED_CONCEPT_ID,
   CONCEPT_ID,
 	CONCEPT_NAME,
 	STANDARD_CONCEPT,
-	ISNULL(c.INVALID_REASON, 'V') INVALID_REASON,
+	INVALID_REASON,
 	CONCEPT_CODE,
 	CONCEPT_CLASS_ID,
 	DOMAIN_ID,

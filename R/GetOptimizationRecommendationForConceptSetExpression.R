@@ -19,8 +19,6 @@
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
 #' @template VocabularyDatabaseSchema
 #'
 #' @param conceptSetExpressionDataFrame   Concept set expression in data frame format.

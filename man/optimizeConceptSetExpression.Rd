@@ -14,8 +14,6 @@ optimizeConceptSetExpression(
 \arguments{
 \item{conceptSetExpression}{An R-object (list) with expression of the concept set.}
 
-\item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
-
 \item{connection}{An object of type \code{connection} as created using the
 \code{\link[DatabaseConnector]{connect}} function in the
 DatabaseConnector package. Can be left NULL if \code{connectionDetails}

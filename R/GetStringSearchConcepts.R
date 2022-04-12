@@ -21,8 +21,6 @@
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
 #' @template VocabularyDatabaseSchema
 #'
 #' @param searchString A phrase (can be multiple words) to search for.

@@ -19,10 +19,6 @@
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
-#' @template VocabularyDatabaseSchema
-#'
 #' @template ConceptSetExpression
 #'
 #' @export

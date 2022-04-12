@@ -7,20 +7,14 @@
 \usage{
 getConceptSetExpressionDataFrameFromConceptSetExpression(
   conceptSetExpression,
-  updateVocabularyFields = FALSE,
-  recordCount = FALSE,
   connection = NULL,
   connectionDetails = NULL,
-  vocabularyDatabaseSchema = "vocabulary",
-  conceptPrevalenceSchema = "concept_prevalence"
+  updateVocabularyFields = FALSE,
+  vocabularyDatabaseSchema = "vocabulary"
 )
 }
 \arguments{
 \item{conceptSetExpression}{An R-object (list) with expression of the concept set.}
-
-\item{updateVocabularyFields}{Do you want to update the details of concepts from the vocabulary tables?}
-
-\item{recordCount}{Do you want the function to return record count for the concept ids?}
 
 \item{connection}{An object of type \code{connection} as created using the
 \code{\link[DatabaseConnector]{connect}} function in the
@@ -33,7 +27,11 @@ of the function, and closed when the function finishes.}
 DatabaseConnector package. Can be left NULL if \code{connection} is
 provided.}
 
+\item{updateVocabularyFields}{Do you want to update the details of concepts from the vocabulary tables?}
+
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
+
+\item{recordCount}{Do you want the function to return record count for the concept ids?}
 }
 \description{
 convert a concept set expression object into a data frame object

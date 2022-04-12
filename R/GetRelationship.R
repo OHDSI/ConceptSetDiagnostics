@@ -19,8 +19,6 @@
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
 #' @template VocabularyDatabaseSchema
 #'
 #' @export
@@ -28,14 +26,21 @@ getRelationship <-
   function(connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = 'vocabulary') {
+    start <- Sys.time()
+    
+    if (is.null(connection)) {
+      connection <- DatabaseConnector::connect(connectionDetails)
+      on.exit(DatabaseConnector::disconnect(connection))
+    }
+    
     data <-
-      renderTranslateQuerySql(
+      DatabaseConnector::querySql(
         connection = connection,
-        connectionDetails = connectionDetails,
         sql = "SELECT * FROM @vocabulary_database_schema.relationship;",
         vocabulary_database_schema = vocabularyDatabaseSchema,
         snakeCaseToCamelCase = TRUE
       ) %>%
-      dplyr::arrange(1)
+      tidyr::tibble()
+    
     return(data)
   }

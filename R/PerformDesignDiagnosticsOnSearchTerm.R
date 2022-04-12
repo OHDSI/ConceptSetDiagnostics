@@ -19,8 +19,6 @@
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
 #' @template VocabularyDatabaseSchema
 #'
 #' @param exportResults       Do you want to export results?

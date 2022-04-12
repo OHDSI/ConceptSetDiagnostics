@@ -19,8 +19,6 @@
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
 #' @param updateVocabularyFields  Do you want to update the details of concepts from the vocabulary tables?
 #'
 #' @param recordCount             Do you want the function to return record count for the concept ids?
@@ -32,12 +30,10 @@
 #' @export
 getConceptSetExpressionDataFrameFromConceptSetExpression <-
   function(conceptSetExpression,
-           updateVocabularyFields = FALSE,
-           recordCount = FALSE,
            connection = NULL,
            connectionDetails = NULL,
-           vocabularyDatabaseSchema = 'vocabulary',
-           conceptPrevalenceSchema = 'concept_prevalence') {
+           updateVocabularyFields = FALSE,
+           vocabularyDatabaseSchema = 'vocabulary') {
     if (length(conceptSetExpression) == 0) {
       return(NULL)
     }
@@ -118,46 +114,42 @@ getConceptSetExpressionDataFrameFromConceptSetExpression <-
     
     colnames <- colnames(conceptSetExpressionDetails)
     if (updateVocabularyFields) {
-      if (!is.null(connection) ||
-          !is.null(connectionDetails)) {
-        details <- getConceptIdDetails(
-          connection = connection,
-          connectionDetails = connectionDetails,
-          vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-          conceptPrevalenceSchema = conceptPrevalenceSchema,
-          conceptIds = conceptSetExpressionDetails$conceptId %>% unique()
-        )
-        conceptSetExpressionDetails <-
-          conceptSetExpressionDetails %>%
-          dplyr::select(
-            .data$conceptId,
-            .data$includeDescendants,
-            .data$includeMapped,
-            .data$isExcluded
-          ) %>%
-          dplyr::left_join(y = details, by = 'conceptId')
-        
-        conceptSetExpressionDetails <-
-          tidyr::replace_na(data = conceptSetExpressionDetails,
-                            replace = list(invalidReason = 'V')) %>%
-          dplyr::mutate(
-            invalidReasonCaption = dplyr::case_when(
-              invalidReason == 'V' ~ 'Valid',
-              invalidReason == 'D' ~ 'Deleted',
-              invalidReason == 'U' ~ 'Updated',
-              TRUE ~ 'Valid'
-            )
-          ) %>%
-          dplyr::mutate(
-            standardConceptCaption = dplyr::case_when(
-              standardConcept == 'S' ~ 'Standard',
-              standardConcept == 'C' ~ 'Classification',
-              TRUE ~ 'Non-standard'
-            )
+      details <- getConceptIdDetails(
+        connection = connection,
+        connectionDetails = connectionDetails,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        conceptIds = conceptSetExpressionDetails$conceptId %>% unique()
+      )
+      conceptSetExpressionDetails <-
+        conceptSetExpressionDetails %>%
+        dplyr::select(
+          .data$conceptId,
+          .data$includeDescendants,
+          .data$includeMapped,
+          .data$isExcluded
+        ) %>%
+        dplyr::left_join(y = details, by = 'conceptId')
+      
+      conceptSetExpressionDetails <-
+        tidyr::replace_na(data = conceptSetExpressionDetails,
+                          replace = list(invalidReason = 'V')) %>%
+        dplyr::mutate(
+          invalidReasonCaption = dplyr::case_when(
+            invalidReason == 'V' ~ 'Valid',
+            invalidReason == 'D' ~ 'Deleted',
+            invalidReason == 'U' ~ 'Updated',
+            TRUE ~ 'Valid'
           )
-      } else {
-        warning("No connection provided. Vocabulary will not be updated. Continuing.")
-      }
+        ) %>%
+        dplyr::mutate(
+          standardConceptCaption = dplyr::case_when(
+            standardConcept == 'S' ~ 'Standard',
+            standardConcept == 'C' ~ 'Classification',
+            TRUE ~ 'Non-standard'
+          )
+        )
+    } else {
+      warning("No connection provided. Vocabulary will not be updated. Continuing.")
     }
     
     if ('standardConceptCaption' %in% colnames(conceptSetExpressionDetails) &&
@@ -189,34 +181,5 @@ getConceptSetExpressionDataFrameFromConceptSetExpression <-
       .after = dplyr::last_col()) %>%
       dplyr::relocate('conceptId')
     
-    if (!recordCount) {
-      if ('rc' %in% colnames(conceptSetExpressionDetails)) {
-        conceptSetExpressionDetails <- conceptSetExpressionDetails %>%
-          dplyr::select(-.data$rc, -.data$dbc, -.data$drc, -.data$ddbc)
-      }
-    } else {
-      if (!'rc' %in% colnames(conceptSetExpressionDetails)) {
-        conceptIds <- conceptSetExpressionDetails$conceptId %>%
-          unique() %>%
-          getConceptIdDetails(
-            connection = connection,
-            connectionDetails = connectionDetails,
-            vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-            conceptPrevalenceSchema = conceptPrevalenceSchema
-          ) %>%
-          dplyr::select(.data$conceptId,
-                        .data$rc,
-                        .data$dbc,
-                        .data$drc,
-                        .data$ddbc)
-        conceptSetExpressionDetails <-
-          conceptSetExpressionDetails %>%
-          dplyr::left_join(y = conceptIds, by = "conceptId") %>%
-          dplyr::arrange(dplyr::desc(.data$drc))
-      } else {
-        conceptSetExpressionDetails <- conceptSetExpressionDetails %>%
-          dplyr::arrange(dplyr::desc(.data$drc))
-      }
-    }
     return(conceptSetExpressionDetails)
   }

@@ -19,8 +19,6 @@
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
@@ -31,26 +29,32 @@ getConceptSynonym <-
            connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = 'vocabulary') {
-    
     if (length(conceptIds) == 0) {
       stop('No concept id provided')
     }
     
+    start <- Sys.time()
+    
+    if (is.null(connection)) {
+      connection <- DatabaseConnector::connect(connectionDetails)
+      on.exit(DatabaseConnector::disconnect(connection))
+    }
+    
     sql <-
-      SqlRender::readSql(
-        sourceFile = system.file("sql", "sql_server", 'GetConceptSynonym.sql',
-                                 package = "ConceptSetDiagnostics")
+      SqlRender::loadRenderTranslateSql(
+        sqlFilename = "GetConceptSynonym.sql",
+        packageName = utils::packageName(),
+        dbms = connection@dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema
       )
     
     data <-
-      renderTranslateQuerySql(
+      DatabaseConnector::querySql(
         connection = connection,
-        connectionDetails = connectionDetails,
         sql = sql,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        concept_ids = conceptIds,
         snakeCaseToCamelCase = TRUE
       ) %>%
-      dplyr::arrange(1)
+      tidyr::tibble()
+    
     return(data)
   }

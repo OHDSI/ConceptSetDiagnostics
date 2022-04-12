@@ -66,21 +66,17 @@ getConceptIdDetails <-
       tidyr::tibble()
     
     if (!is.null(conceptPrevalenceTable)) {
-      conceptPrevalence <- tryCatch(
-        expr = {
-          DatabaseConnector::querySql(
-            connection = connection,
-            sql = "SELECT CONCEPT_ID, RC, DBC, DRC, DDBC
+      conceptPrevalence <- tryCatch(expr = {
+        DatabaseConnector::querySql(
+          connection = connection,
+          sql = "SELECT CONCEPT_ID, RC, DBC, DRC, DDBC
               FROM @concept_prevalence_table
               WHERE CONCEPT_ID IN (@concept_ids);",
-            snakeCaseToCamelCase = TRUE,
-            concept_ids = conceptIds
-          ) %>%
-            tidyr::tibble()
-        },
-        finally =
-          ParallelLogger::logInfo(" - Failed to obtain concept prevalence.")
-      )
+          snakeCaseToCamelCase = TRUE,
+          concept_ids = conceptIds
+        ) %>%
+          tidyr::tibble()
+      })
     }
     
     if (exists("conceptPrevalence") &&

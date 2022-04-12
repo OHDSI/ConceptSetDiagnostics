@@ -19,8 +19,6 @@
 #'
 #' @template Connection
 #'
-#' @template ConnectionDetails
-#'
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
