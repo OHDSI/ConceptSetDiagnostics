@@ -28,3 +28,30 @@ checkIfCohortDefinitionSet <- function(cohortDefinitionSet) {
   )
   errorMessage
 }
+
+
+# private function - not exported
+hasData <- function(data) {
+  if (is.null(data)) {
+    return(FALSE)
+  }
+  if (is.data.frame(data)) {
+    if (nrow(data) == 0) {
+      return(FALSE)
+    }
+  }
+  if (!is.data.frame(data)) {
+    if (length(data) == 0) {
+      return(FALSE)
+    }
+    if (length(data) == 1) {
+      if (is.na(data)) {
+        return(FALSE)
+      }
+      if (data == "") {
+        return(FALSE)
+      }
+    }
+  }
+  return(TRUE)
+}

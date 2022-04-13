@@ -16,7 +16,10 @@
 #
 
 #' given a concept set expression, return its signature
-#'
+#' 
+#' @description
+#' given a concept set expression, return its signature
+#' 
 #' @template Connection
 #'
 #' @template conceptSetExpression
@@ -30,15 +33,19 @@ getConceptSetSignatureExpression <-
            connectionDetails = NULL,
            vocabularyDatabaseSchema = 'vocabulary') {
     browser()
-    conceptSetExpression <-
+    debug(optimizeConceptSetExpression)
+    recommendedOptimizedConceptSetExpression <-
       optimizeConceptSetExpression(
         connection = connection,
         connectionDetails = connectionDetails,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         conceptSetExpression = conceptSetExpression
-      )$recommended %>%
-      getConceptSetExpressionDataFrameFromConceptSetExpression() %>%
-      # strip all meta information
-      getConceptSetExpressionFromConceptSetExpressionDataFrame(purgeVocabularyDetails = TRUE)
+      )
+    
+    conceptSetExpressionDataFrame <- getConceptSetExpressionDataFrameFromConceptSetExpression(recommendedOptimizedConceptSetExpression)
+    
+    conceptSetExpressionPurged <- 
+      getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame,
+                                                               purgeVocabularyDetails = TRUE)
     return(conceptSetExpression)
   }

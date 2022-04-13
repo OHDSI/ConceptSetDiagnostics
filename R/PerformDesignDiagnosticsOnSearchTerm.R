@@ -15,7 +15,10 @@
 # limitations under the License.
 #
 
-#' given a concept set table, perform design diagnostics
+#' given a search string, perform design diagnostics
+#'
+#' @description
+#' given a search string, perform design diagnostics
 #'
 #' @template Connection
 #'
@@ -31,23 +34,27 @@
 #'
 #' @param searchString        A phrase with one or more words to search for.
 #'
+#' @template ConceptPrevalenceTable
 #' @export
 performDesignDiagnosticsOnSearchTerm <-
   function(searchString,
+           connection = NULL,
+           connectionDetails = NULL,
            exportResults = FALSE,
            locationForResults = NULL,
            vocabularyDatabaseSchema = 'vocabulary',
            vocabularyIdOfInterest = c('SNOMED', 'HCPCS', 'ICD10CM', 'ICD10', 'ICD9CM', 'ICD9', 'Read'),
            domainIdOfInterest = c('Condition', 'Procedure', 'Observation'),
-           connection = NULL,
-           connectionDetails = NULL) {
+           conceptPrevalenceTable = 'concept_prevalence.universe') {
+    browser()
     # step perform string search
     searchResultConceptIds <-
       getStringSearchConcepts(
         connection = connection,
         connectionDetails = connectionDetails,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-        searchString = searchString
+        searchString = searchString,
+        conceptPrevalenceTable = conceptPrevalenceTable
       )
     if (length(vocabularyIdOfInterest) > 0) {
       searchResultConceptIds <- searchResultConceptIds %>%
@@ -59,11 +66,16 @@ performDesignDiagnosticsOnSearchTerm <-
     }
     
     # develop a concept set expression based on string search
-    conceptSetExpressionDataFrame <-
+    conceptSetExpression <-
       getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = searchResultConceptIds,
-                                                               selectAllDescendants = TRUE) %>%
-      getConceptSetSignatureExpression(connection = connection) %>%
+                                                               selectAllDescendants = TRUE)
+    conceptSetExpression <-
+      getConceptSetSignatureExpression(connection = connection,
+                                       conceptSetExpression = conceptSetExpression)
+    
+    conceptSetExpressionDataFrame <-
       getConceptSetExpressionDataFrameFromConceptSetExpression(
+        conceptSetExpression = conceptSetExpressionDataFrame,
         updateVocabularyFields = TRUE,
         connection = connection,
         connectionDetails = connectionDetails

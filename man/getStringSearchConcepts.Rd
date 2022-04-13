@@ -9,7 +9,7 @@ getStringSearchConcepts(
   vocabularyDatabaseSchema = "vocabulary",
   connection = NULL,
   connectionDetails = NULL,
-  conceptPrevalenceSchema = "concept_prevalence"
+  conceptPrevalenceTable = "concept_prevalence.universe"
 )
 }
 \arguments{
@@ -27,6 +27,11 @@ of the function, and closed when the function finishes.}
 \code{\link[DatabaseConnector]{createConnectionDetails}} function in the
 DatabaseConnector package. Can be left NULL if \code{connection} is
 provided.}
+
+\item{conceptPrevalenceTable}{A reference table (can be schemaName.tableName) that
+holds the concept prevalence data. The required fields are
+concept_id, rc, drc, dbc, ddbc. In case of error,
+cocneptPrevalence is silently ignored.}
 }
 \description{
 Get concepts that match a string search

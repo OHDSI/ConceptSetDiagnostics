@@ -2,32 +2,23 @@
 % Please edit documentation in R/PerformDesignDiagnosticsOnSearchTerm.R
 \name{performDesignDiagnosticsOnSearchTerm}
 \alias{performDesignDiagnosticsOnSearchTerm}
-\title{given a concept set table, perform design diagnostics}
+\title{given a search string, perform design diagnostics}
 \usage{
 performDesignDiagnosticsOnSearchTerm(
   searchString,
+  connection = NULL,
+  connectionDetails = NULL,
   exportResults = FALSE,
   locationForResults = NULL,
   vocabularyDatabaseSchema = "vocabulary",
   vocabularyIdOfInterest = c("SNOMED", "HCPCS", "ICD10CM", "ICD10", "ICD9CM", "ICD9",
     "Read"),
   domainIdOfInterest = c("Condition", "Procedure", "Observation"),
-  connection = NULL,
-  connectionDetails = NULL
+  conceptPrevalenceTable = "concept_prevalence.universe"
 )
 }
 \arguments{
 \item{searchString}{A phrase with one or more words to search for.}
-
-\item{exportResults}{Do you want to export results?}
-
-\item{locationForResults}{If you want to export results, please provide disk drive location}
-
-\item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
-
-\item{vocabularyIdOfInterest}{A list of vocabulary ids to filter the results.}
-
-\item{domainIdOfInterest}{A list of domain ids to filter the results.}
 
 \item{connection}{An object of type \code{connection} as created using the
 \code{\link[DatabaseConnector]{connect}} function in the
@@ -39,7 +30,22 @@ of the function, and closed when the function finishes.}
 \code{\link[DatabaseConnector]{createConnectionDetails}} function in the
 DatabaseConnector package. Can be left NULL if \code{connection} is
 provided.}
+
+\item{exportResults}{Do you want to export results?}
+
+\item{locationForResults}{If you want to export results, please provide disk drive location}
+
+\item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
+
+\item{vocabularyIdOfInterest}{A list of vocabulary ids to filter the results.}
+
+\item{domainIdOfInterest}{A list of domain ids to filter the results.}
+
+\item{conceptPrevalenceTable}{A reference table (can be schemaName.tableName) that
+holds the concept prevalence data. The required fields are
+concept_id, rc, drc, dbc, ddbc. In case of error,
+cocneptPrevalence is silently ignored.}
 }
 \description{
-given a concept set table, perform design diagnostics
+given a search string, perform design diagnostics
 }

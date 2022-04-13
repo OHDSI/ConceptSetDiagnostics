@@ -37,11 +37,11 @@ optimizeConceptSetExpression <-
       )
     
     optimizationRecommendation <-
-      getOptimizationRecommendationForConceptSetTable(
+      getOptimizationRecommendationForConceptSetExpression(
         connection = connection,
         connectionDetails = connectionDetails,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-        conceptSetExpressionDataFrame = conceptSetExpressionDataFrame
+        conceptSetExpression = conceptSetExpression
       )
     
     removed <- optimizationRecommendation %>%

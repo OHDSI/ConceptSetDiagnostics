@@ -1,14 +1,15 @@
-## create output location
-locationForResults <-
-  file.path("D:\\OHDSI\\OHDSI\\Workgroup - Phenotype Development and Evaluation - Documents\\Long Covid\\Gowtham", 'longCovid', outputLocation)
-
-
 # given key words
 keyWords <- c('Abdominal pain')
 
 outputLocation <- stringr::str_replace_all(string = keyWords[[1]], 
-                                       pattern = " ",
-                                       replacement = "")
+                                           pattern = " ",
+                                           replacement = "")
+
+## create output location
+locationForResults <-
+  file.path("D:\\temp\\conceptSetDiagnostics", outputLocation)
+
+
 vocabularyIdOfInterest <- c('SNOMED', 'HCPCS', 'ICD10CM', 'ICD10', 'ICD9CM', 'ICD9', 'Read')
 domainIdOfInterest <- c('Condition', 'Observation')
 # Details for connecting to the server:
