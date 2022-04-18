@@ -25,10 +25,10 @@
 #' @template ConceptSetExpression
 #'
 #' @template VocabularyDatabaseSchema
-#' 
+#'
 #' @return
 #' Returns a tibble data frame.
-#' 
+#'
 #' @export
 getExcludedConceptsInConceptSetExpression <-
   function(conceptSetExpression,
@@ -36,32 +36,32 @@ getExcludedConceptsInConceptSetExpression <-
            connectionDetails = NULL,
            vocabularyDatabaseSchema = "vocabulary") {
     start <- Sys.time()
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     conceptSetDataFrame <-
       getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = conceptSetExpression)
-    
+
     if (!"isExcluded" %in% colnames(conceptSetDataFrame)) {
       return(NULL)
     }
-    
+
     excludeRows <- conceptSetDataFrame %>%
       dplyr::filter(.data$isExcluded == 1)
     excludeRowsDescendants <- excludeRows %>%
       dplyr::filter(.data$includeDescendants == TRUE)
     excludeRowsNoDescendants <- excludeRows %>%
       dplyr::filter(.data$includeDescendants == FALSE)
-    
-    
+
+
     sql <-
       "SELECT concept_id
       	FROM @vocabulary_database_schema.concept_ancestor anc
       	ancestor_concept_id IN (@excludeWithDescendants);"
-    
+
     excludeConceptIdsWithDescendants <-
       DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
@@ -69,20 +69,20 @@ getExcludedConceptsInConceptSetExpression <-
         vocabulary_database_schema = vocabularyDatabaseSchema,
         excludeWithDescendants = excludeRowsDescendants$conceptId %>% unique()
       )
-    
+
     allExcludedConceptIds <-
       dplyr::bind_rows(
         excludeConceptIdsWithDescendants,
         excludeRowsNoDescendants %>% dplyr::select(conceptId)
       ) %>%
       dplyr::distinct()
-    
+
     data <-
       getConceptIdDetails(
         conceptIds = allExcludedConceptIds$conceptId %>% unique(),
         connection = connection,
         vocabularyDatabaseSchema = vocabularyIdOfInterest
       )
-    
+
     return(data)
   }

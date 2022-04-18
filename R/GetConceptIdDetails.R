@@ -36,19 +36,19 @@ getConceptIdDetails <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
-           vocabularyDatabaseSchema = 'vocabulary',
-           conceptPrevalenceTable = 'concept_prevalence') {
+           vocabularyDatabaseSchema = "vocabulary",
+           conceptPrevalenceTable = "concept_prevalence") {
     if (length(conceptIds) == 0) {
-      stop('No concept id provided')
+      stop("No concept id provided")
     }
-    
+
     start <- Sys.time()
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     sql <-
       SqlRender::loadRenderTranslateSql(
         sqlFilename = "GetConceptIdDetails.sql",
@@ -56,7 +56,7 @@ getConceptIdDetails <-
         dbms = connection@dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema
       )
-    
+
     data <- DatabaseConnector::querySql(
       connection = connection,
       sql = sql,
@@ -64,7 +64,7 @@ getConceptIdDetails <-
       concept_ids = conceptIds
     ) %>%
       tidyr::tibble()
-    
+
     if (!is.null(conceptPrevalenceTable)) {
       conceptPrevalence <- tryCatch(expr = {
         DatabaseConnector::querySql(
@@ -78,13 +78,14 @@ getConceptIdDetails <-
           tidyr::tibble()
       })
     }
-    
+
     if (exists("conceptPrevalence") &&
-        dplyr::is.tbl(conceptPrevalence)) {
+      dplyr::is.tbl(conceptPrevalence)) {
       data <- data %>%
         dplyr::left_join(conceptPrevalence,
-                         by = "conceptId")
+          by = "conceptId"
+        )
     }
-    
+
     return(data)
   }

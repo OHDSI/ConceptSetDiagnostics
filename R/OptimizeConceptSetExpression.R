@@ -24,7 +24,7 @@
 #' @export
 optimizeConceptSetExpression <-
   function(conceptSetExpression,
-           vocabularyDatabaseSchema = 'vocabulary',
+           vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
            connectionDetails = NULL) {
     conceptSetExpressionDataFrame <-
@@ -35,7 +35,7 @@ optimizeConceptSetExpression <-
         conceptSetExpression =
           conceptSetExpression
       )
-    
+
     optimizationRecommendation <-
       getOptimizationRecommendationForConceptSetExpression(
         connection = connection,
@@ -43,43 +43,47 @@ optimizeConceptSetExpression <-
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         conceptSetExpression = conceptSetExpression
       )
-    
+
     removed <- optimizationRecommendation %>%
       dplyr::mutate(isExcluded = as.logical(.data$excluded)) %>%
       dplyr::filter(.data$removed == 1) %>%
       dplyr::select(.data$conceptId, .data$isExcluded)
-    
+
     retained <- optimizationRecommendation %>%
       dplyr::mutate(isExcluded = as.logical(.data$excluded)) %>%
       dplyr::filter(.data$removed == 0) %>%
       dplyr::anti_join(removed %>%
-                         dplyr::select(.data$conceptId) %>%
-                         dplyr::distinct()) %>%
+        dplyr::select(.data$conceptId) %>%
+        dplyr::distinct(),
+      by = "conceptId"
+      ) %>%
       dplyr::select(.data$conceptId, .data$isExcluded)
-    
+
     if (nrow(retained) > 0) {
       conceptSetExpressionDataFrame <- conceptSetExpression %>%
         getConceptSetExpressionDataFrameFromConceptSetExpression() %>%
-        dplyr::inner_join(retained, by = c('conceptId', 'isExcluded'))
+        dplyr::inner_join(retained, by = c("conceptId", "isExcluded"))
     }
-    
+
     if (nrow(removed) > 0) {
       removed <- conceptSetExpression %>%
         getConceptSetExpressionDataFrameFromConceptSetExpression() %>%
-        dplyr::inner_join(removed, by = c('conceptId', 'isExcluded'))
+        dplyr::inner_join(removed, by = c("conceptId", "isExcluded"))
     } else {
       removed <- NULL
     }
-    
+
     conceptSetExpressionDataFrame <-
       conceptSetExpressionDataFrame %>%
       dplyr::arrange(.data$conceptId)
-    
+
     conceptSetExpression <-
       getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = conceptSetExpressionDataFrame)
-    
-    data <- list(recommended = conceptSetExpression,
-                 removed = removed)
-    
+
+    data <- list(
+      recommended = conceptSetExpression,
+      removed = removed
+    )
+
     return(data)
   }

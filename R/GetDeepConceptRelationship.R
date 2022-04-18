@@ -27,23 +27,25 @@ getDeepConceptRelationship <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
-           vocabularyDatabaseSchema = 'vocabulary',
-           conceptPrevalenceSchema = 'concept_prevalence') {
+           vocabularyDatabaseSchema = "vocabulary",
+           conceptPrevalenceSchema = "concept_prevalence") {
     browser()
     if (length(conceptIds) == 0) {
-      stop('No concept id provided')
+      stop("No concept id provided")
     }
-    
+
     conceptAncestor <-
-      ConceptSetDiagnostics::getConceptAncestor(conceptIds = conceptIds,
-                                                connection = connection,
-                                                connectionDetails = connectionDetails,
-                                                vocabularyDatabaseSchema = vocabularyDatabaseSchema) %>%
+      ConceptSetDiagnostics::getConceptAncestor(
+        conceptIds = conceptIds,
+        connection = connection,
+        connectionDetails = connectionDetails,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      ) %>%
       dplyr::mutate(
         relationshipDirection = dplyr::if_else(
           condition = .data$ancestorConceptId == conceptIds,
-          true = 'd',
-          false = 'u'
+          true = "d",
+          false = "u"
         )
       )
     conceptAncestor <- dplyr::bind_rows(
@@ -56,14 +58,14 @@ getDeepConceptRelationship <-
         dplyr::rename(searchedConceptId = .data$descendantConceptId) %>%
         dplyr::rename(conceptId = .data$ancestorConceptId)
     )
-    
+
     conceptRelationship <-
       ConceptSetDiagnostics::getConceptRelationship(
         conceptIds = conceptAncestor$conceptId %>% unique(),
         connection = connection,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
-    
+
     conceptRelationship <- dplyr::bind_rows(
       conceptRelationship %>%
         dplyr::inner_join(conceptAncestor, by = c("conceptId1" = "conceptId")) %>%
@@ -87,11 +89,11 @@ getDeepConceptRelationship <-
         .data$relationshipDirection,
         .data$conceptId
       )
-    
+
     if (nrow(conceptRelationship) == 0) {
       return(NULL)
     }
-    
+
     conceptIdDetails <-
       ConceptSetDiagnostics::getConceptIdDetails(
         conceptIds = c(
@@ -103,9 +105,11 @@ getDeepConceptRelationship <-
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         conceptPrevalenceSchema = conceptPrevalenceSchema
       )
-    
-    data <- list(conceptRelationship = conceptRelationship,
-                 concepts = conceptIdDetails)
-    
+
+    data <- list(
+      conceptRelationship = conceptRelationship,
+      concepts = conceptIdDetails
+    )
+
     return(data)
   }

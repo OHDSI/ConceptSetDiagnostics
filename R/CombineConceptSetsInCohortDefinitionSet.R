@@ -28,47 +28,54 @@
 #' @export
 combineConceptSetsInCohortDefinitionSet <-
   function(cohortDefinitionSet) {
-    #cohorts should be a dataframe with at least cohortId, sql and json
+    # cohorts should be a dataframe with at least cohortId, sql and json
     checkmate::reportAssertions(checkIfCohortDefinitionSet(cohorts))
-    
+
     conceptSets <- list()
-    
+
     for (i in (1:nrow(cohortDefinitionSet))) {
       cohort <- cohortDefinitionSet[i, ]
       conceptSetExpression <-
-        extractConceptSetExpressionsFromCohortExpression(cohortExpression = RJSONIO::fromJSON(content = cohortDefinitionSet$json,
-                                                                                              digits = 23))
+        extractConceptSetExpressionsFromCohortExpression(cohortExpression = RJSONIO::fromJSON(
+          content = cohortDefinitionSet$json,
+          digits = 23
+        ))
       conceptSetSql <-
         extractConceptSetsSqlFromCohortJson(cohortSql = getCohortSqlFromCohortExpressionUsingCirceR(cohortExpression = cohortDefinitionSet$json))
-      
+
       conceptSets[[i]] <- cohort %>%
         dplyr::left_join(dplyr::inner_join(
           x = conceptSetJson,
           y = conceptSetSql,
           by = c("cohortId", "conceptSetId")
         ),
-        by = c("cohortId"))
+        by = c("cohortId")
+        )
     }
     if (length(conceptSets) == 0) {
       return(NULL)
     }
     conceptSets <- dplyr::bind_rows(conceptSets) %>%
       dplyr::arrange(.data$conceptSetId)
-    
+
     # TO DO!!! refactor how concept sets are uniquely identified
     uniqueConceptSets <- conceptSets %>%
       dplyr::select(.data$conceptSetExpression) %>%
       dplyr::distinct() %>%
       dplyr::mutate(uniqueConceptSetId = dplyr::row_number())
-    
+
     conceptSets <- conceptSets %>%
       dplyr::inner_join(uniqueConceptSets, by = "conceptSetExpression") %>%
       dplyr::distinct() %>%
-      dplyr::relocate(.data$uniqueConceptSetId,
-                      .data$cohortId,
-                      .data$conceptSetId) %>%
-      dplyr::arrange(.data$uniqueConceptSetId,
-                     .data$cohortId,
-                     .data$conceptSetId)
+      dplyr::relocate(
+        .data$uniqueConceptSetId,
+        .data$cohortId,
+        .data$conceptSetId
+      ) %>%
+      dplyr::arrange(
+        .data$uniqueConceptSetId,
+        .data$cohortId,
+        .data$conceptSetId
+      )
     return(conceptSets)
   }

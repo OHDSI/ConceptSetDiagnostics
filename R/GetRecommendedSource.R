@@ -26,19 +26,20 @@
 #' @export
 getRecommendedSource <-
   function(conceptIds,
-           vocabularyDatabaseSchema = 'vocabulary',
+           vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
            connectionDetails = NULL,
-           conceptPrevalenceSchema = 'concept_prevalence') {
+           conceptPrevalenceSchema = "concept_prevalence") {
     # Filtering strings to letters, numbers and spaces only to avoid SQL injection:
-    conceptIds <-  gsub("[^a-zA-Z0-9 ,]", " ", conceptIds)
-    
+    conceptIds <- gsub("[^a-zA-Z0-9 ,]", " ", conceptIds)
+
     sql <-
       SqlRender::readSql(
-        sourceFile = system.file("sql", "sql_server", 'RecommendationSource.sql',
-                                 package = "ConceptSetDiagnostics")
+        sourceFile = system.file("sql", "sql_server", "RecommendationSource.sql",
+          package = "ConceptSetDiagnostics"
+        )
       )
-    
+
     data <-
       renderTranslateQuerySql(
         connection = connection,

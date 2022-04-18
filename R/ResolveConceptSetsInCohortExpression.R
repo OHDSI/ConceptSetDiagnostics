@@ -27,11 +27,13 @@
 resolveConceptSetsInCohortExpression <- function(cohortExpression,
                                                  connection = NULL,
                                                  connectionDetails = NULL,
-                                                 vocabularyDatabaseSchema = 'vocabulary') {
+                                                 vocabularyDatabaseSchema = "vocabulary") {
   conceptSetExpressionDataFrame <-
-    extractConceptSetDetailsFromCohortExpression(cohortExpression =
-                                                   cohortExpression)
-  
+    extractConceptSetDetailsFromCohortExpression(
+      cohortExpression =
+        cohortExpression
+    )
+
   resolvedConceptSet <- list()
   for (i in (1:nrow(conceptSetExpressionDataFrame))) {
     sql <- conceptSetExpressionDataFrame[i, ]$conceptSetSql
@@ -42,7 +44,7 @@ resolveConceptSetsInCohortExpression <- function(cohortExpression,
         vocabulary_database_schema = vocabularyDatabaseSchema
       )
   }
-  
+
   resolvedConceptSet <- dplyr::bind_rows(resolvedConceptSet)
   return(resolvedConceptSet)
 }

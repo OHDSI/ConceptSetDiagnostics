@@ -18,12 +18,14 @@
 
 checkIfCohortDefinitionSet <- function(cohortDefinitionSet) {
   errorMessage <- checkmate::makeAssertCollection()
-  checkmate::assertDataFrame(x = cohorts,
-                             min.cols = 1,
-                             add = errorMessage)
+  checkmate::assertDataFrame(
+    x = cohorts,
+    min.cols = 1,
+    add = errorMessage
+  )
   checkmate::assertNames(
     x = colnames(cohorts),
-    must.include = c('cohortId'),
+    must.include = c("cohortId"),
     add = errorMessage
   )
   errorMessage

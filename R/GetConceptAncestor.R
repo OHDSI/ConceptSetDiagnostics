@@ -34,18 +34,18 @@ getConceptAncestor <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
-           vocabularyDatabaseSchema = 'vocabulary') {
+           vocabularyDatabaseSchema = "vocabulary") {
     if (length(conceptIds) == 0) {
-      stop('No concept id provided')
+      stop("No concept id provided")
     }
-    
+
     start <- Sys.time()
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     sql <-
       SqlRender::loadRenderTranslateSql(
         sqlFilename = "GetConceptAncestor.sql",
@@ -53,7 +53,7 @@ getConceptAncestor <-
         dbms = connection@dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema
       )
-    
+
     data <-
       DatabaseConnector::querySql(
         connection = connection,
@@ -61,6 +61,6 @@ getConceptAncestor <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
-    
+
     return(data)
   }

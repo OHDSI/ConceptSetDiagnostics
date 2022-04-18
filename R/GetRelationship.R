@@ -25,14 +25,14 @@
 getRelationship <-
   function(connection = NULL,
            connectionDetails = NULL,
-           vocabularyDatabaseSchema = 'vocabulary') {
+           vocabularyDatabaseSchema = "vocabulary") {
     start <- Sys.time()
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     data <-
       DatabaseConnector::querySql(
         connection = connection,
@@ -41,6 +41,6 @@ getRelationship <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
-    
+
     return(data)
   }

@@ -25,7 +25,7 @@
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
-#' 
+#'
 #' @return
 #' Returns a tibble data frame.
 #'
@@ -34,18 +34,18 @@ getMappedStandardConcepts <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
-           vocabularyDatabaseSchema = 'vocabulary') {
+           vocabularyDatabaseSchema = "vocabulary") {
     if (length(conceptIds) == 0) {
-      stop('No concept id provided')
+      stop("No concept id provided")
     }
-    
+
     start <- Sys.time()
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     sql <-
       SqlRender::loadRenderTranslateSql(
         sqlFilename = "GetMappedStandardcodes.sql",
@@ -53,7 +53,7 @@ getMappedStandardConcepts <-
         dbms = connection@dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema
       )
-    
+
     data <-
       DatabaseConnector::querySql(
         connection = connection,
@@ -61,6 +61,6 @@ getMappedStandardConcepts <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
-    
+
     return(data)
   }

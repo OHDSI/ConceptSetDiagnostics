@@ -29,26 +29,28 @@
 #' @param vocabularyIdOfInterest A list of vocabulary id from OMOP to filter the results
 #'
 #' @param domainIdOfInterest A list of domain id from OMOP to filter the results
-#' 
+#'
 #' @template ConceptPrevalenceTable
 #'
 #' @return
 #' Returns a tibble data frame.
-#' 
+#'
 #' @export
 getRecommendationForConceptSetExpression <-
   function(conceptSetExpression,
-           vocabularyDatabaseSchema = 'vocabulary',
-           vocabularyIdOfInterest = c('SNOMED', 'HCPCS', 'ICD10CM', 'ICD10', 'ICD9CM', 'ICD9', 'Read'),
-           domainIdOfInterest = c('Condition', 'Procedure', 'Observation'),
+           vocabularyDatabaseSchema = "vocabulary",
+           vocabularyIdOfInterest = c("SNOMED", "HCPCS", "ICD10CM", "ICD10", "ICD9CM", "ICD9", "Read"),
+           domainIdOfInterest = c("Condition", "Procedure", "Observation"),
            connection = NULL,
            connectionDetails = NULL,
-           conceptPrevalenceSchema = 'concept_prevalence') {
+           conceptPrevalenceSchema = "concept_prevalence") {
     browser()
     conceptSetExpressionDataFrame <-
-      getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = conceptSetExpression,
-                                                               vocabularyDatabaseSchema = vocabularyDatabaseSchema)
-    
+      getConceptSetExpressionDataFrameFromConceptSetExpression(
+        conceptSetExpression = conceptSetExpression,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      )
+
     if (length(vocabularyIdOfInterest) > 0) {
       conceptSetExpressionDataFrame <- conceptSetExpressionDataFrame %>%
         dplyr::filter(.data$vocabularyId %in% vocabularyIdOfInterest)
@@ -57,10 +59,10 @@ getRecommendationForConceptSetExpression <-
       conceptSetExpressionDataFrame <- conceptSetExpressionDataFrame %>%
         dplyr::filter(.data$domainId %in% domainIdOfInterest)
     }
-    
+
     conceptSetExpression <-
       getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = conceptSetExpressionDataFrame)
-    
+
     resolvedConceptIds <-
       resolveConceptSetExpression(
         conceptSetExpression = conceptSetExpression,
@@ -68,7 +70,7 @@ getRecommendationForConceptSetExpression <-
         connectionDetails = connectionDetails,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
-    
+
     forRecommendation <-
       c(
         resolvedConceptIds$resolvedConcepts$conceptId,
@@ -90,7 +92,7 @@ getRecommendationForConceptSetExpression <-
         conceptIds = forRecommendation,
         conceptPrevalenceSchema = conceptPrevalenceSchema
       )
-    
+
     data <- list()
     data$recommendedStandard <- recommendedStandard
     data$recommendedSource <- recommendedSource

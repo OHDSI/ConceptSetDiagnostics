@@ -28,7 +28,7 @@
 #'
 #' @param purgeVocabularyDetails          Do you want to purge the details of concepts in the
 #'                                        concept set expression.
-#'                                        
+#'
 #' @return
 #' Returns a R list object
 #'
@@ -37,23 +37,23 @@ getConceptSetExpressionFromConceptSetExpressionDataFrame <-
   function(conceptSetExpressionDataFrame,
            selectAllDescendants = FALSE,
            purgeVocabularyDetails = FALSE) {
-    if (!'includeMapped' %in% colnames(conceptSetExpressionDataFrame)) {
+    if (!"includeMapped" %in% colnames(conceptSetExpressionDataFrame)) {
       conceptSetExpressionDataFrame$includeMapped <- FALSE
     }
-    if (!'isExcluded' %in% colnames(conceptSetExpressionDataFrame)) {
+    if (!"isExcluded" %in% colnames(conceptSetExpressionDataFrame)) {
       conceptSetExpressionDataFrame$isExcluded <- FALSE
     }
-    if (!'includeDescendants' %in% colnames(conceptSetExpressionDataFrame)) {
+    if (!"includeDescendants" %in% colnames(conceptSetExpressionDataFrame)) {
       conceptSetExpressionDataFrame$includeDescendants <- FALSE
     }
     if (selectAllDescendants) {
       conceptSetExpressionDataFrame <-
         dplyr::bind_rows(
           conceptSetExpressionDataFrame %>%
-            dplyr::filter(.data$standardConcept == 'S') %>%
+            dplyr::filter(.data$standardConcept == "S") %>%
             dplyr::mutate(includeDescendants = TRUE),
           conceptSetExpressionDataFrame %>%
-            dplyr::filter(!.data$standardConcept == 'S') %>%
+            dplyr::filter(!.data$standardConcept == "S") %>%
             dplyr::mutate(includeDescendants = FALSE)
         )
     }
@@ -75,7 +75,7 @@ getConceptSetExpressionFromConceptSetExpressionDataFrame <-
     # so the case conversion below should always be valid, if convention is followed
     colnames(conceptSetExpressionDataFrame) <-
       toupper(SqlRender::camelCaseToSnakeCase(colnames(conceptSetExpressionDataFrame)))
-    
+
     conceptSetExpression <- list()
     conceptSetExpression$items <- list()
     if (nrow(conceptSetExpressionDataFrame) > 0) {
@@ -83,12 +83,14 @@ getConceptSetExpressionFromConceptSetExpressionDataFrame <-
         conceptSetExpression$items[[i]] <- list()
         conceptSetExpression$items[[i]]$concept <-
           conceptSetExpressionDataFrame[i, ] %>%
-          dplyr::select(-.data$INCLUDE_DESCENDANTS,
-                        -.data$INCLUDE_MAPPED,
-                        -.data$IS_EXCLUDED) %>%
+          dplyr::select(
+            -.data$INCLUDE_DESCENDANTS,
+            -.data$INCLUDE_MAPPED,
+            -.data$IS_EXCLUDED
+          ) %>%
           as.list()
-        conceptSetExpression$items[[i]]$isExcluded <- 
-        conceptSetExpressionDataFrame$IS_EXCLUDED[i]
+        conceptSetExpression$items[[i]]$isExcluded <-
+          conceptSetExpressionDataFrame$IS_EXCLUDED[i]
         conceptSetExpression$items[[i]]$includeDescendants <-
           conceptSetExpressionDataFrame$INCLUDE_DESCENDANTS[i]
         conceptSetExpression$items[[i]]$includeMapped <-

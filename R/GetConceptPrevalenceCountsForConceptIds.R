@@ -34,26 +34,26 @@
 getConceptPrevalenceCounts <- function(conceptIds,
                                        connection = NULL,
                                        connectionDetails = NULL,
-                                       conceptPrevalenceTable = 'concept_prevalence') {
+                                       conceptPrevalenceTable = "concept_prevalence") {
   if (length(conceptIds) == 0) {
-    stop('No concept id provided')
+    stop("No concept id provided")
   }
   if (is.null(conceptPrevalenceTable) ||
-      length(conceptPrevalenceTable) == 0) {
-    stop('Please provide concept prevalence table')
+    length(conceptPrevalenceTable) == 0) {
+    stop("Please provide concept prevalence table")
   }
-  
+
   start <- Sys.time()
-  
+
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-  
+
   sql <- "select *
           from @conceptPrevalenceTable
           where concept_id in (@concept_ids);"
-  
+
   data <-
     DatabaseConnector::renderTranslateQuerySql(
       connection = connection,

@@ -24,7 +24,7 @@
 #' SQL is a string that may be used with SqlRender.
 #'
 #' @template CohortExpression
-#' 
+#'
 #' @param generateStats  Do you want to include cohort generation stats tables in the SQL?
 #'
 #' @return
@@ -36,15 +36,16 @@ getCohortSqlFromCohortExpressionUsingCirceR <-
            generateStats = TRUE) {
     if ("expression" %in% names(cohortDefinitionExpression)) {
       expression <- cohortDefinitionExpression$expression
-    }
-    else {
+    } else {
       expression <- cohortDefinitionExpression
     }
-    
+
     # use circe to render cohort sql
     circeRCohortExpressionFromJson <-
-      CirceR::cohortExpressionFromJson(expressionJson = RJSONIO::toJSON(x = expression,
-                                                                        digits = 23))
+      CirceR::cohortExpressionFromJson(expressionJson = RJSONIO::toJSON(
+        x = expression,
+        digits = 23
+      ))
     circeRenderedSqlExpression <-
       CirceR::buildCohortQuery(
         expression = circeRCohortExpressionFromJson,

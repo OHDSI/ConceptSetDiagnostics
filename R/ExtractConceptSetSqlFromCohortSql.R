@@ -33,31 +33,33 @@ extractConceptSetsSqlFromCohortSql <- function(cohortSql) {
     stop("Please check if more than one cohort SQL was provided.")
   }
   sql <- gsub("with primary_events.*", "", cohortSql)
-  
+
   # Find opening and closing parentheses:
   starts <- stringr::str_locate_all(sql, "\\(")[[1]][, 1]
   ends <- stringr::str_locate_all(sql, "\\)")[[1]][, 1]
-  
+
   x <- rep(0, nchar(sql))
   x[starts] <- 1
   x[ends] <- -1
   level <- cumsum(x)
   level0 <- which(level == 0)
-  
+
   subQueryLocations <-
     stringr::str_locate_all(sql, "SELECT [0-9]+ as codeset_id")[[1]]
   subQueryCount <- nrow(subQueryLocations)
   conceptsetSqls <- vector("character", subQueryCount)
   conceptSetIds <- vector("integer", subQueryCount)
-  
+
   temp <- list()
   if (subQueryCount > 0) {
     for (i in 1:subQueryCount) {
       startForSubQuery <- min(starts[starts > subQueryLocations[i, 2]])
       endForSubQuery <- min(level0[level0 > startForSubQuery])
       subQuery <-
-        paste(stringr::str_sub(sql, subQueryLocations[i, 1], endForSubQuery),
-              "C")
+        paste(
+          stringr::str_sub(sql, subQueryLocations[i, 1], endForSubQuery),
+          "C"
+        )
       conceptsetSqls[i] <- subQuery
       conceptSetIds[i] <- stringr::str_replace(
         subQuery,
@@ -70,8 +72,10 @@ extractConceptSetsSqlFromCohortSql <- function(cohortSql) {
         replacement = "\\1"
       ) %>%
         utils::type.convert(as.is = TRUE)
-      temp[[i]] <- tidyr::tibble(conceptSetId = conceptSetIds[i],
-                                 conceptSetSql = conceptsetSqls[i])
+      temp[[i]] <- tidyr::tibble(
+        conceptSetId = conceptSetIds[i],
+        conceptSetSql = conceptsetSqls[i]
+      )
     }
   } else {
     temp <- dplyr::tibble()

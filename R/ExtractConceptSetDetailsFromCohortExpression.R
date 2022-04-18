@@ -21,7 +21,7 @@
 #' Get concept set details from cohort definition
 #'
 #' @template CohortExpression
-#' 
+#'
 #' @return
 #' Returns a tibble data frame.
 #'
@@ -30,35 +30,38 @@ extractConceptSetDetailsFromCohortExpression <-
   function(cohortExpression) {
     if ("expression" %in% names(cohortExpression)) {
       expression <- cohortExpression$expression
-    }
-    else {
+    } else {
       expression <- cohortExpression
     }
-    
+
     if (is.null(expression$ConceptSets)) {
       return(NULL)
     }
-    
+
     # use circe to render cohort sql and extract concept set sql
     circeRenderedSqlExpression <-
-      getCohortSqlFromCohortExpressionUsingCirceR(expression = expression,
-                                                  generateStats = TRUE)
+      getCohortSqlFromCohortExpressionUsingCirceR(
+        expression = expression,
+        generateStats = TRUE
+      )
     extractedConceptSetSql <-
       extractConceptSetsSqlFromCohortSql(cohortSql = circeRenderedSqlExpression)
-    
+
     # extract concept set expression from cohort expression
     extractedConceptSetExpression <-
       extractConceptSetExpressionsFromCohortExpression(cohortDefinitionExpression)
-    
-    
-    
+
+
+
     # TO DO!!!!!!
     # getConceptSetExpressionDataFrameFromConceptSetExpression
     # convert to data frame and then to named list object
     # assign unique id inside cohort definition expression
-    
-    data <- dplyr::inner_join(x = extractedConceptSetExpression,
-                              y = extractedConceptSetSql,
-                              by = c("conceptSetId"))
+
+    data <- dplyr::inner_join(
+      x = extractedConceptSetExpression,
+      y = extractedConceptSetSql,
+      by = c("conceptSetId")
+    )
     return(data)
   }

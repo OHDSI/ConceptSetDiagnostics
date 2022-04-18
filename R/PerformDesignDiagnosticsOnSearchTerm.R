@@ -42,54 +42,56 @@ performDesignDiagnosticsOnSearchTerm <-
            connectionDetails = NULL,
            exportResults = FALSE,
            locationForResults = NULL,
-           vocabularyDatabaseSchema = 'vocabulary',
-           vocabularyIdOfInterest = c('SNOMED', 'HCPCS', 'ICD10CM', 'ICD10', 'ICD9CM', 'ICD9', 'Read'),
-           domainIdOfInterest = c('Condition', 'Procedure', 'Observation'),
-           conceptPrevalenceTable = 'concept_prevalence.universe') {
-    browser()
-    # step perform string search
+           vocabularyDatabaseSchema = "vocabulary",
+           vocabularyIdOfInterest = c("SNOMED", "HCPCS", "ICD10CM", "ICD10", "ICD9CM", "ICD9", "Read"),
+           domainIdOfInterest = c("Condition", "Procedure", "Observation"),
+           conceptPrevalenceTable = "concept_prevalence.universe") {
     searchResultConceptIds <-
       getStringSearchConcepts(
         connection = connection,
-        connectionDetails = connectionDetails,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         searchString = searchString,
         conceptPrevalenceTable = conceptPrevalenceTable
       )
+
+    searchResultConceptIds <- searchResultConceptIds %>%
+      dplyr::filter(.data$invalidReason == "V")
+
     if (length(vocabularyIdOfInterest) > 0) {
       searchResultConceptIds <- searchResultConceptIds %>%
         dplyr::filter(.data$vocabularyId %in% vocabularyIdOfInterest)
     }
+
     if (length(domainIdOfInterest) > 0) {
       searchResultConceptIds <- searchResultConceptIds %>%
         dplyr::filter(.data$domainId %in% domainIdOfInterest)
     }
-    
-    # develop a concept set expression based on string search
-    conceptSetExpression <-
-      getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = searchResultConceptIds,
-                                                               selectAllDescendants = TRUE)
-    conceptSetExpression <-
-      getConceptSetSignatureExpression(connection = connection,
-                                       conceptSetExpression = conceptSetExpression)
-    
-    conceptSetExpressionDataFrame <-
-      getConceptSetExpressionDataFrameFromConceptSetExpression(
-        conceptSetExpression = conceptSetExpressionDataFrame,
-        updateVocabularyFields = TRUE,
+
+    conceptSetExpression <- getConceptSetExpressionFromConceptSetExpressionDataFrame(
+      conceptSetExpressionDataFrame = searchResultConceptIds,
+      selectAllDescendants = TRUE
+    )
+
+    optimizedConceptSetExpression <-
+      optimizeConceptSetExpression(
         connection = connection,
-        connectionDetails = connectionDetails
+        connectionDetails = connectionDetails,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        conceptSetExpression = conceptSetExpression
       )
-    
-    conceptSetExpression <-
-      getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = conceptSetExpressionDataFrame)
-    
-    
-    # resolve concept set expression to individual concept ids
+    optimizedConceptSetExpression <- optimizedConceptSetExpression$recommended
+    optimizedConceptSetExpression <- getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = optimizedConceptSetExpression) %>%
+      dplyr::arrange(dplyr::desc(.data$dbc), dplyr::desc(.data$drc), dplyr::desc(.data$ddbc), dplyr::desc(.data$dbc)) %>%
+      getConceptSetExpressionFromConceptSetExpressionDataFrame()
+
+    debug(resolveConceptSetExpression)
     resolvedConceptIds <-
-      resolveConceptSetExpression(connection = connection,
-                                  conceptSetExpression = conceptSetExpression)
-    
+      resolveConceptSetExpression(
+        connection = connection,
+        conceptSetExpression = optimizedConceptSetExpression,
+        vocabulary = vocabulary
+      )
+
     recommendedConceptIds <-
       getRecommendationForConceptSetExpression(
         conceptSetExpression = conceptSetExpression,
@@ -98,7 +100,7 @@ performDesignDiagnosticsOnSearchTerm <-
         vocabularyIdOfInterest = vocabularyIdOfInterest,
         domainIdOfInterest = domainIdOfInterest
       )
-    
+
     searchResult <- list(
       searchString = searchString,
       searchResultConceptIds = searchResultConceptIds,
@@ -106,12 +108,14 @@ performDesignDiagnosticsOnSearchTerm <-
       resolvedConceptIds = resolvedConceptIds,
       recommendedConceptIds = recommendedConceptIds
     )
-    
+
     if (exportResults) {
       if (!is.null(locationForResults)) {
-        dir.create(path = locationForResults,
-                   showWarnings = FALSE,
-                   recursive = TRUE)
+        dir.create(
+          path = locationForResults,
+          showWarnings = FALSE,
+          recursive = TRUE
+        )
         if (nrow(recommendedConceptIds$recommendedStandard) > 0) {
           readr::write_excel_csv(
             x = recommendedConceptIds$recommendedStandard,
@@ -145,13 +149,17 @@ performDesignDiagnosticsOnSearchTerm <-
         if (nrow(recommendedConceptIds$recommendedSource) > 0) {
           readr::write_excel_csv(
             x = recommendedConceptIds$recommendedSource,
-            file = file.path(locationForResults,
-                             paste0("recommendedSource.csv")),
+            file = file.path(
+              locationForResults,
+              paste0("recommendedSource.csv")
+            ),
             append = FALSE,
             na = ""
           )
-          writeLines(text = paste0("Wrote recommendedSource.csv to ",
-                                   locationForResults))
+          writeLines(text = paste0(
+            "Wrote recommendedSource.csv to ",
+            locationForResults
+          ))
         } else {
           writeLines(
             text = paste0(
@@ -160,8 +168,10 @@ performDesignDiagnosticsOnSearchTerm <-
             )
           )
           unlink(
-            x = file.path(locationForResults,
-                          paste0("recommendedSource.csv")),
+            x = file.path(
+              locationForResults,
+              paste0("recommendedSource.csv")
+            ),
             recursive = TRUE,
             force = TRUE
           )
