@@ -89,7 +89,7 @@ performDesignDiagnosticsOnSearchTerm <-
       resolveConceptSetExpression(
         connection = connection,
         conceptSetExpression = optimizedConceptSetExpression,
-        vocabulary = vocabulary
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
 
     recommendedConceptIds <-
