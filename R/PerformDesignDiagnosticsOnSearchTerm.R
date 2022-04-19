@@ -83,15 +83,15 @@ performDesignDiagnosticsOnSearchTerm <-
     optimizedConceptSetExpression <- getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = optimizedConceptSetExpression) %>%
       dplyr::arrange(dplyr::desc(.data$dbc), dplyr::desc(.data$drc), dplyr::desc(.data$ddbc), dplyr::desc(.data$dbc)) %>%
       getConceptSetExpressionFromConceptSetExpressionDataFrame()
-
-    debug(resolveConceptSetExpression)
+    
     resolvedConceptIds <-
       resolveConceptSetExpression(
         connection = connection,
         conceptSetExpression = optimizedConceptSetExpression,
-        vocabularyDatabaseSchema = vocabularyDatabaseSchema
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema, 
+        conceptPrevalenceTable = conceptPrevalenceTable
       )
-
+browser()
     recommendedConceptIds <-
       getRecommendationForConceptSetExpression(
         conceptSetExpression = conceptSetExpression,

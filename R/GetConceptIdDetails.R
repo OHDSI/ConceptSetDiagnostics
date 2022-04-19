@@ -41,51 +41,57 @@ getConceptIdDetails <-
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
     }
-
+    
     start <- Sys.time()
-
+    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-
-    sql <-
-      SqlRender::loadRenderTranslateSql(
-        sqlFilename = "GetConceptIdDetails.sql",
-        packageName = utils::packageName(),
-        dbms = connection@dbms,
-        vocabulary_database_schema = vocabularyDatabaseSchema
-      )
-
-    data <- DatabaseConnector::querySql(
+    
+    sql <- "
+    SELECT c.CONCEPT_ID,
+      	c.CONCEPT_NAME,
+      	c.VOCABULARY_ID,
+      	c.STANDARD_CONCEPT,
+      	c.INVALID_REASON,
+      	c.CONCEPT_CODE,
+      	c.CONCEPT_CLASS_ID,
+      	c.DOMAIN_ID
+      FROM @vocabulary_database_schema.concept c
+      WHERE concept_id in (@concept_ids);
+    "
+    
+    data <- DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
       sql = sql,
       snakeCaseToCamelCase = TRUE,
-      concept_ids = conceptIds
+      concept_ids = conceptIds,
+      vocabulary_database_schema = vocabularyDatabaseSchema
     ) %>%
       tidyr::tibble()
-
+    
     if (!is.null(conceptPrevalenceTable)) {
       conceptPrevalence <- tryCatch(expr = {
-        DatabaseConnector::querySql(
+        DatabaseConnector::renderTranslateQuerySql(
           connection = connection,
           sql = "SELECT CONCEPT_ID, RC, DBC, DRC, DDBC
               FROM @concept_prevalence_table
               WHERE CONCEPT_ID IN (@concept_ids);",
           snakeCaseToCamelCase = TRUE,
-          concept_ids = conceptIds
+          concept_ids = conceptIds,
+          concept_prevalence_table = conceptPrevalenceTable
         ) %>%
           tidyr::tibble()
       })
     }
-
+    
     if (exists("conceptPrevalence") &&
-      dplyr::is.tbl(conceptPrevalence)) {
+        dplyr::is.tbl(conceptPrevalence)) {
       data <- data %>%
         dplyr::left_join(conceptPrevalence,
-          by = "conceptId"
-        )
+                         by = "conceptId")
     }
-
+    
     return(data)
   }

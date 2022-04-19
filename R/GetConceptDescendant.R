@@ -15,10 +15,10 @@
 # limitations under the License.
 #
 
-#' get concept ancestor
+#' get concept descendant
 #'
 #' @description
-#' given an array of conceptIds, get their ancestor and descendants.
+#' given an array of conceptIds, get their descendants.
 #'
 #' @template Connection
 #'
@@ -30,7 +30,7 @@
 #' Returns a tibble data frame.
 #'
 #' @export
-getConceptAncestor <-
+GetConceptDescendant <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
@@ -46,12 +46,12 @@ getConceptAncestor <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
     
-    sql <- "SELECT DESCENDANT_CONCEPT_ID concept_id,
-              ANCESTOR_CONCEPT_ID,
+    sql <- "SELECT ANCESTOR_CONCEPT_ID concept_id,
+            	DESCENDANT_CONCEPT_ID,
             	MIN_LEVELS_OF_SEPARATION,
             	MAX_LEVELS_OF_SEPARATION
             FROM @vocabulary_database_schema.concept_ancestor
-            WHERE DESCENDANT_CONCEPT_ID IN (@concept_ids);"
+            WHERE ANCESTOR_CONCEPT_ID IN (@concept_ids);"
     
     data <-
       DatabaseConnector::renderTranslateQuerySql(
