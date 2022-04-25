@@ -43,18 +43,19 @@ getConceptSynonym <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
 
-    sql <-
-      SqlRender::loadRenderTranslateSql(
-        sqlFilename = "GetConceptSynonym.sql",
-        packageName = utils::packageName(),
-        dbms = connection@dbms,
-        vocabulary_database_schema = vocabularyDatabaseSchema
-      )
+    sql <- "
+    SELECT CONCEPT_ID,
+          	CONCEPT_SYNONYM_NAME,
+          	LANGUAGE_CONCEPT_ID
+    FROM @vocabulary_database_schema.concept_synonym
+    WHERE CONCEPT_ID IN (@concept_ids);"
 
     data <-
-      DatabaseConnector::querySql(
+      DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = sql,
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        concept_ids = conceptIds,
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
