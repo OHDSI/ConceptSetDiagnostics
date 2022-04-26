@@ -37,7 +37,7 @@ getConceptIdDetails <-
            connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = "vocabulary",
-           conceptPrevalenceTable = "concept_prevalence") {
+           conceptPrevalenceTable = NULL) {
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
     }

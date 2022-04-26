@@ -43,7 +43,7 @@ getRecommendationForConceptSetExpression <-
            domainIdOfInterest = c("Condition", "Procedure", "Observation"),
            connection = NULL,
            connectionDetails = NULL,
-           conceptPrevalenceSchema = "concept_prevalence") {
+           conceptPrevalenceSchema = NULL) {
     browser()
     conceptSetExpressionDataFrame <-
       getConceptSetExpressionDataFrameFromConceptSetExpression(

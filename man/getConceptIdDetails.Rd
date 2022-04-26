@@ -9,7 +9,7 @@ getConceptIdDetails(
   connection = NULL,
   connectionDetails = NULL,
   vocabularyDatabaseSchema = "vocabulary",
-  conceptPrevalenceTable = "concept_prevalence"
+  conceptPrevalenceTable = NULL
 )
 }
 \arguments{

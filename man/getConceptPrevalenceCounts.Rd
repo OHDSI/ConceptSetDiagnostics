@@ -8,7 +8,7 @@ getConceptPrevalenceCounts(
   conceptIds,
   connection = NULL,
   connectionDetails = NULL,
-  conceptPrevalenceTable = "concept_prevalence"
+  conceptPrevalenceTable
 )
 }
 \arguments{

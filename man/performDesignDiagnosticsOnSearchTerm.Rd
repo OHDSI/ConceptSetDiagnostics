@@ -14,7 +14,7 @@ performDesignDiagnosticsOnSearchTerm(
   vocabularyIdOfInterest = c("SNOMED", "HCPCS", "ICD10CM", "ICD10", "ICD9CM", "ICD9",
     "Read"),
   domainIdOfInterest = c("Condition", "Procedure", "Observation"),
-  conceptPrevalenceTable = "concept_prevalence.universe"
+  conceptPrevalenceTable = NULL
 )
 }
 \arguments{

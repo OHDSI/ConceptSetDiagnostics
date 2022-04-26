@@ -34,15 +34,7 @@
 getConceptPrevalenceCounts <- function(conceptIds,
                                        connection = NULL,
                                        connectionDetails = NULL,
-                                       conceptPrevalenceTable = "concept_prevalence") {
-  if (length(conceptIds) == 0) {
-    stop("No concept id provided")
-  }
-  if (is.null(conceptPrevalenceTable) ||
-    length(conceptPrevalenceTable) == 0) {
-    stop("Please provide concept prevalence table")
-  }
-
+                                       conceptPrevalenceTable) {
   start <- Sys.time()
 
   if (is.null(connection)) {

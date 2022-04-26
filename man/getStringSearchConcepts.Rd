@@ -9,7 +9,7 @@ getStringSearchConcepts(
   vocabularyDatabaseSchema = "vocabulary",
   connection = NULL,
   connectionDetails = NULL,
-  conceptPrevalenceTable = "concept_prevalence.universe"
+  conceptPrevalenceTable = NULL
 )
 }
 \arguments{
