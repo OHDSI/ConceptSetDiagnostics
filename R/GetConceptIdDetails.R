@@ -49,6 +49,26 @@ getConceptIdDetails <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
     
+    
+    drugConceptIdTable <-
+      dplyr::tibble(conceptId = drugConceptIds %>% unique())
+    
+    tempTableName <-
+      paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
+      )))) * 100000)
+    DatabaseConnector::insertTable(
+      connection = connection,
+      tableName = tempTableName,
+      dropTableIfExists = TRUE,
+      tempTable = TRUE,
+      tempEmulationSchema = tempEmulationSchema,
+      data = drugConceptIdTable,
+      camelCaseToSnakeCase = TRUE,
+      bulkLoad = TRUE,
+      progressBar = FALSE,
+      createTable = TRUE
+    )
+    
     sql <- "
     SELECT c.CONCEPT_ID,
       	c.CONCEPT_NAME,
@@ -59,7 +79,8 @@ getConceptIdDetails <-
       	c.CONCEPT_CLASS_ID,
       	c.DOMAIN_ID
       FROM @vocabulary_database_schema.concept c
-      WHERE concept_id in (@concept_ids);
+      INNER JOIN @concept_id_table tt
+      ON c.concept_id = tt.concept_id;
     "
     
     data <- DatabaseConnector::renderTranslateQuerySql(
@@ -67,6 +88,7 @@ getConceptIdDetails <-
       sql = sql,
       snakeCaseToCamelCase = TRUE,
       concept_ids = conceptIds,
+      concept_id_table = tempTableName,
       vocabulary_database_schema = vocabularyDatabaseSchema
     ) %>%
       tidyr::tibble()
@@ -92,6 +114,16 @@ getConceptIdDetails <-
         dplyr::left_join(conceptPrevalence,
                          by = "conceptId")
     }
+    
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = "DROP TABLE IF EXISTS @concept_id_table;",
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE,
+      tempEmulationSchema = tempEmulationSchema,
+      concept_id_table = tempTableName
+    )
     
     return(data)
   }
