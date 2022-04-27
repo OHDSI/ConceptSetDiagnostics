@@ -9,6 +9,7 @@ getConceptIdDetails(
   connection = NULL,
   connectionDetails = NULL,
   vocabularyDatabaseSchema = "vocabulary",
+  tempEmulationSchema = NULL,
   conceptPrevalenceTable = NULL
 )
 }
@@ -27,6 +28,9 @@ DatabaseConnector package. Can be left NULL if \code{connection} is
 provided.}
 
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
+
+\item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
+tables, provide a schema with write privileges where temp tables can be created.}
 
 \item{conceptPrevalenceTable}{A reference table (can be schemaName.tableName) that
 holds the concept prevalence data. The required fields are

@@ -27,6 +27,8 @@
 #' @template VocabularyDatabaseSchema
 #'
 #' @template ConceptPrevalenceTable
+#' 
+#' @template TempEmulationSchema
 #'
 #' @return
 #' Returns a tibble data frame.
@@ -37,6 +39,7 @@ getConceptIdDetails <-
            connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = "vocabulary",
+           tempEmulationSchema = NULL,
            conceptPrevalenceTable = NULL) {
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
@@ -51,7 +54,7 @@ getConceptIdDetails <-
     
     
     drugConceptIdTable <-
-      dplyr::tibble(conceptId = drugConceptIds %>% unique())
+      dplyr::tibble(conceptId = conceptIds %>% unique())
     
     tempTableName <-
       paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
@@ -87,7 +90,6 @@ getConceptIdDetails <-
       connection = connection,
       sql = sql,
       snakeCaseToCamelCase = TRUE,
-      concept_ids = conceptIds,
       concept_id_table = tempTableName,
       vocabulary_database_schema = vocabularyDatabaseSchema
     ) %>%
@@ -97,11 +99,12 @@ getConceptIdDetails <-
       conceptPrevalence <- tryCatch(expr = {
         DatabaseConnector::renderTranslateQuerySql(
           connection = connection,
-          sql = "SELECT CONCEPT_ID, RC, DBC, DRC, DDBC
-              FROM @concept_prevalence_table
-              WHERE CONCEPT_ID IN (@concept_ids);",
+          sql = "SELECT cp.CONCEPT_ID, cp.RC, cp.DBC, cp.DRC, cp.DDBC
+                 FROM @concept_prevalence_table cp
+                 INNER JOIN @concept_id_table tt
+                 ON cp.concept_id = tt.concept_id;",
           snakeCaseToCamelCase = TRUE,
-          concept_ids = conceptIds,
+          concept_id_table = tempTableName,
           concept_prevalence_table = conceptPrevalenceTable
         ) %>%
           tidyr::tibble()
