@@ -1,0 +1,115 @@
+# Copyright 2021 Observational Health Data Sciences and Informatics
+#
+# This file is part of ConceptSetDiagnostics
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+#' Get ingredient information
+#' @description
+#' Given an array of drug concept ids, returns their ingredients
+#'
+#' @template Connection
+#'
+#' @param drugConceptIds An array of concept ids to find ingredients for
+#'
+#' @template VocabularyDatabaseSchema
+#'
+#' @template TempEmulationSchema
+#'
+#' @return
+#' Returns a tibble data frame.
+#'
+#' @export
+getDrugIngredients <-
+  function(connection = NULL,
+           connectionDetails = NULL,
+           tempEmulationSchema = NULL,
+           drugConceptIds,
+           vocabularyDatabaseSchema = "vocabulary") {
+    start <- Sys.time()
+    
+    if (is.null(connection)) {
+      connection <- DatabaseConnector::connect(connectionDetails)
+      on.exit(DatabaseConnector::disconnect(connection))
+    }
+    
+    drugConceptIdTable <-
+      dplyr::tibble(conceptId = drugConceptIds %>% unique())
+    
+    tempTableName <-
+      paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
+      )))) * 100000)
+    DatabaseConnector::insertTable(
+      connection = connection,
+      tableName = tempTableName,
+      dropTableIfExists = TRUE,
+      tempTable = TRUE,
+      tempEmulationSchema = tempEmulationSchema,
+      data = drugConceptIdTable,
+      camelCaseToSnakeCase = TRUE,
+      bulkLoad = TRUE,
+      progressBar = FALSE,
+      createTable = TRUE
+    )
+    
+    sql <- "SELECT DISTINCT ca.drug_concept_id,
+            	d.concept_Name drug_name,
+            	d.concept_Code drug_concept_code,
+            	d.concept_Class_id drug_concept_class,
+            	ingredient_concept_id,
+            	ingredient_name,
+            	ingredient_concept_code,
+            	ingredient_concept_class,
+            	ingredient_vocabulary_id
+            FROM (
+                    SELECT ca.ancestor_concept_id ingredient_concept_id,
+                            c.concept_name ingredient_name,
+                            c.concept_code ingredient_concept_code,
+                            c.concept_class_id ingredient_concept_class,
+                            c.vocabulary_id ingredient_vocabulary_id,
+                            ca.descendant_concept_id drug_concept_id
+                    FROM @vocabulary_database_schema.concept_ancestor ca
+                    INNER JOIN @concept_id_table cid
+                      ON ca.descendant_concept_id = cid.concept_id
+                    INNER JOIN @vocabulary_database_schema.concept c
+                      ON ca.ancestor_concept_id = c.concept_id
+                    WHERE LOWER(c.concept_class_id) = 'ingredient'
+            ) ca
+            INNER JOIN @vocabulary_database_schema.concept d ON ca.drug_concept_id = d.concept_id
+            ORDER BY ingredient_concept_id, ca.drug_concept_id;
+    "
+    
+    data <-
+      DatabaseConnector::renderTranslateQuerySql(
+        connection = connection,
+        sql = sql,
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        concept_id_table = tempTableName,
+        snakeCaseToCamelCase = TRUE
+      ) %>%
+      tidyr::tibble()
+    
+    
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = "DROP TABLE IF EXISTS @concept_id_table;",
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE,
+      tempEmulationSchema = tempEmulationSchema,
+      concept_id_table = tempTableName
+    )
+    
+    return(data)
+  }
