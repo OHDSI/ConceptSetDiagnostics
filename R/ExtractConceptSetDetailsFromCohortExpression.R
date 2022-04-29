@@ -33,35 +33,54 @@ extractConceptSetDetailsFromCohortExpression <-
     } else {
       expression <- cohortExpression
     }
-
+    
     if (is.null(expression$ConceptSets)) {
       return(NULL)
     }
-
+    
     # use circe to render cohort sql and extract concept set sql
     circeRenderedSqlExpression <-
-      getCohortSqlFromCohortExpressionUsingCirceR(
-        expression = expression,
-        generateStats = TRUE
-      )
+      getCohortSqlFromCohortExpressionUsingCirceR(cohortExpression = expression,
+                                                  generateStats = TRUE)
     extractedConceptSetSql <-
       extractConceptSetsSqlFromCohortSql(cohortSql = circeRenderedSqlExpression)
-
+    
     # extract concept set expression from cohort expression
-    extractedConceptSetExpression <-
-      extractConceptSetExpressionsFromCohortExpression(cohortDefinitionExpression)
-
-
-
-    # TO DO!!!!!!
-    # getConceptSetExpressionDataFrameFromConceptSetExpression
-    # convert to data frame and then to named list object
-    # assign unique id inside cohort definition expression
-
-    data <- dplyr::inner_join(
-      x = extractedConceptSetExpression,
-      y = extractedConceptSetSql,
-      by = c("conceptSetId")
-    )
+    conceptSetExpression <-
+      extractConceptSetExpressionsFromCohortExpression(cohortExpression = expression)
+    
+    conceptSetExpression2 <- list()
+    for (j in (1:nrow(conceptSetExpression))) {
+      conceptSetExpression2[[j]] <- conceptSetExpression[j, ]
+      conceptSetExpression2[[j]]$conceptSetExpressionSignature <-
+        getConceptSetExpressionDataFrameFromConceptSetExpression(
+          conceptSetExpression = conceptSetExpression2[[j]][1, ]$conceptSetExpression %>%
+            RJSONIO::fromJSON(digits = 23)
+        ) %>%
+        dplyr::select(
+          .data$conceptId,
+          .data$includeDescendants,
+          .data$includeMapped,
+          .data$isExcluded
+        ) %>%
+        dplyr::distinct() %>%
+        dplyr::arrange(.data$conceptId) %>%
+        RJSONIO::toJSON(digits = 23, pretty = TRUE)
+    }
+    conceptSetExpression <- dplyr::bind_rows(conceptSetExpression2)
+    
+    uniqueConceptSets <- conceptSetExpression %>%
+      dplyr::select(.data$conceptSetExpressionSignature) %>%
+      dplyr::distinct() %>%
+      dplyr::mutate(uniqueConceptSetId = dplyr::row_number())
+    
+    conceptSetExpression <- conceptSetExpression %>%
+      dplyr::left_join(uniqueConceptSets,
+                       by = "conceptSetExpressionSignature") %>%
+      dplyr::select(-.data$conceptSetExpressionSignature)
+    
+    data <- dplyr::inner_join(x = conceptSetExpression,
+                              y = extractedConceptSetSql,
+                              by = c("conceptSetId"))
     return(data)
   }
