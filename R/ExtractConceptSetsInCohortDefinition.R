@@ -40,7 +40,7 @@ extractConceptSetsInCohortDefinition <-
     
     # use circe to render cohort sql and extract concept set sql
     circeRenderedSqlExpression <-
-      getCohortSqlFromCohortExpressionUsingCirceR(cohortExpression = expression,
+      getCohortSqlFromCohortDefinition(cohortExpression = expression,
                                                   generateStats = TRUE)
     extractedConceptSetSql <-
       extractConceptSetsSqlFromCohortSql(cohortSql = circeRenderedSqlExpression)

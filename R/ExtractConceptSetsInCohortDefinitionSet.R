@@ -60,7 +60,7 @@ extractConceptSetsInCohortDefinitionSet <-
       conceptSetExpression <- dplyr::bind_rows(conceptSetExpression2)
       
       cohortSql <-
-        getCohortSqlFromCohortExpressionUsingCirceR(cohortExpression = cohortJsonAsList)
+        getCohortSqlFromCohortDefinition(cohortExpression = cohortJsonAsList)
       conceptSetSql <-
         extractConceptSetsSqlFromCohortSql(cohortSql = cohortSql)
       

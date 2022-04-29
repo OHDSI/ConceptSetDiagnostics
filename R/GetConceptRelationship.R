@@ -35,29 +35,28 @@ getConceptRelationship <-
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
     }
-
+    
     start <- Sys.time()
-
+    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-
-    sql <-
-      SqlRender::loadRenderTranslateSql(
-        sqlFilename = "GetConceptRelationship.sql",
-        packageName = utils::packageName(),
-        dbms = connection@dbms,
-        vocabulary_database_schema = vocabularyDatabaseSchema
-      )
-
-    data <- DatabaseConnector::querySql(
+    
+    sql <- "SELECT *
+            FROM @vocabulary_database_schema.concept_relationship
+            WHERE CONCEPT_ID_1 IN (@concept_ids)
+            	OR CONCEPT_ID_2 IN (@concept_ids);
+    "
+    
+    data <- DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
       sql = sql,
       snakeCaseToCamelCase = TRUE,
-      concept_ids = conceptIds
+      concept_ids = conceptIds,
+      vocabulary_database_schema = vocabularyDatabaseSchema
     ) %>%
       tidyr::tibble()
-
+    
     return(data)
   }

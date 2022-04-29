@@ -30,7 +30,7 @@
 #' Returns a tibble data frame.
 #'
 #' @export
-GetConceptDescendant <-
+getConceptDescendant <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,

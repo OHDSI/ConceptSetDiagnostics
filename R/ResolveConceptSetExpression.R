@@ -54,7 +54,7 @@ resolveConceptSetExpression <- function(conceptSetExpression,
     return(NULL)
   }
   descendantConcepts <-
-    GetConceptDescendant(
+    getConceptDescendant(
       connection = connection,
       connectionDetails = connectionDetails,
       conceptIds = conceptIdsWithIncludeDescendants,

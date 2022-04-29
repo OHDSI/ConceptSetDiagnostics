@@ -31,7 +31,7 @@
 #' Returns string (sql)
 #'
 #' @export
-getCohortSqlFromCohortExpressionUsingCirceR <-
+getCohortSqlFromCohortDefinition <-
   function(cohortExpression,
            generateStats = TRUE) {
     if ("expression" %in% names(cohortExpression)) {
@@ -39,13 +39,11 @@ getCohortSqlFromCohortExpressionUsingCirceR <-
     } else {
       expression <- cohortExpression
     }
-
+    
     # use circe to render cohort sql
     circeRCohortExpressionFromJson <-
-      CirceR::cohortExpressionFromJson(expressionJson = RJSONIO::toJSON(
-        x = expression,
-        digits = 23
-      ))
+      CirceR::cohortExpressionFromJson(expressionJson = RJSONIO::toJSON(x = expression,
+                                                                        digits = 23))
     circeRenderedSqlExpression <-
       CirceR::buildCohortQuery(
         expression = circeRCohortExpressionFromJson,
