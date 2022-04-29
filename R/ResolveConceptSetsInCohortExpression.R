@@ -29,7 +29,7 @@ resolveConceptSetsInCohortExpression <- function(cohortExpression,
                                                  connectionDetails = NULL,
                                                  vocabularyDatabaseSchema = "vocabulary") {
   conceptSetExpressionDataFrame <-
-    extractConceptSetDetailsFromCohortExpression(
+    extractConceptSetsInCohortDefinition(
       cohortExpression =
         cohortExpression
     )
