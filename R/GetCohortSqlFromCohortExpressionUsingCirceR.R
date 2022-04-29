@@ -34,10 +34,10 @@
 getCohortSqlFromCohortExpressionUsingCirceR <-
   function(cohortExpression,
            generateStats = TRUE) {
-    if ("expression" %in% names(cohortDefinitionExpression)) {
-      expression <- cohortDefinitionExpression$expression
+    if ("expression" %in% names(cohortExpression)) {
+      expression <- cohortExpression$expression
     } else {
-      expression <- cohortDefinitionExpression
+      expression <- cohortExpression
     }
 
     # use circe to render cohort sql
