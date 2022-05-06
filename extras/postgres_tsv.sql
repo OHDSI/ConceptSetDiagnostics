@@ -1,4 +1,4 @@
-SET search_path TO vocabulary;
+SET search_path TO vocabulary2;
 
 CREATE EXTENSION pg_trgm;
 CREATE EXTENSION btree_gin;
@@ -28,9 +28,9 @@ CREATE INDEX concept_name_reverse_gin_idx ON concept USING GIN (reverse(concept_
 ALTER TABLE concept_synonym
 	ADD COLUMN concept_synonym_name_TSV tsvector
     	GENERATED ALWAYS AS (to_tsvector('english', concept_synonym_name)) STORED;
-CREATE INDEX concept_synonym_name_gin_idx ON concept USING GIN (concept_synonym_name);
+CREATE INDEX concept_synonym_name_gin_idx ON concept_synonym USING GIN (concept_synonym_name);
 
 ALTER TABLE concept_synonym
 	ADD COLUMN concept_synonym_name_REVERSE_TSV tsvector
-    	GENERATED ALWAYS AS (to_tsvector('english', reverse(oncept_synonym_name))) STORED;
-CREATE INDEX concept_synonym_name_REVERSE_gin_idx ON concept USING GIN (reverse(concept_synonym_name));
+    	GENERATED ALWAYS AS (to_tsvector('english', reverse(concept_synonym_name))) STORED;
+CREATE INDEX concept_synonym_name_REVERSE_gin_idx ON concept_synonym USING GIN (reverse(concept_synonym_name));
