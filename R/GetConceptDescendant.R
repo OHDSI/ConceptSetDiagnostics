@@ -72,15 +72,15 @@ getConceptDescendant <-
             	DESCENDANT_CONCEPT_ID,
             	MIN_LEVELS_OF_SEPARATION,
             	MAX_LEVELS_OF_SEPARATION
-            FROM @vocabulary_database_schema.concept_ancestor
-            WHERE ANCESTOR_CONCEPT_ID IN (@concept_ids);"
+            FROM @vocabulary_database_schema.concept_ancestor ca
+            INNER JOIN @concept_id_table cid
+            ON ca.ancestor_concept_id = cid.concept_id;"
     
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        concept_ids = conceptIds,
         concept_id_table = tempTableName,
         snakeCaseToCamelCase = TRUE
       ) %>%
