@@ -46,12 +46,35 @@ getConceptAncestor <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
     
+    
+    conceptIdTable <-
+      dplyr::tibble(conceptId = conceptIds %>% unique())
+    
+    tempTableName <-
+      paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
+        
+      )))) * 100000)
+    DatabaseConnector::insertTable(
+      connection = connection,
+      tableName = tempTableName,
+      dropTableIfExists = TRUE,
+      tempTable = TRUE,
+      tempEmulationSchema = tempEmulationSchema,
+      data = conceptIdTable,
+      camelCaseToSnakeCase = TRUE,
+      bulkLoad = TRUE,
+      progressBar = FALSE,
+      createTable = TRUE
+    )
+    
+    
     sql <- "SELECT DESCENDANT_CONCEPT_ID concept_id,
               ANCESTOR_CONCEPT_ID,
             	MIN_LEVELS_OF_SEPARATION,
             	MAX_LEVELS_OF_SEPARATION
-            FROM @vocabulary_database_schema.concept_ancestor
-            WHERE DESCENDANT_CONCEPT_ID IN (@concept_ids);"
+            FROM @vocabulary_database_schema.concept_ancestor ca
+            INNER JOIN @concept_id_table cid
+            ON ca.descendant_concept_id = cid.concept_id;"
     
     data <-
       DatabaseConnector::renderTranslateQuerySql(
@@ -59,9 +82,20 @@ getConceptAncestor <-
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         concept_ids = conceptIds,
+        concept_id_table = tempTableName,
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
+    
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = "DROP TABLE IF EXISTS @concept_id_table;",
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE,
+      tempEmulationSchema = tempEmulationSchema,
+      concept_id_table = tempTableName
+    )
     
     return(data)
   }

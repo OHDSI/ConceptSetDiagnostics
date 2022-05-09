@@ -43,20 +43,59 @@ getConceptRelationship <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
     
-    sql <- "SELECT *
-            FROM @vocabulary_database_schema.concept_relationship
-            WHERE CONCEPT_ID_1 IN (@concept_ids)
-            	OR CONCEPT_ID_2 IN (@concept_ids);
-    "
+    conceptIdTable <-
+      dplyr::tibble(conceptId = conceptIds %>% unique())
+    
+    tempTableName <-
+      paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
+        
+      )))) * 100000)
+    DatabaseConnector::insertTable(
+      connection = connection,
+      tableName = tempTableName,
+      dropTableIfExists = TRUE,
+      tempTable = TRUE,
+      tempEmulationSchema = tempEmulationSchema,
+      data = conceptIdTable,
+      camelCaseToSnakeCase = TRUE,
+      bulkLoad = TRUE,
+      progressBar = FALSE,
+      createTable = TRUE
+    )
+    
+    sql <- "SELECT DISTINCT *
+            FROM
+            (SELECT *
+            FROM @vocabulary_database_schema.concept_relationship cr
+            INNER JOIN @concept_id_table cid
+            ON CONCEPT_ID_1 = CONCEPT_ID
+
+            UNION
+
+            SELECT *
+            FROM @vocabulary_database_schema.concept_relationship cr
+            INNER JOIN @concept_id_table cid
+            ON CONCEPT_ID_2 = CONCEPT_ID) f
+            ;"
     
     data <- DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
       sql = sql,
       snakeCaseToCamelCase = TRUE,
       concept_ids = conceptIds,
+      concept_id_table = tempTableName,
       vocabulary_database_schema = vocabularyDatabaseSchema
     ) %>%
       tidyr::tibble()
     
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = "DROP TABLE IF EXISTS @concept_id_table;",
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE,
+      tempEmulationSchema = tempEmulationSchema,
+      concept_id_table = tempTableName
+    )
     return(data)
   }

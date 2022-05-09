@@ -44,8 +44,8 @@ getDrugIngredients <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
     
-    drugConceptIdTable <-
-      dplyr::tibble(conceptId = drugConceptIds %>% unique())
+    conceptIdTable <-
+      dplyr::tibble(conceptId = conceptIds %>% unique())
     
     tempTableName <-
       paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
@@ -56,7 +56,7 @@ getDrugIngredients <-
       dropTableIfExists = TRUE,
       tempTable = TRUE,
       tempEmulationSchema = tempEmulationSchema,
-      data = drugConceptIdTable,
+      data = conceptIdTable,
       camelCaseToSnakeCase = TRUE,
       bulkLoad = TRUE,
       progressBar = FALSE,

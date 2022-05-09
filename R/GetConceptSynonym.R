@@ -43,12 +43,32 @@ getConceptSynonym <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
 
+    conceptIdTable <-
+      dplyr::tibble(conceptId = conceptIds %>% unique())
+    
+    tempTableName <-
+      paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
+      )))) * 100000)
+    DatabaseConnector::insertTable(
+      connection = connection,
+      tableName = tempTableName,
+      dropTableIfExists = TRUE,
+      tempTable = TRUE,
+      tempEmulationSchema = tempEmulationSchema,
+      data = conceptIdTable,
+      camelCaseToSnakeCase = TRUE,
+      bulkLoad = TRUE,
+      progressBar = FALSE,
+      createTable = TRUE
+    )
+    
     sql <- "
-    SELECT CONCEPT_ID,
-          	CONCEPT_SYNONYM_NAME,
-          	LANGUAGE_CONCEPT_ID
-    FROM @vocabulary_database_schema.concept_synonym
-    WHERE CONCEPT_ID IN (@concept_ids);"
+    SELECT cs.CONCEPT_ID,
+          	cs.CONCEPT_SYNONYM_NAME,
+          	cs.LANGUAGE_CONCEPT_ID
+    FROM @vocabulary_database_schema.concept_synonym cs
+    INNER JOIN @concept_id_table ci
+    ON cs.concept_id = ci.concept_id;"
 
     data <-
       DatabaseConnector::renderTranslateQuerySql(
@@ -56,9 +76,22 @@ getConceptSynonym <-
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         concept_ids = conceptIds,
+        concept_id_table = tempTableName,
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
+    
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = "DROP TABLE IF EXISTS @concept_id_table;",
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE,
+      tempEmulationSchema = tempEmulationSchema,
+      concept_id_table = tempTableName
+    )
+    
+    return(data)
 
     return(data)
   }

@@ -53,7 +53,7 @@ getConceptIdDetails <-
     }
     
     
-    drugConceptIdTable <-
+    conceptIdTable <-
       dplyr::tibble(conceptId = conceptIds %>% unique())
     
     tempTableName <-
@@ -65,7 +65,7 @@ getConceptIdDetails <-
       dropTableIfExists = TRUE,
       tempTable = TRUE,
       tempEmulationSchema = tempEmulationSchema,
-      data = drugConceptIdTable,
+      data = conceptIdTable,
       camelCaseToSnakeCase = TRUE,
       bulkLoad = TRUE,
       progressBar = FALSE,

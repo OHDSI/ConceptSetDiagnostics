@@ -46,6 +46,25 @@ getConceptDescendant <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
     
+    conceptIdTable <-
+      dplyr::tibble(conceptId = conceptIds %>% unique())
+    
+    tempTableName <-
+      paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
+      )))) * 100000)
+    DatabaseConnector::insertTable(
+      connection = connection,
+      tableName = tempTableName,
+      dropTableIfExists = TRUE,
+      tempTable = TRUE,
+      tempEmulationSchema = tempEmulationSchema,
+      data = conceptIdTable,
+      camelCaseToSnakeCase = TRUE,
+      bulkLoad = TRUE,
+      progressBar = FALSE,
+      createTable = TRUE
+    )
+    
     sql <- "SELECT ANCESTOR_CONCEPT_ID concept_id,
             	DESCENDANT_CONCEPT_ID,
             	MIN_LEVELS_OF_SEPARATION,
@@ -59,9 +78,20 @@ getConceptDescendant <-
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         concept_ids = conceptIds,
+        concept_id_table = tempTableName,
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
+    
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = "DROP TABLE IF EXISTS @concept_id_table;",
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE,
+      tempEmulationSchema = tempEmulationSchema,
+      concept_id_table = tempTableName
+    )
     
     return(data)
   }
