@@ -22,6 +22,8 @@
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
+#' 
+#' @template TempEmulationSchema
 #'
 #' @return
 #' Returns a tibble data frame.
@@ -31,6 +33,7 @@ getConceptRelationship <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
+           tempEmulationSchema = NULL,
            vocabularyDatabaseSchema = "vocabulary") {
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
