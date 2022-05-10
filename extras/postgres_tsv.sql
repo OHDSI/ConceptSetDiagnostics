@@ -24,7 +24,6 @@ LEFT JOIN
 (
 SELECT concept_id, STRING_AGG( concept_synonym_name, ' ') AS concept_synonym_name
 FROM concept_synonym
-WHERE language_concept_id = 4175771
 GROUP BY concept_id
 ) cs
 ON c.concept_id = cs.concept_id;
