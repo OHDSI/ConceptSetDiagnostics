@@ -41,10 +41,14 @@ getConceptPrevalenceCounts <- function(conceptIds,
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
+  
+  tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
+                                        connection = connection)
 
-  sql <- "select *
-          from @conceptPrevalenceTable
-          where concept_id in (@concept_ids);"
+  sql <- "SELECT cp.*
+          FROM @conceptPrevalenceTable cp
+          INNER JOIN join @concept_id_table ci
+          ON cs.concept_id = ci.concept_id;"
 
   data <-
     DatabaseConnector::renderTranslateQuerySql(
@@ -54,5 +58,9 @@ getConceptPrevalenceCounts <- function(conceptIds,
       sql = sql,
       snakeCaseToCamelCase = TRUE
     ) %>% dplyr::tibble()
+  
+  dropTempConceptTable(connection = connection, 
+                       tempTableName = tempTableName)
+  
   return(data)
 }

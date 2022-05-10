@@ -25,8 +25,6 @@
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
-#'
-#' @template ConceptPrevalenceTable
 #' 
 #' @template TempEmulationSchema
 #'
@@ -39,8 +37,7 @@ getConceptIdDetails <-
            connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = "vocabulary",
-           tempEmulationSchema = NULL,
-           conceptPrevalenceTable = NULL) {
+           tempEmulationSchema = NULL) {
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
     }
@@ -52,25 +49,8 @@ getConceptIdDetails <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
     
-    
-    conceptIdTable <-
-      dplyr::tibble(conceptId = conceptIds %>% unique())
-    
-    tempTableName <-
-      paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
-      )))) * 100000)
-    DatabaseConnector::insertTable(
-      connection = connection,
-      tableName = tempTableName,
-      dropTableIfExists = TRUE,
-      tempTable = TRUE,
-      tempEmulationSchema = tempEmulationSchema,
-      data = conceptIdTable,
-      camelCaseToSnakeCase = TRUE,
-      bulkLoad = TRUE,
-      progressBar = FALSE,
-      createTable = TRUE
-    )
+    tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
+                                          connection = connection)
     
     sql <- "
     SELECT c.CONCEPT_ID,
@@ -95,38 +75,8 @@ getConceptIdDetails <-
     ) %>%
       tidyr::tibble()
     
-    if (!is.null(conceptPrevalenceTable)) {
-      conceptPrevalence <- tryCatch(expr = {
-        DatabaseConnector::renderTranslateQuerySql(
-          connection = connection,
-          sql = "SELECT cp.CONCEPT_ID, cp.RC, cp.DBC, cp.DRC, cp.DDBC
-                 FROM @concept_prevalence_table cp
-                 INNER JOIN @concept_id_table tt
-                 ON cp.concept_id = tt.concept_id;",
-          snakeCaseToCamelCase = TRUE,
-          concept_id_table = tempTableName,
-          concept_prevalence_table = conceptPrevalenceTable
-        ) %>%
-          tidyr::tibble()
-      })
-    }
-    
-    if (exists("conceptPrevalence") &&
-        dplyr::is.tbl(conceptPrevalence)) {
-      data <- data %>%
-        dplyr::left_join(conceptPrevalence,
-                         by = "conceptId")
-    }
-    
-    DatabaseConnector::renderTranslateExecuteSql(
-      connection = connection,
-      sql = "DROP TABLE IF EXISTS @concept_id_table;",
-      profile = FALSE,
-      progressBar = FALSE,
-      reportOverallTime = FALSE,
-      tempEmulationSchema = tempEmulationSchema,
-      concept_id_table = tempTableName
-    )
+    dropTempConceptTable(connection = connection, 
+                         tempTableName = tempTableName)
     
     return(data)
   }

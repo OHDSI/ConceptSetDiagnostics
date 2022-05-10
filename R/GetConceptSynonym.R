@@ -46,24 +46,8 @@ getConceptSynonym <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
 
-    conceptIdTable <-
-      dplyr::tibble(conceptId = conceptIds %>% unique())
-    
-    tempTableName <-
-      paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
-      )))) * 100000)
-    DatabaseConnector::insertTable(
-      connection = connection,
-      tableName = tempTableName,
-      dropTableIfExists = TRUE,
-      tempTable = TRUE,
-      tempEmulationSchema = tempEmulationSchema,
-      data = conceptIdTable,
-      camelCaseToSnakeCase = TRUE,
-      bulkLoad = TRUE,
-      progressBar = FALSE,
-      createTable = TRUE
-    )
+  tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
+                                        connection = connection)
     
     sql <- "
     SELECT cs.CONCEPT_ID,
@@ -78,23 +62,13 @@ getConceptSynonym <-
         connection = connection,
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        concept_ids = conceptIds,
         concept_id_table = tempTableName,
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
     
-    DatabaseConnector::renderTranslateExecuteSql(
-      connection = connection,
-      sql = "DROP TABLE IF EXISTS @concept_id_table;",
-      profile = FALSE,
-      progressBar = FALSE,
-      reportOverallTime = FALSE,
-      tempEmulationSchema = tempEmulationSchema,
-      concept_id_table = tempTableName
-    )
+    dropTempConceptTable(connection = connection, 
+                         tempTableName = tempTableName)
     
-    return(data)
-
     return(data)
   }

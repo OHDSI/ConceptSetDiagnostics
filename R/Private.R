@@ -18,11 +18,9 @@
 
 checkIfCohortDefinitionSet <- function(cohortDefinitionSet) {
   errorMessage <- checkmate::makeAssertCollection()
-  checkmate::assertDataFrame(
-    x = cohorts,
-    min.cols = 1,
-    add = errorMessage
-  )
+  checkmate::assertDataFrame(x = cohorts,
+                             min.cols = 1,
+                             add = errorMessage)
   checkmate::assertNames(
     x = colnames(cohorts),
     must.include = c("cohortId"),
@@ -56,4 +54,45 @@ hasData <- function(data) {
     }
   }
   return(TRUE)
+}
+
+
+loadTempConceptTable <- function(conceptIds,
+                                 connection,
+                                 tempEmulationSchema = NULL) {
+  conceptIdTable <-
+    dplyr::tibble(conceptId = conceptIds %>% unique())
+  
+  tempTableName <-
+    paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
+      
+    )))) * 100000)
+  DatabaseConnector::insertTable(
+    connection = connection,
+    tableName = tempTableName,
+    dropTableIfExists = TRUE,
+    tempTable = TRUE,
+    tempEmulationSchema = tempEmulationSchema,
+    data = conceptIdTable,
+    camelCaseToSnakeCase = TRUE,
+    bulkLoad = TRUE,
+    progressBar = FALSE,
+    createTable = TRUE
+  )
+  return(tempTableName)
+}
+
+
+dropTempConceptTable <- function(tempEmulationSchema = NULL,
+                                 connection,
+                                 tempTableName) {
+  DatabaseConnector::renderTranslateExecuteSql(
+    connection = connection,
+    sql = "DROP TABLE IF EXISTS @concept_id_table;",
+    profile = FALSE,
+    progressBar = FALSE,
+    reportOverallTime = FALSE,
+    tempEmulationSchema = tempEmulationSchema,
+    concept_id_table = tempTableName
+  )
 }
