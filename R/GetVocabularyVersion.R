@@ -34,7 +34,7 @@ getVocabularyVersion <-
     }
     
     data <-
-      DatabaseConnector::querySql(
+      DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = "select VOCABULARY_VERSION 
               from @vocabulary_database_schema.vocabulary

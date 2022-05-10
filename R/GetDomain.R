@@ -40,7 +40,7 @@ getDomain <-
     }
 
     data <-
-      DatabaseConnector::querySql(
+      DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = "SELECT * FROM @vocabulary_database_schema.domain;",
         vocabulary_database_schema = vocabularyDatabaseSchema,

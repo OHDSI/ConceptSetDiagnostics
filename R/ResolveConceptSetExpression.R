@@ -22,8 +22,6 @@
 #' @template ConceptSetExpression
 #'
 #' @template VocabularyDatabaseSchema
-#' 
-#' @template ConceptPrevalenceTable
 #'
 #' @return
 #' Returns a tibble data frame.
@@ -32,11 +30,11 @@
 resolveConceptSetExpression <- function(conceptSetExpression,
                                         connection = NULL,
                                         connectionDetails = NULL,
-                                        vocabularyDatabaseSchema = "vocabulary",
-                                        conceptPrevalenceTable = NULL) {
+                                        vocabularyDatabaseSchema = "vocabulary") {
   # convert concept set expression R object (list) to data frame
   conceptSetExpressionDataFrame <-
     getConceptSetExpressionDataFrameFromConceptSetExpression(
+      updateVocabularyFields = TRUE,
       connection = connection,
       connectionDetails = connectionDetails,
       conceptSetExpression = conceptSetExpression,
@@ -61,17 +59,16 @@ resolveConceptSetExpression <- function(conceptSetExpression,
       vocabularyDatabaseSchema = vocabularyDatabaseSchema
     )
   
-  conceptIdDetailsForDescendantConcepts <-
-    getConceptIdDetails(
-      conceptIds = descendantConcepts$descendantConceptId %>% unique(),
-      connection = connection,
-      connectionDetails = connectionDetails,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-      conceptPrevalenceTable = conceptPrevalenceTable
-    )
-  browser()
-  descendantConcepts <- descendantConcepts %>%
-    dplyr::inner_join(conceptIdDetailsForDescendantConcepts, by = "conceptId")
+  # conceptIdDetailsForDescendantConcepts <-
+  #   getConceptIdDetails(
+  #     conceptIds = descendantConcepts$descendantConceptId %>% unique(),
+  #     connection = connection,
+  #     connectionDetails = connectionDetails,
+  #     vocabularyDatabaseSchema = vocabularyDatabaseSchema
+  #   )
+  # browser()
+  # descendantConcepts <- descendantConcepts %>%
+  #   dplyr::inner_join(conceptIdDetailsForDescendantConcepts, by = "conceptId")
   
   
   # get all conceptIds (as dataframe) that are excluded in concept set expression
@@ -82,7 +79,7 @@ resolveConceptSetExpression <- function(conceptSetExpression,
   # get all conceptIds (as dataframe) that are excluded in concept set expression with descendants
   excludedConceptIdsWithDescendants <- descendantConcepts %>%
     dplyr::filter(
-      .data$ancestorConceptId %in% (
+      .data$conceptId %in% (
         conceptSetExpressionDataFrame %>%
           dplyr::filter(.data$isExcluded == TRUE) %>%
           dplyr::filter(.data$includeDescendants == TRUE) %>%
@@ -115,49 +112,28 @@ resolveConceptSetExpression <- function(conceptSetExpression,
     unique()
   
   # removed all excluded conceptIds including those with descendants == TRUE
-  resolvedConceptIds <-
+  resolvedConceptIdArray <-
     setdiff(x = conceptIdsInConceptSetExpressionTableToBeIncluded,
             y = conceptIdsInConceptSetExpressionTableToBeExcluded)
   
   # get all resolved concept Ids as data frame
-  resolvedConceptIds <- dplyr::union(
+  resolvedConceptIdArray2 <- dplyr::union(
     conceptSetExpressionDataFrame %>%
       dplyr::filter(.data$isExcluded == FALSE) %>%
-      dplyr::select(
-        .data$conceptId,
-        .data$conceptName,
-        .data$conceptCode,
-        .data$domainId,
-        .data$vocabularyId,
-        .data$conceptClassId,
-        .data$standardConcept,
-        .data$invalidReason
-      ),
+      dplyr::select(.data$conceptId),
     descendantConcepts %>%
-      dplyr::select(
-        .data$conceptId,
-        .data$conceptName,
-        .data$conceptCode,
-        .data$domainId,
-        .data$vocabularyId,
-        .data$conceptClassId,
-        .data$standardConcept,
-        .data$invalidReason
-      )
+      dplyr::select(.data$conceptId)
   ) %>%
-    dplyr::filter(.data$conceptId %in% resolvedConceptIds) %>%
-    dplyr::select(
-      .data$conceptId,
-      .data$conceptName,
-      .data$conceptCode,
-      .data$domainId,
-      .data$vocabularyId,
-      .data$conceptClassId,
-      .data$standardConcept,
-      .data$invalidReason
-    ) %>%
-    dplyr::distinct() %>%
-    dplyr::arrange(.data$conceptId)
+    dplyr::filter(.data$conceptId %in% resolvedConceptIdArray) %>%
+    dplyr::pull(.data$conceptId) %>%
+    unique()
   
-  return(resolvedConceptIds)
+  conceptIdDetails <-
+    getConceptIdDetails(
+      conceptIds = resolvedConceptIdArray2,
+      connection = connection,
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema
+    )
+  
+  return(conceptIdDetails)
 }

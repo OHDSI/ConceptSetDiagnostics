@@ -65,7 +65,6 @@ getConceptAncestor <-
         connection = connection,
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        concept_ids = conceptIds,
         concept_id_table = tempTableName,
         snakeCaseToCamelCase = TRUE
       ) %>%

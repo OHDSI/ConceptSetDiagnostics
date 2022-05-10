@@ -68,7 +68,6 @@ getConceptRelationship <-
       connection = connection,
       sql = sql,
       snakeCaseToCamelCase = TRUE,
-      concept_ids = conceptIds,
       concept_id_table = tempTableName,
       vocabulary_database_schema = vocabularyDatabaseSchema
     ) %>%

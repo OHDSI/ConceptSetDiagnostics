@@ -34,7 +34,7 @@ getVocabulary <-
     }
 
     data <-
-      DatabaseConnector::querySql(
+      DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = "SELECT * FROM @vocabulary_database_schema.vocabulary;",
         vocabulary_database_schema = vocabularyDatabaseSchema,

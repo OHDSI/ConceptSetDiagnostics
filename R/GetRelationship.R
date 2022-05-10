@@ -34,7 +34,7 @@ getRelationship <-
     }
 
     data <-
-      DatabaseConnector::querySql(
+      DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = "SELECT * FROM @vocabulary_database_schema.relationship;",
         vocabulary_database_schema = vocabularyDatabaseSchema,
