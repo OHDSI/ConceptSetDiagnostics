@@ -8,6 +8,15 @@ connection <-
   DatabaseConnector::connect(connectionDetails = connectionDetails)
 # dbReadTable(connection,CONCEPT)
 
+cohortDefinitionSet <-
+  CohortGenerator::getCohortDefinitionSet(
+    settingsFileName = "cohorts/CohortsToCreate.csv",
+    jsonFolder = "cohorts",
+    sqlFolder = "cohorts",
+    packageName = "ConceptSetDiagnostics"
+  ) %>% 
+  dplyr::tibble()
+
 
 #-------------------------------------------------------------Pre-Requisites ----------------------------
 # Get conceptIds to filter from concept_prevalence scheme (Filter Eunomia conceptIds fro Main Database)
@@ -145,36 +154,26 @@ ConceptSetDiagnostics::getRelationship(connection = connection, vocabularyDataba
 #----14. getVocabulary----
 ConceptSetDiagnostics::getVocabulary(connection = connection, vocabularyDatabaseSchema = databaseSchema)
 
+#----15. extractConceptSetsInCohortDefinition---- 
+ConceptSetDiagnostics::extractConceptSetsInCohortDefinition(cohortExpression = cohortDefinitionSet[1,]$json %>% 
+                                                              RJSONIO::fromJSON(digits = 23))
 
+#----15. getOptimizationRecommendationForConceptSetTable----
+conceptSetExpression <- ConceptSetDiagnostics::extractConceptSetsInCohortDefinition(
+  cohortExpression = cohortDefinitionSet[1,]$json %>% RJSONIO::fromJSON(digits = 23)) %>% 
+  dplyr::filter(.data$conceptSetId == 0) %>% 
+  dplyr::pull(.data$conceptSetExpression) %>% 
+  RJSONIO::fromJSON(digits = 23)
 
-
-
-
-
-
-
-#
-ConceptSetDiagnostics::extractConceptSetsInCohortDefinition()
-
-#----13. getOptimizationRecommendationForConceptSetTable----
-ConceptSetDiagnostics::getOptimizationRecommendationForConceptSetTable(
-  conceptSetExpressionDataFrame = conceptSetExpressionDataFrame,
+ConceptSetDiagnostics::getOptimizationRecommendationForConceptSetExpression(
+  conceptSetExpression = conceptSetExpression,
   connection = connection,
   vocabularyDatabaseSchema = databaseSchema
 )
 
-#----17. getRecommendationForConceptSetExpression---- (Includes getRecommendedStandard and GetRecommendedSource)
-ConceptSetDiagnostics::getRecommendationForConceptSetExpression(
-  conceptSetExpression = conceptSetExpression,
-  connection = connection,
-  vocabularyDatabaseSchema = databaseSchema,
-  conceptPrevalenceSchema = databaseSchema
-)
-
-
-#----20. optimizeConceptSetExpression----
+#----16. optimizeConceptSetExpression
 ConceptSetDiagnostics::optimizeConceptSetExpression(
-  connection = connection,
   conceptSetExpression = conceptSetExpression,
+  connection = connection,
   vocabularyDatabaseSchema = databaseSchema
 )
