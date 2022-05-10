@@ -49,10 +49,10 @@ getStringSearchConceptsUsingFullText <-
         	c.CONCEPT_CODE,
         	c.CONCEPT_CLASS_ID,
         	c.DOMAIN_ID,
-          Least(ts_rank(FULL_TEXT_SEARCH, phraseto_tsquery('congestive heart failure')),
-				        ts_rank(FULL_TEXT_SEARCH, websearch_to_tsquery('congestive heart failure'))) AS rank,
-        	Least(ts_rank_cd(FULL_TEXT_SEARCH, phraseto_tsquery('congestive heart failure')),
-				        ts_rank_cd(FULL_TEXT_SEARCH, websearch_to_tsquery('congestive heart failure'))) AS rank_cd
+          Least(ts_rank(FULL_TEXT_SEARCH, phraseto_tsquery('@search_string')),
+				        ts_rank(FULL_TEXT_SEARCH, websearch_to_tsquery('@search_string'))) AS rank,
+        	Least(ts_rank_cd(FULL_TEXT_SEARCH, phraseto_tsquery('@search_string')),
+				        ts_rank_cd(FULL_TEXT_SEARCH, websearch_to_tsquery('@search_string'))) AS rank_cd
         FROM @vocabulary_database_schema.concept c
         WHERE FULL_TEXT_SEARCH @@ phraseto_tsquery('@search_string') OR
               FULL_TEXT_SEARCH @@ websearch_to_tsquery('@search_string')
