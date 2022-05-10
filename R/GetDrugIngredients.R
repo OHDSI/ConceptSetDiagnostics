@@ -45,7 +45,7 @@ getDrugIngredients <-
     }
     
     conceptIdTable <-
-      dplyr::tibble(conceptId = conceptIds %>% unique())
+      dplyr::tibble(conceptId = drugConceptIds %>% unique())
     
     tempTableName <-
       paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
