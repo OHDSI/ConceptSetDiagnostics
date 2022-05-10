@@ -25,15 +25,12 @@
 #'
 #' @param searchString A phrase (can be multiple words) to search for.
 #'
-#' @template ConceptPrevalenceTable
-#'
 #' @export
 getStringSearchConcepts <-
   function(searchString,
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
-           connectionDetails = NULL,
-           conceptPrevalenceTable = NULL) {
+           connectionDetails = NULL) {
     start <- Sys.time()
     
     if (is.null(connection)) {
@@ -52,7 +49,6 @@ getStringSearchConcepts <-
         packageName = utils::packageName(),
         dbms = connection@dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        concept_prevalence_table = conceptPrevalenceTable,
         search_string = searchString
       )
     

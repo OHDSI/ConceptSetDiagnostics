@@ -25,15 +25,12 @@
 #'
 #' @param searchString A phrase (can be multiple words) to search for.
 #'
-#' @template ConceptPrevalenceTable
-#'
 #' @export
 getStringSearchConceptsUsingFullText <-
   function(searchString,
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
-           connectionDetails = NULL,
-           conceptPrevalenceTable = NULL) {
+           connectionDetails = NULL) {
     start <- Sys.time()
     
     if (is.null(connection)) {
@@ -56,26 +53,17 @@ getStringSearchConceptsUsingFullText <-
 				        ts_rank(FULL_TEXT_SEARCH, websearch_to_tsquery('congestive heart failure'))) AS rank,
         	Least(ts_rank_cd(FULL_TEXT_SEARCH, phraseto_tsquery('congestive heart failure')),
 				        ts_rank_cd(FULL_TEXT_SEARCH, websearch_to_tsquery('congestive heart failure'))) AS rank_cd
-        {@concept_prevalence_table != '' } ? {,
-        	ISNULL(universe.RC, 0) RC,
-        	ISNULL(universe.DBC, 0) DBC,
-        	ISNULL(universe.DRC, 0) DRC,
-        	ISNULL(universe.DDBC, 0) DDBC }
         FROM @vocabulary_database_schema.concept c
-        {@concept_prevalence_table != '' } ? {
-        LEFT JOIN @concept_prevalence_table universe
-        	ON c.concept_id = universe.concept_id}
         WHERE FULL_TEXT_SEARCH @@ phraseto_tsquery('@search_string') OR
               FULL_TEXT_SEARCH @@ websearch_to_tsquery('@search_string')
-        {@concept_prevalence_table != '' } ? {ORDER BY ISNULL(universe.DRC, 0) DESC}
-        ORDER BY rank_cd DESC, rank DESC;"
+        ORDER BY rank_cd DESC, rank DESC
+        ;"
     
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         sql = sql,
         connection = connection,
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        concept_prevalence_table = conceptPrevalenceTable,
         search_string = searchString,
         snakeCaseToCamelCase = TRUE
       ) %>%

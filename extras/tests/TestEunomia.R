@@ -18,7 +18,9 @@ conceptIdList <- DatabaseConnector::dbGetQuery(conn = connection,statement = "se
 ConceptPrevalenceDf <- read.csv(file = file.path(getwd(),"inst","csv","conceptPrevalenceUniverse.csv")) %>% 
   dplyr::filter(.data$concept_id %in% conceptIdList)
 
-DatabaseConnector::insertTable(connection = connection,tableName = "UNIVERSE", data = ConceptPrevalenceDf)
+DatabaseConnector::insertTable(connection = connection,
+                               tableName = "UNIVERSE", 
+                               data = ConceptPrevalenceDf)
 
 write.csv(x = ConceptPrevalenceDf,file = file.path(getwd(),"inst","csv","conceptPrevalenceUniverse.csv"),row.names = FALSE)
 
