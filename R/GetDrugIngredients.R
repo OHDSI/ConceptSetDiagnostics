@@ -21,7 +21,7 @@
 #'
 #' @template Connection
 #'
-#' @param drugConceptIds An array of concept ids to find ingredients for
+#' @param conceptIds An array of concept ids to find ingredients for
 #'
 #' @template VocabularyDatabaseSchema
 #'
@@ -35,7 +35,7 @@ getDrugIngredients <-
   function(connection = NULL,
            connectionDetails = NULL,
            tempEmulationSchema = NULL,
-           drugConceptIds,
+           conceptIds,
            vocabularyDatabaseSchema = "vocabulary") {
     start <- Sys.time()
     

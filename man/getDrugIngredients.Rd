@@ -8,7 +8,7 @@ getDrugIngredients(
   connection = NULL,
   connectionDetails = NULL,
   tempEmulationSchema = NULL,
-  drugConceptIds,
+  conceptIds,
   vocabularyDatabaseSchema = "vocabulary"
 )
 }
@@ -27,7 +27,7 @@ provided.}
 \item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
 tables, provide a schema with write privileges where temp tables can be created.}
 
-\item{drugConceptIds}{An array of concept ids to find ingredients for}
+\item{conceptIds}{An array of concept ids to find ingredients for}
 
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 }

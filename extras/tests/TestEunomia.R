@@ -177,3 +177,8 @@ ConceptSetDiagnostics::optimizeConceptSetExpression(
   connection = connection,
   vocabularyDatabaseSchema = databaseSchema
 )
+
+#----16. getDrugIngredients
+ConceptSetDiagnostics::getDrugIngredients(connection = connection, 
+                                          conceptIds = c(1127078,1127433),
+                                          vocabularyDatabaseSchema = databaseSchema)
