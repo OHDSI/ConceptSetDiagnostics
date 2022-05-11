@@ -56,7 +56,7 @@ getStringSearchConceptsUsingFullText <-
         FROM @vocabulary_database_schema.concept c
         WHERE FULL_TEXT_SEARCH @@ phraseto_tsquery('@search_string') OR
               FULL_TEXT_SEARCH @@ websearch_to_tsquery('@search_string')
-        ORDER BY rank_cd DESC, rank DESC
+        ORDER BY rank_cd, rank
         ;"
     
     data <-
