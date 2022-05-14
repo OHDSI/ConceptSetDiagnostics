@@ -87,7 +87,7 @@ loadTempConceptTable <- function(conceptIds,
                                                  progressBar = FALSE, 
                                                  reportOverallTime = FALSE, 
                                                  tempEmulationSchema = tempEmulationSchema,
-                                                 concept_id_table = conceptIdTable)
+                                                 concept_id_table = tempTableName)
   }
   
   return(tempTableName)
