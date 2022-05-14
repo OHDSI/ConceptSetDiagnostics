@@ -52,10 +52,7 @@ getConceptDescendant <-
     tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
                                           connection = connection)
     
-    sql <- "SELECT ANCESTOR_CONCEPT_ID concept_id,
-            	DESCENDANT_CONCEPT_ID,
-            	MIN_LEVELS_OF_SEPARATION,
-            	MAX_LEVELS_OF_SEPARATION
+    sql <- "SELECT ca.*
             FROM @vocabulary_database_schema.concept_ancestor ca
             INNER JOIN @concept_id_table cid
             ON ca.ancestor_concept_id = cid.concept_id;"
