@@ -79,6 +79,17 @@ loadTempConceptTable <- function(conceptIds,
     progressBar = FALSE,
     createTable = TRUE
   )
+  if (connection@dbms %in% c("redshift", "postgresql")) {
+    # Some performance tuning:
+    DatabaseConnector::renderTranslateExecuteSql(connection = connection,
+                                                 sql = "ANALYZE @concept_id_table;", 
+                                                 profile = FALSE, 
+                                                 progressBar = FALSE, 
+                                                 reportOverallTime = FALSE, 
+                                                 tempEmulationSchema = tempEmulationSchema,
+                                                 concept_id_table = conceptIdTable)
+  }
+  
   return(tempTableName)
 }
 
