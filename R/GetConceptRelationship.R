@@ -51,14 +51,14 @@ getConceptRelationship <-
     
     sql <- "SELECT DISTINCT *
             FROM
-            (SELECT *
+            (SELECT cr.*
             FROM @vocabulary_database_schema.concept_relationship cr
             INNER JOIN @concept_id_table cid
             ON CONCEPT_ID_1 = CONCEPT_ID
 
             UNION
 
-            SELECT *
+            SELECT cr.*
             FROM @vocabulary_database_schema.concept_relationship cr
             INNER JOIN @concept_id_table cid
             ON CONCEPT_ID_2 = CONCEPT_ID) f
