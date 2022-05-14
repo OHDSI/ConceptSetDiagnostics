@@ -25,7 +25,7 @@
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
-#' 
+#'
 #' @template TempEmulationSchema
 #'
 #' @return
@@ -53,17 +53,10 @@ getConceptIdDetails <-
                                           connection = connection)
     
     sql <- "
-    SELECT c.CONCEPT_ID,
-      	c.CONCEPT_NAME,
-      	c.VOCABULARY_ID,
-      	c.STANDARD_CONCEPT,
-      	c.INVALID_REASON,
-      	c.CONCEPT_CODE,
-      	c.CONCEPT_CLASS_ID,
-      	c.DOMAIN_ID
+    SELECT c.*
       FROM @vocabulary_database_schema.concept c
-      INNER JOIN @concept_id_table tt
-      ON c.concept_id = tt.concept_id;
+      INNER JOIN @concept_id_table t
+      ON c.concept_id = t.concept_id;
     "
     
     data <- DatabaseConnector::renderTranslateQuerySql(
@@ -75,7 +68,7 @@ getConceptIdDetails <-
     ) %>%
       tidyr::tibble()
     
-    dropTempConceptTable(connection = connection, 
+    dropTempConceptTable(connection = connection,
                          tempTableName = tempTableName)
     
     return(data)
