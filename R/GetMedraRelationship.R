@@ -98,6 +98,8 @@ getMedraRelationship <-
             "givenConceptName" = .data$conceptName,
             "givenConceptId" = .data$conceptId,
             "givenVocabularyId" = .data$vocabularyId,
+            "givenDomainId" = .data$domainId,
+            "givenConceptClassId" = .data$conceptClassId,
             "givenConceptClassId" = .data$conceptClassId,
             "givenConceptIdInvalidReason" = .data$invalidReason
           ) %>%
@@ -105,6 +107,7 @@ getMedraRelationship <-
             .data$givenConceptId,
             .data$givenConceptName,
             .data$givenVocabularyId,
+            .data$givenDomainId,
             .data$givenConceptClassId,
             .data$givenConceptIdInvalidReason
           ),
@@ -122,18 +125,18 @@ getMedraRelationship <-
             dplyr::filter(.data$vocabularyId == "MedDRA") %>%
             dplyr::filter(is.na(.data$invalidReason)) %>%
             dplyr::filter(.data$conceptClassId == !!conceptClass) %>%
-            dplyr::rename(!!paste0(
-              tolower(conceptClass), "ConceptName"
-            ) := .data$conceptName) %>%
-            dplyr::select(.data$conceptId,
-                          paste0(
-                            tolower(conceptClass), "ConceptName"
-                          )),
+            dplyr::rename(
+              !!paste0(tolower(conceptClass), "ConceptName") := .data$conceptName,!!paste0(tolower(conceptClass), "DomainId") := .data$domainId
+            ) %>%
+            dplyr::select(
+              .data$conceptId,
+              paste0(tolower(conceptClass), "ConceptName"),
+              paste0(tolower(conceptClass), "DomainId")
+            ),
           by = c("ancestorConceptId" = "conceptId")
         ) %>%
         dplyr::rename(!!paste0(tolower(conceptClass), "ConceptId") := .data$ancestorConceptId) %>%
-        dplyr::select(-.data$minLevelsOfSeparation,
-                      -.data$maxLevelsOfSeparation)
+        dplyr::select(-.data$minLevelsOfSeparation,-.data$maxLevelsOfSeparation)
       return(output)
     }
     ancestorSocForGivenConceptId <-
@@ -159,18 +162,18 @@ getMedraRelationship <-
             dplyr::filter(.data$vocabularyId == "MedDRA") %>%
             dplyr::filter(is.na(.data$invalidReason)) %>%
             dplyr::filter(.data$conceptClassId == !!conceptClass) %>%
-            dplyr::rename(!!paste0(
-              tolower(conceptClass), "ConceptName"
-            ) := .data$conceptName) %>%
+            dplyr::rename(
+              !!paste0(tolower(conceptClass), "ConceptName") := .data$conceptName,!!paste0(tolower(conceptClass), "DomainId") := .data$domainId
+            ) %>%
             dplyr::select(.data$conceptId,
                           paste0(
                             tolower(conceptClass), "ConceptName"
-                          )),
+                          ),
+                          paste0(tolower(conceptClass), "DomainId")),
           by = c("descendantConceptId" = "conceptId")
         ) %>%
         dplyr::rename(!!paste0(tolower(conceptClass), "ConceptId") := .data$descendantConceptId) %>%
-        dplyr::select(-.data$minLevelsOfSeparation,
-                      -.data$maxLevelsOfSeparation)
+        dplyr::select(-.data$minLevelsOfSeparation,-.data$maxLevelsOfSeparation)
       return(output)
     }
     descendantSocForGivenConceptId <-
@@ -184,24 +187,29 @@ getMedraRelationship <-
     descendantLltForGivenConceptId <-
       mapMedDraDescendant(conceptClass = "LLT")
     
-    socForGivenConceptId <- dplyr::bind_rows(ancestorSocForGivenConceptId,
-                                             descendantSocForGivenConceptId) %>%
+    socForGivenConceptId <-
+      dplyr::bind_rows(ancestorSocForGivenConceptId,
+                       descendantSocForGivenConceptId) %>%
       dplyr::distinct()
     
-    hlgtForGivenConceptId <- dplyr::bind_rows(ancestorHlgtForGivenConceptId,
-                                              descendantHlgtForGivenConceptId) %>%
+    hlgtForGivenConceptId <-
+      dplyr::bind_rows(ancestorHlgtForGivenConceptId,
+                       descendantHlgtForGivenConceptId) %>%
       dplyr::distinct()
     
-    hltForGivenConceptId <- dplyr::bind_rows(ancestorHltForGivenConceptId,
-                                             descendantHltForGivenConceptId) %>%
+    hltForGivenConceptId <-
+      dplyr::bind_rows(ancestorHltForGivenConceptId,
+                       descendantHltForGivenConceptId) %>%
       dplyr::distinct()
     
-    ptForGivenConceptId <- dplyr::bind_rows(ancestorPtForGivenConceptId,
-                                            descendantPtForGivenConceptId) %>%
+    ptForGivenConceptId <-
+      dplyr::bind_rows(ancestorPtForGivenConceptId,
+                       descendantPtForGivenConceptId) %>%
       dplyr::distinct()
     
-    lltForGivenConceptId <- dplyr::bind_rows(ancestorLltForGivenConceptId,
-                                             descendantLltForGivenConceptId) %>%
+    lltForGivenConceptId <-
+      dplyr::bind_rows(ancestorLltForGivenConceptId,
+                       descendantLltForGivenConceptId) %>%
       dplyr::distinct()
     
     

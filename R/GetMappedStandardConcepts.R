@@ -50,7 +50,7 @@ getMappedStandardConcepts <-
                                           connection = connection)
     
     sql <- "--get all standard codes that map to the list of provided source codes
-            SELECT cr.CONCEPT_ID_2 AS SEARCHED_CONCEPT_ID,
+            SELECT cr.CONCEPT_ID_2 AS GIVEN_CONCEPT_ID,
               C.*
             FROM @vocabulary_database_schema.concept_relationship cr
             INNER JOIN @concept_id_table cid

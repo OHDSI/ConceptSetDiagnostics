@@ -20,6 +20,7 @@ Imports:
 	SqlRender,
 	stringi,
 	stringr,
+	stringdist,
 	tidyr
 Suggests:
 License: Apache License (>= 2)
