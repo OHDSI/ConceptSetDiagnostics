@@ -32,7 +32,7 @@ tables, provide a schema with write privileges where temp tables can be created.
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 }
 \value{
-Returns a tibble data frame with fields
+Returns a a list of tibble data frames
 conceptId,
 socConceptId, socConceptName,
 HLTConceptId, HltConceptName,

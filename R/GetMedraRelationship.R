@@ -29,7 +29,7 @@
 #' @template TempEmulationSchema
 #'
 #' @return
-#' Returns a tibble data frame with fields
+#' Returns a a list of tibble data frames
 #' conceptId,
 #' socConceptId, socConceptName,
 #' HLTConceptId, HltConceptName,
@@ -90,9 +90,9 @@ getMedraRelationship <-
       tempEmulationSchema = tempEmulationSchema,
       vocabularyDatabaseSchema = vocabularyDatabaseSchema
     )
-    
-    givenConceptId <- dplyr::tibble(givenConceptId = conceptIds) %>%
-      dplyr::left_join(
+    givenConceptId <- dplyr::tibble(givenConceptId = conceptIds %>% unique()) %>%
+      dplyr::filter(.data$givenConceptId > 0) %>% 
+      dplyr::inner_join(
         conceptIdDetails %>%
           dplyr::rename(
             "givenConceptName" = .data$conceptName,
@@ -212,18 +212,14 @@ getMedraRelationship <-
                        descendantLltForGivenConceptId) %>%
       dplyr::distinct()
     
-    
-    output <- givenConceptId %>%
-      dplyr::left_join(socForGivenConceptId,
-                       by = "givenConceptId") %>%
-      dplyr::left_join(hlgtForGivenConceptId,
-                       by = "givenConceptId") %>%
-      dplyr::left_join(hltForGivenConceptId,
-                       by = "givenConceptId") %>%
-      dplyr::left_join(ptForGivenConceptId,
-                       by = "givenConceptId") %>%
-      dplyr::left_join(lltForGivenConceptId,
-                       by = "givenConceptId")
+    output <- list(
+      givenConceptId = givenConceptId,
+      soc = socForGivenConceptId,
+      hlgt = hlgtForGivenConceptId,
+      hlt = hltForGivenConceptId,
+      pt = ptForGivenConceptId,
+      llt = lltForGivenConceptId
+    )
     
     return(output)
   }
