@@ -181,8 +181,23 @@ mapMedraToSnomedViaVocabulary <-
       connection = connection,
       vocabularyDatabaseSchema = vocabularyDatabaseSchema
     )
-    browser()
     
+    # walk back LLT from PT
+    finalMappedConcepts <-
+      dplyr::bind_rows(
+        finalMappedConcepts %>%
+          dplyr::anti_join(
+            lltToPt %>%
+              dplyr::select(.data$medDraConceptId) %>%
+              dplyr::distinct(),
+            by = "medDraConceptId"
+          ),
+        finalMappedConcepts %>%
+          dplyr::inner_join(lltToPt,
+                            by = "medDraConceptId") %>%
+          dplyr::select(-.data$medDraConceptId) %>%
+          dplyr::rename("medDraConceptId" = .data$givenConceptId)
+      )
     
     mappedUsingVocabaulary <- finalMappedConcepts %>%
       dplyr::inner_join(
