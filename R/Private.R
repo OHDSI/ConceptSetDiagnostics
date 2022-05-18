@@ -68,17 +68,23 @@ loadTempConceptTable <- function(conceptIds,
     paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
       
     )))) * 100000)
-  DatabaseConnector::insertTable(
-    connection = connection,
-    tableName = tempTableName,
-    dropTableIfExists = TRUE,
-    tempTable = TRUE,
-    tempEmulationSchema = tempEmulationSchema,
-    data = conceptIdTable,
-    camelCaseToSnakeCase = TRUE,
-    bulkLoad = TRUE,
-    progressBar = FALSE,
-    createTable = TRUE
+  
+  invisible(
+    utils::capture.output(
+      DatabaseConnector::insertTable(
+        connection = connection,
+        tableName = tempTableName,
+        dropTableIfExists = TRUE,
+        tempTable = TRUE,
+        tempEmulationSchema = tempEmulationSchema,
+        data = conceptIdTable,
+        camelCaseToSnakeCase = TRUE,
+        bulkLoad = TRUE,
+        progressBar = FALSE,
+        createTable = TRUE
+      ),
+      file = nullfile()
+    )
   )
   if (connection@dbms %in% c("redshift", "postgresql")) {
     # Some performance tuning:
