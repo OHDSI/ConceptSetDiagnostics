@@ -54,7 +54,6 @@ getMedraRelationship <-
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
     conceptAncestor <- getConceptAncestor(
       conceptIds = conceptIds,
       connection = connection,
