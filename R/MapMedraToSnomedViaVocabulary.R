@@ -53,13 +53,9 @@ mapMedraToSnomedViaVocabulary <-
     givenConceptId <-
       dplyr::tibble(medDraConceptId = conceptIds %>% unique())
     
-    writeLines(
-      paste0(
-        "Found ",
-        scales::comma(nrow(givenConceptId)),
-        " concept ids."
-      )
-    )
+    writeLines(paste0("Found ",
+                      scales::comma(nrow(givenConceptId)),
+                      " concept ids."))
     
     medDraRelationship <- getMedraRelationship(
       conceptIds = givenConceptId$medDraConceptId,
@@ -145,9 +141,7 @@ mapMedraToSnomedViaVocabulary <-
       dplyr::distinct() %>%
       dplyr::arrange(.data$medDraConceptId)
     
-    writeLines(
-      "Looking for snomed that are descendants to MedDRA in concept ancestor table."
-    )
+    writeLines("Looking for snomed that are descendants to MedDRA in concept ancestor table.")
     # since MedDRA is a classifier for SNOMED, snomed is a descendant to MedDRA
     medDRADescendants <- getConceptDescendant(
       conceptIds = givenConceptId$medDraConceptId,
@@ -156,9 +150,7 @@ mapMedraToSnomedViaVocabulary <-
     )
     # filtering to snomed will be done later because we dont have conceptId details yet.
     
-    writeLines(
-      "Looking for snomed that are related to MedDRA in concept relationship table."
-    )
+    writeLines("Looking for snomed that are related to MedDRA in concept relationship table.")
     
     # but sometimes we may have a relationship in concept relationship but not in concept ancestor - because the related concept is deprecated
     medDraRelated <- getConceptRelationship(
@@ -203,11 +195,13 @@ mapMedraToSnomedViaVocabulary <-
     
     descendantsMappedToSnoMed <-
       medDRADescendants %>%
-      dplyr::inner_join(conceptIdDetails %>% 
-                          dplyr::filter(.data$vocabularyId == 'SNOMED') %>% 
-                          dplyr::select(.data$conceptId) %>% 
-                          dplyr::distinct(),
-                        by = c("descendantConceptId" = "conceptId")) %>%
+      dplyr::inner_join(
+        conceptIdDetails %>%
+          dplyr::filter(.data$vocabularyId == 'SNOMED') %>%
+          dplyr::select(.data$conceptId) %>%
+          dplyr::distinct(),
+        by = c("descendantConceptId" = "conceptId")
+      ) %>%
       dplyr::select(
         .data$ancestorConceptId,
         .data$descendantConceptId,
@@ -227,9 +221,11 @@ mapMedraToSnomedViaVocabulary <-
       dplyr::inner_join(
         conceptIdDetails %>%
           dplyr::filter(.data$vocabularyId == 'SNOMED') %>%
-          dplyr::select(.data$conceptId,
-                        .data$standardConcept,
-                        .data$invalidReason),
+          dplyr::select(
+            .data$conceptId,
+            .data$standardConcept,
+            .data$invalidReason
+          ),
         by = c("conceptId2" = "conceptId")
       ) %>%
       dplyr::rename(
@@ -275,30 +271,36 @@ mapMedraToSnomedViaVocabulary <-
       vocabularyDatabaseSchema = vocabularyDatabaseSchema
     )
     
-    snomedSynonyms <- 
+    snomedSynonyms <-
       dplyr::bind_rows(
-        finalMappedConcepts %>% 
-          dplyr::select(.data$snomedConceptId) %>% 
-          dplyr::rename("conceptId" = .data$snomedConceptId) %>% 
-          dplyr::distinct() %>% 
-          dplyr::inner_join(conceptIdDetails %>% 
-                              dplyr::select(.data$conceptId,
-                                            .data$conceptName),
-                            by = "conceptId"),
-        finalMappedConcepts %>% 
-          dplyr::select(.data$snomedConceptId) %>% 
-          dplyr::rename("conceptId" = .data$snomedConceptId) %>% 
-          dplyr::distinct() %>% 
-          dplyr::inner_join(snomedSynonyms %>% 
-                              dplyr::select(.data$conceptId,
-                                            .data$conceptSynonymName) %>% 
-                              dplyr::distinct() %>% 
-                              dplyr::rename("conceptName" = .data$conceptSynonymName),
-                            by = "conceptId")
-      ) %>% 
-      dplyr::distinct() %>% 
-      dplyr::rename("snomedConceptId" = .data$conceptId,
-                    "snomedConceptName" = .data$conceptName) %>% 
+        finalMappedConcepts %>%
+          dplyr::select(.data$snomedConceptId) %>%
+          dplyr::rename("conceptId" = .data$snomedConceptId) %>%
+          dplyr::distinct() %>%
+          dplyr::inner_join(
+            conceptIdDetails %>%
+              dplyr::select(.data$conceptId,
+                            .data$conceptName),
+            by = "conceptId"
+          ),
+        finalMappedConcepts %>%
+          dplyr::select(.data$snomedConceptId) %>%
+          dplyr::rename("conceptId" = .data$snomedConceptId) %>%
+          dplyr::distinct() %>%
+          dplyr::inner_join(
+            snomedSynonyms %>%
+              dplyr::select(.data$conceptId,
+                            .data$conceptSynonymName) %>%
+              dplyr::distinct() %>%
+              dplyr::rename("conceptName" = .data$conceptSynonymName),
+            by = "conceptId"
+          )
+      ) %>%
+      dplyr::distinct() %>%
+      dplyr::rename(
+        "snomedConceptId" = .data$conceptId,
+        "snomedConceptName" = .data$conceptName
+      ) %>%
       dplyr::arrange(.data$snomedConceptId)
     
     # walk back LLT from PT
@@ -316,16 +318,20 @@ mapMedraToSnomedViaVocabulary <-
                             by = "medDraConceptId") %>%
           dplyr::select(-.data$medDraConceptId) %>%
           dplyr::rename("medDraConceptId" = .data$givenConceptId)
-      )%>% 
-      dplyr::select(.data$medDraConceptId,
-                    .data$snomedConceptId,
-                    .data$minLevelsOfSeparation,
-                    .data$maxLevelsOfSeparation) %>% 
-      dplyr::distinct() %>% 
-      dplyr::arrange(.data$medDraConceptId,
-                     .data$snomedConceptId,
-                     .data$minLevelsOfSeparation,
-                     .data$maxLevelsOfSeparation)
+      ) %>%
+      dplyr::select(
+        .data$medDraConceptId,
+        .data$snomedConceptId,
+        .data$minLevelsOfSeparation,
+        .data$maxLevelsOfSeparation
+      ) %>%
+      dplyr::distinct() %>%
+      dplyr::arrange(
+        .data$medDraConceptId,
+        .data$snomedConceptId,
+        .data$minLevelsOfSeparation,
+        .data$maxLevelsOfSeparation
+      )
     
     mappedUsingVocabaulary <- finalMappedConcepts %>%
       dplyr::inner_join(
@@ -356,7 +362,8 @@ mapMedraToSnomedViaVocabulary <-
       dplyr::inner_join(snomedSynonyms,
                         by = "snomedConceptId")
     
-    computingStringDistanceScores <- computingStringDistanceScores %>% 
+    computingStringDistanceScores <-
+      computingStringDistanceScores %>%
       dplyr::mutate(
         stringDistance1 =
           stringdist::stringdist(
@@ -380,14 +387,14 @@ mapMedraToSnomedViaVocabulary <-
       ) %>%
       dplyr::select(.data$medDraConceptId,
                     .data$snomedConceptId,
-                    .data$stringDistanceScore) %>% 
+                    .data$stringDistanceScore) %>%
       dplyr::distinct()
     
-    mappedUsingVocabaulary <- mappedUsingVocabaulary %>% 
+    mappedUsingVocabaulary <- mappedUsingVocabaulary %>%
       dplyr::left_join(computingStringDistanceScores,
                        by = c("medDraConceptId",
-                              "snomedConceptId")) %>% 
-      tidyr::replace_na(list(stringDistanceScore = 999)) %>% 
+                              "snomedConceptId")) %>%
+      tidyr::replace_na(list(stringDistanceScore = 999)) %>%
       dplyr::group_by(.data$medDraConceptId) %>%
       dplyr::arrange(
         .data$minLevelsOfSeparation,
@@ -396,11 +403,9 @@ mapMedraToSnomedViaVocabulary <-
       ) %>%
       dplyr::mutate(rank = dplyr::row_number()) %>%
       dplyr::ungroup() %>%
-      dplyr::select(
-        .data$medDraConceptId,
-        .data$snomedConceptId,
-        .data$rank
-      ) %>% 
+      dplyr::select(.data$medDraConceptId,
+                    .data$snomedConceptId,
+                    .data$rank) %>%
       dplyr::distinct()
     
     writeLines("remove any descendants of snomed when parent is mapped")
@@ -416,65 +421,114 @@ mapMedraToSnomedViaVocabulary <-
       dplyr::distinct() %>%
       dplyr::arrange()
     
-    conceptRanking <- conceptDescendantsForAllSnomed %>%
-      dplyr::filter(!.data$ancestorConceptId == .data$descendantConceptId) %>%
-      dplyr::distinct() %>% 
-      dplyr::group_by(.data$ancestorConceptId) %>%
-      dplyr::arrange(.data$minLevelsOfSeparation,
-                     .data$maxLevelsOfSeparation) %>%
-      dplyr::mutate(rank = dplyr::row_number()) %>%
-      dplyr::select(.data$ancestorConceptId,
-                    .data$descendantConceptId,
-                    .data$rank) %>%
-      dplyr::ungroup()
-    
-    
-    snomedsThatMaybeRolledUp <- conceptRanking %>%
+    conceptDescendantsForAllSnomedRanked <- conceptDescendantsForAllSnomed %>%
       dplyr::inner_join(listOfSnomeds,
                         by = c("descendantConceptId" = "snomedConceptId")) %>%
       dplyr::inner_join(listOfSnomeds,
                         by = c("ancestorConceptId" = "snomedConceptId",
                                "medDraConceptId")) %>%
-      dplyr::select(.data$medDraConceptId,
-                    .data$ancestorConceptId,
-                    .data$descendantConceptId) %>%
       dplyr::distinct() %>%
       dplyr::arrange(.data$medDraConceptId,
-                     .data$ancestorConceptId,
-                     .data$descendantConceptId)
+                     .data$descendantConceptId,
+                     .data$minLevelsOfSeparation,
+                     .data$maxLevelsOfSeparation,
+                     .data$ancestorConceptId) %>% 
+      dplyr::group_by(.data$medDraConceptId,
+                      .data$descendantConceptId) %>% 
+      dplyr::arrange(dplyr::desc(.data$minLevelsOfSeparation),
+                     dplyr::desc(.data$maxLevelsOfSeparation)) %>% 
+      dplyr::mutate(ancestorRank = dplyr::row_number()) %>% 
+      dplyr::arrange(.data$medDraConceptId,
+                     .data$descendantConceptId,
+                     .data$ancestorRank)
     
     canBeRolledUp <-
       mappedUsingVocabaulary %>%
       dplyr::inner_join(
-        snomedsThatMaybeRolledUp,
+        conceptDescendantsForAllSnomedRanked,
         by = c("snomedConceptId" = "descendantConceptId",
                "medDraConceptId")
       ) %>%
-      dplyr::select(-.data$snomedConceptId) %>%
-      dplyr::rename("snomedConceptId" = "ancestorConceptId") %>%
+      dplyr::rename("descendantConceptId" = .data$snomedConceptId) %>%
+      dplyr::select(.data$medDraConceptId,
+                    .data$descendantConceptId,
+                    .data$ancestorConceptId,
+                    .data$ancestorRank) %>%
       dplyr::distinct()
     
     cannotBeRolledUp <-
       mappedUsingVocabaulary %>%
       dplyr::anti_join(
         canBeRolledUp %>%
-          dplyr::select(.data$snomedConceptId,
+          dplyr::select(.data$descendantConceptId,
                         .data$medDraConceptId) %>%
+          dplyr::rename("snomedConceptId" = .data$descendantConceptId) %>%
           dplyr::distinct(),
         by = c("snomedConceptId", "medDraConceptId")
-      )
+      ) %>%
+      dplyr::select(.data$medDraConceptId,
+                    .data$snomedConceptId) %>%
+      dplyr::distinct()
     
-    mappedUsingVocabaulary <- dplyr::bind_rows(canBeRolledUp,
-                                               cannotBeRolledUp) %>%
-      dplyr::distinct() %>%
+    rolledUp <- canBeRolledUp %>%
+      dplyr::inner_join(
+        canBeRolledUp %>%
+          dplyr::select(
+            .data$medDraConceptId,
+            .data$descendantConceptId,
+            .data$ancestorRank
+          ) %>%
+          dplyr::group_by(.data$medDraConceptId,
+                          .data$descendantConceptId) %>%
+          dplyr::summarise(ancestorRank = min(.data$ancestorRank)),
+        by = c("medDraConceptId",
+               "descendantConceptId",
+               "ancestorRank")
+      ) %>% 
+      dplyr::select(.data$medDraConceptId,
+                    .data$ancestorConceptId) %>% 
+      dplyr::rename("snomedConceptId" = .data$ancestorConceptId) %>%
+      dplyr::arrange(.data$medDraConceptId) %>% 
+      dplyr::distinct()
+    
+    reRank <-
+      dplyr::bind_rows(
+        rolledUp %>%
+          dplyr::inner_join(
+            mappedUsingVocabaulary,
+            by = c("medDraConceptId", "snomedConceptId")
+          ) %>%
+          dplyr::distinct() %>%
+          dplyr::group_by(.data$medDraConceptId,
+                          .data$snomedConceptId) %>%
+          dplyr::summarise(rank = min(.data$rank)) %>%
+          dplyr::ungroup(),
+        
+        cannotBeRolledUp %>%
+          dplyr::inner_join(
+            mappedUsingVocabaulary,
+            by = c("medDraConceptId", "snomedConceptId")
+          ) %>%
+          dplyr::distinct() %>%
+          dplyr::group_by(.data$medDraConceptId,
+                          .data$snomedConceptId) %>%
+          dplyr::summarise(rank = min(.data$rank)) %>%
+          dplyr::ungroup()
+      ) %>%
+      dplyr::distinct() %>% 
       dplyr::group_by(.data$medDraConceptId) %>%
       dplyr::arrange(.data$rank) %>%
       dplyr::mutate(rn = dplyr::row_number()) %>%
-      dplyr::ungroup() %>%
       dplyr::select(-.data$rank) %>%
-      dplyr::rename("rank" = .data$rn)
+      dplyr::rename(rank = .data$rn) %>%
+      dplyr::ungroup() %>%
+      dplyr::arrange(.data$medDraConceptId)
     
-    mappedUsingVocabaulary <- mappedUsingVocabaulary %>%
+    mappedUsingVocabaulary <- dplyr::bind_rows(rolledUp,
+                                               cannotBeRolledUp) %>%
+      dplyr::distinct() %>%
+      dplyr::left_join(reRank,
+                       by = c("medDraConceptId", "snomedConceptId")) %>%
       dplyr::inner_join(
         conceptIdDetails %>%
           dplyr::select(
@@ -507,16 +561,14 @@ mapMedraToSnomedViaVocabulary <-
         "medDraConceptClassId" = .data$givenConceptClassId,
         "medDraInvalidReason" = .data$givenConceptIdInvalidReason
       ) %>%
-      dplyr::left_join(
-        mappedUsingVocabaulary,
-        by = "medDraConceptId"
-      ) %>%
+      dplyr::left_join(mappedUsingVocabaulary,
+                       by = "medDraConceptId") %>%
       dplyr::arrange(
         .data$medDraConceptId,
         .data$medDraConceptName,
         .data$medDraConceptClassId,
         .data$rank
-      ) %>% 
+      ) %>%
       dplyr::select(dplyr::starts_with(c("medDra", "snomed")),
                     .data$rank)
     
