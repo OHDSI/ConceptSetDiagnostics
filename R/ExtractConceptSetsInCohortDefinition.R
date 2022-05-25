@@ -49,6 +49,15 @@ extractConceptSetsInCohortDefinition <-
     conceptSetExpression <-
       extractConceptSetExpressionsFromCohortExpression(cohortExpression = expression)
     
+    codeSetsInPrimaryCriteria <-
+      expression$PrimaryCriteria$CriteriaList %>%
+      unlist() %>%
+      as.list()
+    
+    codeSetsInPrimaryCriteria <-
+      codeSetsInPrimaryCriteria[[names(codeSetsInPrimaryCriteria)[stringr::str_detect(string = names(codeSetsInPrimaryCriteria),
+                                                                                      pattern = "CodesetId")]]] %>% unique()
+    
     conceptSetExpression2 <- list()
     for (j in (1:nrow(conceptSetExpression))) {
       conceptSetExpression2[[j]] <- conceptSetExpression[j, ]
@@ -67,7 +76,11 @@ extractConceptSetsInCohortDefinition <-
         dplyr::arrange(.data$conceptId) %>%
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
     }
-    conceptSetExpression <- dplyr::bind_rows(conceptSetExpression2)
+    conceptSetExpression <- dplyr::bind_rows(conceptSetExpression2) %>% 
+      dplyr::left_join(dplyr::tibble(conceptSetId = codeSetsInPrimaryCriteria) %>% 
+                         dplyr::mutate(conceptSetUsedInEntryEvent = 1),
+                       by = "conceptSetId") %>% 
+      tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0))
     
     uniqueConceptSets <- conceptSetExpression %>%
       dplyr::select(.data$conceptSetExpressionSignature) %>%

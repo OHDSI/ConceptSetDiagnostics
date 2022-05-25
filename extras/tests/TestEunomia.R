@@ -14,7 +14,7 @@ cohortDefinitionSet <-
     jsonFolder = "cohorts",
     sqlFolder = "cohorts",
     packageName = "ConceptSetDiagnostics"
-  ) %>% 
+  ) %>%
   dplyr::tibble()
 
 
@@ -110,7 +110,7 @@ conceptSetDataFrame <-
   ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(
     connection = connection,
     conceptSetExpression = conceptSetExpression,
-    vocabularyDatabaseSchema = databaseSchema, 
+    vocabularyDatabaseSchema = databaseSchema,
     updateVocabularyFields = TRUE
   )
 
@@ -154,31 +154,27 @@ ConceptSetDiagnostics::getRelationship(connection = connection, vocabularyDataba
 #----14. getVocabulary----
 ConceptSetDiagnostics::getVocabulary(connection = connection, vocabularyDatabaseSchema = databaseSchema)
 
-#----15. extractConceptSetsInCohortDefinition---- 
-ConceptSetDiagnostics::extractConceptSetsInCohortDefinition(cohortExpression = cohortDefinitionSet[1,]$json %>% 
+#----15. extractConceptSetsInCohortDefinition----
+ConceptSetDiagnostics::extractConceptSetsInCohortDefinition(cohortExpression = cohortDefinitionSet[1, ]$json %>%
                                                               RJSONIO::fromJSON(digits = 23))
 
-#----15. getOptimizationRecommendationForConceptSetTable----
-conceptSetExpression <- ConceptSetDiagnostics::extractConceptSetsInCohortDefinition(
-  cohortExpression = cohortDefinitionSet[1,]$json %>% RJSONIO::fromJSON(digits = 23)) %>% 
-  dplyr::filter(.data$conceptSetId == 0) %>% 
-  dplyr::pull(.data$conceptSetExpression) %>% 
-  RJSONIO::fromJSON(digits = 23)
-
+#----16. getOptimizationRecommendationForConceptSetExpression----
 ConceptSetDiagnostics::getOptimizationRecommendationForConceptSetExpression(
   conceptSetExpression = conceptSetExpression,
   connection = connection,
   vocabularyDatabaseSchema = databaseSchema
 )
 
-#----16. optimizeConceptSetExpression
+#----17. optimizeConceptSetExpression
 ConceptSetDiagnostics::optimizeConceptSetExpression(
   conceptSetExpression = conceptSetExpression,
   connection = connection,
   vocabularyDatabaseSchema = databaseSchema
 )
 
-#----16. getDrugIngredients
-ConceptSetDiagnostics::getDrugIngredients(connection = connection, 
-                                          conceptIds = c(1127078,1127433),
-                                          vocabularyDatabaseSchema = databaseSchema)
+#----18. getDrugIngredients
+ConceptSetDiagnostics::getDrugIngredients(
+  connection = connection,
+  conceptIds = c(1127078, 1127433),
+  vocabularyDatabaseSchema = databaseSchema
+)

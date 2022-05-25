@@ -1,18 +1,18 @@
 shiny::shinyServer(function(input, output, session) {
-  numberOfKeywords <- reactiveVal(value = 1)
+  numberOfSearchPhrases <- reactiveVal(value = 1)
   col_names <-
     shiny::reactive(x = paste0("col",
-                               seq_len(numberOfKeywords())))
+                               seq_len(numberOfSearchPhrases())))
   
   shiny::observeEvent(eventExpr = input$addKeyword,
                       handlerExpr = {
-                        numberOfKeywords(numberOfKeywords() + 1)
+                        numberOfSearchPhrases(numberOfSearchPhrases() + 1)
                       })
   
   shiny::observeEvent(eventExpr = input$removeKeyword,
                       handlerExpr = {
-                        if (numberOfKeywords() > 1) {
-                          numberOfKeywords(numberOfKeywords() - 1)
+                        if (numberOfSearchPhrases() > 1) {
+                          numberOfSearchPhrases(numberOfSearchPhrases() - 1)
                         }
                       })
   
@@ -47,7 +47,7 @@ shiny::shinyServer(function(input, output, session) {
                               # step perform string search
                               searchResultConceptIds <-
                                 ConceptSetDiagnostics::getStringSearchConcepts(
-                                  connection = connection,
+                                  connectionDetails = connectionDetailsLocalPostgres,
                                   vocabularyDatabaseSchema = vocabularyDatabaseSchema,
                                   searchString =  keywords[[i]]
                                 )
@@ -131,7 +131,7 @@ shiny::shinyServer(function(input, output, session) {
   #   idx <- input$searchResultConceptIds_rows_selected
   #   conceptName <- conceptSetSearchResults()[idx,]$conceptName
   #   shinyWidgets::updatePickerInput(session = session,inputId = "conceptId",choices = conceptName)
-  #   ConceptSetDiagnostics::getConceptIdDetails(conceptIds = c(4028741),connection = connection)
+  #   ConceptSetDiagnostics::getConceptIdDetails(conceptIds = c(4028741),connection = connectionRemote)
   # })
   
   shiny::observeEvent(eventExpr = conceptSetSearchResultsPassingtoConceptSetExpression(),
@@ -143,12 +143,12 @@ shiny::shinyServer(function(input, output, session) {
                               conceptSetExpressionDataFrame = conceptSetSearchResultsPassingtoConceptSetExpression(),
                               selectAllDescendants = TRUE
                             ) %>%
-                            ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connection,
+                            ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connectionRemote,
                                                                                     vocabularyDatabaseSchema = vocabularyDatabaseSchema) %>%
                             ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(
                               updateVocabularyFields = TRUE,
                               recordCount = TRUE,
-                              connection = connection
+                              connection = connectionRemote
                             ) %>%
                             dplyr::arrange(dplyr::desc(.data$drc))
                         })
@@ -320,7 +320,7 @@ shiny::shinyServer(function(input, output, session) {
       result <-
         ConceptSetDiagnostics::resolveConceptSetExpression(
           conceptSetExpression = conceptSetExpression,
-          connection = connection,
+          connection = connectionRemote,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema
         )
     })
@@ -360,7 +360,7 @@ shiny::shinyServer(function(input, output, session) {
       data <-
         ConceptSetDiagnostics::getConceptIdDetails(
           conceptIds = conceptIds,
-          connection = connection,
+          connection = connectionRemote,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema
         ) %>%
         dplyr::mutate(
@@ -418,7 +418,7 @@ shiny::shinyServer(function(input, output, session) {
       data <-
         ConceptSetDiagnostics::getConceptIdDetails(
           conceptIds = conceptIds,
-          connection = connection,
+          connection = connectionRemote,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema
         ) %>%
         dplyr::mutate(
@@ -450,7 +450,7 @@ shiny::shinyServer(function(input, output, session) {
       data <-
         ConceptSetDiagnostics::getRecommendationForConceptSetExpression(
           conceptSetExpression = conceptSetExpression,
-          connection = connection,
+          connection = connectionRemote,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema
         )
     })
@@ -489,7 +489,7 @@ shiny::shinyServer(function(input, output, session) {
         return(
           ConceptSetDiagnostics::getConceptIdDetails(
             conceptIds = selectedConceptId(),
-            connection = connection,
+            connection = connectionRemote,
             vocabularyDatabaseSchema = vocabularyDatabaseSchema
           )$conceptName
         )
@@ -550,7 +550,7 @@ shiny::shinyServer(function(input, output, session) {
         data <-
           ConceptSetDiagnostics::getConceptSynonym(
             conceptIds = selectedConceptId(),
-            connection = connection,
+            connection = connectionRemote,
             vocabularyDatabaseSchema = vocabularyDatabaseSchema
           )
         data <- data %>%
@@ -566,7 +566,7 @@ shiny::shinyServer(function(input, output, session) {
     shiny::withProgress(message = "Building Concept Relationship", {
       ConceptSetDiagnostics::getDeepConceptRelationship(
         conceptIds = selectedConceptId(),
-        connection = connection,
+        connection = connectionRemote,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
     })
@@ -618,7 +618,7 @@ shiny::shinyServer(function(input, output, session) {
                           data <-
                             ConceptSetDiagnostics::getConceptIdDetails(
                               conceptIds = conceptIds,
-                              connection = connection,
+                              connection = connectionRemote,
                               vocabularyDatabaseSchema = vocabularyDatabaseSchema
                             ) %>%
                             dplyr::mutate(

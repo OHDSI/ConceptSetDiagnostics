@@ -1,25 +1,34 @@
-library(magrittr)
 library(purrr)
+
 source("HelperFunctions.R")
 
 dbms <- "postgresql"
-vocabularyDatabaseSchema <- "vocabulary"
+vocabularyDatabaseSchema <- "vocabulary_20220409"
+
+connectionDetailsLocalPostgres <-
+  DatabaseConnector::createConnectionDetails(
+    dbms = "postgresql",
+    user = "postgres",
+    password = "password",
+    server = "localhost/postgres",
+    port = 5432
+  )
 
 connectionDetails <-
   DatabaseConnector::createConnectionDetails(
     dbms = dbms,
     server = paste(
-      Sys.getenv("shinyDbServer"),
-      Sys.getenv("shinydbDatabase"),
+      Sys.getenv("phenotypeLibraryServer"),
+      Sys.getenv("phenotypeLibrarydb"),
       sep = "/"
     ),
-    user = Sys.getenv("shinyDbUser"),
-    password = Sys.getenv("shinyDbPassword"),
-    port = Sys.getenv("shinydbPort")
+    user = Sys.getenv("phenotypeLibrarydbUser"),
+    password = Sys.getenv("phenotypeLibrarydbPw"),
+    port = Sys.getenv("phenotypeLibraryDbPort")
   )
 
-if (connectionDetails$dbm == 'postgresql') {
-  connection <- pool::dbPool(
+if (connectionDetails$dbms == 'postgresql') {
+  connectionRemote <- pool::dbPool(
     drv = DatabaseConnector::DatabaseConnectorDriver(),
     dbms = connectionDetails$dbms,
     server = connectionDetails$server(),
@@ -29,45 +38,42 @@ if (connectionDetails$dbm == 'postgresql') {
     connectionString = connectionDetails$connectionString()
   )
 } else {
-  connection <-
+  connectionRemote <-
     DatabaseConnector::connect(connectionDetails = connectionDetails)
 }
 
+connectionLocal <-
+  DatabaseConnector::connect(connectionDetails = connectionDetailsLocalPostgres)
+
 vocabularyVersion <-
-  ConceptSetDiagnostics::getVocabulary(connection = connection,
+  ConceptSetDiagnostics::getVocabulary(connection = connectionLocal,
                                        vocabulary = vocabularyDatabaseSchema) %>%
   dplyr::filter(.data$vocabularyId == 'None') %>%
   dplyr::pull(.data$vocabularyVersion)
 
 vocabulary <-
   ConceptSetDiagnostics::getVocabulary(
-    connection = connection,
+    connection = connectionLocal,
     connectionDetails = connectionDetails,
     vocabularyDatabaseSchema = vocabularyDatabaseSchema
   )
 
 domain <-
   ConceptSetDiagnostics::getDomain(
-    connection = connection,
+    connection = connectionLocal,
     connectionDetails = connectionDetails,
     vocabularyDatabaseSchema = vocabularyDatabaseSchema
   )
 
 relationship <-
   ConceptSetDiagnostics::getRelationship(
-    connection = connection,
+    connection = connectionLocal,
     connectionDetails = connectionDetails,
     vocabularyDatabaseSchema = vocabularyDatabaseSchema
   )
+DatabaseConnector::disconnect(connection = connectionLocal)
 
 onStop(function() {
-  if (DBI::dbIsValid(dbObj = connection)) {
-    if (methods::is(object = connection,
-                    class2 = "Pool")) {
-      writeLines("Closing database pool")
-      pool::poolClose(pool = connection)
-    } else {
-      DatabaseConnector::disconnect(connection = connection)
-    }
-  }
+  DatabaseConnector::disconnect(connection = connectionLocal)
+  DatabaseConnector::disconnect(connection = connectionRemote)
 })
