@@ -42,40 +42,46 @@ extractConceptSetsInCohortDefinitionSet <-
       conceptSetExpression <-
         extractConceptSetExpressionsFromCohortExpression(cohortExpression = cohortJsonAsList)
       
-      conceptSetExpression2 <- list()
-      for (j in (1:nrow(conceptSetExpression))) {
-        conceptSetExpression2[[j]] <- conceptSetExpression[j,]
-        conceptSetExpression2[[j]]$conceptSetExpressionSignature <- 
-          getConceptSetExpressionDataFrameFromConceptSetExpression(
-            conceptSetExpression = conceptSetExpression2[[j]][1,]$conceptSetExpression %>% 
-                                                                     RJSONIO::fromJSON(digits = 23)) %>% 
-          dplyr::select(.data$conceptId,
-                        .data$includeDescendants,
-                        .data$includeMapped,
-                        .data$isExcluded) %>% 
-          dplyr::distinct() %>% 
-          dplyr::arrange(.data$conceptId) %>% 
-          RJSONIO::toJSON(digits = 23, pretty = TRUE)
+      if (nrow(conceptSetExpression) > 0) {
+        conceptSetExpression2 <- list()
+        for (j in (1:nrow(conceptSetExpression))) {
+          conceptSetExpression2[[j]] <- conceptSetExpression[j, ]
+          conceptSetExpression2[[j]]$conceptSetExpressionSignature <-
+            getConceptSetExpressionDataFrameFromConceptSetExpression(
+              conceptSetExpression = conceptSetExpression2[[j]][1, ]$conceptSetExpression %>%
+                RJSONIO::fromJSON(digits = 23)
+            ) %>%
+            dplyr::select(
+              .data$conceptId,
+              .data$includeDescendants,
+              .data$includeMapped,
+              .data$isExcluded
+            ) %>%
+            dplyr::distinct() %>%
+            dplyr::arrange(.data$conceptId) %>%
+            RJSONIO::toJSON(digits = 23, pretty = TRUE)
+        }
+        conceptSetExpression <-
+          dplyr::bind_rows(conceptSetExpression2)
       }
-      conceptSetExpression <- dplyr::bind_rows(conceptSetExpression2)
       
       cohortSql <-
         getCohortSqlFromCohortDefinition(cohortExpression = cohortJsonAsList)
       conceptSetSql <-
         extractConceptSetsSqlFromCohortSql(cohortSql = cohortSql)
       
-      conceptSetsJsonAndSql <- 
-        dplyr::inner_join(
-          x = conceptSetExpression,
-          y = conceptSetSql,
-          by = c("conceptSetId")
-        ) %>%
-        dplyr::mutate("cohortId" = cohort$cohortId)
-      
-      conceptSets[[i]] <- cohort %>%
-        dplyr::left_join(conceptSetsJsonAndSql,
-          by = c("cohortId")
-        )
+      if (nrow(conceptSetExpression) > 0 &
+          nrow(conceptSetSql) > 0) {
+        conceptSetsJsonAndSql <-
+          dplyr::inner_join(x = conceptSetExpression,
+                            y = conceptSetSql,
+                            by = c("conceptSetId")) %>%
+          dplyr::mutate(cohortId = cohort$cohortId)
+        
+        conceptSets[[i]] <- cohort %>%
+          dplyr::left_join(conceptSetsJsonAndSql,
+                           by = c("cohortId"))
+      }
     }
     if (length(conceptSets) == 0) {
       return(NULL)
@@ -94,7 +100,7 @@ extractConceptSetsInCohortDefinitionSet <-
     
     conceptSets <- conceptSets %>%
       dplyr::inner_join(uniqueConceptSets, by = "conceptSetExpressionSignature") %>%
-      dplyr::select(-.data$conceptSetExpressionSignature) %>% 
+      dplyr::select(-.data$conceptSetExpressionSignature) %>%
       dplyr::distinct() %>%
       dplyr::relocate(.data$uniqueConceptSetId,
                       .data$cohortId,
