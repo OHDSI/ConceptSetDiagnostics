@@ -41,7 +41,7 @@ extractConceptSetsInCohortDefinition <-
     # use circe to render cohort sql and extract concept set sql
     circeRenderedSqlExpression <-
       getCohortSqlFromCohortDefinition(cohortExpression = expression,
-                                                  generateStats = TRUE)
+                                       generateStats = TRUE)
     extractedConceptSetSql <-
       extractConceptSetsSqlFromCohortSql(cohortSql = circeRenderedSqlExpression)
     
@@ -49,21 +49,39 @@ extractConceptSetsInCohortDefinition <-
     conceptSetExpression <-
       extractConceptSetExpressionsFromCohortExpression(cohortExpression = expression)
     
-    codeSetsInPrimaryCriteria <-
-      expression$PrimaryCriteria$CriteriaList %>%
-      unlist() %>%
-      as.list()
+    if (is.null(conceptSetExpression)) {
+      return(NULL)
+    }
     
-    codeSetsInPrimaryCriteria <-
-      codeSetsInPrimaryCriteria[[names(codeSetsInPrimaryCriteria)[stringr::str_detect(string = names(codeSetsInPrimaryCriteria),
-                                                                                      pattern = "CodesetId")]]] %>% unique()
+    primaryCriterias <-
+      expression$PrimaryCriteria$CriteriaList
+    codeSetsIdsInPrimaryCriteria <- c()
+    for (i in (1:length(primaryCriterias))) {
+      codesets <- primaryCriterias[[i]][[1]]
+      
+      if (typeof(codesets) == "list") {
+        if (!is.null(codesets$CodesetId)) {
+          codeSetsIdsInPrimaryCriteria <- c(codeSetsIdsInPrimaryCriteria,
+                                            codesets$CodesetId) %>%
+            unique() %>%
+            sort()
+        }
+      } else {
+        if (names(codesets) == 'CodesetId') {
+          codeSetsIdsInPrimaryCriteria <- c(codeSetsIdsInPrimaryCriteria,
+                                            as.double(codesets)) %>%
+            unique() %>%
+            sort()
+        }
+      }
+    }
     
     conceptSetExpression2 <- list()
     for (j in (1:nrow(conceptSetExpression))) {
-      conceptSetExpression2[[j]] <- conceptSetExpression[j, ]
+      conceptSetExpression2[[j]] <- conceptSetExpression[j,]
       conceptSetExpression2[[j]]$conceptSetExpressionSignature <-
         getConceptSetExpressionDataFrameFromConceptSetExpression(
-          conceptSetExpression = conceptSetExpression2[[j]][1, ]$conceptSetExpression %>%
+          conceptSetExpression = conceptSetExpression2[[j]][1,]$conceptSetExpression %>%
             RJSONIO::fromJSON(digits = 23)
         ) %>%
         dplyr::select(
@@ -76,10 +94,15 @@ extractConceptSetsInCohortDefinition <-
         dplyr::arrange(.data$conceptId) %>%
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
     }
-    conceptSetExpression <- dplyr::bind_rows(conceptSetExpression2) %>% 
-      dplyr::left_join(dplyr::tibble(conceptSetId = codeSetsInPrimaryCriteria) %>% 
-                         dplyr::mutate(conceptSetUsedInEntryEvent = 1),
-                       by = "conceptSetId") %>% 
+    
+    conceptSetExpression <-
+      dplyr::bind_rows(conceptSetExpression2) %>%
+      dplyr::left_join(
+        dplyr::tibble(conceptSetId = codeSetsIdsInPrimaryCriteria) %>%
+          dplyr::distinct() %>%
+          dplyr::mutate(conceptSetUsedInEntryEvent = 1),
+        by = "conceptSetId"
+      ) %>%
       tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0))
     
     uniqueConceptSets <- conceptSetExpression %>%
@@ -101,7 +124,7 @@ extractConceptSetsInCohortDefinition <-
 #' get concept set expressions from cohort expression
 #'
 #' @description
-#' given a cohort expression (R-list object, not JSON), this function 
+#' given a cohort expression (R-list object, not JSON), this function
 #' parses the list and returns the concept set components
 #'
 #' @template CohortExpression
@@ -127,7 +150,7 @@ extractConceptSetExpressionsFromCohortExpression <-
           )
       }
     } else {
-      conceptSetExpression <- dplyr::tibble()
+      return(NULL)
     }
     return(dplyr::bind_rows(conceptSetExpression))
   }
@@ -172,10 +195,8 @@ extractConceptSetsSqlFromCohortSql <- function(cohortSql) {
       startForSubQuery <- min(starts[starts > subQueryLocations[i, 2]])
       endForSubQuery <- min(level0[level0 > startForSubQuery])
       subQuery <-
-        paste(
-          stringr::str_sub(sql, subQueryLocations[i, 1], endForSubQuery),
-          "C"
-        )
+        paste(stringr::str_sub(sql, subQueryLocations[i, 1], endForSubQuery),
+              "C")
       conceptsetSqls[i] <- subQuery
       conceptSetIds[i] <- stringr::str_replace(
         subQuery,
@@ -188,14 +209,11 @@ extractConceptSetsSqlFromCohortSql <- function(cohortSql) {
         replacement = "\\1"
       ) %>%
         utils::type.convert(as.is = TRUE)
-      temp[[i]] <- tidyr::tibble(
-        conceptSetId = conceptSetIds[i],
-        conceptSetSql = conceptsetSqls[i]
-      )
+      temp[[i]] <- tidyr::tibble(conceptSetId = conceptSetIds[i],
+                                 conceptSetSql = conceptsetSqls[i])
     }
   } else {
     temp <- dplyr::tibble()
   }
   return(dplyr::bind_rows(temp))
 }
-

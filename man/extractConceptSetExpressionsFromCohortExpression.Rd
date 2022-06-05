@@ -16,6 +16,6 @@ expression JSON is commonly generated using OHDSI tools like Atlas or CapR.}
 Returns a tibble data frame with one row per concept set
 }
 \description{
-given a cohort expression (R-list object, not JSON), this function 
+given a cohort expression (R-list object, not JSON), this function
 parses the list and returns the concept set components
 }
