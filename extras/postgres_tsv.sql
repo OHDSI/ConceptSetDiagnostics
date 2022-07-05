@@ -1,9 +1,10 @@
 #https://pgtune.leopard.in.ua/ make sure the postgres instance is optimized using this tool
 
-SET search_path TO vocabulary;
-
 CREATE EXTENSION pg_trgm;
 CREATE EXTENSION btree_gin;
+
+SET search_path TO vocabulary;
+
 
 ALTER TABLE concept 
 	DROP COLUMN IF EXISTS full_text_search;
@@ -14,7 +15,7 @@ ALTER TABLE concept
 drop view if exists concept_with_full_text;
 create view concept_with_full_text as
 SELECT c.concept_id,
-	to_tsvector('english', 
+	to_tsvector(
 					c.concept_code || ' ' ||
 					c.concept_name || ' ' ||
 					COALESCE(cs.concept_synonym_name, ' ')) 
