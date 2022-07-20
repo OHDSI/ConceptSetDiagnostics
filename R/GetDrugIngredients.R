@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -34,10 +34,9 @@
 getDrugIngredients <-
   function(connection = NULL,
            connectionDetails = NULL,
-           tempEmulationSchema = NULL,
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            conceptIds,
            vocabularyDatabaseSchema = "vocabulary") {
-    start <- Sys.time()
     
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
@@ -80,6 +79,7 @@ getDrugIngredients <-
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         concept_id_table = tempTableName,
+        tempEmulationSchema = tempEmulationSchema,
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()

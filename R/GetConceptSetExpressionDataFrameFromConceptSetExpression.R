@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -119,7 +119,6 @@ getConceptSetExpressionDataFrameFromConceptSetExpression <-
         )
       )
 
-    colnames <- colnames(conceptSetExpressionDetails)
     if (updateVocabularyFields) {
       if (!is.null(connection)) {
         details <- getConceptIdDetails(

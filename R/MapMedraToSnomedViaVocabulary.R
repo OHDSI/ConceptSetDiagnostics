@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -38,13 +38,10 @@ mapMedraToSnomedViaVocabulary <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
-           tempEmulationSchema = NULL,
            vocabularyDatabaseSchema = "vocabulary") {
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
     }
-    
-    start <- Sys.time()
     
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)

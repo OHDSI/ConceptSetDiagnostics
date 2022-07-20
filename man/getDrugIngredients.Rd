@@ -7,7 +7,7 @@
 getDrugIngredients(
   connection = NULL,
   connectionDetails = NULL,
-  tempEmulationSchema = NULL,
+  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
   conceptIds,
   vocabularyDatabaseSchema = "vocabulary"
 )

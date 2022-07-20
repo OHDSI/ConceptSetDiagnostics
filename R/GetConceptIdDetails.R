@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -37,12 +37,10 @@ getConceptIdDetails <-
            connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = "vocabulary",
-           tempEmulationSchema = NULL) {
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
     }
-    
-    start <- Sys.time()
     
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
@@ -64,6 +62,7 @@ getConceptIdDetails <-
       sql = sql,
       snakeCaseToCamelCase = TRUE,
       concept_id_table = tempTableName,
+      tempEmulationSchema = tempEmulationSchema,
       vocabulary_database_schema = vocabularyDatabaseSchema
     ) %>%
       tidyr::tibble()

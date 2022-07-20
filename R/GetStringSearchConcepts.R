@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -31,7 +31,6 @@ getStringSearchConcepts <-
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
            connectionDetails = NULL) {
-    start <- Sys.time()
     
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)

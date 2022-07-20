@@ -9,7 +9,7 @@ getConceptIdDetails(
   connection = NULL,
   connectionDetails = NULL,
   vocabularyDatabaseSchema = "vocabulary",
-  tempEmulationSchema = NULL
+  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
 )
 }
 \arguments{

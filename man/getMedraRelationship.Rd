@@ -8,7 +8,7 @@ getMedraRelationship(
   conceptIds,
   connection = NULL,
   connectionDetails = NULL,
-  tempEmulationSchema = NULL,
+  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
   vocabularyDatabaseSchema = "vocabulary"
 )
 }

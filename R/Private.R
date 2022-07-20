@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -18,11 +18,11 @@
 
 checkIfCohortDefinitionSet <- function(cohortDefinitionSet) {
   errorMessage <- checkmate::makeAssertCollection()
-  checkmate::assertDataFrame(x = cohorts,
+  checkmate::assertDataFrame(x = cohortDefinitionSet,
                              min.cols = 1,
                              add = errorMessage)
   checkmate::assertNames(
-    x = colnames(cohorts),
+    x = colnames(cohortDefinitionSet),
     must.include = c("cohortId"),
     add = errorMessage
   )
@@ -59,7 +59,7 @@ hasData <- function(data) {
 
 loadTempConceptTable <- function(conceptIds,
                                  connection,
-                                 tempEmulationSchema = NULL) {
+                                 tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
   conceptIdTable <-
     dplyr::tibble(conceptId = conceptIds %>% unique()) %>% 
     dplyr::filter(.data$conceptId > 0)
@@ -101,7 +101,7 @@ loadTempConceptTable <- function(conceptIds,
 }
 
 
-dropTempConceptTable <- function(tempEmulationSchema = NULL,
+dropTempConceptTable <- function(tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
                                  connection,
                                  tempTableName) {
   DatabaseConnector::renderTranslateExecuteSql(

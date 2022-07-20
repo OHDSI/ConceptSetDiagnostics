@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -19,5 +19,5 @@
 
 #' @import DatabaseConnector
 #' @import dplyr
-#' @importFrom rlang .data
+#' @importFrom rlang .data :=
 NULL

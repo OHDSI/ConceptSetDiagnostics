@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -34,8 +34,8 @@ getExcludedConceptsInConceptSetExpression <-
   function(conceptSetExpression,
            connection,
            connectionDetails = NULL,
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = "vocabulary") {
-    start <- Sys.time()
 
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
@@ -67,6 +67,7 @@ getExcludedConceptsInConceptSetExpression <-
         connection = connection,
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
+        tempEmulationSchema = tempEmulationSchema,
         excludeWithDescendants = excludeRowsDescendants$conceptId %>% unique()
       )
 
@@ -81,7 +82,7 @@ getExcludedConceptsInConceptSetExpression <-
       getConceptIdDetails(
         conceptIds = allExcludedConceptIds$conceptId %>% unique(),
         connection = connection,
-        vocabularyDatabaseSchema = vocabularyIdOfInterest
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
 
     return(data)
