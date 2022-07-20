@@ -78,22 +78,25 @@ conceptDescendants
 
 #----3. getConceptIdDetails----
 allConceptIds <- ConceptSetDiagnostics::getConceptIdDetails(
-  conceptIds = c(conceptDescendants$ancestorConceptId, 
-                 conceptDescendants$descendantConceptId, 
-                 conceptAncestor$ancestorConceptId, 
-                 conceptAncestor$descendantConceptId) %>% unique(),
+  conceptIds = c(
+    conceptDescendants$ancestorConceptId,
+    conceptDescendants$descendantConceptId,
+    conceptAncestor$ancestorConceptId,
+    conceptAncestor$descendantConceptId
+  ) %>% unique(),
   connection = connection,
   vocabularyDatabaseSchema = databaseSchema
-) %>% 
+) %>%
   dplyr::arrange(.data$conceptId)
 allConceptIds
 
 #----4. getConceptPrevalenceCountsForConceptIds----
-conceptPrevalenceCount <- ConceptSetDiagnostics::getConceptPrevalenceCounts(
-  conceptIds = allConceptIds$conceptId,
-  connection = connection,
-  conceptPrevalenceTable = "main.universe"
-) %>% 
+conceptPrevalenceCount <-
+  ConceptSetDiagnostics::getConceptPrevalenceCounts(
+    conceptIds = allConceptIds$conceptId,
+    connection = connection,
+    conceptPrevalenceTable = "main.universe"
+  ) %>%
   dplyr::arrange(dplyr::desc(.data$drc))
 conceptPrevalenceCount
 
@@ -125,36 +128,34 @@ ConceptSetDiagnostics::getDrugIngredients(
 )
 
 #----9. getExcludedConceptsInConceptSetExpression
-conceptSetExpression <- 
+conceptSetExpression <-
   dplyr::bind_rows(
-    dplyr::tibble(
-      conceptId = 4274025,
-      includeDescendants = TRUE
-    ),
+    dplyr::tibble(conceptId = 4274025,
+                  includeDescendants = TRUE),
     dplyr::tibble(
       conceptId = 4101796,
       includeDescendants = TRUE,
       isExcluded = TRUE
     )
-  ) %>% 
+  ) %>%
   convertConceptSetDataFrameToExpression()
 excludedConcepts <- getExcludedConceptsInConceptSetExpression(
-  conceptSetExpression = conceptSetExpression, 
-  connectionDetails = connectionDetails, 
+  conceptSetExpression = conceptSetExpression,
+  connectionDetails = connectionDetails,
   vocabularyDatabaseSchema = "main"
 )
 
 #----10. getMappedSourceConcepts----
 ConceptSetDiagnostics::getMappedSourceConcepts(
   conceptIds = 192671,
-  connectionDetails = connectionDetails, 
+  connectionDetails = connectionDetails,
   vocabularyDatabaseSchema = databaseSchema
 )
 
 #----11.getMappedStandardConcepts----
 ConceptSetDiagnostics::getMappedStandardConcepts(
   conceptIds = 35208414,
-  connectionDetails = connectionDetails, 
+  connectionDetails = connectionDetails,
   vocabularyDatabaseSchema = databaseSchema
 )
 
@@ -178,7 +179,7 @@ searchResultDataFrame$isExcluded <- FALSE
 #----15. GetStringSearchConceptsUsingTsv----
 
 #----16. getVocabulary----
-getVocabulary(connectionDetails = connectionDetails, 
+getVocabulary(connectionDetails = connectionDetails,
               vocabularyDatabaseSchema = databaseSchema)
 
 #----17. resolveConceptSetExpression----
@@ -215,7 +216,7 @@ resolvedConceptsIds <-
 
 
 #----22. extractConceptSetsInCohortDefinition----
-ConceptSetDiagnostics::extractConceptSetsInCohortDefinition(cohortExpression = cohortDefinitionSet[1,]$json %>%
+ConceptSetDiagnostics::extractConceptSetsInCohortDefinition(cohortExpression = cohortDefinitionSet[1, ]$json %>%
                                                               RJSONIO::fromJSON(digits = 23))
 
 #----23. extractConceptSetsInCohortDefinitionSet----
