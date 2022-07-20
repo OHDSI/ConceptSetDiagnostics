@@ -26,6 +26,8 @@
 #' @template ConceptIds
 #'
 #' @template ConceptPrevalenceTable
+#' 
+#' @template TempEmulationSchema
 #'
 #' @return
 #' Returns a tibble data frame.
@@ -34,7 +36,9 @@
 getConceptPrevalenceCounts <- function(conceptIds,
                                        connection = NULL,
                                        connectionDetails = NULL,
-                                       conceptPrevalenceTable) {
+                                       conceptPrevalenceTable,
+                                       tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
+                                       ) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))

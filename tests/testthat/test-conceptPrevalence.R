@@ -5,13 +5,21 @@ testthat::test_that("Get Concept Prevalence", {
   concepts <-
     DatabaseConnector::renderTranslateQuerySql(
       conn = connection,
-      sql = "select CONCEPT_ID,
-                  concept_name,
-                  vocabulary_id,
-                  domain_id,
-                  standard_concept
-            from @vocabulary_database_schema.CONCEPT
-      LIMIT 100;",
+      sql = "SELECT concept_id,
+                    concept_name,
+                    vocabulary_id,
+                    domain_id,
+                    standard_concept
+              FROM
+              (   select CONCEPT_ID,
+                        concept_name,
+                        vocabulary_id,
+                        domain_id,
+                        standard_concept,
+                        ROW_NUMBER() OVER() rn
+                  from @vocabulary_database_schema.CONCEPT
+              ) RN
+            WHERE RN <= 100;",
       vocabulary_database_schema = cdmDatabaseSchema,
       snakeCaseToCamelCase = TRUE
     ) %>%

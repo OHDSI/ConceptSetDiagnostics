@@ -8,7 +8,8 @@ getConceptPrevalenceCounts(
   conceptIds,
   connection = NULL,
   connectionDetails = NULL,
-  conceptPrevalenceTable
+  conceptPrevalenceTable,
+  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
 )
 }
 \arguments{
@@ -29,6 +30,9 @@ provided.}
 holds the concept prevalence data. The required fields are
 concept_id, rc, drc, dbc, ddbc. In case of error,
 cocneptPrevalence is silently ignored.}
+
+\item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
+tables, provide a schema with write privileges where temp tables can be created.}
 }
 \value{
 Returns a tibble data frame.
