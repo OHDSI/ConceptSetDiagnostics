@@ -124,9 +124,9 @@ DatabaseConnector::disconnect(connection = connection)
 
 
 # getConceptAncestor 2 ----
-testthat::test_that("Get Concept Ancestor - connectionDetailsDetails", {
+testthat::test_that("Get Concept Ancestor - connectionDetails", {
   output <- ConceptSetDiagnostics::getConceptAncestor(
-    connectionDetailsDetails = connectionDetailsDetails,
+    connectionDetails = connectionDetails,
     conceptIds = 381316,
     vocabularyDatabaseSchema = cdmDatabaseSchema
   )
