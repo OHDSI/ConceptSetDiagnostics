@@ -146,7 +146,7 @@ testthat::test_that("Map MedDra to Snomed - connection", {
     conceptIds = 0,
     vocabularyDatabaseSchema = cdmDatabaseSchema
   )
-  testthat::expect_gte(object = nrow(output), expected = 0)
+  testthat::expect_null(object = output)
 })
 
 # Disconnection ----
@@ -305,5 +305,5 @@ testthat::test_that("Map MedDra to Snomed - connectionDetails", {
     conceptIds = 0,
     vocabularyDatabaseSchema = cdmDatabaseSchema
   )
-  testthat::expect_gte(object = nrow(output), expected = 0)
+  testthat::expect_null(object = output)
 })
