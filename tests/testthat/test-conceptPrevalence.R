@@ -16,7 +16,7 @@ testthat::test_that("Get Concept Prevalence", {
                         vocabulary_id,
                         domain_id,
                         standard_concept,
-                        ROW_NUMBER() OVER() rn
+                        ROW_NUMBER() OVER(ORDER BY concept_id) rn
                   from @vocabulary_database_schema.CONCEPT
               ) RN
             WHERE RN <= 100;",
