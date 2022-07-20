@@ -38,9 +38,6 @@ getConceptIdDetails <-
            connectionDetails = NULL,
            vocabularyDatabaseSchema = "vocabulary",
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
-    if (length(conceptIds) == 0) {
-      stop("No concept id provided")
-    }
 
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)

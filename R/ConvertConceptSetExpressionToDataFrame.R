@@ -43,10 +43,9 @@ convertConceptSetExpressionToDataFrame <-
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = NULL) {
     if (length(conceptSetExpression) == 0) {
-      warning(
+      stop(
         "Concept set expression was found to have a length of 0. No concept set expression found."
       )
-      return(NULL)
     }
 
     if ("items" %in% names(conceptSetExpression)) {
