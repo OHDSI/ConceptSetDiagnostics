@@ -55,12 +55,14 @@ getMappedStandardConcepts <-
 
     sql <- "--get all standard codes that map to the list of provided source codes
             SELECT cr.CONCEPT_ID_2 AS GIVEN_CONCEPT_ID,
-              C.*
+                    C.*
             FROM @vocabulary_database_schema.concept_relationship cr
-            INNER JOIN @concept_id_table cid
-            ON cr.concept_id_2 = cid.concept_id
             INNER JOIN @vocabulary_database_schema.concept c ON c.concept_id = cr.concept_id_1
-            WHERE relationship_id IN ('Mapped from');"
+            WHERE relationship_id IN ('Mapped from')
+            AND cr.concept_id_2 IN (
+                                      SELECT DISTINCT CONCEPT_ID
+                                      FROM @concept_id_table t
+                                    );"
 
     data <-
       DatabaseConnector::renderTranslateQuerySql(

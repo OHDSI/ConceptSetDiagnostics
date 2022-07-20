@@ -44,7 +44,8 @@ getDrugIngredients <-
 
     tempTableName <- loadTempConceptTable(
       conceptIds = conceptIds,
-      connection = connection
+      connection = connection,
+      tempEmulationSchema = tempEmulationSchema
     )
 
     sql <- "SELECT DISTINCT ca.drug_concept_id,
@@ -64,11 +65,12 @@ getDrugIngredients <-
                             c.vocabulary_id ingredient_vocabulary_id,
                             ca.descendant_concept_id drug_concept_id
                     FROM @vocabulary_database_schema.concept_ancestor ca
-                    INNER JOIN @concept_id_table cid
-                      ON ca.descendant_concept_id = cid.concept_id
                     INNER JOIN @vocabulary_database_schema.concept c
                       ON ca.ancestor_concept_id = c.concept_id
                     WHERE LOWER(c.concept_class_id) = 'ingredient'
+                          AND ca.descendant_concept_id IN 
+                                                          (SELECT DISTINCT CONCEPT_ID
+                                                            FROM @concept_id_table cid)
             ) ca
             INNER JOIN @vocabulary_database_schema.concept d ON ca.drug_concept_id = d.concept_id
             ORDER BY ingredient_concept_id, ca.drug_concept_id;
@@ -87,7 +89,8 @@ getDrugIngredients <-
 
     dropTempConceptTable(
       connection = connection,
-      tempTableName = tempTableName
+      tempTableName = tempTableName,
+      tempEmulationSchema = tempEmulationSchema
     )
 
     return(data)

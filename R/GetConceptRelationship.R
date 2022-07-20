@@ -46,7 +46,8 @@ getConceptRelationship <-
 
     tempTableName <- loadTempConceptTable(
       conceptIds = conceptIds,
-      connection = connection
+      connection = connection,
+      tempEmulationSchema = tempEmulationSchema
     )
 
     sql <- "
@@ -81,7 +82,8 @@ getConceptRelationship <-
 
     dropTempConceptTable(
       connection = connection,
-      tempTableName = tempTableName
+      tempTableName = tempTableName,
+      tempEmulationSchema = tempEmulationSchema
     )
     return(data)
   }

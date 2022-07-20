@@ -74,7 +74,8 @@ getConceptDescendant <-
 
     dropTempConceptTable(
       connection = connection,
-      tempTableName = tempTableName
+      tempTableName = tempTableName,
+      tempEmulationSchema = tempEmulationSchema
     )
 
     return(data)

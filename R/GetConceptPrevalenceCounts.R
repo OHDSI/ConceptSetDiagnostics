@@ -42,7 +42,8 @@ getConceptPrevalenceCounts <- function(conceptIds,
 
   tempTableName <- loadTempConceptTable(
     conceptIds = conceptIds,
-    connection = connection
+    connection = connection,
+    tempEmulationSchema = tempEmulationSchema
   )
 
   sql <- "SELECT cp.*
@@ -61,7 +62,8 @@ getConceptPrevalenceCounts <- function(conceptIds,
 
   dropTempConceptTable(
     connection = connection,
-    tempTableName = tempTableName
+    tempTableName = tempTableName,
+    tempEmulationSchema = tempEmulationSchema
   )
 
   return(data)
