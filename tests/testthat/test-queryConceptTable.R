@@ -158,7 +158,7 @@ testthat::test_that("Get Concept Details - connectionDetails", {
 testthat::test_that("Get Concept Relationship - connectionDetails", {
   output <- ConceptSetDiagnostics::getConceptRelationship(
     conceptIds = c(192671, 35208414, 1118088, 35208414),
-    connection = connection,
+    connectionDetails = connectionDetails,
     vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
