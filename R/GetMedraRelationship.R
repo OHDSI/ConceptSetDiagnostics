@@ -145,7 +145,6 @@ getMedraRelationship <-
     ancestorLltForGivenConceptId <-
       mapMedDraAncestor(conceptClass = "LLT")
 
-
     mapMedDraDescendant <- function(conceptClass) {
       output <- givenConceptId %>%
         dplyr::select(.data$givenConceptId) %>%
