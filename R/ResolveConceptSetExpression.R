@@ -31,12 +31,11 @@ resolveConceptSetExpression <- function(conceptSetExpression,
                                         connection = NULL,
                                         connectionDetails = NULL,
                                         vocabularyDatabaseSchema = "vocabulary") {
-  
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-  
+
   # convert concept set expression R object (list) to data frame
   conceptSetExpressionDataFrame <-
     convertConceptSetExpressionToDataFrame(
@@ -46,21 +45,23 @@ resolveConceptSetExpression <- function(conceptSetExpression,
       conceptSetExpression = conceptSetExpression,
       vocabularyDatabaseSchema = vocabularyDatabaseSchema
     )
-  
+
   # get all descendant concept ids (as dataframe) for concepts that have
   # includeDescendants selected in conceptSetExpression
   conceptIdsWithIncludeDescendants <-
     conceptSetExpressionDataFrame %>%
     dplyr::filter(.data$includeDescendants == TRUE) %>%
     dplyr::pull(.data$conceptId)
-  
+
   if (length(conceptIdsWithIncludeDescendants) == 0) {
     conceptIdDetails <-
       getConceptIdDetails(
-        conceptIds = setdiff(conceptSetExpressionDataFrame$conceptId,
-                             conceptSetExpressionDataFrame %>% 
-                               dplyr::filter(.data$isExcluded == TRUE) %>% 
-                               dplyr::pull(.data$conceptId)),
+        conceptIds = setdiff(
+          conceptSetExpressionDataFrame$conceptId,
+          conceptSetExpressionDataFrame %>%
+            dplyr::filter(.data$isExcluded == TRUE) %>%
+            dplyr::pull(.data$conceptId)
+        ),
         connection = connection,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
@@ -73,27 +74,29 @@ resolveConceptSetExpression <- function(conceptSetExpression,
       conceptIds = conceptIdsWithIncludeDescendants,
       vocabularyDatabaseSchema = vocabularyDatabaseSchema
     )
-  
+
   # get all conceptIds (as dataframe) that are excluded in concept set expression
   excludedConceptIds <- conceptSetExpressionDataFrame %>%
     dplyr::filter(.data$isExcluded == TRUE) %>%
     dplyr::select(.data$conceptId)
-  
+
   # get all conceptIds (as dataframe) that are excluded in concept set expression with descendants
   excludedConceptIdsWithDescendants <- descendantConcepts %>%
     dplyr::filter(
       .data$ancestorConceptId %in% (
-        c(conceptSetExpressionDataFrame %>%
-          dplyr::filter(.data$isExcluded == TRUE) %>%
-          dplyr::filter(.data$includeDescendants == TRUE) %>%
-          dplyr::pull(.data$conceptId) %>%
-          unique(),
-          0) %>% unique()
+        c(
+          conceptSetExpressionDataFrame %>%
+            dplyr::filter(.data$isExcluded == TRUE) %>%
+            dplyr::filter(.data$includeDescendants == TRUE) %>%
+            dplyr::pull(.data$conceptId) %>%
+            unique(),
+          0
+        ) %>% unique()
       )
-    ) %>% 
-    dplyr::select(.data$descendantConceptId) %>% 
+    ) %>%
+    dplyr::select(.data$descendantConceptId) %>%
     dplyr::distinct()
-  
+
   # conceptIds in conceptSetExpression table
   conceptIdsInConceptSetExpressionTableToBeIncluded <-
     union(
@@ -104,8 +107,8 @@ resolveConceptSetExpression <- function(conceptSetExpression,
         dplyr::pull(.data$descendantConceptId) %>%
         unique()
     ) %>% unique()
-  
-  
+
+
   conceptIdsInConceptSetExpressionTableToBeExcluded <-
     union(
       x = excludedConceptIds %>%
@@ -116,31 +119,33 @@ resolveConceptSetExpression <- function(conceptSetExpression,
         unique()
     ) %>%
     unique()
-  
+
   # removed all excluded conceptIds including those with descendants == TRUE
   resolvedConceptIdArray <-
-    setdiff(x = conceptIdsInConceptSetExpressionTableToBeIncluded,
-            y = conceptIdsInConceptSetExpressionTableToBeExcluded)
-  
+    setdiff(
+      x = conceptIdsInConceptSetExpressionTableToBeIncluded,
+      y = conceptIdsInConceptSetExpressionTableToBeExcluded
+    )
+
   # get all resolved concept Ids as data frame
   resolvedConceptIdArray2 <- dplyr::union(
     conceptSetExpressionDataFrame %>%
       dplyr::filter(.data$isExcluded == FALSE) %>%
       dplyr::select(.data$conceptId),
     descendantConcepts %>%
-      dplyr::select(.data$descendantConceptId) %>% 
+      dplyr::select(.data$descendantConceptId) %>%
       dplyr::rename("conceptId" = .data$descendantConceptId)
   ) %>%
     dplyr::filter(.data$conceptId %in% resolvedConceptIdArray) %>%
     dplyr::pull(.data$conceptId) %>%
     unique()
-  
+
   conceptIdDetails <-
     getConceptIdDetails(
       conceptIds = resolvedConceptIdArray2,
       connection = connection,
       vocabularyDatabaseSchema = vocabularyDatabaseSchema
     )
-  
+
   return(conceptIdDetails)
 }

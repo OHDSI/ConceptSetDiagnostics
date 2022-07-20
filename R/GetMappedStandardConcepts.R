@@ -44,11 +44,13 @@ getMappedStandardConcepts <-
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
-    tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
-                                          tempEmulationSchema = tempEmulationSchema,
-                                          connection = connection)
-    
+
+    tempTableName <- loadTempConceptTable(
+      conceptIds = conceptIds,
+      tempEmulationSchema = tempEmulationSchema,
+      connection = connection
+    )
+
     sql <- "--get all standard codes that map to the list of provided source codes
             SELECT cr.CONCEPT_ID_2 AS GIVEN_CONCEPT_ID,
               C.*
@@ -68,10 +70,12 @@ getMappedStandardConcepts <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
-    
-    dropTempConceptTable(connection = connection, 
-                         tempTableName = tempTableName,
-                         tempEmulationSchema = tempEmulationSchema)
+
+    dropTempConceptTable(
+      connection = connection,
+      tempTableName = tempTableName,
+      tempEmulationSchema = tempEmulationSchema
+    )
 
     return(data)
   }

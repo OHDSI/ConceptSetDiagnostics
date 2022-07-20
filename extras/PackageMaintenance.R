@@ -17,8 +17,11 @@
 # limitations under the License.
 
 # Format and check code
+styler::style_pkg()
 OhdsiRTools::checkUsagePackage("ConceptSetDiagnostics")
 OhdsiRTools::updateCopyrightYearFolder()
+
+
 devtools::spell_check()
 spelling::spell_check_files(list.files(path = "inst/shiny", 
                                        pattern = "*.html", 

@@ -31,14 +31,13 @@ getStringSearchConceptsUsingFullText <-
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
            connectionDetails = NULL) {
-    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     # Note this function is designed for postgres with TSV enabled.
-    
+
     sql <- "
       SELECT c.CONCEPT_ID,
         	c.CONCEPT_NAME,
@@ -57,7 +56,7 @@ getStringSearchConceptsUsingFullText <-
               FULL_TEXT_SEARCH @@ websearch_to_tsquery('@search_string')
         ORDER BY rank_cd, rank
         ;"
-    
+
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         sql = sql,

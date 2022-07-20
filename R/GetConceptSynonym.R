@@ -25,7 +25,7 @@
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
-#' 
+#'
 #' @template TempEmulationSchema
 #'
 #' @export
@@ -44,9 +44,11 @@ getConceptSynonym <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
 
-  tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
-                                        connection = connection)
-    
+    tempTableName <- loadTempConceptTable(
+      conceptIds = conceptIds,
+      connection = connection
+    )
+
     sql <- "
     SELECT cs.CONCEPT_ID,
           	cs.CONCEPT_SYNONYM_NAME,
@@ -65,9 +67,11 @@ getConceptSynonym <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
-    
-    dropTempConceptTable(connection = connection, 
-                         tempTableName = tempTableName)
-    
+
+    dropTempConceptTable(
+      connection = connection,
+      tempTableName = tempTableName
+    )
+
     return(data)
   }

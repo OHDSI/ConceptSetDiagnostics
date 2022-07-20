@@ -41,22 +41,24 @@ getConceptIdDetails <-
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
     }
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
-    tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
-                                          connection = connection)
-    
+
+    tempTableName <- loadTempConceptTable(
+      conceptIds = conceptIds,
+      connection = connection
+    )
+
     sql <- "
     SELECT c.*
       FROM @vocabulary_database_schema.concept c
       INNER JOIN @concept_id_table t
       ON c.concept_id = t.concept_id;
     "
-    
+
     data <- DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
       sql = sql,
@@ -66,9 +68,11 @@ getConceptIdDetails <-
       vocabulary_database_schema = vocabularyDatabaseSchema
     ) %>%
       tidyr::tibble()
-    
-    dropTempConceptTable(connection = connection,
-                         tempTableName = tempTableName)
-    
+
+    dropTempConceptTable(
+      connection = connection,
+      tempTableName = tempTableName
+    )
+
     return(data)
   }

@@ -19,7 +19,7 @@
 #' Extract concept sets from cohort definition set
 #'
 #' @description
-#' given a cohort definition set (data frame with cohortId, json), this function 
+#' given a cohort definition set (data frame with cohortId, json), this function
 #' extracts the concept set json and sql for all cohorts,
 #' compares concept sets across cohort definitions, assigns unique id.
 #'
@@ -32,15 +32,17 @@
 extractConceptSetsInCohortDefinitionSet <-
   function(cohortDefinitionSet) {
     # cohorts should be a dataframe with at least cohortId and json
-    
+
     conceptSets <- list()
     for (i in (1:nrow(cohortDefinitionSet))) {
-      cohort <- cohortDefinitionSet[i,]
-      cohortJsonAsList <- RJSONIO::fromJSON(content = cohort$json,
-                                            digits = 23)
+      cohort <- cohortDefinitionSet[i, ]
+      cohortJsonAsList <- RJSONIO::fromJSON(
+        content = cohort$json,
+        digits = 23
+      )
       conceptSetsInCohortDefinition <-
         extractConceptSetsInCohortDefinition(cohortExpression = cohortJsonAsList)
-      
+
       if (!is.null(conceptSetsInCohortDefinition)) {
         conceptSets[[i]] <- conceptSetsInCohortDefinition %>%
           dplyr::select(-.data$uniqueConceptSetId) %>%
@@ -72,10 +74,12 @@ extractConceptSetsInCohortDefinitionSet <-
         dplyr::arrange(.data$conceptId) %>%
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
       conceptSetSig[[i]]$conceptSetExpressionSignature <- conceptSetExpressionSignature
-      conceptSetSig[[i]] <- conceptSetSig[[i]] %>% 
-        dplyr::select(.data$cohortId,
-                      .data$conceptSetId,
-                      .data$conceptSetExpressionSignature) %>% 
+      conceptSetSig[[i]] <- conceptSetSig[[i]] %>%
+        dplyr::select(
+          .data$cohortId,
+          .data$conceptSetId,
+          .data$conceptSetExpressionSignature
+        ) %>%
         dplyr::distinct()
     }
     conceptSetSig <- dplyr::bind_rows(conceptSetSig)
@@ -83,21 +87,28 @@ extractConceptSetsInCohortDefinitionSet <-
       dplyr::select(.data$conceptSetExpressionSignature) %>%
       dplyr::distinct() %>%
       dplyr::mutate(uniqueConceptSetId = dplyr::row_number())
-    
-    conceptSetSig <- conceptSetSig %>% 
+
+    conceptSetSig <- conceptSetSig %>%
       dplyr::inner_join(uniqueConceptSets,
-                        by = "conceptSetExpressionSignature") %>% 
+        by = "conceptSetExpressionSignature"
+      ) %>%
       dplyr::select(-.data$conceptSetExpressionSignature)
-    
+
     conceptSets <- conceptSets %>%
-      dplyr::left_join(conceptSetSig, by = c("cohortId",
-                                              "conceptSetId")) %>%
+      dplyr::left_join(conceptSetSig, by = c(
+        "cohortId",
+        "conceptSetId"
+      )) %>%
       dplyr::distinct() %>%
-      dplyr::relocate(.data$uniqueConceptSetId,
-                      .data$cohortId,
-                      .data$conceptSetId) %>%
-      dplyr::arrange(.data$uniqueConceptSetId,
-                     .data$cohortId,
-                     .data$conceptSetId)
+      dplyr::relocate(
+        .data$uniqueConceptSetId,
+        .data$cohortId,
+        .data$conceptSetId
+      ) %>%
+      dplyr::arrange(
+        .data$uniqueConceptSetId,
+        .data$cohortId,
+        .data$conceptSetId
+      )
     return(conceptSets)
   }

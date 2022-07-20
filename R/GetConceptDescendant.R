@@ -25,7 +25,7 @@
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
-#' 
+#'
 #' @template TempEmulationSchema
 #'
 #' @return
@@ -41,21 +41,23 @@ getConceptDescendant <-
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
     }
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
-    tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
-                                          connection = connection,
-                                          tempEmulationSchema = tempEmulationSchema)
-    
+
+    tempTableName <- loadTempConceptTable(
+      conceptIds = conceptIds,
+      connection = connection,
+      tempEmulationSchema = tempEmulationSchema
+    )
+
     sql <- "SELECT ca.*
             FROM @vocabulary_database_schema.concept_ancestor ca
             INNER JOIN @concept_id_table cid
             ON ca.ancestor_concept_id = cid.concept_id;"
-    
+
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
@@ -66,9 +68,11 @@ getConceptDescendant <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
-    
-    dropTempConceptTable(connection = connection, 
-                         tempTableName = tempTableName)
-    
+
+    dropTempConceptTable(
+      connection = connection,
+      tempTableName = tempTableName
+    )
+
     return(data)
   }

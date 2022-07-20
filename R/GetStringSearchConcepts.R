@@ -31,18 +31,17 @@ getStringSearchConcepts <-
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
            connectionDetails = NULL) {
-    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     # Filtering strings to letters, numbers and spaces only to avoid SQL injection
     # also making search string of lower case - to make search uniform.
     searchString <-
       stringr::str_squish(tolower(gsub("[^a-zA-Z0-9 ,]", " ", searchString)))
-    
-    sql <-  "
+
+    sql <- "
     WITH matched_concepts
     AS (
     	SELECT DISTINCT concept_id
@@ -66,7 +65,7 @@ getStringSearchConcepts <-
     	c.DOMAIN_ID
     FROM @vocabulary_database_schema.concept c
     INNER JOIN matched_concepts ON c.concept_id = matched_concepts.concept_id;"
-    
+
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         sql = sql,

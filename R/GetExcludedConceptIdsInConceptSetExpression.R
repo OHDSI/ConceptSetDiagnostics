@@ -25,7 +25,7 @@
 #' @template ConceptSetExpression
 #'
 #' @template VocabularyDatabaseSchema
-#' 
+#'
 #' @template TempEmulationSchema
 #'
 #' @return
@@ -38,48 +38,49 @@ getExcludedConceptsInConceptSetExpression <-
            connectionDetails = NULL,
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = "vocabulary") {
-    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     conceptSetDataFrame <-
       convertConceptSetExpressionToDataFrame(conceptSetExpression = conceptSetExpression)
-    
+
     if (!"isExcluded" %in% colnames(conceptSetDataFrame)) {
       return(NULL)
     }
-    
+
     excludeRows <- conceptSetDataFrame %>%
       dplyr::filter(.data$isExcluded == TRUE)
     excludeRowsDescendants <- excludeRows %>%
       dplyr::filter(.data$includeDescendants == TRUE)
     excludeRowsNoDescendants <- excludeRows %>%
       dplyr::filter(.data$includeDescendants == FALSE)
-    
+
     excludeConceptIdsWithDescendants <-
-      getConceptDescendant(conceptIds = excludeRowsDescendants$conceptId, 
-                           connection = connection,
-                           vocabularyDatabaseSchema = vocabularyDatabaseSchema, 
-                           tempEmulationSchema = tempEmulationSchema)
-    
+      getConceptDescendant(
+        conceptIds = excludeRowsDescendants$conceptId,
+        connection = connection,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        tempEmulationSchema = tempEmulationSchema
+      )
+
     allExcludedConceptIds <-
       dplyr::bind_rows(
-        excludeConceptIdsWithDescendants %>% 
-          dplyr::select(.data$descendantConceptId) %>% 
+        excludeConceptIdsWithDescendants %>%
+          dplyr::select(.data$descendantConceptId) %>%
           dplyr::rename("conceptId" = .data$descendantConceptId),
         excludeRowsNoDescendants %>% dplyr::select(conceptId)
       ) %>%
-      dplyr::distinct() %>% 
+      dplyr::distinct() %>%
       dplyr::arrange(.data$conceptId)
-    
+
     data <-
       getConceptIdDetails(
         conceptIds = allExcludedConceptIds$conceptId %>% unique(),
         connection = connection,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
-    
+
     return(data)
   }

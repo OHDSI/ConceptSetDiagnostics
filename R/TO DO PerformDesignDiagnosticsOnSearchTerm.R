@@ -14,7 +14,7 @@
 #' # See the License for the specific language governing permissions and
 #' # limitations under the License.
 #' #
-#' 
+#'
 #' #' given a search string, perform design diagnostics
 #' #'
 #' #' @description
@@ -52,25 +52,25 @@
 #'         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
 #'         searchString = searchString
 #'       )
-#' 
+#'
 #'     searchResultConceptIds <- searchResultConceptIds %>%
 #'       dplyr::filter(.data$invalidReason == "V")
-#' 
+#'
 #'     if (length(vocabularyIdOfInterest) > 0) {
 #'       searchResultConceptIds <- searchResultConceptIds %>%
 #'         dplyr::filter(.data$vocabularyId %in% vocabularyIdOfInterest)
 #'     }
-#' 
+#'
 #'     if (length(domainIdOfInterest) > 0) {
 #'       searchResultConceptIds <- searchResultConceptIds %>%
 #'         dplyr::filter(.data$domainId %in% domainIdOfInterest)
 #'     }
-#' 
+#'
 #'     conceptSetExpression <- convertConceptSetDataFrameToExpression(
 #'       conceptSetExpressionDataFrame = searchResultConceptIds,
 #'       selectAllDescendants = TRUE
 #'     )
-#' 
+#'
 #'     optimizedConceptSetExpression <-
 #'       optimizeConceptSetExpression(
 #'         connection = connection,
@@ -82,12 +82,12 @@
 #'     optimizedConceptSetExpression <- convertConceptSetExpressionToDataFrame(conceptSetExpression = optimizedConceptSetExpression) %>%
 #'       dplyr::arrange(dplyr::desc(.data$dbc), dplyr::desc(.data$drc), dplyr::desc(.data$ddbc), dplyr::desc(.data$dbc)) %>%
 #'       convertConceptSetDataFrameToExpression()
-#'     
+#'
 #'     resolvedConceptIds <-
 #'       resolveConceptSetExpression(
 #'         connection = connection,
 #'         conceptSetExpression = optimizedConceptSetExpression,
-#'         vocabularyDatabaseSchema = vocabularyDatabaseSchema, 
+#'         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
 #'         conceptPrevalenceTable = conceptPrevalenceTable
 #'       )
 #' browser()
@@ -99,7 +99,7 @@
 #'         vocabularyIdOfInterest = vocabularyIdOfInterest,
 #'         domainIdOfInterest = domainIdOfInterest
 #'       )
-#' 
+#'
 #'     searchResult <- list(
 #'       searchString = searchString,
 #'       searchResultConceptIds = searchResultConceptIds,
@@ -107,7 +107,7 @@
 #'       resolvedConceptIds = resolvedConceptIds,
 #'       recommendedConceptIds = recommendedConceptIds
 #'     )
-#' 
+#'
 #'     if (exportResults) {
 #'       if (!is.null(locationForResults)) {
 #'         dir.create(

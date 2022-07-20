@@ -39,16 +39,18 @@ getMappedSourceConcepts <-
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
     }
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
-    tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
-                                          connection = connection,
-                                          tempEmulationSchema = tempEmulationSchema)
-    
+
+    tempTableName <- loadTempConceptTable(
+      conceptIds = conceptIds,
+      connection = connection,
+      tempEmulationSchema = tempEmulationSchema
+    )
+
     sql <-
       "--get all source codes that map to the list of provided standard concept id
             SELECT cr.CONCEPT_ID_2 AS SEARCHED_CONCEPT_ID,
@@ -58,7 +60,7 @@ getMappedSourceConcepts <-
             ON cr.concept_id_2 = cid.concept_id
             INNER JOIN @vocabulary_database_schema.concept c ON c.concept_id = cr.concept_id_1
             WHERE relationship_id IN ('Maps to');"
-    
+
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         sql = sql,
@@ -69,10 +71,12 @@ getMappedSourceConcepts <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
-    
-    dropTempConceptTable(connection = connection, 
-                         tempTableName = tempTableName,
-                         tempEmulationSchema = tempEmulationSchema)
-    
+
+    dropTempConceptTable(
+      connection = connection,
+      tempTableName = tempTableName,
+      tempEmulationSchema = tempEmulationSchema
+    )
+
     return(data)
   }

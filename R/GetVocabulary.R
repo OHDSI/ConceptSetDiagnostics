@@ -26,7 +26,6 @@ getVocabulary <-
   function(connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = "vocabulary") {
-
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))

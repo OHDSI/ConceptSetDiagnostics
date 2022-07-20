@@ -18,9 +18,11 @@
 
 checkIfCohortDefinitionSet <- function(cohortDefinitionSet) {
   errorMessage <- checkmate::makeAssertCollection()
-  checkmate::assertDataFrame(x = cohortDefinitionSet,
-                             min.cols = 1,
-                             add = errorMessage)
+  checkmate::assertDataFrame(
+    x = cohortDefinitionSet,
+    min.cols = 1,
+    add = errorMessage
+  )
   checkmate::assertNames(
     x = colnames(cohortDefinitionSet),
     must.include = c("cohortId"),
@@ -61,14 +63,12 @@ loadTempConceptTable <- function(conceptIds,
                                  connection,
                                  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
   conceptIdTable <-
-    dplyr::tibble(conceptId = conceptIds %>% unique()) %>% 
+    dplyr::tibble(conceptId = conceptIds %>% unique()) %>%
     dplyr::filter(.data$conceptId > 0)
-  
+
   tempTableName <-
-    paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
-      
-    )))) * 100000)
-  
+    paste0("#t", (as.numeric(as.POSIXlt(Sys.time()))) * 100000)
+
   invisible(
     utils::capture.output(
       DatabaseConnector::insertTable(
@@ -88,15 +88,17 @@ loadTempConceptTable <- function(conceptIds,
   )
   if (connection@dbms %in% c("redshift", "postgresql")) {
     # Some performance tuning:
-    DatabaseConnector::renderTranslateExecuteSql(connection = connection,
-                                                 sql = "ANALYZE @concept_id_table;", 
-                                                 profile = FALSE, 
-                                                 progressBar = FALSE, 
-                                                 reportOverallTime = FALSE, 
-                                                 tempEmulationSchema = tempEmulationSchema,
-                                                 concept_id_table = tempTableName)
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = "ANALYZE @concept_id_table;",
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE,
+      tempEmulationSchema = tempEmulationSchema,
+      concept_id_table = tempTableName
+    )
   }
-  
+
   return(tempTableName)
 }
 

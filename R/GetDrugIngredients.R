@@ -37,15 +37,16 @@ getDrugIngredients <-
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            conceptIds,
            vocabularyDatabaseSchema = "vocabulary") {
-    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
-    tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
-                                          connection = connection)
-    
+
+    tempTableName <- loadTempConceptTable(
+      conceptIds = conceptIds,
+      connection = connection
+    )
+
     sql <- "SELECT DISTINCT ca.drug_concept_id,
             	d.concept_Name drug_name,
             	d.concept_Code drug_concept_code,
@@ -72,7 +73,7 @@ getDrugIngredients <-
             INNER JOIN @vocabulary_database_schema.concept d ON ca.drug_concept_id = d.concept_id
             ORDER BY ingredient_concept_id, ca.drug_concept_id;
     "
-    
+
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
@@ -83,9 +84,11 @@ getDrugIngredients <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
-    
-    dropTempConceptTable(connection = connection, 
-                         tempTableName = tempTableName)
-    
+
+    dropTempConceptTable(
+      connection = connection,
+      tempTableName = tempTableName
+    )
+
     return(data)
   }

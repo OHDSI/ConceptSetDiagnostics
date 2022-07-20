@@ -26,16 +26,15 @@ getVocabularyVersion <-
   function(connection = NULL,
            connectionDetails = NULL,
            vocabularyDatabaseSchema = "vocabulary") {
-    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
-        sql = "select VOCABULARY_VERSION 
+        sql = "select VOCABULARY_VERSION
               from @vocabulary_database_schema.vocabulary
               where VOCABULARY_ID = 'None';",
         vocabulary_database_schema = vocabularyDatabaseSchema,
