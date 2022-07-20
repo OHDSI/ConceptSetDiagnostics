@@ -26,6 +26,9 @@ of the function, and closed when the function finishes.}
 DatabaseConnector package. Can be left NULL if \code{connection} is
 provided.}
 
+\item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
+tables, provide a schema with write privileges where temp tables can be created.}
+
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 }
 \value{

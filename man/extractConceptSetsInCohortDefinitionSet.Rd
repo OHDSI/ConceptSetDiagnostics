@@ -6,6 +6,18 @@
 \usage{
 extractConceptSetsInCohortDefinitionSet(cohortDefinitionSet)
 }
+\arguments{
+\item{cohortDefinitionSet}{The \code{cohortDefinitionSet} argument must be a data frame 
+with at least the following columns. 
+\describe{
+           \item{cohortId}{The cohort Id is the id used to identify  a 
+                      cohort definition. This is required to be unique. 
+                      It is usually used to create file names.}
+           \item{cohortName}{The full name of the cohort.}
+           \item{json}{The JSON cohort definition for the cohort.}
+           \item{sql}{The SQL of the cohort definition rendered from the cohort json.}
+         }}
+}
 \value{
 Returns a tibble data frame.
 }
@@ -13,13 +25,4 @@ Returns a tibble data frame.
 given a cohort definition set (data frame with cohortId, json), this function
 extracts the concept set json and sql for all cohorts,
 compares concept sets across cohort definitions, assigns unique id.
-}
-\details{
-The \code{cohortDefinitionSet} argument must be a data frame with at least the following columns.
-\describe{
-\item{cohortId}{The cohort Id is the id used to identify  a cohort definition. This is required to be unique. It is usually used to create file names.}
-\item{cohortName}{The full name of the cohort.}
-\item{json}{The JSON cohort definition for the cohort.}
-\item{sql}{The SQL of the cohort definition rendered from the cohort json.}
-}
 }

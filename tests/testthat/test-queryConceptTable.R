@@ -6,7 +6,7 @@ testthat::test_that("Get Concept Ancestor - connection", {
   output <- ConceptSetDiagnostics::getConceptAncestor(
     connection = connection,
     conceptIds = 381316,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -16,7 +16,7 @@ testthat::test_that("Get Concept Descendant - connection", {
   output <- ConceptSetDiagnostics::getConceptDescendant(
     conceptIds = 381316,
     connection = connection,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -26,7 +26,7 @@ testthat::test_that("Get Concept Details - connection", {
   output <- ConceptSetDiagnostics::getConceptIdDetails(
     conceptIds = 381316,
     connection = connection,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   ) %>%
     dplyr::arrange(.data$conceptId)
   testthat::expect_gte(object = nrow(output), expected = 1)
@@ -37,7 +37,7 @@ testthat::test_that("Get Concept Relationship - connection", {
   output <- ConceptSetDiagnostics::getConceptRelationship(
     conceptIds = c(192671, 35208414, 1118088, 35208414),
     connection = connection,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -47,7 +47,7 @@ testthat::test_that("Get Concept Synonym - connection", {
   output <- ConceptSetDiagnostics::getConceptSynonym(
     conceptIds = 381316,
     connection = connection,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -57,7 +57,7 @@ testthat::test_that("Get Mapped Source Concept - connection", {
   output <- ConceptSetDiagnostics::getMappedSourceConcepts(
     conceptIds = c(35208414, 192671, 1118088, 35208414),
     connection = connection,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -67,7 +67,7 @@ testthat::test_that("Get Mapped Standard Concept - connection", {
   output <- ConceptSetDiagnostics::getMappedStandardConcepts(
     conceptIds = c(35208414, 44923712),
     connection = connection,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -75,7 +75,7 @@ testthat::test_that("Get Mapped Standard Concept - connection", {
 # getDomain 1 ----
 testthat::test_that("Get Domain - connection", {
   output <- ConceptSetDiagnostics::getDomain(connection = connection,
-                                             vocabularyDatabaseSchema = databaseSchema)
+                                             vocabularyDatabaseSchema = cdmDatabaseSchema)
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
 
@@ -83,7 +83,7 @@ testthat::test_that("Get Domain - connection", {
 testthat::test_that("Get Relationship - connection", {
   output <-
     ConceptSetDiagnostics::getRelationship(connection = connection,
-                                           vocabularyDatabaseSchema = databaseSchema)
+                                           vocabularyDatabaseSchema = cdmDatabaseSchema)
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
 
@@ -91,7 +91,7 @@ testthat::test_that("Get Relationship - connection", {
 testthat::test_that("Get Vocabulary - connection", {
   output <-
     ConceptSetDiagnostics::getVocabulary(connection = connection,
-                                         vocabularyDatabaseSchema = databaseSchema)
+                                         vocabularyDatabaseSchema = cdmDatabaseSchema)
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
 
@@ -99,7 +99,7 @@ testthat::test_that("Get Vocabulary - connection", {
 testthat::test_that("Get Vocabulary Version - connection", {
   output <-
     ConceptSetDiagnostics::getVocabularyVersion(connection = connection,
-                                                vocabularyDatabaseSchema = databaseSchema)
+                                                vocabularyDatabaseSchema = cdmDatabaseSchema)
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
 
@@ -108,7 +108,7 @@ testthat::test_that("Get Drug Ingredients - connection", {
   output <- ConceptSetDiagnostics::getDrugIngredients(
     connection = connection,
     conceptIds = c(1127078, 1127433),
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -128,7 +128,7 @@ testthat::test_that("Get Concept Ancestor - connectionDetailsDetails", {
   output <- ConceptSetDiagnostics::getConceptAncestor(
     connectionDetailsDetails = connectionDetailsDetails,
     conceptIds = 381316,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -138,7 +138,7 @@ testthat::test_that("Get Concept Descendant - connectionDetails", {
   output <- ConceptSetDiagnostics::getConceptDescendant(
     conceptIds = 381316,
     connectionDetails = connectionDetails,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -148,7 +148,7 @@ testthat::test_that("Get Concept Details - connectionDetails", {
   output <- ConceptSetDiagnostics::getConceptIdDetails(
     conceptIds = 381316,
     connectionDetails = connectionDetails,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   ) %>%
     dplyr::arrange(.data$conceptId)
   testthat::expect_gte(object = nrow(output), expected = 1)
@@ -159,7 +159,7 @@ testthat::test_that("Get Concept Relationship - connectionDetails", {
   output <- ConceptSetDiagnostics::getConceptRelationship(
     conceptIds = c(192671, 35208414, 1118088, 35208414),
     connection = connection,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -169,7 +169,7 @@ testthat::test_that("Get Concept Synonym - connectionDetails", {
   output <- ConceptSetDiagnostics::getConceptSynonym(
     conceptIds = 381316,
     connectionDetails = connectionDetails,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -179,7 +179,7 @@ testthat::test_that("Get Mapped Source Concept - connectionDetails", {
   output <- ConceptSetDiagnostics::getMappedSourceConcepts(
     conceptIds = c(35208414, 192671, 1118088, 35208414),
     connectionDetails = connectionDetails,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -189,7 +189,7 @@ testthat::test_that("Get Mapped Standard Concept - connectionDetails", {
   output <- ConceptSetDiagnostics::getMappedStandardConcepts(
     conceptIds = c(35208414, 44923712),
     connectionDetails = connectionDetails,
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
@@ -198,7 +198,7 @@ testthat::test_that("Get Mapped Standard Concept - connectionDetails", {
 testthat::test_that("Get Domain - connectionDetails", {
   output <-
     ConceptSetDiagnostics::getDomain(connectionDetails = connectionDetails,
-                                     vocabularyDatabaseSchema = databaseSchema)
+                                     vocabularyDatabaseSchema = cdmDatabaseSchema)
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
 
@@ -206,7 +206,7 @@ testthat::test_that("Get Domain - connectionDetails", {
 testthat::test_that("Get Relationship - connectionDetails", {
   output <-
     ConceptSetDiagnostics::getRelationship(connectionDetails = connectionDetails,
-                                           vocabularyDatabaseSchema = databaseSchema)
+                                           vocabularyDatabaseSchema = cdmDatabaseSchema)
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
 
@@ -214,7 +214,7 @@ testthat::test_that("Get Relationship - connectionDetails", {
 testthat::test_that("Get Vocabulary - connectionDetails", {
   output <-
     ConceptSetDiagnostics::getVocabulary(connectionDetails = connectionDetails,
-                                         vocabularyDatabaseSchema = databaseSchema)
+                                         vocabularyDatabaseSchema = cdmDatabaseSchema)
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
 
@@ -222,7 +222,7 @@ testthat::test_that("Get Vocabulary - connectionDetails", {
 testthat::test_that("Get Vocabulary Version - connectionDetails", {
   output <-
     ConceptSetDiagnostics::getVocabularyVersion(connectionDetails = connectionDetails,
-                                                vocabularyDatabaseSchema = databaseSchema)
+                                                vocabularyDatabaseSchema = cdmDatabaseSchema)
   testthat::expect_gte(object = nrow(output), expected = 1)
 })
 
@@ -231,7 +231,7 @@ testthat::test_that("Get Drug Ingredients - connectionDetails", {
   output <- ConceptSetDiagnostics::getDrugIngredients(
     connectionDetails = connectionDetails,
     conceptIds = c(1127078, 1127433),
-    vocabularyDatabaseSchema = databaseSchema
+    vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 1)
 })

@@ -70,7 +70,7 @@ getExcludedConceptsInConceptSetExpression <-
         excludeConceptIdsWithDescendants %>%
           dplyr::select(.data$descendantConceptId) %>%
           dplyr::rename("conceptId" = .data$descendantConceptId),
-        excludeRowsNoDescendants %>% dplyr::select(conceptId)
+        excludeRowsNoDescendants %>% dplyr::select(.data$conceptId)
       ) %>%
       dplyr::distinct() %>%
       dplyr::arrange(.data$conceptId)

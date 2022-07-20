@@ -26,6 +26,8 @@
 #'
 #' @template VocabularyDatabaseSchema
 #'
+#' @template TempEmulationSchema
+#'
 #' @return
 #' Returns a tibble data frame.
 #'

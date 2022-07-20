@@ -6,23 +6,29 @@ Author: Gowtham Rao [aut, cre]
 Maintainer: Gowtham Rao <rao@ohdsi.org>
 Description: A package for design diagnostics.
 Depends:
-    DatabaseConnector (>= 4.0.0),
+    DatabaseConnector (>= 5.0.0),
     dplyr,
     R (>= 4.0.0)
 Imports:
-	Andromeda,
-	methods,
+	checkmate,
+	CirceR,
 	purrr,
-	readr,
 	RJSONIO,
 	rlang,
-	ROhdsiWebApi,
+	scales,
 	SqlRender,
-	stringi,
 	stringr,
 	stringdist,
 	tidyr
 Suggests:
+  remotes,
+  rmarkdown,
+  knitr,
+  testthat,
+	withr
+Remotes:
+  ohdsi/CirceR,
+  ohdsi/SqlRender
 License: Apache License (>= 2)
 RoxygenNote: 7.2.0
 Encoding: UTF-8
