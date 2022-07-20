@@ -10,7 +10,7 @@ extractConceptSetsInCohortDefinitionSet(cohortDefinitionSet)
 Returns a tibble data frame.
 }
 \description{
-given a cohort definition set (data frame with cohortId, json), this function 
+given a cohort definition set (data frame with cohortId, json), this function
 extracts the concept set json and sql for all cohorts,
 compares concept sets across cohort definitions, assigns unique id.
 }

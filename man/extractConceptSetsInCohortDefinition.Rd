@@ -16,6 +16,6 @@ expression JSON is commonly generated using OHDSI tools like Atlas or CapR.}
 Returns a tibble data frame.
 }
 \description{
-Given a cohort expression, this function extracts the concept set 
+Given a cohort expression, this function extracts the concept set
 expressions from cohort definition expression.
 }
