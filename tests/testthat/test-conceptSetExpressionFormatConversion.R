@@ -84,7 +84,7 @@ testthat::test_that("Get Concept Set Expression Format conversion - connection",
     )
   
   conceptSetExpressModified[[1]]$concept$STANDARD_CONCEPT_CAPTION <- ""
-  conceptSetExpressModified[[1]]$concept$STANDARD_CONCEPT <- ""
+  conceptSetExpressModified[[1]]$concept$STANDARD_CONCEPT <- NULL
   
   DatabaseConnector::disconnect(connection = connection)
 })

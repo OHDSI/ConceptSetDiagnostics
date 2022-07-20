@@ -55,13 +55,14 @@ convertConceptSetExpressionToDataFrame <-
     }
     
     items2 <- list()
+    
+    errorMessage <- "Given concept set expression R list object does not conform to expected structure. \n
+                      It is a vector that is more than 3 levels deep."
     for (i in (1:length(items))) {
       if (purrr::vec_depth(items[[i]]) <= 3) {
         items2[[i]] <- purrr::flatten_dfr(.x = purrr::map_depth(items[[i]],
                                                                 .depth = 2,
-                                                                ~ ifelse(is.null(.x), NA, .x)))
-      } else {stop("Given concept set expression R list object does not conform to expected structure. It is a vector that is more than 3 levels deep.")
-      }
+                                                                ~ ifelse(is.null(.x), NA, .x)))} else {stop(errorMessage)}
     }
     conceptSetExpressionDetails <- dplyr::bind_rows(items2)
     
