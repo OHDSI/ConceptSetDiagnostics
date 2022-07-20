@@ -55,7 +55,6 @@ getConceptDescendant <-
 
     sql <- "SELECT ca.*
             FROM @vocabulary_database_schema.concept_ancestor ca
-            INNER JOIN @concept_id_table cid
             WHERE ca.ancestor_concept_id IN
             (
               SELECT DISTINCT concept_id
