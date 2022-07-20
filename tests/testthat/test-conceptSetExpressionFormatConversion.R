@@ -7,7 +7,7 @@ testthat::test_that("Get Concept Set Expression Format conversion - connection",
       convertConceptSetDataFrameToExpression(
         conceptSetExpressionDataFrame = dplyr::tibble(conceptId = 0),
         selectAllDescendants = TRUE,
-        updateVocabularyDetails = TRUE,
+        updateVocabularyFields = TRUE,
         connection = connection
       )
   )
@@ -16,7 +16,7 @@ testthat::test_that("Get Concept Set Expression Format conversion - connection",
     convertConceptSetDataFrameToExpression(
       conceptSetExpressionDataFrame = dplyr::tibble(conceptId = 0),
       selectAllDescendants = TRUE,
-      updateVocabularyDetails = TRUE,
+      updateVocabularyFields = TRUE,
       connection = connection,
       vocabularyDatabaseSchema = cdmDatabaseSchema
     )
@@ -96,7 +96,7 @@ testthat::test_that("Get Concept Set Expression Format conversion - connection d
                         convertConceptSetDataFrameToExpression(
                           conceptSetExpressionDataFrame = dplyr::tibble(conceptId = 0),
                           selectAllDescendants = TRUE,
-                          updateVocabularyDetails = TRUE,
+                          updateVocabularyFields = TRUE,
                           connectionDetails = connectionDetails,
                           vocabularyDatabaseSchema = cdmDatabaseSchema
                         )
