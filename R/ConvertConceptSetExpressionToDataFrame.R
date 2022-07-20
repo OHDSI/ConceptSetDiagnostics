@@ -47,34 +47,24 @@ convertConceptSetExpressionToDataFrame <-
         "Concept set expression was found to have a length of 0. No concept set expression found."
       )
     }
-
+    
     if ("items" %in% names(conceptSetExpression)) {
       items <- conceptSetExpression$items
     } else {
       items <- conceptSetExpression
     }
-
+    
     items2 <- list()
     for (i in (1:length(items))) {
       if (purrr::vec_depth(items[[i]]) <= 3) {
         items2[[i]] <- purrr::flatten_dfr(.x = purrr::map_depth(items[[i]],
-          .depth = 2,
-          ~ ifelse(is.null(.x), NA, .x)
-        ))
-      } else {
-        if ("CONCEPT_ID" %in% names(items[[i]][[1]])) {
-          warning(
-            paste0(
-              "record in concept set expression with concept id ",
-              (items[[i]][[1]]$CONCEPT_ID),
-              " does not conform with the standard structure in concept set expression"
-            )
-          )
-        }
+                                                                .depth = 2,
+                                                                ~ ifelse(is.null(.x), NA, .x)))
+      } else {STOP("Given concept set expression R list object does not conform to expected structure. It is a vector that is more than 3 levels deep.")
       }
     }
     conceptSetExpressionDetails <- dplyr::bind_rows(items2)
-
+    
     # ensure case is uniform
     if ("concept_id" %in% tolower(colnames(conceptSetExpressionDetails))) {
       if ("isExcluded" %in% colnames(conceptSetExpressionDetails)) {
@@ -101,17 +91,7 @@ convertConceptSetExpressionToDataFrame <-
       colnames(conceptSetExpressionDetails) <-
         SqlRender::snakeCaseToCamelCase(colnames(conceptSetExpressionDetails))
     }
-
-    if (!"isExcluded" %in% colnames(conceptSetExpressionDetails)) {
-      conceptSetExpressionDetails$isExcluded <- FALSE
-    }
-    if (!"includeDescendants" %in% colnames(conceptSetExpressionDetails)) {
-      conceptSetExpressionDetails$includeDescendants <- FALSE
-    }
-    if (!"includeMapped" %in% colnames(conceptSetExpressionDetails)) {
-      conceptSetExpressionDetails$includeMapped <- FALSE
-    }
-
+    
     # if there are some missing values, NA - then make them FALSE (Default)
     conceptSetExpressionDetails <-
       tidyr::replace_na(
@@ -122,61 +102,57 @@ convertConceptSetExpressionToDataFrame <-
           includeMapped = FALSE
         )
       )
-
+    
     if (updateVocabularyFields) {
       if (is.null(vocabularyDatabaseSchema)) {
-        stop("VocabularyDatabaseSchema with OMOP vocabulary tables is needed to update Vocabulary details.")
+        stop(
+          "VocabularyDatabaseSchema with OMOP vocabulary tables is needed to update Vocabulary details."
+        )
       }
       if (is.null(connection)) {
         connection <- DatabaseConnector::connect(connectionDetails)
         on.exit(DatabaseConnector::disconnect(connection))
       }
-
-      if (!is.null(connection)) {
-        details <- getConceptIdDetails(
-          connection = connection,
-          connectionDetails = connectionDetails,
-          vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-          conceptIds = conceptSetExpressionDetails$conceptId %>% unique(),
-          tempEmulationSchema = tempEmulationSchema
-        )
-        conceptSetExpressionDetails <-
-          conceptSetExpressionDetails %>%
-          dplyr::select(
-            .data$conceptId,
-            .data$includeDescendants,
-            .data$includeMapped,
-            .data$isExcluded
-          ) %>%
-          dplyr::left_join(y = details, by = "conceptId")
-
-        conceptSetExpressionDetails <-
-          tidyr::replace_na(
-            data = conceptSetExpressionDetails,
-            replace = list(invalidReason = "V")
-          ) %>%
-          dplyr::mutate(
-            invalidReasonCaption = dplyr::case_when(
-              invalidReason == "V" ~ "Valid",
-              invalidReason == "D" ~ "Deleted",
-              invalidReason == "U" ~ "Updated",
-              TRUE ~ "Valid"
-            )
-          ) %>%
-          dplyr::mutate(
-            standardConceptCaption = dplyr::case_when(
-              standardConcept == "S" ~ "Standard",
-              standardConcept == "C" ~ "Classification",
-              TRUE ~ "Non-standard"
-            )
+      
+      details <- getConceptIdDetails(
+        connection = connection,
+        connectionDetails = connectionDetails,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        conceptIds = conceptSetExpressionDetails$conceptId %>% unique(),
+        tempEmulationSchema = tempEmulationSchema
+      )
+      conceptSetExpressionDetails <-
+        conceptSetExpressionDetails %>%
+        dplyr::select(
+          .data$conceptId,
+          .data$includeDescendants,
+          .data$includeMapped,
+          .data$isExcluded
+        ) %>%
+        dplyr::left_join(y = details, by = "conceptId")
+      
+      conceptSetExpressionDetails <-
+        tidyr::replace_na(data = conceptSetExpressionDetails,
+                          replace = list(invalidReason = "V")) %>%
+        dplyr::mutate(
+          invalidReasonCaption = dplyr::case_when(
+            invalidReason == "V" ~ "Valid",
+            invalidReason == "D" ~ "Deleted",
+            invalidReason == "U" ~ "Updated",
+            TRUE ~ "Valid"
           )
-      } else {
-        warning("No connection provided. Vocabulary will not be updated. Continuing.")
-      }
+        ) %>%
+        dplyr::mutate(
+          standardConceptCaption = dplyr::case_when(
+            standardConcept == "S" ~ "Standard",
+            standardConcept == "C" ~ "Classification",
+            TRUE ~ "Non-standard"
+          )
+        )
     }
-
+    
     if ("standardConceptCaption" %in% colnames(conceptSetExpressionDetails) &&
-      !"standardConcept" %in% colnames(conceptSetExpressionDetails)) {
+        !"standardConcept" %in% colnames(conceptSetExpressionDetails)) {
       conceptSetExpressionDetails <- conceptSetExpressionDetails %>%
         dplyr::mutate(
           standardConcept = dplyr::case_when(
@@ -185,25 +161,24 @@ convertConceptSetExpressionToDataFrame <-
           )
         )
     }
-    if ("standardConcept" %in% tolower(colnames(conceptSetExpressionDetails)) &&
-      !"standardConceptCaption" %in% tolower(colnames(conceptSetExpressionDetails))) {
+    if ("standardConcept" %in% colnames(conceptSetExpressionDetails) &&
+        !"standardConceptCaption" %in% colnames(conceptSetExpressionDetails)) {
       conceptSetExpressionDetails <- conceptSetExpressionDetails %>%
         dplyr::mutate(
-          dplyr::case_when(
+          standardConceptCaption = dplyr::case_when(
             .data$standardConcept == "S" ~ "Standard",
             .data$standardConcept == "C" ~ "Classification",
             TRUE ~ "Non-Standard"
           )
         )
     }
-
+    
     conceptSetExpressionDetails <- conceptSetExpressionDetails %>%
       dplyr::relocate(dplyr::all_of(c(
         "includeDescendants", "includeMapped", "isExcluded"
       )),
-      .after = dplyr::last_col()
-      ) %>%
+      .after = dplyr::last_col()) %>%
       dplyr::relocate("conceptId")
-
+    
     return(conceptSetExpressionDetails)
   }

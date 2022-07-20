@@ -68,6 +68,24 @@ testthat::test_that("Get Concept Set Expression Format conversion - connection",
     expected = 0
   )
   
+  conceptSetExpressModified <- conceptSetExpressionConnection$items
+  conceptSetExpressModified[[1]]$isExcluded <- NULL
+  conceptSetExpressModified[[1]]$includeDescendants <- NULL
+  conceptSetExpressModified[[1]]$includeMapped <- NULL
+  conceptSetExpressModified[[1]]$concept$STANDARD_CONCEPT_CAPTION <- NULL
+  conceptSetExpressModified[[1]]$concept$INVALID_REASON_CAPTION <- NULL
+  
+  conceptSetExpressionDataFrameModified <-
+    convertConceptSetExpressionToDataFrame(
+      conceptSetExpression = conceptSetExpressModified,
+      updateVocabularyFields = FALSE,
+      connection = connection,
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema
+    )
+  
+  conceptSetExpressModified[[1]]$concept$STANDARD_CONCEPT_CAPTION <- ""
+  conceptSetExpressModified[[1]]$concept$STANDARD_CONCEPT <- ""
+  
   DatabaseConnector::disconnect(connection = connection)
 })
 
