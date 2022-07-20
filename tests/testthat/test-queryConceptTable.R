@@ -130,12 +130,13 @@ testthat::test_that("Get MedRa Relationship - connection", {
   )
   testthat::expect_gte(object = length(output), expected = 0)
   testthat::expect_equal(object = class(output), expected = "list")
-  testthat::expect_gte(object = output$givenConceptId, expected = 0)
-  testthat::expect_gte(object = output$soc, expected = 0)
-  testthat::expect_gte(object = output$hlgt, expected = 0)
-  testthat::expect_gte(object = output$hlt, expected = 0)
-  testthat::expect_gte(object = output$pt, expected = 0)
-  testthat::expect_gte(object = output$llt, expected = 0)
+  testthat::expect_gte(object = length(output$givenConceptId),
+                       expected = 0)
+  testthat::expect_gte(object = nrow(output$soc), expected = 0)
+  testthat::expect_gte(object = nrow(output$hlgt), expected = 0)
+  testthat::expect_gte(object = nrow(output$hlt), expected = 0)
+  testthat::expect_gte(object = nrow(output$pt), expected = 0)
+  testthat::expect_gte(object = nrow(output$llt), expected = 0)
 })
 
 # Disconnection ----
