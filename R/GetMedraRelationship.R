@@ -44,9 +44,6 @@ getMedraRelationship <-
            connectionDetails = NULL,
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = "vocabulary") {
-    if (length(conceptIds) == 0) {
-      stop("No concept id provided")
-    }
 
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)

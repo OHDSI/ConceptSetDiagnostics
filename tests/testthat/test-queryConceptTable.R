@@ -121,6 +121,16 @@ testthat::test_that("Get Drug Ingredients - connection", {
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
+# getMedraRelationship 1 ----
+testthat::test_that("Get MedRa Relationship - connection", {
+  output <- ConceptSetDiagnostics::getMedraRelationship(
+    connection = connection,
+    conceptIds = 0,
+    vocabularyDatabaseSchema = cdmDatabaseSchema
+  )
+  testthat::expect_gte(object = nrow(output), expected = 0)
+})
+
 # Disconnection ----
 DatabaseConnector::disconnect(connection = connection)
 
@@ -247,6 +257,16 @@ testthat::test_that("Get Drug Ingredients - connectionDetails", {
   output <- ConceptSetDiagnostics::getDrugIngredients(
     connectionDetails = connectionDetails,
     conceptIds = 0, # c(1127078, 1127433),
+    vocabularyDatabaseSchema = cdmDatabaseSchema
+  )
+  testthat::expect_gte(object = nrow(output), expected = 0)
+})
+
+# getMedraRelationship 2 ----
+testthat::test_that("Get MedRa Relationship - connection", {
+  output <- ConceptSetDiagnostics::getMedraRelationship(
+    connectionDetails = connectionDetails,
+    conceptIds = 0,
     vocabularyDatabaseSchema = cdmDatabaseSchema
   )
   testthat::expect_gte(object = nrow(output), expected = 0)

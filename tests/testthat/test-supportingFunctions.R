@@ -4,6 +4,7 @@ testthat::test_that("Has Data", {
   testthat::expect_false(object = hasData(data = c()))
   testthat::expect_false(object = hasData(data = c("")))
   testthat::expect_false(object = hasData(data = c(NA)))
+  testthat::expect_false(object = hasData(data = vector(mode="numeric", length=0)))
 })
 
 testthat::test_that("Check if cohort definition set", {
