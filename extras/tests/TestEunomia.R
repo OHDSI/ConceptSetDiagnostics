@@ -100,14 +100,14 @@ searchResultDataFrame$includeDescendants <- TRUE
 searchResultDataFrame$includeMapped <- TRUE
 searchResultDataFrame$isExcluded <- FALSE
 
-#----6. getConceptSetExpressionFromConceptSetExpressionDataFrame----
+#----6. convertConceptSetDataFrameToExpression----
 conceptSetExpression <-
-  ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = searchResultDataFrame)
+  ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = searchResultDataFrame)
 
 
-#----7. getConceptSetExpressionDataFrameFromConceptSetExpression----
+#----7. convertConceptSetExpressionToDataFrame----
 conceptSetDataFrame <-
-  ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(
+  ConceptSetDiagnostics::convertConceptSetExpressionToDataFrame(
     connection = connection,
     conceptSetExpression = conceptSetExpression,
     vocabularyDatabaseSchema = databaseSchema,

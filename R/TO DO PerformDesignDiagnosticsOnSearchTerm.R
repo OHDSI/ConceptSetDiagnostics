@@ -66,7 +66,7 @@
 #'         dplyr::filter(.data$domainId %in% domainIdOfInterest)
 #'     }
 #' 
-#'     conceptSetExpression <- getConceptSetExpressionFromConceptSetExpressionDataFrame(
+#'     conceptSetExpression <- convertConceptSetDataFrameToExpression(
 #'       conceptSetExpressionDataFrame = searchResultConceptIds,
 #'       selectAllDescendants = TRUE
 #'     )
@@ -79,9 +79,9 @@
 #'         conceptSetExpression = conceptSetExpression
 #'       )
 #'     optimizedConceptSetExpression <- optimizedConceptSetExpression$recommended
-#'     optimizedConceptSetExpression <- getConceptSetExpressionDataFrameFromConceptSetExpression(conceptSetExpression = optimizedConceptSetExpression) %>%
+#'     optimizedConceptSetExpression <- convertConceptSetExpressionToDataFrame(conceptSetExpression = optimizedConceptSetExpression) %>%
 #'       dplyr::arrange(dplyr::desc(.data$dbc), dplyr::desc(.data$drc), dplyr::desc(.data$ddbc), dplyr::desc(.data$dbc)) %>%
-#'       getConceptSetExpressionFromConceptSetExpressionDataFrame()
+#'       convertConceptSetDataFrameToExpression()
 #'     
 #'     resolvedConceptIds <-
 #'       resolveConceptSetExpression(

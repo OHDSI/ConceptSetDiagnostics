@@ -34,6 +34,7 @@ getMappedStandardConcepts <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = "vocabulary") {
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
@@ -45,6 +46,7 @@ getMappedStandardConcepts <-
     }
     
     tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
+                                          tempEmulationSchema = tempEmulationSchema,
                                           connection = connection)
     
     sql <- "--get all standard codes that map to the list of provided source codes
@@ -62,12 +64,14 @@ getMappedStandardConcepts <-
         connection = connection,
         concept_id_table = tempTableName,
         vocabulary_database_schema = vocabularyDatabaseSchema,
+        tempEmulationSchema = tempEmulationSchema,
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
     
     dropTempConceptTable(connection = connection, 
-                         tempTableName = tempTableName)
+                         tempTableName = tempTableName,
+                         tempEmulationSchema = tempEmulationSchema)
 
     return(data)
   }

@@ -46,7 +46,7 @@ getRecommendationForConceptSetExpression <-
            conceptPrevalenceSchema = NULL) {
     browser()
     conceptSetExpressionDataFrame <-
-      getConceptSetExpressionDataFrameFromConceptSetExpression(
+      convertConceptSetExpressionToDataFrame(
         conceptSetExpression = conceptSetExpression,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
@@ -61,7 +61,7 @@ getRecommendationForConceptSetExpression <-
     }
 
     conceptSetExpression <-
-      getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = conceptSetExpressionDataFrame)
+      convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetExpressionDataFrame)
 
     resolvedConceptIds <-
       resolveConceptSetExpression(

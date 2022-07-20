@@ -33,7 +33,7 @@
 #' Returns a R list object
 #'
 #' @export
-getConceptSetExpressionFromConceptSetExpressionDataFrame <-
+convertConceptSetDataFrameToExpression <-
   function(conceptSetExpressionDataFrame,
            selectAllDescendants = FALSE,
            purgeVocabularyDetails = FALSE) {

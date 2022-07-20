@@ -139,13 +139,13 @@ shiny::shinyServer(function(input, output, session) {
                         shiny::withProgress(message = "Building Concept Set Expression...", {
                           # develop a concept set expression based on string search
                           conceptSetExpressionDataFrame <-
-                            ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(
+                            ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(
                               conceptSetExpressionDataFrame = conceptSetSearchResultsPassingtoConceptSetExpression(),
                               selectAllDescendants = TRUE
                             ) %>%
                             ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connectionRemote,
                                                                                     vocabularyDatabaseSchema = vocabularyDatabaseSchema) %>%
-                            ConceptSetDiagnostics::getConceptSetExpressionDataFrameFromConceptSetExpression(
+                            ConceptSetDiagnostics::convertConceptSetExpressionToDataFrame(
                               updateVocabularyFields = TRUE,
                               recordCount = TRUE,
                               connection = connectionRemote
@@ -316,7 +316,7 @@ shiny::shinyServer(function(input, output, session) {
       #   )
       
       conceptSetExpression <-
-        ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = data)
+        ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = data)
       result <-
         ConceptSetDiagnostics::resolveConceptSetExpression(
           conceptSetExpression = conceptSetExpression,
@@ -446,7 +446,7 @@ shiny::shinyServer(function(input, output, session) {
   getRecommendation <- shiny::reactive({
     shiny::withProgress(message = "Loading", {
       conceptSetExpression <-
-        ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = conceptSetResultsExpression())
+        ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetResultsExpression())
       data <-
         ConceptSetDiagnostics::getRecommendationForConceptSetExpression(
           conceptSetExpression = conceptSetExpression,
@@ -478,7 +478,7 @@ shiny::shinyServer(function(input, output, session) {
       return(NULL)
     } else {
       data <-
-        ConceptSetDiagnostics::getConceptSetExpressionFromConceptSetExpressionDataFrame(conceptSetExpressionDataFrame = conceptSetResultsExpression()) %>%
+        ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetResultsExpression()) %>%
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
     }
   })

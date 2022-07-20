@@ -33,7 +33,7 @@ resolveConceptSetExpression <- function(conceptSetExpression,
                                         vocabularyDatabaseSchema = "vocabulary") {
   # convert concept set expression R object (list) to data frame
   conceptSetExpressionDataFrame <-
-    getConceptSetExpressionDataFrameFromConceptSetExpression(
+    convertConceptSetExpressionToDataFrame(
       updateVocabularyFields = TRUE,
       connection = connection,
       connectionDetails = connectionDetails,
@@ -58,18 +58,6 @@ resolveConceptSetExpression <- function(conceptSetExpression,
       conceptIds = conceptIdsWithIncludeDescendants,
       vocabularyDatabaseSchema = vocabularyDatabaseSchema
     )
-  
-  # conceptIdDetailsForDescendantConcepts <-
-  #   getConceptIdDetails(
-  #     conceptIds = descendantConcepts$descendantConceptId %>% unique(),
-  #     connection = connection,
-  #     connectionDetails = connectionDetails,
-  #     vocabularyDatabaseSchema = vocabularyDatabaseSchema
-  #   )
-  # browser()
-  # descendantConcepts <- descendantConcepts %>%
-  #   dplyr::inner_join(conceptIdDetailsForDescendantConcepts, by = "conceptId")
-  
   
   # get all conceptIds (as dataframe) that are excluded in concept set expression
   excludedConceptIds <- conceptSetExpressionDataFrame %>%

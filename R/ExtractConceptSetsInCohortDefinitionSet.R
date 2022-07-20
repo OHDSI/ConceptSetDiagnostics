@@ -58,7 +58,7 @@ extractConceptSetsInCohortDefinitionSet <-
     for (i in (1:nrow(conceptSets))) {
       conceptSetSig[[i]] <- conceptSets[i, ]
       conceptSetExpressionSignature <-
-        getConceptSetExpressionDataFrameFromConceptSetExpression(
+        convertConceptSetExpressionToDataFrame(
           conceptSetExpression = conceptSetSig[[i]]$conceptSetExpression %>%
             RJSONIO::fromJSON(digits = 23)
         ) %>%
