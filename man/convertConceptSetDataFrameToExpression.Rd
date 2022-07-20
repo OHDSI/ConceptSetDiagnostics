@@ -7,7 +7,7 @@
 convertConceptSetDataFrameToExpression(
   conceptSetExpressionDataFrame,
   selectAllDescendants = FALSE,
-  updateVocabularyDetails = FALSE,
+  updateVocabularyFields = FALSE,
   connectionDetails = NULL,
   connection = NULL,
   vocabularyDatabaseSchema = NULL
@@ -23,6 +23,10 @@ All column names should be in camelCase format.}
 expression by add select descendants for concept ids
 in concept set expression.}
 
+\item{updateVocabularyFields}{Do you want to update the details about concepts from the vocabulary tables such as domain, 
+vocabulary, concept name? If yes, then connection or connectionDetails to a 
+remote db with OMOP vocabulary tables is needed.}
+
 \item{connectionDetails}{An object of type \code{connectionDetails} as created using the
 \code{\link[DatabaseConnector]{createConnectionDetails}} function in the
 DatabaseConnector package. Can be left NULL if \code{connection} is
@@ -35,10 +39,6 @@ is provided, in which case a new connection will be opened at the start
 of the function, and closed when the function finishes.}
 
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
-
-\item{updateVocabularyFields}{Do you want to update the details about concepts from the vocabulary tables such as domain, 
-vocabulary, concept name? If yes, then connection or connectionDetails to a 
-remote db with OMOP vocabulary tables is needed.}
 }
 \value{
 Returns a R list object

@@ -42,7 +42,7 @@
 convertConceptSetDataFrameToExpression <-
   function(conceptSetExpressionDataFrame,
            selectAllDescendants = FALSE,
-           updateVocabularyDetails = FALSE,
+           updateVocabularyFields = FALSE,
            connectionDetails = NULL,
            connection = NULL,
            vocabularyDatabaseSchema = NULL) {
@@ -97,7 +97,7 @@ convertConceptSetDataFrameToExpression <-
         )
     }
 
-    if (updateVocabularyDetails) {
+    if (updateVocabularyFields) {
       if (is.null(vocabularyDatabaseSchema)) {
         stop(
           "VocabularyDatabaseSchema with OMOP vocabulary tables is needed to update Vocabulary details."
