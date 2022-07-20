@@ -58,27 +58,39 @@ DatabaseConnector::insertTable(
 
 
 #----1. getConceptAncestor----
-ConceptSetDiagnostics::getConceptAncestor(
+conceptAncestor <- ConceptSetDiagnostics::getConceptAncestor(
   conceptIds = conceptId,
   connection = connection,
   vocabularyDatabaseSchema = databaseSchema
 )
+conceptAncestor
 
-#----2. getConceptIdDetails----
+#----2. getConceptDescendant----
+conceptDescendants <- ConceptSetDiagnostics::getConceptDescendant(
+  conceptIds = conceptAncestor %>%
+    dplyr::arrange(dplyr::desc(.data$maxLevelsOfSeparation)) %>%
+    dplyr::slice(1) %>%
+    dplyr::pull(.data$ancestorConceptId),
+  connection = connection,
+  vocabularyDatabaseSchema = databaseSchema
+)
+conceptDescendants
+
+#----3. getConceptIdDetails----
 ConceptSetDiagnostics::getConceptIdDetails(
   conceptIds = conceptId,
   connection = connection,
   vocabularyDatabaseSchema = databaseSchema
 )
 
-#----3. getConceptPrevalenceCountsForConceptIds----
+#----4. getConceptPrevalenceCountsForConceptIds----
 ConceptSetDiagnostics::getConceptPrevalenceCounts(
   conceptIds = conceptId,
   connection = connection,
   conceptPrevalenceTable = "main.universe"
 )
 
-#----4. getConceptRelationship----
+#----5. getConceptRelationship----
 conceptIdforRelationship <- 40162359
 ConceptSetDiagnostics::getConceptRelationship(
   conceptIds = conceptIdforRelationship,
@@ -86,8 +98,49 @@ ConceptSetDiagnostics::getConceptRelationship(
   vocabularyDatabaseSchema = databaseSchema
 )
 
+#----6. getConceptSynonym----
+ConceptSetDiagnostics::getConceptSynonym(
+  conceptIds = conceptId,
+  connection = connection,
+  vocabularyDatabaseSchema = databaseSchema
+)
 
-#----5. getStringSearchConcepts----
+#----7. getDomain----
+ConceptSetDiagnostics::getDomain(connection = connection,
+                                 vocabularyDatabaseSchema = databaseSchema)
+
+
+#----8. getDrugIngredients
+ConceptSetDiagnostics::getDrugIngredients(
+  connection = connection,
+  conceptIds = c(1127078, 1127433),
+  vocabularyDatabaseSchema = databaseSchema
+)
+
+
+#----9. getExcludedConceptsInConceptSetExpression
+
+
+#----10. getMappedSourceConcepts----
+ConceptSetDiagnostics::getMappedSourceConcepts(
+  conceptIds = 192671,
+  connection = connection,
+  vocabularyDatabaseSchema = databaseSchema
+)
+
+#----11.getMappedStandardConcepts----
+ConceptSetDiagnostics::getMappedStandardConcepts(
+  conceptIds = 35208414,
+  connection = connection,
+  vocabularyDatabaseSchema = databaseSchema
+)
+
+#----12.getMedraRelationship----
+
+#----13. getRelationship----
+ConceptSetDiagnostics::getRelationship(connection = connection, vocabularyDatabaseSchema = databaseSchema)
+
+#----14. getStringSearchConcepts----
 searchResultDataFrame <-
   ConceptSetDiagnostics::getStringSearchConcepts(
     connectionDetails = connectionDetails,
@@ -100,12 +153,22 @@ searchResultDataFrame$includeDescendants <- TRUE
 searchResultDataFrame$includeMapped <- TRUE
 searchResultDataFrame$isExcluded <- FALSE
 
-#----6. convertConceptSetDataFrameToExpression----
+#----15. GetStringSearchConceptsUsingTsv----
+
+#----16. getVocabulary----
+ConceptSetDiagnostics::getVocabulary(connection = connection, vocabularyDatabaseSchema = databaseSchema)
+
+#----17. resolveConceptSetExpression----
+
+
+#----18. resolveConceptSetsInCohortExpression----
+
+#----19. convertConceptSetDataFrameToExpression----
 conceptSetExpression <-
   ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = searchResultDataFrame)
 
 
-#----7. convertConceptSetExpressionToDataFrame----
+#----20. convertConceptSetExpressionToDataFrame----
 conceptSetDataFrame <-
   ConceptSetDiagnostics::convertConceptSetExpressionToDataFrame(
     connection = connection,
@@ -114,7 +177,7 @@ conceptSetDataFrame <-
     updateVocabularyFields = TRUE
   )
 
-#----8. resolvedConceptsIds----
+#----21. resolveConceptSetExpression----
 resolvedConceptsIds <-
   ConceptSetDiagnostics::resolveConceptSetExpression(
     conceptSetExpression = conceptSetExpression,
@@ -122,59 +185,22 @@ resolvedConceptsIds <-
     vocabularyDatabaseSchema = databaseSchema
   )
 
-#----9. getConceptSynonym----
-ConceptSetDiagnostics::getConceptSynonym(
-  conceptIds = conceptId,
-  connection = connection,
-  vocabularyDatabaseSchema = databaseSchema
-)
+#----22. ResolveConceptSetsInCohortExpression----
 
 
-#----10. getDomain----
-ConceptSetDiagnostics::getDomain(connection = connection,
-                                 vocabularyDatabaseSchema = databaseSchema)
+#----21. convertConceptSetDataFrameToExpression----
 
-#----11. getMappedSourceConcepts----
-ConceptSetDiagnostics::getMappedSourceConcepts(
-  conceptIds = 192671,
-  connection = connection,
-  vocabularyDatabaseSchema = databaseSchema
-)
 
-#----12.getMappedStandardConcepts----
-ConceptSetDiagnostics::getMappedStandardConcepts(
-  conceptIds = 35208414,
-  connection = connection,
-  vocabularyDatabaseSchema = databaseSchema
-)
-
-#----13. getRelationship----
-ConceptSetDiagnostics::getRelationship(connection = connection, vocabularyDatabaseSchema = databaseSchema)
-
-#----14. getVocabulary----
-ConceptSetDiagnostics::getVocabulary(connection = connection, vocabularyDatabaseSchema = databaseSchema)
-
-#----15. extractConceptSetsInCohortDefinition----
-ConceptSetDiagnostics::extractConceptSetsInCohortDefinition(cohortExpression = cohortDefinitionSet[1, ]$json %>%
+#----22. extractConceptSetsInCohortDefinition----
+ConceptSetDiagnostics::extractConceptSetsInCohortDefinition(cohortExpression = cohortDefinitionSet[1,]$json %>%
                                                               RJSONIO::fromJSON(digits = 23))
 
-#----16. getOptimizationRecommendationForConceptSetExpression----
-ConceptSetDiagnostics::getOptimizationRecommendationForConceptSetExpression(
-  conceptSetExpression = conceptSetExpression,
-  connection = connection,
-  vocabularyDatabaseSchema = databaseSchema
-)
+#----23. extractConceptSetsInCohortDefinitionSet----
 
-#----17. optimizeConceptSetExpression
+
+#----24. optimizeConceptSetExpression
 ConceptSetDiagnostics::optimizeConceptSetExpression(
   conceptSetExpression = conceptSetExpression,
   connection = connection,
-  vocabularyDatabaseSchema = databaseSchema
-)
-
-#----18. getDrugIngredients
-ConceptSetDiagnostics::getDrugIngredients(
-  connection = connection,
-  conceptIds = c(1127078, 1127433),
   vocabularyDatabaseSchema = databaseSchema
 )
