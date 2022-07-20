@@ -29,6 +29,8 @@
 #' @template VocabularyDatabaseSchema
 #'
 #' @template conceptSetExpression
+#' 
+#' @template TempEmulationSchema
 #'
 #' @return
 #' Returns a tibble data frame.
@@ -39,6 +41,7 @@ convertConceptSetExpressionToDataFrame <-
            updateVocabularyFields = FALSE,
            connection = NULL,
            connectionDetails = NULL,
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = "vocabulary") {
     if (length(conceptSetExpression) == 0) {
       return(NULL)
@@ -130,7 +133,8 @@ convertConceptSetExpressionToDataFrame <-
           connection = connection,
           connectionDetails = connectionDetails,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-          conceptIds = conceptSetExpressionDetails$conceptId %>% unique()
+          conceptIds = conceptSetExpressionDetails$conceptId %>% unique(),
+          tempEmulationSchema = tempEmulationSchema
         )
         conceptSetExpressionDetails <-
           conceptSetExpressionDetails %>%

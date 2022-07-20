@@ -38,6 +38,7 @@ mapMedraToSnomedViaVocabulary <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = "vocabulary") {
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
@@ -59,7 +60,8 @@ mapMedraToSnomedViaVocabulary <-
     medDraRelationship <- getMedraRelationship(
       conceptIds = givenConceptId$medDraConceptId,
       connection = connection,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      tempEmulationSchema = tempEmulationSchema
     )
 
     writeLines(
@@ -154,7 +156,8 @@ mapMedraToSnomedViaVocabulary <-
     medDRADescendants <- getConceptDescendant(
       conceptIds = givenConceptId$medDraConceptId,
       connection = connection,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      tempEmulationSchema = tempEmulationSchema
     )
     # filtering to snomed will be done later because we dont have conceptId details yet.
 
@@ -169,7 +172,8 @@ mapMedraToSnomedViaVocabulary <-
         0
       ) %>% unique(),
       connection = connection,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema, 
+      tempEmulationSchema = tempEmulationSchema
     )
     medDraRelated <- medDraRelated %>%
       dplyr::filter(.data$conceptId1 %in% c(givenConceptId$medDraConceptId)) %>%
@@ -198,7 +202,8 @@ mapMedraToSnomedViaVocabulary <-
         conceptRelationship$conceptId2
       ) %>% unique() %>% sort(),
       connection = connection,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      tempEmulationSchema = tempEmulationSchema
     )
 
     descendantsMappedToSnoMed <-
@@ -284,7 +289,8 @@ mapMedraToSnomedViaVocabulary <-
     snomedSynonyms <- getConceptSynonym(
       conceptIds = c(finalMappedConcepts$snomedConceptId %>% unique()),
       connection = connection,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      tempEmulationSchema = tempEmulationSchema
     )
 
     snomedSynonyms <-
@@ -448,7 +454,8 @@ mapMedraToSnomedViaVocabulary <-
     conceptAncestorsForAllSnomed <- getConceptAncestor(
       conceptIds = mappedUsingVocabaulary$snomedConceptId %>% unique(),
       connection = connection,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      tempEmulationSchema = tempEmulationSchema
     )
 
     listOfSnomeds <- mappedUsingVocabaulary %>%
