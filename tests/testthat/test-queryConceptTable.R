@@ -139,6 +139,16 @@ testthat::test_that("Get MedRa Relationship - connection", {
   testthat::expect_gte(object = nrow(output$llt), expected = 0)
 })
 
+# mapMedraToSnomedViaVocabulary 1 ----
+testthat::test_that("Map MedDra to Snomed - connection", {
+  output <- ConceptSetDiagnostics::mapMedraToSnomedViaVocabulary(
+    connection = connection,
+    conceptIds = 0,
+    vocabularyDatabaseSchema = cdmDatabaseSchema
+  )
+  testthat::expect_gte(object = nrow(output), expected = 0)
+})
+
 # Disconnection ----
 DatabaseConnector::disconnect(connection = connection)
 
@@ -271,7 +281,7 @@ testthat::test_that("Get Drug Ingredients - connectionDetails", {
 })
 
 # getMedraRelationship 2 ----
-testthat::test_that("Get MedRa Relationship - connection", {
+testthat::test_that("Get MedRa Relationship - connectionDetails", {
   output <- ConceptSetDiagnostics::getMedraRelationship(
     connectionDetails = connectionDetails,
     conceptIds = 0,
@@ -286,4 +296,14 @@ testthat::test_that("Get MedRa Relationship - connection", {
   testthat::expect_gte(object = nrow(output$hlt), expected = 0)
   testthat::expect_gte(object = nrow(output$pt), expected = 0)
   testthat::expect_gte(object = nrow(output$llt), expected = 0)
+})
+
+# mapMedraToSnomedViaVocabulary 2 ----
+testthat::test_that("Map MedDra to Snomed - connectionDetails", {
+  output <- ConceptSetDiagnostics::mapMedraToSnomedViaVocabulary(
+    connectionDetails = connectionDetails,
+    conceptIds = 0,
+    vocabularyDatabaseSchema = cdmDatabaseSchema
+  )
+  testthat::expect_gte(object = nrow(output), expected = 0)
 })
