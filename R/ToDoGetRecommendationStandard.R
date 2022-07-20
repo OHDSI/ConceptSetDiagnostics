@@ -14,7 +14,7 @@
 #' # See the License for the specific language governing permissions and
 #' # limitations under the License.
 #' #
-#' 
+#'
 #' #' given a list of standard conceptIds, get recommended concepts.
 #' #'
 #' #' @template Connection
@@ -32,14 +32,14 @@
 #'            conceptPrevalenceSchema = "concept_prevalence") {
 #'     # Filtering strings to letters, numbers and spaces only to avoid SQL injection:
 #'     conceptIds <- gsub("[^a-zA-Z0-9 ,]", " ", conceptIds)
-#' 
+#'
 #'     sql <-
 #'       SqlRender::readSql(
 #'         sourceFile = system.file("sql", "sql_server", "RecommendedStandard.sql",
 #'           package = "ConceptSetDiagnostics"
 #'         )
 #'       )
-#' 
+#'
 #'     data <-
 #'       renderTranslateQuerySql(
 #'         connection = connection,

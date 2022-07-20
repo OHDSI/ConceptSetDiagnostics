@@ -26,7 +26,7 @@
 #' @template ConceptIds
 #'
 #' @template ConceptPrevalenceTable
-#' 
+#'
 #' @template TempEmulationSchema
 #'
 #' @return
@@ -37,8 +37,7 @@ getConceptPrevalenceCounts <- function(conceptIds,
                                        connection = NULL,
                                        connectionDetails = NULL,
                                        conceptPrevalenceTable,
-                                       tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
-                                       ) {
+                                       tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))

@@ -58,9 +58,9 @@ getConceptRelationship <-
                 SELECT DISTINCT concept_id
                 FROM @concept_id_table t1
               )
-  
+
               UNION
-  
+
               SELECT cr2.*
               FROM @vocabulary_database_schema.concept_relationship cr2
               WHERE cr2.CONCEPT_ID_2 IN

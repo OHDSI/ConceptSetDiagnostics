@@ -15,21 +15,20 @@
 # limitations under the License.
 #
 
-#' convert a concept set expression object into a data frame object
+#' convert a concept set expression R list object into a data frame object
 #'
 #' @description
-#' convert a concept set expression object into a data frame object
+#' convert a concept set expression R list object into a data frame object
 #'
 #' @template Connection
 #'
-#' @param updateVocabularyFields  Do you want to update the details of concepts from the vocabulary tables? If yes,
-#'                                then connection or connectionDetails to a remote db with OMOP vocabulary tables
-#'                                is needed.
+#'
+#' @template UpdateVocabularyFields
 #'
 #' @template VocabularyDatabaseSchema
 #'
 #' @template conceptSetExpression
-#' 
+#'
 #' @template TempEmulationSchema
 #'
 #' @return
@@ -42,8 +41,11 @@ convertConceptSetExpressionToDataFrame <-
            connection = NULL,
            connectionDetails = NULL,
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
-           vocabularyDatabaseSchema = "vocabulary") {
+           vocabularyDatabaseSchema = NULL) {
     if (length(conceptSetExpression) == 0) {
+      warning(
+        "Concept set expression was found to have a length of 0. No concept set expression found."
+      )
       return(NULL)
     }
 
@@ -123,6 +125,9 @@ convertConceptSetExpressionToDataFrame <-
       )
 
     if (updateVocabularyFields) {
+      if (is.null(vocabularyDatabaseSchema)) {
+        stop("VocabularyDatabaseSchema with OMOP vocabulary tables is needed to update Vocabulary details.")
+      }
       if (is.null(connection)) {
         connection <- DatabaseConnector::connect(connectionDetails)
         on.exit(DatabaseConnector::disconnect(connection))

@@ -14,7 +14,7 @@
 #' # See the License for the specific language governing permissions and
 #' # limitations under the License.
 #' #
-#' 
+#'
 #' #' Get recommended concepts for a concept set expression.
 #' #'
 #' #' @description
@@ -50,7 +50,7 @@
 #'         conceptSetExpression = conceptSetExpression,
 #'         vocabularyDatabaseSchema = vocabularyDatabaseSchema
 #'       )
-#' 
+#'
 #'     if (length(vocabularyIdOfInterest) > 0) {
 #'       conceptSetExpressionDataFrame <- conceptSetExpressionDataFrame %>%
 #'         dplyr::filter(.data$vocabularyId %in% vocabularyIdOfInterest)
@@ -59,10 +59,10 @@
 #'       conceptSetExpressionDataFrame <- conceptSetExpressionDataFrame %>%
 #'         dplyr::filter(.data$domainId %in% domainIdOfInterest)
 #'     }
-#' 
+#'
 #'     conceptSetExpression <-
 #'       convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetExpressionDataFrame)
-#' 
+#'
 #'     resolvedConceptIds <-
 #'       resolveConceptSetExpression(
 #'         conceptSetExpression = conceptSetExpression,
@@ -70,7 +70,7 @@
 #'         connectionDetails = connectionDetails,
 #'         vocabularyDatabaseSchema = vocabularyDatabaseSchema
 #'       )
-#' 
+#'
 #'     forRecommendation <-
 #'       c(
 #'         resolvedConceptIds$resolvedConcepts$conceptId,
@@ -92,7 +92,7 @@
 #'         conceptIds = forRecommendation,
 #'         conceptPrevalenceSchema = conceptPrevalenceSchema
 #'       )
-#' 
+#'
 #'     data <- list()
 #'     data$recommendedStandard <- recommendedStandard
 #'     data$recommendedSource <- recommendedSource

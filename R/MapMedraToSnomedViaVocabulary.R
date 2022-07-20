@@ -172,7 +172,7 @@ mapMedraToSnomedViaVocabulary <-
         0
       ) %>% unique(),
       connection = connection,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema, 
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
       tempEmulationSchema = tempEmulationSchema
     )
     medDraRelated <- medDraRelated %>%

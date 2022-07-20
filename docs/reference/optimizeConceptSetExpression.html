@@ -48,6 +48,7 @@
 <span>  <span class="va">conceptSetExpression</span>,</span>
 <span>  vocabularyDatabaseSchema <span class="op">=</span> <span class="st">"vocabulary"</span>,</span>
 <span>  connection <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  tempEmulationSchema <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"sqlRenderTempEmulationSchema"</span><span class="op">)</span>,</span>
 <span>  connectionDetails <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -58,12 +59,21 @@
 <dd><p>An R-object (list) with expression of the concept set.</p></dd>
 
 
+<dt>vocabularyDatabaseSchema</dt>
+<dd><p>The schema name of containing the vocabulary tables.</p></dd>
+
+
 <dt>connection</dt>
 <dd><p>An object of type <code>connection</code> as created using the
 <code><a href="https://ohdsi.github.io/DatabaseConnector/reference/connect.html" class="external-link">connect</a></code> function in the
 DatabaseConnector package. Can be left NULL if <code>connectionDetails</code>
 is provided, in which case a new connection will be opened at the start
 of the function, and closed when the function finishes.</p></dd>
+
+
+<dt>tempEmulationSchema</dt>
+<dd><p>Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
+tables, provide a schema with write privileges where temp tables can be created.</p></dd>
 
 
 <dt>connectionDetails</dt>

@@ -2,27 +2,47 @@
 % Please edit documentation in R/ConvertConceptSetDataFrameToExpression.R
 \name{convertConceptSetDataFrameToExpression}
 \alias{convertConceptSetDataFrameToExpression}
-\title{Get concept set expression object from concept set expression data frame}
+\title{Convert concept set expression in a data frame format convert to R (list) expression}
 \usage{
 convertConceptSetDataFrameToExpression(
   conceptSetExpressionDataFrame,
   selectAllDescendants = FALSE,
-  purgeVocabularyDetails = FALSE
+  updateVocabularyDetails = FALSE,
+  connectionDetails = NULL,
+  connection = NULL,
+  vocabularyDatabaseSchema = NULL
 )
 }
 \arguments{
-\item{conceptSetExpressionDataFrame}{Concept set expression in data frame format.}
+\item{conceptSetExpressionDataFrame}{Concept set expression in data frame format with required fields
+conceptId. If includeMapped, isExcluded or includeDescendants
+are missing value or is not existent - it is assumed to be FALSE.
+All column names should be in camelCase format.}
 
 \item{selectAllDescendants}{Do you want to over ride the concept set
 expression by add select descendants for concept ids
 in concept set expression.}
 
-\item{purgeVocabularyDetails}{Do you want to purge the details of concepts in the
-concept set expression.}
+\item{connectionDetails}{An object of type \code{connectionDetails} as created using the
+\code{\link[DatabaseConnector]{createConnectionDetails}} function in the
+DatabaseConnector package. Can be left NULL if \code{connection} is
+provided.}
+
+\item{connection}{An object of type \code{connection} as created using the
+\code{\link[DatabaseConnector]{connect}} function in the
+DatabaseConnector package. Can be left NULL if \code{connectionDetails}
+is provided, in which case a new connection will be opened at the start
+of the function, and closed when the function finishes.}
+
+\item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
+
+\item{updateVocabularyFields}{Do you want to update the details about concepts from the vocabulary tables such as domain, 
+vocabulary, concept name? If yes, then connection or connectionDetails to a 
+remote db with OMOP vocabulary tables is needed.}
 }
 \value{
 Returns a R list object
 }
 \description{
-Get concept set expression object from concept set expression data frame
+Convert concept set expression in a data frame format convert to R (list) expression
 }

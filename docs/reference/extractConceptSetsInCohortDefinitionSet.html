@@ -51,28 +51,34 @@ compares concept sets across cohort definitions, assigns unique id.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">extractConceptSetsInCohortDefinitionSet</span><span class="op">(</span><span class="va">cohortDefinitionSet</span><span class="op">)</span></span></code></pre></div>
     </div>
 
+    <div id="arguments">
+    <h2>Arguments</h2>
+    <dl><dt>cohortDefinitionSet</dt>
+<dd><p>The <code>cohortDefinitionSet</code> argument must be a data frame 
+with at least the following columns.</p><dl><dt>cohortId</dt>
+<dd><p>The cohort Id is the id used to identify  a 
+                      cohort definition. This is required to be unique. 
+                      It is usually used to create file names.</p></dd>
+
+           <dt>cohortName</dt>
+<dd><p>The full name of the cohort.</p></dd>
+
+           <dt>json</dt>
+<dd><p>The JSON cohort definition for the cohort.</p></dd>
+
+           <dt>sql</dt>
+<dd><p>The SQL of the cohort definition rendered from the cohort json.</p></dd>
+
+         
+</dl></dd>
+
+</dl></div>
     <div id="value">
     <h2>Value</h2>
     
 
 <p>Returns a tibble data frame.</p>
     </div>
-    <div id="details">
-    <h2>Details</h2>
-    <p>The <code>cohortDefinitionSet</code> argument must be a data frame with at least the following columns.</p><dl><dt>cohortId</dt>
-<dd><p>The cohort Id is the id used to identify  a cohort definition. This is required to be unique. It is usually used to create file names.</p></dd>
-
-<dt>cohortName</dt>
-<dd><p>The full name of the cohort.</p></dd>
-
-<dt>json</dt>
-<dd><p>The JSON cohort definition for the cohort.</p></dd>
-
-<dt>sql</dt>
-<dd><p>The SQL of the cohort definition rendered from the cohort json.</p></dd>
-
-
-</dl></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
