@@ -32,7 +32,7 @@ getVocabulary <-
       on.exit(DatabaseConnector::disconnect(connection))
     }
 
-    data <-
+    output <-
       DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = "SELECT * FROM @vocabulary_database_schema.vocabulary;",
@@ -40,5 +40,5 @@ getVocabulary <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()
-    return(data)
+    return(output)
   }

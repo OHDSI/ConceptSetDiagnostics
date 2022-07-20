@@ -25,6 +25,8 @@
 #' @template ConceptSetExpression
 #'
 #' @template VocabularyDatabaseSchema
+#' 
+#' @template TempEmulationSchema
 #'
 #' @return
 #' Returns a tibble data frame.
@@ -32,9 +34,11 @@
 #' @export
 getExcludedConceptsInConceptSetExpression <-
   function(conceptSetExpression,
-           connection,
+           connection = NULL,
            connectionDetails = NULL,
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = "vocabulary") {
+    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
@@ -48,22 +52,27 @@ getExcludedConceptsInConceptSetExpression <-
     }
     
     excludeRows <- conceptSetDataFrame %>%
-      dplyr::filter(.data$isExcluded == 1)
+      dplyr::filter(.data$isExcluded == TRUE)
     excludeRowsDescendants <- excludeRows %>%
       dplyr::filter(.data$includeDescendants == TRUE)
     excludeRowsNoDescendants <- excludeRows %>%
       dplyr::filter(.data$includeDescendants == FALSE)
     
     excludeConceptIdsWithDescendants <-
-      getConceptDescendant(conceptIds = cexcludeRowsDescendants$conceptId, 
-                           connection = connection)
+      getConceptDescendant(conceptIds = excludeRowsDescendants$conceptId, 
+                           connection = connection,
+                           vocabularyDatabaseSchema = vocabularyDatabaseSchema, 
+                           tempEmulationSchema = tempEmulationSchema)
     
     allExcludedConceptIds <-
       dplyr::bind_rows(
-        excludeConceptIdsWithDescendants,
+        excludeConceptIdsWithDescendants %>% 
+          dplyr::select(.data$descendantConceptId) %>% 
+          dplyr::rename("conceptId" = .data$descendantConceptId),
         excludeRowsNoDescendants %>% dplyr::select(conceptId)
       ) %>%
-      dplyr::distinct()
+      dplyr::distinct() %>% 
+      dplyr::arrange(.data$conceptId)
     
     data <-
       getConceptIdDetails(

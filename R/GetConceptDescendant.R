@@ -48,7 +48,8 @@ getConceptDescendant <-
     }
     
     tempTableName <- loadTempConceptTable(conceptIds = conceptIds,
-                                          connection = connection)
+                                          connection = connection,
+                                          tempEmulationSchema = tempEmulationSchema)
     
     sql <- "SELECT ca.*
             FROM @vocabulary_database_schema.concept_ancestor ca

@@ -119,6 +119,11 @@ convertConceptSetExpressionToDataFrame <-
       )
     
     if (updateVocabularyFields) {
+      if (is.null(connection)) {
+        connection <- DatabaseConnector::connect(connectionDetails)
+        on.exit(DatabaseConnector::disconnect(connection))
+      }
+      
       if (!is.null(connection)) {
         details <- getConceptIdDetails(
           connection = connection,

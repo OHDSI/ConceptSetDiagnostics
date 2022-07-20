@@ -31,6 +31,12 @@ resolveConceptSetExpression <- function(conceptSetExpression,
                                         connection = NULL,
                                         connectionDetails = NULL,
                                         vocabularyDatabaseSchema = "vocabulary") {
+  
+  if (is.null(connection)) {
+    connection <- DatabaseConnector::connect(connectionDetails)
+    on.exit(DatabaseConnector::disconnect(connection))
+  }
+  
   # convert concept set expression R object (list) to data frame
   conceptSetExpressionDataFrame <-
     convertConceptSetExpressionToDataFrame(
@@ -49,7 +55,16 @@ resolveConceptSetExpression <- function(conceptSetExpression,
     dplyr::pull(.data$conceptId)
   
   if (length(conceptIdsWithIncludeDescendants) == 0) {
-    return(NULL)
+    conceptIdDetails <-
+      getConceptIdDetails(
+        conceptIds = setdiff(conceptSetExpressionDataFrame$conceptId,
+                             conceptSetExpressionDataFrame %>% 
+                               dplyr::filter(.data$isExcluded == TRUE) %>% 
+                               dplyr::pull(.data$conceptId)),
+        connection = connection,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      )
+    return(conceptIdDetails)
   }
   descendantConcepts <-
     getConceptDescendant(
