@@ -54,8 +54,11 @@ getConceptAncestor <-
 
     sql <- "SELECT ca.*
             FROM @vocabulary_database_schema.concept_ancestor ca
-            INNER JOIN @concept_id_table cid
-            ON ca.descendant_concept_id = cid.concept_id;"
+            WHERE ca.descendant_concept_id IN
+            (
+              SELECT DISTINCT concept_id
+              FROM @concept_id_table t
+            );"
 
     data <-
       DatabaseConnector::renderTranslateQuerySql(

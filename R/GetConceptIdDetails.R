@@ -53,11 +53,13 @@ getConceptIdDetails <-
     )
 
     sql <- "
-    SELECT c.*
+      SELECT c.*
       FROM @vocabulary_database_schema.concept c
-      INNER JOIN @concept_id_table t
-      ON c.concept_id = t.concept_id;
-    "
+      WHERE c.concept_id IN
+      (
+        SELECT DISTINCT concept_id
+        FROM @concept_id_table t
+      );"
 
     data <- DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
