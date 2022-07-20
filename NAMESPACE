@@ -2,7 +2,6 @@
 
 export(extractConceptSetsInCohortDefinition)
 export(extractConceptSetsInCohortDefinitionSet)
-export(getCohortSqlFromCohortDefinition)
 export(getConceptAncestor)
 export(getConceptDescendant)
 export(getConceptIdDetails)

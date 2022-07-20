@@ -15,10 +15,11 @@
 # limitations under the License.
 #
 
-#' Get concept set details from cohort definition
+#' Extract concept set expressions from cohort definition expression.
 #'
 #' @description
-#' Get concept set details from cohort definition
+#' Given a cohort expression, this function extracts the concept set 
+#' expressions from cohort definition expression.
 #'
 #' @template CohortExpression
 #'
@@ -78,10 +79,10 @@ extractConceptSetsInCohortDefinition <-
     
     conceptSetExpression2 <- list()
     for (j in (1:nrow(conceptSetExpression))) {
-      conceptSetExpression2[[j]] <- conceptSetExpression[j,]
+      conceptSetExpression2[[j]] <- conceptSetExpression[j, ]
       conceptSetExpression2[[j]]$conceptSetExpressionSignature <-
         getConceptSetExpressionDataFrameFromConceptSetExpression(
-          conceptSetExpression = conceptSetExpression2[[j]][1,]$conceptSetExpression %>%
+          conceptSetExpression = conceptSetExpression2[[j]][1, ]$conceptSetExpression %>%
             RJSONIO::fromJSON(digits = 23)
         ) %>%
         dplyr::select(
@@ -121,17 +122,9 @@ extractConceptSetsInCohortDefinition <-
     return(data)
   }
 
-#' get concept set expressions from cohort expression
-#'
-#' @description
-#' given a cohort expression (R-list object, not JSON), this function
-#' parses the list and returns the concept set components
-#'
-#' @template CohortExpression
-#'
-#' @return
-#' Returns a tibble data frame with one row per concept set
-#'
+
+
+
 extractConceptSetExpressionsFromCohortExpression <-
   function(cohortExpression) {
     if ("expression" %in% names(cohortExpression)) {
@@ -157,16 +150,6 @@ extractConceptSetExpressionsFromCohortExpression <-
 
 
 
-#' get concept set sql from cohort sql
-#'
-#' @description
-#' given a cohort sql, this function parses the sql and return the concept set components
-#'
-#' @param cohortSql sql of the cohort definition.
-#'
-#' @return
-#' Returns a tibble data frame with one row per concept set
-#'
 extractConceptSetsSqlFromCohortSql <- function(cohortSql) {
   if (length(cohortSql) > 1) {
     stop("Please check if more than one cohort SQL was provided.")
@@ -217,3 +200,26 @@ extractConceptSetsSqlFromCohortSql <- function(cohortSql) {
   }
   return(dplyr::bind_rows(temp))
 }
+
+
+
+getCohortSqlFromCohortDefinition <-
+  function(cohortExpression,
+           generateStats = TRUE) {
+    if ("expression" %in% names(cohortExpression)) {
+      expression <- cohortExpression$expression
+    } else {
+      expression <- cohortExpression
+    }
+    
+    # use circe to render cohort sql
+    circeRCohortExpressionFromJson <-
+      CirceR::cohortExpressionFromJson(expressionJson = RJSONIO::toJSON(x = expression,
+                                                                        digits = 23))
+    circeRenderedSqlExpression <-
+      CirceR::buildCohortQuery(
+        expression = circeRCohortExpressionFromJson,
+        options = CirceR::createGenerateOptions(generateStats = generateStats)
+      )
+    return(circeRenderedSqlExpression)
+  }

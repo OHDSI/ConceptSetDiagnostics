@@ -25,7 +25,7 @@
 #' @template ConceptIds
 #'
 #' @template VocabularyDatabaseSchema
-#' 
+#'
 #' @template TempEmulationSchema
 #'
 #' @return
@@ -66,7 +66,7 @@ getConceptAncestor <-
       ) %>%
       tidyr::tibble()
     
-    dropTempConceptTable(connection = connection, 
+    dropTempConceptTable(connection = connection,
                          tempTableName = tempTableName)
     return(data)
   }

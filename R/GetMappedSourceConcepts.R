@@ -34,7 +34,6 @@ getMappedSourceConcepts <-
   function(conceptIds,
            connection = NULL,
            connectionDetails = NULL,
-           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = "vocabulary") {
     if (length(conceptIds) == 0) {
       stop("No concept id provided")
@@ -64,7 +63,6 @@ getMappedSourceConcepts <-
         connection = connection,
         concept_id_table = tempTableName,
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        tempEmulationSchema = tempEmulationSchema,
         snakeCaseToCamelCase = TRUE
       ) %>%
       tidyr::tibble()

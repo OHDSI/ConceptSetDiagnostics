@@ -2,7 +2,7 @@
 % Please edit documentation in R/ExtractConceptSetsInCohortDefinition.R
 \name{extractConceptSetsInCohortDefinition}
 \alias{extractConceptSetsInCohortDefinition}
-\title{Get concept set details from cohort definition}
+\title{Extract concept set expressions from cohort definition expression.}
 \usage{
 extractConceptSetsInCohortDefinition(cohortExpression)
 }
@@ -16,5 +16,6 @@ expression JSON is commonly generated using OHDSI tools like Atlas or CapR.}
 Returns a tibble data frame.
 }
 \description{
-Get concept set details from cohort definition
+Given a cohort expression, this function extracts the concept set 
+expressions from cohort definition expression.
 }

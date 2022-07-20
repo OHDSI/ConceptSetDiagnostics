@@ -8,7 +8,6 @@ getExcludedConceptsInConceptSetExpression(
   conceptSetExpression,
   connection,
   connectionDetails = NULL,
-  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
   vocabularyDatabaseSchema = "vocabulary"
 )
 }

@@ -16,10 +16,11 @@
 #
 
 
-#' combine concept sets
+#' Extract concept sets from cohort definition set
 #'
 #' @description
-#' given a cohort definition set, this function extracts the concept set json and sql for all cohorts,
+#' given a cohort definition set (data frame with cohortId, json), this function 
+#' extracts the concept set json and sql for all cohorts,
 #' compares concept sets across cohort definitions, assigns unique id.
 #'
 #' @template CohortDefinitionSet
@@ -30,7 +31,7 @@
 #' @export
 extractConceptSetsInCohortDefinitionSet <-
   function(cohortDefinitionSet) {
-    # cohorts should be a dataframe with at least cohortId, sql and json
+    # cohorts should be a dataframe with at least cohortId and json
     
     conceptSets <- list()
     for (i in (1:nrow(cohortDefinitionSet))) {

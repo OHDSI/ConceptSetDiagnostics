@@ -2,7 +2,7 @@
 % Please edit documentation in R/ExtractConceptSetsInCohortDefinitionSet.R
 \name{extractConceptSetsInCohortDefinitionSet}
 \alias{extractConceptSetsInCohortDefinitionSet}
-\title{combine concept sets}
+\title{Extract concept sets from cohort definition set}
 \usage{
 extractConceptSetsInCohortDefinitionSet(cohortDefinitionSet)
 }
@@ -10,7 +10,8 @@ extractConceptSetsInCohortDefinitionSet(cohortDefinitionSet)
 Returns a tibble data frame.
 }
 \description{
-given a cohort definition set, this function extracts the concept set json and sql for all cohorts,
+given a cohort definition set (data frame with cohortId, json), this function 
+extracts the concept set json and sql for all cohorts,
 compares concept sets across cohort definitions, assigns unique id.
 }
 \details{

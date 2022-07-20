@@ -34,7 +34,6 @@ getExcludedConceptsInConceptSetExpression <-
   function(conceptSetExpression,
            connection,
            connectionDetails = NULL,
-           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = "vocabulary") {
 
     if (is.null(connection)) {
@@ -67,7 +66,6 @@ getExcludedConceptsInConceptSetExpression <-
         connection = connection,
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
-        tempEmulationSchema = tempEmulationSchema,
         excludeWithDescendants = excludeRowsDescendants$conceptId %>% unique()
       )
 
