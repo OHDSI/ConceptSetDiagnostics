@@ -2,7 +2,7 @@
 % Please edit documentation in R/ConvertConceptSetExpressionToDataFrame.R
 \name{convertConceptSetExpressionToDataFrame}
 \alias{convertConceptSetExpressionToDataFrame}
-\title{convert a concept set expression object into a data frame object}
+\title{convert a concept set expression R list object into a data frame object}
 \usage{
 convertConceptSetExpressionToDataFrame(
   conceptSetExpression,
@@ -10,15 +10,15 @@ convertConceptSetExpressionToDataFrame(
   connection = NULL,
   connectionDetails = NULL,
   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
-  vocabularyDatabaseSchema = "vocabulary"
+  vocabularyDatabaseSchema = NULL
 )
 }
 \arguments{
 \item{conceptSetExpression}{An R-object (list) with expression of the concept set.}
 
-\item{updateVocabularyFields}{Do you want to update the details of concepts from the vocabulary tables? If yes,
-then connection or connectionDetails to a remote db with OMOP vocabulary tables
-is needed.}
+\item{updateVocabularyFields}{Do you want to update the details about concepts from the vocabulary tables such as domain, 
+vocabulary, concept name? If yes, then connection or connectionDetails to a 
+remote db with OMOP vocabulary tables is needed.}
 
 \item{connection}{An object of type \code{connection} as created using the
 \code{\link[DatabaseConnector]{connect}} function in the
@@ -40,5 +40,5 @@ tables, provide a schema with write privileges where temp tables can be created.
 Returns a tibble data frame.
 }
 \description{
-convert a concept set expression object into a data frame object
+convert a concept set expression R list object into a data frame object
 }

@@ -38,9 +38,6 @@ getMappedSourceConcepts <-
            connectionDetails = NULL,
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            vocabularyDatabaseSchema = "vocabulary") {
-    if (length(conceptIds) == 0) {
-      stop("No concept id provided")
-    }
 
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
@@ -58,7 +55,7 @@ getMappedSourceConcepts <-
             SELECT cr.CONCEPT_ID_2 AS SEARCHED_CONCEPT_ID,
                     c.*
             FROM @vocabulary_database_schema.concept_relationship cr
-            INNER JOIN @vocabulary_database_schema.concept c 
+            INNER JOIN @vocabulary_database_schema.concept c
             ON c.concept_id = cr.concept_id_1
             WHERE relationship_id IN ('Maps to')
             AND cr.concept_id_2 IN (

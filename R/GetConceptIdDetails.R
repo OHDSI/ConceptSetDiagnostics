@@ -38,9 +38,6 @@ getConceptIdDetails <-
            connectionDetails = NULL,
            vocabularyDatabaseSchema = "vocabulary",
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
-    if (length(conceptIds) == 0) {
-      stop("No concept id provided")
-    }
 
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
@@ -70,7 +67,21 @@ getConceptIdDetails <-
       tempEmulationSchema = tempEmulationSchema,
       vocabulary_database_schema = vocabularyDatabaseSchema
     ) %>%
-      tidyr::tibble()
+      tidyr::tibble() %>%
+      dplyr::mutate(
+        standardConceptCaption = dplyr::case_when(
+          .data$standardConcept == "S" ~ "Standard",
+          .data$standardConcept == "C" ~ "Classification"
+        )
+      ) %>%
+      dplyr::mutate(
+        invalidReasonCaption = dplyr::case_when(
+          invalidReason == "V" ~ "Valid",
+          invalidReason == "D" ~ "Deleted",
+          invalidReason == "U" ~ "Updated",
+          TRUE ~ "Valid"
+        )
+      )
 
     dropTempConceptTable(
       connection = connection,

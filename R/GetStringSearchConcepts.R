@@ -31,47 +31,48 @@ getStringSearchConcepts <-
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
            connectionDetails = NULL) {
+    if (nchar(searchString) <= 3) {
+      stop("search string is shorter than 3 characters.")
+    }
+    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-
-    # Filtering strings to letters, numbers and spaces only to avoid SQL injection
-    # also making search string of lower case - to make search uniform.
-    searchString <-
-      stringr::str_squish(tolower(gsub("[^a-zA-Z0-9 ,]", " ", searchString)))
-
-    sql <- "
-    WITH matched_concepts
-    AS (
-    	SELECT DISTINCT concept_id
-    	FROM @vocabulary_database_schema.concept
-    	WHERE LOWER(CONCEPT_NAME) LIKE '%@search_string%'
-    	  OR LOWER(CONCEPT_CODE) LIKE '%@search_string%'
-
-    	UNION
-
-    	SELECT DISTINCT concept_id
-    	FROM @vocabulary_database_schema.concept_synonym
-    	WHERE LOWER(CONCEPT_SYNONYM_NAME) LIKE '%@search_string%'
-    	)
-    SELECT c.CONCEPT_ID,
-    	c.CONCEPT_NAME,
-    	c.VOCABULARY_ID,
-    	c.STANDARD_CONCEPT,
-    	c.INVALID_REASON,
-    	c.CONCEPT_CODE,
-    	c.CONCEPT_CLASS_ID,
-    	c.DOMAIN_ID
-    FROM @vocabulary_database_schema.concept c
-    INNER JOIN matched_concepts ON c.concept_id = matched_concepts.concept_id;"
-
+    
+    fieldsInConceptTable <-
+      DatabaseConnector::dbListFields(conn = connection,
+                                      name = "concept")
+    fieldsInConceptTable <-
+      tolower(sort(unique(fieldsInConceptTable)))
+    
+    if (tolower('FULL_TEXT_SEARCH') %in% fieldsInConceptTable) {
+      sql <- SqlRender::loadRenderTranslateSql(
+        sqlFilename = "SearchStringTsv.sql",
+        packageName = 'ConceptSetDiagnostics',
+        dbms = connection@dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        search_string = searchString
+      )
+    } else {
+      # Filtering strings to letters, numbers and spaces only to avoid SQL injection
+      # also making search string of lower case - to make search uniform.
+      searchString <-
+        stringr::str_squish(tolower(gsub("[^a-zA-Z0-9 ,]", " ", searchString)))
+      
+      sql <- SqlRender::loadRenderTranslateSql(
+        sqlFilename = "SearchString.sql",
+        packageName = 'ConceptSetDiagnostics',
+        dbms = connection@dbms,
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        search_string = searchString
+      )
+    }
+    
     data <-
-      DatabaseConnector::renderTranslateQuerySql(
+      DatabaseConnector::querySql(
         sql = sql,
         connection = connection,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        search_string = searchString,
         snakeCaseToCamelCase = TRUE
       ) %>%
       dplyr::tibble()

@@ -15,19 +15,25 @@
 # limitations under the License.
 #
 
-#' Get concept set expression object from concept set expression data frame
+#' Convert concept set expression in a data frame format convert to R (list) expression
 #'
 #' @description
-#' Get concept set expression object from concept set expression data frame
+#' Convert concept set expression in a data frame format convert to R (list) expression
 #'
-#' @param conceptSetExpressionDataFrame   Concept set expression in data frame format.
+#' @param conceptSetExpressionDataFrame   Concept set expression in data frame format with required fields
+#'                                        conceptId. If includeMapped, isExcluded or includeDescendants
+#'                                        are missing value or is not existent - it is assumed to be FALSE.
+#'                                        All column names should be in camelCase format.
 #'
 #' @param selectAllDescendants            Do you want to over ride the concept set
 #'                                        expression by add select descendants for concept ids
 #'                                        in concept set expression.
 #'
-#' @param purgeVocabularyDetails          Do you want to purge the details of concepts in the
-#'                                        concept set expression.
+#' @template UpdateVocabularyFields
+#'
+#' @template Connection
+#'
+#' @template VocabularyDatabaseSchema
 #'
 #' @return
 #' Returns a R list object
@@ -36,7 +42,10 @@
 convertConceptSetDataFrameToExpression <-
   function(conceptSetExpressionDataFrame,
            selectAllDescendants = FALSE,
-           purgeVocabularyDetails = FALSE) {
+           updateVocabularyFields = FALSE,
+           connectionDetails = NULL,
+           connection = NULL,
+           vocabularyDatabaseSchema = NULL) {
     if (!"includeMapped" %in% colnames(conceptSetExpressionDataFrame)) {
       conceptSetExpressionDataFrame$includeMapped <- FALSE
     }
@@ -46,6 +55,36 @@ convertConceptSetDataFrameToExpression <-
     if (!"includeDescendants" %in% colnames(conceptSetExpressionDataFrame)) {
       conceptSetExpressionDataFrame$includeDescendants <- FALSE
     }
+    if (!"conceptName" %in% colnames(conceptSetExpressionDataFrame)) {
+      conceptSetExpressionDataFrame$conceptName <- as.character("")
+    }
+    if (!"standardConcept" %in% colnames(conceptSetExpressionDataFrame)) {
+      conceptSetExpressionDataFrame$standardConcept <- as.character("")
+    }
+    if (!"standardConceptCaption" %in% colnames(conceptSetExpressionDataFrame)) {
+      conceptSetExpressionDataFrame$standardConceptCaption <-
+        as.character("")
+    }
+    if (!"invalidReason" %in% colnames(conceptSetExpressionDataFrame)) {
+      conceptSetExpressionDataFrame$invalidReason <- as.character("")
+    }
+    if (!"invalidReasonCaption" %in% colnames(conceptSetExpressionDataFrame)) {
+      conceptSetExpressionDataFrame$invalidReasonCaption <-
+        as.character("")
+    }
+    if (!"conceptCode" %in% colnames(conceptSetExpressionDataFrame)) {
+      conceptSetExpressionDataFrame$conceptCode <- as.character("")
+    }
+    if (!"domainId" %in% colnames(conceptSetExpressionDataFrame)) {
+      conceptSetExpressionDataFrame$domainId <- as.character("")
+    }
+    if (!"vocabularyId" %in% colnames(conceptSetExpressionDataFrame)) {
+      conceptSetExpressionDataFrame$vocabularyId <- as.character("")
+    }
+    if (!"conceptClassId" %in% colnames(conceptSetExpressionDataFrame)) {
+      conceptSetExpressionDataFrame$conceptClassId <- as.character("")
+    }
+
     if (selectAllDescendants) {
       conceptSetExpressionDataFrame <-
         dplyr::bind_rows(
@@ -57,20 +96,64 @@ convertConceptSetDataFrameToExpression <-
             dplyr::mutate(includeDescendants = FALSE)
         )
     }
-    if (purgeVocabularyDetails) {
-      conceptSetExpressionDataFrame <- conceptSetExpressionDataFrame %>%
-        dplyr::mutate(
-          conceptName = "",
-          standardConcept = "",
-          standardConceptCaption = "",
-          invalidReason = "",
-          invalidReasonCaption = "",
-          conceptCode = "",
-          domainId = "",
-          vocabularyId = "",
-          conceptClassId = ""
+
+    if (updateVocabularyFields) {
+      if (is.null(vocabularyDatabaseSchema)) {
+        stop(
+          "VocabularyDatabaseSchema with OMOP vocabulary tables is needed to update Vocabulary details."
+        )
+      }
+      if (is.null(connection)) {
+        connection <- DatabaseConnector::connect(connectionDetails)
+        on.exit(DatabaseConnector::disconnect(connection))
+      }
+
+      conceptIds <-
+        conceptSetExpressionDataFrame$conceptId %>% unique()
+      conceptIdDetails <- getConceptIdDetails(
+        conceptIds = conceptIds,
+        connection = connection,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema
+      )
+
+      conceptSetExpressionDataFrame <-
+        conceptSetExpressionDataFrame %>%
+        dplyr::select(
+          -.data$conceptName, -.data$standardConcept, -.data$standardConceptCaption, -.data$invalidReason, -.data$invalidReasonCaption, -.data$conceptCode, -.data$domainId, -.data$vocabularyId, -.data$conceptClassId
+        ) %>%
+        dplyr::left_join(conceptIdDetails,
+          by = "conceptId"
+        ) %>%
+        dplyr::select(
+          .data$conceptId,
+          .data$conceptName,
+          .data$standardConcept,
+          .data$standardConceptCaption,
+          .data$invalidReason,
+          .data$invalidReasonCaption,
+          .data$conceptCode,
+          .data$domainId,
+          .data$vocabularyId,
+          .data$conceptClassId,
+          .data$includeMapped,
+          .data$isExcluded,
+          .data$includeDescendants
+        ) %>%
+        tidyr::replace_na(
+          replace = list(
+            conceptName = as.character(""),
+            standardConcept = as.character(""),
+            standardConceptCaption = as.character(""),
+            invalidReason = as.character(""),
+            invalidReasonCaption = as.character(""),
+            conceptCode = as.character(""),
+            domainId = as.character(""),
+            vocabularyId = as.character(""),
+            conceptClassId = as.character("")
+          )
         )
     }
+
     # note: r dataframe objects are always expected to have variables in camel case.
     # so the case conversion below should always be valid, if convention is followed
     colnames(conceptSetExpressionDataFrame) <-
@@ -83,11 +166,7 @@ convertConceptSetDataFrameToExpression <-
         conceptSetExpression$items[[i]] <- list()
         conceptSetExpression$items[[i]]$concept <-
           conceptSetExpressionDataFrame[i, ] %>%
-          dplyr::select(
-            -.data$INCLUDE_DESCENDANTS,
-            -.data$INCLUDE_MAPPED,
-            -.data$IS_EXCLUDED
-          ) %>%
+          dplyr::select(-.data$INCLUDE_DESCENDANTS, -.data$INCLUDE_MAPPED, -.data$IS_EXCLUDED) %>%
           as.list()
         conceptSetExpression$items[[i]]$isExcluded <-
           conceptSetExpressionDataFrame$IS_EXCLUDED[i]

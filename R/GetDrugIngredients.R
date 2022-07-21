@@ -68,7 +68,7 @@ getDrugIngredients <-
                     INNER JOIN @vocabulary_database_schema.concept c
                       ON ca.ancestor_concept_id = c.concept_id
                     WHERE LOWER(c.concept_class_id) = 'ingredient'
-                          AND ca.descendant_concept_id IN 
+                          AND ca.descendant_concept_id IN
                                                           (SELECT DISTINCT CONCEPT_ID
                                                             FROM @concept_id_table cid)
             ) ca

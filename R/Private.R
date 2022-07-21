@@ -18,17 +18,19 @@
 
 checkIfCohortDefinitionSet <- function(cohortDefinitionSet) {
   errorMessage <- checkmate::makeAssertCollection()
-  checkmate::assertDataFrame(
-    x = cohortDefinitionSet,
-    min.cols = 1,
-    add = errorMessage
-  )
+  checkmate::assertDataFrame(x = cohortDefinitionSet,
+                             min.cols = 1,
+                             add = errorMessage)
   checkmate::assertNames(
     x = colnames(cohortDefinitionSet),
     must.include = c("cohortId"),
     add = errorMessage
   )
-  errorMessage
+  if (errorMessage$isEmpty()) {
+    return(NULL)
+  } else {
+    return(errorMessage)
+  }
 }
 
 
@@ -65,27 +67,26 @@ loadTempConceptTable <- function(conceptIds,
   conceptIdTable <-
     dplyr::tibble(conceptId = conceptIds %>% unique()) %>%
     dplyr::filter(.data$conceptId > 0)
-
+  
   tempTableName <-
-    paste0("#t", (as.numeric(as.POSIXlt(Sys.time()))) * 100000)
-
-  invisible(
-    utils::capture.output(
-      DatabaseConnector::insertTable(
-        connection = connection,
-        tableName = tempTableName,
-        dropTableIfExists = TRUE,
-        tempTable = TRUE,
-        tempEmulationSchema = tempEmulationSchema,
-        data = conceptIdTable,
-        camelCaseToSnakeCase = TRUE,
-        bulkLoad = TRUE,
-        progressBar = FALSE,
-        createTable = TRUE
-      ),
-      file = nullfile()
-    )
-  )
+    paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
+    )))) * 100000)
+  
+  invisible(utils::capture.output(
+    DatabaseConnector::insertTable(
+      connection = connection,
+      tableName = tempTableName,
+      dropTableIfExists = TRUE,
+      tempTable = TRUE,
+      tempEmulationSchema = tempEmulationSchema,
+      data = conceptIdTable,
+      camelCaseToSnakeCase = TRUE,
+      bulkLoad = TRUE,
+      progressBar = FALSE,
+      createTable = TRUE
+    ),
+    file = nullfile()
+  ))
   if (connection@dbms %in% c("redshift", "postgresql")) {
     # Some performance tuning:
     DatabaseConnector::renderTranslateExecuteSql(
@@ -98,21 +99,22 @@ loadTempConceptTable <- function(conceptIds,
       concept_id_table = tempTableName
     )
   }
-
+  
   return(tempTableName)
 }
 
 
-dropTempConceptTable <- function(tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
-                                 connection,
-                                 tempTableName) {
-  DatabaseConnector::renderTranslateExecuteSql(
-    connection = connection,
-    sql = "DROP TABLE IF EXISTS @concept_id_table;",
-    profile = FALSE,
-    progressBar = FALSE,
-    reportOverallTime = FALSE,
-    tempEmulationSchema = tempEmulationSchema,
-    concept_id_table = tempTableName
-  )
-}
+dropTempConceptTable <-
+  function(tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
+           connection,
+           tempTableName) {
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = "DROP TABLE IF EXISTS @concept_id_table;",
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE,
+      tempEmulationSchema = tempEmulationSchema,
+      concept_id_table = tempTableName
+    )
+  }
