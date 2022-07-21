@@ -23,8 +23,7 @@ cohortDefinitionSet <-
   col_types = readr::cols()
   ) %>%
   dplyr::mutate(
-    json = cohortsJson,
-    sql = cohortsSql
+    json = cohortsJson
   )
 
 generateRandomString <- function() {
