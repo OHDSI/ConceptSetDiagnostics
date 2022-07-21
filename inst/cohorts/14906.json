@@ -1,67 +1,119 @@
 {
-	"cdmVersionRange" : ">=5.0.0",
-	"PrimaryCriteria" : {
-		"CriteriaList" : [
-			{
-				"DrugExposure" : {
-					"CodesetId" : 0,
-					"DrugTypeExclude" : false
-				}
-			}
-		],
-		"ObservationWindow" : {
-			"PriorDays" : 0,
-			"PostDays" : 0
-		},
-		"PrimaryCriteriaLimit" : {
-			"Type" : "All"
-		}
-	},
-	"ConceptSets" : [
-		{
-			"id" : 0,
-			"name" : "celecoxib",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1118084,
-							"CONCEPT_NAME" : "celecoxib",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "140587",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					}
-				]
-			}
-		}
-	],
-	"QualifiedLimit" : {
-		"Type" : "First"
-	},
-	"ExpressionLimit" : {
-		"Type" : "All"
-	},
-	"InclusionRules" : [],
-	"EndStrategy" : {
-		"CustomEra" : {
-			"DrugCodesetId" : 0,
-			"GapDays" : 0,
-			"Offset" : 0
-		}
-	},
-	"CensoringCriteria" : [],
-	"CollapseSettings" : {
-		"CollapseType" : "ERA",
-		"EraPad" : 0
-	},
-	"CensorWindow" : {}
+  "ConceptSets": [
+    {
+      "id": 0,
+      "name": "celecoxib",
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "140587",
+              "CONCEPT_ID": 1118084,
+              "CONCEPT_NAME": "celecoxib",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            },
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Branded Drug Comp",
+              "CONCEPT_CODE": "573357",
+              "CONCEPT_ID": 19058155,
+              "CONCEPT_NAME": "celecoxib 200 MG [Celebrex]",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            }
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "11-digit NDC",
+              "CONCEPT_CODE": "00025152531",
+              "CONCEPT_ID": 44923712,
+              "CONCEPT_NAME": "celecoxib 200 MG Oral Capsule [Celebrex]",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "N",
+              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+              "VOCABULARY_ID": "NDC"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "name": "Celecoxib without descendants",
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "140587",
+              "CONCEPT_ID": 1118084,
+              "CONCEPT_NAME": "celecoxib",
+              "DOMAIN_ID": "Drug",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "PrimaryCriteria": {
+    "CriteriaList": [
+      {
+        "DrugExposure": {
+          "CodesetId": 0
+        }
+      },
+      {
+        "DrugExposure": {
+          "CodesetId": 1
+        }
+      }
+    ],
+    "ObservationWindow": {
+      "PriorDays": 0,
+      "PostDays": 0
+    },
+    "PrimaryCriteriaLimit": {
+      "Type": "All"
+    }
+  },
+  "QualifiedLimit": {
+    "Type": "First"
+  },
+  "ExpressionLimit": {
+    "Type": "All"
+  },
+  "InclusionRules": [],
+  "EndStrategy": {
+    "CustomEra": {
+      "DrugCodesetId": 0,
+      "GapDays": 0,
+      "Offset": 0
+    }
+  },
+  "CensoringCriteria": [],
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "CensorWindow": {},
+  "cdmVersionRange": ">=5.0.0"
 }

@@ -66,6 +66,7 @@ optimizeConceptSetExpression <-
       ) %>%
       dplyr::select(.data$conceptId, .data$isExcluded)
 
+    conceptSetExpressionDataFrame <- NULL
     if (nrow(retained) > 0) {
       conceptSetExpressionDataFrame <- conceptSetExpression %>%
         convertConceptSetExpressionToDataFrame() %>%
@@ -76,8 +77,6 @@ optimizeConceptSetExpression <-
       removed <- conceptSetExpression %>%
         convertConceptSetExpressionToDataFrame() %>%
         dplyr::inner_join(removed, by = c("conceptId", "isExcluded"))
-    } else {
-      removed <- NULL
     }
 
     conceptSetExpressionDataFrame <-
@@ -89,6 +88,7 @@ optimizeConceptSetExpression <-
 
     data <- list(
       recommended = conceptSetExpression,
+      recommendedAsDataFrame = conceptSetExpressionDataFrame,
       removed = removed
     )
 
@@ -203,9 +203,5 @@ getOptimizationRecommendationForConceptSetExpression <-
     )
     data <- data %>%
       dplyr::filter(.data$conceptId != 0)
-
-    if (nrow(data) == 0) {
-      return(NULL)
-    }
     return(data)
   }

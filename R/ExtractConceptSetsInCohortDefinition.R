@@ -35,7 +35,11 @@ extractConceptSetsInCohortDefinition <-
       expression <- cohortExpression
     }
 
-    if (is.null(expression$ConceptSets)) {
+    # extract concept set expression from cohort expression
+    conceptSetExpression <-
+      extractConceptSetExpressionsFromCohortExpression(cohortExpression = expression)
+
+    if (is.null(conceptSetExpression)) {
       return(NULL)
     }
 
@@ -45,16 +49,11 @@ extractConceptSetsInCohortDefinition <-
         cohortExpression = expression,
         generateStats = TRUE
       )
+
     extractedConceptSetSql <-
       extractConceptSetsSqlFromCohortSql(cohortSql = circeRenderedSqlExpression)
 
-    # extract concept set expression from cohort expression
-    conceptSetExpression <-
-      extractConceptSetExpressionsFromCohortExpression(cohortExpression = expression)
 
-    if (is.null(conceptSetExpression)) {
-      return(NULL)
-    }
 
     primaryCriterias <-
       expression$PrimaryCriteria$CriteriaList
@@ -132,26 +131,20 @@ extractConceptSetsInCohortDefinition <-
   }
 
 
-
-
 extractConceptSetExpressionsFromCohortExpression <-
   function(cohortExpression) {
-    if ("expression" %in% names(cohortExpression)) {
-      expression <- cohortExpression$expression
-    } else {
-      expression <- cohortExpression
-    }
     conceptSetExpression <- list()
-    if (length(expression$ConceptSets) > 0) {
-      for (i in (1:length(expression$ConceptSets))) {
+    if (length(cohortExpression$ConceptSets) > 0) {
+      for (i in (1:length(cohortExpression$ConceptSets))) {
         conceptSetExpression[[i]] <-
           tidyr::tibble(
-            conceptSetId = expression$ConceptSets[[i]]$id,
-            conceptSetName = expression$ConceptSets[[i]]$name,
-            conceptSetExpression = expression$ConceptSets[[i]]$expression$items %>% RJSONIO::toJSON(digits = 23)
+            conceptSetId = cohortExpression$ConceptSets[[i]]$id,
+            conceptSetName = cohortExpression$ConceptSets[[i]]$name,
+            conceptSetExpression = cohortExpression$ConceptSets[[i]]$expression$items %>% RJSONIO::toJSON(digits = 23)
           )
       }
     } else {
+      warning("There are no concept sets in the given cohort expression.")
       return(NULL)
     }
     return(dplyr::bind_rows(conceptSetExpression))
@@ -160,9 +153,6 @@ extractConceptSetExpressionsFromCohortExpression <-
 
 
 extractConceptSetsSqlFromCohortSql <- function(cohortSql) {
-  if (length(cohortSql) > 1) {
-    stop("Please check if more than one cohort SQL was provided.")
-  }
   sql <- gsub("with primary_events.*", "", cohortSql)
 
   # Find opening and closing parentheses:
@@ -182,34 +172,30 @@ extractConceptSetsSqlFromCohortSql <- function(cohortSql) {
   conceptSetIds <- vector("integer", subQueryCount)
 
   temp <- list()
-  if (subQueryCount > 0) {
-    for (i in 1:subQueryCount) {
-      startForSubQuery <- min(starts[starts > subQueryLocations[i, 2]])
-      endForSubQuery <- min(level0[level0 > startForSubQuery])
-      subQuery <-
-        paste(
-          stringr::str_sub(sql, subQueryLocations[i, 1], endForSubQuery),
-          "C"
-        )
-      conceptsetSqls[i] <- subQuery
-      conceptSetIds[i] <- stringr::str_replace(
-        subQuery,
-        pattern = stringr::regex(
-          pattern = "SELECT ([0-9]+) as codeset_id.*",
-          ignore_case = TRUE,
-          multiline = TRUE,
-          dotall = TRUE
-        ),
-        replacement = "\\1"
-      ) %>%
-        utils::type.convert(as.is = TRUE)
-      temp[[i]] <- tidyr::tibble(
-        conceptSetId = conceptSetIds[i],
-        conceptSetSql = conceptsetSqls[i]
+  for (i in 1:subQueryCount) {
+    startForSubQuery <- min(starts[starts > subQueryLocations[i, 2]])
+    endForSubQuery <- min(level0[level0 > startForSubQuery])
+    subQuery <-
+      paste(
+        stringr::str_sub(sql, subQueryLocations[i, 1], endForSubQuery),
+        "C"
       )
-    }
-  } else {
-    temp <- dplyr::tibble()
+    conceptsetSqls[i] <- subQuery
+    conceptSetIds[i] <- stringr::str_replace(
+      subQuery,
+      pattern = stringr::regex(
+        pattern = "SELECT ([0-9]+) as codeset_id.*",
+        ignore_case = TRUE,
+        multiline = TRUE,
+        dotall = TRUE
+      ),
+      replacement = "\\1"
+    ) %>%
+      utils::type.convert(as.is = TRUE)
+    temp[[i]] <- tidyr::tibble(
+      conceptSetId = conceptSetIds[i],
+      conceptSetSql = conceptsetSqls[i]
+    )
   }
   return(dplyr::bind_rows(temp))
 }

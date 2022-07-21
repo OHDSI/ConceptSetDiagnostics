@@ -21,6 +21,7 @@ Imports:
 	stringdist,
 	tidyr
 Suggests:
+  readr,
   remotes,
   rmarkdown,
   knitr,

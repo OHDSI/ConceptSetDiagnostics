@@ -10,10 +10,11 @@ cohortsJson <-
 cohortExpression <- cohortsJson %>%
   RJSONIO::fromJSON(digits = 23)
 
-cohortsSql <-
-  SqlRender::readSql(sourceFile = system.file(file.path("cohorts", "14906.sql"),
+cohortsExpressionNoConceptSet <-
+  SqlRender::readSql(sourceFile = system.file(file.path("cohorts", "1.json"),
     package = "ConceptSetDiagnostics"
-  ))
+  )) %>%
+  RJSONIO::fromJSON(digits = 23)
 
 cohortDefinitionSet <-
   readr::read_csv(system.file(file.path("cohorts", "CohortDefinitionSet.csv"),
@@ -22,8 +23,7 @@ cohortDefinitionSet <-
   col_types = readr::cols()
   ) %>%
   dplyr::mutate(
-    json = cohortsJson,
-    sql = cohortsSql
+    json = cohortsJson
   )
 
 generateRandomString <- function() {
