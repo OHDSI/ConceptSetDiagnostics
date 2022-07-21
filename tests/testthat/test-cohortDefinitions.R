@@ -1,4 +1,12 @@
 testthat::test_that("extractConceptSetsInCohortDefinition", {
+  
+  testthat::expect_warning(
+    extractConceptSetsInCohortDefinition(cohortExpression = cohortsExpressionNoConceptSet)
+  ) 
+  testthat::expect_null(
+    object = suppressWarnings(extractConceptSetsInCohortDefinition(cohortExpression = cohortsExpressionNoConceptSet))
+  )
+  
   conceptSetsInCohort <-
     extractConceptSetsInCohortDefinition(cohortExpression = cohortExpression)
   testthat::expect_gte(

@@ -10,6 +10,12 @@ cohortsJson <-
 cohortExpression <- cohortsJson %>%
   RJSONIO::fromJSON(digits = 23)
 
+cohortsExpressionNoConceptSet <-
+  SqlRender::readSql(sourceFile = system.file(file.path("cohorts", "1.json"),
+                                              package = "ConceptSetDiagnostics"
+  )) %>%
+  RJSONIO::fromJSON(digits = 23)
+
 cohortsSql <-
   SqlRender::readSql(sourceFile = system.file(file.path("cohorts", "14906.sql"),
     package = "ConceptSetDiagnostics"
