@@ -1,5 +1,6 @@
 library(magrittr)
 databaseSchema <- "main"
+cdmDatabaseSchema <- databaseSchema
 connectionDetails <- Eunomia::getEunomiaConnectionDetails()
 # DatabaseConnector::insertTable()
 connection <-

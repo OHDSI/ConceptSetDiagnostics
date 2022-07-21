@@ -16,11 +16,6 @@ cohortsExpressionNoConceptSet <-
   )) %>%
   RJSONIO::fromJSON(digits = 23)
 
-cohortsSql <-
-  SqlRender::readSql(sourceFile = system.file(file.path("cohorts", "14906.sql"),
-    package = "ConceptSetDiagnostics"
-  ))
-
 cohortDefinitionSet <-
   readr::read_csv(system.file(file.path("cohorts", "CohortDefinitionSet.csv"),
     package = "ConceptSetDiagnostics"
