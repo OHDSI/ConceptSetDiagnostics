@@ -46,7 +46,7 @@ shiny::shinyServer(function(input, output, session) {
                               
                               # step perform string search
                               searchResultConceptIds <-
-                                ConceptSetDiagnostics::getStringSearchConcepts(
+                                ConceptSetDiagnostics::performStringSearchForConcepts(
                                   connectionDetails = connectionDetailsLocalPostgres,
                                   vocabularyDatabaseSchema = vocabularyDatabaseSchema,
                                   searchString =  keywords[[i]]

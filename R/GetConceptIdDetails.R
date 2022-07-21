@@ -38,7 +38,6 @@ getConceptIdDetails <-
            connectionDetails = NULL,
            vocabularyDatabaseSchema = "vocabulary",
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
-
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))

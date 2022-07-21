@@ -23,33 +23,34 @@
 #' #'
 #' #' @template VocabularyDatabaseSchema
 #' #'
+#' #' @template ConceptPrevalenceTable
+#' #'
 #' #' @export
 #' getRecommendedStandard <-
 #'   function(conceptIds,
-#'            vocabularyDatabaseSchema = "vocabulary",
+#'            vocabularyDatabaseSchema,
 #'            connection = NULL,
 #'            connectionDetails = NULL,
-#'            conceptPrevalenceSchema = "concept_prevalence") {
+#'            conceptPrevalenceSchema = NULL) {
 #'     # Filtering strings to letters, numbers and spaces only to avoid SQL injection:
 #'     conceptIds <- gsub("[^a-zA-Z0-9 ,]", " ", conceptIds)
 #'
-#'     sql <-
-#'       SqlRender::readSql(
-#'         sourceFile = system.file("sql", "sql_server", "RecommendedStandard.sql",
-#'           package = "ConceptSetDiagnostics"
-#'         )
-#'       )
+#'     sql <- SqlRender::loadRenderTranslateSql(
+#'       sqlFilename = "RecommendedStandard.sql",
+#'       packageName = "ConceptSetDiagnostics",
+#'       dbms = connection@dbms,
+#'       vocabulary_database_schema = vocabularyDatabaseSchema,
+#'       concept_prevalence = conceptPrevalenceSchema,
+#'       source_list = conceptIds[[1]]
+#'     )
 #'
-#'     data <-
-#'       renderTranslateQuerySql(
-#'         connection = connection,
-#'         connectionDetails = connectionDetails,
-#'         sql = sql,
-#'         vocabulary_database_schema = vocabularyDatabaseSchema,
-#'         concept_prevalence = conceptPrevalenceSchema,
-#'         source_list = conceptIds[[1]],
-#'         snakeCaseToCamelCase = TRUE
-#'       ) %>%
+#'     data <- DatabaseConnector::querySql(
+#'       connection = connection,
+#'       sql = sql,
+#'       snakeCaseToCamelCase = TRUE
+#'     )
+#'
+#'     data <- data %>%
 #'       dplyr::filter(!.data$conceptId %in% conceptIds) %>%
 #'       dplyr::arrange(dplyr::desc(.data$descendantRecordCount)) %>%
 #'       dplyr::rename(

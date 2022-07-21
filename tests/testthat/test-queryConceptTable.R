@@ -81,32 +81,40 @@ testthat::test_that("Get Mapped Standard Concept - connection", {
 
 # getDomain 1 ----
 testthat::test_that("Get Domain - connection", {
-  output <- ConceptSetDiagnostics::getDomain(connection = connection,
-                                             vocabularyDatabaseSchema = cdmDatabaseSchema)
+  output <- ConceptSetDiagnostics::getDomain(
+    connection = connection,
+    vocabularyDatabaseSchema = cdmDatabaseSchema
+  )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getRelationship 1 ----
 testthat::test_that("Get Relationship - connection", {
   output <-
-    ConceptSetDiagnostics::getRelationship(connection = connection,
-                                           vocabularyDatabaseSchema = cdmDatabaseSchema)
+    ConceptSetDiagnostics::getRelationship(
+      connection = connection,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getVocabulary 1 ----
 testthat::test_that("Get Vocabulary - connection", {
   output <-
-    ConceptSetDiagnostics::getVocabulary(connection = connection,
-                                         vocabularyDatabaseSchema = cdmDatabaseSchema)
+    ConceptSetDiagnostics::getVocabulary(
+      connection = connection,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getVocabularyVersion 1 ----
 testthat::test_that("Get Vocabulary Version - connection", {
   output <-
-    ConceptSetDiagnostics::getVocabularyVersion(connection = connection,
-                                                vocabularyDatabaseSchema = cdmDatabaseSchema)
+    ConceptSetDiagnostics::getVocabularyVersion(
+      connection = connection,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
@@ -130,8 +138,10 @@ testthat::test_that("Get MedRa Relationship - connection", {
   )
   testthat::expect_gte(object = length(output), expected = 0)
   testthat::expect_equal(object = class(output), expected = "list")
-  testthat::expect_gte(object = length(output$givenConceptId),
-                       expected = 0)
+  testthat::expect_gte(
+    object = length(output$givenConceptId),
+    expected = 0
+  )
   testthat::expect_gte(object = nrow(output$soc), expected = 0)
   testthat::expect_gte(object = nrow(output$hlgt), expected = 0)
   testthat::expect_gte(object = nrow(output$hlt), expected = 0)
@@ -240,32 +250,40 @@ testthat::test_that("Get Mapped Standard Concept - connectionDetails", {
 # getDomain 2 ----
 testthat::test_that("Get Domain - connectionDetails", {
   output <-
-    ConceptSetDiagnostics::getDomain(connectionDetails = connectionDetails,
-                                     vocabularyDatabaseSchema = cdmDatabaseSchema)
+    ConceptSetDiagnostics::getDomain(
+      connectionDetails = connectionDetails,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getRelationship 2 ----
 testthat::test_that("Get Relationship - connectionDetails", {
   output <-
-    ConceptSetDiagnostics::getRelationship(connectionDetails = connectionDetails,
-                                           vocabularyDatabaseSchema = cdmDatabaseSchema)
+    ConceptSetDiagnostics::getRelationship(
+      connectionDetails = connectionDetails,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getVocabulary 2 ----
 testthat::test_that("Get Vocabulary - connectionDetails", {
   output <-
-    ConceptSetDiagnostics::getVocabulary(connectionDetails = connectionDetails,
-                                         vocabularyDatabaseSchema = cdmDatabaseSchema)
+    ConceptSetDiagnostics::getVocabulary(
+      connectionDetails = connectionDetails,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getVocabularyVersion 2 ----
 testthat::test_that("Get Vocabulary Version - connectionDetails", {
   output <-
-    ConceptSetDiagnostics::getVocabularyVersion(connectionDetails = connectionDetails,
-                                                vocabularyDatabaseSchema = cdmDatabaseSchema)
+    ConceptSetDiagnostics::getVocabularyVersion(
+      connectionDetails = connectionDetails,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
@@ -289,8 +307,10 @@ testthat::test_that("Get MedRa Relationship - connectionDetails", {
   )
   testthat::expect_gte(object = length(output), expected = 0)
   testthat::expect_equal(object = class(output), expected = "list")
-  testthat::expect_gte(object = length(output$givenConceptId),
-                       expected = 0)
+  testthat::expect_gte(
+    object = length(output$givenConceptId),
+    expected = 0
+  )
   testthat::expect_gte(object = nrow(output$soc), expected = 0)
   testthat::expect_gte(object = nrow(output$hlgt), expected = 0)
   testthat::expect_gte(object = nrow(output$hlt), expected = 0)

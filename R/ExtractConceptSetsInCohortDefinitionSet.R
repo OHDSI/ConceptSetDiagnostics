@@ -60,10 +60,8 @@ extractConceptSetsInCohortDefinitionSet <-
     for (i in (1:nrow(conceptSets))) {
       conceptSetSig[[i]] <- conceptSets[i, ]
       conceptSetExpressionSignature <-
-        convertConceptSetExpressionToDataFrame(
-          conceptSetExpression = conceptSetSig[[i]]$conceptSetExpression %>%
-            RJSONIO::fromJSON(digits = 23)
-        ) %>%
+        convertConceptSetExpressionToDataFrame(conceptSetExpression = conceptSetSig[[i]]$conceptSetExpression %>%
+          RJSONIO::fromJSON(digits = 23)) %>%
         dplyr::select(
           .data$conceptId,
           .data$includeDescendants,
@@ -73,7 +71,8 @@ extractConceptSetsInCohortDefinitionSet <-
         dplyr::distinct() %>%
         dplyr::arrange(.data$conceptId) %>%
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
-      conceptSetSig[[i]]$conceptSetExpressionSignature <- conceptSetExpressionSignature
+      conceptSetSig[[i]]$conceptSetExpressionSignature <-
+        conceptSetExpressionSignature
       conceptSetSig[[i]] <- conceptSetSig[[i]] %>%
         dplyr::select(
           .data$cohortId,

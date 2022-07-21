@@ -18,9 +18,11 @@
 
 checkIfCohortDefinitionSet <- function(cohortDefinitionSet) {
   errorMessage <- checkmate::makeAssertCollection()
-  checkmate::assertDataFrame(x = cohortDefinitionSet,
-                             min.cols = 1,
-                             add = errorMessage)
+  checkmate::assertDataFrame(
+    x = cohortDefinitionSet,
+    min.cols = 1,
+    add = errorMessage
+  )
   checkmate::assertNames(
     x = colnames(cohortDefinitionSet),
     must.include = c("cohortId"),
@@ -67,11 +69,10 @@ loadTempConceptTable <- function(conceptIds,
   conceptIdTable <-
     dplyr::tibble(conceptId = conceptIds %>% unique()) %>%
     dplyr::filter(.data$conceptId > 0)
-  
+
   tempTableName <-
-    paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
-    )))) * 100000)
-  
+    paste0("#t", (as.numeric(as.POSIXlt(Sys.time()))) * 100000)
+
   invisible(utils::capture.output(
     DatabaseConnector::insertTable(
       connection = connection,
@@ -99,7 +100,7 @@ loadTempConceptTable <- function(conceptIds,
       concept_id_table = tempTableName
     )
   }
-  
+
   return(tempTableName)
 }
 
