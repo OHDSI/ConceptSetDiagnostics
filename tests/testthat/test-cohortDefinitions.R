@@ -190,7 +190,7 @@ testthat::test_that("getExcludedConceptsInConceptSetExpression", {
     getExcludedConceptsInConceptSetExpression(
       conceptSetExpression = conceptSetExpressionWithExclusion,
       connectionDetails = connectionDetails,
-      vocabularyDatabaseSchema = cdmDatabaseSchema
+      vocabularyDatabaseSchema = cdmDatabaseSchemas
     )
   testthat::expect_gte(
     object = nrow(excludedConcepts),
@@ -201,7 +201,7 @@ testthat::test_that("getExcludedConceptsInConceptSetExpression", {
     getExcludedConceptsInConceptSetExpression(
       conceptSetExpression = conceptSetExpressionWithExclusion,
       connection = DatabaseConnector::connect(connectionDetails = connectionDetails),
-      vocabularyDatabaseSchema = cdmDatabaseSchema
+      vocabularyDatabaseSchema = cdmDatabaseSchemas
     )
   testthat::expect_gte(
     object = nrow(excludedConcepts2),
