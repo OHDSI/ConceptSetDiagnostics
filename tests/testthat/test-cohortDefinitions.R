@@ -193,7 +193,7 @@ testthat::test_that("getExcludedConceptsInConceptSetExpression", {
       vocabularyDatabaseSchema = cdmDatabaseSchema
     )
   testthat::expect_gte(
-    object = nrow(excludedConcepts),
+    object = nrow(excludedConcepts1),
     expected = 0
   )
 
