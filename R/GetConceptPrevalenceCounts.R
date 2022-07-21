@@ -42,41 +42,43 @@ getConceptPrevalenceCounts <- function(conceptIds,
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-  
+
   conceptPrevalenceTables <-
-    DatabaseConnector::getTableNames(connection = connection,
-                                     databaseSchema = conceptPrevalenceSchema) %>%
+    DatabaseConnector::getTableNames(
+      connection = connection,
+      databaseSchema = conceptPrevalenceSchema
+    ) %>%
     tolower()
-  
+
   conceptPrevalenceTablesExist <- FALSE
-  
+
   if (all(
-    'recommender_set' %in% conceptPrevalenceTables,
-    'cp_master' %in% conceptPrevalenceTables,
-    'recommended_blacklist' %in% conceptPrevalenceTables
+    "recommender_set" %in% conceptPrevalenceTables,
+    "cp_master" %in% conceptPrevalenceTables,
+    "recommended_blacklist" %in% conceptPrevalenceTables
   )) {
     conceptPrevalenceTablesExist <- TRUE
   }
-  
+
   if (!conceptPrevalenceTablesExist) {
     stop(
-      'Concept Prevalence schema does not have the required concept prevalence tables. recommender_set, cp_master, recommended_blacklist'
+      "Concept Prevalence schema does not have the required concept prevalence tables. recommender_set, cp_master, recommended_blacklist"
     )
   }
-  
+
   tempTableName <- loadTempConceptTable(
     conceptIds = conceptIds,
     connection = connection,
     tempEmulationSchema = tempEmulationSchema
   )
-  
+
   sql <- "SELECT cp.*
           FROM @concept_prevalence_schema.cp_master cp
           WHERE cp.concept_id IN(
               SELECT DISTINCT CONCEPT_ID
               FROM @concept_id_table
           );"
-  
+
   data <-
     DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
@@ -85,12 +87,12 @@ getConceptPrevalenceCounts <- function(conceptIds,
       sql = sql,
       snakeCaseToCamelCase = TRUE
     ) %>% dplyr::tibble()
-  
+
   dropTempConceptTable(
     connection = connection,
     tempTableName = tempTableName,
     tempEmulationSchema = tempEmulationSchema
   )
-  
+
   return(data)
 }
