@@ -73,7 +73,6 @@ optimizeConceptSetExpression <-
         dplyr::inner_join(retained, by = c("conceptId", "isExcluded"))
     }
 
-    removed <- NULL
     if (nrow(removed) > 0) {
       removed <- conceptSetExpression %>%
         convertConceptSetExpressionToDataFrame() %>%
