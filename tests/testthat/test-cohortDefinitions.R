@@ -159,7 +159,7 @@ testthat::test_that("resolveConceptSetExpression", {
     resolveConceptSetsInCohortExpression(
       cohortExpression = cohortExpression,
       connectionDetails = connectionDetails,
-      vocabularyDatabaseSchema = cdmDatabaseSchemas
+      vocabularyDatabaseSchema = cdmDatabaseSchema
     )
   testthat::expect_gte(
     object = nrow(resolvedConceptSet),
@@ -170,7 +170,7 @@ testthat::test_that("resolveConceptSetExpression", {
     resolveConceptSetsInCohortExpression(
       cohortExpression = cohortExpression,
       connection = DatabaseConnector::connect(connectionDetails = connectionDetails),
-      vocabularyDatabaseSchema = cdmDatabaseSchemas
+      vocabularyDatabaseSchema = cdmDatabaseSchema
     )
   testthat::expect_gte(
     object = nrow(resolvedConceptSet2),
@@ -190,7 +190,7 @@ testthat::test_that("getExcludedConceptsInConceptSetExpression", {
     getExcludedConceptsInConceptSetExpression(
       conceptSetExpression = conceptSetExpressionWithExclusion,
       connectionDetails = connectionDetails,
-      vocabularyDatabaseSchema = cdmDatabaseSchemas
+      vocabularyDatabaseSchema = cdmDatabaseSchema
     )
   testthat::expect_gte(
     object = nrow(excludedConcepts),
@@ -201,7 +201,7 @@ testthat::test_that("getExcludedConceptsInConceptSetExpression", {
     getExcludedConceptsInConceptSetExpression(
       conceptSetExpression = conceptSetExpressionWithExclusion,
       connection = DatabaseConnector::connect(connectionDetails = connectionDetails),
-      vocabularyDatabaseSchema = cdmDatabaseSchemas
+      vocabularyDatabaseSchema = cdmDatabaseSchema
     )
   testthat::expect_gte(
     object = nrow(excludedConcepts2),
