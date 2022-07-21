@@ -25,7 +25,7 @@
 #'
 #' @template ConceptIds
 #'
-#' @template ConceptPrevalenceTable
+#' @template ConceptPrevalenceSchema
 #'
 #' @template TempEmulationSchema
 #'
@@ -36,11 +36,34 @@
 getConceptPrevalenceCounts <- function(conceptIds,
                                        connection = NULL,
                                        connectionDetails = NULL,
-                                       conceptPrevalenceTable,
+                                       conceptPrevalenceSchema,
                                        tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
+  }
+
+  conceptPrevalenceTables <-
+    DatabaseConnector::getTableNames(
+      connection = connection,
+      databaseSchema = conceptPrevalenceSchema
+    ) %>%
+    tolower()
+
+  conceptPrevalenceTablesExist <- FALSE
+
+  if (all(
+    "recommender_set" %in% conceptPrevalenceTables,
+    "cp_master" %in% conceptPrevalenceTables,
+    "recommended_blacklist" %in% conceptPrevalenceTables
+  )) {
+    conceptPrevalenceTablesExist <- TRUE
+  }
+
+  if (!conceptPrevalenceTablesExist) {
+    stop(
+      "Concept Prevalence schema does not have the required concept prevalence tables. recommender_set, cp_master, recommended_blacklist"
+    )
   }
 
   tempTableName <- loadTempConceptTable(
@@ -50,14 +73,16 @@ getConceptPrevalenceCounts <- function(conceptIds,
   )
 
   sql <- "SELECT cp.*
-          FROM @conceptPrevalenceTable cp
-          INNER JOIN @concept_id_table ci
-          ON cp.concept_id = ci.concept_id;"
+          FROM @concept_prevalence_schema.cp_master cp
+          WHERE cp.concept_id IN(
+              SELECT DISTINCT CONCEPT_ID
+              FROM @concept_id_table
+          );"
 
   data <-
     DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
-      conceptPrevalenceTable = conceptPrevalenceTable,
+      concept_prevalence_schema = conceptPrevalenceSchema,
       concept_id_table = tempTableName,
       sql = sql,
       snakeCaseToCamelCase = TRUE

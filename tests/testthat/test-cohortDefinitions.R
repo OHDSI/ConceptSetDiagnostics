@@ -89,7 +89,7 @@ testthat::test_that("optimizeConceptSetExpression", {
 
   conceptSetsInCohort1 <-
     optimizeConceptSetExpression(
-      conceptSetExpression = conceptSetExpression1,
+      conceptSetExpression = conceptSetExpression3,
       vocabularyDatabaseSchema = cdmDatabaseSchema,
       connectionDetails = connectionDetails
     )
@@ -149,6 +149,62 @@ testthat::test_that("resolveConceptSetExpression", {
     )
   testthat::expect_gte(
     object = nrow(resolvedConceptSet2),
+    expected = 0
+  )
+})
+
+
+testthat::test_that("resolveConceptSetExpression", {
+  resolvedConceptSet <-
+    resolveConceptSetsInCohortExpression(
+      cohortExpression = cohortExpression,
+      connectionDetails = connectionDetails,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
+  testthat::expect_gte(
+    object = nrow(resolvedConceptSet),
+    expected = 0
+  )
+
+  resolvedConceptSet2 <-
+    resolveConceptSetsInCohortExpression(
+      cohortExpression = cohortExpression,
+      connection = DatabaseConnector::connect(connectionDetails = connectionDetails),
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
+  testthat::expect_gte(
+    object = nrow(resolvedConceptSet2),
+    expected = 0
+  )
+})
+
+testthat::test_that("getExcludedConceptsInConceptSetExpression", {
+  conceptSetsInCohort <-
+    extractConceptSetsInCohortDefinition(cohortExpression = cohortExpression)
+
+  conceptSetExpressionWithExclusion <-
+    conceptSetsInCohort[3, ]$conceptSetExpression %>%
+    RJSONIO::fromJSON(digits = 23)
+
+  excludedConcepts1 <-
+    getExcludedConceptsInConceptSetExpression(
+      conceptSetExpression = conceptSetExpressionWithExclusion,
+      connectionDetails = connectionDetails,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
+  testthat::expect_gte(
+    object = nrow(excludedConcepts1),
+    expected = 0
+  )
+
+  excludedConcepts2 <-
+    getExcludedConceptsInConceptSetExpression(
+      conceptSetExpression = conceptSetExpressionWithExclusion,
+      connection = DatabaseConnector::connect(connectionDetails = connectionDetails),
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
+  testthat::expect_gte(
+    object = nrow(excludedConcepts2),
     expected = 0
   )
 })

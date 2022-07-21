@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-#' given a list of standard conceptIds, get recommended concepts.
+#' given a list of non standard conceptIds, get recommended conceptIds
 #'
 #' @template Connection
 #'
@@ -23,14 +23,10 @@
 #'
 #' @template VocabularyDatabaseSchema
 #'
-#' @template ConceptPrevalenceSchema
-#'
-#' @template TempEmulationSchema
-#'
 #' @export
-getRecommendedStandard <-
+getRecommendedSource <-
   function(conceptIds,
-           vocabularyDatabaseSchema,
+           vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
            connectionDetails = NULL,
            conceptPrevalenceSchema = "concept_prevalence",
@@ -73,7 +69,7 @@ getRecommendedStandard <-
     )
 
     sql <- SqlRender::loadRenderTranslateSql(
-      sqlFilename = "RecommendedStandard.sql",
+      sqlFilename = "RecommendationSource.sql",
       packageName = "ConceptSetDiagnostics",
       dbms = connection@dbms,
       vocabulary_database_schema = vocabularyDatabaseSchema,
@@ -86,6 +82,5 @@ getRecommendedStandard <-
       sql = sql,
       snakeCaseToCamelCase = TRUE
     ) %>% dplyr::tibble()
-
     return(data)
   }

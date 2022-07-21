@@ -67,8 +67,7 @@ loadTempConceptTable <- function(conceptIds,
                                  connection,
                                  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
   conceptIdTable <-
-    dplyr::tibble(conceptId = conceptIds %>% unique()) %>%
-    dplyr::filter(.data$conceptId > 0)
+    dplyr::tibble(conceptId = conceptIds %>% unique() %>% as.integer())
 
   tempTableName <-
     paste0("#t", (as.numeric(as.POSIXlt(Sys.time()))) * 100000)

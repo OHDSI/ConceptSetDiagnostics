@@ -1,51 +1,94 @@
-with concept_list as (
-  select concept_id, concept_name, domain_id, vocabulary_id, standard_concept
-  from @vocabulary_database_schema.concept
-  where concept_id in (@source_list)
-),
-recommendations as (
-  --list all included concepts
-  select i.concept_id, 'Included' as concept_in_set
-  from concept_list i
-  union
-  --find not included concepts found by orphan check via standards
-  select rc1.concept_id, 'Not included - recommended via standard' as concept_in_set
-  from concept_list i
-         join @concept_prevalence.recommender_set rc1 on i.concept_id = rc1.source_id
-         join @vocabulary_database_schema.concept c1 on rc1.concept_id = c1.concept_id and c1.standard_concept = 'S'
-  union
-  select cr1.concept_id_2, 'Not included - recommended via source' as concept_in_set
-  from concept_list i
-         join @concept_prevalence.recommender_set rc1 on i.concept_id = rc1.source_id
-         join @vocabulary_database_schema.concept c1 on rc1.concept_id = c1.concept_id and c1.standard_concept is null
-         join @vocabulary_database_schema.concept_relationship cr1 on c1.concept_id = cr1.concept_id_1 and cr1.relationship_id in ('Maps to', 'Maps to value')
-             -- excluding those sources that already have one standard counterpart in our input list
-        left join (select *
-                     from concept_list l
-                     join @vocabulary_database_schema.concept_relationship cr2 on l.concept_id = cr2.concept_id_2 and cr2.relationship_id = 'Maps to'
-                  ) a on a.concept_id_1 = cr1.concept_id_1
-              where a.concept_id_2 is null
-  union
-  -- find all not included parents
-  select ca.ancestor_concept_id, 'Not included - parent' as concept_in_set
-  from concept_list i
-         join @vocabulary_database_schema.concept_ancestor ca
-              on i.concept_id = ca.descendant_concept_id and ca.min_levels_of_separation = 1
-  union
-  -- find all not included children
-  select ca.descendant_concept_id, 'Not included - descendant' as concept_in_set
-  from concept_list i
-         join @vocabulary_database_schema.concept_ancestor ca on i.concept_id = ca.ancestor_concept_id
-)
-select c.concept_id, c.concept_name,  c.vocabulary_id, c.domain_id, c.standard_concept, concept_in_set, coalesce(cp.rc,0) as record_count,
-       coalesce(cp.dbc,0) as database_count, coalesce(cp.drc,0) as descendant_record_count, coalesce(cp.ddbc,0) as descendant_database_count
-from recommendations r
-join @vocabulary_database_schema.concept c on c.concept_id = r.concept_id
-left join @concept_prevalence.cp_master cp on r.concept_id = cp.concept_id
-left join @concept_prevalence.recommended_blacklist rb on r.concept_id = rb.concept_id
-where (rb.concept_id is null 
-and  not exists   (select 1 from concept_list l
-                   join @vocabulary_database_schema.concept_relationship cr1 on l.concept_id = cr1.concept_id_2 and cr1.relationship_id = 'Maps to'
-                    where cr1.concept_id_1 = r.concept_id) or concept_in_set = 'Included')
-order by coalesce(cp.rc,0) desc, coalesce(cp.dbc,0) desc, coalesce(cp.drc,0) desc, coalesce(cp.ddbc,0) desc
-;
+WITH concept_list
+AS (
+	SELECT DISTINCT concept_id,
+		concept_name,
+		domain_id,
+		vocabulary_id,
+		standard_concept
+	FROM @vocabulary_database_schema.concept
+	WHERE concept_id IN (
+			SELECT DISTINCT concept_id
+			FROM @concept_id_temp_table
+			)
+	),
+recommendations
+AS (
+	--list all included concepts
+	SELECT i.concept_id,
+		'Included' AS concept_in_set
+	FROM concept_list i
+	
+	UNION
+	
+	--find not included concepts found by orphan check via standards
+	SELECT rc1.concept_id,
+		'Not included - recommended via standard' AS concept_in_set
+	FROM concept_list i
+	INNER JOIN @concept_prevalence_schema.recommender_set rc1 ON i.concept_id = rc1.source_id
+	INNER JOIN @vocabulary_database_schema.concept c1 ON rc1.concept_id = c1.concept_id
+		AND c1.standard_concept = 'S'
+	
+	UNION
+	
+	SELECT cr1.concept_id_2,
+		'Not included - recommended via source' AS concept_in_set
+	FROM concept_list i
+	JOIN @concept_prevalence_schema.recommender_set rc1 ON i.concept_id = rc1.source_id
+	JOIN @vocabulary_database_schema.concept c1 ON rc1.concept_id = c1.concept_id
+		AND c1.standard_concept IS NULL
+	JOIN @vocabulary_database_schema.concept_relationship cr1 ON c1.concept_id = cr1.concept_id_1
+		AND cr1.relationship_id IN (
+			'Maps to',
+			'Maps to value'
+			)
+	-- excluding those sources that already have one standard counterpart in our input list
+	LEFT JOIN (
+		SELECT *
+		FROM concept_list l
+		JOIN @vocabulary_database_schema.concept_relationship cr2 ON l.concept_id = cr2.concept_id_2
+			AND cr2.relationship_id = 'Maps to'
+		) a ON a.concept_id_1 = cr1.concept_id_1
+	WHERE a.concept_id_2 IS NULL
+	
+	UNION
+	
+	-- find all not included parents
+	SELECT ca.ancestor_concept_id,
+		'Not included - parent' AS concept_in_set
+	FROM concept_list i
+	JOIN @vocabulary_database_schema.concept_ancestor ca ON i.concept_id = ca.descendant_concept_id
+		AND ca.min_levels_of_separation = 1
+	
+	UNION
+	
+	-- find all not included children
+	SELECT ca.descendant_concept_id,
+		'Not included - descendant' AS concept_in_set
+	FROM concept_list i
+	JOIN @vocabulary_database_schema.concept_ancestor ca ON i.concept_id = ca.ancestor_concept_id
+	)
+SELECT c.concept_id,
+	c.concept_name,
+	c.vocabulary_id,
+	c.domain_id,
+	c.standard_concept,
+	concept_in_set,
+	coalesce(cp.rc, 0) AS record_count,
+	coalesce(cp.dbc, 0) AS database_count,
+	coalesce(cp.drc, 0) AS descendant_record_count,
+	coalesce(cp.ddbc, 0) AS descendant_database_count
+FROM recommendations r
+JOIN @vocabulary_database_schema.concept c ON c.concept_id = r.concept_id
+LEFT JOIN @concept_prevalence_schema.cp_master cp ON r.concept_id = cp.concept_id
+LEFT JOIN @concept_prevalence_schema.recommended_blacklist rb ON r.concept_id = rb.concept_id
+WHERE (
+		rb.concept_id IS NULL
+		AND NOT EXISTS (
+			SELECT 1
+			FROM concept_list l
+			JOIN @vocabulary_database_schema.concept_relationship cr1 ON l.concept_id = cr1.concept_id_2
+				AND cr1.relationship_id = 'Maps to'
+			WHERE cr1.concept_id_1 = r.concept_id
+			)
+		OR concept_in_set = 'Included'
+		);

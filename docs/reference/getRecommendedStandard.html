@@ -46,10 +46,11 @@
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">getRecommendedStandard</span><span class="op">(</span></span>
 <span>  <span class="va">conceptIds</span>,</span>
-<span>  vocabularyDatabaseSchema <span class="op">=</span> <span class="st">"vocabulary"</span>,</span>
+<span>  <span class="va">vocabularyDatabaseSchema</span>,</span>
 <span>  connection <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  connectionDetails <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  conceptPrevalenceSchema <span class="op">=</span> <span class="st">"concept_prevalence"</span></span>
+<span>  conceptPrevalenceSchema <span class="op">=</span> <span class="st">"concept_prevalence"</span>,</span>
+<span>  tempEmulationSchema <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"sqlRenderTempEmulationSchema"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -76,6 +77,17 @@ of the function, and closed when the function finishes.</p></dd>
 <code><a href="https://ohdsi.github.io/DatabaseConnector/reference/createConnectionDetails.html" class="external-link">createConnectionDetails</a></code> function in the
 DatabaseConnector package. Can be left NULL if <code>connection</code> is
 provided.</p></dd>
+
+
+<dt>tempEmulationSchema</dt>
+<dd><p>Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
+tables, provide a schema with write privileges where temp tables can be created.</p></dd>
+
+
+<dt>ConceptPrevalenceSchema</dt>
+<dd><p>The schema name that has the concept prevalence table. The following
+tables are expected to be present. recommender_set,
+cp_master, recommended_blacklist.</p></dd>
 
 </dl></div>
 
