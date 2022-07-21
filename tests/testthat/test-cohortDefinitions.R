@@ -169,7 +169,7 @@ testthat::test_that("resolveConceptSetExpression", {
   resolvedConceptSet2 <-
     resolveConceptSetsInCohortExpression(
       cohortExpression = cohortExpression,
-      connection = DatabaseConnector::connect(connectionDetails = connectionDetail),
+      connection = DatabaseConnector::connect(connectionDetails = connectionDetails),
       vocabularyDatabaseSchema = cdmDatabaseSchemas
     )
   testthat::expect_gte(
