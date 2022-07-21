@@ -2,6 +2,30 @@ library(testthat)
 library(ConceptSetDiagnostics)
 library(dplyr)
 
+cohortsJson <-
+  SqlRender::readSql(sourceFile = system.file(file.path("cohorts", "14906.json"),
+    package = "ConceptSetDiagnostics"
+  ))
+
+cohortExpression <- cohortsJson %>%
+  RJSONIO::fromJSON(digits = 23)
+
+cohortsSql <-
+  SqlRender::readSql(sourceFile = system.file(file.path("cohorts", "14906.sql"),
+    package = "ConceptSetDiagnostics"
+  ))
+
+cohortDefinitionSet <-
+  readr::read_csv(system.file(file.path("cohorts", "CohortDefinitionSet.csv"),
+    package = "ConceptSetDiagnostics"
+  ),
+  col_types = readr::cols()
+  ) %>%
+  dplyr::mutate(
+    json = cohortsJson,
+    sql = cohortsSql
+  )
+
 generateRandomString <- function() {
   randomStringTableName <-
     tolower(paste0(

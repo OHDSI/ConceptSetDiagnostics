@@ -26,7 +26,7 @@
 #' @param searchString A phrase (can be multiple words) to search for.
 #'
 #' @export
-getStringSearchConcepts <-
+performStringSearchForConcepts <-
   function(searchString,
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
@@ -34,22 +34,24 @@ getStringSearchConcepts <-
     if (nchar(searchString) <= 3) {
       stop("search string is shorter than 3 characters.")
     }
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     fieldsInConceptTable <-
-      DatabaseConnector::dbListFields(conn = connection,
-                                      name = "concept")
+      DatabaseConnector::dbListFields(
+        conn = connection,
+        name = "concept"
+      )
     fieldsInConceptTable <-
       tolower(sort(unique(fieldsInConceptTable)))
-    
-    if (tolower('FULL_TEXT_SEARCH') %in% fieldsInConceptTable) {
+
+    if (tolower("FULL_TEXT_SEARCH") %in% fieldsInConceptTable) {
       sql <- SqlRender::loadRenderTranslateSql(
         sqlFilename = "SearchStringTsv.sql",
-        packageName = 'ConceptSetDiagnostics',
+        packageName = "ConceptSetDiagnostics",
         dbms = connection@dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         search_string = searchString
@@ -59,16 +61,16 @@ getStringSearchConcepts <-
       # also making search string of lower case - to make search uniform.
       searchString <-
         stringr::str_squish(tolower(gsub("[^a-zA-Z0-9 ,]", " ", searchString)))
-      
+
       sql <- SqlRender::loadRenderTranslateSql(
         sqlFilename = "SearchString.sql",
-        packageName = 'ConceptSetDiagnostics',
+        packageName = "ConceptSetDiagnostics",
         dbms = connection@dbms,
         vocabulary_database_schema = vocabularyDatabaseSchema,
         search_string = searchString
       )
     }
-    
+
     data <-
       DatabaseConnector::querySql(
         sql = sql,

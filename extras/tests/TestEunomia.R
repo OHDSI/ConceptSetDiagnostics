@@ -1,6 +1,4 @@
 library(magrittr)
-conceptId <- 381316
-searchKeyword <- "Diabetes"
 databaseSchema <- "main"
 connectionDetails <- Eunomia::getEunomiaConnectionDetails()
 # DatabaseConnector::insertTable()
@@ -164,9 +162,9 @@ ConceptSetDiagnostics::getMappedStandardConcepts(
 #----13. getRelationship----
 ConceptSetDiagnostics::getRelationship(connection = connection, vocabularyDatabaseSchema = databaseSchema)
 
-#----14. getStringSearchConcepts----
+#----14. performStringSearchForConcepts----
 searchResultDataFrame <-
-  ConceptSetDiagnostics::getStringSearchConcepts(
+  ConceptSetDiagnostics::performStringSearchForConcepts(
     connectionDetails = connectionDetails,
     vocabularyDatabaseSchema = databaseSchema,
     searchString =  searchKeyword
@@ -176,7 +174,7 @@ searchResultDataFrame$includeDescendants <- TRUE
 searchResultDataFrame$includeMapped <- TRUE
 searchResultDataFrame$isExcluded <- FALSE
 
-#----15. GetStringSearchConceptsUsingTsv----
+#----15. performStringSearchForConceptsUsingTsv----
 
 #----16. getVocabulary----
 getVocabulary(connectionDetails = connectionDetails,
