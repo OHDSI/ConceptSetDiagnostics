@@ -3,13 +3,13 @@ connection <-
 
 testthat::test_that("String search - connection", {
   testthat::expect_error(
-    getStringSearchConcepts(
+    performStringSearchForConcepts(
       searchString = "d",
       vocabularyDatabaseSchema = cdmDatabaseSchema,
       connection = connection
     )
   )
-  output <- getStringSearchConcepts(
+  output <- performStringSearchForConcepts(
     searchString = "diabetes",
     vocabularyDatabaseSchema = cdmDatabaseSchema,
     connection = connection
@@ -20,7 +20,7 @@ testthat::test_that("String search - connection", {
 DatabaseConnector::disconnect(connection = connection)
 
 testthat::test_that("String search - connectionDetails", {
-  output <- getStringSearchConcepts(
+  output <- performStringSearchForConcepts(
     searchString = "diabetes mellitus",
     vocabularyDatabaseSchema = cdmDatabaseSchema,
     connectionDetails = connectionDetails
