@@ -58,7 +58,7 @@ findOrphanConcepts <- function(connectionDetails = NULL,
     tempEmulationSchema = tempEmulationSchema,
     vocabulary_database_schema = vocabularyDatabaseSchema,
     concept_id_table = tempTableName,
-    orphan_concept_table = paste0("o", tempTableName)
+    orphan_concept_table = paste0(tempTableName, "oo")
   )
   DatabaseConnector::executeSql(connection, sql)
   ParallelLogger::logTrace("- Fetching orphan concepts from server")
@@ -68,7 +68,7 @@ findOrphanConcepts <- function(connectionDetails = NULL,
       sql = sql,
       connection = connection,
       tempEmulationSchema = tempEmulationSchema,
-      orphan_concept_table = paste0("o", tempTableName),
+      orphan_concept_table = paste0(tempTableName, "oo"),
       snakeCaseToCamelCase = TRUE
     ) %>%
     tidyr::tibble()
@@ -77,7 +77,7 @@ findOrphanConcepts <- function(connectionDetails = NULL,
   DatabaseConnector::renderTranslateExecuteSql(
     connection = connection,
     sql = "DROP TABLE IF EXISTS @orphan_concept_table;",
-    orphan_concept_table = paste0("o", tempTableName),
+    orphan_concept_table = paste0(tempTableName, "oo"),
     progressBar = FALSE,
     reportOverallTime = FALSE
   )
