@@ -17,3 +17,45 @@ testthat::test_that("Check if cohort definition set", {
     checkIfCohortDefinitionSet(cohortDefinitionSet = cohortDefinitionSet)
   testthat::expect_false(object = errorMessage$isEmpty())
 })
+
+testthat::test_that("Check helper functions", {
+  testthat::expect_equal(
+    camelCaseToTitleCase("appleTree"),
+    "Apple Tree"
+  )
+  testthat::expect_equal(
+    snakeCaseToCamelCase("apple_tree"),
+    "appleTree"
+  )
+  testthat::expect_equal(
+    camelCaseToSnakeCase("appleTree"),
+    "apple_tree"
+  )
+  testthat::expect_equal(
+    titleCaseToCamelCase("Apple Tree"),
+    "appleTree"
+  )
+  testthat::expect_equal(quoteLiterals(NULL), "")
+})
+
+
+testthat::test_that("Get Domain Information", {
+  domainInformation <- getDomainInformation
+  testthat::expect_equal(
+    camelCaseToTitleCase("appleTree"),
+    "Apple Tree"
+  )
+  testthat::expect_equal(
+    snakeCaseToCamelCase("apple_tree"),
+    "appleTree"
+  )
+  testthat::expect_equal(
+    camelCaseToSnakeCase("appleTree"),
+    "apple_tree"
+  )
+  testthat::expect_equal(
+    titleCaseToCamelCase("Apple Tree"),
+    "appleTree"
+  )
+  testthat::expect_equal(quoteLiterals(NULL), "")
+})

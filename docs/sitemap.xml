@@ -49,6 +49,9 @@
     <loc>/reference/getConceptPrevalenceCountsForConceptIds.html</loc>
   </url>
   <url>
+    <loc>/reference/getConceptRecordCount.html</loc>
+  </url>
+  <url>
     <loc>/reference/getConceptRelationship.html</loc>
   </url>
   <url>
@@ -67,10 +70,16 @@
     <loc>/reference/getConceptSynonym.html</loc>
   </url>
   <url>
+    <loc>/reference/getCountOfSourceCodesMappedToStandardConcept.html</loc>
+  </url>
+  <url>
     <loc>/reference/getDeepConceptRelationship.html</loc>
   </url>
   <url>
     <loc>/reference/getDomain.html</loc>
+  </url>
+  <url>
+    <loc>/reference/getDomainInformation.html</loc>
   </url>
   <url>
     <loc>/reference/getDrugIngredients.html</loc>
