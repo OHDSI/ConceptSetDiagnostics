@@ -73,7 +73,7 @@ getConceptRecordCount <- function(conceptIds,
     connection = connection,
     sql = sqlDdlDrop,
     tempEmulationSchema = tempEmulationSchema,
-    concept_mapping_table = paste0(tempTableName, "cc"),
+    concept_count_temp = paste0(tempTableName, "cc"),
     progressBar = FALSE,
     reportOverallTime = FALSE
   )
@@ -81,7 +81,7 @@ getConceptRecordCount <- function(conceptIds,
     connection = connection,
     sql = sqlDdlCreate,
     tempEmulationSchema = tempEmulationSchema,
-    concept_mapping_table = paste0(tempTableName, "cc"),
+    concept_count_temp = paste0(tempTableName, "cc"),
     progressBar = FALSE,
     reportOverallTime = FALSE
   )
@@ -206,13 +206,7 @@ getConceptRecordCount <- function(conceptIds,
 
   for (i in (1:nrow(domains))) {
     rowData <- domains[i, ]
-    ParallelLogger::logTrace(paste0(
-      "   - Working on ",
-      rowData$domainTable,
-      ".",
-      rowData$domainConceptId
-    ))
-    ParallelLogger::logTrace("    - Counting concepts by calendar month and year")
+    
     DatabaseConnector::renderTranslateExecuteSql(
       connection = connection,
       sql = sql1,
@@ -226,7 +220,7 @@ getConceptRecordCount <- function(conceptIds,
       progressBar = FALSE,
       reportOverallTime = FALSE
     )
-    ParallelLogger::logTrace("    - Counting concepts by calendar year")
+    
     DatabaseConnector::renderTranslateExecuteSql(
       connection = connection,
       sql = sql2,
@@ -240,7 +234,7 @@ getConceptRecordCount <- function(conceptIds,
       progressBar = FALSE,
       reportOverallTime = FALSE
     )
-    ParallelLogger::logTrace("    - Counting concepts without calendar period")
+    
     DatabaseConnector::renderTranslateExecuteSql(
       connection = connection,
       sql = sql3,
@@ -259,15 +253,7 @@ getConceptRecordCount <- function(conceptIds,
   for (i in (1:nrow(domains))) {
     rowData <- domains[i, ]
     if (nchar(rowData$domainSourceConceptId) > 4) {
-      ParallelLogger::logTrace(
-        paste0(
-          "   - Working on ",
-          rowData$domainTable,
-          ".",
-          rowData$domainSourceConceptId
-        )
-      )
-      ParallelLogger::logTrace("    - Counting concepts by calendar month and year")
+      
       DatabaseConnector::renderTranslateExecuteSql(
         connection = connection,
         sql = sql4,
@@ -282,7 +268,7 @@ getConceptRecordCount <- function(conceptIds,
         progressBar = FALSE,
         reportOverallTime = FALSE
       )
-      ParallelLogger::logTrace("    - Counting concepts by calendar year")
+      
       DatabaseConnector::renderTranslateExecuteSql(
         connection = connection,
         sql = sql5,
@@ -297,7 +283,7 @@ getConceptRecordCount <- function(conceptIds,
         progressBar = FALSE,
         reportOverallTime = FALSE
       )
-      ParallelLogger::logTrace("    - Counting concepts - no calendar stratification")
+      
       DatabaseConnector::renderTranslateExecuteSql(
         connection = connection,
         sql = sql6,
@@ -317,7 +303,7 @@ getConceptRecordCount <- function(conceptIds,
   retrieveSql <- "SELECT concept_id, event_year, event_month,
                     sum(concept_count) concept_count,
                     max(subject_count) subject_count
-                  FROM @concept_count_temp
+                  FROM @concept_count_temp c
                   GROUP BY concept_id, event_year, event_month
                   ORDER By concept_id, event_year, event_month;"
   data <- renderTranslateQuerySql(

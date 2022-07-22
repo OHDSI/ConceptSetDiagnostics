@@ -91,12 +91,6 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
   conceptMapping <- list()
   for (i in (1:nrow(domains))) {
     rowData <- domains[i, ]
-    ParallelLogger::logTrace(paste0(
-      "  - Working on ",
-      rowData$domainTable,
-      ".",
-      rowData$domainConceptId
-    ))
 
     DatabaseConnector::renderTranslateExecuteSql(
       connection = connection,
