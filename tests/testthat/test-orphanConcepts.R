@@ -2,11 +2,11 @@ testthat::test_that("Orphan Concepts - connection", {
   connection <-
     DatabaseConnector::connect(connectionDetails = connectionDetails)
   
-  orphanConcepts <- getOrphanConcepts(
+  orphanConcepts <- findOrphanConcepts(
     connection = connection,
     cdmDatabaseSchema = cdmDatabaseSchema,
     vocabularyDatabaseSchema = cdmDatabaseSchema,
-    conceptIds = 320128
+    conceptIds = -1
   )
   testthat::expect_gte(object = nrow(orphanConcepts),
                        expected = 0)
@@ -16,11 +16,11 @@ testthat::test_that("Orphan Concepts - connection", {
 
 
 testthat::test_that("Orphan Concepts - connectionDetails", {
-  orphanConcepts <- getOrphanConcepts(
+  orphanConcepts <- findOrphanConcepts(
     connectionDetails = connectionDetails,
     cdmDatabaseSchema = cdmDatabaseSchema,
     vocabularyDatabaseSchema = cdmDatabaseSchema,
-    conceptIds = 0
+    conceptIds = -1
   )
   testthat::expect_gte(object = nrow(orphanConcepts),
                        expected = 0)

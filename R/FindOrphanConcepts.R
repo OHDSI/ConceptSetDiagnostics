@@ -34,12 +34,12 @@
 #' Returns a tibble data frame.
 #'
 #' @export
-getOrphanConcepts <- function(connectionDetails = NULL,
-                              connection = NULL,
-                              cdmDatabaseSchema,
-                              vocabularyDatabaseSchema = cdmDatabaseSchema,
-                              tempEmulationSchema = NULL,
-                              conceptIds) {
+findOrphanConcepts <- function(connectionDetails = NULL,
+                               connection = NULL,
+                               cdmDatabaseSchema,
+                               vocabularyDatabaseSchema = cdmDatabaseSchema,
+                               tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
+                               conceptIds) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
@@ -53,36 +53,33 @@ getOrphanConcepts <- function(connectionDetails = NULL,
   
   sql <- SqlRender::loadRenderTranslateSql(
     "OrphanCodes.sql",
-    packageName = "ConceptSetDiagnostics",
+    packageName = utils::packageName(),
     dbms = connection@dbms,
     tempEmulationSchema = tempEmulationSchema,
     vocabulary_database_schema = vocabularyDatabaseSchema,
-    concept_id_table = tempTableName
+    concept_id_table = tempTableName,
+    orphan_concept_table = paste0('o', tempTableName)
   )
-  DatabaseConnector::executeSql(
-    connection = connection,
-    sql = sql,
-    profile = FALSE,
-    progressBar = FALSE,
-    reportOverallTime = FALSE
-  )
-  sql <- "SELECT * FROM #orphan_concept_table;"
-  orphanCodes <- DatabaseConnector::renderTranslateQuerySql(
-    sql = sql,
-    connection = connection,
-    snakeCaseToCamelCase = TRUE
-  ) %>% 
-    dplyr::tibble() %>% 
-    dplyr::filter(!.data$conceptId %in% c(conceptIds))
+  DatabaseConnector::executeSql(connection, sql)
+  ParallelLogger::logTrace("- Fetching orphan concepts from server")
+  sql <- "SELECT * FROM @orphan_concept_table;"
+  orphanConcepts <-
+    DatabaseConnector::renderTranslateQuerySql(
+      sql = sql,
+      connection = connection,
+      tempEmulationSchema = tempEmulationSchema,
+      orphan_concept_table = paste0('o', tempTableName),
+      snakeCaseToCamelCase = TRUE
+    ) %>%
+    tidyr::tibble()
   
-  sql <-
-    "DROP TABLE IF EXISTS #orphan_concept_table;"
+  ParallelLogger::logTrace("- Dropping orphan temp tables")
   DatabaseConnector::renderTranslateExecuteSql(
     connection = connection,
-    sql = sql,
-    tempEmulationSchema = tempEmulationSchema,
+    sql = "DROP TABLE IF EXISTS @orphan_concept_table;",
+    orphan_concept_table = paste0('o', tempTableName),
     progressBar = FALSE,
     reportOverallTime = FALSE
   )
-  return(orphanCodes)
+  return(orphanConcepts)
 }
