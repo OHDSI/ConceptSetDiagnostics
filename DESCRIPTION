@@ -3,8 +3,9 @@ Type: Package
 Title: Concept Set Diagnostics
 Version: 0.0.1
 Author: Gowtham Rao [aut, cre]
+Date: 2022-07-21
 Maintainer: Gowtham Rao <rao@ohdsi.org>
-Description: A package for design diagnostics.
+Description: A package to work with OMOP concepts and cohort concept sets.
 Depends:
     DatabaseConnector (>= 5.0.0),
     dplyr,

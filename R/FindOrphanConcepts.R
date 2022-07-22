@@ -44,13 +44,13 @@ findOrphanConcepts <- function(connectionDetails = NULL,
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-  
+
   tempTableName <- loadTempConceptTable(
     conceptIds = conceptIds,
     connection = connection,
     tempEmulationSchema = tempEmulationSchema
   )
-  
+
   sql <- SqlRender::loadRenderTranslateSql(
     "OrphanCodes.sql",
     packageName = utils::packageName(),
@@ -58,7 +58,7 @@ findOrphanConcepts <- function(connectionDetails = NULL,
     tempEmulationSchema = tempEmulationSchema,
     vocabulary_database_schema = vocabularyDatabaseSchema,
     concept_id_table = tempTableName,
-    orphan_concept_table = paste0('o', tempTableName)
+    orphan_concept_table = paste0("o", tempTableName)
   )
   DatabaseConnector::executeSql(connection, sql)
   ParallelLogger::logTrace("- Fetching orphan concepts from server")
@@ -68,16 +68,16 @@ findOrphanConcepts <- function(connectionDetails = NULL,
       sql = sql,
       connection = connection,
       tempEmulationSchema = tempEmulationSchema,
-      orphan_concept_table = paste0('o', tempTableName),
+      orphan_concept_table = paste0("o", tempTableName),
       snakeCaseToCamelCase = TRUE
     ) %>%
     tidyr::tibble()
-  
+
   ParallelLogger::logTrace("- Dropping orphan temp tables")
   DatabaseConnector::renderTranslateExecuteSql(
     connection = connection,
     sql = "DROP TABLE IF EXISTS @orphan_concept_table;",
-    orphan_concept_table = paste0('o', tempTableName),
+    orphan_concept_table = paste0("o", tempTableName),
     progressBar = FALSE,
     reportOverallTime = FALSE
   )

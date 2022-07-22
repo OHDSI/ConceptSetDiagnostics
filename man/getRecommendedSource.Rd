@@ -28,6 +28,13 @@ of the function, and closed when the function finishes.}
 \code{\link[DatabaseConnector]{createConnectionDetails}} function in the
 DatabaseConnector package. Can be left NULL if \code{connection} is
 provided.}
+
+\item{conceptPrevalenceSchema}{The schema name that has the concept prevalence table. The following
+tables are expected to be present. recommender_set,
+cp_master, recommended_blacklist.}
+
+\item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
+tables, provide a schema with write privileges where temp tables can be created.}
 }
 \description{
 given a list of non standard conceptIds, get recommended conceptIds
