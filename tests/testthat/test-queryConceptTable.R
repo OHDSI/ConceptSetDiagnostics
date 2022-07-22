@@ -170,12 +170,20 @@ testthat::test_that("Source codes Mapped to Standard Concept - connection", {
     )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
+
+# getConceptRecordCount 1 ----
+testthat::test_that("Source codes Mapped to Standard Concept - connection", {
+  output <-
+    ConceptSetDiagnostics::getConceptRecordCount(
+      connection = connection,
+      conceptIds = 0,
+      cdmDatabaseSchema = cdmDatabaseSchema
+    )
+  testthat::expect_gte(object = nrow(output), expected = 0)
+})
+
 # Disconnection ----
 DatabaseConnector::disconnect(connection = connection)
-
-
-
-
 
 
 
@@ -343,6 +351,17 @@ testthat::test_that("Map MedDra to Snomed - connectionDetails", {
 testthat::test_that("Source codes Mapped to Standard Concept - connectionDetails", {
   output <-
     ConceptSetDiagnostics::getCountOfSourceCodesMappedToStandardConcept(
+      connectionDetails = connectionDetails,
+      conceptIds = 0,
+      cdmDatabaseSchema = cdmDatabaseSchema
+    )
+  testthat::expect_gte(object = nrow(output), expected = 0)
+})
+
+# getConceptRecordCount 2 ----
+testthat::test_that("Source codes Mapped to Standard Concept - connectionDetails", {
+  output <-
+    ConceptSetDiagnostics::getConceptRecordCount(
       connectionDetails = connectionDetails,
       conceptIds = 0,
       cdmDatabaseSchema = cdmDatabaseSchema

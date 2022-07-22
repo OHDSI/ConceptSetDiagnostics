@@ -42,20 +42,20 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-  
+
   tempTableName <- loadTempConceptTable(
     conceptIds = conceptIds,
     connection = connection,
     tempEmulationSchema = tempEmulationSchema
   )
-  
+
   domains <-
-    getDomainInformation(packageName = 'ConceptSetDiagnostics')
+    getDomainInformation(packageName = "ConceptSetDiagnostics")
   domains <- domains$wide %>%
     dplyr::filter(nchar(.data$domainSourceConceptId) > 1)
-  
+
   sqlConceptMapping <-
-    " DROP TABLE IF EXSISTS @concept_mapping_table;
+    " DROP TABLE IF EXISTS @concept_mapping_table;
       CREATE TABLE @concept_mapping_table  (concept_id INT,
                                             source_concept_id INT,
                                             domain_table VARCHAR(20),
@@ -69,7 +69,7 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
     progressBar = FALSE,
     reportOverallTime = FALSE
   )
-  
+
   sqlMapping <- "
                   INSERT INTO @concept_mapping_table
                   SELECT @domain_concept_id concept_id,
@@ -87,17 +87,17 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
                   	@domain_source_concept_id
                   ORDER BY @domain_concept_id,
                   	@domain_source_concept_id;"
-  
+
   conceptMapping <- list()
   for (i in (1:nrow(domains))) {
-    rowData <- domains[i,]
+    rowData <- domains[i, ]
     ParallelLogger::logTrace(paste0(
       "  - Working on ",
       rowData$domainTable,
       ".",
       rowData$domainConceptId
     ))
-    
+
     DatabaseConnector::renderTranslateExecuteSql(
       connection = connection,
       sql = sqlMapping,
@@ -112,7 +112,6 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
       reportOverallTime = FALSE,
       progressBar = FALSE
     )
-    
   }
   sql <- "SELECT DISTINCT *
           FROM @concept_mapping_table
@@ -136,12 +135,14 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
       .data$conceptCount,
       .data$subjectCount
     )
-  
+
   conceptMapping <- dplyr::bind_rows(
     conceptMapping,
     conceptMapping %>%
-      dplyr::group_by(.data$conceptId,
-                      .data$sourceConceptId) %>%
+      dplyr::group_by(
+        .data$conceptId,
+        .data$sourceConceptId
+      ) %>%
       dplyr::summarise(
         conceptCount = sum(.data$conceptCount),
         subjectCount = max(.data$subjectCount),
@@ -150,8 +151,8 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
       dplyr::mutate(domainTable = "All")
   ) %>%
     dplyr::distinct()
-  
-  
+
+
   sqlDdlDrop <-
     "DROP TABLE IF EXISTS @concept_mapping_table;"
   DatabaseConnector::renderTranslateExecuteSql(

@@ -18,9 +18,11 @@
 
 checkIfCohortDefinitionSet <- function(cohortDefinitionSet) {
   errorMessage <- checkmate::makeAssertCollection()
-  checkmate::assertDataFrame(x = cohortDefinitionSet,
-                             min.cols = 1,
-                             add = errorMessage)
+  checkmate::assertDataFrame(
+    x = cohortDefinitionSet,
+    min.cols = 1,
+    add = errorMessage
+  )
   checkmate::assertNames(
     x = colnames(cohortDefinitionSet),
     must.include = c("cohortId"),
@@ -66,11 +68,10 @@ loadTempConceptTable <- function(conceptIds,
                                  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
   conceptIdTable <-
     dplyr::tibble(conceptId = conceptIds %>% unique() %>% as.integer())
-  
+
   tempTableName <-
-    paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
-    )))) * 100000)
-  
+    paste0("#t", (as.numeric(as.POSIXlt(Sys.time()))) * 100000)
+
   invisible(utils::capture.output(
     DatabaseConnector::insertTable(
       connection = connection,
@@ -98,7 +99,7 @@ loadTempConceptTable <- function(conceptIds,
       concept_id_table = tempTableName
     )
   }
-  
+
   return(tempTableName)
 }
 
@@ -128,9 +129,11 @@ dropTempConceptTable <-
 getDomainInformation <- function(packageName = NULL) {
   domains <-
     readr::read_csv(system.file(file.path("csv", "domains.csv"),
-                                package = "ConceptSetDiagnostics"),
-                    col_types = readr::cols())
-  
+      package = "ConceptSetDiagnostics"
+    ),
+    col_types = readr::cols()
+    )
+
   domains <- domains %>%
     .replaceNaInDataFrameWithEmptyString() %>%
     dplyr::mutate(domainTableShort = stringr::str_sub(
@@ -140,20 +143,20 @@ getDomainInformation <- function(packageName = NULL) {
     )) %>%
     dplyr::mutate(
       domainTableShort = dplyr::case_when(
-        stringr::str_detect(string = tolower(.data$domain), pattern = 'era') ~ paste0(.data$domainTableShort, 'E'),
+        stringr::str_detect(string = tolower(.data$domain), pattern = "era") ~ paste0(.data$domainTableShort, "E"),
         TRUE ~ .data$domainTableShort
       )
     )
-  
+
   domains$domainConceptIdShort <-
     stringr::str_replace_all(
       string = sapply(
         stringr::str_extract_all(
           string = camelCaseToTitleCase(snakeCaseToCamelCase(domains$domainConceptId)),
-          pattern = '[A-Z]'
+          pattern = "[A-Z]"
         ),
         paste,
-        collapse = ' '
+        collapse = " "
       ),
       pattern = " ",
       replacement = ""
@@ -163,17 +166,19 @@ getDomainInformation <- function(packageName = NULL) {
       string = sapply(
         stringr::str_extract_all(
           string = camelCaseToTitleCase(snakeCaseToCamelCase(domains$domainSourceConceptId)),
-          pattern = '[A-Z]'
+          pattern = "[A-Z]"
         ),
         paste,
-        collapse = ' '
+        collapse = " "
       ),
       pattern = " ",
       replacement = ""
     )
-  domains <- domains  %>%
-    dplyr::mutate(isEraTable = stringr::str_detect(string = .data$domainTable,
-                                                   pattern = 'era'))
+  domains <- domains %>%
+    dplyr::mutate(isEraTable = stringr::str_detect(
+      string = .data$domainTable,
+      pattern = "era"
+    ))
   data <- list()
   data$wide <- domains
   data$long <- dplyr::bind_rows(
@@ -202,28 +207,32 @@ getDomainInformation <- function(packageName = NULL) {
   ) %>%
     dplyr::distinct() %>%
     dplyr::filter(.data$domainFieldShort != "") %>%
-    dplyr::mutate(eraTable = stringr::str_detect(string = .data$domainTable,
-                                                 pattern = 'era')) %>%
-    dplyr::mutate(isSourceField = stringr::str_detect(string = .data$domainField,
-                                                      pattern = 'source'))
+    dplyr::mutate(eraTable = stringr::str_detect(
+      string = .data$domainTable,
+      pattern = "era"
+    )) %>%
+    dplyr::mutate(isSourceField = stringr::str_detect(
+      string = .data$domainField,
+      pattern = "source"
+    ))
   return(data)
 }
 
 .replaceNaInDataFrameWithEmptyString <- function(data) {
-  #https://github.com/r-lib/tidyselect/issues/201
+  # https://github.com/r-lib/tidyselect/issues/201
   data %>%
     dplyr::collect() %>%
     dplyr::mutate(dplyr::across(
       tidyselect:::where(is.character),
-      ~ tidyr::replace_na(.x, as.character(''))
+      ~ tidyr::replace_na(.x, as.character(""))
     )) %>%
     dplyr::mutate(dplyr::across(
       tidyselect:::where(is.logical),
-      ~ tidyr::replace_na(.x, as.character(''))
+      ~ tidyr::replace_na(.x, as.character(""))
     )) %>%
     dplyr::mutate(dplyr::across(
       tidyselect:::where(is.numeric),
-      ~ tidyr::replace_na(.x, as.numeric(''))
+      ~ tidyr::replace_na(.x, as.numeric(""))
     ))
 }
 
@@ -257,9 +266,11 @@ camelCaseToSnakeCase <- function(string) {
 
 # private function - not exported
 titleCaseToCamelCase <- function(string) {
-  string <- stringr::str_replace_all(string = string,
-                                     pattern = ' ',
-                                     replacement = '')
+  string <- stringr::str_replace_all(
+    string = string,
+    pattern = " ",
+    replacement = ""
+  )
   substr(string, 1, 1) <- tolower(substr(string, 1, 1))
   return(string)
 }

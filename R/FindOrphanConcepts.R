@@ -61,7 +61,7 @@ findOrphanConcepts <- function(connectionDetails = NULL,
     orphan_concept_table = paste0(tempTableName, "oo")
   )
   DatabaseConnector::executeSql(connection, sql)
-  
+
   sql <- "SELECT * FROM @orphan_concept_table;"
   orphanConcepts <-
     DatabaseConnector::renderTranslateQuerySql(
