@@ -352,7 +352,7 @@ testthat::test_that("Source codes Mapped to Standard Concept - connectionDetails
   output <-
     ConceptSetDiagnostics::getCountOfSourceCodesMappedToStandardConcept(
       connectionDetails = connectionDetails,
-      conceptIds = 0,
+      conceptIds = c(19025280, 19077577),
       cdmDatabaseSchema = cdmDatabaseSchema
     )
   testthat::expect_gte(object = nrow(output), expected = 0)
@@ -363,7 +363,7 @@ testthat::test_that("Source codes Mapped to Standard Concept - connectionDetails
   output <-
     ConceptSetDiagnostics::getConceptRecordCount(
       connectionDetails = connectionDetails,
-      conceptIds = 0,
+      conceptIds = c(19025280, 19077577),
       cdmDatabaseSchema = cdmDatabaseSchema
     )
   testthat::expect_gte(object = nrow(output), expected = 0)

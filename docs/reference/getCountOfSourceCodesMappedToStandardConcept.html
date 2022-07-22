@@ -49,7 +49,8 @@
 <span>  connection <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  connectionDetails <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  <span class="va">cdmDatabaseSchema</span>,</span>
-<span>  tempEmulationSchema <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"sqlRenderTempEmulationSchema"</span><span class="op">)</span></span>
+<span>  tempEmulationSchema <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"sqlRenderTempEmulationSchema"</span><span class="op">)</span>,</span>
+<span>  minCellCount <span class="op">=</span> <span class="fl">0</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -77,6 +78,10 @@ provided.</p></dd>
 <dt>tempEmulationSchema</dt>
 <dd><p>Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
 tables, provide a schema with write privileges where temp tables can be created.</p></dd>
+
+
+<dt>minCellCount</dt>
+<dd><p>The minimum cell count for fields containing person/subject count.</p></dd>
 
 
 <dt>vocabularyDatabaseSchema</dt>

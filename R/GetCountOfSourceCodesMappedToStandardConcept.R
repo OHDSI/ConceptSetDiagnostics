@@ -28,6 +28,8 @@
 #'
 #' @template TempEmulationSchema
 #'
+#' @param minCellCount                The minimum cell count for fields containing person/subject count.
+#'
 #' @return
 #' Returns a tibble data frame.
 #'
@@ -37,7 +39,8 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
                                                          connection = NULL,
                                                          connectionDetails = NULL,
                                                          cdmDatabaseSchema,
-                                                         tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
+                                                         tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
+                                                         minCellCount = 0) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
@@ -121,31 +124,37 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
       concept_mapping_table = paste0(tempTableName, "cc"),
       snakeCaseToCamelCase = TRUE,
       tempEmulationSchema = tempEmulationSchema
-    ) %>%
+    )
+  conceptMapping <- conceptMapping %>%
     dplyr::arrange(
       .data$domainTable,
       .data$conceptId,
       .data$sourceConceptId,
       .data$conceptCount,
       .data$subjectCount
-    )
+    ) %>%
+    dplyr::tibble()
 
-  conceptMapping <- dplyr::bind_rows(
-    conceptMapping,
-    conceptMapping %>%
-      dplyr::group_by(
-        .data$conceptId,
-        .data$sourceConceptId
-      ) %>%
-      dplyr::summarise(
-        conceptCount = sum(.data$conceptCount),
-        subjectCount = max(.data$subjectCount),
-        .groups = "keep"
-      ) %>%
-      dplyr::mutate(domainTable = "All")
-  ) %>%
-    dplyr::distinct()
+  if (nrow(conceptMapping) > 0) {
+    conceptMapping <- dplyr::bind_rows(
+      conceptMapping,
+      conceptMapping %>%
+        dplyr::group_by(
+          .data$conceptId,
+          .data$sourceConceptId
+        ) %>%
+        dplyr::summarise(
+          conceptCount = sum(.data$conceptCount),
+          subjectCount = max(.data$subjectCount),
+          .groups = "keep"
+        ) %>%
+        dplyr::mutate(domainTable = "All")
+    ) %>%
+      dplyr::distinct()
+  }
 
+  conceptMapping <- conceptMapping %>%
+    dplyr::filter(.data$subjectCount > minCellCount)
 
   sqlDdlDrop <-
     "DROP TABLE IF EXISTS @concept_mapping_table;"

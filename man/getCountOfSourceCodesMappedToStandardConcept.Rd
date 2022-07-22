@@ -9,7 +9,8 @@ getCountOfSourceCodesMappedToStandardConcept(
   connection = NULL,
   connectionDetails = NULL,
   cdmDatabaseSchema,
-  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
+  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
+  minCellCount = 0
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ provided.}
 
 \item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
 tables, provide a schema with write privileges where temp tables can be created.}
+
+\item{minCellCount}{The minimum cell count for fields containing person/subject count.}
 
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 }

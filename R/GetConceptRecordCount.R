@@ -30,6 +30,8 @@
 #'
 #' @template TempEmulationSchema
 #'
+#' @param minCellCount                The minimum cell count for fields containing person/subject count.
+#'
 #' @return
 #' Returns a tibble data frame.
 #'
@@ -40,7 +42,8 @@ getConceptRecordCount <- function(conceptIds,
                                   connectionDetails = NULL,
                                   cdmDatabaseSchema,
                                   vocabularyDatabaseSchema = cdmDatabaseSchema,
-                                  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
+                                  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
+                                  minCellCount = 0) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
@@ -206,7 +209,7 @@ getConceptRecordCount <- function(conceptIds,
 
   for (i in (1:nrow(domains))) {
     rowData <- domains[i, ]
-    
+
     DatabaseConnector::renderTranslateExecuteSql(
       connection = connection,
       sql = sql1,
@@ -220,7 +223,7 @@ getConceptRecordCount <- function(conceptIds,
       progressBar = FALSE,
       reportOverallTime = FALSE
     )
-    
+
     DatabaseConnector::renderTranslateExecuteSql(
       connection = connection,
       sql = sql2,
@@ -234,7 +237,7 @@ getConceptRecordCount <- function(conceptIds,
       progressBar = FALSE,
       reportOverallTime = FALSE
     )
-    
+
     DatabaseConnector::renderTranslateExecuteSql(
       connection = connection,
       sql = sql3,
@@ -253,7 +256,6 @@ getConceptRecordCount <- function(conceptIds,
   for (i in (1:nrow(domains))) {
     rowData <- domains[i, ]
     if (nchar(rowData$domainSourceConceptId) > 4) {
-      
       DatabaseConnector::renderTranslateExecuteSql(
         connection = connection,
         sql = sql4,
@@ -268,7 +270,7 @@ getConceptRecordCount <- function(conceptIds,
         progressBar = FALSE,
         reportOverallTime = FALSE
       )
-      
+
       DatabaseConnector::renderTranslateExecuteSql(
         connection = connection,
         sql = sql5,
@@ -283,7 +285,7 @@ getConceptRecordCount <- function(conceptIds,
         progressBar = FALSE,
         reportOverallTime = FALSE
       )
-      
+
       DatabaseConnector::renderTranslateExecuteSql(
         connection = connection,
         sql = sql6,
@@ -309,9 +311,11 @@ getConceptRecordCount <- function(conceptIds,
   data <- renderTranslateQuerySql(
     connection = connection,
     sql = retrieveSql,
+    concept_count_temp = paste0(tempTableName, "cc"),
     snakeCaseToCamelCase = TRUE
   ) %>%
-    dplyr::tibble()
+    dplyr::tibble() %>%
+    dplyr::filter(.data$subjectCount > minCellCount)
 
   # i was thinking of keeping counts at the table level - but the file size became too big
   # so i decided to not include them

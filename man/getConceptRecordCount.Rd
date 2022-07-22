@@ -10,7 +10,8 @@ getConceptRecordCount(
   connectionDetails = NULL,
   cdmDatabaseSchema,
   vocabularyDatabaseSchema = cdmDatabaseSchema,
-  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
+  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
+  minCellCount = 0
 )
 }
 \arguments{
@@ -35,6 +36,8 @@ schema name, for example 'cdm_data.dbo'.}
 
 \item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
 tables, provide a schema with write privileges where temp tables can be created.}
+
+\item{minCellCount}{The minimum cell count for fields containing person/subject count.}
 }
 \value{
 Returns a tibble data frame.
