@@ -6,6 +6,6 @@
 \alias{ConceptSetDiagnostics-package}
 \title{ConceptSetDiagnostics: Concept Set Diagnostics}
 \description{
-A package for design diagnostics.
+A package to work with OMOP concepts and cohort concept sets.
 }
 \keyword{internal}

@@ -33,12 +33,5 @@ spelling::spell_check_files(list.files(path = "inst/shiny",
 unlink("extras/ConceptSetDiagnostics.pdf")
 shell("R CMD Rd2pdf ./ --output=extras/ConceptSetDiagnostics.pdf")
 
-# dir.create(path = "./inst/doc/", showWarnings = FALSE)
-# rmarkdown::render("vignettes/CohortDiagnosticsUsingWebApi.Rmd",
-#                   output_file = "../inst/doc/CohortDiagnosticsUsingWebApi.pdf",
-#                   rmarkdown::pdf_document(latex_engine = "pdflatex",
-#                                           toc = TRUE,
-#                                           number_sections = TRUE))
-
 pkgdown::build_site()
 OhdsiRTools::fixHadesLogo()

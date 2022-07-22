@@ -23,6 +23,10 @@
 #'
 #' @template VocabularyDatabaseSchema
 #'
+#' @template ConceptPrevalenceSchema
+#'
+#' @template TempEmulationSchema
+#'
 #' @export
 getRecommendedSource <-
   function(conceptIds,
