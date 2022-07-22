@@ -61,7 +61,7 @@ findOrphanConcepts <- function(connectionDetails = NULL,
     orphan_concept_table = paste0(tempTableName, "oo")
   )
   DatabaseConnector::executeSql(connection, sql)
-  ParallelLogger::logTrace("- Fetching orphan concepts from server")
+  
   sql <- "SELECT * FROM @orphan_concept_table;"
   orphanConcepts <-
     DatabaseConnector::renderTranslateQuerySql(
@@ -73,7 +73,6 @@ findOrphanConcepts <- function(connectionDetails = NULL,
     ) %>%
     tidyr::tibble()
 
-  ParallelLogger::logTrace("- Dropping orphan temp tables")
   DatabaseConnector::renderTranslateExecuteSql(
     connection = connection,
     sql = "DROP TABLE IF EXISTS @orphan_concept_table;",
