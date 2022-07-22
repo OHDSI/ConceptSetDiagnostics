@@ -35,8 +35,6 @@ schema name, for example 'cdm_data.dbo'.}
 tables, provide a schema with write privileges where temp tables can be created.}
 
 \item{minCellCount}{The minimum cell count for fields containing person/subject count.}
-
-\item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 }
 \value{
 Returns a tibble data frame.
