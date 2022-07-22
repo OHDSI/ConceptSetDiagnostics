@@ -26,6 +26,8 @@
 #'
 #' @template VocabularyDatabaseSchema
 #'
+#' @template CdmDatabaseSchema
+#'
 #' @template TempEmulationSchema
 #'
 #' @param minCellCount                The minimum cell count for fields containing person/subject count.

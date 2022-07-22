@@ -20,7 +20,8 @@ Imports:
 	SqlRender,
 	stringr,
 	stringdist,
-	tidyr
+	tidyr,
+	tidyselect
 Suggests:
   readr,
   remotes,

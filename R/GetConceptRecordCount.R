@@ -24,7 +24,7 @@
 #'
 #' @template ConceptIds
 #'
-#' @template cdmDatabaseSchema
+#' @template CdmDatabaseSchema
 #'
 #' @template VocabularyDatabaseSchema
 #'
