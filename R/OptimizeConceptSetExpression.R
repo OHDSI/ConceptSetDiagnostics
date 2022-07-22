@@ -162,7 +162,7 @@ getOptimizationRecommendationForConceptSetExpression <-
 
     sql <- SqlRender::loadRenderTranslateSql(
       sqlFilename = "OptimizeConceptSet.sql",
-      packageName = 'ConceptSetDiagnostics',
+      packageName = "ConceptSetDiagnostics",
       dbms = connection@dbms,
       tempEmulationSchema = tempEmulationSchema,
       vocabulary_database_schema = vocabularyDatabaseSchema,
