@@ -118,3 +118,168 @@ dropTempConceptTable <-
       concept_id_table = tempTableName
     )
   }
+
+
+#' Get domain information
+#'
+#' @param packageName e.g. 'CohortDiagnostics'
+#'
+#' @return
+#' A list with two tibble data frame objects with domain information represented in wide and long format respectively.
+getDomainInformation <- function(packageName = NULL) {
+  domains <-
+    readr::read_csv(system.file(file.path("csv", "domains.csv"),
+      package = "ConceptSetDiagnostics"
+    ),
+    col_types = readr::cols()
+    )
+
+  domains <- domains %>%
+    .replaceNaInDataFrameWithEmptyString() %>%
+    dplyr::mutate(domainTableShort = stringr::str_sub(
+      string = toupper(.data$domain),
+      start = 1,
+      end = 2
+    )) %>%
+    dplyr::mutate(
+      domainTableShort = dplyr::case_when(
+        stringr::str_detect(string = tolower(.data$domain), pattern = "era") ~ paste0(.data$domainTableShort, "E"),
+        TRUE ~ .data$domainTableShort
+      )
+    )
+
+  domains$domainConceptIdShort <-
+    stringr::str_replace_all(
+      string = sapply(
+        stringr::str_extract_all(
+          string = camelCaseToTitleCase(snakeCaseToCamelCase(domains$domainConceptId)),
+          pattern = "[A-Z]"
+        ),
+        paste,
+        collapse = " "
+      ),
+      pattern = " ",
+      replacement = ""
+    )
+  domains$domainSourceConceptIdShort <-
+    stringr::str_replace_all(
+      string = sapply(
+        stringr::str_extract_all(
+          string = camelCaseToTitleCase(snakeCaseToCamelCase(domains$domainSourceConceptId)),
+          pattern = "[A-Z]"
+        ),
+        paste,
+        collapse = " "
+      ),
+      pattern = " ",
+      replacement = ""
+    )
+  domains <- domains %>%
+    dplyr::mutate(isEraTable = stringr::str_detect(
+      string = .data$domainTable,
+      pattern = "era"
+    ))
+  data <- list()
+  data$wide <- domains
+  data$long <- dplyr::bind_rows(
+    data$wide %>%
+      dplyr::select(
+        .data$domainTableShort,
+        .data$domainTable,
+        .data$domainConceptIdShort,
+        .data$domainConceptId
+      ) %>%
+      dplyr::rename(
+        domainFieldShort = .data$domainConceptIdShort,
+        domainField = .data$domainConceptId
+      ),
+    data$wide %>%
+      dplyr::select(
+        .data$domainTableShort,
+        .data$domainSourceConceptIdShort,
+        .data$domainTable,
+        .data$domainSourceConceptId
+      ) %>%
+      dplyr::rename(
+        domainFieldShort = .data$domainSourceConceptIdShort,
+        domainField = .data$domainSourceConceptId
+      )
+  ) %>%
+    dplyr::distinct() %>%
+    dplyr::filter(.data$domainFieldShort != "") %>%
+    dplyr::mutate(eraTable = stringr::str_detect(
+      string = .data$domainTable,
+      pattern = "era"
+    )) %>%
+    dplyr::mutate(isSourceField = stringr::str_detect(
+      string = .data$domainField,
+      pattern = "source"
+    ))
+  return(data)
+}
+
+.replaceNaInDataFrameWithEmptyString <- function(data) {
+  # https://github.com/r-lib/tidyselect/issues/201
+  data %>%
+    dplyr::collect() %>%
+    dplyr::mutate(dplyr::across(
+      tidyselect:::where(is.character),
+      ~ tidyr::replace_na(.x, as.character(""))
+    )) %>%
+    dplyr::mutate(dplyr::across(
+      tidyselect:::where(is.logical),
+      ~ tidyr::replace_na(.x, as.character(""))
+    )) %>%
+    dplyr::mutate(dplyr::across(
+      tidyselect:::where(is.numeric),
+      ~ tidyr::replace_na(.x, as.numeric(""))
+    ))
+}
+
+
+# private function - not exported
+camelCaseToTitleCase <- function(string) {
+  string <- gsub("([A-Z])", " \\1", string)
+  string <- gsub("([a-z])([0-9])", "\\1 \\2", string)
+  substr(string, 1, 1) <- toupper(substr(string, 1, 1))
+  return(string)
+}
+
+# private function - not exported
+snakeCaseToCamelCase <- function(string) {
+  string <- tolower(string)
+  for (letter in letters) {
+    string <-
+      gsub(paste("_", letter, sep = ""), toupper(letter), string)
+  }
+  string <- gsub("_([0-9])", "\\1", string)
+  return(string)
+}
+
+# private function - not exported
+camelCaseToSnakeCase <- function(string) {
+  string <- gsub("([A-Z])", "_\\1", string)
+  string <- tolower(string)
+  string <- gsub("([a-z])([0-9])", "\\1_\\2", string)
+  return(string)
+}
+
+# private function - not exported
+titleCaseToCamelCase <- function(string) {
+  string <- stringr::str_replace_all(
+    string = string,
+    pattern = " ",
+    replacement = ""
+  )
+  substr(string, 1, 1) <- tolower(substr(string, 1, 1))
+  return(string)
+}
+
+# private function - not exported
+quoteLiterals <- function(x) {
+  if (is.null(x)) {
+    return("")
+  } else {
+    return(paste0("'", paste(x, collapse = "', '"), "'"))
+  }
+}

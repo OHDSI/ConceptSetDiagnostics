@@ -77,3 +77,39 @@ testthat::test_that("Concept Prevalence - connectionDetails", {
     )
   }
 })
+
+
+testthat::test_that("Concept Prevalence - table does not exist", {
+  if (dbms == "postgresql") {
+    connection <-
+      DatabaseConnector::connect(connectionDetails = connectionDetails)
+
+    testthat::expect_error(
+      getConceptPrevalenceCounts(
+        conceptIds = 0,
+        connection = connection,
+        conceptPrevalenceSchema = cdmDatabaseSchema
+      )
+    )
+
+    testthat::expect_error(
+      getRecommendedStandard(
+        conceptIds = 0,
+        vocabularyDatabaseSchema = cdmDatabaseSchema,
+        connection = connection,
+        conceptPrevalenceSchema = cdmDatabaseSchema
+      )
+    )
+
+    testthat::expect_error(
+      getRecommendedSource(
+        conceptIds = 0,
+        vocabularyDatabaseSchema = cdmDatabaseSchema,
+        connection = connection,
+        conceptPrevalenceSchema = cdmDatabaseSchema
+      )
+    )
+
+    DatabaseConnector::disconnect(connection = connection)
+  }
+})
