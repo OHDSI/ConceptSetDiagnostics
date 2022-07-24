@@ -17,13 +17,16 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ConceptSetDiagnostics</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.2</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav"><li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"></ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -47,31 +50,17 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">getRecommendationForConceptSetExpression</span><span class="op">(</span></span>
 <span>  <span class="va">conceptSetExpression</span>,</span>
 <span>  vocabularyDatabaseSchema <span class="op">=</span> <span class="st">"vocabulary"</span>,</span>
-<span>  vocabularyIdOfInterest <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"SNOMED"</span>, <span class="st">"HCPCS"</span>, <span class="st">"ICD10CM"</span>, <span class="st">"ICD10"</span>, <span class="st">"ICD9CM"</span>, <span class="st">"ICD9"</span>,</span>
-<span>    <span class="st">"Read"</span><span class="op">)</span>,</span>
-<span>  domainIdOfInterest <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Condition"</span>, <span class="st">"Procedure"</span>, <span class="st">"Observation"</span><span class="op">)</span>,</span>
 <span>  connection <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  connectionDetails <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  conceptPrevalenceSchema <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  conceptPrevalenceSchema <span class="op">=</span> <span class="st">"concept_prevalence"</span>,</span>
+<span>  tempEmulationSchema <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"sqlRenderTempEmulationSchema"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>conceptSetExpression</dt>
-<dd><p>An R-object (list) with expression of the concept set.</p></dd>
-
-
-<dt>vocabularyDatabaseSchema</dt>
+    <dl><dt>vocabularyDatabaseSchema</dt>
 <dd><p>The schema name of containing the vocabulary tables.</p></dd>
-
-
-<dt>vocabularyIdOfInterest</dt>
-<dd><p>A list of vocabulary id from OMOP to filter the results</p></dd>
-
-
-<dt>domainIdOfInterest</dt>
-<dd><p>A list of domain id from OMOP to filter the results</p></dd>
 
 
 <dt>connection</dt>
@@ -89,11 +78,19 @@ DatabaseConnector package. Can be left NULL if <code>connection</code> is
 provided.</p></dd>
 
 
-<dt>conceptPrevalenceTable</dt>
-<dd><p>A reference table (can be schemaName.tableName) that
-holds the concept prevalence data. The required fields are
-concept_id, rc, drc, dbc, ddbc. In case of error,
-cocneptPrevalence is silently ignored.</p></dd>
+<dt>conceptPrevalenceSchema</dt>
+<dd><p>The schema name that has the concept prevalence table. The following
+tables are expected to be present. recommender_set,
+cp_master, recommended_blacklist.</p></dd>
+
+
+<dt>tempEmulationSchema</dt>
+<dd><p>Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
+tables, provide a schema with write privileges where temp tables can be created.</p></dd>
+
+
+<dt>conceptIds</dt>
+<dd><p>An array of Concept ids.</p></dd>
 
 </dl></div>
     <div id="value">

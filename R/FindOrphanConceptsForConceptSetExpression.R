@@ -15,10 +15,10 @@
 # limitations under the License.
 #
 
-#' Get recommended concepts for a concept set expression.
+#' Find orphan concepts for a concept set expression.
 #'
 #' @description
-#' Get recommended concepts for a concept set expression.
+#' Find orphan concepts for a concept set expression.
 #'
 #' @template Connection
 #'
@@ -26,20 +26,17 @@
 #'
 #' @template VocabularyDatabaseSchema
 #'
-#' @template ConceptPrevalenceSchema
-#'
 #' @template TempEmulationSchema
 #'
 #' @return
 #' Returns a tibble data frame.
 #'
 #' @export
-getRecommendationForConceptSetExpression <-
+findOrphanConcepts <-
   function(conceptSetExpression,
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
            connectionDetails = NULL,
-           conceptPrevalenceSchema = "concept_prevalence",
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
     resolvedConceptIds <-
       resolveConceptSetExpression(
@@ -49,28 +46,32 @@ getRecommendationForConceptSetExpression <-
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
 
-    recommendedStandard <-
-      getRecommendedStandard(
-        conceptIds = resolvedConceptIds$conceptId %>% unique(),
-        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-        connection = connection,
-        connectionDetails = connectionDetails,
-        conceptPrevalenceSchema = conceptPrevalenceSchema,
-        tempEmulationSchema = tempEmulationSchema
+    mappedConceptIds <-
+      dplyr::bind_rows(
+        getMappedSourceConcepts(
+          conceptIds = resolvedConceptIds$conceptId,
+          connection = connection,
+          connectionDetails = connectionDetails,
+          tempEmulationSchema = tempEmulationSchema,
+          vocabularyDatabaseSchema = vocabularyDatabaseSchema
+        ),
+        getMappedStandardConcepts(
+          conceptIds = resolvedConceptIds$conceptId,
+          connection = connection,
+          connectionDetails = connectionDetails,
+          tempEmulationSchema = tempEmulationSchema,
+          vocabularyDatabaseSchema = vocabularyDatabaseSchema
+        )
       )
 
-    recommendedSource <-
-      getRecommendedSource(
-        conceptIds = resolvedConceptIds$conceptId %>% unique(),
-        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-        connection = connection,
+    orphanConcepts <-
+      findOrphanConcepts(
         connectionDetails = connectionDetails,
-        conceptPrevalenceSchema = conceptPrevalenceSchema,
-        tempEmulationSchema = tempEmulationSchema
+        connection = connection,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        tempEmulationSchema = tempEmulationSchema,
+        conceptIds = c(resolvedConceptIds$conceptId, mappedConceptIds$conceptId) %>% unique()
       )
 
-    data <- list()
-    data$recommendedStandard <- recommendedStandard
-    data$recommendedSource <- recommendedSource
-    return(data)
+    return(orphanConcepts)
   }
