@@ -31,23 +31,22 @@ performStringSearchForConcepts <-
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
            connectionDetails = NULL) {
-    if (nchar(searchString) <= 3) {
-      stop("search string is shorter than 3 characters.")
+    if (nchar(searchString) <= 4) {
+      writeLines("search string is shorter than 4 characters.")
+      return(NULL)
     }
-
+    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-
+    
     fieldsInConceptTable <-
-      DatabaseConnector::dbListFields(
-        conn = connection,
-        name = "concept"
-      )
+      DatabaseConnector::dbListFields(conn = connection,
+                                      name = "concept")
     fieldsInConceptTable <-
       tolower(sort(unique(fieldsInConceptTable)))
-
+    
     if (tolower("FULL_TEXT_SEARCH") %in% fieldsInConceptTable) {
       sql <- SqlRender::loadRenderTranslateSql(
         sqlFilename = "SearchStringTsv.sql",
@@ -61,7 +60,7 @@ performStringSearchForConcepts <-
       # also making search string of lower case - to make search uniform.
       searchString <-
         stringr::str_squish(tolower(gsub("[^a-zA-Z0-9 ,]", " ", searchString)))
-
+      
       sql <- SqlRender::loadRenderTranslateSql(
         sqlFilename = "SearchString.sql",
         packageName = "ConceptSetDiagnostics",
@@ -70,7 +69,7 @@ performStringSearchForConcepts <-
         search_string = searchString
       )
     }
-
+    
     data <-
       DatabaseConnector::querySql(
         sql = sql,
@@ -78,5 +77,23 @@ performStringSearchForConcepts <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       dplyr::tibble()
+    
+    data <- data %>%
+      dplyr::mutate(
+        standardConceptCaption = dplyr::case_when(
+          .data$standardConcept == "S" ~ "Standard",
+          .data$standardConcept == "C" ~ "Classification",
+          TRUE ~ "Non-Standard"
+        )
+      ) %>%
+      dplyr::mutate(
+        invalidReasonCaption = dplyr::case_when(
+          invalidReason == "V" ~ "Valid",
+          invalidReason == "D" ~ "Deleted",
+          invalidReason == "U" ~ "Updated",
+          TRUE ~ "Valid"
+        )
+      )
+    
     return(data)
   }

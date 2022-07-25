@@ -1,0 +1,260 @@
+# Copyright 2022 Observational Health Data Sciences and Informatics
+#
+# This file is part of ConceptSetDiagnostics
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+#' given a search string (s) perform concept set diagnostics
+#'
+#' @description
+#' given an array of comma separated quoted search string (s), this function will perform a series 
+#' of operations that provides a recommended concept set expression, along with
+#' potentially more recommended and orphan concepts.
+#'
+#' @param searchPhrases        An array of text-phrases within quotations that are seperated by commas.
+#'
+#' @template Connection
+#'
+#' @template VocabularyDatabaseSchema
+#'
+#' @template TempEmulationSchema
+#' 
+#' @template ConceptPrevalenceSchema
+#'
+#' @param exportResults       Do you want to export results?
+#'
+#' @param locationForResults  If you want to export results, please provide disk drive location
+#'
+#' @param vocabularyIdOfInterest A list of vocabulary ids to filter the results.
+#'
+#' @param domainIdOfInterest     A list of domain ids to filter the results.
+#' 
+#' @export
+performConceptSetDiagnostics <-
+  function(searchPhrases,
+           connection = NULL,
+           connectionDetails = NULL,
+           conceptPrevalenceSchema = NULL,
+           exportResults = FALSE,
+           locationForResults = NULL,
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
+           vocabularyDatabaseSchema = "vocabulary",
+           vocabularyIdOfInterest = c("SNOMED", "HCPCS", "ICD10CM", "ICD10", "ICD9CM", "ICD9", "Read"),
+           domainIdOfInterest = c("Condition", "Procedure", "Observation")) {
+    
+    if (!hasData(searchPhrases)) {
+      writeLines(
+        "searchPhrases does not have data. No search performed."
+      )
+      return(NULL)
+    }
+    
+    eligibleToBeSearched <- searchPhrases[nchar(searchPhrases) >= 3]
+    
+    if (length(dplyr::setdiff(x = searchPhrases, y = eligibleToBeSearched)) > 0) {
+      writeLines(text = paste0("The following phrases are less than 4 characters and will not be searched: '", 
+                               paste0(dplyr::setdiff(x = searchPhrases, y = eligibleToBeSearched), 
+                                      collapse = "', '"),
+                               "'"))
+    }
+    
+    if (length(eligibleToBeSearched) == 0) {
+      writeLines(
+        "No search phrases have more than 3 characters. No search performed."
+      )
+      return(NULL)
+    }
+    
+    if (is.null(connection)) {
+      connection <- DatabaseConnector::connect(connectionDetails)
+      on.exit(DatabaseConnector::disconnect(connection))
+    }
+    
+    writeLines(" - Performing search for the phrases: '", paste0(eligibleToBeSearched, collapse = "', '"), "'")
+    stringSearchResults <- c()
+    for (i in (1:length(eligibleToBeSearched))) {
+      stringSearchResults[[eligibleToBeSearched[i]]] <-
+        performStringSearchForConcepts(
+          searchString = eligibleToBeSearched[i],
+          vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+          connection = connection
+        )
+    }
+    
+    conceptSetExpression <- dplyr::tibble(dplyr::bind_rows(stringSearchResults) %>% 
+                                            dplyr::select(.data$conceptId,
+                                                          .data$conceptName,
+                                                          .data$domainId,
+                                                          .data$vocabularyId,
+                                                          .data$standardConcept,
+                                                          .data$standardConceptCaption,
+                                                          .data$invalidReason,
+                                                          .data$invalidReasonCaption,
+                                                          .data$conceptCode,
+                                                          .data$conceptClassId) %>% 
+                                            dplyr::distinct()) %>% 
+      convertConceptSetDataFrameToExpression(selectAllDescendants = TRUE, 
+                                             updateVocabularyFields = FALSE)
+    
+    
+    writeLines(" - Creating concept sets from returned concepts and Optimizing.")
+    # optimize
+    optimized <- optimizeConceptSetExpression(
+      conceptSetExpression = conceptSetExpression,
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      tempEmulationSchema = tempEmulationSchema,
+      connection = connection
+    )
+    
+    # remove invalid
+    optimizedConceptSetExpression <- optimized$optimizedConceptSetExpression %>% 
+      convertConceptSetExpressionToDataFrame() %>% 
+      dplyr::filter(.data$invalidReason %in% c('', 'V')) %>% 
+      convertConceptSetDataFrameToExpression()
+    rm("optimized")
+    
+    # filter to domain of interest
+    if (length(domainIdOfInterest) > 0) {
+      optimizedConceptSetExpression <- optimizedConceptSetExpression %>% 
+        convertConceptSetExpressionToDataFrame() %>% 
+        dplyr::filter(.data$domainId %in% c(domainIdOfInterest)) %>% 
+        convertConceptSetDataFrameToExpression()
+    }
+    
+    # filter to vocabulary of interest
+    if (length(vocabularyIdOfInterest) > 0) {
+      optimizedConceptSetExpression <- optimizedConceptSetExpression %>% 
+        convertConceptSetExpressionToDataFrame() %>% 
+        dplyr::filter(.data$vocabularyId %in% c(vocabularyIdOfInterest)) %>% 
+        convertConceptSetDataFrameToExpression()
+    }
+    
+    writeLines(" - Finding recommended based on concept prevalence study.")
+    recommended <- getRecommendationForConceptSetExpression(
+      conceptSetExpression = optimizedConceptSetExpression, 
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      connection = connection,
+      conceptPrevalenceSchema = conceptPrevalenceSchema,
+      tempEmulationSchema = tempEmulationSchema
+    )
+    
+    writeLines(" - Searching for potential orphans using string similarity.")
+    orphan <- findOrphanConceptsForConceptSetExpression(
+      conceptSetExpression = optimized$optimizedConceptSetExpression, 
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      connection = connection,
+      conceptPrevalenceSchema = conceptPrevalenceSchema,
+      tempEmulationSchema = tempEmulationSchema
+    )
+    
+    allConceptIds <- c()
+
+    optimizedConceptSetExpression <-
+      convertConceptSetExpressionToDataFrame(conceptSetExpression = optimizedConceptSetExpression) %>%
+      dplyr::arrange(
+        dplyr::desc(.data$dbc),
+        dplyr::desc(.data$drc),
+        dplyr::desc(.data$ddbc),
+        dplyr::desc(.data$dbc)
+      ) %>%
+      convertConceptSetDataFrameToExpression()
+    
+    resolvedConceptIds <-
+      resolveConceptSetExpression(
+        connection = connection,
+        conceptSetExpression = optimizedConceptSetExpression,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        conceptPrevalenceTable = conceptPrevalenceTable
+      )
+    browser()
+    recommendedConceptIds <-
+      getRecommendationForConceptSetExpression(
+        conceptSetExpression = conceptSetExpression,
+        connection = connection,
+        connectionDetails = connectionDetails,
+        vocabularyIdOfInterest = vocabularyIdOfInterest,
+        domainIdOfInterest = domainIdOfInterest
+      )
+    
+    searchResult <- list(
+      searchString = searchString,
+      searchResultConceptIds = searchResultConceptIds,
+      conceptSetExpressionDataFrame = conceptSetExpressionDataFrame,
+      resolvedConceptIds = resolvedConceptIds,
+      recommendedConceptIds = recommendedConceptIds
+    )
+    
+    if (exportResults) {
+      if (!is.null(locationForResults)) {
+        dir.create(path = locationForResults,
+                   showWarnings = FALSE,
+                   recursive = TRUE)
+        if (nrow(recommendedConceptIds$recommendedStandard) > 0) {
+          readr::write_excel_csv(
+            x = recommendedConceptIds$recommendedStandard,
+            file = file.path(
+              locationForResults,
+              paste0("recommendedStandard.csv")
+            ),
+            append = FALSE,
+            na = ""
+          )
+          writeLines(text = paste0(
+            "Wrote recommendedStandard.csv to ",
+            locationForResults
+          ))
+        } else {
+          writeLines(
+            text = paste0(
+              "No recommendation. recommendedStandard.csv is not written to ",
+              locationForResults
+            )
+          )
+          unlink(
+            x = file.path(
+              locationForResults,
+              paste0("recommendedStandard.csv")
+            ),
+            recursive = TRUE,
+            force = TRUE
+          )
+        }
+        if (nrow(recommendedConceptIds$recommendedSource) > 0) {
+          readr::write_excel_csv(
+            x = recommendedConceptIds$recommendedSource,
+            file = file.path(locationForResults,
+                             paste0("recommendedSource.csv")),
+            append = FALSE,
+            na = ""
+          )
+          writeLines(text = paste0("Wrote recommendedSource.csv to ",
+                                   locationForResults))
+        } else {
+          writeLines(
+            text = paste0(
+              "No recommendation. recommendedSource.csv is not written to ",
+              locationForResults
+            )
+          )
+          unlink(
+            x = file.path(locationForResults,
+                          paste0("recommendedSource.csv")),
+            recursive = TRUE,
+            force = TRUE
+          )
+        }
+      }
+    }
+    return(searchResult)
+  }

@@ -43,7 +43,7 @@ getRecommendationForConceptSetExpression <-
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
     resolvedConceptIds <-
       resolveConceptSetExpression(
-        conceptSetExpression,
+        conceptSetExpression = conceptSetExpression,
         connection = connection,
         connectionDetails = connectionDetails,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema

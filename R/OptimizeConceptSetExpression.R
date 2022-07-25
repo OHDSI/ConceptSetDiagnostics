@@ -32,16 +32,6 @@ optimizeConceptSetExpression <-
            connection = NULL,
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
            connectionDetails = NULL) {
-    conceptSetExpressionDataFrame <-
-      convertConceptSetExpressionToDataFrame(
-        connection = connection,
-        connectionDetails = connectionDetails,
-        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-        tempEmulationSchema = tempEmulationSchema,
-        conceptSetExpression =
-          conceptSetExpression
-      )
-
     optimizationRecommendation <-
       getOptimizationRecommendationForConceptSetExpression(
         connection = connection,
@@ -50,48 +40,24 @@ optimizeConceptSetExpression <-
         conceptSetExpression = conceptSetExpression,
         tempEmulationSchema = tempEmulationSchema
       )
-
-    removed <- optimizationRecommendation %>%
-      dplyr::mutate(isExcluded = as.logical(.data$excluded)) %>%
-      dplyr::filter(.data$removed == 1) %>%
-      dplyr::select(.data$conceptId, .data$isExcluded)
-
-    retained <- optimizationRecommendation %>%
-      dplyr::mutate(isExcluded = as.logical(.data$excluded)) %>%
-      dplyr::filter(.data$removed == 0) %>%
-      dplyr::anti_join(removed %>%
-        dplyr::select(.data$conceptId) %>%
-        dplyr::distinct(),
-      by = "conceptId"
+    
+    conceptSetExpressionDataFrame <- conceptSetExpression %>%
+      convertConceptSetExpressionToDataFrame()
+    
+    removed <- conceptSetExpressionDataFrame %>%
+      dplyr::anti_join(
+        optimizationRecommendation %>%
+          convertConceptSetExpressionToDataFrame() %>%
+          dplyr::select(.data$conceptId,
+                        .data$isExcluded),
+        by = c("conceptId", "isExcluded")
       ) %>%
-      dplyr::select(.data$conceptId, .data$isExcluded)
-
-    conceptSetExpressionDataFrame <- NULL
-    if (nrow(retained) > 0) {
-      conceptSetExpressionDataFrame <- conceptSetExpression %>%
-        convertConceptSetExpressionToDataFrame() %>%
-        dplyr::inner_join(retained, by = c("conceptId", "isExcluded"))
-    }
-
-    if (nrow(removed) > 0) {
-      removed <- conceptSetExpression %>%
-        convertConceptSetExpressionToDataFrame() %>%
-        dplyr::inner_join(removed, by = c("conceptId", "isExcluded"))
-    }
-
-    conceptSetExpressionDataFrame <-
-      conceptSetExpressionDataFrame %>%
-      dplyr::arrange(.data$conceptId)
-
-    conceptSetExpression <-
-      convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetExpressionDataFrame)
-
-    data <- list(
-      recommended = conceptSetExpression,
-      recommendedAsDataFrame = conceptSetExpressionDataFrame,
-      removed = removed
-    )
-
+      dplyr::select(dplyr::all_of(colnames(conceptSetExpressionDataFrame)))
+    
+    data <- list(optimizedConceptSetExpression = optimizationRecommendation,
+                 removedRecords = removed %>% 
+                   dplyr::distinct())
+    
     return(data)
   }
 
@@ -105,6 +71,7 @@ getOptimizationRecommendationForConceptSetExpression <-
            connection = NULL) {
     conceptSetExpressionDataFrame <-
       convertConceptSetExpressionToDataFrame(conceptSetExpression)
+    
     if (nrow(conceptSetExpressionDataFrame) <= 1) {
       # no optimization necessary
       return(
@@ -116,7 +83,7 @@ getOptimizationRecommendationForConceptSetExpression <-
           dplyr::select(.data$conceptId, .data$excluded, .data$removed)
       )
     }
-
+    
     # Set up connection to server----
     if (is.null(connection)) {
       if (!is.null(connectionDetails)) {
@@ -124,78 +91,171 @@ getOptimizationRecommendationForConceptSetExpression <-
         on.exit(DatabaseConnector::disconnect(connection))
       }
     }
-
-    conceptSetConceptIdsExcluded <-
-      conceptSetExpressionDataFrame %>%
-      dplyr::filter(.data$isExcluded == TRUE) %>%
-      dplyr::pull(.data$conceptId)
-
-    conceptSetConceptIdsDescendantsExcluded <-
-      conceptSetExpressionDataFrame %>%
-      dplyr::filter(.data$isExcluded == TRUE) %>%
-      dplyr::filter(.data$includeDescendants == TRUE) %>%
-      dplyr::pull(.data$conceptId)
-
-    conceptSetConceptIdsNotExcluded <-
+    
+    includedConcepts <-
       conceptSetExpressionDataFrame %>%
       dplyr::filter(!.data$isExcluded == TRUE) %>%
       dplyr::pull(.data$conceptId)
-
-    conceptSetConceptIdsDescendantsNotExcluded <-
+    
+    includedConceptsWithDescendants <-
       conceptSetExpressionDataFrame %>%
       dplyr::filter(!.data$isExcluded == TRUE) %>%
       dplyr::filter(.data$includeDescendants == TRUE) %>%
       dplyr::pull(.data$conceptId)
-
-    if (!hasData(conceptSetConceptIdsExcluded)) {
-      conceptSetConceptIdsExcluded <- 0
+    
+    excludedConcepts <-
+      conceptSetExpressionDataFrame %>%
+      dplyr::filter(.data$isExcluded == TRUE) %>%
+      dplyr::pull(.data$conceptId)
+    
+    excludedConceptsWithDescendants <-
+      conceptSetExpressionDataFrame %>%
+      dplyr::filter(.data$isExcluded == TRUE) %>%
+      dplyr::filter(.data$includeDescendants == TRUE) %>%
+      dplyr::pull(.data$conceptId)
+    
+    inlcudedConceptSetExpression <- dplyr::tibble()
+    if (length(includedConcepts) > 0) {
+      if (length(includedConcepts) > 1) {
+        sql <- SqlRender::loadRenderTranslateSql(
+          sqlFilename = "OptimizeConceptSet.sql",
+          packageName = "ConceptSetDiagnostics",
+          dbms = connection@dbms,
+          tempEmulationSchema = tempEmulationSchema,
+          vocabulary_database_schema = vocabularyDatabaseSchema,
+          conceptIds = includedConcepts,
+          conceptIdsWithIncludeDescendants = includedConceptsWithDescendants
+        )
+        
+        DatabaseConnector::executeSql(
+          connection = connection,
+          sql = sql,
+          reportOverallTime = FALSE,
+          progressBar = FALSE
+        )
+        
+        included <-
+          DatabaseConnector::renderTranslateQuerySql(
+            connection = connection,
+            sql = "SELECT * FROM #optimized;",
+            tempEmulationSchema = tempEmulationSchema,
+            snakeCaseToCamelCase = TRUE
+          ) %>%
+          dplyr::tibble()
+        
+        sqlCleanUp <- "DROP TABLE IF EXISTS #optimized;"
+        
+        DatabaseConnector::renderTranslateExecuteSql(
+          connection = connection,
+          sql = sqlCleanUp,
+          reportOverallTime = FALSE,
+          progressBar = FALSE
+        )
+      } else if (length(includedConcepts) == 0) {
+        included <- dplyr::tibble(
+          originalConceptId = includedConcepts,
+          replacementConceptId = includedConcepts,
+          removedConceptId = NA
+        )
+      }
+      inlcudedConceptSetExpression <-
+        conceptSetExpressionDataFrame %>%
+        dplyr::filter(.data$isExcluded == FALSE) %>%
+        dplyr::inner_join(
+          included %>%
+            dplyr::select(.data$originalConceptId,
+                          .data$replacementConceptId),
+          by = c("conceptId" = "originalConceptId")
+        ) %>%
+        dplyr::select(-.data$conceptId) %>%
+        dplyr::rename("conceptId" = .data$replacementConceptId) %>%
+        dplyr::select(
+          .data$conceptId,
+          .data$includeMapped,
+          .data$includeDescendants,
+          .data$isExcluded
+        ) %>%
+        dplyr::distinct()
     }
-    if (!hasData(conceptSetConceptIdsDescendantsExcluded)) {
-      conceptSetConceptIdsDescendantsExcluded <- 0
+    
+    
+    excludedConceptSetExpression <- dplyr::tibble()
+    if (length(excludedConcepts) > 0) {
+      if (length(excludedConcepts) > 1) {
+        sql <- SqlRender::loadRenderTranslateSql(
+          sqlFilename = "OptimizeConceptSet.sql",
+          packageName = "ConceptSetDiagnostics",
+          dbms = connection@dbms,
+          tempEmulationSchema = tempEmulationSchema,
+          vocabulary_database_schema = vocabularyDatabaseSchema,
+          conceptIds = excludedConcepts,
+          conceptIdsWithIncludeDescendants = excludedConceptsWithDescendants
+        )
+        
+        DatabaseConnector::executeSql(
+          connection = connection,
+          sql = sql,
+          reportOverallTime = FALSE,
+          progressBar = FALSE
+        )
+        
+        excluded <-
+          DatabaseConnector::renderTranslateQuerySql(
+            connection = connection,
+            sql = "SELECT * FROM #optimized;",
+            tempEmulationSchema = tempEmulationSchema,
+            snakeCaseToCamelCase = TRUE
+          ) %>%
+          dplyr::tibble()
+        
+        sqlCleanUp <- "DROP TABLE IF EXISTS #optimized;"
+        
+        DatabaseConnector::renderTranslateExecuteSql(
+          connection = connection,
+          sql = sqlCleanUp,
+          reportOverallTime = FALSE,
+          progressBar = FALSE
+        )
+      } else if (length(excludedConcepts) == 1) {
+        excluded <- dplyr::tibble(
+          originalConceptId = excludedConcepts,
+          replacementConceptId = excludedConcepts,
+          removedConceptId = NA
+        )
+      }
+      excludedConceptSetExpression <-
+        conceptSetExpressionDataFrame %>%
+        dplyr::filter(.data$isExcluded == TRUE) %>%
+        dplyr::inner_join(
+          excluded %>%
+            dplyr::select(.data$originalConceptId,
+                          .data$replacementConceptId),
+          by = c("conceptId" = "originalConceptId")
+        ) %>%
+        dplyr::select(-.data$conceptId) %>%
+        dplyr::rename("conceptId" = .data$replacementConceptId) %>%
+        dplyr::select(
+          .data$conceptId,
+          .data$includeMapped,
+          .data$includeDescendants,
+          .data$isExcluded
+        ) %>%
+        dplyr::distinct()
     }
-    if (!hasData(conceptSetConceptIdsNotExcluded)) {
-      conceptSetConceptIdsNotExcluded <- 0
-    }
-    if (!hasData(conceptSetConceptIdsDescendantsNotExcluded)) {
-      conceptSetConceptIdsDescendantsNotExcluded <- 0
-    }
-
-    sql <- SqlRender::loadRenderTranslateSql(
-      sqlFilename = "OptimizeConceptSet.sql",
-      packageName = "ConceptSetDiagnostics",
-      dbms = connection@dbms,
-      tempEmulationSchema = tempEmulationSchema,
-      vocabulary_database_schema = vocabularyDatabaseSchema,
-      conceptSetConceptIdsExcluded = conceptSetConceptIdsExcluded,
-      conceptSetConceptIdsDescendantsExcluded = conceptSetConceptIdsDescendantsExcluded,
-      conceptSetConceptIdsNotExcluded = conceptSetConceptIdsNotExcluded,
-      conceptSetConceptIdsDescendantsNotExcluded = conceptSetConceptIdsDescendantsNotExcluded
-    )
-
-    DatabaseConnector::executeSql(
-      connection = connection,
-      sql = sql,
-      reportOverallTime = FALSE,
-      progressBar = FALSE
-    )
-
-    data <-
-      DatabaseConnector::renderTranslateQuerySql(
-        connection = connection,
-        sql = "SELECT * FROM #optimized_set;",
-        tempEmulationSchema = tempEmulationSchema,
-        snakeCaseToCamelCase = TRUE
+    
+    finalConceptSetExpressionDf <-
+      dplyr::bind_rows(inlcudedConceptSetExpression,
+                       excludedConceptSetExpression) %>%
+      dplyr::arrange(.data$conceptId,
+                     .data$isExcluded)
+    
+    finalConceptSetExpression <- finalConceptSetExpressionDf  %>% 
+      dplyr::distinct() %>%
+      convertConceptSetDataFrameToExpression(
+        updateVocabularyFields = TRUE,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        connection = connection
       )
-
-    sqlCleanUp <- "DROP TABLE IF EXISTS #optimized_set;"
-
-    DatabaseConnector::renderTranslateExecuteSql(
-      connection = connection,
-      sql = sqlCleanUp,
-      reportOverallTime = FALSE,
-      progressBar = FALSE
-    )
-    data <- data %>%
-      dplyr::filter(.data$conceptId != 0)
-    return(data)
+    
+    return(finalConceptSetExpression)
   }
