@@ -22,7 +22,7 @@
 #'
 #' @template Connection
 #'
-#' @template ConceptIds
+#' @template ConceptSetExpression
 #'
 #' @template VocabularyDatabaseSchema
 #'

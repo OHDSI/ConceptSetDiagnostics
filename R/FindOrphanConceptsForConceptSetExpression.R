@@ -20,9 +20,9 @@
 #' @description
 #' Find orphan concepts for a concept set expression.
 #'
-#' @template Connection
+#' @template ConceptSetExpression
 #'
-#' @template ConceptIds
+#' @template Connection
 #'
 #' @template VocabularyDatabaseSchema
 #'

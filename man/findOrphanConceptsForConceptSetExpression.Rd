@@ -13,6 +13,8 @@ findOrphanConceptsForConceptSetExpression(
 )
 }
 \arguments{
+\item{conceptSetExpression}{An R-object (list) with expression of the concept set.}
+
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 
 \item{connection}{An object of type \code{connection} as created using the
@@ -28,8 +30,6 @@ provided.}
 
 \item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
 tables, provide a schema with write privileges where temp tables can be created.}
-
-\item{conceptIds}{An array of Concept ids.}
 }
 \value{
 Returns a tibble data frame.
