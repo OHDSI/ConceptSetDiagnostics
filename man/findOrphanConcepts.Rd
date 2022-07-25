@@ -7,8 +7,7 @@
 findOrphanConcepts(
   connectionDetails = NULL,
   connection = NULL,
-  cdmDatabaseSchema,
-  vocabularyDatabaseSchema = cdmDatabaseSchema,
+  vocabularyDatabaseSchema = "vocabulary",
   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
   conceptIds
 )
@@ -24,10 +23,6 @@ provided.}
 DatabaseConnector package. Can be left NULL if \code{connectionDetails}
 is provided, in which case a new connection will be opened at the start
 of the function, and closed when the function finishes.}
-
-\item{cdmDatabaseSchema}{Schema name where your patient-level data in OMOP CDM format resides.
-Note that for SQL Server, this should include both the database and
-schema name, for example 'cdm_data.dbo'.}
 
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 

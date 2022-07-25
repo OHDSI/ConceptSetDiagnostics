@@ -36,6 +36,21 @@ testthat::test_that("Concept Prevalence - connection", {
       expected = 0
     )
 
+    recommendedFromDataFrame <-
+      getRecommendationForConceptSetExpression(
+        conceptSetExpression = convertConceptSetDataFrameToExpression(
+          conceptSetExpressionDataFrame = dplyr::tibble(conceptId = 0),
+          selectAllDescendants = TRUE
+        ),
+        vocabularyDatabaseSchema = cdmDatabaseSchema,
+        connection = connection,
+        conceptPrevalenceSchema = "concept_prevalence"
+      )
+    testthat::expect_gte(
+      object = nrow(recommendedStandard),
+      expected = 0
+    )
+
     DatabaseConnector::disconnect(connection = connection)
   }
 })
@@ -75,6 +90,17 @@ testthat::test_that("Concept Prevalence - connectionDetails", {
       object = nrow(recommendedSource),
       expected = 0
     )
+
+    recommendedFromDataFrame <-
+      getRecommendationForConceptSetExpression(
+        conceptSetExpression = convertConceptSetDataFrameToExpression(
+          conceptSetExpressionDataFrame = dplyr::tibble(conceptId = 0),
+          selectAllDescendants = TRUE
+        ),
+        vocabularyDatabaseSchema = cdmDatabaseSchema,
+        connectionDetails = connectionDetails,
+        conceptPrevalenceSchema = "concept_prevalence"
+      )
   }
 })
 
@@ -105,7 +131,7 @@ testthat::test_that("Concept Prevalence - table does not exist", {
       getRecommendedSource(
         conceptIds = 0,
         vocabularyDatabaseSchema = cdmDatabaseSchema,
-        connection = connection,
+        connectionDetails = connectionDetails,
         conceptPrevalenceSchema = cdmDatabaseSchema
       )
     )

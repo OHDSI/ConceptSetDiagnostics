@@ -24,8 +24,6 @@
 #'
 #' @template VocabularyDatabaseSchema
 #'
-#' @template CdmDatabaseSchema
-#'
 #' @template TempEmulationSchema
 #'
 #' @param conceptIds an array of conceptIds that are used as reference to search for orphan concepts
@@ -36,8 +34,7 @@
 #' @export
 findOrphanConcepts <- function(connectionDetails = NULL,
                                connection = NULL,
-                               cdmDatabaseSchema,
-                               vocabularyDatabaseSchema = cdmDatabaseSchema,
+                               vocabularyDatabaseSchema = "vocabulary",
                                tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
                                conceptIds) {
   if (is.null(connection)) {

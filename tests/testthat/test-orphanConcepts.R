@@ -4,12 +4,24 @@ testthat::test_that("Orphan Concepts - connection", {
 
   orphanConcepts <- findOrphanConcepts(
     connection = connection,
-    cdmDatabaseSchema = cdmDatabaseSchema,
     vocabularyDatabaseSchema = cdmDatabaseSchema,
     conceptIds = -1
   )
   testthat::expect_gte(
     object = nrow(orphanConcepts),
+    expected = 0
+  )
+
+  orphanConceptDf <- findOrphanConceptsForConceptSetExpression(
+    connection = connection,
+    vocabularyDatabaseSchema = cdmDatabaseSchema,
+    conceptSetExpression = convertConceptSetDataFrameToExpression(
+      conceptSetExpressionDataFrame = dplyr::tibble(conceptId = -1),
+      selectAllDescendants = TRUE
+    )
+  )
+  testthat::expect_gte(
+    object = nrow(orphanConceptDf),
     expected = 0
   )
 
@@ -20,12 +32,24 @@ testthat::test_that("Orphan Concepts - connection", {
 testthat::test_that("Orphan Concepts - connectionDetails", {
   orphanConcepts <- findOrphanConcepts(
     connectionDetails = connectionDetails,
-    cdmDatabaseSchema = cdmDatabaseSchema,
     vocabularyDatabaseSchema = cdmDatabaseSchema,
     conceptIds = -1
   )
   testthat::expect_gte(
     object = nrow(orphanConcepts),
+    expected = 0
+  )
+
+  orphanConceptDf <- findOrphanConceptsForConceptSetExpression(
+    connectionDetails = connectionDetails,
+    vocabularyDatabaseSchema = cdmDatabaseSchema,
+    conceptSetExpression = convertConceptSetDataFrameToExpression(
+      conceptSetExpressionDataFrame = dplyr::tibble(conceptId = -1),
+      selectAllDescendants = TRUE
+    )
+  )
+  testthat::expect_gte(
+    object = nrow(orphanConceptDf),
     expected = 0
   )
 })
