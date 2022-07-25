@@ -4,7 +4,6 @@ testthat::test_that("Orphan Concepts - connection", {
 
   orphanConcepts <- findOrphanConcepts(
     connection = connection,
-    cdmDatabaseSchema = cdmDatabaseSchema,
     vocabularyDatabaseSchema = cdmDatabaseSchema,
     conceptIds = -1
   )
@@ -15,7 +14,6 @@ testthat::test_that("Orphan Concepts - connection", {
 
   orphanConceptDf <- findOrphanConceptsForConceptSetExpression(
     connection = connection,
-    cdmDatabaseSchema = cdmDatabaseSchema,
     vocabularyDatabaseSchema = cdmDatabaseSchema,
     conceptSetExpression = convertConceptSetDataFrameToExpression(
       conceptSetExpressionDataFrame = dplyr::tibble(conceptId = -1),
@@ -34,7 +32,6 @@ testthat::test_that("Orphan Concepts - connection", {
 testthat::test_that("Orphan Concepts - connectionDetails", {
   orphanConcepts <- findOrphanConcepts(
     connectionDetails = connectionDetails,
-    cdmDatabaseSchema = cdmDatabaseSchema,
     vocabularyDatabaseSchema = cdmDatabaseSchema,
     conceptIds = -1
   )
@@ -45,7 +42,6 @@ testthat::test_that("Orphan Concepts - connectionDetails", {
 
   orphanConceptDf <- findOrphanConceptsForConceptSetExpression(
     connectionDetails = connectionDetails,
-    cdmDatabaseSchema = cdmDatabaseSchema,
     vocabularyDatabaseSchema = cdmDatabaseSchema,
     conceptSetExpression = convertConceptSetDataFrameToExpression(
       conceptSetExpressionDataFrame = dplyr::tibble(conceptId = -1),
