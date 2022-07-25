@@ -32,7 +32,7 @@
 #' Returns a tibble data frame.
 #'
 #' @export
-findOrphanConcepts <-
+findOrphanConceptsForConceptSetExpression <-
   function(conceptSetExpression,
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
