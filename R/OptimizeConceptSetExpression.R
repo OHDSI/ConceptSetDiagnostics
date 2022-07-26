@@ -58,13 +58,16 @@ optimizeConceptSetExpression <-
       ) %>%
       dplyr::select(dplyr::all_of(colnames(conceptSetExpressionDataFrame)))
     
+    optimizedConceptSetDf <- optimizationRecommendation %>%
+      convertConceptSetExpressionToDataFrame()
+    
     data <-
       list(
         optimizedConceptSetExpression = optimizationRecommendation,
+        optimizedConceptSet = optimizedConceptSetDf,
         removedRecords = removed %>%
           dplyr::distinct()
       )
-    
     return(data)
   }
 
