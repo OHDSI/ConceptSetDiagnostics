@@ -3,11 +3,12 @@ DROP TABLE IF EXISTS #concept_synonyms;
 DROP TABLE IF EXISTS #search_strings;
 DROP TABLE IF EXISTS #search_str_top1000;
 DROP TABLE IF EXISTS #search_string_subset;
+DROP TABLE IF EXISTS #eligible_concepts;
 DROP TABLE IF EXISTS @orphan_concept_table;
 
 
 -- Find directly included concept and source concepts that map to those
-SELECT concept_id,
+SELECT DISTINCT concept_id,
 	concept_name
 INTO #starting_concepts
 FROM (
@@ -43,7 +44,7 @@ INTO #concept_synonyms
 FROM #starting_concepts sc1
 INNER JOIN @vocabulary_database_schema.concept_synonym cs1
 	ON sc1.concept_id = cs1.concept_id
-WHERE concept_synonym_name IS NOT NULL;
+WHERE cs1.concept_synonym_name IS NOT NULL;
 
 -- Create list of search strings from concept names and synonyms, discarding those short than 5 and longer than 50 characters
 SELECT concept_name,
@@ -89,19 +90,24 @@ WHERE rn1 < 1000;
 SELECT ss1.*
 INTO #search_string_subset
 FROM #search_str_top1000 ss1
-WHERE ss1.concept_name NOT IN (
-		SELECT ss1.concept_name
-		FROM #search_str_top1000 ss1
-		INNER JOIN #search_str_top1000 ss2
-			ON ss2.concept_name_length < ss1.concept_name_length
+LEFT JOIN #search_str_top1000 ss2
+ON ss2.concept_name_length < ss1.concept_name_length
 				AND ss1.concept_name LIKE CONCAT (
 					'%',
 					ss2.concept_name,
 					'%'
 					)
-		);
+;
+		
+-- remove if it is the start set
+SELECT c1.*
+INTO #eligble_concept
+FROM @vocabulary_database_schema.concept c1
+LEFT JOIN #starting_concepts sc1
+	ON c1.concept_id = sc1.concept_id
+WHERE sc1.concept_id IS NULL;
 
--- Create recommended list: concepts containing search string but not mapping to start set
+-- Create recommended list: concepts containing search string 
 SELECT DISTINCT c1.concept_id,
                 c1.concept_name,
                 c1.domain_id,
@@ -113,13 +119,7 @@ SELECT DISTINCT c1.concept_id,
                 c1.valid_end_date,
                 c1.invalid_reason
 INTO @orphan_concept_table
-FROM (
-	SELECT c1.*
-	FROM @vocabulary_database_schema.concept c1
-	LEFT JOIN #starting_concepts sc1
-		ON c1.concept_id = sc1.concept_id
-	WHERE sc1.concept_id IS NULL
-	) c1
+FROM #eligble_concept c1
 INNER JOIN #search_string_subset ss1
 	ON LOWER(c1.concept_name) LIKE CONCAT (
 			'%',
@@ -132,3 +132,4 @@ DROP TABLE IF EXISTS #concept_synonyms;
 DROP TABLE IF EXISTS #search_strings;
 DROP TABLE IF EXISTS #search_str_top1000;
 DROP TABLE IF EXISTS #search_string_subset;
+DROP TABLE IF EXISTS #eligible_concepts;

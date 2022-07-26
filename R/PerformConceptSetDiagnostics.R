@@ -61,7 +61,6 @@ performConceptSetDiagnostics <-
     }
     
     eligibleToBeSearched <- searchPhrases[nchar(searchPhrases) >= 3]
-    
     if (length(dplyr::setdiff(x = searchPhrases, y = eligibleToBeSearched)) > 0) {
       writeLines(text = paste0("The following phrases are less than 4 characters and will not be searched: '", 
                                paste0(dplyr::setdiff(x = searchPhrases, y = eligibleToBeSearched), 
@@ -151,110 +150,89 @@ performConceptSetDiagnostics <-
     
     writeLines(" - Searching for potential orphans using string similarity.")
     orphan <- findOrphanConceptsForConceptSetExpression(
-      conceptSetExpression = optimized$optimizedConceptSetExpression, 
+      conceptSetExpression = optimizedConceptSetExpression, 
       vocabularyDatabaseSchema = vocabularyDatabaseSchema,
       connection = connection,
-      conceptPrevalenceSchema = conceptPrevalenceSchema,
       tempEmulationSchema = tempEmulationSchema
     )
     
-    allConceptIds <- c()
-
-    optimizedConceptSetExpression <-
-      convertConceptSetExpressionToDataFrame(conceptSetExpression = optimizedConceptSetExpression) %>%
-      dplyr::arrange(
-        dplyr::desc(.data$dbc),
-        dplyr::desc(.data$drc),
-        dplyr::desc(.data$ddbc),
-        dplyr::desc(.data$dbc)
-      ) %>%
-      convertConceptSetDataFrameToExpression()
-    
+    writeLines(" - Resolved concept ids.")
     resolvedConceptIds <-
       resolveConceptSetExpression(
-        connection = connection,
         conceptSetExpression = optimizedConceptSetExpression,
-        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-        conceptPrevalenceTable = conceptPrevalenceTable
-      )
-    browser()
-    recommendedConceptIds <-
-      getRecommendationForConceptSetExpression(
-        conceptSetExpression = conceptSetExpression,
         connection = connection,
         connectionDetails = connectionDetails,
-        vocabularyIdOfInterest = vocabularyIdOfInterest,
-        domainIdOfInterest = domainIdOfInterest
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
     
+    # get counts - from conceptPrevalence and from database
+    
     searchResult <- list(
-      searchString = searchString,
-      searchResultConceptIds = searchResultConceptIds,
-      conceptSetExpressionDataFrame = conceptSetExpressionDataFrame,
+      searchPhrases = searchPhrases,
+      eligibleToBeSearched = eligibleToBeSearched,
+      stringSearchResults = stringSearchResults,
+      optimizedConceptSetExpression = optimizedConceptSetExpression,
+      optimizedConceptSetExpressionDataFrame = optimizedConceptSetExpression %>% 
+        convertConceptSetExpressionToDataFrame(),
       resolvedConceptIds = resolvedConceptIds,
-      recommendedConceptIds = recommendedConceptIds
+      recommendedConceptIds = recommended,
+      orphanConcepts = orphan
     )
     
-    if (exportResults) {
-      if (!is.null(locationForResults)) {
-        dir.create(path = locationForResults,
-                   showWarnings = FALSE,
-                   recursive = TRUE)
-        if (nrow(recommendedConceptIds$recommendedStandard) > 0) {
-          readr::write_excel_csv(
-            x = recommendedConceptIds$recommendedStandard,
-            file = file.path(
-              locationForResults,
-              paste0("recommendedStandard.csv")
-            ),
-            append = FALSE,
-            na = ""
-          )
-          writeLines(text = paste0(
-            "Wrote recommendedStandard.csv to ",
-            locationForResults
-          ))
-        } else {
-          writeLines(
-            text = paste0(
-              "No recommendation. recommendedStandard.csv is not written to ",
-              locationForResults
-            )
-          )
-          unlink(
-            x = file.path(
-              locationForResults,
-              paste0("recommendedStandard.csv")
-            ),
-            recursive = TRUE,
-            force = TRUE
-          )
-        }
-        if (nrow(recommendedConceptIds$recommendedSource) > 0) {
-          readr::write_excel_csv(
-            x = recommendedConceptIds$recommendedSource,
-            file = file.path(locationForResults,
-                             paste0("recommendedSource.csv")),
-            append = FALSE,
-            na = ""
-          )
-          writeLines(text = paste0("Wrote recommendedSource.csv to ",
-                                   locationForResults))
-        } else {
-          writeLines(
-            text = paste0(
-              "No recommendation. recommendedSource.csv is not written to ",
-              locationForResults
-            )
-          )
-          unlink(
-            x = file.path(locationForResults,
-                          paste0("recommendedSource.csv")),
-            recursive = TRUE,
-            force = TRUE
-          )
-        }
-      }
-    }
+    # if (exportResults) {
+    #   if (!is.null(locationForResults)) {
+    #     dir.create(path = locationForResults,
+    #                showWarnings = FALSE,
+    #                recursive = TRUE)
+    #     if (nrow(recommendedConceptIds$recommendedStandard) > 0) {
+    #       readr::write_excel_csv(
+    #         x = recommendedConceptIds$recommendedStandard,
+    #         file = file.path(locationForResults,
+    #                          paste0("recommendedStandard.csv")),
+    #         append = FALSE,
+    #         na = ""
+    #       )
+    #       writeLines(text = paste0("Wrote recommendedStandard.csv to ",
+    #                                locationForResults))
+    #     } else {
+    #       writeLines(
+    #         text = paste0(
+    #           "No recommendation. recommendedStandard.csv is not written to ",
+    #           locationForResults
+    #         )
+    #       )
+    #       unlink(
+    #         x = file.path(locationForResults,
+    #                       paste0("recommendedStandard.csv")),
+    #         recursive = TRUE,
+    #         force = TRUE
+    #       )
+    #     }
+    #     if (nrow(recommendedConceptIds$recommendedSource) > 0) {
+    #       readr::write_excel_csv(
+    #         x = recommendedConceptIds$recommendedSource,
+    #         file = file.path(locationForResults,
+    #                          paste0("recommendedSource.csv")),
+    #         append = FALSE,
+    #         na = ""
+    #       )
+    #       writeLines(text = paste0("Wrote recommendedSource.csv to ",
+    #                                locationForResults))
+    #     } else {
+    #       writeLines(
+    #         text = paste0(
+    #           "No recommendation. recommendedSource.csv is not written to ",
+    #           locationForResults
+    #         )
+    #       )
+    #       unlink(
+    #         x = file.path(locationForResults,
+    #                       paste0("recommendedSource.csv")),
+    #         recursive = TRUE,
+    #         force = TRUE
+    #       )
+    #     }
+    #   }
+    # }
     return(searchResult)
   }
