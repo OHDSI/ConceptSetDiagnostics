@@ -9,7 +9,8 @@ performConceptSetDiagnostics(
   connection = NULL,
   connectionDetails = NULL,
   conceptPrevalenceSchema = NULL,
-  exportResults = FALSE,
+  runPhoebeRecommendation = TRUE,
+  runOrphan = FALSE,
   locationForResults = NULL,
   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
   vocabularyDatabaseSchema = "vocabulary",
@@ -36,7 +37,9 @@ provided.}
 tables are expected to be present. recommender_set,
 cp_master, recommended_blacklist.}
 
-\item{exportResults}{Do you want to export results?}
+\item{runPhoebeRecommendation}{Do you want to run Concept Recommendation using PHOEBE?}
+
+\item{runOrphan}{Do you want to run Orphan Concept text search? This may take time.}
 
 \item{locationForResults}{If you want to export results, please provide disk drive location}
 
@@ -50,7 +53,7 @@ tables, provide a schema with write privileges where temp tables can be created.
 \item{domainIdOfInterest}{A list of domain ids to filter the results.}
 }
 \description{
-given an array of comma separated quoted search string (s), this function will perform a series 
+given an array of comma separated quoted search string (s), this function will perform a series
 of operations that provides a recommended concept set expression, along with
 potentially more recommended and orphan concepts.
 }
