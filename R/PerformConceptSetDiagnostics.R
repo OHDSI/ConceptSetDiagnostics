@@ -55,8 +55,10 @@ performConceptSetDiagnostics <-
            vocabularyDatabaseSchema = "vocabulary",
            vocabularyIdOfInterest = c("SNOMED", "HCPCS", "ICD10CM", "ICD10", "ICD9CM", "ICD9", "Read"),
            domainIdOfInterest = c("Condition", "Procedure", "Observation")) {
+    writeLines("Beginning Concept Set Diagnostics.")
+    
     if (!hasData(searchPhrases)) {
-      writeLines("searchPhrases does not have data. No search performed.")
+      writeLines(" - searchPhrases does not have data. No search performed.")
       return(NULL)
     }
     
@@ -64,7 +66,7 @@ performConceptSetDiagnostics <-
     if (length(dplyr::setdiff(x = searchPhrases, y = eligibleToBeSearched)) > 0) {
       writeLines(
         text = paste0(
-          "The following phrases are less than 4 characters and will not be searched: '",
+          " - The following phrases are less than 4 characters and will not be searched: '",
           paste0(
             dplyr::setdiff(x = searchPhrases, y = eligibleToBeSearched),
             collapse = "', '"
@@ -75,7 +77,7 @@ performConceptSetDiagnostics <-
     }
     
     if (length(eligibleToBeSearched) == 0) {
-      writeLines("No search phrases have more than 3 characters. No search performed.")
+      writeLines(" - No search phrases have more than 3 characters. No search performed.")
       return(NULL)
     }
     
@@ -199,6 +201,7 @@ performConceptSetDiagnostics <-
     )
     
     if (!is.null(locationForResults)) {
+      writeLines(" - Writing files to disc.")
       dir.create(path = locationForResults,
                  showWarnings = FALSE,
                  recursive = TRUE)
@@ -280,6 +283,8 @@ performConceptSetDiagnostics <-
         )
       }
     }
+    
+    writeLines(" - Complete.")
     
     return(searchResult)
   }
