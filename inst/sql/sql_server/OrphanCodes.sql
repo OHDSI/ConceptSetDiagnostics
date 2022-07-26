@@ -87,7 +87,7 @@ FROM (
 WHERE rn1 < 1000;
 
 -- If search string is substring of another search string, discard longer string
-SELECT ss1.*
+SELECT DISTINCT ss1.*
 INTO #search_string_subset
 FROM #search_str_top1000 ss1
 LEFT JOIN #search_str_top1000 ss2
@@ -100,7 +100,7 @@ ON ss2.concept_name_length < ss1.concept_name_length
 ;
 		
 -- remove if it is the start set
-SELECT c1.*
+SELECT DISTINCT c1.*
 INTO #eligble_concept
 FROM @vocabulary_database_schema.concept c1
 LEFT JOIN #starting_concepts sc1
