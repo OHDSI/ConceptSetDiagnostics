@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS #given;
 DROP TABLE IF EXISTS #with_descendants;
-DROP TABLE IF EXISTS #mapped_non_standard;
+DROP TABLE IF EXISTS #non_std_to_std;
 DROP TABLE IF EXISTS #given_to_standard;
 DROP TABLE IF EXISTS #given_to_ancestor;
 DROP TABLE IF EXISTS #optimized;
@@ -24,38 +24,33 @@ INTO #with_descendants
 FROM @vocabulary_database_schema.concept_ancestor ca
 WHERE ancestor_concept_id IN (@conceptIdsWithIncludeDescendants);
 
--- Mapped non-standard concepts
+-- Non Standard to standard mapping
 --HINT DISTRIBUTE_ON_KEY(original_concept_id)
-SELECT DISTINCT AC.concept_id original_concept_id,
-	cr.*
-INTO #mapped_non_standard
+SELECT cr.CONCEPT_ID_2 AS original_concept_id,
+        C.*
+INTO #non_std_to_std
 FROM @vocabulary_database_schema.concept_relationship cr
 INNER JOIN (
-	SELECT DISTINCT a1.original_concept_id,
-		a1.original_concept_id concept_id
-	FROM #given a1
-	
-	UNION
-	
-	SELECT DISTINCT a2.ancestor_concept_id original_concept_id,
-		a2.descendant_concept_id concept_id
-	FROM #with_descendants a2
-	) AC
-	ON cr.concept_id_1 = AC.concept_id
-INNER JOIN @vocabulary_database_schema.concept c
-	ON c.concept_id = cr.concept_id_2
-WHERE COALESCE(cr.invalid_reason, '') = ''
-	AND relationship_id = 'Maps to'
-	AND COALESCE(c.standard_concept, '') = 'S'
-	AND cr.concept_id_1 != cr.concept_id_2;
+          	SELECT DISTINCT a1.original_concept_id concept_id
+          	FROM #given a1
+          	
+          	UNION
+          	
+          	SELECT DISTINCT a2.descendant_concept_id concept_id
+          	FROM #with_descendants a2
+	) t ON cr.concept_id_2 = t.concept_id
+INNER JOIN @vocabulary_database_schema.concept c ON c.concept_id = cr.concept_id_1
+WHERE relationship_id IN ('Mapped from')
+  AND COALESCE(c.standard_concept, '') = 'S'
+;
 
 --HINT DISTRIBUTE_ON_KEY(original_concept_id)
 SELECT DISTINCT g.original_concept_id,
-	ISNULL(mns.concept_id_2, g.concept_id) standard_concept_id
+	ISNULL(mns.concept_id, g.concept_id) standard_concept_id
 INTO #given_to_standard
 FROM #given g
-LEFT JOIN #mapped_non_standard mns
-	ON g.original_concept_id = mns.concept_id_1;
+LEFT JOIN #non_std_to_std mns
+	ON g.original_concept_id = mns.original_concept_id;
 
 --HINT DISTRIBUTE_ON_KEY(original_concept_id)
 SELECT original_concept_id,
@@ -103,6 +98,6 @@ INNER JOIN (
 
 DROP TABLE IF EXISTS #given;
 DROP TABLE IF EXISTS #with_descendants;
-DROP TABLE IF EXISTS #mapped_non_standard;
+DROP TABLE IF EXISTS #non_std_to_std;
 DROP TABLE IF EXISTS #given_to_standard;
 DROP TABLE IF EXISTS #given_to_ancestor;

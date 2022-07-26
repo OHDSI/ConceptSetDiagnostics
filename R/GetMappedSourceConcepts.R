@@ -56,11 +56,9 @@ getMappedSourceConcepts <-
             FROM @vocabulary_database_schema.concept_relationship cr
             INNER JOIN @vocabulary_database_schema.concept c
             ON c.concept_id = cr.concept_id_1
-            WHERE relationship_id IN ('Maps to')
-            AND cr.concept_id_2 IN (
-                                      SELECT DISTINCT CONCEPT_ID
-                                      FROM @concept_id_table t
-                                    );"
+            INNER JOIN @concept_id_table t
+            ON cr.concept_id_2 = t.concept_id
+            WHERE relationship_id IN ('Maps to');"
 
     data <-
       DatabaseConnector::renderTranslateQuerySql(
