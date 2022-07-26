@@ -82,7 +82,10 @@ getRecommendedSource <-
     writeLines(" - Finding recommended source concepts.")
     DatabaseConnector::executeSql(
       connection = connection,
-      sql = sql
+      sql = sql,
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE
     ) %>% dplyr::tibble()
     
     data <- DatabaseConnector::renderTranslateQuerySql(
@@ -96,7 +99,10 @@ getRecommendedSource <-
       sql = "
               DROP TABLE IF EXISTS #recommended_src;
               DROP TABLE IF EXISTS @concept_id_temp_table",
-      concept_id_temp_table = tempTableName
+      concept_id_temp_table = tempTableName,
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE
     )
     
     return(data)

@@ -119,9 +119,9 @@ SELECT DISTINCT c1.concept_id,
                 c1.valid_end_date,
                 c1.invalid_reason
 INTO @orphan_concept_table
-FROM #eligble_concept c1
-INNER JOIN #search_string_subset ss1
-	ON LOWER(c1.concept_name) LIKE CONCAT (
+FROM #eligble_concept c1,
+     #search_string_subset ss1
+WHERE LOWER(c1.concept_name) LIKE CONCAT (
 			'%',
 			ss1.concept_name,
 			'%'

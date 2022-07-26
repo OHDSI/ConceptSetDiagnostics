@@ -84,7 +84,8 @@ getRecommendedStandard <-
       connection = connection,
       sql = sql,
       profile = FALSE,
-      progressBar = TRUE
+      progressBar = TRUE,
+      reportOverallTime = FALSE
     ) %>% dplyr::tibble()
     
     data <-
@@ -100,7 +101,10 @@ getRecommendedStandard <-
       sql = "
               DROP TABLE IF EXISTS #rec_std;
               DROP TABLE IF EXISTS @concept_id_temp_table",
-      concept_id_temp_table = tempTableName
+      concept_id_temp_table = tempTableName,
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE
     )
     
     return(data)
