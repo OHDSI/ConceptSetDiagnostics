@@ -57,49 +57,16 @@ performConceptSetDiagnostics <-
            domainIdOfInterest = c("Condition", "Procedure", "Observation")) {
     writeLines("Beginning Concept Set Diagnostics.")
     
-    if (!hasData(searchPhrases)) {
-      writeLines(" - searchPhrases does not have data. No search performed.")
-      return(NULL)
-    }
-    
-    eligibleToBeSearched <- searchPhrases[nchar(searchPhrases) >= 3]
-    if (length(dplyr::setdiff(x = searchPhrases, y = eligibleToBeSearched)) > 0) {
-      writeLines(
-        text = paste0(
-          " - The following phrases are less than 4 characters and will not be searched: '",
-          paste0(
-            dplyr::setdiff(x = searchPhrases, y = eligibleToBeSearched),
-            collapse = "', '"
-          ),
-          "'"
-        )
-      )
-    }
-    
-    if (length(eligibleToBeSearched) == 0) {
-      writeLines(" - No search phrases have more than 3 characters. No search performed.")
-      return(NULL)
-    }
-    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
-    writeLines(
-      " - Performing search for the phrases: '",
-      paste0(eligibleToBeSearched, collapse = "', '"),
-      "'"
+
+    stringSearchResults <- performStringSearchForConcepts(
+      searchPhrases = searchPhrases,
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      connection = connection
     )
-    stringSearchResults <- c()
-    for (i in (1:length(eligibleToBeSearched))) {
-      stringSearchResults[[eligibleToBeSearched[i]]] <-
-        performStringSearchForConcepts(
-          searchString = eligibleToBeSearched[i],
-          vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-          connection = connection
-        )
-    }
     
     conceptSetExpression <-
       dplyr::tibble(

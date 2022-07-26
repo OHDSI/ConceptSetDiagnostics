@@ -29,20 +29,20 @@ WHERE ancestor_concept_id IN (@conceptIdsWithIncludeDescendants);
 SELECT DISTINCT AC.concept_id original_concept_id,
 	cr.*
 INTO #mapped_non_standard
-FROM vocabulary_20220409.concept_relationship cr
+FROM @vocabulary_database_schema.concept_relationship cr
 INNER JOIN (
 	SELECT DISTINCT a1.original_concept_id,
 		a1.original_concept_id concept_id
-	FROM given a1
+	FROM #given a1
 	
 	UNION
 	
 	SELECT DISTINCT a2.ancestor_concept_id original_concept_id,
 		a2.descendant_concept_id concept_id
-	FROM with_descendants a2
+	FROM #with_descendants a2
 	) AC
 	ON cr.concept_id_1 = AC.concept_id
-INNER JOIN vocabulary_20220409.concept c
+INNER JOIN @vocabulary_database_schema.concept c
 	ON c.concept_id = cr.concept_id_2
 WHERE COALESCE(cr.invalid_reason, '') = ''
 	AND relationship_id = 'Maps to'

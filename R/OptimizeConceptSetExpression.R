@@ -24,7 +24,7 @@
 #' @template VocabularyDatabaseSchema
 #'
 #' @template TempEmulationSchema
-#' 
+#'
 #' @param replaceNonStandardWithStandardEquivalent Do you want to replace non standard with standard equivalent?
 #'
 #' @export
@@ -32,10 +32,9 @@ optimizeConceptSetExpression <-
   function(conceptSetExpression,
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
+           connectionDetails = NULL,
            replaceNonStandardWithStandardEquivalent = TRUE,
-           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
-           connectionDetails = NULL) {
-    
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
     warning("reminder: incomplete replaceNonStandardWithStandardEquivalent")
     
     optimizationRecommendation <-
@@ -59,9 +58,12 @@ optimizeConceptSetExpression <-
       ) %>%
       dplyr::select(dplyr::all_of(colnames(conceptSetExpressionDataFrame)))
     
-    data <- list(optimizedConceptSetExpression = optimizationRecommendation,
-                 removedRecords = removed %>% 
-                   dplyr::distinct())
+    data <-
+      list(
+        optimizedConceptSetExpression = optimizationRecommendation,
+        removedRecords = removed %>%
+          dplyr::distinct()
+      )
     
     return(data)
   }
@@ -165,23 +167,33 @@ getOptimizationRecommendationForConceptSetExpression <-
       }
       inlcudedConceptSetExpression <-
         conceptSetExpressionDataFrame %>%
-        dplyr::select(.data$conceptId,
-                      .data$includeMapped,
-                      .data$includeDescendants,
-                      .data$isExcluded) %>% 
+        dplyr::select(
+          .data$conceptId,
+          .data$includeMapped,
+          .data$includeDescendants,
+          .data$isExcluded
+        ) %>%
         dplyr::filter(.data$isExcluded == FALSE) %>%
         dplyr::inner_join(
           included %>%
             dplyr::select(.data$originalConceptId,
                           .data$replacementConceptId),
           by = c("conceptId" = "originalConceptId")
-        ) %>% 
-        dplyr::select(-.data$conceptId) %>% 
+        ) %>%
+        dplyr::select(-.data$conceptId) %>%
         dplyr::rename("conceptId" = .data$replacementConceptId) %>%
-        dplyr::group_by(.data$conceptId) %>% 
-        dplyr::summarise(includeMapped = as.logical(max(as.integer(.data$includeMapped))),
-                         includeDescendants = as.logical(max(as.integer(.data$includeDescendants))),
-                         isExcluded = as.logical(max(as.integer(.data$isExcluded)))) %>% 
+        dplyr::group_by(.data$conceptId) %>%
+        dplyr::summarise(
+          includeMapped = as.logical(max(as.integer(
+            .data$includeMapped
+          ))),
+          includeDescendants = as.logical(max(
+            as.integer(.data$includeDescendants)
+          )),
+          isExcluded = as.logical(max(as.integer(
+            .data$isExcluded
+          )))
+        ) %>%
         dplyr::select(
           .data$conceptId,
           .data$includeMapped,
@@ -239,23 +251,33 @@ getOptimizationRecommendationForConceptSetExpression <-
       
       excludedConceptSetExpression <-
         conceptSetExpressionDataFrame %>%
-        dplyr::select(.data$conceptId,
-                      .data$includeMapped,
-                      .data$includeDescendants,
-                      .data$isExcluded) %>% 
+        dplyr::select(
+          .data$conceptId,
+          .data$includeMapped,
+          .data$includeDescendants,
+          .data$isExcluded
+        ) %>%
         dplyr::filter(.data$isExcluded == TRUE) %>%
         dplyr::inner_join(
           included %>%
             dplyr::select(.data$originalConceptId,
                           .data$replacementConceptId),
           by = c("conceptId" = "originalConceptId")
-        ) %>% 
-        dplyr::select(-.data$conceptId) %>% 
+        ) %>%
+        dplyr::select(-.data$conceptId) %>%
         dplyr::rename("conceptId" = .data$replacementConceptId) %>%
-        dplyr::group_by(.data$conceptId) %>% 
-        dplyr::summarise(includeMapped = as.logical(max(as.integer(.data$includeMapped))),
-                         includeDescendants = as.logical(max(as.integer(.data$includeDescendants))),
-                         isExcluded = as.logical(max(as.integer(.data$isExcluded)))) %>% 
+        dplyr::group_by(.data$conceptId) %>%
+        dplyr::summarise(
+          includeMapped = as.logical(max(as.integer(
+            .data$includeMapped
+          ))),
+          includeDescendants = as.logical(max(
+            as.integer(.data$includeDescendants)
+          )),
+          isExcluded = as.logical(max(as.integer(
+            .data$isExcluded
+          )))
+        ) %>%
         dplyr::select(
           .data$conceptId,
           .data$includeMapped,
@@ -271,7 +293,7 @@ getOptimizationRecommendationForConceptSetExpression <-
       dplyr::arrange(.data$conceptId,
                      .data$isExcluded)
     
-    finalConceptSetExpression <- finalConceptSetExpressionDf  %>% 
+    finalConceptSetExpression <- finalConceptSetExpressionDf  %>%
       dplyr::distinct() %>%
       convertConceptSetDataFrameToExpression(
         updateVocabularyFields = TRUE,

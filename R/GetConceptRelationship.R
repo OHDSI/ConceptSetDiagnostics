@@ -49,21 +49,15 @@ getConceptRelationship <-
     sql <- "
               SELECT cr1.*
               FROM @vocabulary_database_schema.concept_relationship cr1
-              WHERE cr1.CONCEPT_ID_1 IN
-              (
-                SELECT DISTINCT concept_id
-                FROM @concept_id_table t1
-              )
+              INNER JOIN @concept_id_table t1
+              ON cr1.concept_id_1 = t1.concept_id
 
               UNION
 
               SELECT cr2.*
               FROM @vocabulary_database_schema.concept_relationship cr2
-              WHERE cr2.CONCEPT_ID_2 IN
-              (
-                SELECT DISTINCT concept_id
-                FROM @concept_id_table t1
-              )
+              INNER JOIN @concept_id_table t2
+              ON cr2.CONCEPT_ID_2 = t2.concept_id
             ;"
 
     data <- DatabaseConnector::renderTranslateQuerySql(

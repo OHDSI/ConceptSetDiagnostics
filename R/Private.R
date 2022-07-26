@@ -82,7 +82,7 @@ loadTempConceptTable <- function(conceptIds,
       data = conceptIdTable,
       camelCaseToSnakeCase = TRUE,
       bulkLoad = TRUE,
-      progressBar = FALSE,
+      progressBar = TRUE,
       createTable = TRUE
     ),
     file = nullfile()

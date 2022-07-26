@@ -48,14 +48,13 @@ getConceptDescendant <-
       connection = connection,
       tempEmulationSchema = tempEmulationSchema
     )
-
+    
     sql <- "SELECT ca.*
-            FROM @vocabulary_database_schema.concept_ancestor ca
-            WHERE ca.ancestor_concept_id IN
-            (
-              SELECT DISTINCT concept_id
-              FROM @concept_id_table t
-            );"
+            FROM 
+                @vocabulary_database_schema.concept_ancestor ca
+            INNER JOIN
+                @concept_id_table t
+            ON ca.ancestor_concept_id = t.concept_id;"
 
     data <-
       DatabaseConnector::renderTranslateQuerySql(

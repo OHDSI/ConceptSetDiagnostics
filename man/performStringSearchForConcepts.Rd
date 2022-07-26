@@ -5,14 +5,20 @@
 \title{Get concepts that match a string search}
 \usage{
 performStringSearchForConcepts(
-  searchString,
+  searchPhrases,
   vocabularyDatabaseSchema = "vocabulary",
   connection = NULL,
-  connectionDetails = NULL
+  connectionDetails = NULL,
+  vocabularyIdOfInterest = c("SNOMED", "HCPCS", "ICD10CM", "ICD10", "ICD9CM", "ICD9",
+    "Read"),
+  domainIdOfInterest = c("Condition", "Procedure", "Observation"),
+  retrieveInvalidConcepts = FALSE
 )
 }
 \arguments{
-\item{searchString}{A phrase (can be multiple words) to search for.}
+\item{searchPhrases}{An array of phrases (each phrase may be multiple words,
+but each phrase should be quoted and comma separated) to search for.
+Phrases that have a character length of <4 are not searched.}
 
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 
@@ -26,6 +32,12 @@ of the function, and closed when the function finishes.}
 \code{\link[DatabaseConnector]{createConnectionDetails}} function in the
 DatabaseConnector package. Can be left NULL if \code{connection} is
 provided.}
+
+\item{vocabularyIdOfInterest}{A list of vocabulary ids to filter the results.}
+
+\item{domainIdOfInterest}{A list of domain ids to filter the results.}
+
+\item{retrieveInvalidConcepts}{Do you want to retrieve invalid concepts. Default = FALSE}
 }
 \description{
 Get concepts that match a string search
