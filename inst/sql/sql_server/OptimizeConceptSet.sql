@@ -26,22 +26,27 @@ WHERE ancestor_concept_id IN (@conceptIdsWithIncludeDescendants);
 
 -- Non Standard to standard mapping
 --HINT DISTRIBUTE_ON_KEY(original_concept_id)
-SELECT cr.CONCEPT_ID_2 AS original_concept_id,
-        C.*
+WITH all_concepts AS
+(
+  	SELECT DISTINCT a1.original_concept_id concept_id
+  	FROM #given a1
+  	
+  	UNION
+  	
+  	SELECT DISTINCT a2.descendant_concept_id concept_id
+  	FROM #with_descendants a2
+)
+SELECT DISTINCT c1.concept_id original_concept_id,
+        c2.*
 INTO #non_std_to_std
-FROM @vocabulary_database_schema.concept_relationship cr
-INNER JOIN (
-          	SELECT DISTINCT a1.original_concept_id concept_id
-          	FROM #given a1
-          	
-          	UNION
-          	
-          	SELECT DISTINCT a2.descendant_concept_id concept_id
-          	FROM #with_descendants a2
-	) t ON cr.concept_id_2 = t.concept_id
-INNER JOIN @vocabulary_database_schema.concept c ON c.concept_id = cr.concept_id_1
-WHERE relationship_id IN ('Mapped from')
-  AND COALESCE(c.standard_concept, '') = 'S'
+FROM all_concepts ac1
+INNER JOIN @vocabulary_database_schema.concept_relationship cr ON ac1.concept_id = cr.concept_id_1
+INNER JOIN @vocabulary_database_schema.concept c1 ON c1.concept_id = cr.concept_id_1
+INNER JOIN @vocabulary_database_schema.concept c2 ON c2.concept_id = cr.concept_id_2
+INNER JOIN all_concepts ac2 ON ac2.concept_id = cr.concept_id_2
+WHERE cr.relationship_id IN ('Maps to')
+  AND COALESCE(c1.standard_concept, '') = ''
+  AND COALESCE(c2.standard_concept, '') = 'S'
 ;
 
 --HINT DISTRIBUTE_ON_KEY(original_concept_id)

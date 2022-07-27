@@ -136,12 +136,12 @@ getOptimizationRecommendationForConceptSetExpression <-
           conceptIds = includedConcepts,
           conceptIdsWithIncludeDescendants = includedConceptsWithDescendants
         )
-        
+        writeLines(" -  Optimizing concept set")
         DatabaseConnector::executeSql(
           connection = connection,
           sql = sql,
           reportOverallTime = FALSE,
-          progressBar = FALSE
+          progressBar = TRUE
         )
         
         included <-

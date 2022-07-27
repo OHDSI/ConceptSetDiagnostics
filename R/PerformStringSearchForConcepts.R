@@ -116,21 +116,27 @@ performStringSearchForConcepts <-
     
     data <- data %>%
       dplyr::bind_rows() %>%
-      dplyr::distinct() %>%
-      dplyr::group_by(
-        .data$conceptId,
-        .data$conceptName,
-        .data$vocabularyId,
-        .data$standardConcept,
-        .data$invalidReason,
-        .data$conceptCode,
-        .data$conceptClassId,
-        .data$domainId
-      ) %>%
-      dplyr::summarise(rank = min(.data$rank),
-                       rankCd = min(.data$rankCd)) %>%
-      dplyr::ungroup() %>%
-      dplyr::arrange(.data$rankCd, .data$rank) %>%
+      dplyr::distinct()
+    
+    if ("rank" %in% colnames(data)) {
+      data <- data %>%
+        dplyr::group_by(
+          .data$conceptId,
+          .data$conceptName,
+          .data$vocabularyId,
+          .data$standardConcept,
+          .data$invalidReason,
+          .data$conceptCode,
+          .data$conceptClassId,
+          .data$domainId
+        ) %>%
+        dplyr::summarise(rank = min(.data$rank),
+                         rankCd = min(.data$rankCd)) %>%
+        dplyr::ungroup() %>%
+        dplyr::arrange(.data$rankCd, .data$rank) %>%
+        dplyr::distinct()
+    }
+    data <- data %>%
       dplyr::mutate(
         standardConceptCaption = dplyr::case_when(
           .data$standardConcept == "S" ~ "Standard",
