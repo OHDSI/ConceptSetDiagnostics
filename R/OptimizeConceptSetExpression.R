@@ -86,11 +86,11 @@ getOptimizationRecommendationForConceptSetExpression <-
       # no optimization necessary
       return(
         conceptSetExpressionDataFrame %>%
-          dplyr::mutate(
-            excluded = as.integer(.data$isExcluded),
-            removed = 0
-          ) %>%
-          dplyr::select(.data$conceptId, .data$excluded, .data$removed)
+          convertConceptSetDataFrameToExpression(
+            updateVocabularyFields = TRUE,
+            vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+            connection = connection
+          )
       )
     }
     
