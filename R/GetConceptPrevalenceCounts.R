@@ -71,13 +71,13 @@ getConceptPrevalenceCounts <- function(conceptIds,
     connection = connection,
     tempEmulationSchema = tempEmulationSchema
   )
-
+  
   sql <- "SELECT cp.*
-          FROM @concept_prevalence_schema.cp_master cp
-          WHERE cp.concept_id IN(
-              SELECT DISTINCT CONCEPT_ID
-              FROM @concept_id_table
-          );"
+          FROM 
+            @concept_prevalence_schema.cp_master cp
+          INNER JOIN
+            @concept_id_table t
+          ON cp.concept_id = t.concept_id;"
 
   data <-
     DatabaseConnector::renderTranslateQuerySql(

@@ -52,11 +52,10 @@ getConceptIdDetails <-
     sql <- "
       SELECT c.*
       FROM @vocabulary_database_schema.concept c
-      WHERE c.concept_id IN
-      (
-        SELECT DISTINCT concept_id
-        FROM @concept_id_table t
-      );"
+      INNER JOIN
+        @concept_id_table t
+      ON c.concept_id = t.concept_id
+      ORDER BY c.concept_id;"
 
     data <- DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
@@ -65,7 +64,9 @@ getConceptIdDetails <-
       concept_id_table = tempTableName,
       tempEmulationSchema = tempEmulationSchema,
       vocabulary_database_schema = vocabularyDatabaseSchema
-    ) %>%
+    ) 
+    
+    data <- data %>% 
       tidyr::tibble() %>%
       dplyr::mutate(
         standardConceptCaption = dplyr::case_when(

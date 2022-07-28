@@ -1,210 +1,108 @@
-DROP TABLE IF EXISTS #o_not_excluded;
-DROP TABLE IF EXISTS #o_not_excluded_desc;
-DROP TABLE IF EXISTS #o_not_excl_non_std;
-DROP TABLE IF EXISTS #o_excluded;
-DROP TABLE IF EXISTS #o_excluded_desc;
-DROP TABLE IF EXISTS #o_concepts_included;
-DROP TABLE IF EXISTS #o_concepts_excluded;
-DROP TABLE IF EXISTS #concepts_optimized;
-DROP TABLE IF EXISTS #concepts_removed;
+DROP TABLE IF EXISTS #given;
+DROP TABLE IF EXISTS #with_descendants;
+DROP TABLE IF EXISTS #non_std_to_std;
+DROP TABLE IF EXISTS #given_to_standard;
+DROP TABLE IF EXISTS #given_to_ancestor;
+DROP TABLE IF EXISTS #optimized;
 
-{DEFAULT @conceptSetConceptIdsExcluded = 0 } 
-{DEFAULT @conceptSetConceptIdsDescendantsExcluded = 0 } 
-{DEFAULT @conceptSetConceptIdsNotExcluded = 0 } 
-{DEFAULT @conceptSetConceptIdsDescendantsNotExcluded = 0 }
-
+{DEFAULT @conceptIds = 0 } 
+{DEFAULT @conceptIdsWithIncludeDescendants = 0 }
 
 -- Concepts that are part of the concept set definition that are "EXCLUDED = N, DECENDANTS = Y or N"
---HINT DISTRIBUTE_ON_KEY(concept_id)
-SELECT DISTINCT concept_id,
-	standard_concept,
-	invalid_reason
-INTO #o_not_excluded
-FROM @vocabulary_database_schema.concept
-WHERE concept_id IN (@conceptSetConceptIdsNotExcluded);
-
+--HINT DISTRIBUTE_ON_KEY(original_concept_id)
+SELECT DISTINCT c.concept_id original_concept_id,
+	c.*
+INTO #given
+FROM @vocabulary_database_schema.concept c
+WHERE concept_id IN (@conceptIds);
 
 -- Concepts that are part of the concept set definition that are "EXCLUDED = N, DECENDANTS = Y"
---HINT DISTRIBUTE_ON_KEY(concept_id)
-SELECT DISTINCT ancestor_concept_id,
-	descendant_concept_id concept_id
-INTO #o_not_excluded_desc
-FROM @vocabulary_database_schema.concept_ancestor
-WHERE ancestor_concept_id IN (@conceptSetConceptIdsDescendantsNotExcluded)
-	AND ancestor_concept_id != descendant_concept_id;
-	-- Exclude the selected ancestor itself	
+--HINT DISTRIBUTE_ON_KEY(original_concept_id)
+SELECT DISTINCT ca.ancestor_concept_id original_concept_id,
+	ca.*
+INTO #with_descendants
+FROM @vocabulary_database_schema.concept_ancestor ca
+WHERE ancestor_concept_id IN (@conceptIdsWithIncludeDescendants);
 
+-- Non Standard to standard mapping
+--HINT DISTRIBUTE_ON_KEY(original_concept_id)
+WITH all_concepts AS
+(
+  	SELECT DISTINCT a1.original_concept_id concept_id
+  	FROM #given a1
+  	
+  	UNION
+  	
+  	SELECT DISTINCT a2.descendant_concept_id concept_id
+  	FROM #with_descendants a2
+)
+SELECT DISTINCT c1.concept_id original_concept_id,
+        c2.*
+INTO #non_std_to_std
+FROM all_concepts ac1
+INNER JOIN @vocabulary_database_schema.concept_relationship cr ON ac1.concept_id = cr.concept_id_1
+INNER JOIN @vocabulary_database_schema.concept c1 ON c1.concept_id = cr.concept_id_1
+INNER JOIN @vocabulary_database_schema.concept c2 ON c2.concept_id = cr.concept_id_2
+INNER JOIN all_concepts ac2 ON ac2.concept_id = cr.concept_id_2
+WHERE cr.relationship_id IN ('Maps to')
+  AND COALESCE(c1.standard_concept, '') = ''
+  AND COALESCE(c2.standard_concept, '') = 'S'
+;
 
--- Concepts that are part of the concept set definition that are "EXCLUDED = N, DECENDANTS = Y"
---HINT DISTRIBUTE_ON_KEY(concept_id)
-SELECT cr.concept_id_1 concept_id,
-	cr.concept_id_2 concept_id_standard,
-	allStandard.concept_id available_standard_concept_id
-INTO #o_not_excl_non_std
-FROM @vocabulary_database_schema.concept_relationship cr
-INNER JOIN #o_not_excluded notexc ON notexc.concept_id = concept_id_1
-	AND relationship_id = 'Maps to'
-LEFT JOIN (
-	  SELECT DISTINCT a1.concept_id 
-	  FROM #o_not_excluded a1
-	  WHERE ISNULL(standard_concept,'') = 'S'
-	  UNION
-	  SELECT DISTINCT a2.concept_id
-	  FROM #o_not_excluded_desc a2
-	) allStandard
-	ON cr.concept_id_2 = allStandard.concept_id
-		AND relationship_id = 'Maps to'
-WHERE ISNULL(standard_concept,'') = ''
-	AND ISNULL(cr.invalid_reason,'') = '';
+--HINT DISTRIBUTE_ON_KEY(original_concept_id)
+SELECT DISTINCT g.original_concept_id,
+	ISNULL(mns.concept_id, g.concept_id) standard_concept_id
+INTO #given_to_standard
+FROM #given g
+LEFT JOIN #non_std_to_std mns
+	ON g.original_concept_id = mns.original_concept_id;
 
-
--- Concepts that are part of the concept set definition that are "EXCLUDED = Y, DECENDANTS = Y or N"
---HINT DISTRIBUTE_ON_KEY(concept_id)
-SELECT DISTINCT concept_id,
-	standard_concept,
-	invalid_reason
-INTO #o_excluded
-FROM @vocabulary_database_schema.concept
-WHERE concept_id IN (@conceptSetConceptIdsExcluded);
-
-
--- Concepts that are part of the concept set definition that are "EXCLUDED = Y, DECENDANTS = Y"
---HINT DISTRIBUTE_ON_KEY(concept_id)
-SELECT DISTINCT ancestor_concept_id,
-	descendant_concept_id concept_id
-INTO #o_excluded_desc
-FROM @vocabulary_database_schema.concept_ancestor
-WHERE ancestor_concept_id IN (@conceptSetConceptIdsDescendantsExcluded)
-	AND ancestor_concept_id != descendant_concept_id;
-
----------------------------------------------
----------------------------------------------
----------------------------------------------
--- Exclude the selected ancestor itself
-SELECT a.concept_id original_concept_id,
-	a.invalid_reason,
-	c1.concept_name original_concept_name,
-	b.ancestor_concept_id,
-	c3.concept_name ancestor_concept_name,
-	d.available_standard_concept_id mapped_concept_id,
-	c4.concept_name mapped_concept_name,
-	ISNULL(b.ancestor_concept_id, d.available_standard_concept_id) subsumed_by_concept_id,
-	ISNULL(c3.concept_name, c4.concept_name) subsumed_concept_name
-INTO #o_concepts_included
-FROM #o_not_excluded a
-LEFT JOIN #o_not_excluded_desc b ON a.concept_id = b.concept_id
-LEFT JOIN #o_not_excl_non_std d ON a.concept_id = d.concept_id
-LEFT JOIN @vocabulary_database_schema.concept c1 ON a.concept_id = c1.concept_id
-LEFT JOIN @vocabulary_database_schema.concept c2 ON b.concept_id = c2.concept_id
-LEFT JOIN @vocabulary_database_schema.concept c3 ON b.ancestor_concept_id = c3.concept_id
-LEFT JOIN @vocabulary_database_schema.concept c4 ON d.available_standard_concept_id = c4.concept_id;
-
----------------------------------------------
----------------------------------------------
----------------------------------------------
-SELECT a.concept_id original_concept_id,
-	a.invalid_reason,
-	c1.concept_name original_concept_name,
-	b.ancestor_concept_id,
-	c3.concept_name ancestor_concept_name,
-	cast(NULL AS INT) mapped_concept_id,
-	cast(NULL AS VARCHAR(255)) mapped_concept_name,
-	b.concept_id subsumed_by_concept_id,
-	c2.concept_name subsumed_concept_name
-INTO #o_concepts_excluded
-FROM #o_excluded a
-LEFT JOIN #o_excluded_desc b ON a.concept_id = b.concept_id
-LEFT JOIN @vocabulary_database_schema.concept c1 ON a.concept_id = c1.concept_id
-LEFT JOIN @vocabulary_database_schema.concept c2 ON b.concept_id = c2.concept_id
-LEFT JOIN @vocabulary_database_schema.concept c3 ON b.ancestor_concept_id = c3.concept_id;
-
----------------------------------------------
----------------------------------------------
----------------------------------------------
-SELECT concept_id,
-  concept_name,
-  invalid_reason,
-  excluded,
-  removed
-INTO #concepts_optimized
+--HINT DISTRIBUTE_ON_KEY(original_concept_id)
+SELECT original_concept_id,
+	standard_concept_id,
+	ancestor_concept_id,
+	ISNULL(rn, 0) rn
+INTO #given_to_ancestor
 FROM (
-	SELECT original_concept_id concept_id,
-		original_concept_name concept_name,
-		invalid_reason,
-		cast(0 AS INT) excluded,
-		cast(0 AS INT) removed
-	FROM #o_concepts_included
-	WHERE subsumed_by_concept_id = original_concept_id or
-	subsumed_by_concept_id IS NULL
-	UNION
-	SELECT original_concept_id concept_id,
-		original_concept_name concept_name,
-		invalid_reason,
-		cast(1 AS INT) excluded,
-		cast(0 AS INT) removed
-	FROM #o_concepts_excluded
-	WHERE subsumed_by_concept_id = original_concept_id or
-	subsumed_by_concept_id IS NULL
-	) opt;
-	
----------------------------------------------
----------------------------------------------
----------------------------------------------
-SELECT concept_id,
-  concept_name,
-  invalid_reason,
-  excluded,
-  removed
-INTO #concepts_removed
-FROM (
-	SELECT DISTINCT original_concept_id concept_id,
-		original_concept_name concept_name,
-		invalid_reason,
-		cast(0 AS INT) excluded,
-		cast(1 AS INT) removed
-	FROM #o_concepts_included
-	WHERE (subsumed_by_concept_id != original_concept_id and
-	subsumed_by_concept_id IS NOT NULL)
-	UNION
-	SELECT DISTINCT original_concept_id concept_id,
-		original_concept_name concept_name,
-		invalid_reason,
-		cast(1 AS INT) excluded,
-		cast(1 AS INT) removed
-	FROM #o_concepts_excluded
-	WHERE (subsumed_by_concept_id != original_concept_id and
-	subsumed_by_concept_id IS NOT NULL)
-	) rmv;
+	SELECT sc.original_concept_id,
+		sc.standard_concept_id,
+		ISNULL(ancestor.ancestor_concept_id, sc.standard_concept_id) ancestor_concept_id,
+		ROW_NUMBER() OVER (
+			PARTITION BY sc.ORIGINAL_CONCEPT_ID,
+			sc.STANDARD_CONCEPT_ID ORDER BY MAX_LEVELS_OF_SEPARATION DESC,
+				MIN_LEVELS_OF_SEPARATION DESC
+			) rn
+	FROM #given_to_standard sc
+	LEFT JOIN #with_descendants ancestor
+		ON sc.standard_concept_id = ancestor.descendant_concept_id
+	) f;
 
----------------------------------------------
----------------------------------------------
----------------------------------------------
-SELECT *
-INTO #optimized_set
-FROM (
-	SELECT concept_id,
-		concept_name,
-		invalid_reason,
-		excluded,
-		removed
-	FROM #concepts_optimized
-	UNION
-	SELECT concept_id,
-		concept_name,
-		invalid_reason,
-		excluded,
-		removed
-	FROM #concepts_removed
-	) f
-WHERE concept_id IS NOT NULL;
+-- All not excluded concept id
+--HINT DISTRIBUTE_ON_KEY(original_concept_id)
+SELECT m.original_concept_id,
+	m.ancestor_concept_id replacement_concept_id,
+	CASE 
+		WHEN m.original_concept_id = m.ancestor_concept_id
+			THEN NULL
+		ELSE m.original_concept_id
+		END AS removed_concept_id
+INTO #optimized
+FROM #given_to_ancestor m
+INNER JOIN (
+	SELECT original_concept_id,
+		standard_concept_id,
+		MIN(rn) rn
+	FROM #given_to_ancestor
+	GROUP BY original_concept_id,
+		standard_concept_id
+	) grp
+	ON m.original_concept_id = grp.original_concept_id
+		AND grp.standard_concept_id = grp.standard_concept_id
+		AND m.rn = grp.rn;
 
----------------------------------------------
----------------------------------------------
----------------------------------------------
-DROP TABLE IF EXISTS #o_not_excluded;
-DROP TABLE IF EXISTS #o_not_excluded_desc;
-DROP TABLE IF EXISTS #o_not_excl_non_std;
-DROP TABLE IF EXISTS #o_excluded;
-DROP TABLE IF EXISTS #o_excluded_desc;
-DROP TABLE IF EXISTS #o_concepts_included;
-DROP TABLE IF EXISTS #o_concepts_excluded;
+
+DROP TABLE IF EXISTS #given;
+DROP TABLE IF EXISTS #with_descendants;
+DROP TABLE IF EXISTS #non_std_to_std;
+DROP TABLE IF EXISTS #given_to_standard;
+DROP TABLE IF EXISTS #given_to_ancestor;

@@ -8,8 +8,9 @@ optimizeConceptSetExpression(
   conceptSetExpression,
   vocabularyDatabaseSchema = "vocabulary",
   connection = NULL,
-  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
-  connectionDetails = NULL
+  connectionDetails = NULL,
+  replaceNonStandardWithStandardEquivalent = TRUE,
+  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
 )
 }
 \arguments{
@@ -23,13 +24,15 @@ DatabaseConnector package. Can be left NULL if \code{connectionDetails}
 is provided, in which case a new connection will be opened at the start
 of the function, and closed when the function finishes.}
 
-\item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
-tables, provide a schema with write privileges where temp tables can be created.}
-
 \item{connectionDetails}{An object of type \code{connectionDetails} as created using the
 \code{\link[DatabaseConnector]{createConnectionDetails}} function in the
 DatabaseConnector package. Can be left NULL if \code{connection} is
 provided.}
+
+\item{replaceNonStandardWithStandardEquivalent}{Do you want to replace non standard with standard equivalent?}
+
+\item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
+tables, provide a schema with write privileges where temp tables can be created.}
 }
 \description{
 given a concept set expression, get optimized concept set expression

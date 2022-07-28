@@ -35,23 +35,21 @@ getRecommendedSource <-
            connectionDetails = NULL,
            conceptPrevalenceSchema = "concept_prevalence",
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
-    # Filtering strings to letters, numbers and spaces only to avoid SQL injection:
-    conceptIds <- gsub("[^a-zA-Z0-9 ,]", " ", conceptIds)
-
+    # Filtering strings to numbers only to avoid SQL injection:
+    conceptIds <- gsub("[^0-9 ,]", " ", conceptIds)
+    
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-
+    
     conceptPrevalenceTables <-
-      DatabaseConnector::getTableNames(
-        connection = connection,
-        databaseSchema = conceptPrevalenceSchema
-      ) %>%
+      DatabaseConnector::getTableNames(connection = connection,
+                                       databaseSchema = conceptPrevalenceSchema) %>%
       tolower()
-
+    
     conceptPrevalenceTablesExist <- FALSE
-
+    
     if (all(
       "recommender_set" %in% conceptPrevalenceTables,
       "cp_master" %in% conceptPrevalenceTables,
@@ -59,19 +57,19 @@ getRecommendedSource <-
     )) {
       conceptPrevalenceTablesExist <- TRUE
     }
-
+    
     if (!conceptPrevalenceTablesExist) {
       stop(
         "Concept Prevalence schema does not have the required concept prevalence tables. recommender_set, cp_master, recommended_blacklist"
       )
     }
-
+    
     tempTableName <- loadTempConceptTable(
       conceptIds = conceptIds,
       connection = connection,
       tempEmulationSchema = tempEmulationSchema
     )
-
+    
     sql <- SqlRender::loadRenderTranslateSql(
       sqlFilename = "RecommendationSource.sql",
       packageName = "ConceptSetDiagnostics",
@@ -80,11 +78,32 @@ getRecommendedSource <-
       concept_prevalence_schema = conceptPrevalenceSchema,
       concept_id_temp_table = tempTableName
     )
-
-    data <- DatabaseConnector::querySql(
+    
+    writeLines(" - Finding recommended source concepts.")
+    DatabaseConnector::executeSql(
       connection = connection,
       sql = sql,
-      snakeCaseToCamelCase = TRUE
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE
     ) %>% dplyr::tibble()
+    
+    data <- DatabaseConnector::renderTranslateQuerySql(
+      connection = connection,
+      sql = "SELECT * FROM #recommended_src;",
+      snakeCaseToCamelCase = TRUE
+    )
+    
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = "
+              DROP TABLE IF EXISTS #recommended_src;
+              DROP TABLE IF EXISTS @concept_id_temp_table",
+      concept_id_temp_table = tempTableName,
+      profile = FALSE,
+      progressBar = FALSE,
+      reportOverallTime = FALSE
+    )
+    
     return(data)
   }
