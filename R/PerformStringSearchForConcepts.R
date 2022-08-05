@@ -113,12 +113,15 @@ performStringSearchForConcepts <-
         dplyr::tibble()
     }
     
+    if (!hasData(data)) {
+      return(NULL)
+    }
     
     data <- data %>%
       dplyr::bind_rows() %>%
       dplyr::distinct()
     
-    if ("rank" %in% colnames(data)) {
+    if (all(nrow(data) > 0, "rank" %in% colnames(data))) {
       data <- data %>%
         dplyr::group_by(
           .data$conceptId,
@@ -170,6 +173,10 @@ performStringSearchForConcepts <-
     if (!retrieveInvalidConcepts) {
       data <- data %>%
         dplyr::filter(.data$invalidReason %in% c("", "V"))
+    }
+    
+    if (!hasData(data)) {
+      return(NULL)
     }
     
     return(data)
