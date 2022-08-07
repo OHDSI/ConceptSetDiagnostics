@@ -110,7 +110,7 @@ testthat::test_that("optimizeConceptSetExpression", {
     expected = 0
   )
   testthat::expect_gte(
-    object = nrow(conceptSetsInCohort1$recommendedAsDataFrame),
+    object = nrow(conceptSetsInCohort1$optimizedConceptSet),
     expected = 0
   )
 })
