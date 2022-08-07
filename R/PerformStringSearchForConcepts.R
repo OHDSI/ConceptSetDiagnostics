@@ -79,12 +79,13 @@ performStringSearchForConcepts <-
     
     data <- c()
     
+    searchString <-
+      stringr::str_squish(tolower(gsub(
+        "[^a-zA-Z0-9 ,]", " ", eligibleToBeSearched[[i]]
+      )))
+    
     for (i in (1:length(eligibleToBeSearched))) {
       if (tolower("FULL_TEXT_SEARCH") %in% fieldsInConceptTable) {
-        searchString <-
-          stringr::str_squish(tolower(gsub(
-            "[^a-zA-Z0-9 ,]", " ", eligibleToBeSearched[[i]]
-          )))
         sql <- SqlRender::loadRenderTranslateSql(
           sqlFilename = "SearchStringTsv.sql",
           packageName = "ConceptSetDiagnostics",
