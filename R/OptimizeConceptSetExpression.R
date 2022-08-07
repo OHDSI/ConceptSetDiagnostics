@@ -35,8 +35,7 @@ optimizeConceptSetExpression <-
            connectionDetails = NULL,
            replaceNonStandardWithStandardEquivalent = TRUE,
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
-    warning("reminder: incomplete replaceNonStandardWithStandardEquivalent")
-    
+    warning("reminder: incomplete replaceNonStandardWithStandardEquivalent. i.e. for every non standard, replace its standard equivalent option")
     optimizationRecommendation <-
       getOptimizationRecommendationForConceptSetExpression(
         connection = connection,
@@ -82,24 +81,23 @@ getOptimizationRecommendationForConceptSetExpression <-
     conceptSetExpressionDataFrame <-
       convertConceptSetExpressionToDataFrame(conceptSetExpression)
     
-    if (nrow(conceptSetExpressionDataFrame) <= 1) {
-      # no optimization necessary
-      return(
-        conceptSetExpressionDataFrame %>%
-          convertConceptSetDataFrameToExpression(
-            updateVocabularyFields = TRUE,
-            vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-            connection = connection
-          )
-      )
-    }
-    
     # Set up connection to server----
     if (is.null(connection)) {
       if (!is.null(connectionDetails)) {
         connection <- DatabaseConnector::connect(connectionDetails)
         on.exit(DatabaseConnector::disconnect(connection))
       }
+    }
+    
+    if (nrow(conceptSetExpressionDataFrame) <= 1) {
+      # no optimization necessary
+      data <- conceptSetExpressionDataFrame %>%
+        convertConceptSetDataFrameToExpression(
+          updateVocabularyFields = TRUE,
+          vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+          connection = connection
+        )
+      return(data)
     }
     
     includedConcepts <-

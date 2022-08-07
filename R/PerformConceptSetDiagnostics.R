@@ -157,7 +157,6 @@ performConceptSetDiagnostics <-
     
     searchResult <- list(
       searchPhrases = searchPhrases,
-      eligibleToBeSearched = eligibleToBeSearched,
       stringSearchResults = stringSearchResults,
       optimizedConceptSetExpression = optimizedConceptSetExpression,
       optimizedConceptSetExpressionDataFrame = optimizedConceptSetExpression %>%
