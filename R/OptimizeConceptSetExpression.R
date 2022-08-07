@@ -35,7 +35,7 @@ optimizeConceptSetExpression <-
            connectionDetails = NULL,
            replaceNonStandardWithStandardEquivalent = TRUE,
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
-    warning("reminder: incomplete replaceNonStandardWithStandardEquivalent. i.e. for every non standard, replace its standard equivalent option")
+    writeLines("reminder: incomplete replaceNonStandardWithStandardEquivalent. i.e. for every non standard, replace its standard equivalent option")
     optimizationRecommendation <-
       getOptimizationRecommendationForConceptSetExpression(
         connection = connection,
