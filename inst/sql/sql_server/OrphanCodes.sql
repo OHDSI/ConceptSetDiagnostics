@@ -101,7 +101,7 @@ ON ss2.concept_name_length < ss1.concept_name_length
 		
 -- remove if it is the start set
 SELECT DISTINCT c1.*
-INTO #eligble_concepts
+INTO #eligible_concepts
 FROM @vocabulary_database_schema.concept c1
 LEFT JOIN #starting_concepts sc1
 	ON c1.concept_id = sc1.concept_id
