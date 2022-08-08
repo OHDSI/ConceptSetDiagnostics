@@ -71,9 +71,9 @@ getConceptPrevalenceCounts <- function(conceptIds,
     connection = connection,
     tempEmulationSchema = tempEmulationSchema
   )
-  
+
   sql <- "SELECT cp.*
-          FROM 
+          FROM
             @concept_prevalence_schema.cp_master cp
           INNER JOIN
             @concept_id_table t
