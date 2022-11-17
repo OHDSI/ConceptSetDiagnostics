@@ -40,7 +40,7 @@ extractConceptSetsInCohortDefinition <-
       extractConceptSetExpressionsFromCohortExpression(cohortExpression = expression)
 
     if (is.null(conceptSetExpression)) {
-      return(NULL)
+      stop("No concept set expressions found in cohort expression")
     }
 
     # use circe to render cohort sql and extract concept set sql
@@ -52,8 +52,6 @@ extractConceptSetsInCohortDefinition <-
 
     extractedConceptSetSql <-
       extractConceptSetsSqlFromCohortSql(cohortSql = circeRenderedSqlExpression)
-
-
 
     primaryCriterias <-
       expression$PrimaryCriteria$CriteriaList
@@ -102,14 +100,18 @@ extractConceptSetsInCohortDefinition <-
     }
 
     conceptSetExpression <-
-      dplyr::bind_rows(conceptSetExpression2) %>%
-      dplyr::left_join(
-        dplyr::tibble(conceptSetId = codeSetsIdsInPrimaryCriteria) %>%
-          dplyr::distinct() %>%
-          dplyr::mutate(conceptSetUsedInEntryEvent = 1),
-        by = "conceptSetId"
-      ) %>%
-      tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0))
+      dplyr::bind_rows(conceptSetExpression2) %>% 
+      dplyr::mutate(conceptSetUsedInEntryEvent = 0)
+    
+    if (length(codeSetsIdsInPrimaryCriteria) > 0) {
+      conceptSetExpression <- conceptSetExpression %>% 
+        dplyr::left_join(
+          dplyr::tibble(conceptSetId = codeSetsIdsInPrimaryCriteria) %>%
+            dplyr::distinct() %>%
+            dplyr::mutate(conceptSetUsedInEntryEvent = 1),
+          by = "conceptSetId"
+        )
+    }
 
     uniqueConceptSets <- conceptSetExpression %>%
       dplyr::select(.data$conceptSetExpressionSignature) %>%
