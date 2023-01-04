@@ -46,10 +46,15 @@ resolveConceptSetsInCohortExpression <- function(cohortExpression,
       DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = sql,
-        vocabulary_database_schema = vocabularyDatabaseSchema
+        vocabulary_database_schema = vocabularyDatabaseSchema, 
+        snakeCaseToCamelCase = TRUE
       )
   }
 
-  resolvedConceptSet <- dplyr::bind_rows(resolvedConceptSet)
+  resolvedConceptSet <- dplyr::bind_rows(resolvedConceptSet) %>% 
+    dplyr::arrange(codesetId,
+                   conceptId) %>% 
+    dplyr::distinct()
+  
   return(resolvedConceptSet)
 }

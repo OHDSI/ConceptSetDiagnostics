@@ -20,7 +20,7 @@ performConceptSetDiagnostics(
 )
 }
 \arguments{
-\item{searchPhrases}{An array of text-phrases within quotations that are seperated by commas.}
+\item{searchPhrases}{An array of text-phrases within quotations that are separated by commas.}
 
 \item{connection}{An object of type \code{connection} as created using the
 \code{\link[DatabaseConnector]{connect}} function in the

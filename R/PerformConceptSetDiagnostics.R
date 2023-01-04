@@ -22,7 +22,7 @@
 #' of operations that provides a recommended concept set expression, along with
 #' potentially more recommended and orphan concepts.
 #'
-#' @param searchPhrases        An array of text-phrases within quotations that are seperated by commas.
+#' @param searchPhrases        An array of text-phrases within quotations that are separated by commas.
 #'
 #' @template Connection
 #'

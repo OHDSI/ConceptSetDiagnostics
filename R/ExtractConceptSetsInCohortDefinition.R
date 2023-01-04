@@ -56,6 +56,7 @@ extractConceptSetsInCohortDefinition <-
     primaryCriterias <-
       expression$PrimaryCriteria$CriteriaList
     codeSetsIdsInPrimaryCriteria <- c()
+    
     for (i in (1:length(primaryCriterias))) {
       codesets <- primaryCriterias[[i]][[1]]
 
@@ -81,6 +82,7 @@ extractConceptSetsInCohortDefinition <-
     }
 
     conceptSetExpression2 <- list()
+    
     for (j in (1:nrow(conceptSetExpression))) {
       conceptSetExpression2[[j]] <- conceptSetExpression[j, ]
       conceptSetExpression2[[j]]$conceptSetExpressionSignature <-
@@ -105,6 +107,7 @@ extractConceptSetsInCohortDefinition <-
     
     if (length(codeSetsIdsInPrimaryCriteria) > 0) {
       conceptSetExpression <- conceptSetExpression %>% 
+        dplyr::select(-conceptSetUsedInEntryEvent) %>% 
         dplyr::left_join(
           dplyr::tibble(conceptSetId = codeSetsIdsInPrimaryCriteria) %>%
             dplyr::distinct() %>%
@@ -129,6 +132,10 @@ extractConceptSetsInCohortDefinition <-
       y = extractedConceptSetSql,
       by = c("conceptSetId")
     )
+    
+    data <- data %>% 
+      tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0))
+    
     return(data)
   }
 
