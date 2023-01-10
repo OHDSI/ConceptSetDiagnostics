@@ -101,9 +101,11 @@ instantiateCohortFromConceptSetExpression <-
     ParallelLogger::logInfo(" Creating cohort table.")
     CohortAlgebra::unionCohorts(
       connection = connection,
-      cohortDatabaseSchema = cohortDatabaseSchema,
+      sourceCohortDatabaseSchema = cohortDatabaseSchema,
+      targetCohortDatabaseSchema = cohortDatabaseSchema,
+      sourceCohortTable = cohortTable,
+      targetCohortTable = cohortTable,
       oldToNewCohortId = dplyr::tibble(oldCohortId = cohortId, newCohortId = cohortId),
-      cohortTable = cohortTable,
       purgeConflicts = TRUE
     )
   }
