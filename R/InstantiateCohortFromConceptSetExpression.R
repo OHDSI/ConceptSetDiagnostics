@@ -34,7 +34,7 @@
 #' @param cohortId An integer value to identify the cohort.
 #'
 #' @param cohortTable the name of the cohort table
-#' 
+#'
 #' @param restrictToObservationPeriod (Default = TRUE) Do you want to restrict to Observation period? i.e
 #'                                      Cohort dates are restricted to observation period.
 #'
@@ -71,25 +71,31 @@ instantiateCohortFromConceptSetExpression <-
       dplyr::arrange(conceptId) %>%
       dplyr::pull(conceptId)
     
-    tempConceptTableName <- loadTempConceptTable(
-      conceptIds = conceptIds,
-      connection = connection,
-      tempEmulationSchema = tempEmulationSchema
-    )
+    tempTableWithConceptDates <-
+      getConceptSetOccurrenceDate(
+        connection = connection,
+        cdmDatabaseSchema = cdmDatabaseSchema,
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        subset = "all",
+        tempEmulationSchema = tempEmulationSchema,
+        conceptIds = conceptIds
+      )
+    
+    tempCohortTableName <-
+      paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
+        
+      )))) * 100000)
     
     sql <- SqlRender::loadRenderTranslateSql(
-      "InstantiateCohortFromConceptSetExpression.sql",
+      "ConvertConceptIdDatesTableToCohort.sql",
       packageName = utils::packageName(),
       dbms = connection@dbms,
       tempEmulationSchema = tempEmulationSchema,
-      cdm_database_schema = cdmDatabaseSchema,
-      cohort_database_schema = cohortDatabaseSchema,
-      cohort_table = cohortTable,
-      concept_id_table = tempConceptTableName, 
-      cohort_id = cohortId,
+      concept_id_table = tempTableWithConceptDates,
+      temp_cohort_table_name = tempCohortTableName,
+      cohort_id = 0,
       restrict_to_observation_period = restrictToObservationPeriod
     )
-    ParallelLogger::logInfo(" Looking for resolved concepts in domain tables.")
     DatabaseConnector::executeSql(
       connection = connection,
       sql = sql,
@@ -98,14 +104,16 @@ instantiateCohortFromConceptSetExpression <-
       reportOverallTime = FALSE
     )
     
-    ParallelLogger::logInfo(" Creating cohort table.")
-    CohortAlgebra::unionCohorts(
+    CohortAlgebra:::eraFyCohorts(
       connection = connection,
-      sourceCohortDatabaseSchema = cohortDatabaseSchema,
+      sourceCohortDatabaseSchema = NULL,
       targetCohortDatabaseSchema = cohortDatabaseSchema,
-      sourceCohortTable = cohortTable,
+      sourceCohortTable = tempCohortTableName,
       targetCohortTable = cohortTable,
-      oldToNewCohortId = dplyr::tibble(oldCohortId = cohortId, newCohortId = cohortId),
-      purgeConflicts = TRUE
+      oldCohortIds = 0,
+      newCohortId = cohortId,
+      eraconstructorpad = 1,
+      cdmDatabaseSchema = cdmDatabaseSchema,
+      purgeConflicts = FALSE
     )
   }
