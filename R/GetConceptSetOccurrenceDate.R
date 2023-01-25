@@ -40,6 +40,8 @@
 #'                                      Cohort dates are restricted to observation period.
 #'
 #' @param conceptIds An array of concept ids
+#' 
+#' @param limitToPersonDate Do you want to limit to person dates
 #'
 #' @return
 #' NULL
@@ -50,6 +52,7 @@ getConceptSetOccurrenceDate <- function(connection,
                                         vocabularyDatabaseSchema = cdmDatabaseSchema,
                                         conceptIds,
                                         subset = c("all"),
+                                        limitToPersonDate = TRUE,
                                         restrictToObservationPeriod = TRUE,
                                         tempEmulationSchema = NULL) {
   subset <- tolower(subset) %>%
@@ -89,8 +92,8 @@ getConceptSetOccurrenceDate <- function(connection,
     cdm_database_schema = cdmDatabaseSchema,
     concept_id_table = tempConceptTableName,
     temp_table_name = tempTableName,
-    first_occurrence_only = FALSE,
-    last_occurrence_only = FALSE
+    limit_to_person_date = isFALSE(limitToPersonDate),
+    restrict_to_observation_period = restrictToObservationPeriod
   )
   ParallelLogger::logInfo(" Looking for resolved concepts in domain tables.")
   DatabaseConnector::executeSql(

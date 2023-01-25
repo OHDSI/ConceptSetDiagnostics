@@ -10,6 +10,7 @@ getConceptSetOccurrenceDate(
   vocabularyDatabaseSchema = cdmDatabaseSchema,
   conceptIds,
   subset = c("all"),
+  limitToPersonDate = TRUE,
   restrictToObservationPeriod = TRUE,
   tempEmulationSchema = NULL
 )
@@ -28,6 +29,8 @@ schema name, for example 'cdm_data.dbo'.}
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 
 \item{conceptIds}{An array of concept ids}
+
+\item{limitToPersonDate}{Do you want to limit to person dates}
 
 \item{restrictToObservationPeriod}{(Default = TRUE) Do you want to restrict to Observation period? i.e
 Cohort dates are restricted to observation period.}
