@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ConceptSetDiagnostics</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.3</span>
       </span>
     </div>
 
@@ -48,17 +48,23 @@
 
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">performStringSearchForConcepts</span><span class="op">(</span></span>
-<span>  <span class="va">searchString</span>,</span>
+<span>  <span class="va">searchPhrases</span>,</span>
 <span>  vocabularyDatabaseSchema <span class="op">=</span> <span class="st">"vocabulary"</span>,</span>
 <span>  connection <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  connectionDetails <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  connectionDetails <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  vocabularyIdOfInterest <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"SNOMED"</span>, <span class="st">"HCPCS"</span>, <span class="st">"ICD10CM"</span>, <span class="st">"ICD10"</span>, <span class="st">"ICD9CM"</span>, <span class="st">"ICD9"</span>,</span>
+<span>    <span class="st">"Read"</span><span class="op">)</span>,</span>
+<span>  domainIdOfInterest <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Condition"</span>, <span class="st">"Procedure"</span>, <span class="st">"Observation"</span><span class="op">)</span>,</span>
+<span>  retrieveInvalidConcepts <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>searchString</dt>
-<dd><p>A phrase (can be multiple words) to search for.</p></dd>
+    <dl><dt>searchPhrases</dt>
+<dd><p>An array of phrases (each phrase may be multiple words,
+but each phrase should be quoted and comma separated) to search for.
+Phrases that have a character length of &lt;4 are not searched.</p></dd>
 
 
 <dt>vocabularyDatabaseSchema</dt>
@@ -78,6 +84,18 @@ of the function, and closed when the function finishes.</p></dd>
 <code><a href="https://ohdsi.github.io/DatabaseConnector/reference/createConnectionDetails.html" class="external-link">createConnectionDetails</a></code> function in the
 DatabaseConnector package. Can be left NULL if <code>connection</code> is
 provided.</p></dd>
+
+
+<dt>vocabularyIdOfInterest</dt>
+<dd><p>A list of vocabulary ids to filter the results.</p></dd>
+
+
+<dt>domainIdOfInterest</dt>
+<dd><p>A list of domain ids to filter the results.</p></dd>
+
+
+<dt>retrieveInvalidConcepts</dt>
+<dd><p>Do you want to retrieve invalid concepts. Default = FALSE</p></dd>
 
 </dl></div>
 

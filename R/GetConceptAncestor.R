@@ -50,7 +50,7 @@ getConceptAncestor <-
     )
 
     sql <- "SELECT ca.*
-            FROM 
+            FROM
                 @vocabulary_database_schema.concept_ancestor ca
             INNER JOIN
                 @concept_id_table t

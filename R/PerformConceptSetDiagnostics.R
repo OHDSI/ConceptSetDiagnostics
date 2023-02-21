@@ -22,7 +22,7 @@
 #' of operations that provides a recommended concept set expression, along with
 #' potentially more recommended and orphan concepts.
 #'
-#' @param searchPhrases        An array of text-phrases within quotations that are seperated by commas.
+#' @param searchPhrases        An array of text-phrases within quotations that are separated by commas.
 #'
 #' @template Connection
 #'
@@ -56,7 +56,7 @@ performConceptSetDiagnostics <-
            vocabularyIdOfInterest = c("SNOMED", "HCPCS", "ICD10CM", "ICD10", "ICD9CM", "ICD9", "Read"),
            domainIdOfInterest = c("Condition", "Procedure", "Observation")) {
     writeLines("Beginning Concept Set Diagnostics.")
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
@@ -67,7 +67,7 @@ performConceptSetDiagnostics <-
       vocabularyDatabaseSchema = vocabularyDatabaseSchema,
       connection = connection
     )
-    
+
     conceptSetExpression <-
       dplyr::tibble(
         dplyr::bind_rows(stringSearchResults) %>%
@@ -85,9 +85,11 @@ performConceptSetDiagnostics <-
           ) %>%
           dplyr::distinct()
       ) %>%
-      convertConceptSetDataFrameToExpression(selectAllDescendants = TRUE,
-                                             updateVocabularyFields = FALSE)
-    
+      convertConceptSetDataFrameToExpression(
+        selectAllDescendants = TRUE,
+        updateVocabularyFields = FALSE
+      )
+
     writeLines(" - Creating concept sets from returned concepts and Optimizing.")
     # optimize
     optimized <- optimizeConceptSetExpression(
@@ -96,15 +98,15 @@ performConceptSetDiagnostics <-
       tempEmulationSchema = tempEmulationSchema,
       connection = connection
     )
-    
+
     # remove invalid
     optimizedConceptSetExpression <-
       optimized$optimizedConceptSetExpression %>%
       convertConceptSetExpressionToDataFrame() %>%
-      dplyr::filter(.data$invalidReason %in% c('', 'V')) %>%
+      dplyr::filter(.data$invalidReason %in% c("", "V")) %>%
       convertConceptSetDataFrameToExpression()
     rm("optimized")
-    
+
     # filter to domain of interest
     if (length(domainIdOfInterest) > 0) {
       optimizedConceptSetExpression <- optimizedConceptSetExpression %>%
@@ -112,7 +114,7 @@ performConceptSetDiagnostics <-
         dplyr::filter(.data$domainId %in% c(domainIdOfInterest)) %>%
         convertConceptSetDataFrameToExpression()
     }
-    
+
     # filter to vocabulary of interest
     if (length(vocabularyIdOfInterest) > 0) {
       optimizedConceptSetExpression <- optimizedConceptSetExpression %>%
@@ -120,7 +122,7 @@ performConceptSetDiagnostics <-
         dplyr::filter(.data$vocabularyId %in% c(vocabularyIdOfInterest)) %>%
         convertConceptSetDataFrameToExpression()
     }
-    
+
     recommended <- NULL
     if (runPhoebeRecommendation) {
       writeLines(" - Finding recommended based on concept prevalence study.")
@@ -132,7 +134,7 @@ performConceptSetDiagnostics <-
         tempEmulationSchema = tempEmulationSchema
       )
     }
-    
+
     orphan <- NULL
     if (runOrphan) {
       writeLines(" - Searching for potential orphans using string similarity.")
@@ -143,7 +145,7 @@ performConceptSetDiagnostics <-
         tempEmulationSchema = tempEmulationSchema
       )
     }
-    
+
     writeLines(" - Resolved concept ids.")
     resolvedConceptIds <-
       resolveConceptSetExpression(
@@ -152,12 +154,11 @@ performConceptSetDiagnostics <-
         connectionDetails = connectionDetails,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )
-    
+
     # get counts - from conceptPrevalence and from database
-    
+
     searchResult <- list(
       searchPhrases = searchPhrases,
-      eligibleToBeSearched = eligibleToBeSearched,
       stringSearchResults = stringSearchResults,
       optimizedConceptSetExpression = optimizedConceptSetExpression,
       optimizedConceptSetExpressionDataFrame = optimizedConceptSetExpression %>%
@@ -166,25 +167,31 @@ performConceptSetDiagnostics <-
       recommendedConceptIds = recommended,
       orphanConcepts = orphan
     )
-    
+
     if (!is.null(locationForResults)) {
       writeLines(" - Writing files to disc.")
-      dir.create(path = locationForResults,
-                 showWarnings = FALSE,
-                 recursive = TRUE)
+      dir.create(
+        path = locationForResults,
+        showWarnings = FALSE,
+        recursive = TRUE
+      )
       unlink(
-        file.path(locationForResults,
-                  "conceptExpression.json"),
+        file.path(
+          locationForResults,
+          "conceptExpression.json"
+        ),
         recursive = TRUE,
         force = TRUE
       )
       unlink(
-        file.path(locationForResults,
-                  "conceptExpression.csv"),
+        file.path(
+          locationForResults,
+          "conceptExpression.csv"
+        ),
         recursive = TRUE,
         force = TRUE
       )
-      
+
       if (!is.null(optimizedConceptSetExpression)) {
         SqlRender::writeSql(
           sql = RJSONIO::toJSON(
@@ -192,66 +199,82 @@ performConceptSetDiagnostics <-
             digits = 23,
             pretty = TRUE
           ),
-          targetFile = file.path(locationForResults,
-                                 "conceptExpression.json")
+          targetFile = file.path(
+            locationForResults,
+            "conceptExpression.json"
+          )
         )
         readr::write_excel_csv(
           x = convertConceptSetExpressionToDataFrame(conceptSetExpression = optimizedConceptSetExpression),
-          file = file.path(locationForResults,
-                           "conceptExpression.csv"),
+          file = file.path(
+            locationForResults,
+            "conceptExpression.csv"
+          ),
           na = "",
           append = FALSE
         )
       }
-      
-      
+
+
       unlink(
-        x = file.path(locationForResults,
-                      paste0("recommendedSource.csv")),
+        x = file.path(
+          locationForResults,
+          paste0("recommendedSource.csv")
+        ),
         recursive = TRUE,
         force = TRUE
       )
       unlink(
-        x = file.path(locationForResults,
-                      paste0("recommendedStandard.csv")),
+        x = file.path(
+          locationForResults,
+          paste0("recommendedStandard.csv")
+        ),
         recursive = TRUE,
         force = TRUE
       )
       if (!is.null(recommended)) {
         readr::write_excel_csv(
           x = recommended$recommendedStandard,
-          file = file.path(locationForResults,
-                           paste0("recommendedStandard.csv")),
+          file = file.path(
+            locationForResults,
+            paste0("recommendedStandard.csv")
+          ),
           append = FALSE,
           na = ""
         )
         readr::write_excel_csv(
           x = recommended$recommendedSource,
-          file = file.path(locationForResults,
-                           paste0("recommendedSource.csv")),
+          file = file.path(
+            locationForResults,
+            paste0("recommendedSource.csv")
+          ),
           append = FALSE,
           na = ""
         )
       }
-      
+
       unlink(
-        x = file.path(locationForResults,
-                      paste0("orphan.csv")),
+        x = file.path(
+          locationForResults,
+          paste0("orphan.csv")
+        ),
         recursive = TRUE,
         force = TRUE
       )
       if (!is.null(orphan)) {
         readr::write_excel_csv(
           x = orphan,
-          file = file.path(locationForResults,
-                           paste0("orphan.csv")),
+          file = file.path(
+            locationForResults,
+            paste0("orphan.csv")
+          ),
           append = FALSE,
           na = ""
         )
       }
     }
-    
+
     writeLines(" - Complete.")
-    
+
     return(searchResult)
   }

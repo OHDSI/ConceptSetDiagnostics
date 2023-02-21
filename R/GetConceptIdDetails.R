@@ -64,9 +64,9 @@ getConceptIdDetails <-
       concept_id_table = tempTableName,
       tempEmulationSchema = tempEmulationSchema,
       vocabulary_database_schema = vocabularyDatabaseSchema
-    ) 
-    
-    data <- data %>% 
+    )
+
+    data <- data %>%
       tidyr::tibble() %>%
       dplyr::mutate(
         standardConceptCaption = dplyr::case_when(

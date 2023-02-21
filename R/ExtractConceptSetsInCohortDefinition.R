@@ -40,7 +40,7 @@ extractConceptSetsInCohortDefinition <-
       extractConceptSetExpressionsFromCohortExpression(cohortExpression = expression)
 
     if (is.null(conceptSetExpression)) {
-      return(NULL)
+      stop("No concept set expressions found in cohort expression")
     }
 
     # use circe to render cohort sql and extract concept set sql
@@ -53,11 +53,10 @@ extractConceptSetsInCohortDefinition <-
     extractedConceptSetSql <-
       extractConceptSetsSqlFromCohortSql(cohortSql = circeRenderedSqlExpression)
 
-
-
     primaryCriterias <-
       expression$PrimaryCriteria$CriteriaList
     codeSetsIdsInPrimaryCriteria <- c()
+    
     for (i in (1:length(primaryCriterias))) {
       codesets <- primaryCriterias[[i]][[1]]
 
@@ -83,6 +82,7 @@ extractConceptSetsInCohortDefinition <-
     }
 
     conceptSetExpression2 <- list()
+    
     for (j in (1:nrow(conceptSetExpression))) {
       conceptSetExpression2[[j]] <- conceptSetExpression[j, ]
       conceptSetExpression2[[j]]$conceptSetExpressionSignature <-
@@ -102,14 +102,19 @@ extractConceptSetsInCohortDefinition <-
     }
 
     conceptSetExpression <-
-      dplyr::bind_rows(conceptSetExpression2) %>%
-      dplyr::left_join(
-        dplyr::tibble(conceptSetId = codeSetsIdsInPrimaryCriteria) %>%
-          dplyr::distinct() %>%
-          dplyr::mutate(conceptSetUsedInEntryEvent = 1),
-        by = "conceptSetId"
-      ) %>%
-      tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0))
+      dplyr::bind_rows(conceptSetExpression2) %>% 
+      dplyr::mutate(conceptSetUsedInEntryEvent = 0)
+    
+    if (length(codeSetsIdsInPrimaryCriteria) > 0) {
+      conceptSetExpression <- conceptSetExpression %>% 
+        dplyr::select(-conceptSetUsedInEntryEvent) %>% 
+        dplyr::left_join(
+          dplyr::tibble(conceptSetId = codeSetsIdsInPrimaryCriteria) %>%
+            dplyr::distinct() %>%
+            dplyr::mutate(conceptSetUsedInEntryEvent = 1),
+          by = "conceptSetId"
+        )
+    }
 
     uniqueConceptSets <- conceptSetExpression %>%
       dplyr::select(.data$conceptSetExpressionSignature) %>%
@@ -127,6 +132,10 @@ extractConceptSetsInCohortDefinition <-
       y = extractedConceptSetSql,
       by = c("conceptSetId")
     )
+    
+    data <- data %>% 
+      tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0))
+    
     return(data)
   }
 

@@ -37,19 +37,21 @@ getRecommendedStandard <-
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
     # Filtering strings to numbers only to avoid SQL injection:
     conceptIds <- gsub("[^0-9 ,]", " ", conceptIds)
-    
+
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     conceptPrevalenceTables <-
-      DatabaseConnector::getTableNames(connection = connection,
-                                       databaseSchema = conceptPrevalenceSchema) %>%
+      DatabaseConnector::getTableNames(
+        connection = connection,
+        databaseSchema = conceptPrevalenceSchema
+      ) %>%
       tolower()
-    
+
     conceptPrevalenceTablesExist <- FALSE
-    
+
     if (all(
       "recommender_set" %in% conceptPrevalenceTables,
       "cp_master" %in% conceptPrevalenceTables,
@@ -57,19 +59,19 @@ getRecommendedStandard <-
     )) {
       conceptPrevalenceTablesExist <- TRUE
     }
-    
+
     if (!conceptPrevalenceTablesExist) {
       stop(
         "Concept Prevalence schema does not have the required concept prevalence tables. recommender_set, cp_master, recommended_blacklist"
       )
     }
-    
+
     tempTableName <- loadTempConceptTable(
       conceptIds = conceptIds,
       connection = connection,
       tempEmulationSchema = tempEmulationSchema
     )
-    
+
     sql <- SqlRender::loadRenderTranslateSql(
       sqlFilename = "RecommendedStandard.sql",
       packageName = "ConceptSetDiagnostics",
@@ -78,7 +80,7 @@ getRecommendedStandard <-
       concept_prevalence_schema = conceptPrevalenceSchema,
       concept_id_temp_table = tempTableName
     )
-    
+
     writeLines(" - Finding recommended standard concepts.")
     DatabaseConnector::executeSql(
       connection = connection,
@@ -87,7 +89,7 @@ getRecommendedStandard <-
       progressBar = TRUE,
       reportOverallTime = FALSE
     ) %>% dplyr::tibble()
-    
+
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
@@ -95,7 +97,7 @@ getRecommendedStandard <-
         snakeCaseToCamelCase = TRUE
       ) %>%
       dplyr::tibble()
-    
+
     DatabaseConnector::renderTranslateExecuteSql(
       connection = connection,
       sql = "
@@ -106,6 +108,6 @@ getRecommendedStandard <-
       progressBar = FALSE,
       reportOverallTime = FALSE
     )
-    
+
     return(data)
   }

@@ -101,7 +101,7 @@ ON ss2.concept_name_length < ss1.concept_name_length
 		
 -- remove if it is the start set
 SELECT DISTINCT c1.*
-INTO #eligble_concept
+INTO #eligible_concepts
 FROM @vocabulary_database_schema.concept c1
 LEFT JOIN #starting_concepts sc1
 	ON c1.concept_id = sc1.concept_id
@@ -119,7 +119,7 @@ SELECT DISTINCT c1.concept_id,
                 c1.valid_end_date,
                 c1.invalid_reason
 INTO @orphan_concept_table
-FROM #eligble_concept c1,
+FROM #eligible_concepts c1,
      #search_string_subset ss1
 WHERE LOWER(c1.concept_name) LIKE CONCAT (
 			'%',

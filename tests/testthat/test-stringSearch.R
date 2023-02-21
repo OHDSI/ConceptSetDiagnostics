@@ -10,7 +10,7 @@ testthat::test_that("String search - connection", {
     )
   )
   output <- performStringSearchForConcepts(
-    searchString = "diabetes",
+    searchPhrases = "diabetes",
     vocabularyDatabaseSchema = cdmDatabaseSchema,
     connection = connection
   )
@@ -21,7 +21,7 @@ DatabaseConnector::disconnect(connection = connection)
 
 testthat::test_that("String search - connectionDetails", {
   output <- performStringSearchForConcepts(
-    searchString = "diabetes mellitus",
+    searchPhrases = "diabetes mellitus",
     vocabularyDatabaseSchema = cdmDatabaseSchema,
     connectionDetails = connectionDetails
   )

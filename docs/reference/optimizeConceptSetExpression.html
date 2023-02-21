@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ConceptSetDiagnostics</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.3</span>
       </span>
     </div>
 
@@ -51,8 +51,9 @@
 <span>  <span class="va">conceptSetExpression</span>,</span>
 <span>  vocabularyDatabaseSchema <span class="op">=</span> <span class="st">"vocabulary"</span>,</span>
 <span>  connection <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  tempEmulationSchema <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"sqlRenderTempEmulationSchema"</span><span class="op">)</span>,</span>
-<span>  connectionDetails <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  connectionDetails <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  replaceNonStandardWithStandardEquivalent <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  tempEmulationSchema <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"sqlRenderTempEmulationSchema"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -74,16 +75,20 @@ is provided, in which case a new connection will be opened at the start
 of the function, and closed when the function finishes.</p></dd>
 
 
-<dt>tempEmulationSchema</dt>
-<dd><p>Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
-tables, provide a schema with write privileges where temp tables can be created.</p></dd>
-
-
 <dt>connectionDetails</dt>
 <dd><p>An object of type <code>connectionDetails</code> as created using the
 <code><a href="https://ohdsi.github.io/DatabaseConnector/reference/createConnectionDetails.html" class="external-link">createConnectionDetails</a></code> function in the
 DatabaseConnector package. Can be left NULL if <code>connection</code> is
 provided.</p></dd>
+
+
+<dt>replaceNonStandardWithStandardEquivalent</dt>
+<dd><p>Do you want to replace non standard with standard equivalent?</p></dd>
+
+
+<dt>tempEmulationSchema</dt>
+<dd><p>Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
+tables, provide a schema with write privileges where temp tables can be created.</p></dd>
 
 </dl></div>
 

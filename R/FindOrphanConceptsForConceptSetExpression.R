@@ -70,9 +70,11 @@ findOrphanConceptsForConceptSetExpression <-
         connection = connection,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         tempEmulationSchema = tempEmulationSchema,
-        conceptIds = c(resolvedConceptIds$conceptId,
-                       mappedConceptIds$conceptId,
-                       mappedConceptIds$givenConceptId) %>% unique()
+        conceptIds = c(
+          resolvedConceptIds$conceptId,
+          mappedConceptIds$conceptId,
+          mappedConceptIds$givenConceptId
+        ) %>% unique()
       )
 
     return(orphanConcepts)

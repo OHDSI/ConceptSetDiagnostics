@@ -69,8 +69,7 @@ convertConceptSetDataFrameToExpression <-
       conceptSetExpressionDataFrame$invalidReason <- as.character("")
     }
     if (!"invalidReasonCaption" %in% colnames(conceptSetExpressionDataFrame)) {
-      conceptSetExpressionDataFrame$invalidReasonCaption <-
-        as.character("")
+      conceptSetExpressionDataFrame$invalidReasonCaption <- as.character("")
     }
     if (!"conceptCode" %in% colnames(conceptSetExpressionDataFrame)) {
       conceptSetExpressionDataFrame$conceptCode <- as.character("")

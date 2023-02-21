@@ -41,13 +41,13 @@ findOrphanConcepts <- function(connectionDetails = NULL,
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-  
+
   tempTableName <- loadTempConceptTable(
     conceptIds = conceptIds,
     connection = connection,
     tempEmulationSchema = tempEmulationSchema
   )
-  
+
   sql <- SqlRender::loadRenderTranslateSql(
     "OrphanCodes.sql",
     packageName = utils::packageName(),
@@ -64,7 +64,7 @@ findOrphanConcepts <- function(connectionDetails = NULL,
     progressBar = TRUE,
     reportOverallTime = FALSE
   )
-  
+
   sql <- "SELECT * FROM @orphan_concept_table;"
   orphanConcepts <-
     DatabaseConnector::renderTranslateQuerySql(
@@ -75,7 +75,7 @@ findOrphanConcepts <- function(connectionDetails = NULL,
       snakeCaseToCamelCase = TRUE
     ) %>%
     tidyr::tibble()
-  
+
   DatabaseConnector::renderTranslateExecuteSql(
     connection = connection,
     sql = "DROP TABLE IF EXISTS @orphan_concept_table;",

@@ -17,10 +17,11 @@ cohortsExpressionNoConceptSet <-
   RJSONIO::fromJSON(digits = 23)
 
 cohortDefinitionSet <-
-  readr::read_csv(system.file(file.path("cohorts", "CohortDefinitionSet.csv"),
-    package = "ConceptSetDiagnostics"
-  ),
-  col_types = readr::cols()
+  readr::read_csv(
+    system.file(file.path("cohorts", "CohortDefinitionSet.csv"),
+      package = "ConceptSetDiagnostics"
+    ),
+    col_types = readr::cols()
   ) %>%
   dplyr::mutate(
     json = cohortsJson

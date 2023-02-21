@@ -128,10 +128,11 @@ dropTempConceptTable <-
 #' A list with two tibble data frame objects with domain information represented in wide and long format respectively.
 getDomainInformation <- function(packageName = NULL) {
   domains <-
-    readr::read_csv(system.file(file.path("csv", "domains.csv"),
-      package = "ConceptSetDiagnostics"
-    ),
-    col_types = readr::cols()
+    readr::read_csv(
+      system.file(file.path("csv", "domains.csv"),
+        package = "ConceptSetDiagnostics"
+      ),
+      col_types = readr::cols()
     )
 
   domains <- domains %>%
