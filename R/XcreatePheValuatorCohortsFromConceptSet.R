@@ -1,20 +1,19 @@
 
 
+
 #' @export
 #'
-findConceptSetOccurrenceDates <- function(connection,
-                                        cdmDatabaseSchema,
-                                        vocabularyDatabaseSchema = cdmDatabaseSchema,
-                                        conceptSetExpression,
-                                        tempEmulationSchema = NULL) {
-  
-  conceptIds <- ConceptSetDiagnostics::resolveConceptSetExpression(
-    connection = connection,
-    conceptSetExpression = conceptSetExpress
-  )
+createPheValuatorCohortsFromConceptSet <- function(connection,
+                                                   cdmDatabaseSchema,
+                                                   vocabularyDatabaseSchema = cdmDatabaseSchema,
+                                                   conceptSetExpression,
+                                                   tempEmulationSchema = NULL) {
+  conceptIds <- ConceptSetDiagnostics::resolveConceptSetExpression(connection = connection,
+                                                                   conceptSetExpression = conceptSetExpress)
   
   tempTableName <-
-    paste0("#t", (as.numeric(as.POSIXlt(Sys.time()))) * 100000)
+    paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
+    )))) * 100000)
   
   invisible(utils::capture.output(
     DatabaseConnector::insertTable(

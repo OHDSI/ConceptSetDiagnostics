@@ -38,6 +38,7 @@ findOrphanConceptsForConceptSetExpression <-
            connection = NULL,
            connectionDetails = NULL,
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
+    
     resolvedConceptIds <-
       resolveConceptSetExpression(
         conceptSetExpression,
