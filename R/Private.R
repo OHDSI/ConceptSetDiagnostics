@@ -62,6 +62,21 @@ hasData <- function(data) {
   return(TRUE)
 }
 
+getUniqueString <- function(n = 7) {
+  # create a vector of all alphanumeric characters
+  alphanumericChars <- c(letters, 0:9)
+  
+  # generate the first character from the set of letters only
+  firstChar <- sample(c(letters), 1)
+  
+  # generate the remaining characters from the set of all alphanumeric characters
+  remainingChars <- sample(alphanumericChars, n, replace = TRUE)
+  
+  # combine the first character with the remaining characters
+  uniqueString <- paste0(firstChar, paste0(remainingChars, collapse = ""))
+  
+  return(tolower(uniqueString))
+}
 
 loadTempConceptTable <- function(conceptIds,
                                  connection,
@@ -69,8 +84,7 @@ loadTempConceptTable <- function(conceptIds,
   conceptIdTable <-
     dplyr::tibble(conceptId = conceptIds %>% unique() %>% as.integer())
 
-  tempTableName <-
-    paste0("#t", (as.numeric(as.POSIXlt(Sys.time()))) * 100000)
+  tempTableName <- getUniqueString()
 
   invisible(utils::capture.output(
     DatabaseConnector::insertTable(

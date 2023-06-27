@@ -5,13 +5,14 @@
 \title{Given conceptId(s) get the record count.}
 \usage{
 getConceptRecordCount(
-  conceptIds,
+  conceptIds = NULL,
   connection = NULL,
   connectionDetails = NULL,
   cdmDatabaseSchema,
   vocabularyDatabaseSchema = cdmDatabaseSchema,
   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
-  minCellCount = 0
+  minCellCount = 0,
+  summarizeAcrossDomains = FALSE
 )
 }
 \arguments{
@@ -38,6 +39,8 @@ schema name, for example 'cdm_data.dbo'.}
 tables, provide a schema with write privileges where temp tables can be created.}
 
 \item{minCellCount}{The minimum cell count for fields containing person/subject count.}
+
+\item{summarizeAcrossDomains}{Do you want to summarize across domain tables?}
 }
 \value{
 Returns a tibble data frame.
