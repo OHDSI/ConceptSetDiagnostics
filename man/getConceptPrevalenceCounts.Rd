@@ -8,7 +8,7 @@ getConceptPrevalenceCounts(
   conceptIds = NULL,
   connection = NULL,
   connectionDetails = NULL,
-  conceptPrevalenceSchema,
+  conceptPrevalenceSchema = "concept_prevalence",
   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
 )
 }
