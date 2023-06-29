@@ -84,7 +84,7 @@ loadTempConceptTable <- function(conceptIds,
   conceptIdTable <-
     dplyr::tibble(conceptId = conceptIds %>% unique() %>% as.integer())
 
-  tempTableName <- getUniqueString()
+  tempTableName <- paste0("#", getUniqueString())
 
   invisible(utils::capture.output(
     DatabaseConnector::insertTable(
