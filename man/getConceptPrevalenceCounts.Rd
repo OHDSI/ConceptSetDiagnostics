@@ -5,7 +5,7 @@
 \title{get concept id count}
 \usage{
 getConceptPrevalenceCounts(
-  conceptIds,
+  conceptIds = NULL,
   connection = NULL,
   connectionDetails = NULL,
   conceptPrevalenceSchema,
