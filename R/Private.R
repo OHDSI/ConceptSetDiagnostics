@@ -80,6 +80,7 @@ getUniqueString <- function(n = 7) {
 
 loadTempConceptTable <- function(conceptIds,
                                  connection,
+                                 bulkLoad = Sys.getenv("DATABASE_CONNECTOR_BULK_UPLOAD"),
                                  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
   conceptIdTable <-
     dplyr::tibble(conceptId = conceptIds %>% unique() %>% as.integer())
@@ -95,7 +96,7 @@ loadTempConceptTable <- function(conceptIds,
       tempEmulationSchema = tempEmulationSchema,
       data = conceptIdTable,
       camelCaseToSnakeCase = TRUE,
-      bulkLoad = TRUE,
+      bulkLoad = bulkLoad,
       progressBar = TRUE,
       createTable = TRUE
     ),
