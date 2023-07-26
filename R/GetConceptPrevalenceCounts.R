@@ -45,7 +45,7 @@ getConceptPrevalenceCounts <- function(conceptIds = NULL,
   
   conceptPrevalenceTables <-
     DatabaseConnector::getTableNames(connection = connection,
-                                     databaseSchema = conceptPrevalenceSchema) %>%
+                                     databaseSchema = conceptPrevalenceSchema) |>
     tolower()
   
   conceptPrevalenceTablesExist <- FALSE
@@ -89,7 +89,7 @@ getConceptPrevalenceCounts <- function(conceptIds = NULL,
       concept_id_table = tempTableName,
       sql = sql,
       snakeCaseToCamelCase = TRUE
-    ) %>% dplyr::tibble()
+    ) |> dplyr::tibble()
   
   if (!is.null(conceptIds)) {
     dropTempConceptTable(

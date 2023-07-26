@@ -290,7 +290,7 @@ createPheValuatorCohortsFromConceptSet <- function(connection,
           GROUP BY subject_id,
           	cohort_end_date;"
   
-  xSpecIds <- c(5:10) %>% sort()
+  xSpecIds <- c(5:10) |> sort()
   for (j in (1:length(xSpecIds))) {
     DatabaseConnector::renderTranslateExecuteSql(
       connection = connection,

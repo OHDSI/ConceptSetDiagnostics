@@ -37,7 +37,7 @@ testthat::test_that("optimizeConceptSetExpression", {
     extractConceptSetsInCohortDefinition(cohortExpression = cohortExpression)
 
   conceptSetExpression1 <-
-    conceptSetsInCohort[1, ]$conceptSetExpression %>%
+    conceptSetsInCohort[1, ]$conceptSetExpression |>
     RJSONIO::fromJSON(digits = 23)
 
   conceptSetsInCohort1 <-
@@ -88,7 +88,7 @@ testthat::test_that("optimizeConceptSetExpression", {
 
 
   conceptSetExpression3 <-
-    conceptSetsInCohort[2, ]$conceptSetExpression %>%
+    conceptSetsInCohort[2, ]$conceptSetExpression |>
     RJSONIO::fromJSON(digits = 23)
 
   conceptSetsInCohort1 <-
@@ -120,7 +120,7 @@ testthat::test_that("resolveConceptSetExpression", {
     extractConceptSetsInCohortDefinition(cohortExpression = cohortExpression)
 
   conceptSetExpression1 <-
-    conceptSetsInCohort[1, ]$conceptSetExpression %>%
+    conceptSetsInCohort[1, ]$conceptSetExpression |>
     RJSONIO::fromJSON(digits = 23)
 
   resolvedConceptSet1 <-
@@ -135,7 +135,7 @@ testthat::test_that("resolveConceptSetExpression", {
   )
 
   conceptSetExpression2 <-
-    conceptSetsInCohort[2, ]$conceptSetExpression %>%
+    conceptSetsInCohort[2, ]$conceptSetExpression |>
     RJSONIO::fromJSON(digits = 23)
 
   resolvedConceptSet3 <-
@@ -191,7 +191,7 @@ testthat::test_that("getExcludedConceptsInConceptSetExpression", {
     extractConceptSetsInCohortDefinition(cohortExpression = cohortExpression)
 
   conceptSetExpressionWithExclusion <-
-    conceptSetsInCohort[3, ]$conceptSetExpression %>%
+    conceptSetsInCohort[3, ]$conceptSetExpression |>
     RJSONIO::fromJSON(digits = 23)
 
   excludedConcepts1 <-

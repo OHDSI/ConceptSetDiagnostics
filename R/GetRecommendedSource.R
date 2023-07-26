@@ -47,7 +47,7 @@ getRecommendedSource <-
       DatabaseConnector::getTableNames(
         connection = connection,
         databaseSchema = conceptPrevalenceSchema
-      ) %>%
+      ) |>
       tolower()
 
     conceptPrevalenceTablesExist <- FALSE
@@ -88,7 +88,7 @@ getRecommendedSource <-
       profile = FALSE,
       progressBar = FALSE,
       reportOverallTime = FALSE
-    ) %>% dplyr::tibble()
+    ) |> dplyr::tibble()
 
     data <- DatabaseConnector::renderTranslateQuerySql(
       connection = connection,

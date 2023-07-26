@@ -70,7 +70,7 @@ performConceptSetDiagnostics <-
 
     conceptSetExpression <-
       dplyr::tibble(
-        dplyr::bind_rows(stringSearchResults) %>%
+        dplyr::bind_rows(stringSearchResults) |>
           dplyr::select(
             .data$conceptId,
             .data$conceptName,
@@ -82,9 +82,9 @@ performConceptSetDiagnostics <-
             .data$invalidReasonCaption,
             .data$conceptCode,
             .data$conceptClassId
-          ) %>%
+          ) |>
           dplyr::distinct()
-      ) %>%
+      ) |>
       convertConceptSetDataFrameToExpression(
         selectAllDescendants = TRUE,
         updateVocabularyFields = FALSE
@@ -101,25 +101,25 @@ performConceptSetDiagnostics <-
 
     # remove invalid
     optimizedConceptSetExpression <-
-      optimized$optimizedConceptSetExpression %>%
-      convertConceptSetExpressionToDataFrame() %>%
-      dplyr::filter(.data$invalidReason %in% c("", "V")) %>%
+      optimized$optimizedConceptSetExpression |>
+      convertConceptSetExpressionToDataFrame() |>
+      dplyr::filter(.data$invalidReason %in% c("", "V")) |>
       convertConceptSetDataFrameToExpression()
     rm("optimized")
 
     # filter to domain of interest
     if (length(domainIdOfInterest) > 0) {
-      optimizedConceptSetExpression <- optimizedConceptSetExpression %>%
-        convertConceptSetExpressionToDataFrame() %>%
-        dplyr::filter(.data$domainId %in% c(domainIdOfInterest)) %>%
+      optimizedConceptSetExpression <- optimizedConceptSetExpression |>
+        convertConceptSetExpressionToDataFrame() |>
+        dplyr::filter(.data$domainId %in% c(domainIdOfInterest)) |>
         convertConceptSetDataFrameToExpression()
     }
 
     # filter to vocabulary of interest
     if (length(vocabularyIdOfInterest) > 0) {
-      optimizedConceptSetExpression <- optimizedConceptSetExpression %>%
-        convertConceptSetExpressionToDataFrame() %>%
-        dplyr::filter(.data$vocabularyId %in% c(vocabularyIdOfInterest)) %>%
+      optimizedConceptSetExpression <- optimizedConceptSetExpression |>
+        convertConceptSetExpressionToDataFrame() |>
+        dplyr::filter(.data$vocabularyId %in% c(vocabularyIdOfInterest)) |>
         convertConceptSetDataFrameToExpression()
     }
 
@@ -161,7 +161,7 @@ performConceptSetDiagnostics <-
       searchPhrases = searchPhrases,
       stringSearchResults = stringSearchResults,
       optimizedConceptSetExpression = optimizedConceptSetExpression,
-      optimizedConceptSetExpressionDataFrame = optimizedConceptSetExpression %>%
+      optimizedConceptSetExpressionDataFrame = optimizedConceptSetExpression |>
         convertConceptSetExpressionToDataFrame(),
       resolvedConceptIds = resolvedConceptIds,
       recommendedConceptIds = recommended,

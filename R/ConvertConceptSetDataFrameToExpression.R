@@ -87,11 +87,11 @@ convertConceptSetDataFrameToExpression <-
     if (selectAllDescendants) {
       conceptSetExpressionDataFrame <-
         dplyr::bind_rows(
-          conceptSetExpressionDataFrame %>%
-            dplyr::filter(.data$standardConcept == "S") %>%
+          conceptSetExpressionDataFrame |>
+            dplyr::filter(.data$standardConcept == "S") |>
             dplyr::mutate(includeDescendants = TRUE),
-          conceptSetExpressionDataFrame %>%
-            dplyr::filter(!.data$standardConcept == "S") %>%
+          conceptSetExpressionDataFrame |>
+            dplyr::filter(!.data$standardConcept == "S") |>
             dplyr::mutate(includeDescendants = FALSE)
         )
     }
@@ -108,7 +108,7 @@ convertConceptSetDataFrameToExpression <-
       }
 
       conceptIds <-
-        conceptSetExpressionDataFrame$conceptId %>% unique()
+        conceptSetExpressionDataFrame$conceptId |> unique()
       conceptIdDetails <- getConceptIdDetails(
         conceptIds = conceptIds,
         connection = connection,
@@ -116,13 +116,13 @@ convertConceptSetDataFrameToExpression <-
       )
 
       conceptSetExpressionDataFrame <-
-        conceptSetExpressionDataFrame %>%
+        conceptSetExpressionDataFrame |>
         dplyr::select(
           -.data$conceptName, -.data$standardConcept, -.data$standardConceptCaption, -.data$invalidReason, -.data$invalidReasonCaption, -.data$conceptCode, -.data$domainId, -.data$vocabularyId, -.data$conceptClassId
-        ) %>%
+        ) |>
         dplyr::left_join(conceptIdDetails,
           by = "conceptId"
-        ) %>%
+        ) |>
         dplyr::select(
           .data$conceptId,
           .data$conceptName,
@@ -137,7 +137,7 @@ convertConceptSetDataFrameToExpression <-
           .data$includeMapped,
           .data$isExcluded,
           .data$includeDescendants
-        ) %>%
+        ) |>
         tidyr::replace_na(
           replace = list(
             conceptName = as.character(""),
@@ -164,8 +164,8 @@ convertConceptSetDataFrameToExpression <-
       for (i in (1:nrow(conceptSetExpressionDataFrame))) {
         conceptSetExpression$items[[i]] <- list()
         conceptSetExpression$items[[i]]$concept <-
-          conceptSetExpressionDataFrame[i, ] %>%
-          dplyr::select(-.data$INCLUDE_DESCENDANTS, -.data$INCLUDE_MAPPED, -.data$IS_EXCLUDED) %>%
+          conceptSetExpressionDataFrame[i, ] |>
+          dplyr::select(-.data$INCLUDE_DESCENDANTS, -.data$INCLUDE_MAPPED, -.data$IS_EXCLUDED) |>
           as.list()
         conceptSetExpression$items[[i]]$isExcluded <-
           conceptSetExpressionDataFrame$IS_EXCLUDED[i]

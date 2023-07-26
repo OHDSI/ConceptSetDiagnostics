@@ -126,7 +126,7 @@ standardDataTable <- function(data,
         data[[variable]] <- as.factor(data[[variable]])
       }
     }
-    return(data %>% dplyr::tibble())
+    return(data |> dplyr::tibble())
   }
   
   data <- convertVariableToFactor(data = data,

@@ -30,7 +30,7 @@ testthat::test_that("Get Concept Details - connection", {
     # 381316,
     connection = connection,
     vocabularyDatabaseSchema = cdmDatabaseSchema
-  ) %>%
+  ) |>
     dplyr::arrange(.data$conceptId)
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
@@ -217,7 +217,7 @@ testthat::test_that("Get Concept Details - connectionDetails", {
     # 381316,
     connectionDetails = connectionDetails,
     vocabularyDatabaseSchema = cdmDatabaseSchema
-  ) %>%
+  ) |>
     dplyr::arrange(.data$conceptId)
   testthat::expect_gte(object = nrow(output), expected = 0)
 })

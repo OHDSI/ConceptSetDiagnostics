@@ -67,7 +67,7 @@ getConceptRelationship <-
       concept_id_table = tempTableName,
       tempEmulationSchema = tempEmulationSchema,
       vocabulary_database_schema = vocabularyDatabaseSchema
-    ) %>%
+    ) |>
       tidyr::tibble()
 
     dropTempConceptTable(

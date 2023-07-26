@@ -54,7 +54,7 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
 
   domains <-
     getDomainInformation(packageName = "ConceptSetDiagnostics")
-  domains <- domains$wide %>%
+  domains <- domains$wide |>
     dplyr::filter(nchar(.data$domainSourceConceptId) > 1)
 
   sqlConceptMapping <-
@@ -125,35 +125,35 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
       snakeCaseToCamelCase = TRUE,
       tempEmulationSchema = tempEmulationSchema
     )
-  conceptMapping <- conceptMapping %>%
+  conceptMapping <- conceptMapping |>
     dplyr::arrange(
       .data$domainTable,
       .data$conceptId,
       .data$sourceConceptId,
       .data$conceptCount,
       .data$subjectCount
-    ) %>%
+    ) |>
     dplyr::tibble()
 
   if (nrow(conceptMapping) > 0) {
     conceptMapping <- dplyr::bind_rows(
       conceptMapping,
-      conceptMapping %>%
+      conceptMapping |>
         dplyr::group_by(
           .data$conceptId,
           .data$sourceConceptId
-        ) %>%
+        ) |>
         dplyr::summarise(
           conceptCount = sum(.data$conceptCount),
           subjectCount = max(.data$subjectCount),
           .groups = "keep"
-        ) %>%
+        ) |>
         dplyr::mutate(domainTable = "All")
-    ) %>%
+    ) |>
       dplyr::distinct()
   }
 
-  conceptMapping <- conceptMapping %>%
+  conceptMapping <- conceptMapping |>
     dplyr::filter(.data$subjectCount > minCellCount)
 
   sqlDdlDrop <-

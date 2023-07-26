@@ -51,7 +51,7 @@ getRecommendationForConceptSetExpression <-
 
     recommendedStandard <-
       getRecommendedStandard(
-        conceptIds = resolvedConceptIds$conceptId %>% unique(),
+        conceptIds = resolvedConceptIds$conceptId |> unique(),
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         connection = connection,
         connectionDetails = connectionDetails,
@@ -61,7 +61,7 @@ getRecommendationForConceptSetExpression <-
 
     recommendedSource <-
       getRecommendedSource(
-        conceptIds = resolvedConceptIds$conceptId %>% unique(),
+        conceptIds = resolvedConceptIds$conceptId |> unique(),
         vocabularyDatabaseSchema = vocabularyDatabaseSchema,
         connection = connection,
         connectionDetails = connectionDetails,

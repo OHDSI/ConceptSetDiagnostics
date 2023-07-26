@@ -115,7 +115,7 @@ performStringSearchForConcepts <-
           sql = sql,
           connection = connection,
           snakeCaseToCamelCase = TRUE
-        ) %>%
+        ) |>
         dplyr::tibble()
     }
 
@@ -123,12 +123,12 @@ performStringSearchForConcepts <-
       return(NULL)
     }
 
-    data <- data %>%
-      dplyr::bind_rows() %>%
+    data <- data |>
+      dplyr::bind_rows() |>
       dplyr::distinct()
 
     if (all(nrow(data) > 0, "rank" %in% colnames(data))) {
-      data <- data %>%
+      data <- data |>
         dplyr::group_by(
           .data$conceptId,
           .data$conceptName,
@@ -138,23 +138,23 @@ performStringSearchForConcepts <-
           .data$conceptCode,
           .data$conceptClassId,
           .data$domainId
-        ) %>%
+        ) |>
         dplyr::summarise(
           rank = min(.data$rank),
           rankCd = min(.data$rankCd)
-        ) %>%
-        dplyr::ungroup() %>%
-        dplyr::arrange(.data$rankCd, .data$rank) %>%
+        ) |>
+        dplyr::ungroup() |>
+        dplyr::arrange(.data$rankCd, .data$rank) |>
         dplyr::distinct()
     }
-    data <- data %>%
+    data <- data |>
       dplyr::mutate(
         standardConceptCaption = dplyr::case_when(
           .data$standardConcept == "S" ~ "Standard",
           .data$standardConcept == "C" ~ "Classification",
           TRUE ~ "Non-Standard"
         )
-      ) %>%
+      ) |>
       dplyr::mutate(
         invalidReasonCaption = dplyr::case_when(
           invalidReason == "V" ~ "Valid",
@@ -166,20 +166,20 @@ performStringSearchForConcepts <-
 
     # filter to domain of interest
     if (length(domainIdOfInterest) > 0) {
-      data <- data %>%
+      data <- data |>
         dplyr::filter(.data$domainId %in% c(domainIdOfInterest))
     }
 
     # filter to vocabulary of interest
     if (length(vocabularyIdOfInterest) > 0) {
-      data <- data %>%
+      data <- data |>
         dplyr::filter(.data$vocabularyId %in% c(vocabularyIdOfInterest))
     }
 
     # filter invalid concepts
 
     if (!retrieveInvalidConcepts) {
-      data <- data %>%
+      data <- data |>
         dplyr::filter(.data$invalidReason %in% c("", "V"))
     }
 

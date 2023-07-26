@@ -37,7 +37,7 @@ getRelationship <-
         sql = "SELECT * FROM @vocabulary_database_schema.relationship;",
         vocabulary_database_schema = vocabularyDatabaseSchema,
         snakeCaseToCamelCase = TRUE
-      ) %>%
+      ) |>
       tidyr::tibble()
 
     return(data)

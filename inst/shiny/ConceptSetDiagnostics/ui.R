@@ -32,7 +32,7 @@ shinydashboard::dashboardPage(
           label = "Filter by Vocabulary",
           choices =  vocabulary$vocabularyId,
           selected = vocabulary$vocabularyId[stringr::str_detect(string = tolower(vocabulary$vocabularyId),
-                                                                 pattern = 'icd|snomed|read')] %>% sort(),
+                                                                 pattern = 'icd|snomed|read')] |> sort(),
           multiple = TRUE
         )
       ),
@@ -43,7 +43,7 @@ shinydashboard::dashboardPage(
           label = "Filter by Domain",
           choices =  domain$domainId,
           selected = domain$domainId[stringr::str_detect(string = tolower(domain$domainId),
-                                                         pattern = 'condition|observation')] %>% sort(),
+                                                         pattern = 'condition|observation')] |> sort(),
           multiple = TRUE
         )
       ),

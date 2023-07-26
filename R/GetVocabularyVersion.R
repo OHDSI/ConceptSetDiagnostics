@@ -39,7 +39,7 @@ getVocabularyVersion <-
               where VOCABULARY_ID = 'None';",
         vocabulary_database_schema = vocabularyDatabaseSchema,
         snakeCaseToCamelCase = TRUE
-      ) %>%
+      ) |>
       tidyr::tibble()
     return(data)
   }

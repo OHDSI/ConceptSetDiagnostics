@@ -51,9 +51,9 @@ resolveConceptSetsInCohortExpression <- function(cohortExpression,
       )
   }
 
-  resolvedConceptSet <- dplyr::bind_rows(resolvedConceptSet) %>% 
+  resolvedConceptSet <- dplyr::bind_rows(resolvedConceptSet) |> 
     dplyr::arrange(codesetId,
-                   conceptId) %>% 
+                   conceptId) |> 
     dplyr::distinct()
   
   return(resolvedConceptSet)

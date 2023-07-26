@@ -47,8 +47,8 @@ connectionLocal <-
 
 vocabularyVersion <-
   ConceptSetDiagnostics::getVocabulary(connection = connectionLocal,
-                                       vocabulary = vocabularyDatabaseSchema) %>%
-  dplyr::filter(.data$vocabularyId == 'None') %>%
+                                       vocabulary = vocabularyDatabaseSchema) |>
+  dplyr::filter(.data$vocabularyId == 'None') |>
   dplyr::pull(.data$vocabularyVersion)
 
 vocabulary <-

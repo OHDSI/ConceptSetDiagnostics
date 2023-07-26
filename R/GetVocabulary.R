@@ -37,7 +37,7 @@ getVocabulary <-
         sql = "SELECT * FROM @vocabulary_database_schema.vocabulary;",
         vocabulary_database_schema = vocabularyDatabaseSchema,
         snakeCaseToCamelCase = TRUE
-      ) %>%
+      ) |>
       tidyr::tibble()
     return(output)
   }

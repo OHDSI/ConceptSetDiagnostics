@@ -50,11 +50,11 @@ getExcludedConceptsInConceptSetExpression <-
       return(NULL)
     }
 
-    excludeRows <- conceptSetDataFrame %>%
+    excludeRows <- conceptSetDataFrame |>
       dplyr::filter(.data$isExcluded == TRUE)
-    excludeRowsDescendants <- excludeRows %>%
+    excludeRowsDescendants <- excludeRows |>
       dplyr::filter(.data$includeDescendants == TRUE)
-    excludeRowsNoDescendants <- excludeRows %>%
+    excludeRowsNoDescendants <- excludeRows |>
       dplyr::filter(.data$includeDescendants == FALSE)
 
     excludeConceptIdsWithDescendants <-
@@ -67,17 +67,17 @@ getExcludedConceptsInConceptSetExpression <-
 
     allExcludedConceptIds <-
       dplyr::bind_rows(
-        excludeConceptIdsWithDescendants %>%
-          dplyr::select(.data$descendantConceptId) %>%
+        excludeConceptIdsWithDescendants |>
+          dplyr::select(.data$descendantConceptId) |>
           dplyr::rename("conceptId" = .data$descendantConceptId),
-        excludeRowsNoDescendants %>% dplyr::select(.data$conceptId)
-      ) %>%
-      dplyr::distinct() %>%
+        excludeRowsNoDescendants |> dplyr::select(.data$conceptId)
+      ) |>
+      dplyr::distinct() |>
       dplyr::arrange(.data$conceptId)
 
     data <-
       getConceptIdDetails(
-        conceptIds = allExcludedConceptIds$conceptId %>% unique(),
+        conceptIds = allExcludedConceptIds$conceptId |> unique(),
         connection = connection,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       )

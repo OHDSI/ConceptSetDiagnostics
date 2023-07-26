@@ -83,7 +83,7 @@ loadTempConceptTable <- function(conceptIds,
                                  bulkLoad = Sys.getenv("DATABASE_CONNECTOR_BULK_UPLOAD"),
                                  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
   conceptIdTable <-
-    dplyr::tibble(conceptId = conceptIds %>% unique() %>% as.integer())
+    dplyr::tibble(conceptId = conceptIds |> unique() |> as.integer())
 
   tempTableName <- paste0("#", getUniqueString())
 
@@ -150,13 +150,13 @@ getDomainInformation <- function(packageName = NULL) {
       col_types = readr::cols()
     )
 
-  domains <- domains %>%
-    .replaceNaInDataFrameWithEmptyString() %>%
+  domains <- domains |>
+    .replaceNaInDataFrameWithEmptyString() |>
     dplyr::mutate(domainTableShort = stringr::str_sub(
       string = toupper(.data$domain),
       start = 1,
       end = 2
-    )) %>%
+    )) |>
     dplyr::mutate(
       domainTableShort = dplyr::case_when(
         stringr::str_detect(string = tolower(.data$domain), pattern = "era") ~ paste0(.data$domainTableShort, "E"),
@@ -190,7 +190,7 @@ getDomainInformation <- function(packageName = NULL) {
       pattern = " ",
       replacement = ""
     )
-  domains <- domains %>%
+  domains <- domains |>
     dplyr::mutate(isEraTable = stringr::str_detect(
       string = .data$domainTable,
       pattern = "era"
@@ -198,35 +198,35 @@ getDomainInformation <- function(packageName = NULL) {
   data <- list()
   data$wide <- domains
   data$long <- dplyr::bind_rows(
-    data$wide %>%
+    data$wide |>
       dplyr::select(
         .data$domainTableShort,
         .data$domainTable,
         .data$domainConceptIdShort,
         .data$domainConceptId
-      ) %>%
+      ) |>
       dplyr::rename(
         domainFieldShort = .data$domainConceptIdShort,
         domainField = .data$domainConceptId
       ),
-    data$wide %>%
+    data$wide |>
       dplyr::select(
         .data$domainTableShort,
         .data$domainSourceConceptIdShort,
         .data$domainTable,
         .data$domainSourceConceptId
-      ) %>%
+      ) |>
       dplyr::rename(
         domainFieldShort = .data$domainSourceConceptIdShort,
         domainField = .data$domainSourceConceptId
       )
-  ) %>%
-    dplyr::distinct() %>%
-    dplyr::filter(.data$domainFieldShort != "") %>%
+  ) |>
+    dplyr::distinct() |>
+    dplyr::filter(.data$domainFieldShort != "") |>
     dplyr::mutate(eraTable = stringr::str_detect(
       string = .data$domainTable,
       pattern = "era"
-    )) %>%
+    )) |>
     dplyr::mutate(isSourceField = stringr::str_detect(
       string = .data$domainField,
       pattern = "source"
@@ -236,16 +236,16 @@ getDomainInformation <- function(packageName = NULL) {
 
 .replaceNaInDataFrameWithEmptyString <- function(data) {
   # https://github.com/r-lib/tidyselect/issues/201
-  data %>%
-    dplyr::collect() %>%
+  data |>
+    dplyr::collect() |>
     dplyr::mutate(dplyr::across(
       tidyselect:::where(is.character),
       ~ tidyr::replace_na(.x, as.character(""))
-    )) %>%
+    )) |>
     dplyr::mutate(dplyr::across(
       tidyselect:::where(is.logical),
       ~ tidyr::replace_na(.x, as.character(""))
-    )) %>%
+    )) |>
     dplyr::mutate(dplyr::across(
       tidyselect:::where(is.numeric),
       ~ tidyr::replace_na(.x, as.numeric(""))

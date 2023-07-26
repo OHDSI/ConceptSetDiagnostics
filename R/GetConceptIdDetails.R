@@ -66,14 +66,14 @@ getConceptIdDetails <-
       vocabulary_database_schema = vocabularyDatabaseSchema
     )
 
-    data <- data %>%
-      tidyr::tibble() %>%
+    data <- data |>
+      tidyr::tibble() |>
       dplyr::mutate(
         standardConceptCaption = dplyr::case_when(
           .data$standardConcept == "S" ~ "Standard",
           .data$standardConcept == "C" ~ "Classification"
         )
-      ) %>%
+      ) |>
       dplyr::mutate(
         invalidReasonCaption = dplyr::case_when(
           invalidReason == "V" ~ "Valid",

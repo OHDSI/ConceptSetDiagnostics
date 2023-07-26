@@ -62,7 +62,7 @@ getConceptSynonym <-
         concept_id_table = tempTableName,
         tempEmulationSchema = tempEmulationSchema,
         snakeCaseToCamelCase = TRUE
-      ) %>%
+      ) |>
       tidyr::tibble()
 
     dropTempConceptTable(

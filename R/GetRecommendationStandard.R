@@ -47,7 +47,7 @@ getRecommendedStandard <-
       DatabaseConnector::getTableNames(
         connection = connection,
         databaseSchema = conceptPrevalenceSchema
-      ) %>%
+      ) |>
       tolower()
 
     conceptPrevalenceTablesExist <- FALSE
@@ -88,14 +88,14 @@ getRecommendedStandard <-
       profile = FALSE,
       progressBar = TRUE,
       reportOverallTime = FALSE
-    ) %>% dplyr::tibble()
+    ) |> dplyr::tibble()
 
     data <-
       DatabaseConnector::renderTranslateQuerySql(
         connection = connection,
         sql = "SELECT * FROM #rec_std;",
         snakeCaseToCamelCase = TRUE
-      ) %>%
+      ) |>
       dplyr::tibble()
 
     DatabaseConnector::renderTranslateExecuteSql(

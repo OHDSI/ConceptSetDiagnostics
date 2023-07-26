@@ -65,10 +65,10 @@ instantiateCohortFromConceptSetExpression <-
         conceptSetExpression = conceptSetExpression,
         connection = connection,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
-      ) %>%
-      dplyr::select(conceptId) %>%
-      dplyr::distinct() %>%
-      dplyr::arrange(conceptId) %>%
+      ) |>
+      dplyr::select(conceptId) |>
+      dplyr::distinct() |>
+      dplyr::arrange(conceptId) |>
       dplyr::pull(conceptId)
     
     tempTableWithConceptDates <-

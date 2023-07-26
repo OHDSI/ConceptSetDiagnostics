@@ -65,8 +65,8 @@ extractConceptSetsInCohortDefinition <-
           codeSetsIdsInPrimaryCriteria <- c(
             codeSetsIdsInPrimaryCriteria,
             codesets$CodesetId
-          ) %>%
-            unique() %>%
+          ) |>
+            unique() |>
             sort()
         }
       } else {
@@ -74,8 +74,8 @@ extractConceptSetsInCohortDefinition <-
           codeSetsIdsInPrimaryCriteria <- c(
             codeSetsIdsInPrimaryCriteria,
             as.double(codesets)
-          ) %>%
-            unique() %>%
+          ) |>
+            unique() |>
             sort()
         }
       }
@@ -87,44 +87,44 @@ extractConceptSetsInCohortDefinition <-
       conceptSetExpression2[[j]] <- conceptSetExpression[j, ]
       conceptSetExpression2[[j]]$conceptSetExpressionSignature <-
         convertConceptSetExpressionToDataFrame(
-          conceptSetExpression = conceptSetExpression2[[j]][1, ]$conceptSetExpression %>%
+          conceptSetExpression = conceptSetExpression2[[j]][1, ]$conceptSetExpression |>
             RJSONIO::fromJSON(digits = 23)
-        ) %>%
+        ) |>
         dplyr::select(
           .data$conceptId,
           .data$includeDescendants,
           .data$includeMapped,
           .data$isExcluded
-        ) %>%
-        dplyr::distinct() %>%
-        dplyr::arrange(.data$conceptId) %>%
+        ) |>
+        dplyr::distinct() |>
+        dplyr::arrange(.data$conceptId) |>
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
     }
 
     conceptSetExpression <-
-      dplyr::bind_rows(conceptSetExpression2) %>% 
+      dplyr::bind_rows(conceptSetExpression2) |> 
       dplyr::mutate(conceptSetUsedInEntryEvent = 0)
     
     if (length(codeSetsIdsInPrimaryCriteria) > 0) {
-      conceptSetExpression <- conceptSetExpression %>% 
-        dplyr::select(-conceptSetUsedInEntryEvent) %>% 
+      conceptSetExpression <- conceptSetExpression |> 
+        dplyr::select(-conceptSetUsedInEntryEvent) |> 
         dplyr::left_join(
-          dplyr::tibble(conceptSetId = codeSetsIdsInPrimaryCriteria) %>%
-            dplyr::distinct() %>%
+          dplyr::tibble(conceptSetId = codeSetsIdsInPrimaryCriteria) |>
+            dplyr::distinct() |>
             dplyr::mutate(conceptSetUsedInEntryEvent = 1),
           by = "conceptSetId"
         )
     }
 
-    uniqueConceptSets <- conceptSetExpression %>%
-      dplyr::select(.data$conceptSetExpressionSignature) %>%
-      dplyr::distinct() %>%
+    uniqueConceptSets <- conceptSetExpression |>
+      dplyr::select(.data$conceptSetExpressionSignature) |>
+      dplyr::distinct() |>
       dplyr::mutate(uniqueConceptSetId = dplyr::row_number())
 
-    conceptSetExpression <- conceptSetExpression %>%
+    conceptSetExpression <- conceptSetExpression |>
       dplyr::left_join(uniqueConceptSets,
         by = "conceptSetExpressionSignature"
-      ) %>%
+      ) |>
       dplyr::select(-.data$conceptSetExpressionSignature)
 
     data <- dplyr::inner_join(
@@ -133,7 +133,7 @@ extractConceptSetsInCohortDefinition <-
       by = c("conceptSetId")
     )
     
-    data <- data %>% 
+    data <- data |> 
       tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0))
     
     return(data)
@@ -149,7 +149,7 @@ extractConceptSetExpressionsFromCohortExpression <-
           tidyr::tibble(
             conceptSetId = cohortExpression$ConceptSets[[i]]$id,
             conceptSetName = cohortExpression$ConceptSets[[i]]$name,
-            conceptSetExpression = cohortExpression$ConceptSets[[i]]$expression$items %>% RJSONIO::toJSON(digits = 23)
+            conceptSetExpression = cohortExpression$ConceptSets[[i]]$expression$items |> RJSONIO::toJSON(digits = 23)
           )
       }
     } else {
@@ -199,7 +199,7 @@ extractConceptSetsSqlFromCohortSql <- function(cohortSql) {
         dotall = TRUE
       ),
       replacement = "\\1"
-    ) %>%
+    ) |>
       utils::type.convert(as.is = TRUE)
     temp[[i]] <- tidyr::tibble(
       conceptSetId = conceptSetIds[i],

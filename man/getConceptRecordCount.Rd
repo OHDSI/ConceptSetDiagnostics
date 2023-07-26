@@ -12,6 +12,8 @@ getConceptRecordCount(
   vocabularyDatabaseSchema = cdmDatabaseSchema,
   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
   minCellCount = 0,
+  domainTableName = c("drug_exposure", "condition_occurrence", "procedure_occurrence",
+    "mesaurement", "observation"),
   summarizeAcrossDomains = FALSE
 )
 }
@@ -41,6 +43,8 @@ tables, provide a schema with write privileges where temp tables can be created.
 \item{minCellCount}{The minimum cell count for fields containing person/subject count.}
 
 \item{summarizeAcrossDomains}{Do you want to summarize across domain tables?}
+
+\item{domain}{domains to look for concept id}
 }
 \value{
 Returns a tibble data frame.

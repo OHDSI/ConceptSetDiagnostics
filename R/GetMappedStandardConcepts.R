@@ -65,7 +65,7 @@ getMappedStandardConcepts <-
         vocabulary_database_schema = vocabularyDatabaseSchema,
         tempEmulationSchema = tempEmulationSchema,
         snakeCaseToCamelCase = TRUE
-      ) %>%
+      ) |>
       tidyr::tibble()
 
     dropTempConceptTable(

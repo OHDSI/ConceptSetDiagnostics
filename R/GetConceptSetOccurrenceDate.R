@@ -55,8 +55,8 @@ getConceptSetOccurrenceDate <- function(connection,
                                         limitToPersonDate = TRUE,
                                         restrictToObservationPeriod = TRUE,
                                         tempEmulationSchema = NULL) {
-  subset <- tolower(subset) %>%
-    stringr::str_trim() %>%
+  subset <- tolower(subset) |>
+    stringr::str_trim() |>
     stringr::str_squish()
   
   checkmate::assertChoice(
@@ -79,7 +79,7 @@ getConceptSetOccurrenceDate <- function(connection,
   
   
   tempConceptTableName <- loadTempConceptTable(
-    conceptIds = conceptIds %>% unique(),
+    conceptIds = conceptIds |> unique(),
     connection = connection,
     tempEmulationSchema = tempEmulationSchema
   )

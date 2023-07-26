@@ -50,8 +50,8 @@ resolveConceptSetExpression <- function(conceptSetExpression,
   # get all descendant concept ids (as dataframe) for concepts that have
   # includeDescendants selected in conceptSetExpression
   conceptIdsWithIncludeDescendants <-
-    conceptSetExpressionDataFrame %>%
-    dplyr::filter(.data$includeDescendants == TRUE) %>%
+    conceptSetExpressionDataFrame |>
+    dplyr::filter(.data$includeDescendants == TRUE) |>
     dplyr::pull(.data$conceptId)
   
   if (length(conceptIdsWithIncludeDescendants) == 0) {
@@ -59,8 +59,8 @@ resolveConceptSetExpression <- function(conceptSetExpression,
     resolvedConceptIds <-
       setdiff(
         conceptSetExpressionDataFrame$conceptId,
-        conceptSetExpressionDataFrame %>%
-          dplyr::filter(.data$isExcluded == TRUE) %>%
+        conceptSetExpressionDataFrame |>
+          dplyr::filter(.data$isExcluded == TRUE) |>
           dplyr::pull(.data$conceptId)
       )
   } else {
@@ -74,46 +74,46 @@ resolveConceptSetExpression <- function(conceptSetExpression,
       )
     
     # get all conceptIds (as dataframe) that are excluded in concept set expression
-    excludedConceptIds <- conceptSetExpressionDataFrame %>%
-      dplyr::filter(.data$isExcluded == TRUE) %>%
+    excludedConceptIds <- conceptSetExpressionDataFrame |>
+      dplyr::filter(.data$isExcluded == TRUE) |>
       dplyr::select(.data$conceptId)
     
     # get all conceptIds (as dataframe) that are excluded in concept set expression with descendants
-    excludedConceptIdsWithDescendants <- descendantConcepts %>%
+    excludedConceptIdsWithDescendants <- descendantConcepts |>
       dplyr::filter(.data$ancestorConceptId %in% (
         c(
-          conceptSetExpressionDataFrame %>%
-            dplyr::filter(.data$isExcluded == TRUE) %>%
-            dplyr::filter(.data$includeDescendants == TRUE) %>%
-            dplyr::pull(.data$conceptId) %>%
+          conceptSetExpressionDataFrame |>
+            dplyr::filter(.data$isExcluded == TRUE) |>
+            dplyr::filter(.data$includeDescendants == TRUE) |>
+            dplyr::pull(.data$conceptId) |>
             unique(),
           0
-        ) %>% unique()
-      )) %>%
-      dplyr::select(.data$descendantConceptId) %>%
+        ) |> unique()
+      )) |>
+      dplyr::select(.data$descendantConceptId) |>
       dplyr::distinct()
     
     # conceptIds in conceptSetExpression table
     conceptIdsInConceptSetExpressionTableToBeIncluded <-
       union(
-        x = conceptSetExpressionDataFrame %>%
-          dplyr::pull(.data$conceptId) %>%
+        x = conceptSetExpressionDataFrame |>
+          dplyr::pull(.data$conceptId) |>
           unique(),
-        y = descendantConcepts %>%
-          dplyr::pull(.data$descendantConceptId) %>%
+        y = descendantConcepts |>
+          dplyr::pull(.data$descendantConceptId) |>
           unique()
-      ) %>% unique()
+      ) |> unique()
     
     
     conceptIdsInConceptSetExpressionTableToBeExcluded <-
       union(
-        x = excludedConceptIds %>%
-          dplyr::pull(.data$conceptId) %>%
+        x = excludedConceptIds |>
+          dplyr::pull(.data$conceptId) |>
           unique(),
-        y = excludedConceptIdsWithDescendants %>%
-          dplyr::pull(.data$descendantConceptId) %>%
+        y = excludedConceptIdsWithDescendants |>
+          dplyr::pull(.data$descendantConceptId) |>
           unique()
-      ) %>%
+      ) |>
       unique()
     
     # removed all excluded conceptIds including those with descendants == TRUE
@@ -123,15 +123,15 @@ resolveConceptSetExpression <- function(conceptSetExpression,
     
     # get all resolved concept Ids
     resolvedConceptIds <- dplyr::union(
-      conceptSetExpressionDataFrame %>%
-        dplyr::filter(.data$isExcluded == FALSE) %>%
+      conceptSetExpressionDataFrame |>
+        dplyr::filter(.data$isExcluded == FALSE) |>
         dplyr::select(.data$conceptId),
-      descendantConcepts %>%
-        dplyr::select(.data$descendantConceptId) %>%
+      descendantConcepts |>
+        dplyr::select(.data$descendantConceptId) |>
         dplyr::rename("conceptId" = .data$descendantConceptId)
-    ) %>%
-      dplyr::filter(.data$conceptId %in% resolvedConceptIdArray) %>%
-      dplyr::pull(.data$conceptId) %>%
+    ) |>
+      dplyr::filter(.data$conceptId %in% resolvedConceptIdArray) |>
+      dplyr::pull(.data$conceptId) |>
       unique()
   }
   

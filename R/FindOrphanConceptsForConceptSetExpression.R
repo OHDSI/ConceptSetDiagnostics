@@ -75,7 +75,7 @@ findOrphanConceptsForConceptSetExpression <-
           resolvedConceptIds$conceptId,
           mappedConceptIds$conceptId,
           mappedConceptIds$givenConceptId
-        ) %>% unique()
+        ) |> unique()
       )
 
     return(orphanConcepts)

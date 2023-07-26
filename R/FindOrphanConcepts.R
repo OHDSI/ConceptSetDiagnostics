@@ -73,7 +73,7 @@ findOrphanConcepts <- function(connectionDetails = NULL,
       tempEmulationSchema = tempEmulationSchema,
       orphan_concept_table = paste0(tempTableName, "oo"),
       snakeCaseToCamelCase = TRUE
-    ) %>%
+    ) |>
     tidyr::tibble()
 
   DatabaseConnector::renderTranslateExecuteSql(

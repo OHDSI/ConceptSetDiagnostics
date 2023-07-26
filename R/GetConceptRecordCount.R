@@ -33,6 +33,8 @@
 #' @param minCellCount                The minimum cell count for fields containing person/subject count.
 #'
 #' @param summarizeAcrossDomains       Do you want to summarize across domain tables?
+#' 
+#' @param domain                      domains to look for concept id
 #'
 #' @return
 #' Returns a tibble data frame.
@@ -46,6 +48,11 @@ getConceptRecordCount <- function(conceptIds = NULL,
                                   vocabularyDatabaseSchema = cdmDatabaseSchema,
                                   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
                                   minCellCount = 0,
+                                  domainTableName = c("drug_exposure",
+                                                      "condition_occurrence",
+                                                      "procedure_occurrence",
+                                                      "mesaurement",
+                                                      "observation"),
                                   summarizeAcrossDomains = FALSE) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
@@ -61,12 +68,15 @@ getConceptRecordCount <- function(conceptIds = NULL,
     )
   }
   
-  domains <-
+  domainInformation <-
     getDomainInformation(packageName = "ConceptSetDiagnostics")
-  domainsWide <- domains$wide %>%
+  
+  domainsWide <- domainInformation$wide |>
+    dplyr::filter(domainTable %in% c(domainTableName)) |> 
     dplyr::filter(.data$isEraTable == FALSE)
 
-  domainsLong <- domains$long %>%
+  domainsLong <- domainInformation$long |>
+    dplyr::filter(domainTable %in% c(domainTableName)) |> 
     dplyr::filter(eraTable == FALSE)
   # filtering out ERA tables because they are supposed to be derived tables, and counting them is double counting
   

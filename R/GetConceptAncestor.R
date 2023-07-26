@@ -64,7 +64,7 @@ getConceptAncestor <-
         tempEmulationSchema = tempEmulationSchema,
         concept_id_table = tempTableName,
         snakeCaseToCamelCase = TRUE
-      ) %>%
+      ) |>
       tidyr::tibble()
 
     dropTempConceptTable(

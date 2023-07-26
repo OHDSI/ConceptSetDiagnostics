@@ -52,19 +52,19 @@ shiny::shinyServer(function(input, output, session) {
                                   searchString =  keywords[[i]]
                                 )
                               if (length(vocabularyIdToFilter) > 0) {
-                                searchResultConceptIds <- searchResultConceptIds %>%
+                                searchResultConceptIds <- searchResultConceptIds |>
                                   dplyr::filter(.data$vocabularyId %in% vocabularyIdToFilter)
                               }
                               if (length(domainIdToFilter) > 0) {
-                                searchResultConceptIds <- searchResultConceptIds %>%
+                                searchResultConceptIds <- searchResultConceptIds |>
                                   dplyr::filter(.data$domainId %in% domainIdToFilter)
                               }
                               searchResultConceptIdsAllTerms[[i]] <-
                                 searchResultConceptIds
                             }
                             searchResultConceptIdsAllTerms <-
-                              dplyr::bind_rows(searchResultConceptIdsAllTerms) %>%
-                              dplyr::distinct() %>%
+                              dplyr::bind_rows(searchResultConceptIdsAllTerms) |>
+                              dplyr::distinct() |>
                               dplyr::arrange(dplyr::desc(.data$drc))
                             conceptSetSearchResults(searchResultConceptIdsAllTerms) # set reactive value
                             conceptSetSearchResultsPassingtoConceptSetExpression(searchResultConceptIdsAllTerms) #set reactive value
@@ -86,7 +86,7 @@ shiny::shinyServer(function(input, output, session) {
       return(NULL)
     } else {
       standardDataTable(data = conceptSetSearchResults(),
-                        selectionMode = "single") %>%
+                        selectionMode = "single") |>
         DT::formatStyle(
           table = 'conceptName',
           columns = 'standardConcept',
@@ -142,14 +142,14 @@ shiny::shinyServer(function(input, output, session) {
                             ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(
                               conceptSetExpressionDataFrame = conceptSetSearchResultsPassingtoConceptSetExpression(),
                               selectAllDescendants = TRUE
-                            ) %>%
+                            ) |>
                             ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connectionRemote,
-                                                                                    vocabularyDatabaseSchema = vocabularyDatabaseSchema) %>%
+                                                                                    vocabularyDatabaseSchema = vocabularyDatabaseSchema) |>
                             ConceptSetDiagnostics::convertConceptSetExpressionToDataFrame(
                               updateVocabularyFields = TRUE,
                               recordCount = TRUE,
                               connection = connectionRemote
-                            ) %>%
+                            ) |>
                             dplyr::arrange(dplyr::desc(.data$drc))
                         })
                         conceptSetResultsExpression(conceptSetExpressionDataFrame)
@@ -253,7 +253,7 @@ shiny::shinyServer(function(input, output, session) {
           data[i, ]$checkedExcluded <- 'checked=\"checked\"'
         }
       }
-      data <- data %>%
+      data <- data |>
         dplyr::mutate(
           # use glue to create checked field in javascript
           select = glue::glue(
@@ -268,10 +268,10 @@ shiny::shinyServer(function(input, output, session) {
           selectExcluded = glue::glue(
             '<input type="checkbox" class="selectExcluded"  name="selectExcluded" {data$checkedExcluded}  value="{1:nrow(data)}"><br>'
           )
-        ) %>%
+        ) |>
         dplyr::relocate(select)
       standardDataTable(
-        data = data %>%
+        data = data |>
           dplyr::select(
             -.data$includeDescendants,
             -.data$includeMapped,
@@ -310,7 +310,7 @@ shiny::shinyServer(function(input, output, session) {
         data$isExcluded[as.integer(input$excluded_checkboxes_checked)] <-
           TRUE
       }
-      # data <- data %>%
+      # data <- data |>
       #   dplyr::select(
       #     -.data$selectDescendants,-.data$selectMapped,-.data$selectExcluded,-.data$checkedDescendants,-.data$checkedMapped,-.data$checkedExcluded
       #   )
@@ -341,13 +341,13 @@ shiny::shinyServer(function(input, output, session) {
       return(NULL)
     } else {
       data <-  getResolved()$resolvedConcepts
-      data <- data %>%
+      data <- data |>
         dplyr::mutate(
           # use glue to create checked field in javascript
           select = glue::glue(
             '<input type="checkbox" class="selectResolvedRow"  name="selectResolvedRow"  value="{1:nrow(data)}"><br>'
           )
-        ) %>%
+        ) |>
         dplyr::relocate(select)
       standardDataTable(data)
     }
@@ -362,7 +362,7 @@ shiny::shinyServer(function(input, output, session) {
           conceptIds = conceptIds,
           connection = connectionRemote,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema
-        ) %>%
+        ) |>
         dplyr::mutate(
           invalidReasonCaption = "",
           standardConceptCaption = "",
@@ -399,13 +399,13 @@ shiny::shinyServer(function(input, output, session) {
       return(NULL)
     } else {
       data <-  getResolved()$mappedConcepts
-      data <- data %>%
+      data <- data |>
         dplyr::mutate(
           # use glue to create checked field in javascript
           select = glue::glue(
             '<input type="checkbox" class="selectMappedRow"  name="selectMappedRow"  value="{1:nrow(data)}"><br>'
           )
-        ) %>%
+        ) |>
         dplyr::relocate(select)
       standardDataTable(data = data)
     }
@@ -420,7 +420,7 @@ shiny::shinyServer(function(input, output, session) {
           conceptIds = conceptIds,
           connection = connectionRemote,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema
-        ) %>%
+        ) |>
         dplyr::mutate(
           invalidReasonCaption = "",
           standardConceptCaption = "",
@@ -478,7 +478,7 @@ shiny::shinyServer(function(input, output, session) {
       return(NULL)
     } else {
       data <-
-        ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetResultsExpression()) %>%
+        ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetResultsExpression()) |>
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
     }
   })
@@ -553,9 +553,9 @@ shiny::shinyServer(function(input, output, session) {
             connection = connectionRemote,
             vocabularyDatabaseSchema = vocabularyDatabaseSchema
           )
-        data <- data %>%
-          dplyr::select(.data$conceptSynonymName) %>%
-          dplyr::distinct() %>%
+        data <- data |>
+          dplyr::select(.data$conceptSynonymName) |>
+          dplyr::distinct() |>
           dplyr::arrange(1)
         standardDataTable(data = data)
       })
@@ -577,25 +577,25 @@ shiny::shinyServer(function(input, output, session) {
         is.null(getDeepConceptRelationship())) {
       return(NULL)
     }
-    data <- getDeepConceptRelationship()$conceptRelationship %>%
-      dplyr::filter(is.na(.data$invalidReason)) %>%
+    data <- getDeepConceptRelationship()$conceptRelationship |>
+      dplyr::filter(is.na(.data$invalidReason)) |>
       dplyr::select(
         -.data$searchedConceptId,
         -.data$maxLevelsOfSeparation,
         -.data$invalidReason,
         -.data$validStartDate,
         -.data$validEndDate
-      ) %>%
-      dplyr::distinct() %>%
+      ) |>
+      dplyr::distinct() |>
       dplyr::inner_join(getDeepConceptRelationship()$concepts,
                         by = "conceptId")
-    data <- data %>%
+    data <- data |>
       dplyr::mutate(
         # use glue to create checked field in javascript
         select = glue::glue(
           '<input type="checkbox" class="selectRelationshipRow"  name="selectRelationshipRow"  value="{1:nrow(data)}"><br>'
         )
-      ) %>%
+      ) |>
       dplyr::relocate(select)
     standardDataTable(data = data, selectionMode = "none")
   })
@@ -620,7 +620,7 @@ shiny::shinyServer(function(input, output, session) {
                               conceptIds = conceptIds,
                               connection = connectionRemote,
                               vocabularyDatabaseSchema = vocabularyDatabaseSchema
-                            ) %>%
+                            ) |>
                             dplyr::mutate(
                               invalidReasonCaption = "",
                               standardConceptCaption = "",

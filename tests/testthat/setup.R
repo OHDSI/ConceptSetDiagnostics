@@ -7,13 +7,13 @@ cohortsJson <-
     package = "ConceptSetDiagnostics"
   ))
 
-cohortExpression <- cohortsJson %>%
+cohortExpression <- cohortsJson |>
   RJSONIO::fromJSON(digits = 23)
 
 cohortsExpressionNoConceptSet <-
   SqlRender::readSql(sourceFile = system.file(file.path("cohorts", "1.json"),
     package = "ConceptSetDiagnostics"
-  )) %>%
+  )) |>
   RJSONIO::fromJSON(digits = 23)
 
 cohortDefinitionSet <-
@@ -22,7 +22,7 @@ cohortDefinitionSet <-
       package = "ConceptSetDiagnostics"
     ),
     col_types = readr::cols()
-  ) %>%
+  ) |>
   dplyr::mutate(
     json = cohortsJson
   )
