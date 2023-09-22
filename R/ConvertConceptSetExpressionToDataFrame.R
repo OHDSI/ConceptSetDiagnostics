@@ -61,32 +61,44 @@ convertConceptSetExpressionToDataFrame <-
                       It is a vector that is more than 3 levels deep."
     
     for (i in (1:length(items))) {
-      df <- as.data.frame(items[[i]]) |> 
+      df <- as.data.frame(items[[i]]) |>
         dplyr::tibble()
       names(df) <- stringr::str_replace(string = tolower(names(df)),
                                         pattern = "concept.",
                                         replacement = "")
+      
       if ('isExcluded' %in% names(df)) {
-        df <- df |> 
+        df <- df |>
+          dplyr::rename("is_excluded" = "isExcluded")
+      } else if ('isexcluded' %in% names(df)) {
+        df <- df |>
           dplyr::rename("is_excluded" = "isexcluded")
       } else {
-        df <- df |> 
+        df <- df |>
           dplyr::mutate(is_excluded = FALSE)
       }
-      if ('includemapped' %in% names(df)) {
-        df <- df |> 
+      
+      if ('includeMapped' %in% names(df)) {
+        df <- df |>
+          dplyr::rename("include_mapped" = "includeMapped")
+      } else if ('includemapped' %in% names(df)) {
+        df <- df |>
           dplyr::rename("include_mapped" = "includemapped")
       } else {
-        df <- df |> 
+        df <- df |>
           dplyr::mutate(include_mapped = FALSE)
-      } 
-      if ('includedescendants' %in% names(df)) {
-        df <- df |> 
+      }
+      
+      if ('includeDescendants' %in% names(df)) {
+        df <- df |>
+          dplyr::rename("include_descendants" = "includeDescendants")
+      } else if ('includedescendants' %in% names(df)) {
+        df <- df |>
           dplyr::rename("include_descendants" = "includedescendants")
-      }  else {
-        df <- df |> 
+      } else {
+        df <- df |>
           dplyr::mutate(include_descendants = FALSE)
-      } 
+      }
       items2[[i]] <- df
     }
     
