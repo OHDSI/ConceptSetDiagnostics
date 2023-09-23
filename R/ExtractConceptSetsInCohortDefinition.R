@@ -82,25 +82,163 @@ extractConceptSetsInCohortDefinition <-
     }
 
     conceptSetExpression2 <- list()
+    conceptSetExpressionMetaData <- list()
     
     for (j in (1:nrow(conceptSetExpression))) {
       conceptSetExpression2[[j]] <- conceptSetExpression[j, ]
+      
+      conceptSetDataFrame <-
+        convertConceptSetExpressionToDataFrame(conceptSetExpression =
+                                                 conceptSetExpression2[[j]][1,]$conceptSetExpression |>
+                                                 RJSONIO::fromJSON(digits = 23))
+      conceptSetExpressionMetaData[[j]] <- conceptSetExpression2[[j]][1, ] |>
+        dplyr::select(conceptSetId) |> 
+        dplyr::mutate(
+          hasStandard = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(stringr::str_detect(string = standardConcept,
+                                                pattern = "S")) |>
+              nrow() > 0
+          ),
+          hasNonStandard = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(
+                stringr::str_detect(
+                  string = standardConcept,
+                  pattern = "S",
+                  negate = TRUE
+                )
+              ) |>
+              nrow() > 0
+          ),
+          hasValid = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(stringr::str_detect(string = invalidReason,
+                                                pattern = "V")) |>
+              nrow() > 0
+          ),
+          hasInvalid = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(
+                stringr::str_detect(
+                  string = invalidReason,
+                  pattern = "V",
+                  negate = TRUE
+                )
+              ) |>
+              nrow() > 0
+          ),
+          hasCondition = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(stringr::str_detect(
+                string = tolower(domainId),
+                pattern = "condition"
+              )) |>
+              nrow() > 0
+          ),
+          hasProcedure = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(stringr::str_detect(
+                string = tolower(domainId),
+                pattern = "procedure"
+              )) |>
+              nrow() > 0
+          ),
+          hasDevice = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(stringr::str_detect(
+                string = tolower(domainId),
+                pattern = "device"
+              )) |>
+              nrow() > 0
+          ),
+          hasDrug = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(stringr::str_detect(
+                string = tolower(domainId),
+                pattern = "drug"
+              )) |>
+              nrow() > 0
+          ),
+          hasObservation = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(stringr::str_detect(
+                string = tolower(domainId),
+                pattern = "observation"
+              )) |>
+              nrow() > 0
+          ),
+          hasVisit = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(stringr::str_detect(
+                string = tolower(domainId),
+                pattern = "visit"
+              )) |>
+              nrow() > 0
+          ),
+          hasType = as.integer(
+            conceptSetDataFrame |>
+              dplyr::filter(stringr::str_detect(
+                string = tolower(domainId),
+                pattern = "type"
+              )) |>
+              nrow() > 0
+          ),
+          isSelectedIncludeMapped = max(as.integer(conceptSetDataFrame$includeMapped)),
+          isSelectedIncludeDescendants = max(as.integer(conceptSetDataFrame$includeDescendants)),
+          isSelectedIsExcluded = max(as.integer(conceptSetDataFrame$isExcluded)),
+          isNotSelectedIncludeMapped = min(as.integer(conceptSetDataFrame$includeMapped)),
+          isNotSelectedIncludeDescendants = min(as.integer(conceptSetDataFrame$includeDescendants)),
+          isNotSelectedIsExcluded = min(as.integer(conceptSetDataFrame$isExcluded)),
+          rowsInConceptSetExpression = nrow(conceptSetDataFrame),
+          numberOfUniqueConceptIds = length(conceptSetDataFrame$conceptId |> unique()),
+          numberOfUniqueConceptIdsWithoutDescendants = length(
+            conceptSetDataFrame |>
+              dplyr::filter(includeDescendants == FALSE) |>
+              dplyr::pull(conceptId) |>
+              unique()
+          ),
+          numberOfUniqueConceptIdsWitDescendants = length(
+            conceptSetDataFrame |>
+              dplyr::filter(includeDescendants == TRUE) |>
+              dplyr::pull(conceptId) |>
+              unique()
+          ),
+          numberOfUniqueConceptIdIsStandard = length(
+            conceptSetDataFrame |>
+              dplyr::filter(stringr::str_detect(string = standardConcept,
+                                                pattern = "S")) |>
+              dplyr::pull(conceptId) |>
+              unique()
+          ),
+          numberOfUniqueConceptIdIsNonStandard = length(
+            conceptSetDataFrame |>
+              dplyr::filter(
+                stringr::str_detect(
+                  string = standardConcept,
+                  pattern = "S",
+                  negate = TRUE
+                )
+              ) |>
+              dplyr::pull(conceptId) |>
+              unique()
+          )
+        )
+      
       conceptSetExpression2[[j]]$conceptSetExpressionSignature <-
-        convertConceptSetExpressionToDataFrame(
-          conceptSetExpression = conceptSetExpression2[[j]][1, ]$conceptSetExpression |>
-            RJSONIO::fromJSON(digits = 23)
-        ) |>
-        dplyr::select(
-          .data$conceptId,
-          .data$includeDescendants,
-          .data$includeMapped,
-          .data$isExcluded
-        ) |>
+        conceptSetDataFrame |>
+        dplyr::select(.data$conceptId,
+                      .data$includeDescendants,
+                      .data$includeMapped,
+                      .data$isExcluded) |>
         dplyr::distinct() |>
         dplyr::arrange(.data$conceptId) |>
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
     }
 
+    conceptSetExpressionMetaData <- 
+      dplyr::bind_rows(conceptSetExpressionMetaData)
+    
     conceptSetExpression <-
       dplyr::bind_rows(conceptSetExpression2) |> 
       dplyr::mutate(conceptSetUsedInEntryEvent = 0)
@@ -135,6 +273,9 @@ extractConceptSetsInCohortDefinition <-
     
     data <- data |> 
       tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0))
+    
+    data <- data |> 
+      dplyr::left_join(conceptSetExpressionMetaData)
     
     return(data)
   }
