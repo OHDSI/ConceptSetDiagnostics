@@ -275,7 +275,8 @@ extractConceptSetsInCohortDefinition <-
       tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0))
     
     data <- data |> 
-      dplyr::left_join(conceptSetExpressionMetaData)
+      dplyr::left_join(conceptSetExpressionMetaData,
+                       by = "conceptSetId")
     
     return(data)
   }
