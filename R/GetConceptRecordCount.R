@@ -63,8 +63,9 @@ getConceptRecordCount <- function(conceptIds = NULL,
   
   uploadedConceptTable <- ''
   if (!is.null(conceptIds)) {
-    uploadedConceptTable <- loadTempConceptTable(conceptIds = conceptIds,
-                                                 connection = connection)
+    uploadedConceptTable <-
+      loadTempConceptTable(conceptIds = conceptIds,
+                           connection = connection)
   }
   
   domainInformation <-
@@ -80,26 +81,47 @@ getConceptRecordCount <- function(conceptIds = NULL,
   # filtering out ERA tables because they are supposed to be derived tables, and counting them is double counting
   
   # REASON for many SQL --DISTINCT subject_count cannot be computed from aggregation query of calendar month level data
-  sql1 <- "SELECT @domain_concept_id concept_id,
-          		YEAR(@domain_start_date) event_year,
-          		MONTH(@domain_start_date) event_month,
-          		'Y' concept_is_standard,
+  sql <- "
+
+          DROP TABLE IF EXISTS #concept_count_table;
+
+          {@concept_id_universe != ''} ? {
+            DROP TABLE IF EXISTS #concept_id_unv_2;
+            CREATE TABLE #concept_id_unv_2 as
+              SELECT DISTINCT u.concept_id
+              FROM @concept_id_universe u
+              INNER JOIN (
+                SELECT concept_id
+                FROM @vocabulary_database_schema.CONCEPT
+                WHERE concept_id > 0
+                {@is_standard == 'Y'} ? {} : {
+                  AND (standard_concept != 'S' OR standard_concept IS NULL)
+                }
+                ) c
+                ON u.concept_id = c.concept_id
+          ;
+          }
+
+          SELECT {@use_group_by} ? {@group_by_select}
+          		{@is_standard == 'Y'} ? {'Y'} : {'N'} concept_is_standard,
           		COUNT_BIG(*) concept_count,
-          		COUNT_BIG(DISTINCT dt.person_id) subject_count
+          		COUNT_BIG(DISTINCT dt.person_id) subject_count,
+          		MIN(@domain_start_date) min_date,
+          		MAX(@domain_start_date) max_date,
+          		COUNT(DISTINCT @domain_start_date) unique_dates
+          INTO #concept_count_table
           	FROM @cdm_database_schema.@domain_table dt
-          	
+
             {@incidence} ? {
-            INNER JOIN 
+            -- limit to first occurrence of concept id by person_id
+            INNER JOIN
               (
-                SELECT person_id, 
-                        @domain_concept_id concept_id, 
+                SELECT person_id,
+                        @domain_concept_id concept_id,
                         min(@domain_start_date) start_date
                 FROM @cdm_database_schema.@domain_table in1
                 {@concept_id_universe != ''} ? {
-                    INNER JOIN (
-                            		SELECT DISTINCT concept_id
-                            		FROM @concept_id_universe
-                            		) ci
+                    INNER JOIN #concept_id_unv_2 ci
                     ON @domain_concept_id = ci.concept_id
                 }
                 GROUP By person_id, @domain_concept_id
@@ -108,412 +130,198 @@ getConceptRecordCount <- function(conceptIds = NULL,
               AND dt.@domain_concept_id = in0.concept_id
               AND dt.@domain_start_date = in0.start_date
             }
-          
+
             {@concept_id_universe != ''} ? {
-            INNER JOIN (
-                    		SELECT DISTINCT concept_id
-                    		FROM @concept_id_universe
-                    		) c
+            INNER JOIN #concept_id_unv_2 c
             ON @domain_concept_id = c.concept_id
             }
-          	WHERE  YEAR(@domain_start_date) > 0
-          		AND @domain_concept_id > 0
-          	GROUP BY @domain_concept_id,
-          		YEAR(@domain_start_date),
-          		MONTH(@domain_start_date);"
-  sql2 <- " SELECT @domain_concept_id concept_id,
-            	YEAR(@domain_start_date) event_year,
-            	0 AS event_month,
-            	'Y' concept_is_standard,
-            	COUNT_BIG(*) concept_count,
-            	COUNT_BIG(DISTINCT dt.person_id) subject_count
-            FROM @cdm_database_schema.@domain_table dt
-            	
-            {@incidence} ? {
-            INNER JOIN 
-              (
-                SELECT person_id, 
-                        @domain_concept_id concept_id, 
-                        min(@domain_start_date) start_date
-                FROM @cdm_database_schema.@domain_table in1
-                {@concept_id_universe != ''} ? {
-                    INNER JOIN (
-                            		SELECT DISTINCT concept_id
-                            		FROM @concept_id_universe
-                            		) ci
-                    ON @domain_concept_id = ci.concept_id
-                }
-                GROUP By person_id, @domain_concept_id
-              ) in0
-              ON dt.person_id = in0.person_id
-              AND dt.@domain_concept_id = in0.concept_id
-              AND dt.@domain_start_date = in0.start_date
-            }
-          
-            {@concept_id_universe != ''} ? {
-            INNER JOIN (
-                    		SELECT DISTINCT concept_id
-                    		FROM @concept_id_universe
-                    		) c
-            ON @domain_concept_id = c.concept_id
-            }
-            WHERE YEAR(@domain_start_date) > 0
-            	AND @domain_concept_id > 0
-            GROUP BY @domain_concept_id,
-            	YEAR(@domain_start_date);"
-  sql3 <- "SELECT @domain_concept_id concept_id,
-            	0 as event_year,
-            	0 as event_month,
-          		'Y' concept_is_standard,
-            	COUNT_BIG(*) concept_count,
-            	COUNT_BIG(DISTINCT dt.person_id) subject_count
-            FROM @cdm_database_schema.@domain_table dt
-          	
-            {@incidence} ? {
-            INNER JOIN 
-              (
-                SELECT person_id, 
-                        @domain_concept_id concept_id, 
-                        min(@domain_start_date) start_date
-                FROM @cdm_database_schema.@domain_table in1
-                {@concept_id_universe != ''} ? {
-                    INNER JOIN (
-                            		SELECT DISTINCT concept_id
-                            		FROM @concept_id_universe
-                            		) ci
-                    ON @domain_concept_id = ci.concept_id
-                }
-                GROUP By person_id, @domain_concept_id
-              ) in0
-              ON dt.person_id = in0.person_id
-              AND dt.@domain_concept_id = in0.concept_id
-              AND dt.@domain_start_date = in0.start_date
-            }
-          
-            {@concept_id_universe != ''} ? {
-            INNER JOIN (
-                    		SELECT DISTINCT concept_id
-                    		FROM @concept_id_universe
-                    		) c
-            ON @domain_concept_id = c.concept_id
-            }
-            WHERE YEAR(@domain_start_date) > 0
-            AND @domain_concept_id > 0
-            GROUP BY @domain_concept_id;"
+          	WHERE  DATEPART(yy, @domain_start_date) > 0
+            {@use_group_by} ? {@group_by};
+
+            DROP TABLE IF EXISTS #concept_id_unv_2;"
   
   
-  sql4 <- "SELECT @domain_concept_id concept_id,
-          		YEAR(@domain_start_date) event_year,
-          		MONTH(@domain_start_date) event_month,
-          		'N' concept_is_standard,
-          		COUNT_BIG(*) concept_count,
-          		COUNT_BIG(DISTINCT dt.person_id) subject_count
-          	FROM @cdm_database_schema.@domain_table dt
-          	
-            {@incidence} ? {
-            INNER JOIN 
-              (
-                SELECT person_id, 
-                        @domain_concept_id concept_id, 
-                        min(@domain_start_date) start_date
-                FROM @cdm_database_schema.@domain_table in1
-                {@concept_id_universe != ''} ? {
-                    INNER JOIN (
-                            		SELECT DISTINCT concept_id
-                            		FROM @concept_id_universe
-                            		) ci
-                    ON @domain_concept_id = ci.concept_id
-                }
-                GROUP By person_id, @domain_concept_id
-              ) in0
-              ON dt.person_id = in0.person_id
-              AND dt.@domain_concept_id = in0.concept_id
-              AND dt.@domain_start_date = in0.start_date
-            }
-          
-          	INNER JOIN (
-          	  SELECT concept_id
-          	  FROM @vocabulary_database_schema.CONCEPT
-          	  WHERE standard_concept != 'S' OR standard_concept IS NULL
-          	) std
-          	ON @domain_concept_id = std.concept_id
-            {@concept_id_universe != ''} ? {
-            INNER JOIN (
-                    		SELECT DISTINCT concept_id
-                    		FROM @concept_id_universe
-                    		) c
-            ON @domain_concept_id = c.concept_id
-            }
-          	WHERE YEAR(@domain_start_date) > 0
-          		AND @domain_concept_id > 0
-          		AND std.concept_id IS NULL
-          	GROUP BY @domain_concept_id,
-          		YEAR(@domain_start_date),
-          		MONTH(@domain_start_date);"
   
-  sql5 <- " SELECT @domain_concept_id concept_id,
-            	YEAR(@domain_start_date) event_year,
-            	0 AS event_month,
-            	'N' concept_is_standard,
-            	COUNT_BIG(*) concept_count,
-            	COUNT_BIG(DISTINCT dt.person_id) subject_count
-            FROM @cdm_database_schema.@domain_table dt
-              
-            {@incidence} ? {
-            INNER JOIN 
-              (
-                SELECT person_id, 
-                        @domain_concept_id concept_id, 
-                        min(@domain_start_date) start_date
-                FROM @cdm_database_schema.@domain_table in1
-                {@concept_id_universe != ''} ? {
-                    INNER JOIN (
-                            		SELECT DISTINCT concept_id
-                            		FROM @concept_id_universe
-                            		) ci
-                    ON @domain_concept_id = ci.concept_id
-                }
-                GROUP By person_id, @domain_concept_id
-              ) in0
-              ON dt.person_id = in0.person_id
-              AND dt.@domain_concept_id = in0.concept_id
-              AND dt.@domain_start_date = in0.start_date
-            }
-          
-            INNER JOIN (
-          	  SELECT concept_id
-          	  FROM @vocabulary_database_schema.CONCEPT
-          	  WHERE standard_concept != 'S' OR standard_concept IS NULL
-          	) std ON @domain_concept_id = std.concept_id
-            {@concept_id_universe != ''} ? {
-            INNER JOIN (
-                    		SELECT DISTINCT concept_id
-                    		FROM @concept_id_universe
-                    		) c
-            ON @domain_concept_id = c.concept_id
-            }
-            WHERE YEAR(@domain_start_date) > 0
-            	AND @domain_concept_id > 0
-            	AND std.concept_id IS NULL
-            GROUP BY @domain_concept_id,
-            	YEAR(@domain_start_date);"
   
-  sql6 <- " SELECT @domain_concept_id concept_id,
-            	0 AS event_year,
-            	0 AS event_month,
-            	'N' concept_is_standard,
-            	COUNT_BIG(*) concept_count,
-            	COUNT_BIG(DISTINCT dt.person_id) subject_count
-            FROM @cdm_database_schema.@domain_table dt
-          	
-            {@incidence} ? {
-            INNER JOIN 
-              (
-                SELECT person_id, 
-                        @domain_concept_id concept_id, 
-                        min(@domain_start_date) start_date
-                FROM @cdm_database_schema.@domain_table in1
-                {@concept_id_universe != ''} ? {
-                    INNER JOIN (
-                            		SELECT DISTINCT concept_id
-                            		FROM @concept_id_universe
-                            		) ci
-                    ON @domain_concept_id = ci.concept_id
-                }
-                GROUP By person_id, @domain_concept_id
-              ) in0
-              ON dt.person_id = in0.person_id
-              AND dt.@domain_concept_id = in0.concept_id
-              AND dt.@domain_start_date = in0.start_date
-            }
-          
-            INNER JOIN (
-          	  SELECT concept_id
-          	  FROM @vocabulary_database_schema.CONCEPT
-          	  WHERE standard_concept != 'S' OR standard_concept IS NULL
-          	) std ON @domain_concept_id = std.concept_id
-            {@concept_id_universe != ''} ? {
-            INNER JOIN (
-                    		SELECT DISTINCT concept_id
-                    		FROM @concept_id_universe
-                    		) c
-            ON @domain_concept_id = c.concept_id
-            }
-            WHERE YEAR(@domain_start_date) > 0
-            	AND @domain_concept_id > 0
-            	AND std.concept_id IS NULL
-            GROUP BY @domain_concept_id;"
+  #by conceptId
+  #by calendar year
+  #by calendar year, calendar quarter
+  #by calendar year, calendar quarter, calendar month
+  #no conceptId
+  #by calendar year
+  #by calendar year, calendar quarter
+  #by calendar year, calendar quarter, calendar month
   
-  data <- c()
+  iterations <- domainsWide |>
+    tidyr::crossing(dplyr::tibble(
+      calendarGroup = c(
+        "{@keep_concept_id == 'Y'} ? {GROUP BY @domain_concept_id}",
+        "GROUP BY {@keep_concept_id == 'Y'} ? {@domain_concept_id,} DATEPART(yy, @domain_start_date)",
+        "GROUP BY {@keep_concept_id == 'Y'} ? {@domain_concept_id,} DATEPART(yy, @domain_start_date), DATEPART(qq, @domain_start_date)",
+        "GROUP BY {@keep_concept_id == 'Y'} ? {@domain_concept_id,} DATEPART(yy, @domain_start_date), DATEPART(qq, @domain_start_date), DATEPART(mm, @domain_start_date)"
+      ),
+      calendarGroupSelect = c(
+        "{@keep_concept_id == 'Y'} ? {@domain_concept_id concept_id, }",
+        "{@keep_concept_id == 'Y'} ? {@domain_concept_id concept_id, } DATEPART(yy, @domain_start_date) calendar_year,",
+        "{@keep_concept_id == 'Y'} ? {@domain_concept_id concept_id, } DATEPART(yy, @domain_start_date) calendar_year, DATEPART(qq, @domain_start_date) calendar_quarter,",
+        "{@keep_concept_id == 'Y'} ? {@domain_concept_id concept_id,} DATEPART(yy, @domain_start_date) calendar_year, DATEPART(qq, @domain_start_date) calendar_quarter, DATEPART(mm, @domain_start_date) calendar_month,"
+      ),
+      calendarType = c("N",
+                       "Y",
+                       "Q",
+                       "M")
+    )) |>
+    tidyr::crossing(dplyr::tibble(isStandard = c('Y', 'N')))
   
-  for (i in (1:nrow(domainsWide))) {
-    rowData <- NULL
-    rowData <- domainsWide[i,]
+  if (length(conceptIds) > 1) {
+    iterations <- iterations |>
+      tidyr::crossing(dplyr::tibble(keepConceptId = c('Y', 'N')))
+  } else {
+    iterations <- iterations |>
+      tidyr::crossing(dplyr::tibble(keepConceptId = c('Y')))
+  }
+  
+  existingOutput <- c()
+  
+  for (i in (1:nrow(iterations))) {
+    rowData <- iterations[i,]
     
-    writeLines(paste0(
-      " - Working on ",
-      rowData$domainTable,
-      ".",
-      rowData$domainConceptId
-    ))
+    extraMessage <-
+      paste0("Working on ",
+             rowData$domainTable,
+             ".",
+             rowData$domainConceptId,
+             ".")
+    showProgress(
+      currentIteration = i,
+      totalIterations = nrow(iterations),
+      extraMessage = extraMessage
+    )
     
-    longData <- NULL
+    if (any(
+      rowData$keepConceptId == 'Y',
+      stringr::str_detect(string = rowData$calendarGroup,
+                          pattern = "domain_start_date")
+    )) {
+      sqlCalendarGroup <- rowData$calendarGroup
+      sqlCalendarGroupSelect <- rowData$calendarGroupSelect
+      
+      
+      if (rowData$keepConceptId == 'Y') {
+        sqlCalendarGroup <-
+          SqlRender::render(
+            sql = sqlCalendarGroup,
+            keep_concept_id = rowData$keepConceptId,
+            domain_concept_id = rowData$domainConceptId
+          )
+        sqlCalendarGroupSelect <-
+          SqlRender::render(
+            sql = sqlCalendarGroupSelect,
+            keep_concept_id = rowData$keepConceptId,
+            domain_concept_id = rowData$domainConceptId
+          )
+      }
+      
+      if (stringr::str_detect(string = rowData$calendarGroup,
+                              pattern = "domain_start_date")) {
+        sqlCalendarGroup <-
+          SqlRender::render(sql = sqlCalendarGroup,
+                            domain_start_date = rowData$domainStartDate)
+        sqlCalendarGroupSelect <-
+          SqlRender::render(sql = sqlCalendarGroupSelect,
+                            domain_start_date = rowData$domainStartDate)
+      }
+    } else {
+      sqlCalendarGroup <- ""
+      sqlCalendarGroupSelect <- ""
+    }
+    
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = sql,
+      domain_table = rowData$domainTable,
+      domain_concept_id = rowData$domainConceptId,
+      cdm_database_schema = cdmDatabaseSchema,
+      vocabulary_database_schema = vocabularyDatabaseSchema,
+      domain_start_date = rowData$domainStartDate,
+      concept_id_universe = uploadedConceptTable,
+      incidence = incidence,
+      is_standard = rowData$isStandard,
+      use_group_by = nchar(stringr::str_trim(sqlCalendarGroup)) > 2,
+      group_by = sqlCalendarGroup,
+      group_by_select = sqlCalendarGroupSelect,
+      progressBar = FALSE,
+      reportOverallTime = FALSE
+    )
+    
     longData <- domainsLong |>
       dplyr::filter(domainTable == rowData$domainTable) |>
       dplyr::filter(domainField == rowData$domainConceptId)
     
-    data1 <- NULL
-    data1 <- DatabaseConnector::renderTranslateQuerySql(
+    output <- DatabaseConnector::querySql(
       connection = connection,
-      sql = sql1,
-      snakeCaseToCamelCase = TRUE,
-      domain_table = rowData$domainTable,
-      domain_concept_id = rowData$domainConceptId,
-      cdm_database_schema = cdmDatabaseSchema,
-      domain_start_date = rowData$domainStartDate,
-      concept_id_universe = uploadedConceptTable,
-      incidence = incidence
+      sql = "SELECT * FROM #concept_count_table;",
+      snakeCaseToCamelCase = TRUE
     ) |>
       dplyr::mutate(
         domainTableShort = longData$domainTableShort,
-        domainFieldShort = longData$domainFieldShort
+        domainFieldShort = longData$domainFieldShort,
+        calendarType = rowData$calendarType,
+        isStandard = rowData$isStandard
       )
     
-    data2 <- NULL
-    data2 <- DatabaseConnector::renderTranslateQuerySql(
-      connection = connection,
-      sql = sql2,
-      snakeCaseToCamelCase = TRUE,
-      domain_table = rowData$domainTable,
-      domain_concept_id = rowData$domainConceptId,
-      cdm_database_schema = cdmDatabaseSchema,
-      domain_start_date = rowData$domainStartDate,
-      concept_id_universe = uploadedConceptTable,
-      incidence = incidence
-    ) |>
-      dplyr::mutate(
-        domainTableShort = longData$domainTableShort,
-        domainFieldShort = longData$domainFieldShort
-      )
-    
-    data3 <- NULL
-    data3 <- DatabaseConnector::renderTranslateQuerySql(
-      connection = connection,
-      sql = sql3,
-      snakeCaseToCamelCase = TRUE,
-      domain_table = rowData$domainTable,
-      domain_concept_id = rowData$domainConceptId,
-      cdm_database_schema = cdmDatabaseSchema,
-      domain_start_date = rowData$domainStartDate,
-      concept_id_universe = uploadedConceptTable,
-      incidence = incidence
-    ) |>
-      dplyr::mutate(
-        domainTableShort = longData$domainTableShort,
-        domainFieldShort = longData$domainFieldShort
-      )
-    
-    data <- dplyr::bind_rows(data,
-                             data1,
-                             data2,
-                             data3) |>
+    existingOutput <- dplyr::bind_rows(existingOutput,
+                                       output) |>
       dplyr::tibble()
   }
   
-  for (i in (1:nrow(domainsWide))) {
-    rowData <- NULL
-    rowData <- domainsWide[i,]
-    
-    writeLines(paste0(
-      " - Working on ",
-      rowData$domainTable,
-      ".",
-      rowData$domainSourceConceptId
-    ))
-    longData <- NULL
-    longData <- domainsLong |>
-      dplyr::filter(domainTable == rowData$domainTable) |>
-      dplyr::filter(domainField == rowData$domainSourceConceptId)
-    
-    if (nchar(rowData$domainSourceConceptId) > 4) {
-      data4 <- DatabaseConnector::renderTranslateQuerySql(
-        connection = connection,
-        sql = sql4,
-        snakeCaseToCamelCase = TRUE,
-        domain_table = rowData$domainTable,
-        domain_concept_id = rowData$domainSourceConceptId,
-        cdm_database_schema = cdmDatabaseSchema,
-        domain_start_date = rowData$domainStartDate,
-        concept_id_universe = uploadedConceptTable,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        incidence = incidence
-      ) |>
-        dplyr::mutate(
-          domainTableShort = longData$domainTableShort,
-          domainFieldShort = longData$domainFieldShort
-        )
-      
-      data5 <- DatabaseConnector::renderTranslateQuerySql(
-        connection = connection,
-        sql = sql5,
-        snakeCaseToCamelCase = TRUE,
-        domain_table = rowData$domainTable,
-        domain_concept_id = rowData$domainSourceConceptId,
-        cdm_database_schema = cdmDatabaseSchema,
-        domain_start_date = rowData$domainStartDate,
-        concept_id_universe = uploadedConceptTable,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        incidence = incidence
-      ) |>
-        dplyr::mutate(
-          domainTableShort = longData$domainTableShort,
-          domainFieldShort = longData$domainFieldShort
-        )
-      
-      data6 <- DatabaseConnector::renderTranslateQuerySql(
-        connection = connection,
-        sql = sql6,
-        snakeCaseToCamelCase = TRUE,
-        domain_table = rowData$domainTable,
-        domain_concept_id = rowData$domainSourceConceptId,
-        cdm_database_schema = cdmDatabaseSchema,
-        domain_start_date = rowData$domainStartDate,
-        concept_id_universe = uploadedConceptTable,
-        vocabulary_database_schema = vocabularyDatabaseSchema,
-        incidence = incidence
-      ) |>
-        dplyr::mutate(
-          domainTableShort = longData$domainTableShort,
-          domainFieldShort = longData$domainFieldShort
-        )
-      
-      data <- dplyr::bind_rows(data,
-                               data4,
-                               data5,
-                               data6) |>
-        dplyr::tibble()
-    }
-  }
+  DatabaseConnector::renderTranslateExecuteSql(
+    connection = connection,
+    profile = FALSE,
+    progressBar = FALSE,
+    reportOverallTime = FALSE,
+    sql = "DROP TABLE IF EXISTS #concept_count_table;
+           DROP TABLE IF EXISTS #concept_id_unv_2;"
+  )
   
-  dataAggregate <- data |>
+  browser()
+  
+  existingOutput <- tidyr::replace_na(
+    data = existingOutput,
+    replace = list(
+      calendarYear = 0,
+      calendarQuarter = 0,
+      calendarMonth = 0,
+      conceptId = 0
+    )
+  )
+  
+  dataAggregate <- existingOutput |>
     dplyr::group_by(conceptId,
                     conceptIsStandard,
-                    eventYear,
-                    eventMonth) |>
-    dplyr::filter(eventYear == 0) |> 
-    dplyr::filter(eventMonth == 0) |> 
+                    calendarYear,
+                    calendarQuarter,
+                    calendarMonth) |>
+    dplyr::filter(calendarYear == 0) |>
+    dplyr::filter(calendarQuarter == 0) |>
     dplyr::summarise(conceptCount = sum(conceptCount),
                      subjectCount = max(subjectCount)) |>
     dplyr::ungroup() |>
     dplyr::mutate(domainTableShort = 'AL',
                   domainFieldShort = 'ALL')
   
-  data <- dplyr::bind_rows(dataAggregate,
-                           data)
+  existingOutput <- dplyr::bind_rows(dataAggregate,
+                                     existingOutput)
   
   if (!is.null(minCellCount)) {
-    data <- data |> dplyr::filter(subjectCount > minCellCount)
+    existingOutput <-
+      existingOutput |> dplyr::filter(subjectCount > minCellCount)
   }
+  
+  output <- c()
+  output$conceptRecordCount <- existingOutput
+  
+  browser()
   
   return(data)
 }
