@@ -32,8 +32,8 @@
 #'
 #' @param minCellCount                The minimum cell count for fields containing person/subject count.
 #'
-#' @param summarizeAcrossDomains       Do you want to summarize across domain tables?
-#' 
+#' @param incidence                   Do you want to limit to first dispensation by person?
+#'
 #' @param domain                      domains to look for concept id
 #'
 #' @return
@@ -48,12 +48,14 @@ getConceptRecordCount <- function(conceptIds = NULL,
                                   vocabularyDatabaseSchema = cdmDatabaseSchema,
                                   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
                                   minCellCount = 0,
-                                  domainTableName = c("drug_exposure",
-                                                      "condition_occurrence",
-                                                      "procedure_occurrence",
-                                                      "mesaurement",
-                                                      "observation"),
-                                  summarizeAcrossDomains = FALSE) {
+                                  domainTableName = c(
+                                    "drug_exposure",
+                                    "condition_occurrence",
+                                    "procedure_occurrence",
+                                    "mesaurement",
+                                    "observation"
+                                  ),
+                                  incidence = FALSE) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
@@ -61,22 +63,19 @@ getConceptRecordCount <- function(conceptIds = NULL,
   
   uploadedConceptTable <- ''
   if (!is.null(conceptIds)) {
-    uploadedConceptTable <- loadTempConceptTable(
-      conceptIds = conceptIds,
-      connection = connection,
-      snakeCaseToCamelCase = TRUE
-    )
+    uploadedConceptTable <- loadTempConceptTable(conceptIds = conceptIds,
+                                                 connection = connection)
   }
   
   domainInformation <-
     getDomainInformation(packageName = "ConceptSetDiagnostics")
   
   domainsWide <- domainInformation$wide |>
-    dplyr::filter(domainTable %in% c(domainTableName)) |> 
+    dplyr::filter(domainTable %in% c(domainTableName)) |>
     dplyr::filter(.data$isEraTable == FALSE)
-
+  
   domainsLong <- domainInformation$long |>
-    dplyr::filter(domainTable %in% c(domainTableName)) |> 
+    dplyr::filter(domainTable %in% c(domainTableName)) |>
     dplyr::filter(eraTable == FALSE)
   # filtering out ERA tables because they are supposed to be derived tables, and counting them is double counting
   
@@ -86,13 +85,38 @@ getConceptRecordCount <- function(conceptIds = NULL,
           		MONTH(@domain_start_date) event_month,
           		'Y' concept_is_standard,
           		COUNT_BIG(*) concept_count,
-          		COUNT_BIG(DISTINCT person_id) subject_count
+          		COUNT_BIG(DISTINCT dt.person_id) subject_count
           	FROM @cdm_database_schema.@domain_table dt
-          	WHERE {@concept_id_universe != ''} ? {@domain_concept_id IN (
-          		SELECT DISTINCT concept_id
-          		FROM @concept_id_universe
-          		)
-          		AND} YEAR(@domain_start_date) > 0
+          	
+            {@incidence} ? {
+            INNER JOIN 
+              (
+                SELECT person_id, 
+                        @domain_concept_id concept_id, 
+                        min(@domain_start_date) start_date
+                FROM @cdm_database_schema.@domain_table in1
+                {@concept_id_universe != ''} ? {
+                    INNER JOIN (
+                            		SELECT DISTINCT concept_id
+                            		FROM @concept_id_universe
+                            		) ci
+                    ON @domain_concept_id = ci.concept_id
+                }
+                GROUP By person_id, @domain_concept_id
+              ) in0
+              ON dt.person_id = in0.person_id
+              AND dt.@domain_concept_id = in0.concept_id
+              AND dt.@domain_start_date = in0.start_date
+            }
+          
+            {@concept_id_universe != ''} ? {
+            INNER JOIN (
+                    		SELECT DISTINCT concept_id
+                    		FROM @concept_id_universe
+                    		) c
+            ON @domain_concept_id = c.concept_id
+            }
+          	WHERE  YEAR(@domain_start_date) > 0
           		AND @domain_concept_id > 0
           	GROUP BY @domain_concept_id,
           		YEAR(@domain_start_date),
@@ -102,13 +126,38 @@ getConceptRecordCount <- function(conceptIds = NULL,
             	0 AS event_month,
             	'Y' concept_is_standard,
             	COUNT_BIG(*) concept_count,
-            	COUNT_BIG(DISTINCT person_id) subject_count
-            FROM @cdm_database_schema.@domain_table
-            WHERE {@concept_id_universe != ''} ? {@domain_concept_id IN (
-          		SELECT DISTINCT concept_id
-          		FROM @concept_id_universe
-          		)
-          		AND} YEAR(@domain_start_date) > 0
+            	COUNT_BIG(DISTINCT dt.person_id) subject_count
+            FROM @cdm_database_schema.@domain_table dt
+            	
+            {@incidence} ? {
+            INNER JOIN 
+              (
+                SELECT person_id, 
+                        @domain_concept_id concept_id, 
+                        min(@domain_start_date) start_date
+                FROM @cdm_database_schema.@domain_table in1
+                {@concept_id_universe != ''} ? {
+                    INNER JOIN (
+                            		SELECT DISTINCT concept_id
+                            		FROM @concept_id_universe
+                            		) ci
+                    ON @domain_concept_id = ci.concept_id
+                }
+                GROUP By person_id, @domain_concept_id
+              ) in0
+              ON dt.person_id = in0.person_id
+              AND dt.@domain_concept_id = in0.concept_id
+              AND dt.@domain_start_date = in0.start_date
+            }
+          
+            {@concept_id_universe != ''} ? {
+            INNER JOIN (
+                    		SELECT DISTINCT concept_id
+                    		FROM @concept_id_universe
+                    		) c
+            ON @domain_concept_id = c.concept_id
+            }
+            WHERE YEAR(@domain_start_date) > 0
             	AND @domain_concept_id > 0
             GROUP BY @domain_concept_id,
             	YEAR(@domain_start_date);"
@@ -117,13 +166,38 @@ getConceptRecordCount <- function(conceptIds = NULL,
             	0 as event_month,
           		'Y' concept_is_standard,
             	COUNT_BIG(*) concept_count,
-            	COUNT_BIG(DISTINCT person_id) subject_count
+            	COUNT_BIG(DISTINCT dt.person_id) subject_count
             FROM @cdm_database_schema.@domain_table dt
-            WHERE {@concept_id_universe != ''} ? {@domain_concept_id IN (
-          		SELECT DISTINCT concept_id
-          		FROM @concept_id_universe
-          		)
-          		AND} YEAR(@domain_start_date) > 0
+          	
+            {@incidence} ? {
+            INNER JOIN 
+              (
+                SELECT person_id, 
+                        @domain_concept_id concept_id, 
+                        min(@domain_start_date) start_date
+                FROM @cdm_database_schema.@domain_table in1
+                {@concept_id_universe != ''} ? {
+                    INNER JOIN (
+                            		SELECT DISTINCT concept_id
+                            		FROM @concept_id_universe
+                            		) ci
+                    ON @domain_concept_id = ci.concept_id
+                }
+                GROUP By person_id, @domain_concept_id
+              ) in0
+              ON dt.person_id = in0.person_id
+              AND dt.@domain_concept_id = in0.concept_id
+              AND dt.@domain_start_date = in0.start_date
+            }
+          
+            {@concept_id_universe != ''} ? {
+            INNER JOIN (
+                    		SELECT DISTINCT concept_id
+                    		FROM @concept_id_universe
+                    		) c
+            ON @domain_concept_id = c.concept_id
+            }
+            WHERE YEAR(@domain_start_date) > 0
             AND @domain_concept_id > 0
             GROUP BY @domain_concept_id;"
   
@@ -133,19 +207,44 @@ getConceptRecordCount <- function(conceptIds = NULL,
           		MONTH(@domain_start_date) event_month,
           		'N' concept_is_standard,
           		COUNT_BIG(*) concept_count,
-          		COUNT_BIG(DISTINCT person_id) subject_count
+          		COUNT_BIG(DISTINCT dt.person_id) subject_count
           	FROM @cdm_database_schema.@domain_table dt
-          	LEFT JOIN (
+          	
+            {@incidence} ? {
+            INNER JOIN 
+              (
+                SELECT person_id, 
+                        @domain_concept_id concept_id, 
+                        min(@domain_start_date) start_date
+                FROM @cdm_database_schema.@domain_table in1
+                {@concept_id_universe != ''} ? {
+                    INNER JOIN (
+                            		SELECT DISTINCT concept_id
+                            		FROM @concept_id_universe
+                            		) ci
+                    ON @domain_concept_id = ci.concept_id
+                }
+                GROUP By person_id, @domain_concept_id
+              ) in0
+              ON dt.person_id = in0.person_id
+              AND dt.@domain_concept_id = in0.concept_id
+              AND dt.@domain_start_date = in0.start_date
+            }
+          
+          	INNER JOIN (
           	  SELECT concept_id
           	  FROM @vocabulary_database_schema.CONCEPT
-          	  WHERE standard_concept = 'S'
+          	  WHERE standard_concept != 'S' OR standard_concept IS NULL
           	) std
           	ON @domain_concept_id = std.concept_id
-          	WHERE {@concept_id_universe != ''} ? {@domain_concept_id IN (
-          		SELECT DISTINCT concept_id
-          		FROM @concept_id_universe
-          		)
-          		AND} YEAR(@domain_start_date) > 0
+            {@concept_id_universe != ''} ? {
+            INNER JOIN (
+                    		SELECT DISTINCT concept_id
+                    		FROM @concept_id_universe
+                    		) c
+            ON @domain_concept_id = c.concept_id
+            }
+          	WHERE YEAR(@domain_start_date) > 0
           		AND @domain_concept_id > 0
           		AND std.concept_id IS NULL
           	GROUP BY @domain_concept_id,
@@ -157,18 +256,43 @@ getConceptRecordCount <- function(conceptIds = NULL,
             	0 AS event_month,
             	'N' concept_is_standard,
             	COUNT_BIG(*) concept_count,
-            	COUNT_BIG(DISTINCT person_id) subject_count
+            	COUNT_BIG(DISTINCT dt.person_id) subject_count
             FROM @cdm_database_schema.@domain_table dt
-            LEFT JOIN (
+              
+            {@incidence} ? {
+            INNER JOIN 
+              (
+                SELECT person_id, 
+                        @domain_concept_id concept_id, 
+                        min(@domain_start_date) start_date
+                FROM @cdm_database_schema.@domain_table in1
+                {@concept_id_universe != ''} ? {
+                    INNER JOIN (
+                            		SELECT DISTINCT concept_id
+                            		FROM @concept_id_universe
+                            		) ci
+                    ON @domain_concept_id = ci.concept_id
+                }
+                GROUP By person_id, @domain_concept_id
+              ) in0
+              ON dt.person_id = in0.person_id
+              AND dt.@domain_concept_id = in0.concept_id
+              AND dt.@domain_start_date = in0.start_date
+            }
+          
+            INNER JOIN (
           	  SELECT concept_id
           	  FROM @vocabulary_database_schema.CONCEPT
-          	  WHERE standard_concept = 'S'
+          	  WHERE standard_concept != 'S' OR standard_concept IS NULL
           	) std ON @domain_concept_id = std.concept_id
-            WHERE {@concept_id_universe != ''} ? {@domain_concept_id IN (
-          		SELECT DISTINCT concept_id
-          		FROM @concept_id_universe
-          		)
-          		AND} YEAR(@domain_start_date) > 0
+            {@concept_id_universe != ''} ? {
+            INNER JOIN (
+                    		SELECT DISTINCT concept_id
+                    		FROM @concept_id_universe
+                    		) c
+            ON @domain_concept_id = c.concept_id
+            }
+            WHERE YEAR(@domain_start_date) > 0
             	AND @domain_concept_id > 0
             	AND std.concept_id IS NULL
             GROUP BY @domain_concept_id,
@@ -179,18 +303,43 @@ getConceptRecordCount <- function(conceptIds = NULL,
             	0 AS event_month,
             	'N' concept_is_standard,
             	COUNT_BIG(*) concept_count,
-            	COUNT_BIG(DISTINCT person_id) subject_count
+            	COUNT_BIG(DISTINCT dt.person_id) subject_count
             FROM @cdm_database_schema.@domain_table dt
-            LEFT JOIN (
+          	
+            {@incidence} ? {
+            INNER JOIN 
+              (
+                SELECT person_id, 
+                        @domain_concept_id concept_id, 
+                        min(@domain_start_date) start_date
+                FROM @cdm_database_schema.@domain_table in1
+                {@concept_id_universe != ''} ? {
+                    INNER JOIN (
+                            		SELECT DISTINCT concept_id
+                            		FROM @concept_id_universe
+                            		) ci
+                    ON @domain_concept_id = ci.concept_id
+                }
+                GROUP By person_id, @domain_concept_id
+              ) in0
+              ON dt.person_id = in0.person_id
+              AND dt.@domain_concept_id = in0.concept_id
+              AND dt.@domain_start_date = in0.start_date
+            }
+          
+            INNER JOIN (
           	  SELECT concept_id
           	  FROM @vocabulary_database_schema.CONCEPT
-          	  WHERE standard_concept = 'S'
+          	  WHERE standard_concept != 'S' OR standard_concept IS NULL
           	) std ON @domain_concept_id = std.concept_id
-            WHERE {@concept_id_universe != ''} ? {@domain_concept_id IN (
-          		SELECT DISTINCT concept_id
-          		FROM @concept_id_universe
-          		)
-          		AND} YEAR(@domain_start_date) > 0
+            {@concept_id_universe != ''} ? {
+            INNER JOIN (
+                    		SELECT DISTINCT concept_id
+                    		FROM @concept_id_universe
+                    		) c
+            ON @domain_concept_id = c.concept_id
+            }
+            WHERE YEAR(@domain_start_date) > 0
             	AND @domain_concept_id > 0
             	AND std.concept_id IS NULL
             GROUP BY @domain_concept_id;"
@@ -199,7 +348,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
   
   for (i in (1:nrow(domainsWide))) {
     rowData <- NULL
-    rowData <- domainsWide[i, ]
+    rowData <- domainsWide[i,]
     
     writeLines(paste0(
       " - Working on ",
@@ -222,7 +371,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
       domain_concept_id = rowData$domainConceptId,
       cdm_database_schema = cdmDatabaseSchema,
       domain_start_date = rowData$domainStartDate,
-      concept_id_universe = uploadedConceptTable
+      concept_id_universe = uploadedConceptTable,
+      incidence = incidence
     ) |>
       dplyr::mutate(
         domainTableShort = longData$domainTableShort,
@@ -238,7 +388,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
       domain_concept_id = rowData$domainConceptId,
       cdm_database_schema = cdmDatabaseSchema,
       domain_start_date = rowData$domainStartDate,
-      concept_id_universe = uploadedConceptTable
+      concept_id_universe = uploadedConceptTable,
+      incidence = incidence
     ) |>
       dplyr::mutate(
         domainTableShort = longData$domainTableShort,
@@ -254,7 +405,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
       domain_concept_id = rowData$domainConceptId,
       cdm_database_schema = cdmDatabaseSchema,
       domain_start_date = rowData$domainStartDate,
-      concept_id_universe = uploadedConceptTable
+      concept_id_universe = uploadedConceptTable,
+      incidence = incidence
     ) |>
       dplyr::mutate(
         domainTableShort = longData$domainTableShort,
@@ -270,10 +422,10 @@ getConceptRecordCount <- function(conceptIds = NULL,
   
   for (i in (1:nrow(domainsWide))) {
     rowData <- NULL
-    rowData <- domainsWide[i, ]
+    rowData <- domainsWide[i,]
     
     writeLines(paste0(
-      "Working on ",
+      " - Working on ",
       rowData$domainTable,
       ".",
       rowData$domainSourceConceptId
@@ -293,7 +445,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
         cdm_database_schema = cdmDatabaseSchema,
         domain_start_date = rowData$domainStartDate,
         concept_id_universe = uploadedConceptTable,
-        vocabulary_database_schema = vocabularyDatabaseSchema
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        incidence = incidence
       ) |>
         dplyr::mutate(
           domainTableShort = longData$domainTableShort,
@@ -309,7 +462,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
         cdm_database_schema = cdmDatabaseSchema,
         domain_start_date = rowData$domainStartDate,
         concept_id_universe = uploadedConceptTable,
-        vocabulary_database_schema = vocabularyDatabaseSchema
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        incidence = incidence
       ) |>
         dplyr::mutate(
           domainTableShort = longData$domainTableShort,
@@ -325,7 +479,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
         cdm_database_schema = cdmDatabaseSchema,
         domain_start_date = rowData$domainStartDate,
         concept_id_universe = uploadedConceptTable,
-        vocabulary_database_schema = vocabularyDatabaseSchema
+        vocabulary_database_schema = vocabularyDatabaseSchema,
+        incidence = incidence
       ) |>
         dplyr::mutate(
           domainTableShort = longData$domainTableShort,
@@ -340,19 +495,21 @@ getConceptRecordCount <- function(conceptIds = NULL,
     }
   }
   
-  browser()
+  dataAggregate <- data |>
+    dplyr::group_by(conceptId,
+                    conceptIsStandard,
+                    eventYear,
+                    eventMonth) |>
+    dplyr::filter(eventYear == 0) |> 
+    dplyr::filter(eventMonth == 0) |> 
+    dplyr::summarise(conceptCount = sum(conceptCount),
+                     subjectCount = max(subjectCount)) |>
+    dplyr::ungroup() |>
+    dplyr::mutate(domainTableShort = 'AL',
+                  domainFieldShort = 'ALL')
   
-  if (summarizeAcrossDomains) {
-    data <- data |>
-      dplyr::group_by(conceptId,
-                      eventYear,
-                      eventMonth) |>
-      dplyr::summarise(
-        conceptCount = sum(conceptCount),
-        subjectCount = max(subjectCount)
-      )
-  }
-  
+  data <- dplyr::bind_rows(dataAggregate,
+                           data)
   
   if (!is.null(minCellCount)) {
     data <- data |> dplyr::filter(subjectCount > minCellCount)

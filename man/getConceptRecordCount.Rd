@@ -14,7 +14,7 @@ getConceptRecordCount(
   minCellCount = 0,
   domainTableName = c("drug_exposure", "condition_occurrence", "procedure_occurrence",
     "mesaurement", "observation"),
-  summarizeAcrossDomains = FALSE
+  incidence = FALSE
 )
 }
 \arguments{
@@ -42,7 +42,7 @@ tables, provide a schema with write privileges where temp tables can be created.
 
 \item{minCellCount}{The minimum cell count for fields containing person/subject count.}
 
-\item{summarizeAcrossDomains}{Do you want to summarize across domain tables?}
+\item{incidence}{Do you want to limit to first dispensation by person?}
 
 \item{domain}{domains to look for concept id}
 }
