@@ -32,8 +32,6 @@
 #'
 #' @param minCellCount                The minimum cell count for fields containing person/subject count.
 #'
-#' @param incidence                   Do you want to limit to first dispensation by person?
-#'
 #' @param domain                      domains to look for concept id
 #'
 #' @return
@@ -54,8 +52,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
                                     "procedure_occurrence",
                                     "mesaurement",
                                     "observation"
-                                  ),
-                                  incidence = FALSE) {
+                                  )) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
@@ -102,9 +99,13 @@ getConceptRecordCount <- function(conceptIds = NULL,
           ;
           }
           --PERCENTILES are difficult and will need subqueries
-          SELECT {@use_group_by} ? {@group_by_select}
-          		{@is_standard == 'Y'} ? {'Y'} : {'N'} concept_is_standard,
-              {@gender_concept_id != ''} ? {p.gender_concept_id gender_concept_id,}
+          SELECT
+              {@include_concept_id} ? {@domain_concept_id} : {0} concept_id,
+          		{@is_standard} ? {'Y'} : {'N'} concept_is_standard,
+              {@gender_concept_id == 0} ? {0} : {p.gender_concept_id} gender_concept_id,
+              {@use_date_year} ? {DATEPART(yy, @domain_start_date) calendar_year,}
+              {@use_date_month} ? {DATEPART(mm, @domain_start_date) calendar_month,}
+              {@use_date_quarter} ? {DATEPART(qq, @domain_start_date) calendar_quarter,}
           		COUNT_BIG(*) concept_count,
           		COUNT_BIG(DISTINCT dt.person_id) subject_count,
           		MIN(@domain_start_date) min_date,
@@ -126,13 +127,13 @@ getConceptRecordCount <- function(conceptIds = NULL,
           		STDDEV(DATEPART(yy, @domain_start_date) - year_of_birth) age_std,
           		SUM(DATEPART(yy, @domain_start_date) - year_of_birth) age_sum
           INTO #concept_count_table
-          	FROM @cdm_database_schema.@domain_table dt
-          	INNER JOIN @cdm_database_schema.observation_period op
-          	 ON dt.person_id = op.person_id
+          FROM @cdm_database_schema.@domain_table dt
+          INNER JOIN @cdm_database_schema.observation_period op
+          ON dt.person_id = op.person_id
           	 AND @domain_start_date >= op.observation_period_start_date
           	 AND @domain_start_date <= op.observation_period_end_date
-          	INNER JOIN @cdm_database_schema.person p
-          	ON dt.person_id = p.person_id
+          INNER JOIN @cdm_database_schema.person p
+          ON dt.person_id = p.person_id
 
             {@incidence} ? {
             -- limit to first occurrence of concept id by person_id
@@ -159,60 +160,55 @@ getConceptRecordCount <- function(conceptIds = NULL,
             }
           	WHERE  DATEPART(yy, @domain_start_date) > 0
           	    AND year_of_birth > 0
-            {@use_group_by} ? {@group_by};
+            {@use_group_by} ? {GROUP BY
+                {@include_concept_id} ? {@domain_concept_id, }
+                {@gender_concept_id == 0} ? {} : {p.gender_concept_id, }
+                {@use_date_year} ? {DATEPART(yy, @domain_start_date),}
+                {@use_date_month} ? {DATEPART(mm, @domain_start_date),}
+                {@use_date_quarter} ? {DATEPART(qq, @domain_start_date),}};
 
             DROP TABLE IF EXISTS #concept_id_unv_2;"
   
-  
-  
-  
-  #by conceptId
-  #by calendar year
-  #by calendar year, calendar quarter
-  #by calendar year, calendar quarter, calendar month
-  #no conceptId
-  #by calendar year
-  #by calendar year, calendar quarter
-  #by calendar year, calendar quarter, calendar month
-  
   iterations <- domainsWide |>
-    # tidyr::crossing(genderConceptId = c('', 8507, 8532)) |> #8507 MALE, 8532 FEMALE
-    # tidyr::crossing()
-    
-    
-    
-    tidyr::crossing(dplyr::tibble(
-      calendarGroup = c(
-        "{@keep_concept_id == 'Y'} ? {GROUP BY @domain_concept_id}",
-        "GROUP BY {@keep_concept_id == 'Y'} ? {@domain_concept_id,} DATEPART(yy, @domain_start_date)",
-        "GROUP BY {@keep_concept_id == 'Y'} ? {@domain_concept_id,} DATEPART(yy, @domain_start_date), DATEPART(qq, @domain_start_date)",
-        "GROUP BY {@keep_concept_id == 'Y'} ? {@domain_concept_id,} DATEPART(yy, @domain_start_date), DATEPART(qq, @domain_start_date), DATEPART(mm, @domain_start_date)"
-      ),
-      calendarGroupSelect = c(
-        "{@keep_concept_id == 'Y'} ? {@domain_concept_id concept_id, }",
-        "{@keep_concept_id == 'Y'} ? {@domain_concept_id concept_id, } DATEPART(yy, @domain_start_date) calendar_year,",
-        "{@keep_concept_id == 'Y'} ? {@domain_concept_id concept_id, } DATEPART(yy, @domain_start_date) calendar_year, DATEPART(qq, @domain_start_date) calendar_quarter,",
-        "{@keep_concept_id == 'Y'} ? {@domain_concept_id concept_id,} DATEPART(yy, @domain_start_date) calendar_year, DATEPART(qq, @domain_start_date) calendar_quarter, DATEPART(mm, @domain_start_date) calendar_month,"
-      ),
-      calendarType = c("N",
-                       "Y",
-                       "Q",
-                       "M")
-    )) |>
-    tidyr::crossing(dplyr::tibble(isStandard = c('Y', 'N')))
-  
-  if (length(conceptIds) > 1) {
-    iterations <- iterations |>
-      tidyr::crossing(dplyr::tibble(keepConceptId = c('Y', 'N')))
-  } else {
-    iterations <- iterations |>
-      tidyr::crossing(dplyr::tibble(keepConceptId = c('Y')))
-  }
+    tidyr::crossing(dplyr::tibble(includeConceptId = c("Y", "N", ""))) |>
+    tidyr::crossing(dplyr::tibble(isStandard = c("Y", "N", ""))) |>
+    tidyr::crossing(dplyr::tibble(genderConceptId = c(0, 8507, 8532))) |>
+    tidyr::crossing(
+      dplyr::bind_rows(
+        dplyr::tibble(
+          useDateYear = c(""),
+          useDateQuarter = c(""),
+          useDateMonth = c(""),
+          calendarType = c("N")
+        ),
+        dplyr::tibble(
+          useDateYear = c("Y"),
+          useDateQuarter = c(""),
+          useDateMonth = c(""),
+          calendarType = c("Y")
+        ),
+        dplyr::tibble(
+          useDateYear = c("Y"),
+          useDateQuarter = c("Y"),
+          useDateMonth = c(""),
+          calendarType = c("Q")
+        ),
+        dplyr::tibble(
+          useDateYear = c("Y"),
+          useDateQuarter = c("Y"),
+          useDateMonth = c("Y"),
+          calendarType = c("M")
+        )
+      )
+    ) |>
+    tidyr::crossing(dplyr::tibble(incidence = c("Y", "N"))) |> 
+    dplyr::filter(domain == 'DrugExposure') |> 
+    dplyr::filter(genderConceptId  > 0)
   
   existingOutput <- c()
   
   for (i in (1:nrow(iterations))) {
-    rowData <- iterations[i,]
+    rowData <- iterations[i, ]
     
     extraMessage <-
       paste0("Working on ",
@@ -226,61 +222,51 @@ getConceptRecordCount <- function(conceptIds = NULL,
       extraMessage = extraMessage
     )
     
-    if (any(
-      rowData$keepConceptId == 'Y',
-      stringr::str_detect(string = rowData$calendarGroup,
-                          pattern = "domain_start_date")
-    )) {
-      sqlCalendarGroup <- rowData$calendarGroup
-      sqlCalendarGroupSelect <- rowData$calendarGroupSelect
-      
-      
-      if (rowData$keepConceptId == 'Y') {
-        sqlCalendarGroup <-
-          SqlRender::render(
-            sql = sqlCalendarGroup,
-            keep_concept_id = rowData$keepConceptId,
-            domain_concept_id = rowData$domainConceptId
-          )
-        sqlCalendarGroupSelect <-
-          SqlRender::render(
-            sql = sqlCalendarGroupSelect,
-            keep_concept_id = rowData$keepConceptId,
-            domain_concept_id = rowData$domainConceptId
-          )
-      }
-      
-      if (stringr::str_detect(string = rowData$calendarGroup,
-                              pattern = "domain_start_date")) {
-        sqlCalendarGroup <-
-          SqlRender::render(sql = sqlCalendarGroup,
-                            domain_start_date = rowData$domainStartDate)
-        sqlCalendarGroupSelect <-
-          SqlRender::render(sql = sqlCalendarGroupSelect,
-                            domain_start_date = rowData$domainStartDate)
-      }
-    } else {
-      sqlCalendarGroup <- ""
-      sqlCalendarGroupSelect <- ""
-    }
-    
-    DatabaseConnector::renderTranslateExecuteSql(
-      connection = connection,
+    browser()
+    sqlRendered <- SqlRender::render(
       sql = sql,
-      domain_table = rowData$domainTable,
-      domain_concept_id = rowData$domainConceptId,
-      gender_concept_id = '',
       cdm_database_schema = cdmDatabaseSchema,
       vocabulary_database_schema = vocabularyDatabaseSchema,
-      domain_start_date = rowData$domainStartDate,
       concept_id_universe = uploadedConceptTable,
-      incidence = incidence,
-      is_standard = rowData$isStandard,
-      use_group_by = nchar(stringr::str_trim(sqlCalendarGroup)) > 2,
-      group_by = sqlCalendarGroup,
-      group_by_select = sqlCalendarGroupSelect,
+      use_group_by = any(
+        rowData$domainConceptId == 'Y',
+        rowData$genderConceptId > 0,
+        rowData$isStandard == 'Y',
+        rowData$useDateYear == 'Y',
+        rowData$useDateQuarter == 'Y',
+        rowData$useDateMonth == 'Y'
+      ),
+      include_concept_id = (rowData$includeConceptId == 'Y'),
+      domain_concept_id = rowData$domainConceptId,
+      domain_start_date = rowData$domainStartDate,
+      domain_table = rowData$domainTable,
+      gender_concept_id = (rowData$genderConceptId == 'Y'),
+      incidence = (rowData$incidence == 'Y'),
+      is_standard = (rowData$isStandard == 'Y'),
+      use_date_year = (rowData$useDateYear == 'Y'),
+      use_date_quarter = (rowData$useDateQuarter == 'Y'),
+      use_date_month = (rowData$useDateMonth == 'Y')
+    )
+    
+    # Regular expression to find a comma followed by any whitespace (including line breaks) and a semicolon
+    regexPattern <- ",[\\s\\n\\r]*;"
+    
+    # Replace the pattern with just a semicolon
+    sqlRendered <- gsub(regexPattern, ";", sqlRendered, perl = TRUE)
+    
+    sqlTranslated <-
+      SqlRender::translate(
+        sql = sqlRendered,
+        targetDialect = connection@dbms,
+        tempEmulationSchema = tempEmulationSchema
+      )
+    
+    DatabaseConnector::executeSql(
+      connection = connection,
+      sql = sqlTranslated,
       progressBar = FALSE,
-      reportOverallTime = FALSE
+      reportOverallTime = FALSE,
+      profile = FALSE
     )
     
     longData <- domainsLong |>

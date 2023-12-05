@@ -13,8 +13,7 @@ getConceptRecordCount(
   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
   minCellCount = 0,
   domainTableName = c("drug_exposure", "condition_occurrence", "procedure_occurrence",
-    "mesaurement", "observation"),
-  incidence = FALSE
+    "mesaurement", "observation")
 )
 }
 \arguments{
@@ -41,8 +40,6 @@ schema name, for example 'cdm_data.dbo'.}
 tables, provide a schema with write privileges where temp tables can be created.}
 
 \item{minCellCount}{The minimum cell count for fields containing person/subject count.}
-
-\item{incidence}{Do you want to limit to first dispensation by person?}
 
 \item{domain}{domains to look for concept id}
 }
