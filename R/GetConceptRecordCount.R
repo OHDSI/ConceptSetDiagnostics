@@ -101,16 +101,38 @@ getConceptRecordCount <- function(conceptIds = NULL,
                 ON u.concept_id = c.concept_id
           ;
           }
-
+          --PERCENTILES are difficult and will need subqueries
           SELECT {@use_group_by} ? {@group_by_select}
           		{@is_standard == 'Y'} ? {'Y'} : {'N'} concept_is_standard,
+              {@gender_concept_id != ''} ? {p.gender_concept_id gender_concept_id,}
           		COUNT_BIG(*) concept_count,
           		COUNT_BIG(DISTINCT dt.person_id) subject_count,
           		MIN(@domain_start_date) min_date,
           		MAX(@domain_start_date) max_date,
-          		COUNT(DISTINCT @domain_start_date) unique_dates
+          		COUNT(DISTINCT @domain_start_date) unique_dates,
+          		AVG(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_avg,
+          		MIN(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_min,
+          		MAX(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_max,
+          		STDDEV(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_std,
+          		SUM(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_sum,
+          		AVG(DATEDIFF(day, @domain_start_date, op.observation_period_start_date)) post_obs_avg,
+          		MIN(DATEDIFF(day, @domain_start_date, op.observation_period_start_date)) post_obs_min,
+          		MAX(DATEDIFF(day, @domain_start_date, op.observation_period_start_date)) post_obs_max,
+          		STDDEV(DATEDIFF(day, @domain_start_date, op.observation_period_start_date)) post_obs_std,
+          		SUM(DATEDIFF(day, @domain_start_date, op.observation_period_start_date)) sum_obs_median,
+          		AVG(DATEPART(yy, @domain_start_date) - year_of_birth) age_avg,
+          		MIN(DATEPART(yy, @domain_start_date) - year_of_birth) age_min,
+          		MAX(DATEPART(yy, @domain_start_date) - year_of_birth) age_max,
+          		STDDEV(DATEPART(yy, @domain_start_date) - year_of_birth) age_std,
+          		SUM(DATEPART(yy, @domain_start_date) - year_of_birth) age_sum
           INTO #concept_count_table
           	FROM @cdm_database_schema.@domain_table dt
+          	INNER JOIN @cdm_database_schema.observation_period op
+          	 ON dt.person_id = op.person_id
+          	 AND @domain_start_date >= op.observation_period_start_date
+          	 AND @domain_start_date <= op.observation_period_end_date
+          	INNER JOIN @cdm_database_schema.person p
+          	ON dt.person_id = p.person_id
 
             {@incidence} ? {
             -- limit to first occurrence of concept id by person_id
@@ -136,6 +158,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
             ON @domain_concept_id = c.concept_id
             }
           	WHERE  DATEPART(yy, @domain_start_date) > 0
+          	    AND year_of_birth > 0
             {@use_group_by} ? {@group_by};
 
             DROP TABLE IF EXISTS #concept_id_unv_2;"
@@ -153,6 +176,11 @@ getConceptRecordCount <- function(conceptIds = NULL,
   #by calendar year, calendar quarter, calendar month
   
   iterations <- domainsWide |>
+    # tidyr::crossing(genderConceptId = c('', 8507, 8532)) |> #8507 MALE, 8532 FEMALE
+    # tidyr::crossing()
+    
+    
+    
     tidyr::crossing(dplyr::tibble(
       calendarGroup = c(
         "{@keep_concept_id == 'Y'} ? {GROUP BY @domain_concept_id}",
@@ -241,6 +269,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
       sql = sql,
       domain_table = rowData$domainTable,
       domain_concept_id = rowData$domainConceptId,
+      gender_concept_id = '',
       cdm_database_schema = cdmDatabaseSchema,
       vocabulary_database_schema = vocabularyDatabaseSchema,
       domain_start_date = rowData$domainStartDate,
