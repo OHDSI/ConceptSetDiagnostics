@@ -102,7 +102,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
           SELECT
               {@include_concept_id} ? {@domain_concept_id} : {0} concept_id,
           		{@is_standard} ? {'Y'} : {'N'} concept_is_standard,
-              {@gender_concept_id == 0} ? {0} : {p.gender_concept_id} gender_concept_id,
+              {@gender_concept_id} ? {p.gender_concept_id} : {0} gender_concept_id,
               {@use_date_year} ? {DATEPART(yy, @domain_start_date) calendar_year,}
               {@use_date_month} ? {DATEPART(mm, @domain_start_date) calendar_month,}
               {@use_date_quarter} ? {DATEPART(qq, @domain_start_date) calendar_quarter,}
@@ -162,7 +162,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
           	    AND year_of_birth > 0
             {@use_group_by} ? {GROUP BY
                 {@include_concept_id} ? {@domain_concept_id, }
-                {@gender_concept_id == 0} ? {} : {p.gender_concept_id, }
+                {@gender_concept_id} ? {p.gender_concept_id, }
                 {@use_date_year} ? {DATEPART(yy, @domain_start_date),}
                 {@use_date_month} ? {DATEPART(mm, @domain_start_date),}
                 {@use_date_quarter} ? {DATEPART(qq, @domain_start_date),}};
@@ -201,9 +201,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
         )
       )
     ) |>
-    tidyr::crossing(dplyr::tibble(incidence = c("Y", "N"))) |> 
-    dplyr::filter(domain == 'DrugExposure') |> 
-    dplyr::filter(genderConceptId  > 0)
+    tidyr::crossing(dplyr::tibble(incidence = c("Y", "N")))
   
   existingOutput <- c()
   
@@ -216,13 +214,21 @@ getConceptRecordCount <- function(conceptIds = NULL,
              ".",
              rowData$domainConceptId,
              ".")
+    progress <- (i / nrow(iterations)) * 100
+    message <-
+      sprintf("\rProgress: %d/%d (%0.2f%%)",
+              i,
+              nrow(iterations),
+              progress)
+    
+    ParallelLogger::logInfo(message)
+    
     showProgress(
       currentIteration = i,
       totalIterations = nrow(iterations),
       extraMessage = extraMessage
     )
     
-    browser()
     sqlRendered <- SqlRender::render(
       sql = sql,
       cdm_database_schema = cdmDatabaseSchema,
@@ -240,7 +246,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
       domain_concept_id = rowData$domainConceptId,
       domain_start_date = rowData$domainStartDate,
       domain_table = rowData$domainTable,
-      gender_concept_id = (rowData$genderConceptId == 'Y'),
+      gender_concept_id = (rowData$genderConceptId > 0),
       incidence = (rowData$incidence == 'Y'),
       is_standard = (rowData$isStandard == 'Y'),
       use_date_year = (rowData$useDateYear == 'Y'),
