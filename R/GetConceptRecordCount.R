@@ -284,8 +284,6 @@ getConceptRecordCount <- function(conceptIds = NULL,
            DROP TABLE IF EXISTS #concept_id_unv_2;"
   )
   
-  browser()
-  
   existingOutput <- tidyr::replace_na(
     data = existingOutput,
     replace = list(
@@ -298,7 +296,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
   
   dataAggregate <- existingOutput |>
     dplyr::group_by(conceptId,
-                    conceptIsStandard,
+                    isStandard,
                     calendarYear,
                     calendarQuarter,
                     calendarMonth) |>
@@ -318,10 +316,5 @@ getConceptRecordCount <- function(conceptIds = NULL,
       existingOutput |> dplyr::filter(subjectCount > minCellCount)
   }
   
-  output <- c()
-  output$conceptRecordCount <- existingOutput
-  
-  browser()
-  
-  return(data)
+  return(existingOutput)
 }
