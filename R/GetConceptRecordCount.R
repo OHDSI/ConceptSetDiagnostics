@@ -128,7 +128,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
               '@domain_field_short' domain_field_short,
               '@calendar_type' calendar_type,
               {@incidence} ? {1} : {0} incidence,
-              {@use_age_group} ? {FLOOR((YEAR(cohort_start_date) - year_of_birth) / 10) AS age_group,} : {-1} age_group,
+              {@use_age_group} ? {FLOOR((YEAR(@domain_start_date) - year_of_birth) / 10)} : {-1} age_group,
           		COUNT_BIG(*) concept_count,
           		COUNT_BIG(DISTINCT dt.person_id) subject_count,
           		MIN(@domain_start_date) min_date,
@@ -197,7 +197,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
                 {@gender_concept_id} ? {p.gender_concept_id, }
                 {@use_date_year} ? {DATEPART(yy, @domain_start_date),}
                 {@use_date_month} ? {DATEPART(mm, @domain_start_date),}
-                {@use_age_group} ? {FLOOR((YEAR(cohort_start_date) - year_of_birth) / 10) AS age_group,}
+                {@use_age_group} ? {FLOOR((YEAR(@domain_start_date) - year_of_birth) / 10),}
                 {@use_date_quarter} ? {DATEPART(qq, @domain_start_date),}};
 
             "
