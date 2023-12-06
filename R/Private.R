@@ -319,4 +319,19 @@ showProgress <-
   }
 
 
+capitalizeFirstLetter <- function(s) {
+  # Function to capitalize the first letter of a string
+  paste0(toupper(substring(s, 1, 1)), substring(s, 2))
+}
+
+appendPrefixToColNames <- function(dataFrame, prefix) {
+  # Append prefix to each column name and capitalize the first letter of the original name
+  colnames(dataFrame) <-
+    sapply(colnames(dataFrame), function(colName) {
+      paste0(prefix, capitalizeFirstLetter(colName))
+    })
+  
+  return(dataFrame |> 
+           dplyr::tibble())
+}
 

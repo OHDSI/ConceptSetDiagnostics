@@ -127,6 +127,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
               '@domain_table_short' domain_table_short,
               '@domain_field_short' domain_field_short,
               '@calendar_type' calendar_type,
+              {@incidence} ? {1} : {0} incidence,
+              {@use_age_group} ? {FLOOR((YEAR(cohort_start_date) - year_of_birth) / 10) AS age_group,} : {-1} age_group,
           		COUNT_BIG(*) concept_count,
           		COUNT_BIG(DISTINCT dt.person_id) subject_count,
           		MIN(@domain_start_date) min_date,
@@ -195,6 +197,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
                 {@gender_concept_id} ? {p.gender_concept_id, }
                 {@use_date_year} ? {DATEPART(yy, @domain_start_date),}
                 {@use_date_month} ? {DATEPART(mm, @domain_start_date),}
+                {@use_age_group} ? {FLOOR((YEAR(cohort_start_date) - year_of_birth) / 10) AS age_group,}
                 {@use_date_quarter} ? {DATEPART(qq, @domain_start_date),}};
 
             "
@@ -230,10 +233,13 @@ getConceptRecordCount <- function(conceptIds = NULL,
         )
       )
     ) |>
-    tidyr::crossing(dplyr::tibble(incidence = c("Y", "N")))
+    tidyr::crossing(dplyr::tibble(incidence = c("Y", "N"))) |>
+    tidyr::crossing(dplyr::tibble(useAgeGroup = c("Y", "N"))) |>
+    dplyr::arrange() |>
+    dplyr::mutate(combination = dplyr::row_number())
   
   existingOutput <- c()
-
+  
   for (i in (1:nrow(iterations))) {
     rowData <- iterations[i, ]
     
@@ -268,7 +274,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
         rowData$genderConceptId > 0,
         rowData$useDateYear == 'Y',
         rowData$useDateQuarter == 'Y',
-        rowData$useDateMonth == 'Y'
+        rowData$useDateMonth == 'Y',
+        rowData$useAgeGroup == 'Y'
       ),
       include_concept_id = (rowData$includeConceptId == 'Y'),
       domain_concept_id = rowData$domainField,
@@ -288,7 +295,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
       limit_to_cohort = limitToCohort,
       cohort_database_schema = cohortDatabaseSchema,
       cohort_table_name = cohortTableName,
-      cohort_definition_id = cohortDefinitionId
+      cohort_definition_id = cohortDefinitionId,
+      use_age_group = (rowData$useAgeGroup == 'Y')
     )
     
     # Regular expression to find a comma followed by any whitespace (including line breaks) and a semicolon
