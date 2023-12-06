@@ -34,6 +34,14 @@
 #'
 #' @param domain                      domains to look for concept id
 #'
+#' @param limitToCohort               Do you wantt to limit to a cohort_definition_id?
+#'
+#' @param cohortDatabaseSchema        Optional
+#'
+#' @param cohortTableName             Optional
+#'
+#' @param cohortDefinitionId          Optional
+#'
 #' @return
 #' Returns a tibble data frame.
 #'
@@ -46,6 +54,9 @@ getConceptRecordCount <- function(conceptIds = NULL,
                                   vocabularyDatabaseSchema = cdmDatabaseSchema,
                                   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
                                   minCellCount = 0,
+                                  cohortDatabaseSchema = NULL,
+                                  cohortTableName = NULL,
+                                  cohortDefinitionId = NULL,
                                   domainTableName = c(
                                     "drug_exposure",
                                     "condition_occurrence",
@@ -77,6 +88,15 @@ getConceptRecordCount <- function(conceptIds = NULL,
     dplyr::filter(eraTable == FALSE)
   # filtering out ERA tables because they are supposed to be derived tables, and counting them is double counting
   
+  limitToCohort <- FALSE
+  if (all(
+    !is.null(cohortDatabaseSchema),
+    !is.null(cohortTableName),
+    !is.null(cohortDefinitionId)
+  )) {
+    limitToCohort <- TRUE
+  }
+  
   # REASON for many SQL --DISTINCT subject_count cannot be computed from aggregation query of calendar month level data
   sql <- "
 
@@ -95,6 +115,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
                 ON u.concept_id = c.concept_id
           ;
           }
+
           --PERCENTILES are difficult and will need subqueries
           SELECT
               {@include_concept_id} ? {@domain_concept_id} : {0} concept_id,
@@ -111,20 +132,20 @@ getConceptRecordCount <- function(conceptIds = NULL,
           		MIN(@domain_start_date) min_date,
           		MAX(@domain_start_date) max_date,
           		COUNT(DISTINCT @domain_start_date) unique_dates,
-          		AVG(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_avg,
+          		ROUND(AVG(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)), 2) prior_obs_avg,
           		MIN(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_min,
           		MAX(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_max,
-          		STDDEV(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_std,
+          		ROUND(STDDEV(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)), 2) prior_obs_std,
           		SUM(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_sum,
-          		AVG(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_avg,
+          		ROUND(AVG(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)), 2) post_obs_avg,
           		MIN(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_min,
           		MAX(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_max,
-          		STDDEV(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_std,
-          		SUM(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) sum_obs_median,
-          		AVG(DATEPART(yy, @domain_start_date) - year_of_birth) age_avg,
+          		ROUND(STDDEV(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)), 2) post_obs_std,
+          		SUM(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_sum,
+          		ROUND(AVG(DATEPART(yy, @domain_start_date) - year_of_birth), 2) age_avg,
           		MIN(DATEPART(yy, @domain_start_date) - year_of_birth) age_min,
           		MAX(DATEPART(yy, @domain_start_date) - year_of_birth) age_max,
-          		STDDEV(DATEPART(yy, @domain_start_date) - year_of_birth) age_std,
+          		ROUND(STDDEV(DATEPART(yy, @domain_start_date) - year_of_birth), 2) age_std,
           		SUM(DATEPART(yy, @domain_start_date) - year_of_birth) age_sum
           INTO #concept_count_table
           FROM @cdm_database_schema.@domain_table dt
@@ -134,6 +155,15 @@ getConceptRecordCount <- function(conceptIds = NULL,
           	 AND @domain_start_date <= op.observation_period_end_date
           INNER JOIN @cdm_database_schema.person p
           ON dt.person_id = p.person_id
+
+          {@limit_to_cohort} ? {
+            INNER JOIN
+            (
+              SELECT subject_id, cohort_start_date, cohort_end_date
+              FROM @cohort_database_schema.@cohort_table_name
+              WHERE cohort_definition_id = @cohort_definition_id
+            )
+          }
 
             {@incidence} ? {
             -- limit to first occurrence of concept id by person_id
@@ -203,7 +233,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
     tidyr::crossing(dplyr::tibble(incidence = c("Y", "N")))
   
   existingOutput <- c()
-  
+
   for (i in (1:nrow(iterations))) {
     rowData <- iterations[i, ]
     
@@ -254,7 +284,11 @@ getConceptRecordCount <- function(conceptIds = NULL,
       use_date_month = (rowData$useDateMonth == 'Y'),
       domain_table_short = rowData$domainTableShort,
       domain_field_short = rowData$domainFieldShort,
-      calendar_type = rowData$calendarType
+      calendar_type = rowData$calendarType,
+      limit_to_cohort = limitToCohort,
+      cohort_database_schema = cohortDatabaseSchema,
+      cohort_table_name = cohortTableName,
+      cohort_definition_id = cohortDefinitionId
     )
     
     # Regular expression to find a comma followed by any whitespace (including line breaks) and a semicolon
@@ -300,15 +334,16 @@ getConceptRecordCount <- function(conceptIds = NULL,
   
   existingOutput <- existingOutput |>
     dplyr::inner_join(
-      domainInformation |>
+      domainInformation$long |>
         dplyr::select(
-          domainTableShort,
-          domainFieldShort,
-          domainTable,
-          domainField
-        )
+          "domainTableShort",
+          "domainFieldShort",
+          "domainTable",
+          "domainField"
+        ),
+      by = c("domainTableShort", "domainFieldShort")
     ) |>
-    dplyr::select(-domainFieldShort,-domainTableShort)
+    dplyr::select(-"domainFieldShort", -"domainTableShort")
   
   if (!is.null(minCellCount)) {
     existingOutput <-

@@ -12,6 +12,9 @@ getConceptRecordCount(
   vocabularyDatabaseSchema = cdmDatabaseSchema,
   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
   minCellCount = 0,
+  cohortDatabaseSchema = NULL,
+  cohortTableName = NULL,
+  cohortDefinitionId = NULL,
   domainTableName = c("drug_exposure", "condition_occurrence", "procedure_occurrence",
     "mesaurement", "observation")
 )
@@ -41,7 +44,15 @@ tables, provide a schema with write privileges where temp tables can be created.
 
 \item{minCellCount}{The minimum cell count for fields containing person/subject count.}
 
+\item{cohortDatabaseSchema}{Optional}
+
+\item{cohortTableName}{Optional}
+
+\item{cohortDefinitionId}{Optional}
+
 \item{domain}{domains to look for concept id}
+
+\item{limitToCohort}{Do you wantt to limit to a cohort_definition_id?}
 }
 \value{
 Returns a tibble data frame.
