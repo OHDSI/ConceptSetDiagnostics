@@ -91,9 +91,6 @@ getConceptRecordCount <- function(conceptIds = NULL,
                 SELECT concept_id
                 FROM @vocabulary_database_schema.CONCEPT
                 WHERE concept_id > 0
-                {@is_standard == 'Y'} ? {} : {
-                  AND (standard_concept != 'S' OR standard_concept IS NULL)
-                }
                 ) c
                 ON u.concept_id = c.concept_id
           ;
@@ -101,11 +98,14 @@ getConceptRecordCount <- function(conceptIds = NULL,
           --PERCENTILES are difficult and will need subqueries
           SELECT
               {@include_concept_id} ? {@domain_concept_id} : {0} concept_id,
-          		{@is_standard} ? {'Y'} : {'N'} concept_is_standard,
+          		{@is_source_field} ? {1} : {0} is_source_field,
               {@gender_concept_id} ? {p.gender_concept_id} : {0} gender_concept_id,
-              {@use_date_year} ? {DATEPART(yy, @domain_start_date) calendar_year,}
-              {@use_date_month} ? {DATEPART(mm, @domain_start_date) calendar_month,}
-              {@use_date_quarter} ? {DATEPART(qq, @domain_start_date) calendar_quarter,}
+              {@use_date_year} ? {DATEPART(yy, @domain_start_date)} : {0} calendar_year,
+              {@use_date_month} ? {DATEPART(mm, @domain_start_date)} : {0} calendar_month,
+              {@use_date_quarter} ? {DATEPART(qq, @domain_start_date)} : {0} calendar_quarter,
+              '@domain_table_short' domain_table_short,
+              '@domain_field_short' domain_field_short,
+              '@calendar_type' calendar_type,
           		COUNT_BIG(*) concept_count,
           		COUNT_BIG(DISTINCT dt.person_id) subject_count,
           		MIN(@domain_start_date) min_date,
@@ -116,11 +116,11 @@ getConceptRecordCount <- function(conceptIds = NULL,
           		MAX(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_max,
           		STDDEV(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_std,
           		SUM(DATEDIFF(day, op.observation_period_start_date, @domain_start_date)) prior_obs_sum,
-          		AVG(DATEDIFF(day, @domain_start_date, op.observation_period_start_date)) post_obs_avg,
-          		MIN(DATEDIFF(day, @domain_start_date, op.observation_period_start_date)) post_obs_min,
-          		MAX(DATEDIFF(day, @domain_start_date, op.observation_period_start_date)) post_obs_max,
-          		STDDEV(DATEDIFF(day, @domain_start_date, op.observation_period_start_date)) post_obs_std,
-          		SUM(DATEDIFF(day, @domain_start_date, op.observation_period_start_date)) sum_obs_median,
+          		AVG(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_avg,
+          		MIN(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_min,
+          		MAX(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_max,
+          		STDDEV(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_std,
+          		SUM(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) sum_obs_median,
           		AVG(DATEPART(yy, @domain_start_date) - year_of_birth) age_avg,
           		MIN(DATEPART(yy, @domain_start_date) - year_of_birth) age_min,
           		MAX(DATEPART(yy, @domain_start_date) - year_of_birth) age_max,
@@ -167,11 +167,10 @@ getConceptRecordCount <- function(conceptIds = NULL,
                 {@use_date_month} ? {DATEPART(mm, @domain_start_date),}
                 {@use_date_quarter} ? {DATEPART(qq, @domain_start_date),}};
 
-            DROP TABLE IF EXISTS #concept_id_unv_2;"
+            "
   
-  iterations <- domainsWide |>
+  iterations <- domainsLong |>
     tidyr::crossing(dplyr::tibble(includeConceptId = c("Y", "N", ""))) |>
-    tidyr::crossing(dplyr::tibble(isStandard = c("Y", "N", ""))) |>
     tidyr::crossing(dplyr::tibble(genderConceptId = c(0, 8507, 8532))) |>
     tidyr::crossing(
       dplyr::bind_rows(
@@ -212,7 +211,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
       paste0("Working on ",
              rowData$domainTable,
              ".",
-             rowData$domainConceptId,
+             rowData$domainField,
              ".")
     progress <- (i / nrow(iterations)) * 100
     message <-
@@ -235,23 +234,27 @@ getConceptRecordCount <- function(conceptIds = NULL,
       vocabulary_database_schema = vocabularyDatabaseSchema,
       concept_id_universe = uploadedConceptTable,
       use_group_by = any(
-        rowData$domainConceptId == 'Y',
+        rowData$includeConceptId == 'Y',
         rowData$genderConceptId > 0,
-        rowData$isStandard == 'Y',
         rowData$useDateYear == 'Y',
         rowData$useDateQuarter == 'Y',
         rowData$useDateMonth == 'Y'
       ),
       include_concept_id = (rowData$includeConceptId == 'Y'),
-      domain_concept_id = rowData$domainConceptId,
-      domain_start_date = rowData$domainStartDate,
+      domain_concept_id = rowData$domainField,
+      domain_start_date = domainsWide |>
+        dplyr::filter(domainTable == rowData$domainTable) |>
+        dplyr::pull(domainStartDate),
       domain_table = rowData$domainTable,
       gender_concept_id = (rowData$genderConceptId > 0),
       incidence = (rowData$incidence == 'Y'),
-      is_standard = (rowData$isStandard == 'Y'),
+      is_source_field = (rowData$isSourceField),
       use_date_year = (rowData$useDateYear == 'Y'),
       use_date_quarter = (rowData$useDateQuarter == 'Y'),
-      use_date_month = (rowData$useDateMonth == 'Y')
+      use_date_month = (rowData$useDateMonth == 'Y'),
+      domain_table_short = rowData$domainTableShort,
+      domain_field_short = rowData$domainFieldShort,
+      calendar_type = rowData$calendarType
     )
     
     # Regular expression to find a comma followed by any whitespace (including line breaks) and a semicolon
@@ -275,21 +278,11 @@ getConceptRecordCount <- function(conceptIds = NULL,
       profile = FALSE
     )
     
-    longData <- domainsLong |>
-      dplyr::filter(domainTable == rowData$domainTable) |>
-      dplyr::filter(domainField == rowData$domainConceptId)
-    
     output <- DatabaseConnector::querySql(
       connection = connection,
       sql = "SELECT * FROM #concept_count_table;",
       snakeCaseToCamelCase = TRUE
-    ) |>
-      dplyr::mutate(
-        domainTableShort = longData$domainTableShort,
-        domainFieldShort = longData$domainFieldShort,
-        calendarType = rowData$calendarType,
-        isStandard = rowData$isStandard
-      )
+    )
     
     existingOutput <- dplyr::bind_rows(existingOutput,
                                        output) |>
@@ -305,32 +298,17 @@ getConceptRecordCount <- function(conceptIds = NULL,
            DROP TABLE IF EXISTS #concept_id_unv_2;"
   )
   
-  existingOutput <- tidyr::replace_na(
-    data = existingOutput,
-    replace = list(
-      calendarYear = 0,
-      calendarQuarter = 0,
-      calendarMonth = 0,
-      conceptId = 0
-    )
-  )
-  
-  dataAggregate <- existingOutput |>
-    dplyr::group_by(conceptId,
-                    isStandard,
-                    calendarYear,
-                    calendarQuarter,
-                    calendarMonth) |>
-    dplyr::filter(calendarYear == 0) |>
-    dplyr::filter(calendarQuarter == 0) |>
-    dplyr::summarise(conceptCount = sum(conceptCount),
-                     subjectCount = max(subjectCount)) |>
-    dplyr::ungroup() |>
-    dplyr::mutate(domainTableShort = 'AL',
-                  domainFieldShort = 'ALL')
-  
-  existingOutput <- dplyr::bind_rows(dataAggregate,
-                                     existingOutput)
+  existingOutput <- existingOutput |>
+    dplyr::inner_join(
+      domainInformation |>
+        dplyr::select(
+          domainTableShort,
+          domainFieldShort,
+          domainTable,
+          domainField
+        )
+    ) |>
+    dplyr::select(-domainFieldShort,-domainTableShort)
   
   if (!is.null(minCellCount)) {
     existingOutput <-
