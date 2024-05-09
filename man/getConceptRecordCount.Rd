@@ -15,6 +15,12 @@ getConceptRecordCount(
   cohortDatabaseSchema = NULL,
   cohortTableName = NULL,
   cohortDefinitionId = NULL,
+  stratifyByGender = FALSE,
+  stratifyByYear = FALSE,
+  stratifyByYearQuarter = FALSE,
+  stratifyByYearMonth = FALSE,
+  stratifyByAgeGroup = FALSE,
+  stratifyByIncidence = FALSE,
   domainTableName = c("drug_exposure", "condition_occurrence", "procedure_occurrence",
     "mesaurement", "observation")
 )

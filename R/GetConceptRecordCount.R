@@ -57,6 +57,12 @@ getConceptRecordCount <- function(conceptIds = NULL,
                                   cohortDatabaseSchema = NULL,
                                   cohortTableName = NULL,
                                   cohortDefinitionId = NULL,
+                                  stratifyByGender = FALSE,
+                                  stratifyByYear = FALSE,
+                                  stratifyByYearQuarter = FALSE,
+                                  stratifyByYearMonth = FALSE,
+                                  stratifyByAgeGroup = FALSE,
+                                  stratifyByIncidence = FALSE,
                                   domainTableName = c(
                                     "drug_exposure",
                                     "condition_occurrence",
@@ -237,6 +243,36 @@ getConceptRecordCount <- function(conceptIds = NULL,
     tidyr::crossing(dplyr::tibble(useAgeGroup = c("Y", "N"))) |>
     dplyr::arrange() |>
     dplyr::mutate(combination = dplyr::row_number())
+  
+  if (!stratifyByGender) {
+    iterations <- iterations |> 
+      dplyr::filter(!genderConceptId %in% c(8507, 8532))
+  }
+  
+  if (!stratifyByYear) {
+    iterations <- iterations |> 
+      dplyr::filter(calendarType != 'Y')
+  }
+  
+  if (!stratifyByYearQuarter) {
+    iterations <- iterations |> 
+      dplyr::filter(calendarType != 'Q')
+  }
+  
+  if (!stratifyByYearMonth) {
+    iterations <- iterations |> 
+      dplyr::filter(calendarType != 'M')
+  }
+  
+  if (!stratifyByAgeGroup) {
+    iterations <- iterations |> 
+      dplyr::filter(useAgeGroup != 'Y')
+  }
+  
+  if (!stratifyByIncidence) {
+    iterations <- iterations |> 
+      dplyr::filter(incidence != 'Y')
+  }
   
   existingOutput <- c()
   
