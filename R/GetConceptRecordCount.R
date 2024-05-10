@@ -63,6 +63,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
                                   stratifyByYearMonth = FALSE,
                                   stratifyByAgeGroup = FALSE,
                                   stratifyByIncidence = FALSE,
+                                  getOverallCounts = FALSE,
                                   domainTableName = c(
                                     "drug_exposure",
                                     "condition_occurrence",
@@ -272,6 +273,11 @@ getConceptRecordCount <- function(conceptIds = NULL,
   if (!stratifyByIncidence) {
     iterations <- iterations |> 
       dplyr::filter(incidence != 'Y')
+  }
+  
+  if (!getOverallCounts) {
+    iterations <- iterations |> 
+      dplyr::filter(includeConceptId == 'Y')
   }
   
   existingOutput <- c()
