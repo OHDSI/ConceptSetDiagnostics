@@ -21,6 +21,7 @@ getConceptRecordCount(
   stratifyByYearMonth = FALSE,
   stratifyByAgeGroup = FALSE,
   stratifyByIncidence = FALSE,
+  getOverallCounts = FALSE,
   domainTableName = c("drug_exposure", "condition_occurrence", "procedure_occurrence",
     "mesaurement", "observation")
 )

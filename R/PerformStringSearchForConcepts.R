@@ -116,7 +116,9 @@ performStringSearchForConcepts <-
           connection = connection,
           snakeCaseToCamelCase = TRUE
         ) |>
-        dplyr::tibble()
+        dplyr::tibble() |> 
+        dplyr::mutate(searchString = eligibleToBeSearched[[i]]) |> 
+        dplyr::relocate(searchString)
     }
 
     if (!hasData(data)) {
@@ -126,10 +128,21 @@ performStringSearchForConcepts <-
     data <- data |>
       dplyr::bind_rows() |>
       dplyr::distinct()
+    
+    missingInResults <-
+      setdiff(searchPhrases, data$searchString |> unique())
+    
+    if (length(missingInResults) > 0) {
+      warning(paste0(
+        "The following search phrases did not yield any results: ",
+        paste0(missingInResults, collapse = ", ")
+      ))
+    }
 
     if (all(nrow(data) > 0, "rank" %in% colnames(data))) {
       data <- data |>
         dplyr::group_by(
+          .data$searchString,
           .data$conceptId,
           .data$conceptName,
           .data$vocabularyId,
