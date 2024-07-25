@@ -84,18 +84,6 @@ convertConceptSetDataFrameToExpression <-
       conceptSetExpressionDataFrame$conceptClassId <- as.character("")
     }
 
-    if (selectAllDescendants) {
-      conceptSetExpressionDataFrame <-
-        dplyr::bind_rows(
-          conceptSetExpressionDataFrame |>
-            dplyr::filter(.data$standardConcept == "S") |>
-            dplyr::mutate(includeDescendants = TRUE),
-          conceptSetExpressionDataFrame |>
-            dplyr::filter(!.data$standardConcept == "S") |>
-            dplyr::mutate(includeDescendants = FALSE)
-        )
-    }
-
     if (updateVocabularyFields) {
       if (is.null(vocabularyDatabaseSchema)) {
         stop(
@@ -150,6 +138,18 @@ convertConceptSetDataFrameToExpression <-
             vocabularyId = as.character(""),
             conceptClassId = as.character("")
           )
+        )
+    }
+    
+    if (selectAllDescendants) {
+      conceptSetExpressionDataFrame <-
+        dplyr::bind_rows(
+          conceptSetExpressionDataFrame |>
+            dplyr::filter(.data$standardConcept == "S") |>
+            dplyr::mutate(includeDescendants = TRUE),
+          conceptSetExpressionDataFrame |>
+            dplyr::filter(!.data$standardConcept == "S") |>
+            dplyr::mutate(includeDescendants = FALSE)
         )
     }
 
