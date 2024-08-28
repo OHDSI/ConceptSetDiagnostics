@@ -42,15 +42,15 @@ extractConceptSetsInCohortDefinitionSet <-
       )
       conceptSetsInCohortDefinition <- NULL
       conceptSetsInCohortDefinition <-
-        try(expr = extractConceptSetsInCohortDefinition(cohortExpression = cohortJsonAsList),
-            silent = TRUE
+        try(
+          expr = extractConceptSetsInCohortDefinition(cohortExpression = cohortJsonAsList),
+          silent = TRUE
         )
 
       if (all(
         !is.null(conceptSetsInCohortDefinition),
-        !class(conceptSetsInCohortDefinition) == 'try-error'
+        !class(conceptSetsInCohortDefinition) == "try-error"
       )) {
-        
         conceptSets[[i]] <- conceptSetsInCohortDefinition |>
           dplyr::select(-.data$uniqueConceptSetId) |>
           dplyr::mutate(cohortId = cohort$cohortId) |>

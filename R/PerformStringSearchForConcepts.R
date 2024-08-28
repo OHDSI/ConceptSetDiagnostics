@@ -116,8 +116,8 @@ performStringSearchForConcepts <-
           connection = connection,
           snakeCaseToCamelCase = TRUE
         ) |>
-        dplyr::tibble() |> 
-        dplyr::mutate(searchString = eligibleToBeSearched[[i]]) |> 
+        dplyr::tibble() |>
+        dplyr::mutate(searchString = eligibleToBeSearched[[i]]) |>
         dplyr::relocate(searchString)
     }
 
@@ -128,10 +128,10 @@ performStringSearchForConcepts <-
     data <- data |>
       dplyr::bind_rows() |>
       dplyr::distinct()
-    
+
     missingInResults <-
       setdiff(searchPhrases, data$searchString |> unique())
-    
+
     if (length(missingInResults) > 0) {
       warning(paste0(
         "The following search phrases did not yield any results: ",

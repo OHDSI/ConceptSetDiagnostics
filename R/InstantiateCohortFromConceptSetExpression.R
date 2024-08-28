@@ -59,7 +59,7 @@ instantiateCohortFromConceptSetExpression <-
       connection <- DatabaseConnector::connect(connectionDetails)
       on.exit(DatabaseConnector::disconnect(connection))
     }
-    
+
     conceptIds <-
       ConceptSetDiagnostics::resolveConceptSetExpression(
         conceptSetExpression = conceptSetExpression,
@@ -70,7 +70,7 @@ instantiateCohortFromConceptSetExpression <-
       dplyr::distinct() |>
       dplyr::arrange(conceptId) |>
       dplyr::pull(conceptId)
-    
+
     tempTableWithConceptDates <-
       getConceptSetOccurrenceDate(
         connection = connection,
@@ -80,12 +80,10 @@ instantiateCohortFromConceptSetExpression <-
         tempEmulationSchema = tempEmulationSchema,
         conceptIds = conceptIds
       )
-    
+
     tempCohortTableName <-
-      paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
-        
-      )))) * 100000)
-    
+      paste0("#t", (as.numeric(as.POSIXlt(Sys.time()))) * 100000)
+
     sql <- SqlRender::loadRenderTranslateSql(
       "ConvertConceptIdDatesTableToCohort.sql",
       packageName = utils::packageName(),
@@ -103,7 +101,7 @@ instantiateCohortFromConceptSetExpression <-
       progressBar = TRUE,
       reportOverallTime = FALSE
     )
-    
+
     CohortAlgebra:::eraFyCohorts(
       connection = connection,
       sourceCohortDatabaseSchema = NULL,

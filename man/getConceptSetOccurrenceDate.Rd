@@ -7,7 +7,6 @@
 getConceptSetOccurrenceDate(
   connection,
   cdmDatabaseSchema,
-  vocabularyDatabaseSchema = cdmDatabaseSchema,
   conceptIds,
   subset = c("all"),
   limitToPersonDate = TRUE,
@@ -25,8 +24,6 @@ of the function, and closed when the function finishes.}
 \item{cdmDatabaseSchema}{Schema name where your patient-level data in OMOP CDM format resides.
 Note that for SQL Server, this should include both the database and
 schema name, for example 'cdm_data.dbo'.}
-
-\item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 
 \item{conceptIds}{An array of concept ids}
 

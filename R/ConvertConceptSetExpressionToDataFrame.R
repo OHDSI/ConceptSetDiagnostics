@@ -56,43 +56,41 @@ convertConceptSetExpressionToDataFrame <-
 
     items2 <- list()
 
-    errorMessage <-
-      "Given concept set expression R list object does not conform to expected structure. \n
-                      It is a vector that is more than 3 levels deep."
-    
     for (i in (1:length(items))) {
       df <- as.data.frame(items[[i]]) |>
         dplyr::tibble()
-      names(df) <- stringr::str_replace(string = tolower(names(df)),
-                                        pattern = "concept.",
-                                        replacement = "")
-      
-      if ('isExcluded' %in% names(df)) {
+      names(df) <- stringr::str_replace(
+        string = tolower(names(df)),
+        pattern = "concept.",
+        replacement = ""
+      )
+
+      if ("isExcluded" %in% names(df)) {
         df <- df |>
           dplyr::rename("is_excluded" = "isExcluded")
-      } else if ('isexcluded' %in% names(df)) {
+      } else if ("isexcluded" %in% names(df)) {
         df <- df |>
           dplyr::rename("is_excluded" = "isexcluded")
       } else {
         df <- df |>
           dplyr::mutate(is_excluded = FALSE)
       }
-      
-      if ('includeMapped' %in% names(df)) {
+
+      if ("includeMapped" %in% names(df)) {
         df <- df |>
           dplyr::rename("include_mapped" = "includeMapped")
-      } else if ('includemapped' %in% names(df)) {
+      } else if ("includemapped" %in% names(df)) {
         df <- df |>
           dplyr::rename("include_mapped" = "includemapped")
       } else {
         df <- df |>
           dplyr::mutate(include_mapped = FALSE)
       }
-      
-      if ('includeDescendants' %in% names(df)) {
+
+      if ("includeDescendants" %in% names(df)) {
         df <- df |>
           dplyr::rename("include_descendants" = "includeDescendants")
-      } else if ('includedescendants' %in% names(df)) {
+      } else if ("includedescendants" %in% names(df)) {
         df <- df |>
           dplyr::rename("include_descendants" = "includedescendants")
       } else {
@@ -101,9 +99,9 @@ convertConceptSetExpressionToDataFrame <-
       }
       items2[[i]] <- df
     }
-    
-    conceptSetExpressionDetails <- dplyr::bind_rows(items2) |> 
-      SqlRender::snakeCaseToCamelCaseNames() |> 
+
+    conceptSetExpressionDetails <- dplyr::bind_rows(items2) |>
+      SqlRender::snakeCaseToCamelCaseNames() |>
       tidyr::replace_na(
         replace = list(
           isExcluded = FALSE,

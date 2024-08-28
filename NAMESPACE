@@ -2,7 +2,6 @@
 
 export(convertConceptSetDataFrameToExpression)
 export(convertConceptSetExpressionToDataFrame)
-export(createPheValuatorCohortsFromConceptSet)
 export(extractConceptSetsInCohortDefinition)
 export(extractConceptSetsInCohortDefinitionSet)
 export(findOrphanConcepts)

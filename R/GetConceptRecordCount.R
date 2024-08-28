@@ -75,26 +75,28 @@ getConceptRecordCount <- function(conceptIds = NULL,
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-  
-  uploadedConceptTable <- ''
+
+  uploadedConceptTable <- ""
   if (!is.null(conceptIds)) {
     uploadedConceptTable <-
-      loadTempConceptTable(conceptIds = conceptIds,
-                           connection = connection)
+      loadTempConceptTable(
+        conceptIds = conceptIds,
+        connection = connection
+      )
   }
-  
+
   domainInformation <-
     getDomainInformation(packageName = "ConceptSetDiagnostics")
-  
+
   domainsWide <- domainInformation$wide |>
     dplyr::filter(domainTable %in% c(domainTableName)) |>
     dplyr::filter(.data$isEraTable == FALSE)
-  
+
   domainsLong <- domainInformation$long |>
     dplyr::filter(domainTable %in% c(domainTableName)) |>
     dplyr::filter(eraTable == FALSE)
   # filtering out ERA tables because they are supposed to be derived tables, and counting them is double counting
-  
+
   limitToCohort <- FALSE
   if (all(
     !is.null(cohortDatabaseSchema),
@@ -103,7 +105,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
   )) {
     limitToCohort <- TRUE
   }
-  
+
   # REASON for many SQL --DISTINCT subject_count cannot be computed from aggregation query of calendar month level data
   sql <- "
 
@@ -208,7 +210,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
                 {@use_date_quarter} ? {DATEPART(qq, @domain_start_date),}};
 
             "
-  
+
   iterations <- domainsLong |>
     tidyr::crossing(dplyr::tibble(includeConceptId = c("Y", "N", ""))) |>
     tidyr::crossing(dplyr::tibble(genderConceptId = c(0, 8507, 8532))) |>
@@ -244,93 +246,97 @@ getConceptRecordCount <- function(conceptIds = NULL,
     tidyr::crossing(dplyr::tibble(useAgeGroup = c("Y", "N"))) |>
     dplyr::arrange() |>
     dplyr::mutate(combination = dplyr::row_number())
-  
+
   if (!stratifyByGender) {
-    iterations <- iterations |> 
+    iterations <- iterations |>
       dplyr::filter(!genderConceptId %in% c(8507, 8532))
   }
-  
+
   if (!stratifyByYear) {
-    iterations <- iterations |> 
-      dplyr::filter(calendarType != 'Y')
+    iterations <- iterations |>
+      dplyr::filter(calendarType != "Y")
   }
-  
+
   if (!stratifyByYearQuarter) {
-    iterations <- iterations |> 
-      dplyr::filter(calendarType != 'Q')
+    iterations <- iterations |>
+      dplyr::filter(calendarType != "Q")
   }
-  
+
   if (!stratifyByYearMonth) {
-    iterations <- iterations |> 
-      dplyr::filter(calendarType != 'M')
+    iterations <- iterations |>
+      dplyr::filter(calendarType != "M")
   }
-  
+
   if (!stratifyByAgeGroup) {
-    iterations <- iterations |> 
-      dplyr::filter(useAgeGroup != 'Y')
+    iterations <- iterations |>
+      dplyr::filter(useAgeGroup != "Y")
   }
-  
+
   if (!stratifyByIncidence) {
-    iterations <- iterations |> 
-      dplyr::filter(incidence != 'Y')
+    iterations <- iterations |>
+      dplyr::filter(incidence != "Y")
   }
-  
+
   if (!getOverallCounts) {
-    iterations <- iterations |> 
-      dplyr::filter(includeConceptId == 'Y')
+    iterations <- iterations |>
+      dplyr::filter(includeConceptId == "Y")
   }
-  
+
   existingOutput <- c()
-  
+
   for (i in (1:nrow(iterations))) {
     rowData <- iterations[i, ]
-    
+
     extraMessage <-
-      paste0("Working on ",
-             rowData$domainTable,
-             ".",
-             rowData$domainField,
-             ".")
+      paste0(
+        "Working on ",
+        rowData$domainTable,
+        ".",
+        rowData$domainField,
+        "."
+      )
     progress <- (i / nrow(iterations)) * 100
     message <-
-      sprintf("\rProgress: %d/%d (%0.2f%%)",
-              i,
-              nrow(iterations),
-              progress)
-    
+      sprintf(
+        "\rProgress: %d/%d (%0.2f%%)",
+        i,
+        nrow(iterations),
+        progress
+      )
+
     ParallelLogger::logInfo(message)
-    
+
     showProgress(
       currentIteration = i,
       totalIterations = nrow(iterations),
       extraMessage = extraMessage
     )
-    
+
     sqlRendered <- SqlRender::render(
       sql = sql,
       cdm_database_schema = cdmDatabaseSchema,
       vocabulary_database_schema = vocabularyDatabaseSchema,
       concept_id_universe = uploadedConceptTable,
       use_group_by = any(
-        rowData$includeConceptId == 'Y',
+        rowData$includeConceptId == "Y",
         rowData$genderConceptId > 0,
-        rowData$useDateYear == 'Y',
-        rowData$useDateQuarter == 'Y',
-        rowData$useDateMonth == 'Y',
-        rowData$useAgeGroup == 'Y'
+        rowData$useDateYear == "Y",
+        rowData$useDateQuarter == "Y",
+        rowData$useDateMonth == "Y",
+        rowData$useAgeGroup == "Y"
       ),
-      include_concept_id = (rowData$includeConceptId == 'Y'),
+      include_concept_id = (rowData$includeConceptId == "Y"),
       domain_concept_id = rowData$domainField,
       domain_start_date = domainsWide |>
         dplyr::filter(domainTable == rowData$domainTable) |>
         dplyr::pull(domainStartDate),
       domain_table = rowData$domainTable,
       gender_concept_id = (rowData$genderConceptId > 0),
-      incidence = (rowData$incidence == 'Y'),
+      incidence = (rowData$incidence == "Y"),
       is_source_field = (rowData$isSourceField),
-      use_date_year = (rowData$useDateYear == 'Y'),
-      use_date_quarter = (rowData$useDateQuarter == 'Y'),
-      use_date_month = (rowData$useDateMonth == 'Y'),
+      use_date_year = (rowData$useDateYear == "Y"),
+      use_date_quarter = (rowData$useDateQuarter == "Y"),
+      use_date_month = (rowData$useDateMonth == "Y"),
       domain_table_short = rowData$domainTableShort,
       domain_field_short = rowData$domainFieldShort,
       calendar_type = rowData$calendarType,
@@ -338,22 +344,22 @@ getConceptRecordCount <- function(conceptIds = NULL,
       cohort_database_schema = cohortDatabaseSchema,
       cohort_table_name = cohortTableName,
       cohort_definition_id = cohortDefinitionId,
-      use_age_group = (rowData$useAgeGroup == 'Y')
+      use_age_group = (rowData$useAgeGroup == "Y")
     )
-    
+
     # Regular expression to find a comma followed by any whitespace (including line breaks) and a semicolon
     regexPattern <- ",[\\s\\n\\r]*;"
-    
+
     # Replace the pattern with just a semicolon
     sqlRendered <- gsub(regexPattern, ";", sqlRendered, perl = TRUE)
-    
+
     sqlTranslated <-
       SqlRender::translate(
         sql = sqlRendered,
         targetDialect = connection@dbms,
         tempEmulationSchema = tempEmulationSchema
       )
-    
+
     DatabaseConnector::executeSql(
       connection = connection,
       sql = sqlTranslated,
@@ -361,18 +367,20 @@ getConceptRecordCount <- function(conceptIds = NULL,
       reportOverallTime = FALSE,
       profile = FALSE
     )
-    
+
     output <- DatabaseConnector::querySql(
       connection = connection,
       sql = "SELECT * FROM #concept_count_table;",
       snakeCaseToCamelCase = TRUE
     )
-    
-    existingOutput <- dplyr::bind_rows(existingOutput,
-                                       output) |>
+
+    existingOutput <- dplyr::bind_rows(
+      existingOutput,
+      output
+    ) |>
       dplyr::tibble()
   }
-  
+
   DatabaseConnector::renderTranslateExecuteSql(
     connection = connection,
     profile = FALSE,
@@ -381,7 +389,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
     sql = "DROP TABLE IF EXISTS #concept_count_table;
            DROP TABLE IF EXISTS #concept_id_unv_2;"
   )
-  
+
   existingOutput <- existingOutput |>
     dplyr::inner_join(
       domainInformation$long |>
@@ -394,11 +402,11 @@ getConceptRecordCount <- function(conceptIds = NULL,
       by = c("domainTableShort", "domainFieldShort")
     ) |>
     dplyr::select(-"domainFieldShort", -"domainTableShort")
-  
+
   if (!is.null(minCellCount)) {
     existingOutput <-
       existingOutput |> dplyr::filter(subjectCount > minCellCount)
   }
-  
+
   return(existingOutput)
 }

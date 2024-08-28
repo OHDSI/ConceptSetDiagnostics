@@ -42,14 +42,16 @@ getConceptPrevalenceCounts <- function(conceptIds = NULL,
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-  
+
   conceptPrevalenceTables <-
-    DatabaseConnector::getTableNames(connection = connection,
-                                     databaseSchema = conceptPrevalenceSchema) |>
+    DatabaseConnector::getTableNames(
+      connection = connection,
+      databaseSchema = conceptPrevalenceSchema
+    ) |>
     tolower()
-  
+
   conceptPrevalenceTablesExist <- FALSE
-  
+
   if (all(
     "recommender_set" %in% conceptPrevalenceTables,
     "cp_master" %in% conceptPrevalenceTables,
@@ -57,13 +59,13 @@ getConceptPrevalenceCounts <- function(conceptIds = NULL,
   )) {
     conceptPrevalenceTablesExist <- TRUE
   }
-  
+
   if (!conceptPrevalenceTablesExist) {
     stop(
       "Concept Prevalence schema does not have the required concept prevalence tables. recommender_set, cp_master, recommended_blacklist"
     )
   }
-  
+
   tempTableName <- NULL
   if (!is.null(conceptIds)) {
     tempTableName <- loadTempConceptTable(
@@ -72,7 +74,7 @@ getConceptPrevalenceCounts <- function(conceptIds = NULL,
       tempEmulationSchema = tempEmulationSchema
     )
   }
-  
+
   sql <- "SELECT cp.*
           FROM
             @concept_prevalence_schema.cp_master cp
@@ -81,7 +83,7 @@ getConceptPrevalenceCounts <- function(conceptIds = NULL,
                   @concept_id_table t
                 ON cp.concept_id = t.concept_id
         };"
-  
+
   data <-
     DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
@@ -90,7 +92,7 @@ getConceptPrevalenceCounts <- function(conceptIds = NULL,
       sql = sql,
       snakeCaseToCamelCase = TRUE
     ) |> dplyr::tibble()
-  
+
   if (!is.null(conceptIds)) {
     dropTempConceptTable(
       connection = connection,

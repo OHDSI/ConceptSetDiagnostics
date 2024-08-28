@@ -30,17 +30,15 @@
 #'                            is provided, in which case a new connection will be opened at the start
 #'                            of the function, and closed when the function finishes.
 #'
-#' @template VocabularyDatabaseSchema
-#'
 #' @template CdmDatabaseSchema
 #'
 #' @template TempEmulationSchema
-#' 
+#'
 #' @param restrictToObservationPeriod (Default = TRUE) Do you want to restrict to Observation period? i.e
 #'                                      Cohort dates are restricted to observation period.
 #'
 #' @param conceptIds An array of concept ids
-#' 
+#'
 #' @param limitToPersonDate Do you want to limit to person dates
 #'
 #' @return
@@ -49,7 +47,6 @@
 #' @export
 getConceptSetOccurrenceDate <- function(connection,
                                         cdmDatabaseSchema,
-                                        vocabularyDatabaseSchema = cdmDatabaseSchema,
                                         conceptIds,
                                         subset = c("all"),
                                         limitToPersonDate = TRUE,
@@ -58,32 +55,30 @@ getConceptSetOccurrenceDate <- function(connection,
   subset <- tolower(subset) |>
     stringr::str_trim() |>
     stringr::str_squish()
-  
+
   checkmate::assertChoice(
     x = subset,
     choices = c("all", "first", "last"),
     null.ok = FALSE
   )
-  
+
   checkmate::assertIntegerish(
     x = conceptIds,
     lower = 0,
     any.missing = FALSE,
     min.len = 1
   )
-  
+
   tempTableName <-
-    paste0("#t", (as.numeric(as.POSIXlt(Sys.time(
-      
-    )))) * 100000)
-  
-  
+    paste0("#t", (as.numeric(as.POSIXlt(Sys.time()))) * 100000)
+
+
   tempConceptTableName <- loadTempConceptTable(
     conceptIds = conceptIds |> unique(),
     connection = connection,
     tempEmulationSchema = tempEmulationSchema
   )
-  
+
   sql <- SqlRender::loadRenderTranslateSql(
     "GetConceptSetExpressionOccurrenceDates.sql",
     packageName = utils::packageName(),
@@ -103,6 +98,6 @@ getConceptSetOccurrenceDate <- function(connection,
     progressBar = TRUE,
     reportOverallTime = FALSE
   )
-  
+
   return(tempTableName)
 }

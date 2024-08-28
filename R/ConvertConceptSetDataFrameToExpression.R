@@ -140,7 +140,7 @@ convertConceptSetDataFrameToExpression <-
           )
         )
     }
-    
+
     if (selectAllDescendants) {
       conceptSetExpressionDataFrame <-
         dplyr::bind_rows(

@@ -65,16 +65,16 @@ hasData <- function(data) {
 getUniqueString <- function(n = 7) {
   # create a vector of all alphanumeric characters
   alphanumericChars <- c(letters, 0:9)
-  
+
   # generate the first character from the set of letters only
   firstChar <- sample(c(letters), 1)
-  
+
   # generate the remaining characters from the set of all alphanumeric characters
   remainingChars <- sample(alphanumericChars, n, replace = TRUE)
-  
+
   # combine the first character with the remaining characters
   uniqueString <- paste0(firstChar, paste0(remainingChars, collapse = ""))
-  
+
   return(tolower(uniqueString))
 }
 
@@ -137,11 +137,9 @@ dropTempConceptTable <-
 
 #' Get domain information
 #'
-#' @param packageName e.g. 'CohortDiagnostics'
-#'
 #' @return
 #' A list with two tibble data frame objects with domain information represented in wide and long format respectively.
-getDomainInformation <- function(packageName = NULL) {
+getDomainInformation <- function() {
   domains <-
     readr::read_csv(
       system.file(file.path("csv", "domains.csv"),
@@ -306,11 +304,13 @@ showProgress <-
            extraMessage = NULL) {
     progress <- (currentIteration / totalIterations) * 100
     message <-
-      sprintf("\rProgress: %d/%d (%0.2f%%)",
-              currentIteration,
-              totalIterations,
-              progress)
-    
+      sprintf(
+        "\rProgress: %d/%d (%0.2f%%)",
+        currentIteration,
+        totalIterations,
+        progress
+      )
+
     if (!is.null(extraMessage)) {
       message <- paste0(message, ". ", extraMessage)
     }
@@ -330,8 +330,7 @@ appendPrefixToColNames <- function(dataFrame, prefix) {
     sapply(colnames(dataFrame), function(colName) {
       paste0(prefix, capitalizeFirstLetter(colName))
     })
-  
-  return(dataFrame |> 
-           dplyr::tibble())
-}
 
+  return(dataFrame |>
+    dplyr::tibble())
+}
