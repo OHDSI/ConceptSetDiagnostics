@@ -52,16 +52,16 @@ extractConceptSetsInCohortDefinitionSet <-
         !class(conceptSetsInCohortDefinition) == "try-error"
       )) {
         conceptSets[[i]] <- conceptSetsInCohortDefinition |>
-          dplyr::select(-.data$uniqueConceptSetId) |>
+          dplyr::select(dplyr::all_of(uniqueConceptSetId)) |>
           dplyr::mutate(cohortId = cohort$cohortId) |>
-          dplyr::relocate(.data$cohortId, .data$conceptSetId)
+          dplyr::relocate(dplyr::all_of(c("cohortId", "conceptSetId")))
       }
     }
     if (length(conceptSets) == 0) {
       return(NULL)
     }
     conceptSets <- dplyr::bind_rows(conceptSets) |>
-      dplyr::arrange(.data$cohortId, .data$conceptSetId)
+      dplyr::arrange(dplyr::all_of(c("cohortId", "conceptSetId")))
 
     conceptSetSig <- list()
     for (i in (1:nrow(conceptSets))) {
