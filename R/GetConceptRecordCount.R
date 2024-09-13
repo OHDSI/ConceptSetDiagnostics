@@ -86,7 +86,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
   }
 
   domainInformation <-
-    getDomainInformation(packageName = "ConceptSetDiagnostics")
+    getDomainInformation()
 
   domainsWide <- domainInformation$wide |>
     dplyr::filter(domainTable %in% c(domainTableName)) |>
@@ -131,8 +131,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
           		{@is_source_field} ? {1} : {0} is_source_field,
               {@gender_concept_id} ? {p.gender_concept_id} : {0} gender_concept_id,
               {@use_date_year} ? {DATEPART(yy, @domain_start_date)} : {0} calendar_year,
-              {@use_date_month} ? {DATEPART(mm, @domain_start_date)} : {0} calendar_month,
-              {@use_date_quarter} ? {DATEPART(qq, @domain_start_date)} : {0} calendar_quarter,
+              {@use_date_month} ? {DATEPART(month, @domain_start_date)} : {0} calendar_month,
+              {@use_date_quarter} ? {DATEPART(quarter, @domain_start_date)} : {0} calendar_quarter,
               '@domain_table_short' domain_table_short,
               '@domain_field_short' domain_field_short,
               '@calendar_type' calendar_type,
@@ -153,11 +153,11 @@ getConceptRecordCount <- function(conceptIds = NULL,
           		MAX(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_max,
           		ROUND(STDDEV(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)), 2) post_obs_std,
           		SUM(DATEDIFF(day, @domain_start_date, op.observation_period_end_date)) post_obs_sum,
-          		ROUND(AVG(DATEPART(yy, @domain_start_date) - year_of_birth), 2) age_avg,
-          		MIN(DATEPART(yy, @domain_start_date) - year_of_birth) age_min,
-          		MAX(DATEPART(yy, @domain_start_date) - year_of_birth) age_max,
-          		ROUND(STDDEV(DATEPART(yy, @domain_start_date) - year_of_birth), 2) age_std,
-          		SUM(DATEPART(yy, @domain_start_date) - year_of_birth) age_sum
+          		ROUND(AVG(DATEPART(year, @domain_start_date) - year_of_birth), 2) age_avg,
+          		MIN(DATEPART(year, @domain_start_date) - year_of_birth) age_min,
+          		MAX(DATEPART(year, @domain_start_date) - year_of_birth) age_max,
+          		ROUND(STDDEV(DATEPART(year, @domain_start_date) - year_of_birth), 2) age_std,
+          		SUM(DATEPART(year, @domain_start_date) - year_of_birth) age_sum
           INTO #concept_count_table
           FROM @cdm_database_schema.@domain_table dt
           INNER JOIN @cdm_database_schema.observation_period op
@@ -199,15 +199,15 @@ getConceptRecordCount <- function(conceptIds = NULL,
             INNER JOIN #concept_id_unv_2 c
             ON @domain_concept_id = c.concept_id
             }
-          	WHERE  DATEPART(yy, @domain_start_date) > 0
+          	WHERE  DATEPART(year, @domain_start_date) > 0
           	    AND year_of_birth > 0
             {@use_group_by} ? {GROUP BY
                 {@include_concept_id} ? {@domain_concept_id, }
                 {@gender_concept_id} ? {p.gender_concept_id, }
-                {@use_date_year} ? {DATEPART(yy, @domain_start_date),}
-                {@use_date_month} ? {DATEPART(mm, @domain_start_date),}
+                {@use_date_year} ? {DATEPART(year, @domain_start_date),}
+                {@use_date_month} ? {DATEPART(month, @domain_start_date),}
                 {@use_age_group} ? {FLOOR((YEAR(@domain_start_date) - year_of_birth) / 10),}
-                {@use_date_quarter} ? {DATEPART(qq, @domain_start_date),}};
+                {@use_date_quarter} ? {DATEPART(quarter, @domain_start_date),}};
 
             "
 
@@ -368,7 +368,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
       profile = FALSE
     )
 
-    output <- DatabaseConnector::querySql(
+    output <- DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
       sql = "SELECT * FROM #concept_count_table;",
       snakeCaseToCamelCase = TRUE

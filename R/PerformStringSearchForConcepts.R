@@ -193,7 +193,7 @@ performStringSearchForConcepts <-
 
     if (!retrieveInvalidConcepts) {
       data <- data |>
-        dplyr::filter(.data$invalidReason %in% c("", "V"))
+        dplyr::filter(.data$invalidReason %in% c(NA, "", "V"))
     }
 
     if (!hasData(data)) {

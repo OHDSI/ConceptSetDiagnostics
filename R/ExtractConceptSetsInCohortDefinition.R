@@ -40,7 +40,8 @@ extractConceptSetsInCohortDefinition <-
       extractConceptSetExpressionsFromCohortExpression(cohortExpression = expression)
 
     if (is.null(conceptSetExpression)) {
-      stop("No concept set expressions found in cohort expression")
+      warning("No concept set expressions found in cohort expression")
+      return(NULL)
     }
 
     # use circe to render cohort sql and extract concept set sql

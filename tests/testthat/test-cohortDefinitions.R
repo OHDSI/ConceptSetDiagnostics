@@ -2,7 +2,7 @@ testthat::test_that("extractConceptSetsInCohortDefinition", {
   testthat::expect_warning(
     extractConceptSetsInCohortDefinition(cohortExpression = cohortsExpressionNoConceptSet)
   )
-  testthat::expect_null(object = suppressWarnings(
+  testthat::expect_null(suppressWarnings(
     extractConceptSetsInCohortDefinition(cohortExpression = cohortsExpressionNoConceptSet)
   ))
 
@@ -216,3 +216,4 @@ testthat::test_that("getExcludedConceptsInConceptSetExpression", {
     expected = 0
   )
 })
+

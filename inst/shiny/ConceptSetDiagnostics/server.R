@@ -46,7 +46,7 @@ shiny::shinyServer(function(input, output, session) {
                               
                               # step perform string search
                               searchResultConceptIds <-
-                                ConceptSetDiagnostics::performStringSearchForConcepts(
+                                performStringSearchForConcepts(
                                   connectionDetails = connectionDetailsLocalPostgres,
                                   vocabularyDatabaseSchema = vocabularyDatabaseSchema,
                                   searchString =  keywords[[i]]
@@ -131,7 +131,7 @@ shiny::shinyServer(function(input, output, session) {
   #   idx <- input$searchResultConceptIds_rows_selected
   #   conceptName <- conceptSetSearchResults()[idx,]$conceptName
   #   shinyWidgets::updatePickerInput(session = session,inputId = "conceptId",choices = conceptName)
-  #   ConceptSetDiagnostics::getConceptIdDetails(conceptIds = c(4028741),connection = connectionRemote)
+  #   getConceptIdDetails(conceptIds = c(4028741),connection = connectionRemote)
   # })
   
   shiny::observeEvent(eventExpr = conceptSetSearchResultsPassingtoConceptSetExpression(),
@@ -139,13 +139,13 @@ shiny::shinyServer(function(input, output, session) {
                         shiny::withProgress(message = "Building Concept Set Expression...", {
                           # develop a concept set expression based on string search
                           conceptSetExpressionDataFrame <-
-                            ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(
+                            convertConceptSetDataFrameToExpression(
                               conceptSetExpressionDataFrame = conceptSetSearchResultsPassingtoConceptSetExpression(),
                               selectAllDescendants = TRUE
                             ) |>
-                            ConceptSetDiagnostics::getConceptSetSignatureExpression(connection = connectionRemote,
+                            getConceptSetSignatureExpression(connection = connectionRemote,
                                                                                     vocabularyDatabaseSchema = vocabularyDatabaseSchema) |>
-                            ConceptSetDiagnostics::convertConceptSetExpressionToDataFrame(
+                            convertConceptSetExpressionToDataFrame(
                               updateVocabularyFields = TRUE,
                               recordCount = TRUE,
                               connection = connectionRemote
@@ -316,9 +316,9 @@ shiny::shinyServer(function(input, output, session) {
       #   )
       
       conceptSetExpression <-
-        ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = data)
+        convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = data)
       result <-
-        ConceptSetDiagnostics::resolveConceptSetExpression(
+        resolveConceptSetExpression(
           conceptSetExpression = conceptSetExpression,
           connection = connectionRemote,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema
@@ -358,7 +358,7 @@ shiny::shinyServer(function(input, output, session) {
       idx <- input$resolved_checkboxes_checked
       conceptIds <- getResolved()$resolvedConcepts[idx,]$conceptId
       data <-
-        ConceptSetDiagnostics::getConceptIdDetails(
+        getConceptIdDetails(
           conceptIds = conceptIds,
           connection = connectionRemote,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema
@@ -416,7 +416,7 @@ shiny::shinyServer(function(input, output, session) {
       idx <- input$mappedRow_checkboxes_checked
       conceptIds <- getResolved()$mappedConcepts[idx,]$conceptId
       data <-
-        ConceptSetDiagnostics::getConceptIdDetails(
+        getConceptIdDetails(
           conceptIds = conceptIds,
           connection = connectionRemote,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema
@@ -446,9 +446,9 @@ shiny::shinyServer(function(input, output, session) {
   getRecommendation <- shiny::reactive({
     shiny::withProgress(message = "Loading", {
       conceptSetExpression <-
-        ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetResultsExpression())
+        convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetResultsExpression())
       data <-
-        ConceptSetDiagnostics::getRecommendationForConceptSetExpression(
+        getRecommendationForConceptSetExpression(
           conceptSetExpression = conceptSetExpression,
           connection = connectionRemote,
           vocabularyDatabaseSchema = vocabularyDatabaseSchema
@@ -478,7 +478,7 @@ shiny::shinyServer(function(input, output, session) {
       return(NULL)
     } else {
       data <-
-        ConceptSetDiagnostics::convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetResultsExpression()) |>
+        convertConceptSetDataFrameToExpression(conceptSetExpressionDataFrame = conceptSetResultsExpression()) |>
         RJSONIO::toJSON(digits = 23, pretty = TRUE)
     }
   })
@@ -487,7 +487,7 @@ shiny::shinyServer(function(input, output, session) {
     shiny::eventReactive(eventExpr = selectedConceptId(), {
       if (!is.null(selectedConceptId()))
         return(
-          ConceptSetDiagnostics::getConceptIdDetails(
+          getConceptIdDetails(
             conceptIds = selectedConceptId(),
             connection = connectionRemote,
             vocabularyDatabaseSchema = vocabularyDatabaseSchema
@@ -548,7 +548,7 @@ shiny::shinyServer(function(input, output, session) {
     if (!is.null(selectedConceptId())) {
       shiny::withProgress(message = "Building Concept Synonyms", {
         data <-
-          ConceptSetDiagnostics::getConceptSynonym(
+          getConceptSynonym(
             conceptIds = selectedConceptId(),
             connection = connectionRemote,
             vocabularyDatabaseSchema = vocabularyDatabaseSchema
@@ -564,7 +564,7 @@ shiny::shinyServer(function(input, output, session) {
   
   getDeepConceptRelationship <- shiny::reactive({
     shiny::withProgress(message = "Building Concept Relationship", {
-      ConceptSetDiagnostics::getDeepConceptRelationship(
+      getDeepConceptRelationship(
         conceptIds = selectedConceptId(),
         connection = connectionRemote,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
@@ -616,7 +616,7 @@ shiny::shinyServer(function(input, output, session) {
                           conceptIds <-
                             getDeepConceptRelationship()[idx,]$conceptId2
                           data <-
-                            ConceptSetDiagnostics::getConceptIdDetails(
+                            getConceptIdDetails(
                               conceptIds = conceptIds,
                               connection = connectionRemote,
                               vocabularyDatabaseSchema = vocabularyDatabaseSchema

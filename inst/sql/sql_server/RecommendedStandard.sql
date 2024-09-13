@@ -9,6 +9,7 @@ DROP TABLE IF EXISTS #rec;
 DROP TABLE IF EXISTS #rec_no_rb;
 DROP TABLE IF EXISTS #rec_std_1;
 DROP TABLE IF EXISTS #rec_std_2;
+DROP TABLE IF EXISTS #rec_ns_mapt_std;
 DROP TABLE IF EXISTS #rec_std;
 
 --HINT DISTRIBUTE_ON_KEY(concept_id)

@@ -53,7 +53,7 @@ getCountOfSourceCodesMappedToStandardConcept <- function(conceptIds,
   )
 
   domains <-
-    getDomainInformation(packageName = "ConceptSetDiagnostics")
+    getDomainInformation()
   domains <- domains$wide |>
     dplyr::filter(nchar(.data$domainSourceConceptId) > 1)
 

@@ -46,27 +46,27 @@ connectionLocal <-
   DatabaseConnector::connect(connectionDetails = connectionDetailsLocalPostgres)
 
 vocabularyVersion <-
-  ConceptSetDiagnostics::getVocabulary(connection = connectionLocal,
+  getVocabulary(connection = connectionLocal,
                                        vocabulary = vocabularyDatabaseSchema) |>
   dplyr::filter(.data$vocabularyId == 'None') |>
   dplyr::pull(.data$vocabularyVersion)
 
 vocabulary <-
-  ConceptSetDiagnostics::getVocabulary(
+  getVocabulary(
     connection = connectionLocal,
     connectionDetails = connectionDetails,
     vocabularyDatabaseSchema = vocabularyDatabaseSchema
   )
 
 domain <-
-  ConceptSetDiagnostics::getDomain(
+  getDomain(
     connection = connectionLocal,
     connectionDetails = connectionDetails,
     vocabularyDatabaseSchema = vocabularyDatabaseSchema
   )
 
 relationship <-
-  ConceptSetDiagnostics::getRelationship(
+  getRelationship(
     connection = connectionLocal,
     connectionDetails = connectionDetails,
     vocabularyDatabaseSchema = vocabularyDatabaseSchema

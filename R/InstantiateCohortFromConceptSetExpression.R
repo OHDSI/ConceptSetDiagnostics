@@ -61,7 +61,7 @@ instantiateCohortFromConceptSetExpression <-
     }
 
     conceptIds <-
-      ConceptSetDiagnostics::resolveConceptSetExpression(
+      resolveConceptSetExpression(
         conceptSetExpression = conceptSetExpression,
         connection = connection,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
@@ -74,8 +74,7 @@ instantiateCohortFromConceptSetExpression <-
     tempTableWithConceptDates <-
       getConceptSetOccurrenceDate(
         connection = connection,
-        cdmDatabaseSchema = cdmDatabaseSchema,
-        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        cdmDatabaseSchema = vocabularyDatabaseSchema,
         subset = "all",
         tempEmulationSchema = tempEmulationSchema,
         conceptIds = conceptIds

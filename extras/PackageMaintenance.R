@@ -21,7 +21,7 @@ styler::style_pkg()
 OhdsiRTools::checkUsagePackage("ConceptSetDiagnostics")
 OhdsiRTools::updateCopyrightYearFolder()
 
-
+# Devtools check -----------------------------------------------------------
 devtools::spell_check()
 spelling::spell_check_files(list.files(path = "inst/shiny", 
                                        pattern = "*.html", 
@@ -33,5 +33,13 @@ spelling::spell_check_files(list.files(path = "inst/shiny",
 unlink("extras/ConceptSetDiagnostics.pdf")
 shell("R CMD Rd2pdf ./ --output=extras/ConceptSetDiagnostics.pdf")
 
+# Build site---------------------------------------------------------
 pkgdown::build_site()
 OhdsiRTools::fixHadesLogo()
+
+
+# Release package to CRAN ------------------------------------------------------
+devtools::check_win_devel()
+devtools::check_rhub()
+devtools::release()
+devtools::check(cran=TRUE)
