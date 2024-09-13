@@ -1,6 +1,6 @@
 # @file PackageMaintenance
 #
-# Copyright 2022 Observational Health Data Sciences and Informatics
+# Copyright 2024 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 # 
@@ -23,11 +23,6 @@ OhdsiRTools::updateCopyrightYearFolder()
 
 # Devtools check -----------------------------------------------------------
 devtools::spell_check()
-spelling::spell_check_files(list.files(path = "inst/shiny", 
-                                       pattern = "*.html", 
-                                       recursive = TRUE, 
-                                       full.names = TRUE))
-
 
 # Create manual and vignettes:
 unlink("extras/ConceptSetDiagnostics.pdf")

@@ -81,32 +81,40 @@ testthat::test_that("Get Mapped Standard Concept - connection", {
 
 # getDomain 1 ----
 testthat::test_that("Get Domain - connection", {
-  output <- getDomain(connection = connection,
-                      vocabularyDatabaseSchema = cdmDatabaseSchema)
+  output <- getDomain(
+    connection = connection,
+    vocabularyDatabaseSchema = cdmDatabaseSchema
+  )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getRelationship 1 ----
 testthat::test_that("Get Relationship - connection", {
   output <-
-    getRelationship(connection = connection,
-                    vocabularyDatabaseSchema = cdmDatabaseSchema)
+    getRelationship(
+      connection = connection,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getVocabulary 1 ----
 testthat::test_that("Get Vocabulary - connection", {
   output <-
-    getVocabulary(connection = connection,
-                  vocabularyDatabaseSchema = cdmDatabaseSchema)
+    getVocabulary(
+      connection = connection,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getVocabularyVersion 1 ----
 testthat::test_that("Get Vocabulary Version - connection", {
   output <-
-    getVocabularyVersion(connection = connection,
-                         vocabularyDatabaseSchema = cdmDatabaseSchema)
+    getVocabularyVersion(
+      connection = connection,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
@@ -130,8 +138,10 @@ testthat::test_that("Get MedRa Relationship - connection", {
   )
   testthat::expect_gte(object = length(output), expected = 0)
   testthat::expect_equal(object = class(output), expected = "list")
-  testthat::expect_gte(object = length(output$givenConceptId),
-                       expected = 0)
+  testthat::expect_gte(
+    object = length(output$givenConceptId),
+    expected = 0
+  )
   testthat::expect_gte(object = nrow(output$soc), expected = 0)
   testthat::expect_gte(object = nrow(output$hlgt), expected = 0)
   testthat::expect_gte(object = nrow(output$hlt), expected = 0)
@@ -259,32 +269,40 @@ testthat::test_that("Get Mapped Standard Concept - connectionDetails", {
 # getDomain 2 ----
 testthat::test_that("Get Domain - connectionDetails", {
   output <-
-    getDomain(connectionDetails = connectionDetails,
-              vocabularyDatabaseSchema = cdmDatabaseSchema)
+    getDomain(
+      connectionDetails = connectionDetails,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getRelationship 2 ----
 testthat::test_that("Get Relationship - connectionDetails", {
   output <-
-    getRelationship(connectionDetails = connectionDetails,
-                    vocabularyDatabaseSchema = cdmDatabaseSchema)
+    getRelationship(
+      connectionDetails = connectionDetails,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getVocabulary 2 ----
 testthat::test_that("Get Vocabulary - connectionDetails", {
   output <-
-    getVocabulary(connectionDetails = connectionDetails,
-                  vocabularyDatabaseSchema = cdmDatabaseSchema)
+    getVocabulary(
+      connectionDetails = connectionDetails,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
 # getVocabularyVersion 2 ----
 testthat::test_that("Get Vocabulary Version - connectionDetails", {
   output <-
-    getVocabularyVersion(connectionDetails = connectionDetails,
-                         vocabularyDatabaseSchema = cdmDatabaseSchema)
+    getVocabularyVersion(
+      connectionDetails = connectionDetails,
+      vocabularyDatabaseSchema = cdmDatabaseSchema
+    )
   testthat::expect_gte(object = nrow(output), expected = 0)
 })
 
@@ -308,8 +326,10 @@ testthat::test_that("Get MedRa Relationship - connectionDetails", {
   )
   testthat::expect_gte(object = length(output), expected = 0)
   testthat::expect_equal(object = class(output), expected = "list")
-  testthat::expect_gte(object = length(output$givenConceptId),
-                       expected = 0)
+  testthat::expect_gte(
+    object = length(output$givenConceptId),
+    expected = 0
+  )
   testthat::expect_gte(object = nrow(output$soc), expected = 0)
   testthat::expect_gte(object = nrow(output$hlgt), expected = 0)
   testthat::expect_gte(object = nrow(output$hlt), expected = 0)

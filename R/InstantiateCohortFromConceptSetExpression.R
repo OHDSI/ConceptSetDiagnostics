@@ -1,4 +1,4 @@
-# Copyright 2022 Observational Health Data Sciences and Informatics
+# Copyright 2024 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -66,10 +66,10 @@ instantiateCohortFromConceptSetExpression <-
         connection = connection,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       ) |>
-      dplyr::select(conceptId) |>
+      dplyr::select(dplyr::all_of("conceptId")) |>
       dplyr::distinct() |>
-      dplyr::arrange(conceptId) |>
-      dplyr::pull(conceptId)
+      dplyr::arrange(dplyr::all_of("conceptId")) |>
+      dplyr::pull(dplyr::all_of("conceptId"))
 
     tempTableWithConceptDates <-
       getConceptSetOccurrenceDate(

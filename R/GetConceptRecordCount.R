@@ -1,4 +1,4 @@
-# Copyright 2022 Observational Health Data Sciences and Informatics
+# Copyright 2024 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -34,7 +34,7 @@
 #'
 #' @param domain                      domains to look for concept id
 #'
-#' @param limitToCohort               Do you wantt to limit to a cohort_definition_id?
+#' @param limitToCohort               Do you want to limit to a cohort_definition_id?
 #'
 #' @param cohortDatabaseSchema        Optional
 #'
@@ -89,12 +89,12 @@ getConceptRecordCount <- function(conceptIds = NULL,
     getDomainInformation()
 
   domainsWide <- domainInformation$wide |>
-    dplyr::filter(domainTable %in% c(domainTableName)) |>
+    dplyr::filter(.data$domainTable %in% c(domainTableName)) |>
     dplyr::filter(.data$isEraTable == FALSE)
 
   domainsLong <- domainInformation$long |>
-    dplyr::filter(domainTable %in% c(domainTableName)) |>
-    dplyr::filter(eraTable == FALSE)
+    dplyr::filter(.data$domainTable %in% c(domainTableName)) |>
+    dplyr::filter(.data$eraTable == FALSE)
   # filtering out ERA tables because they are supposed to be derived tables, and counting them is double counting
 
   limitToCohort <- FALSE
@@ -249,37 +249,37 @@ getConceptRecordCount <- function(conceptIds = NULL,
 
   if (!stratifyByGender) {
     iterations <- iterations |>
-      dplyr::filter(!genderConceptId %in% c(8507, 8532))
+      dplyr::filter(!.data$genderConceptId %in% c(8507, 8532))
   }
 
   if (!stratifyByYear) {
     iterations <- iterations |>
-      dplyr::filter(calendarType != "Y")
+      dplyr::filter(.data$calendarType != "Y")
   }
 
   if (!stratifyByYearQuarter) {
     iterations <- iterations |>
-      dplyr::filter(calendarType != "Q")
+      dplyr::filter(.data$calendarType != "Q")
   }
 
   if (!stratifyByYearMonth) {
     iterations <- iterations |>
-      dplyr::filter(calendarType != "M")
+      dplyr::filter(.data$calendarType != "M")
   }
 
   if (!stratifyByAgeGroup) {
     iterations <- iterations |>
-      dplyr::filter(useAgeGroup != "Y")
+      dplyr::filter(.data$useAgeGroup != "Y")
   }
 
   if (!stratifyByIncidence) {
     iterations <- iterations |>
-      dplyr::filter(incidence != "Y")
+      dplyr::filter(.data$incidence != "Y")
   }
 
   if (!getOverallCounts) {
     iterations <- iterations |>
-      dplyr::filter(includeConceptId == "Y")
+      dplyr::filter(.data$includeConceptId == "Y")
   }
 
   existingOutput <- c()
@@ -328,8 +328,8 @@ getConceptRecordCount <- function(conceptIds = NULL,
       include_concept_id = (rowData$includeConceptId == "Y"),
       domain_concept_id = rowData$domainField,
       domain_start_date = domainsWide |>
-        dplyr::filter(domainTable == rowData$domainTable) |>
-        dplyr::pull(domainStartDate),
+        dplyr::filter(.data$domainTable == rowData$domainTable) |>
+        dplyr::pull(.data$domainStartDate),
       domain_table = rowData$domainTable,
       gender_concept_id = (rowData$genderConceptId > 0),
       incidence = (rowData$incidence == "Y"),
@@ -405,7 +405,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
 
   if (!is.null(minCellCount)) {
     existingOutput <-
-      existingOutput |> dplyr::filter(subjectCount > minCellCount)
+      existingOutput |> dplyr::filter(.data$subjectCount > minCellCount)
   }
 
   return(existingOutput)

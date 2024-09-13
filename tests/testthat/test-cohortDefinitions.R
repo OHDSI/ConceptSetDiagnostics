@@ -216,4 +216,3 @@ testthat::test_that("getExcludedConceptsInConceptSetExpression", {
     expected = 0
   )
 })
-

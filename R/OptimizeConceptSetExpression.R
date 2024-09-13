@@ -1,4 +1,4 @@
-# Copyright 2022 Observational Health Data Sciences and Informatics
+# Copyright 2024 Observational Health Data Sciences and Informatics
 #
 # This file is part of ConceptSetDiagnostics
 #
@@ -25,17 +25,13 @@
 #'
 #' @template TempEmulationSchema
 #'
-#' @param replaceNonStandardWithStandardEquivalent Do you want to replace non standard with standard equivalent?
-#'
 #' @export
 optimizeConceptSetExpression <-
   function(conceptSetExpression,
            vocabularyDatabaseSchema = "vocabulary",
            connection = NULL,
            connectionDetails = NULL,
-           replaceNonStandardWithStandardEquivalent = TRUE,
            tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
-    writeLines("reminder: incomplete replaceNonStandardWithStandardEquivalent. i.e. for every non standard, replace its standard equivalent option")
     optimizationRecommendation <-
       getOptimizationRecommendationForConceptSetExpression(
         connection = connection,
@@ -51,10 +47,7 @@ optimizeConceptSetExpression <-
       dplyr::anti_join(
         optimizationRecommendation |>
           convertConceptSetExpressionToDataFrame() |>
-          dplyr::select(
-            .data$conceptId,
-            .data$isExcluded
-          ),
+          dplyr::select(.data$conceptId, .data$isExcluded),
         by = c("conceptId", "isExcluded")
       ) |>
       dplyr::select(dplyr::all_of(colnames(conceptSetExpressionDataFrame)))
@@ -179,10 +172,7 @@ getOptimizationRecommendationForConceptSetExpression <-
         dplyr::filter(.data$isExcluded == FALSE) |>
         dplyr::inner_join(
           included |>
-            dplyr::select(
-              .data$originalConceptId,
-              .data$replacementConceptId
-            ),
+            dplyr::select(.data$originalConceptId, .data$replacementConceptId),
           by = c("conceptId" = "originalConceptId")
         ) |>
         dplyr::select(-.data$conceptId) |>
@@ -229,15 +219,6 @@ getOptimizationRecommendationForConceptSetExpression <-
           progressBar = FALSE
         )
 
-        excluded <-
-          DatabaseConnector::renderTranslateQuerySql(
-            connection = connection,
-            sql = "SELECT * FROM #optimized;",
-            tempEmulationSchema = tempEmulationSchema,
-            snakeCaseToCamelCase = TRUE
-          ) |>
-          dplyr::tibble()
-
         sqlCleanUp <- "DROP TABLE IF EXISTS #optimized;"
 
         DatabaseConnector::renderTranslateExecuteSql(
@@ -245,12 +226,6 @@ getOptimizationRecommendationForConceptSetExpression <-
           sql = sqlCleanUp,
           reportOverallTime = FALSE,
           progressBar = FALSE
-        )
-      } else if (length(excludedConcepts) == 1) {
-        excluded <- dplyr::tibble(
-          originalConceptId = excludedConcepts,
-          replacementConceptId = excludedConcepts,
-          removedConceptId = NA
         )
       }
 
@@ -265,10 +240,7 @@ getOptimizationRecommendationForConceptSetExpression <-
         dplyr::filter(.data$isExcluded == TRUE) |>
         dplyr::inner_join(
           included |>
-            dplyr::select(
-              .data$originalConceptId,
-              .data$replacementConceptId
-            ),
+            dplyr::select(.data$originalConceptId, .data$replacementConceptId),
           by = c("conceptId" = "originalConceptId")
         ) |>
         dplyr::select(-.data$conceptId) |>
@@ -299,10 +271,7 @@ getOptimizationRecommendationForConceptSetExpression <-
         inlcudedConceptSetExpression,
         excludedConceptSetExpression
       ) |>
-      dplyr::arrange(
-        .data$conceptId,
-        .data$isExcluded
-      )
+      dplyr::arrange(.data$conceptId, .data$isExcluded)
 
     finalConceptSetExpression <- finalConceptSetExpressionDf |>
       dplyr::distinct() |>

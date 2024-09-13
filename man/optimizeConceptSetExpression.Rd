@@ -9,7 +9,6 @@ optimizeConceptSetExpression(
   vocabularyDatabaseSchema = "vocabulary",
   connection = NULL,
   connectionDetails = NULL,
-  replaceNonStandardWithStandardEquivalent = TRUE,
   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
 )
 }
@@ -28,8 +27,6 @@ of the function, and closed when the function finishes.}
 \code{\link[DatabaseConnector]{createConnectionDetails}} function in the
 DatabaseConnector package. Can be left NULL if \code{connection} is
 provided.}
-
-\item{replaceNonStandardWithStandardEquivalent}{Do you want to replace non standard with standard equivalent?}
 
 \item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
 tables, provide a schema with write privileges where temp tables can be created.}
