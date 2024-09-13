@@ -27,6 +27,8 @@ schema name, for example 'cdm_data.dbo'.}
 
 \item{conceptIds}{An array of concept ids}
 
+\item{subset}{options are "all", "first", "last"}
+
 \item{limitToPersonDate}{Do you want to limit to person dates}
 
 \item{restrictToObservationPeriod}{(Default = TRUE) Do you want to restrict to Observation period? i.e

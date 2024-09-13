@@ -200,10 +200,7 @@ getDomainInformation <- function() {
   data$long <- dplyr::bind_rows(
     data$wide |>
       dplyr::select(
-        .data$domainTableShort,
-        .data$domainTable,
-        .data$domainConceptIdShort,
-        .data$domainConceptId
+        dplyr::all_of(c("domainTableShort", "domainTable", "domainConceptIdShort", "domainConceptId"))
       ) |>
       dplyr::rename(
         domainFieldShort = .data$domainConceptIdShort,
@@ -211,10 +208,7 @@ getDomainInformation <- function() {
       ),
     data$wide |>
       dplyr::select(
-        .data$domainTableShort,
-        .data$domainSourceConceptIdShort,
-        .data$domainTable,
-        .data$domainSourceConceptId
+        dplyr::all_of(c("domainTableShort", "domainSourceConceptIdShort", "domainTable", "domainSourceConceptId"))
       ) |>
       dplyr::rename(
         domainFieldShort = .data$domainSourceConceptIdShort,
@@ -239,15 +233,15 @@ getDomainInformation <- function() {
   data |>
     dplyr::collect() |>
     dplyr::mutate(dplyr::across(
-      tidyselect:::where(is.character),
+      tidyselect::where(is.character),
       ~ tidyr::replace_na(.x, as.character(""))
     )) |>
     dplyr::mutate(dplyr::across(
-      tidyselect:::where(is.logical),
+      tidyselect::where(is.logical),
       ~ tidyr::replace_na(.x, as.character(""))
     )) |>
     dplyr::mutate(dplyr::across(
-      tidyselect:::where(is.numeric),
+      tidyselect::where(is.numeric),
       ~ tidyr::replace_na(.x, as.numeric(""))
     ))
 }

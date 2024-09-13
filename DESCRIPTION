@@ -11,8 +11,10 @@ Depends:
     dplyr,
     R (>= 4.0.0)
 Imports:
+  CohortAlgebra,
 	checkmate,
 	CirceR,
+	ParallelLogger,
 	purrr,
 	RJSONIO,
 	rlang,

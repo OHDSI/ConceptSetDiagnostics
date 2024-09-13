@@ -42,6 +42,23 @@
 #'
 #' @param cohortDefinitionId          Optional
 #'
+#' @param domainTableName Vector of strings Domains to look for concept IDs. Supported domains
+#'  include "drug_exposure", "condition_occurrence", "procedure_occurrence", "measurement", "observation".
+#'
+#' @param stratifyByGender Logical Whether to stratify the counts by gender.
+#'
+#' @param stratifyByYear Logical Whether to stratify the counts by year.
+#'
+#' @param stratifyByYearQuarter Logical Whether to stratify the counts by quarter of the year.
+#'
+#' @param stratifyByYearMonth Logical Whether to stratify the counts by month of the year.
+#'
+#' @param stratifyByAgeGroup Logical Whether to stratify the counts by age group.
+#'
+#' @param stratifyByIncidence Logical Whether to limit the counts to first occurrences (incidence).
+#'
+#' @param getOverallCounts Logical Whether to include overall counts across all specified stratifications.
+#'
 #' @return
 #' Returns a tibble data frame.
 #'
@@ -114,15 +131,16 @@ getConceptRecordCount <- function(conceptIds = NULL,
           {@concept_id_universe != ''} ? {
             DROP TABLE IF EXISTS #concept_id_unv_2;
             CREATE TABLE #concept_id_unv_2 as
-              SELECT DISTINCT u.concept_id
-              FROM @concept_id_universe u
-              INNER JOIN (
-                SELECT concept_id
-                FROM @vocabulary_database_schema.CONCEPT
-                WHERE concept_id > 0
-                ) c
-                ON u.concept_id = c.concept_id
-          ;
+              (
+                SELECT DISTINCT u.concept_id
+                FROM @concept_id_universe u
+                INNER JOIN (
+                  SELECT concept_id
+                  FROM @vocabulary_database_schema.CONCEPT
+                  WHERE concept_id > 0
+                            ) c
+               ON u.concept_id = c.concept_id
+              ) ;
           }
 
           --PERCENTILES are difficult and will need subqueries

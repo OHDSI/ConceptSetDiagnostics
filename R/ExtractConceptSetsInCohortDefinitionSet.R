@@ -52,7 +52,7 @@ extractConceptSetsInCohortDefinitionSet <-
         !class(conceptSetsInCohortDefinition) == "try-error"
       )) {
         conceptSets[[i]] <- conceptSetsInCohortDefinition |>
-          dplyr::select(dplyr::all_of(uniqueConceptSetId)) |>
+          dplyr::select(dplyr::all_of(c("uniqueConceptSetId"))) |>
           dplyr::mutate(cohortId = cohort$cohortId) |>
           dplyr::relocate(dplyr::all_of(c("cohortId", "conceptSetId")))
       }

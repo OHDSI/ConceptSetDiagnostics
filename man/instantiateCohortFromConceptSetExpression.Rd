@@ -35,6 +35,9 @@ schema name, for example 'cdm_data.dbo'.}
 
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 
+\item{cohortDatabaseSchema}{Schema name where your user has write access (has CRUD privileges). This is the location,
+of the cohort tables.}
+
 \item{cohortId}{An integer value to identify the cohort.}
 
 \item{cohortTable}{the name of the cohort table}

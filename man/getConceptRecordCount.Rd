@@ -57,6 +57,23 @@ tables, provide a schema with write privileges where temp tables can be created.
 
 \item{cohortDefinitionId}{Optional}
 
+\item{stratifyByGender}{Logical Whether to stratify the counts by gender.}
+
+\item{stratifyByYear}{Logical Whether to stratify the counts by year.}
+
+\item{stratifyByYearQuarter}{Logical Whether to stratify the counts by quarter of the year.}
+
+\item{stratifyByYearMonth}{Logical Whether to stratify the counts by month of the year.}
+
+\item{stratifyByAgeGroup}{Logical Whether to stratify the counts by age group.}
+
+\item{stratifyByIncidence}{Logical Whether to limit the counts to first occurrences (incidence).}
+
+\item{getOverallCounts}{Logical Whether to include overall counts across all specified stratifications.}
+
+\item{domainTableName}{Vector of strings Domains to look for concept IDs. Supported domains
+include "drug_exposure", "condition_occurrence", "procedure_occurrence", "measurement", "observation".}
+
 \item{domain}{domains to look for concept id}
 
 \item{limitToCohort}{Do you want to limit to a cohort_definition_id?}

@@ -29,6 +29,8 @@
 #'
 #' @template CdmDatabaseSchema
 #'
+#' @template CohortDatabaseSchema
+#'
 #' @template TempEmulationSchema
 #'
 #' @param cohortId An integer value to identify the cohort.
@@ -66,10 +68,10 @@ instantiateCohortFromConceptSetExpression <-
         connection = connection,
         vocabularyDatabaseSchema = vocabularyDatabaseSchema
       ) |>
-      dplyr::select(dplyr::all_of("conceptId")) |>
+      dplyr::select(dplyr::all_of(c("conceptId"))) |>
       dplyr::distinct() |>
-      dplyr::arrange(dplyr::all_of("conceptId")) |>
-      dplyr::pull(dplyr::all_of("conceptId"))
+      dplyr::arrange(dplyr::all_of(c("conceptId"))) |>
+      dplyr::pull(dplyr::all_of(c("conceptId")))
 
     tempTableWithConceptDates <-
       getConceptSetOccurrenceDate(

@@ -39,6 +39,8 @@
 #'
 #' @param conceptIds An array of concept ids
 #'
+#' @param subset options are "all", "first", "last"
+#'
 #' @param limitToPersonDate Do you want to limit to person dates
 #'
 #' @return
