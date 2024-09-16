@@ -358,7 +358,8 @@ extractConceptSetsInCohortDefinition <-
 
     if (length(codeSetsIdsInPrimaryCriteria) > 0) {
       conceptSetExpression <- conceptSetExpression |>
-        dplyr::select(-dplyr::all_of(c("conceptSetUsedInEntryEvent"))) |>
+        dplyr::select(-dplyr::all_of(c("conceptSetUsedInEntryEvent",
+                                       "conceptSetUsedInEntryEventToQuerySource"))) |>
         dplyr::left_join(
           dplyr::tibble(conceptSetId = codeSetsIdsInPrimaryCriteria) |>
             dplyr::distinct() |>
@@ -368,7 +369,8 @@ extractConceptSetsInCohortDefinition <-
         dplyr::left_join(
           dplyr::tibble(conceptSetId = codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria) |> 
             dplyr::distinct() |> 
-            dplyr::mutate(conceptSetUsedInEntryEventToQuerySource = 1)
+            dplyr::mutate(conceptSetUsedInEntryEventToQuerySource = 1),
+          by = ("conceptSetId")
         )
     }
 
