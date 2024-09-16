@@ -57,6 +57,8 @@ extractConceptSetsInCohortDefinition <-
     primaryCriterias <-
       expression$PrimaryCriteria$CriteriaList
     codeSetsIdsInPrimaryCriteria <- c()
+    
+    codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria <- c()
 
     for (i in (1:length(primaryCriterias))) {
       codesets <- primaryCriterias[[i]][[1]]
@@ -70,6 +72,21 @@ extractConceptSetsInCohortDefinition <-
             unique() |>
             sort()
         }
+        
+        # Find the name of the item containing 'SourceConcept'
+        sourceConceptName <- names(codesets)[sapply(names(codesets), function(x)
+          grepl("SourceConcept", x)) &
+            !sapply(codesets, is.null)]
+        
+        codeSetsIdsInPrimaryCriteria <- c(codeSetsIdsInPrimaryCriteria, codesets[[sourceConceptName]]) |>
+          unique() |>
+          sort()
+        
+        codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria <- c(
+          codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria,
+          codeSetsIdsInPrimaryCriteria
+        )
+        
       } else {
         if (names(codesets) == "CodesetId") {
           codeSetsIdsInPrimaryCriteria <- c(
@@ -336,7 +353,8 @@ extractConceptSetsInCohortDefinition <-
 
     conceptSetExpression <-
       dplyr::bind_rows(conceptSetExpression2) |>
-      dplyr::mutate(conceptSetUsedInEntryEvent = 0)
+      dplyr::mutate(conceptSetUsedInEntryEvent = 0) |> 
+      dplyr::mutate(conceptSetUsedInEntryEventToQuerySource = 0)
 
     if (length(codeSetsIdsInPrimaryCriteria) > 0) {
       conceptSetExpression <- conceptSetExpression |>
@@ -346,6 +364,11 @@ extractConceptSetsInCohortDefinition <-
             dplyr::distinct() |>
             dplyr::mutate(conceptSetUsedInEntryEvent = 1),
           by = "conceptSetId"
+        ) |> 
+        dplyr::left_join(
+          dplyr::tibble(conceptSetId = codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria) |> 
+            dplyr::distinct() |> 
+            dplyr::mutate(conceptSetUsedInEntryEventToQuerySource = 1)
         )
     }
 
@@ -367,7 +390,8 @@ extractConceptSetsInCohortDefinition <-
     )
 
     data <- data |>
-      tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0))
+      tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0,
+                                       conceptSetUsedInEntryEventToQuerySource = 0))
 
     data <- data |>
       dplyr::left_join(conceptSetExpressionMetaData,
