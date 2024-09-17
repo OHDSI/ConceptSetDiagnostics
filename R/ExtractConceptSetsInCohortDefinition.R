@@ -88,13 +88,21 @@ extractConceptSetsInCohortDefinition <-
         )
         
       } else {
-        if (names(codesets) == "CodesetId") {
-          codeSetsIdsInPrimaryCriteria <- c(
-            codeSetsIdsInPrimaryCriteria,
-            as.double(codesets)
-          ) |>
+        if (any(
+          names(codesets) == "CodesetId",
+          stringr::str_detect(string = names(codesets), pattern = 'SourceConcept')
+        )) {
+          #is substring of name 'SourceConcept'
+          codeSetsIdsInPrimaryCriteria <- c(codeSetsIdsInPrimaryCriteria, as.double(codesets)) |>
             unique() |>
             sort()
+          
+          if (!names(codesets) == 'CodesetId') {
+            codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria <- c(
+              codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria,
+              codeSetsIdsInPrimaryCriteria
+            )
+          }
         }
       }
     }
