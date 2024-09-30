@@ -15,7 +15,6 @@ Imports:
 	checkmate,
 	CirceR,
 	ParallelLogger,
-	purrr,
 	RJSONIO,
 	rlang,
 	scales,

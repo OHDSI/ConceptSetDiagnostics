@@ -32,10 +32,6 @@
 #'
 #' @param minCellCount                The minimum cell count for fields containing person/subject count.
 #'
-#' @param domain                      domains to look for concept id
-#'
-#' @param limitToCohort               Do you want to limit to a cohort_definition_id?
-#'
 #' @param cohortDatabaseSchema        Optional
 #'
 #' @param cohortTableName             Optional
