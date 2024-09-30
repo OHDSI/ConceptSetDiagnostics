@@ -50,8 +50,7 @@ resolveConceptSetExpression <- function(conceptSetExpression,
       tempEmulationSchema = tempEmulationSchema
     ) |>
     dplyr::distinct() |> 
-    dplyr::arrange(conceptId) |> 
-    dplyr::pull()
+    dplyr::arrange(conceptId)
   
   return(resolvedConceptIds)
 }
