@@ -55,7 +55,8 @@
 <span>  vocabularyIdOfInterest <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"SNOMED"</span>, <span class="st">"HCPCS"</span>, <span class="st">"ICD10CM"</span>, <span class="st">"ICD10"</span>, <span class="st">"ICD9CM"</span>, <span class="st">"ICD9"</span>,</span>
 <span>    <span class="st">"Read"</span><span class="op">)</span>,</span>
 <span>  domainIdOfInterest <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Condition"</span>, <span class="st">"Procedure"</span>, <span class="st">"Observation"</span><span class="op">)</span>,</span>
-<span>  retrieveInvalidConcepts <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  retrieveInvalidConcepts <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  tempEmulationSchema <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"sqlRenderTempEmulationSchema"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -98,6 +99,11 @@ provided.</p></dd>
 
 <dt id="arg-retrieveinvalidconcepts">retrieveInvalidConcepts<a class="anchor" aria-label="anchor" href="#arg-retrieveinvalidconcepts"></a></dt>
 <dd><p>Do you want to retrieve invalid concepts. Default = FALSE</p></dd>
+
+
+<dt id="arg-tempemulationschema">tempEmulationSchema<a class="anchor" aria-label="anchor" href="#arg-tempemulationschema"></a></dt>
+<dd><p>Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp
+tables, provide a schema with write privileges where temp tables can be created.</p></dd>
 
 </dl></div>
 

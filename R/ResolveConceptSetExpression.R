@@ -36,11 +36,14 @@ resolveConceptSetExpression <- function(conceptSetExpression,
                                         vocabularyDatabaseSchema) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
-    on.exit(DatabaseConnector::disconnect(connection))
+    on.exit(
+      DatabaseConnector::dropEmulatedTempTables(connection = connection, tempEmulationSchema = tempEmulationSchema)
+    )
+    on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
   }
-  
+
   conceptSetSql <- CirceR::buildConceptSetQuery(conceptSetJSON = conceptSetExpression |> RJSONIO::toJSON(digits = 23))
-  
+
   resolvedConceptIds <-
     DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
@@ -49,8 +52,8 @@ resolveConceptSetExpression <- function(conceptSetExpression,
       snakeCaseToCamelCase = TRUE,
       tempEmulationSchema = tempEmulationSchema
     ) |>
-    dplyr::distinct() |> 
-    dplyr::arrange(conceptId)
-  
+    dplyr::distinct() |>
+    dplyr::arrange(dplyr::all_of("conceptId"))
+
   return(resolvedConceptIds)
 }

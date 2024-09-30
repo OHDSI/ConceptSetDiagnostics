@@ -59,7 +59,10 @@ performConceptSetDiagnostics <-
 
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
-      on.exit(DatabaseConnector::disconnect(connection))
+      on.exit(
+        DatabaseConnector::dropEmulatedTempTables(connection = connection, tempEmulationSchema = tempEmulationSchema)
+      )
+      on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
     }
 
     stringSearchResults <- performStringSearchForConcepts(
@@ -176,18 +179,12 @@ performConceptSetDiagnostics <-
         recursive = TRUE
       )
       unlink(
-        file.path(
-          locationForResults,
-          "conceptExpression.json"
-        ),
+        file.path(locationForResults, "conceptExpression.json"),
         recursive = TRUE,
         force = TRUE
       )
       unlink(
-        file.path(
-          locationForResults,
-          "conceptExpression.csv"
-        ),
+        file.path(locationForResults, "conceptExpression.csv"),
         recursive = TRUE,
         force = TRUE
       )
@@ -199,17 +196,11 @@ performConceptSetDiagnostics <-
             digits = 23,
             pretty = TRUE
           ),
-          targetFile = file.path(
-            locationForResults,
-            "conceptExpression.json"
-          )
+          targetFile = file.path(locationForResults, "conceptExpression.json")
         )
         readr::write_excel_csv(
           x = convertConceptSetExpressionToDataFrame(conceptSetExpression = optimizedConceptSetExpression),
-          file = file.path(
-            locationForResults,
-            "conceptExpression.csv"
-          ),
+          file = file.path(locationForResults, "conceptExpression.csv"),
           na = "",
           append = FALSE
         )
@@ -217,57 +208,39 @@ performConceptSetDiagnostics <-
 
 
       unlink(
-        x = file.path(
-          locationForResults,
-          paste0("recommendedSource.csv")
-        ),
+        x = file.path(locationForResults, paste0("recommendedSource.csv")),
         recursive = TRUE,
         force = TRUE
       )
       unlink(
-        x = file.path(
-          locationForResults,
-          paste0("recommendedStandard.csv")
-        ),
+        x = file.path(locationForResults, paste0("recommendedStandard.csv")),
         recursive = TRUE,
         force = TRUE
       )
       if (!is.null(recommended)) {
         readr::write_excel_csv(
           x = recommended$recommendedStandard,
-          file = file.path(
-            locationForResults,
-            paste0("recommendedStandard.csv")
-          ),
+          file = file.path(locationForResults, paste0("recommendedStandard.csv")),
           append = FALSE,
           na = ""
         )
         readr::write_excel_csv(
           x = recommended$recommendedSource,
-          file = file.path(
-            locationForResults,
-            paste0("recommendedSource.csv")
-          ),
+          file = file.path(locationForResults, paste0("recommendedSource.csv")),
           append = FALSE,
           na = ""
         )
       }
 
       unlink(
-        x = file.path(
-          locationForResults,
-          paste0("orphan.csv")
-        ),
+        x = file.path(locationForResults, paste0("orphan.csv")),
         recursive = TRUE,
         force = TRUE
       )
       if (!is.null(orphan)) {
         readr::write_excel_csv(
           x = orphan,
-          file = file.path(
-            locationForResults,
-            paste0("orphan.csv")
-          ),
+          file = file.path(locationForResults, paste0("orphan.csv")),
           append = FALSE,
           na = ""
         )

@@ -80,7 +80,10 @@ getOptimizationRecommendationForConceptSetExpression <-
     if (is.null(connection)) {
       if (!is.null(connectionDetails)) {
         connection <- DatabaseConnector::connect(connectionDetails)
-        on.exit(DatabaseConnector::disconnect(connection))
+        on.exit(
+          DatabaseConnector::dropEmulatedTempTables(connection = connection, tempEmulationSchema = tempEmulationSchema)
+        )
+        on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
       }
     }
 

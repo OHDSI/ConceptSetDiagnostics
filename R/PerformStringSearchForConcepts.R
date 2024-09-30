@@ -33,6 +33,8 @@
 #'
 #' @param retrieveInvalidConcepts Do you want to retrieve invalid concepts. Default = FALSE
 #'
+#' @template TempEmulationSchema
+#'
 #' @export
 performStringSearchForConcepts <-
   function(searchPhrases,
@@ -41,7 +43,8 @@ performStringSearchForConcepts <-
            connectionDetails = NULL,
            vocabularyIdOfInterest = c("SNOMED", "HCPCS", "ICD10CM", "ICD10", "ICD9CM", "ICD9", "Read"),
            domainIdOfInterest = c("Condition", "Procedure", "Observation"),
-           retrieveInvalidConcepts = FALSE) {
+           retrieveInvalidConcepts = FALSE,
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
     if (!hasData(searchPhrases)) {
       writeLines(" - searchPhrases does not have data. No search performed.")
       return(NULL)
@@ -68,14 +71,14 @@ performStringSearchForConcepts <-
 
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
-      on.exit(DatabaseConnector::disconnect(connection))
+      on.exit(
+        DatabaseConnector::dropEmulatedTempTables(connection = connection, tempEmulationSchema = tempEmulationSchema)
+      )
+      on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
     }
 
     fieldsInConceptTable <-
-      DatabaseConnector::dbListFields(
-        conn = connection,
-        name = "concept"
-      )
+      DatabaseConnector::dbListFields(conn = connection, name = "concept")
     fieldsInConceptTable <-
       tolower(sort(unique(fieldsInConceptTable)))
 
@@ -107,7 +110,8 @@ performStringSearchForConcepts <-
           packageName = "ConceptSetDiagnostics",
           dbms = connection@dbms,
           vocabulary_database_schema = vocabularyDatabaseSchema,
-          search_string = searchString
+          search_string = searchString,
+          tempEmulationSchema = tempEmulationSchema
         )
       }
       data[[i]] <-

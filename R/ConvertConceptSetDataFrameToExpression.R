@@ -35,6 +35,8 @@
 #'
 #' @template VocabularyDatabaseSchema
 #'
+#' @template TempEmulationSchema
+#'
 #' @return
 #' Returns a R list object
 #'
@@ -45,7 +47,8 @@ convertConceptSetDataFrameToExpression <-
            updateVocabularyFields = FALSE,
            connectionDetails = NULL,
            connection = NULL,
-           vocabularyDatabaseSchema = NULL) {
+           vocabularyDatabaseSchema = NULL,
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
     if (!"includeMapped" %in% colnames(conceptSetExpressionDataFrame)) {
       conceptSetExpressionDataFrame$includeMapped <- FALSE
     }
@@ -92,7 +95,10 @@ convertConceptSetDataFrameToExpression <-
       }
       if (is.null(connection)) {
         connection <- DatabaseConnector::connect(connectionDetails)
-        on.exit(DatabaseConnector::disconnect(connection))
+        on.exit(
+          DatabaseConnector::dropEmulatedTempTables(connection = connection, tempEmulationSchema = tempEmulationSchema)
+        )
+        on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
       }
 
       conceptIds <-
@@ -100,17 +106,24 @@ convertConceptSetDataFrameToExpression <-
       conceptIdDetails <- getConceptIdDetails(
         conceptIds = conceptIds,
         connection = connection,
-        vocabularyDatabaseSchema = vocabularyDatabaseSchema
+        vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+        tempEmulationSchema = tempEmulationSchema
       )
 
       conceptSetExpressionDataFrame <-
         conceptSetExpressionDataFrame |>
         dplyr::select(
-          -.data$conceptName, -.data$standardConcept, -.data$standardConceptCaption, -.data$invalidReason, -.data$invalidReasonCaption, -.data$conceptCode, -.data$domainId, -.data$vocabularyId, -.data$conceptClassId
+          -.data$conceptName,
+          -.data$standardConcept,
+          -.data$standardConceptCaption,
+          -.data$invalidReason,
+          -.data$invalidReasonCaption,
+          -.data$conceptCode,
+          -.data$domainId,
+          -.data$vocabularyId,
+          -.data$conceptClassId
         ) |>
-        dplyr::left_join(conceptIdDetails,
-          by = "conceptId"
-        ) |>
+        dplyr::left_join(conceptIdDetails, by = "conceptId") |>
         dplyr::select(
           .data$conceptId,
           .data$conceptName,
@@ -165,7 +178,11 @@ convertConceptSetDataFrameToExpression <-
         conceptSetExpression$items[[i]] <- list()
         conceptSetExpression$items[[i]]$concept <-
           conceptSetExpressionDataFrame[i, ] |>
-          dplyr::select(-.data$INCLUDE_DESCENDANTS, -.data$INCLUDE_MAPPED, -.data$IS_EXCLUDED) |>
+          dplyr::select(
+            -.data$INCLUDE_DESCENDANTS,
+            -.data$INCLUDE_MAPPED,
+            -.data$IS_EXCLUDED
+          ) |>
           as.list()
         conceptSetExpression$items[[i]]$isExcluded <-
           conceptSetExpressionDataFrame$IS_EXCLUDED[i]

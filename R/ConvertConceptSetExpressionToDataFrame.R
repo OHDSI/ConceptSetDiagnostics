@@ -118,7 +118,10 @@ convertConceptSetExpressionToDataFrame <-
       }
       if (is.null(connection)) {
         connection <- DatabaseConnector::connect(connectionDetails)
-        on.exit(DatabaseConnector::disconnect(connection))
+        on.exit(
+          DatabaseConnector::dropEmulatedTempTables(connection = connection, tempEmulationSchema = tempEmulationSchema)
+        )
+        on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
       }
 
       details <- getConceptIdDetails(

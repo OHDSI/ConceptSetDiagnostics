@@ -21,14 +21,20 @@
 #'
 #' @template VocabularyDatabaseSchema
 #'
+#' @template TempEmulationSchema
+#'
 #' @export
 getVocabularyVersion <-
   function(connection = NULL,
            connectionDetails = NULL,
-           vocabularyDatabaseSchema = "vocabulary") {
+           vocabularyDatabaseSchema = "vocabulary",
+           tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
-      on.exit(DatabaseConnector::disconnect(connection))
+      on.exit(
+        DatabaseConnector::dropEmulatedTempTables(connection = connection, tempEmulationSchema = tempEmulationSchema)
+      )
+      on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
     }
 
     data <-
@@ -38,6 +44,7 @@ getVocabularyVersion <-
               from @vocabulary_database_schema.vocabulary
               where VOCABULARY_ID = 'None';",
         vocabulary_database_schema = vocabularyDatabaseSchema,
+        tempEmulationSchema = tempEmulationSchema,
         snakeCaseToCamelCase = TRUE
       ) |>
       tidyr::tibble()

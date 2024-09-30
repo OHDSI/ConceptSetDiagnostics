@@ -57,7 +57,7 @@ extractConceptSetsInCohortDefinition <-
     primaryCriterias <-
       expression$PrimaryCriteria$CriteriaList
     codeSetsIdsInPrimaryCriteria <- c()
-    
+
     codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria <- c()
 
     for (i in (1:length(primaryCriterias))) {
@@ -72,36 +72,36 @@ extractConceptSetsInCohortDefinition <-
             unique() |>
             sort()
         }
-        
+
         # Find the name of the item containing 'SourceConcept'
-        sourceConceptName <- names(codesets)[sapply(names(codesets), function(x)
-          grepl("SourceConcept", x)) &
-            !sapply(codesets, is.null)]
-        
+        sourceConceptName <- names(codesets)[sapply(names(codesets), function(x) {
+          grepl("SourceConcept", x)
+        }) &
+          !sapply(codesets, is.null)]
+
         if (length(sourceConceptName) > 0) {
           codeSetsIdsInPrimaryCriteria <- c(codeSetsIdsInPrimaryCriteria, codesets[[sourceConceptName]]) |>
             unique() |>
             sort()
         }
-        
+
         sourceConceptName <- NULL
-        
+
         codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria <- c(
           codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria,
           codeSetsIdsInPrimaryCriteria
         )
-        
       } else {
         if (any(
           names(codesets) == "CodesetId",
-          stringr::str_detect(string = names(codesets), pattern = 'SourceConcept')
+          stringr::str_detect(string = names(codesets), pattern = "SourceConcept")
         )) {
-          #is substring of name 'SourceConcept'
+          # is substring of name 'SourceConcept'
           codeSetsIdsInPrimaryCriteria <- c(codeSetsIdsInPrimaryCriteria, as.double(codesets)) |>
             unique() |>
             sort()
-          
-          if (!names(codesets) == 'CodesetId') {
+
+          if (!names(codesets) == "CodesetId") {
             codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria <- c(
               codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria,
               codeSetsIdsInPrimaryCriteria
@@ -365,32 +365,33 @@ extractConceptSetsInCohortDefinition <-
 
     conceptSetExpression <-
       dplyr::bind_rows(conceptSetExpression2) |>
-      dplyr::mutate(conceptSetUsedInEntryEvent = 0) |> 
+      dplyr::mutate(conceptSetUsedInEntryEvent = 0) |>
       dplyr::mutate(conceptSetUsedInEntryEventToQuerySource = 0)
 
     if (length(codeSetsIdsInPrimaryCriteria) > 0) {
-      
       conceptSetExpression <- conceptSetExpression |>
-        dplyr::select(-dplyr::all_of(c("conceptSetUsedInEntryEvent",
-                                       "conceptSetUsedInEntryEventToQuerySource"))) |>
+        dplyr::select(-dplyr::all_of(c(
+          "conceptSetUsedInEntryEvent",
+          "conceptSetUsedInEntryEventToQuerySource"
+        ))) |>
         dplyr::left_join(
           dplyr::tibble(conceptSetId = codeSetsIdsInPrimaryCriteria) |>
             dplyr::distinct() |>
             dplyr::mutate(conceptSetUsedInEntryEvent = 1),
           by = "conceptSetId"
-        ) 
-      
-        if (length(codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria) > 0) {
-          conceptSetExpression <- conceptSetExpression |> 
-            dplyr::left_join(
-              dplyr::tibble(conceptSetId = codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria) |> 
-                dplyr::distinct() |> 
-                dplyr::mutate(conceptSetUsedInEntryEventToQuerySource = 1),
-              by = ("conceptSetId")
-            )
-        } else {
-          conceptSetExpression$conceptSetUsedInEntryEventToQuerySource <- as.integer(0)
-        }
+        )
+
+      if (length(codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria) > 0) {
+        conceptSetExpression <- conceptSetExpression |>
+          dplyr::left_join(
+            dplyr::tibble(conceptSetId = codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria) |>
+              dplyr::distinct() |>
+              dplyr::mutate(conceptSetUsedInEntryEventToQuerySource = 1),
+            by = ("conceptSetId")
+          )
+      } else {
+        conceptSetExpression$conceptSetUsedInEntryEventToQuerySource <- as.integer(0)
+      }
     }
 
     uniqueConceptSets <- conceptSetExpression |>
@@ -411,8 +412,10 @@ extractConceptSetsInCohortDefinition <-
     )
 
     data <- data |>
-      tidyr::replace_na(replace = list(conceptSetUsedInEntryEvent = 0,
-                                       conceptSetUsedInEntryEventToQuerySource = 0))
+      tidyr::replace_na(replace = list(
+        conceptSetUsedInEntryEvent = 0,
+        conceptSetUsedInEntryEventToQuerySource = 0
+      ))
 
     data <- data |>
       dplyr::left_join(conceptSetExpressionMetaData,

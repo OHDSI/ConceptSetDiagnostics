@@ -12,7 +12,8 @@ performStringSearchForConcepts(
   vocabularyIdOfInterest = c("SNOMED", "HCPCS", "ICD10CM", "ICD10", "ICD9CM", "ICD9",
     "Read"),
   domainIdOfInterest = c("Condition", "Procedure", "Observation"),
-  retrieveInvalidConcepts = FALSE
+  retrieveInvalidConcepts = FALSE,
+  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
 )
 }
 \arguments{
@@ -38,6 +39,9 @@ provided.}
 \item{domainIdOfInterest}{A list of domain ids to filter the results.}
 
 \item{retrieveInvalidConcepts}{Do you want to retrieve invalid concepts. Default = FALSE}
+
+\item{tempEmulationSchema}{Some database platforms like Oracle and Impala do not truly support temp tables. To emulate temp 
+tables, provide a schema with write privileges where temp tables can be created.}
 }
 \description{
 Get concepts that match a string search

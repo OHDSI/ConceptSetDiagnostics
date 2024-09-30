@@ -46,7 +46,10 @@ getMedraRelationship <-
            vocabularyDatabaseSchema = "vocabulary") {
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
-      on.exit(DatabaseConnector::disconnect(connection))
+      on.exit(
+        DatabaseConnector::dropEmulatedTempTables(connection = connection, tempEmulationSchema = tempEmulationSchema)
+      )
+      on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
     }
     conceptAncestor <- getConceptAncestor(
       conceptIds = conceptIds,
@@ -120,7 +123,8 @@ getMedraRelationship <-
             dplyr::filter(is.na(.data$invalidReason)) |>
             dplyr::filter(.data$conceptClassId == !!conceptClass) |>
             dplyr::rename(
-              !!paste0(tolower(conceptClass), "ConceptName") := .data$conceptName, !!paste0(tolower(conceptClass), "DomainId") := .data$domainId
+              !!paste0(tolower(conceptClass), "ConceptName") := .data$conceptName,
+              !!paste0(tolower(conceptClass), "DomainId") := .data$domainId
             ) |>
             dplyr::select(
               .data$conceptId,
@@ -130,7 +134,10 @@ getMedraRelationship <-
           by = c("ancestorConceptId" = "conceptId")
         ) |>
         dplyr::rename(!!paste0(tolower(conceptClass), "ConceptId") := .data$ancestorConceptId) |>
-        dplyr::select(-.data$minLevelsOfSeparation, -.data$maxLevelsOfSeparation)
+        dplyr::select(
+          -.data$minLevelsOfSeparation,
+          -.data$maxLevelsOfSeparation
+        )
       return(output)
     }
     ancestorSocForGivenConceptId <-
@@ -157,19 +164,21 @@ getMedraRelationship <-
             dplyr::filter(is.na(.data$invalidReason)) |>
             dplyr::filter(.data$conceptClassId == !!conceptClass) |>
             dplyr::rename(
-              !!paste0(tolower(conceptClass), "ConceptName") := .data$conceptName, !!paste0(tolower(conceptClass), "DomainId") := .data$domainId
+              !!paste0(tolower(conceptClass), "ConceptName") := .data$conceptName,
+              !!paste0(tolower(conceptClass), "DomainId") := .data$domainId
             ) |>
             dplyr::select(
               .data$conceptId,
-              paste0(
-                tolower(conceptClass), "ConceptName"
-              ),
+              paste0(tolower(conceptClass), "ConceptName"),
               paste0(tolower(conceptClass), "DomainId")
             ),
           by = c("descendantConceptId" = "conceptId")
         ) |>
         dplyr::rename(!!paste0(tolower(conceptClass), "ConceptId") := .data$descendantConceptId) |>
-        dplyr::select(-.data$minLevelsOfSeparation, -.data$maxLevelsOfSeparation)
+        dplyr::select(
+          -.data$minLevelsOfSeparation,
+          -.data$maxLevelsOfSeparation
+        )
       return(output)
     }
     descendantSocForGivenConceptId <-

@@ -24,10 +24,6 @@ OhdsiRTools::updateCopyrightYearFolder()
 # Devtools check -----------------------------------------------------------
 devtools::spell_check()
 
-# Create manual and vignettes:
-unlink("extras/ConceptSetDiagnostics.pdf")
-shell("R CMD Rd2pdf ./ --output=extras/ConceptSetDiagnostics.pdf")
-
 # Build site---------------------------------------------------------
 pkgdown::build_site()
 OhdsiRTools::fixHadesLogo()

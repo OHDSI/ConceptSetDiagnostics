@@ -23,11 +23,14 @@
 #'
 #' @template VocabularyDatabaseSchema
 #'
+#' @template TempEmulationSchema
+#'
 #' @export
 resolveConceptSetsInCohortExpression <- function(cohortExpression,
                                                  connection = NULL,
                                                  connectionDetails = NULL,
-                                                 vocabularyDatabaseSchema = "vocabulary") {
+                                                 vocabularyDatabaseSchema = "vocabulary",
+                                                 tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
   conceptSetExpressionDataFrame <-
     extractConceptSetsInCohortDefinition(
       cohortExpression =
@@ -36,7 +39,10 @@ resolveConceptSetsInCohortExpression <- function(cohortExpression,
 
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
-    on.exit(DatabaseConnector::disconnect(connection))
+    on.exit(
+      DatabaseConnector::dropEmulatedTempTables(connection = connection, tempEmulationSchema = tempEmulationSchema)
+    )
+    on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
   }
 
   resolvedConceptSet <- list()
@@ -47,6 +53,7 @@ resolveConceptSetsInCohortExpression <- function(cohortExpression,
         connection = connection,
         sql = sql,
         vocabulary_database_schema = vocabularyDatabaseSchema,
+        tempEmulationSchema = tempEmulationSchema,
         snakeCaseToCamelCase = TRUE
       )
   }
