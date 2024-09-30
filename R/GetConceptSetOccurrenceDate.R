@@ -53,7 +53,7 @@ getConceptSetOccurrenceDate <- function(connection,
                                         subset = c("all"),
                                         limitToPersonDate = TRUE,
                                         restrictToObservationPeriod = TRUE,
-                                        tempEmulationSchema = NULL) {
+                                        tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")) {
   subset <- tolower(subset) |>
     stringr::str_trim() |>
     stringr::str_squish()

@@ -8,8 +8,8 @@ resolveConceptSetExpression(
   conceptSetExpression,
   connection = NULL,
   connectionDetails = NULL,
-  tempEmulationSchema = NULL,
-  vocabularyDatabaseSchema = "vocabulary"
+  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
+  vocabularyDatabaseSchema
 )
 }
 \arguments{

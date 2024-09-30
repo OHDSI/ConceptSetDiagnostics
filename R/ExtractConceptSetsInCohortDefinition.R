@@ -78,9 +78,13 @@ extractConceptSetsInCohortDefinition <-
           grepl("SourceConcept", x)) &
             !sapply(codesets, is.null)]
         
-        codeSetsIdsInPrimaryCriteria <- c(codeSetsIdsInPrimaryCriteria, codesets[[sourceConceptName]]) |>
-          unique() |>
-          sort()
+        if (length(sourceConceptName) > 0) {
+          codeSetsIdsInPrimaryCriteria <- c(codeSetsIdsInPrimaryCriteria, codesets[[sourceConceptName]]) |>
+            unique() |>
+            sort()
+        }
+        
+        sourceConceptName <- NULL
         
         codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria <- c(
           codeSetsIdsUsedToQuerySourceConceptsInPrimaryCriteria,
@@ -428,7 +432,7 @@ extractConceptSetExpressionsFromCohortExpression <-
           tidyr::tibble(
             conceptSetId = cohortExpression$ConceptSets[[i]]$id,
             conceptSetName = cohortExpression$ConceptSets[[i]]$name,
-            conceptSetExpression = cohortExpression$ConceptSets[[i]]$expression$items |> RJSONIO::toJSON(digits = 23)
+            conceptSetExpression = cohortExpression$ConceptSets[[i]]$expression |> RJSONIO::toJSON(digits = 23)
           )
       }
     } else {

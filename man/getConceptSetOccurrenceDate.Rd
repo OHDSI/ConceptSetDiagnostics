@@ -11,7 +11,7 @@ getConceptSetOccurrenceDate(
   subset = c("all"),
   limitToPersonDate = TRUE,
   restrictToObservationPeriod = TRUE,
-  tempEmulationSchema = NULL
+  tempEmulationSchema = getOption("sqlRenderTempEmulationSchema")
 )
 }
 \arguments{

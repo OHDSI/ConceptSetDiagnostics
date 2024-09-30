@@ -32,118 +32,25 @@
 resolveConceptSetExpression <- function(conceptSetExpression,
                                         connection = NULL,
                                         connectionDetails = NULL,
-                                        tempEmulationSchema = NULL,
-                                        vocabularyDatabaseSchema = "vocabulary") {
+                                        tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
+                                        vocabularyDatabaseSchema) {
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-
-  # convert concept set expression R object (list) to data frame
-  conceptSetExpressionDataFrame <-
-    convertConceptSetExpressionToDataFrame(
-      updateVocabularyFields = FALSE,
-      conceptSetExpression = conceptSetExpression,
-      tempEmulationSchema = tempEmulationSchema
-    )
-
-  # get all descendant concept ids (as dataframe) for concepts that have
-  # includeDescendants selected in conceptSetExpression
-  conceptIdsWithIncludeDescendants <-
-    conceptSetExpressionDataFrame |>
-    dplyr::filter(.data$includeDescendants == TRUE) |>
-    dplyr::pull(.data$conceptId)
-
-  if (length(conceptIdsWithIncludeDescendants) == 0) {
-    # get all resolved concept Ids
-    resolvedConceptIds <-
-      setdiff(
-        conceptSetExpressionDataFrame$conceptId,
-        conceptSetExpressionDataFrame |>
-          dplyr::filter(.data$isExcluded == TRUE) |>
-          dplyr::pull(.data$conceptId)
-      )
-  } else {
-    descendantConcepts <-
-      getConceptDescendant(
-        connection = connection,
-        connectionDetails = connectionDetails,
-        conceptIds = conceptIdsWithIncludeDescendants,
-        tempEmulationSchema = tempEmulationSchema,
-        vocabularyDatabaseSchema = vocabularyDatabaseSchema
-      )
-
-    # get all conceptIds (as dataframe) that are excluded in concept set expression
-    excludedConceptIds <- conceptSetExpressionDataFrame |>
-      dplyr::filter(.data$isExcluded == TRUE) |>
-      dplyr::select(.data$conceptId)
-
-    # get all conceptIds (as dataframe) that are excluded in concept set expression with descendants
-    excludedConceptIdsWithDescendants <- descendantConcepts |>
-      dplyr::filter(.data$ancestorConceptId %in% (
-        c(
-          conceptSetExpressionDataFrame |>
-            dplyr::filter(.data$isExcluded == TRUE) |>
-            dplyr::filter(.data$includeDescendants == TRUE) |>
-            dplyr::pull(.data$conceptId) |>
-            unique(),
-          0
-        ) |> unique()
-      )) |>
-      dplyr::select(.data$descendantConceptId) |>
-      dplyr::distinct()
-
-    # conceptIds in conceptSetExpression table
-    conceptIdsInConceptSetExpressionTableToBeIncluded <-
-      union(
-        x = conceptSetExpressionDataFrame |>
-          dplyr::pull(.data$conceptId) |>
-          unique(),
-        y = descendantConcepts |>
-          dplyr::pull(.data$descendantConceptId) |>
-          unique()
-      ) |> unique()
-
-
-    conceptIdsInConceptSetExpressionTableToBeExcluded <-
-      union(
-        x = excludedConceptIds |>
-          dplyr::pull(.data$conceptId) |>
-          unique(),
-        y = excludedConceptIdsWithDescendants |>
-          dplyr::pull(.data$descendantConceptId) |>
-          unique()
-      ) |>
-      unique()
-
-    # removed all excluded conceptIds including those with descendants == TRUE
-    resolvedConceptIdArray <-
-      setdiff(
-        x = conceptIdsInConceptSetExpressionTableToBeIncluded,
-        y = conceptIdsInConceptSetExpressionTableToBeExcluded
-      )
-
-    # get all resolved concept Ids
-    resolvedConceptIds <- dplyr::union(
-      conceptSetExpressionDataFrame |>
-        dplyr::filter(.data$isExcluded == FALSE) |>
-        dplyr::select(.data$conceptId),
-      descendantConcepts |>
-        dplyr::select(.data$descendantConceptId) |>
-        dplyr::rename("conceptId" = .data$descendantConceptId)
-    ) |>
-      dplyr::filter(.data$conceptId %in% resolvedConceptIdArray) |>
-      dplyr::pull(.data$conceptId) |>
-      unique()
-  }
-
-  conceptIdDetails <-
-    getConceptIdDetails(
-      conceptIds = resolvedConceptIds,
+  
+  conceptSetSql <- CirceR::buildConceptSetQuery(conceptSetJSON = conceptSetExpression |> RJSONIO::toJSON(digits = 23))
+  
+  resolvedConceptIds <-
+    DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
-      tempEmulationSchema = tempEmulationSchema,
-      vocabularyDatabaseSchema = vocabularyDatabaseSchema
-    )
-
-  return(conceptIdDetails)
+      sql = conceptSetSql,
+      vocabulary_database_schema = vocabularyDatabaseSchema,
+      snakeCaseToCamelCase = TRUE,
+      tempEmulationSchema = tempEmulationSchema
+    ) |>
+    dplyr::arrange(conceptId) |> 
+    dplyr::tibble()
+  
+  return(resolvedConceptIds)
 }
