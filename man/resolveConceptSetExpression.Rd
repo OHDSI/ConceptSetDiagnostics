@@ -2,7 +2,7 @@
 % Please edit documentation in R/ResolveConceptSetExpression.R
 \name{resolveConceptSetExpression}
 \alias{resolveConceptSetExpression}
-\title{Given a concept set expression, get the resolved concepts}
+\title{Given a concept set expression, get the resolved concept ids.}
 \usage{
 resolveConceptSetExpression(
   conceptSetExpression,
@@ -32,8 +32,8 @@ tables, provide a schema with write privileges where temp tables can be created.
 \item{vocabularyDatabaseSchema}{The schema name of containing the vocabulary tables.}
 }
 \value{
-Returns a tibble data frame.
+Returns a tibble data frame of distinct sorted concept ids.
 }
 \description{
-Given a concept set expression, get the resolved concepts
+Given a concept set expression, get the resolved concept ids.
 }

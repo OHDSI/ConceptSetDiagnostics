@@ -44,7 +44,7 @@ getMappedSourceConcepts <-
     }
 
     tempTableName <- loadTempConceptTable(
-      conceptIds = conceptIds,
+      conceptIds = conceptIds |> unique() |> sort(),
       connection = connection,
       tempEmulationSchema = tempEmulationSchema
     )

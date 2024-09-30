@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-#' Given a concept set expression, get the resolved concepts
+#' Given a concept set expression, get the resolved concept ids.
 #'
 #' @template Connection
 #'
@@ -26,7 +26,7 @@
 #' @template TempEmulationSchema
 #'
 #' @return
-#' Returns a tibble data frame.
+#' Returns a tibble data frame of distinct sorted concept ids.
 #'
 #' @export
 resolveConceptSetExpression <- function(conceptSetExpression,
@@ -49,8 +49,9 @@ resolveConceptSetExpression <- function(conceptSetExpression,
       snakeCaseToCamelCase = TRUE,
       tempEmulationSchema = tempEmulationSchema
     ) |>
+    dplyr::distinct() |> 
     dplyr::arrange(conceptId) |> 
-    dplyr::tibble()
+    dplyr::pull()
   
   return(resolvedConceptIds)
 }
