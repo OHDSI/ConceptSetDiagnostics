@@ -15,6 +15,9 @@
 # limitations under the License.
 #
 
+quoteAndJoinArray <- function(stringArray) {
+  return(paste0(paste0("'", stringArray, "'"), collapse = ", "))
+}
 
 checkIfCohortDefinitionSet <- function(cohortDefinitionSet) {
   errorMessage <- checkmate::makeAssertCollection()

@@ -73,10 +73,6 @@ tables, provide a schema with write privileges where temp tables can be created.
 
 \item{domainTableName}{Vector of strings Domains to look for concept IDs. Supported domains
 include "drug_exposure", "condition_occurrence", "procedure_occurrence", "measurement", "observation".}
-
-\item{domain}{domains to look for concept id}
-
-\item{limitToCohort}{Do you want to limit to a cohort_definition_id?}
 }
 \value{
 Returns a tibble data frame.
