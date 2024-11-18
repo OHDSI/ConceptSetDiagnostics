@@ -62,6 +62,7 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
     tempEmulationSchema = tempEmulationSchema
   )
   
+  #check if the request is for a vocabulary Id that does not map to OMOP.
   sourceVocabularyIdNotInOmop <- setdiff(sourceVocabularyId, omopVocabularyId$vocabularyId)
   
   if (length(sourceVocabularyIdNotInOmop) > 1) {
@@ -71,6 +72,8 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
     ))
   }
   
+  
+  #download from remote vocabulary table a subset of omop concepts to map.
   omopVocabularyToMatch <- DatabaseConnector::renderTranslateQuerySql(
     connection = connection,
     sql = "SELECT concept_id, concept_code, vocabulary_id
@@ -82,63 +85,34 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
     tempEmulationSchema = tempEmulationSchema
   ) |>
     dplyr::tibble()
+
   
-  sourceDf <- dplyr::tibble(conceptCodeSourceOriginal = sourceCodes) |>
-    dplyr::distinct() |>
-    dplyr::mutate(conceptCodeSource = conceptCodeSourceOriginal)
+  #do the fuzzy match - but we expect to 100%match for this work.
+  #message will be shown if there are approximate match
+  fuzzyMatch <- getFuzzyMatchOfCodesToOmopConceptCode(
+    sourceCodes = sourceCodes,
+    omopConcepts = omopVocabularyToMatch,
+    removeSpecialCharacters = removeSpecialCharacters
+  )
   
-  targetDf <- omopVocabularyToMatch |>
-    dplyr::rename(conceptCodeOmopOriginal = conceptCode) |>
-    dplyr::distinct() |>
-    dplyr::mutate(conceptCodeOmop = conceptCodeOmopOriginal)
+  #only use perfect match moving forward, return all matches to user at codesWithConceptId. return all approximate
+  # matches as FYI. they are ignored moving forward.
   
-  if (removeSpecialCharacters) {
-    #note: in current implementation removeSpecialCharacters only removes periods. This is mostly useful in ICD codes.
-    sourceDf <- sourceDf |>
-      dplyr::mutate(
-        conceptCodeSource = stringr::str_remove_all(string = conceptCodeSourceOriginal, pattern = stringr::fixed("."))
-      )
-    
-    targetDf <- targetDf |>
-      dplyr::mutate(
-        conceptCodeOmop = stringr::str_remove_all(string = conceptCodeOmopOriginal, pattern = stringr::fixed("."))
-      )
-  }
+  output$codesWithConceptId <- fuzzyMatch$perfectMatch
+  output$codesWithConceptIdApproximate <- fuzzyMatch$approximateMatch
   
-  # #fuzzy string matching is slow. we also restrict by vocabularyId
-  codesWithConceptId <- fuzzyStringJoinDataFrame(
-    df1 = sourceDf,
-    df2 = targetDf,
-    field1 = "conceptCodeSource",
-    field2 = "conceptCodeOmop"
-  ) |>
-    dplyr::distinct()
+  #only use perfect match moving forward
   
-  # find imperfect matches
-  approximateMatch <- codesWithConceptId |>
-    dplyr::filter(conceptCodeSource != conceptCodeOmop)
-  perfectMatch <- codesWithConceptId |>
-    dplyr::filter(conceptCodeSource == conceptCodeOmop)
-  
-  approximateMatch <- approximateMatch |>
-    dplyr::anti_join(perfectMatch |>
-                       dplyr::select(conceptCodeSource) |>
-                       dplyr::distinct())
-  
-  output$approximateMatch <- approximateMatch
-  
-  if (nrow(output$approximateMatch) > 0) {
-    message("There are codes without perfect match. Please look at approximateMatch in output.")
-  }
-  
+  # find standard mapping for non standard
   mappedStandard <- ConceptSetDiagnostics::getMappedStandardConcepts(
-    conceptIds = codesWithConceptId$conceptId |> unique(),
+    conceptIds = output$codesWithConceptId$conceptId |> unique(),
     connection = connection,
     vocabularyDatabaseSchema = vocabularyDatabaseSchema,
     tempEmulationSchema = tempEmulationSchema
   )
   
-  output$unmappedCodes <- codesWithConceptId |>
+  #are there any source codes without mapping? there should not be
+  output$unmappedCodes <- output$codesWithConceptId |>
     dplyr::anti_join(
       mappedStandard |>
         dplyr::select(givenConceptId) |>
@@ -150,7 +124,8 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
     message("There are concept id without mapped standard. Please look at unmappedCodes.")
   }
   
-  numberOfMappedStandardConceptsMappedToGivenSource <-
+  # a source concept may be mapped to more than one standard. count if that is occurring
+  numberOfMappedStandardConceptsMappedToGivenSourceDf <-
     mappedStandard |>
     dplyr::select(givenConceptId, conceptId) |>
     dplyr::distinct() |>
@@ -158,8 +133,10 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
     dplyr::summarise(numberOfMappedStandardConceptsMappedToGivenSource = n())
   
   mappedStandard <- mappedStandard |>
-    dplyr::left_join(numberOfMappedStandardConceptsMappedToGivenSource, by = "givenConceptId")
+    dplyr::left_join(numberOfMappedStandardConceptsMappedToGivenSourceDf, by = "givenConceptId")
   
+  
+  # get descendants of all standard concepts
   descendantsOfStandardConcept <- ConceptSetDiagnostics::getConceptDescendant(
     conceptIds = mappedStandard$conceptId,
     connection = connection,
@@ -169,6 +146,7 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
     dplyr::select(ancestorConceptId, descendantConceptId) |>
     dplyr::distinct()
   
+  #get mapped concept for the standard esp descendants
   mappedSource <- ConceptSetDiagnostics::getMappedSourceConcepts(
     conceptIds = c(
       mappedStandard$conceptId,
@@ -179,21 +157,22 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
     tempEmulationSchema = tempEmulationSchema
   )
   
+  #filter to desired vocabulary
   mappedSourceFiltered <- mappedSource |>
     dplyr::filter(vocabularyId %in% c(sourceVocabularyId)) |>
     dplyr::left_join(
-      codesWithConceptId |>
+      output$codesWithConceptId |>
         dplyr::select(conceptId) |>
         dplyr::distinct() |>
         dplyr::mutate(isInputConceptId = 1)
     ) |>
     tidyr::replace_na(list(isInputConceptId = 0))
   
-  conceptIds <- c(codesWithConceptId$conceptId,
+  #find all concept id and get their detail
+  conceptIds <- c(output$codesWithConceptId$conceptId,
                   mappedStandard$conceptId,
                   mappedSource$conceptId) |>
     unique()
-  
   
   output$conceptIdDetails <- ConceptSetDiagnostics::getConceptIdDetails(
     conceptIds = conceptIds,
@@ -202,9 +181,9 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
   ) |>
     dplyr::arrange(conceptId)
   
-  
   browser()
-  
+
+  #this is the main output. it has the source and mapped standard  
   output$sourceMappedToStandard <- mappedStandard |>
     dplyr::rename(sourceConceptId = givenConceptId, standardConceptId = conceptId) |>
     dplyr::select(
