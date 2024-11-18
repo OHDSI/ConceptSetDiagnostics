@@ -13,7 +13,8 @@ getStandardMappingRecommendationsForNonStandard(
   tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
   sourceVocabularyId = c("ICD10CM"),
   sourceCodes,
-  removeSpecialCharacters = TRUE
+  removeSpecialCharacters = TRUE,
+  includeDescendants = FALSE
 )
 }
 \arguments{

@@ -91,28 +91,30 @@ getConceptRecordCount <- function(conceptIds = NULL,
     )
     on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
   }
-
+  
   uploadedConceptTable <- ""
   if (!is.null(conceptIds)) {
     uploadedConceptTable <-
       loadTempConceptTable(
         conceptIds = conceptIds,
-        connection = connection
+        connection = connection,
+        bulkLoad = Sys.getenv("DATABASE_CONNECTOR_BULK_UPLOAD"),
+        tempEmulationSchema = tempEmulationSchema
       )
   }
-
+  
   domainInformation <-
     getDomainInformation()
-
+  
   domainsWide <- domainInformation$wide |>
     dplyr::filter(.data$domainTable %in% c(domainTableName)) |>
     dplyr::filter(.data$isEraTable == FALSE)
-
+  
   domainsLong <- domainInformation$long |>
     dplyr::filter(.data$domainTable %in% c(domainTableName)) |>
     dplyr::filter(.data$eraTable == FALSE)
   # filtering out ERA tables because they are supposed to be derived tables, and counting them is double counting
-
+  
   limitToCohort <- FALSE
   if (all(
     !is.null(cohortDatabaseSchema),
@@ -121,7 +123,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
   )) {
     limitToCohort <- TRUE
   }
-
+  
   # REASON for many SQL --DISTINCT subject_count cannot be computed from aggregation query of calendar month level data
   sql <- "
 
@@ -129,17 +131,16 @@ getConceptRecordCount <- function(conceptIds = NULL,
 
           {@concept_id_universe != ''} ? {
             DROP TABLE IF EXISTS #concept_id_unv_2;
-            CREATE TABLE #concept_id_unv_2 as
-              (
-                SELECT DISTINCT u.concept_id
-                FROM @concept_id_universe u
-                INNER JOIN (
-                  SELECT concept_id
-                  FROM @vocabulary_database_schema.CONCEPT
-                  WHERE concept_id > 0
-                            ) c
-               ON u.concept_id = c.concept_id
-              ) ;
+
+            SELECT DISTINCT u.concept_id
+            INTO #concept_id_unv_2
+            FROM @concept_id_universe u
+            INNER JOIN (
+              SELECT concept_id
+              FROM @vocabulary_database_schema.CONCEPT
+              WHERE concept_id > 0
+                        ) c
+           ON u.concept_id = c.concept_id;
           }
 
           --PERCENTILES are difficult and will need subqueries
@@ -227,7 +228,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
                 {@use_date_quarter} ? {DATEPART(quarter, @domain_start_date),}};
 
             "
-
+  
   iterations <- domainsLong |>
     tidyr::crossing(dplyr::tibble(includeConceptId = c("Y", "N", ""))) |>
     tidyr::crossing(dplyr::tibble(genderConceptId = c(0, 8507, 8532))) |>
@@ -263,72 +264,68 @@ getConceptRecordCount <- function(conceptIds = NULL,
     tidyr::crossing(dplyr::tibble(useAgeGroup = c("Y", "N"))) |>
     dplyr::arrange() |>
     dplyr::mutate(combination = dplyr::row_number())
-
+  
   if (!stratifyByGender) {
     iterations <- iterations |>
       dplyr::filter(!.data$genderConceptId %in% c(8507, 8532))
   }
-
+  
   if (!stratifyByYear) {
     iterations <- iterations |>
       dplyr::filter(.data$calendarType != "Y")
   }
-
+  
   if (!stratifyByYearQuarter) {
     iterations <- iterations |>
       dplyr::filter(.data$calendarType != "Q")
   }
-
+  
   if (!stratifyByYearMonth) {
     iterations <- iterations |>
       dplyr::filter(.data$calendarType != "M")
   }
-
+  
   if (!stratifyByAgeGroup) {
     iterations <- iterations |>
       dplyr::filter(.data$useAgeGroup != "Y")
   }
-
+  
   if (!stratifyByIncidence) {
     iterations <- iterations |>
       dplyr::filter(.data$incidence != "Y")
   }
-
+  
   if (!getOverallCounts) {
     iterations <- iterations |>
       dplyr::filter(.data$includeConceptId == "Y")
   }
-
+  
   existingOutput <- c()
-
+  
   for (i in (1:nrow(iterations))) {
     rowData <- iterations[i, ]
-
+    
     extraMessage <-
-      paste0(
-        "Working on ",
-        rowData$domainTable,
-        ".",
-        rowData$domainField,
-        "."
-      )
+      paste0("Working on ",
+             rowData$domainTable,
+             ".",
+             rowData$domainField,
+             ".")
     progress <- (i / nrow(iterations)) * 100
     message <-
-      sprintf(
-        "\rProgress: %d/%d (%0.2f%%)",
-        i,
-        nrow(iterations),
-        progress
-      )
-
+      sprintf("\rProgress: %d/%d (%0.2f%%)",
+              i,
+              nrow(iterations),
+              progress)
+    
     ParallelLogger::logInfo(message)
-
+    
     showProgress(
       currentIteration = i,
       totalIterations = nrow(iterations),
       extraMessage = extraMessage
     )
-
+    
     sqlRendered <- SqlRender::render(
       sql = sql,
       cdm_database_schema = cdmDatabaseSchema,
@@ -363,20 +360,20 @@ getConceptRecordCount <- function(conceptIds = NULL,
       cohort_definition_id = cohortDefinitionId,
       use_age_group = (rowData$useAgeGroup == "Y")
     )
-
+    
     # Regular expression to find a comma followed by any whitespace (including line breaks) and a semicolon
     regexPattern <- ",[\\s\\n\\r]*;"
-
+    
     # Replace the pattern with just a semicolon
     sqlRendered <- gsub(regexPattern, ";", sqlRendered, perl = TRUE)
-
+    
     sqlTranslated <-
       SqlRender::translate(
         sql = sqlRendered,
         targetDialect = connection@dbms,
         tempEmulationSchema = tempEmulationSchema
       )
-
+    
     DatabaseConnector::executeSql(
       connection = connection,
       sql = sqlTranslated,
@@ -384,20 +381,17 @@ getConceptRecordCount <- function(conceptIds = NULL,
       reportOverallTime = FALSE,
       profile = FALSE
     )
-
+    
     output <- DatabaseConnector::renderTranslateQuerySql(
       connection = connection,
       sql = "SELECT * FROM #concept_count_table;",
       snakeCaseToCamelCase = TRUE
     )
-
-    existingOutput <- dplyr::bind_rows(
-      existingOutput,
-      output
-    ) |>
+    
+    existingOutput <- dplyr::bind_rows(existingOutput, output) |>
       dplyr::tibble()
   }
-
+  
   DatabaseConnector::renderTranslateExecuteSql(
     connection = connection,
     profile = FALSE,
@@ -406,7 +400,7 @@ getConceptRecordCount <- function(conceptIds = NULL,
     sql = "DROP TABLE IF EXISTS #concept_count_table;
            DROP TABLE IF EXISTS #concept_id_unv_2;"
   )
-
+  
   existingOutput <- existingOutput |>
     dplyr::inner_join(
       domainInformation$long |>
@@ -419,11 +413,11 @@ getConceptRecordCount <- function(conceptIds = NULL,
       by = c("domainTableShort", "domainFieldShort")
     ) |>
     dplyr::select(-"domainFieldShort", -"domainTableShort")
-
+  
   if (!is.null(minCellCount)) {
     existingOutput <-
       existingOutput |> dplyr::filter(.data$subjectCount > minCellCount)
   }
-
+  
   return(existingOutput)
 }

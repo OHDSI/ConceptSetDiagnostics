@@ -38,7 +38,8 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
                                                             tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
                                                             sourceVocabularyId = c("ICD10CM"),
                                                             sourceCodes,
-                                                            removeSpecialCharacters = TRUE) {
+                                                            removeSpecialCharacters = TRUE,
+                                                            includeDescendants = FALSE) {
   if (is.null(vocabularyDatabaseSchema)) {
     stop("vocabularyDatabaseSchema cannot be NULL.")
   }
@@ -85,7 +86,7 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
     tempEmulationSchema = tempEmulationSchema
   ) |>
     dplyr::tibble()
-
+  
   
   #do the fuzzy match - but we expect to 100%match for this work.
   #message will be shown if there are approximate match
@@ -136,42 +137,66 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
     dplyr::left_join(numberOfMappedStandardConceptsMappedToGivenSourceDf, by = "givenConceptId")
   
   
-  # get descendants of all standard concepts
-  descendantsOfStandardConcept <- ConceptSetDiagnostics::getConceptDescendant(
-    conceptIds = mappedStandard$conceptId,
-    connection = connection,
-    vocabularyDatabaseSchema = vocabularyDatabaseSchema
-  ) |>
-    dplyr::filter(minLevelsOfSeparation > 0) |>
-    dplyr::select(ancestorConceptId, descendantConceptId) |>
-    dplyr::distinct()
-  
-  #get mapped concept for the standard esp descendants
-  mappedSource <- ConceptSetDiagnostics::getMappedSourceConcepts(
-    conceptIds = c(
-      mappedStandard$conceptId,
-      descendantsOfStandardConcept$descendantConceptId
-    ) |> unique(),
-    connection = connection,
-    vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-    tempEmulationSchema = tempEmulationSchema
-  )
-  
-  #filter to desired vocabulary
-  mappedSourceFiltered <- mappedSource |>
-    dplyr::filter(vocabularyId %in% c(sourceVocabularyId)) |>
-    dplyr::left_join(
-      output$codesWithConceptId |>
-        dplyr::select(conceptId) |>
-        dplyr::distinct() |>
-        dplyr::mutate(isInputConceptId = 1)
+  if (includeDescendants) {
+    # get descendants of all standard concepts
+    descendantsOfStandardConcept <- ConceptSetDiagnostics::getConceptDescendant(
+      conceptIds = mappedStandard$conceptId,
+      connection = connection,
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema
     ) |>
-    tidyr::replace_na(list(isInputConceptId = 0))
+      dplyr::filter(minLevelsOfSeparation > 0) |>
+      dplyr::select(ancestorConceptId, descendantConceptId) |>
+      dplyr::distinct()
+    
+    #get mapped concept for the standard esp descendants
+    mappedSource <- ConceptSetDiagnostics::getMappedSourceConcepts(
+      conceptIds = c(
+        mappedStandard$conceptId,
+        descendantsOfStandardConcept$descendantConceptId
+      ) |> unique(),
+      connection = connection,
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      tempEmulationSchema = tempEmulationSchema
+    )
+    
+    #filter to desired vocabulary
+    mappedSourceFiltered <- mappedSource |>
+      dplyr::filter(vocabularyId %in% c(sourceVocabularyId)) |>
+      dplyr::left_join(
+        output$codesWithConceptId |>
+          dplyr::select(conceptId) |>
+          dplyr::distinct() |>
+          dplyr::mutate(isInputConceptId = 1)
+      ) |>
+      tidyr::replace_na(list(isInputConceptId = 0))
+    
+  } else {
+    #get mapped concept for the standard esp descendants
+    mappedSource <- ConceptSetDiagnostics::getMappedSourceConcepts(
+      conceptIds = c(mappedStandard$conceptId) |> unique(),
+      connection = connection,
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      tempEmulationSchema = tempEmulationSchema
+    )
+    
+    #filter to desired vocabulary
+    mappedSourceFiltered <- mappedSource |>
+      dplyr::filter(vocabularyId %in% c(sourceVocabularyId)) |>
+      dplyr::left_join(
+        output$codesWithConceptId |>
+          dplyr::select(conceptId) |>
+          dplyr::distinct() |>
+          dplyr::mutate(isInputConceptId = 1)
+      ) |>
+      tidyr::replace_na(list(isInputConceptId = 0))
+  }
   
   #find all concept id and get their detail
-  conceptIds <- c(output$codesWithConceptId$conceptId,
-                  mappedStandard$conceptId,
-                  mappedSource$conceptId) |>
+  conceptIds <- c(
+    output$codesWithConceptId$conceptId,
+    mappedStandard$conceptId,
+    mappedSource$conceptId
+  ) |>
     unique()
   
   output$conceptIdDetails <- ConceptSetDiagnostics::getConceptIdDetails(
@@ -181,9 +206,7 @@ getStandardMappingRecommendationsForNonStandard <- function(connectionDetails = 
   ) |>
     dplyr::arrange(conceptId)
   
-  browser()
-
-  #this is the main output. it has the source and mapped standard  
+  #this is the main output. it has the source and mapped standard
   output$sourceMappedToStandard <- mappedStandard |>
     dplyr::rename(sourceConceptId = givenConceptId, standardConceptId = conceptId) |>
     dplyr::select(
